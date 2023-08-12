@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>System Class &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pythonapi/system';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Evolver Class" href="evolver.html" />
+    <link rel="prev" title="Python API" href="pythonapi.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">System Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">System Class</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="system-class">
+<span id="id1"></span><h1>System Class<a class="headerlink" href="#system-class" title="Permalink to this headline">#</a></h1>
+<p><strong>Pymembrane</strong> uses a system class to load meshes. The system contains all the information needed to load meshes, save meshes, and compute mesh properties (see figure).</p>
+<section id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pymembrane</span>
+<span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
+
+<span class="c1"># create a new system instance</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">System</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="loading-my-first-mesh">
+<h2>Loading my first mesh<a class="headerlink" href="#loading-my-first-mesh" title="Permalink to this headline">#</a></h2>
+<p><strong>Pymembrane</strong> work with meshes in _inp_ format. For example, a vertex file for a hexagon looks like:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vertex</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="o">:</span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">1</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">2</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="mf">0.8660254038</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">3</span><span class="w"> </span><span class="mf">-0.5</span><span class="w"> </span><span class="mf">0.8660254038</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">4</span><span class="w"> </span><span class="mf">-1.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">5</span><span class="w"> </span><span class="mf">-0.5</span><span class="w"> </span><span class="mf">-0.8660254038</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">6</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="mf">-0.8660254038</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>and the corresponding face file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Face</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="n">normal</span><span class="p">)</span><span class="o">:</span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now that we have the faces and vertices files we can create a mesh as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vertex_file</span> <span class="o">=</span> <span class="s1">&#39;vertices.inp&#39;</span>
+<span class="n">face_file</span> <span class="o">=</span> <span class="s1">&#39;faces.inp&#39;</span>
+<span class="n">system</span><span class="o">.</span><span class="n">read_mesh_from_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;vertices&#39;</span><span class="p">:</span><span class="n">vertex_file</span><span class="p">,</span> <span class="s1">&#39;faces&#39;</span><span class="p">:</span><span class="n">face_file</span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h2>
+<p><strong>Pymembrane</strong> can export meshes to <a class="reference external" href="https://en.wikipedia.org/wiki/VTK">vtk</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/PLY_(file_format)">ply</a> files. To create a dumper for a given mesh, we need to do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dump</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">ply</span><span class="p">(</span><span class="s2">&quot;hexagon&quot;</span><span class="p">)</span>      <span class="c1">#for ply</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;hexagon&quot;</span><span class="p">)</span>      <span class="c1">#for vtk</span>
+</pre></div>
+</div>
+<img alt="hexagon" class="align-center" src="../_images/00_hexagon.png" />
+<p>In addition, the _vtk_ format can be set to legacy format by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dump</span><span class="o">.</span><span class="n">setvtkLegacyFormat</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>_VTK_ and _json_ format is desirable since all the properties of the mesh are fully exported.</p>
+</div>
+</section>
+<section id="data-structures">
+<h2>Data structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">#</a></h2>
+<p><strong>PyMembrane</strong> uses <a class="reference external" href="https://en.wikipedia.org/wiki/Doubly_connected_edge_list">halfedge data structures</a> for representing meshes.</p>
+</section>
+<section id="looping-over-vertices">
+<h2>Looping over vertices<a class="headerlink" href="#looping-over-vertices" title="Permalink to this headline">#</a></h2>
+<p>As an example, let’s say that we want to deform the mesh that we just loaded. To do this, we need to access the vertices in the <strong>system</strong> class as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve the vertices</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">getVertices</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)):</span>
+    <span class="n">vertex</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">vertex</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">0.1</span>
+    <span class="n">vertex</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="mf">0.3</span>
+    <span class="n">vertices</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">vertex</span>
+
+<span class="c1"># Set the new vertices</span>
+<span class="n">system</span><span class="o">.</span><span class="n">setVertices</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
+
+<span class="c1"># Now we can visualize the new mesh</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;hexagon_vertex_move&quot;</span><span class="p">)</span>      <span class="c1">#for vtk</span>
+</pre></div>
+</div>
+<section id="vertex-methods">
+<h3>Vertex methods<a class="headerlink" href="#vertex-methods" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><cite>boundary</cite>: Vertex True if it is at the boundary</p></li>
+<li><p><cite>coordination</cite>: Vertex Coordination</p></li>
+<li><p><cite>energy</cite>: Conservative Energy</p></li>
+<li><p><cite>forceC</cite>: Conservative Force</p></li>
+<li><p><cite>forceD</cite>: Dissipative Force</p></li>
+<li><p><cite>id</cite>: Vertex id</p></li>
+<li><p><cite>mass</cite>: mass</p></li>
+<li><p><cite>normal</cite>: normal</p></li>
+<li><p><cite>property</cite>: Properties</p></li>
+<li><p><cite>r</cite>: Vertex position</p></li>
+<li><p><cite>type</cite>: type</p></li>
+<li><p><cite>v</cite>: Vertex velocity</p></li>
+</ul>
+</section>
+</section>
+<section id="looping-over-faces">
+<h2>Looping over faces<a class="headerlink" href="#looping-over-faces" title="Permalink to this headline">#</a></h2>
+<p>As an example, let’s say that we want to change the face type in the mesh that we just loaded. To do this, we need to access the faces in the <strong>system</strong> class as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve the faces</span>
+<span class="n">faces</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">getFaces</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">faces</span><span class="p">)):</span>
+    <span class="n">face</span> <span class="o">=</span> <span class="n">faces</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">face</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">faces</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">face</span>
+
+<span class="c1"># Set the new faces</span>
+<span class="n">system</span><span class="o">.</span><span class="n">setFaces</span><span class="p">(</span><span class="n">faces</span><span class="p">)</span>
+
+<span class="c1"># Now we can visualize the new mesh</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;hexagon_face_type&quot;</span><span class="p">)</span>      <span class="c1">#for vtk</span>
+</pre></div>
+</div>
+<section id="face-methods">
+<h3>Face methods<a class="headerlink" href="#face-methods" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><cite>area</cite>: area of the face</p></li>
+<li><p><cite>boundary</cite>: True if it is at the boundary</p></li>
+<li><p><cite>energy</cite>: Conservative Energy</p></li>
+<li><p><cite>id</cite>: face id</p></li>
+<li><p><cite>normal</cite>: normal to that face</p></li>
+<li><p><cite>nsides</cite>: number of sides the face has</p></li>
+<li><p><cite>outer</cite>: True if face is a ghost outer face</p></li>
+<li><p><cite>property</cite>: properties</p></li>
+<li><p><cite>reference_normal</cite>: reference normal to that face</p></li>
+<li><p><cite>type</cite>: types</p></li>
+<li><p><cite>v1</cite>: one of vertices that define the face</p></li>
+<li><p><cite>v2</cite>: one of vertices that define the face</p></li>
+<li><p><cite>v3</cite>: one of vertices that define the face</p></li>
+</ul>
+</section>
+</section>
+<section id="looping-over-edges-and-halfedges">
+<h2>Looping over edges and halfedges<a class="headerlink" href="#looping-over-edges-and-halfedges" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edges</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">getEdges</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edges</span><span class="p">)):</span>
+    <span class="n">edge</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="o">...</span>
+<span class="n">system</span><span class="o">.</span><span class="n">setEdges</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="edge-methods">
+<h3>Edge methods<a class="headerlink" href="#edge-methods" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><cite>boundary</cite>: True if it is at the boundary</p></li>
+<li><p>… (continue listing the methods and properties)</p></li>
+</ul>
+</section>
+</section>
+<section id="looping-over-halfedges">
+<h2>Looping over halfedges<a class="headerlink" href="#looping-over-halfedges" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">halfedges</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">getHalfedges</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">halfedges</span><span class="p">)):</span>
+    <span class="n">halfedge</span> <span class="o">=</span> <span class="n">halfedges</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<section id="halfedge-methods">
+<h3>Halfedge methods<a class="headerlink" href="#halfedge-methods" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><cite>boundary</cite>: if true, the halfedge is a boundary</p></li>
+<li><p><cite>edge</cite>: edge this halfedge is part of</p></li>
+<li><p><cite>face</cite> face the half-edge borders</p></li>
+<li><p><cite>index</cite> vertex at the beginning of the half-edge</p></li>
+<li><p><cite>next</cite> next half-edge around the face</p></li>
+<li><p><cite>pair</cite> oppositely oriented adjacent half-edge</p></li>
+<li><p><cite>prev</cite> previous half-edge around the face</p></li>
+<li><p><cite>vert_from</cite> vertex at the beginning of the half-edge</p></li>
+<li><p><cite>vert_to</cite> vertex at the end of the half-edge</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pythonapi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="evolver.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Evolver Class</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-my-first-mesh">Loading my first mesh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">Data structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-vertices">Looping over vertices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertex-methods">Vertex methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-faces">Looping over faces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#face-methods">Face methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-edges-and-halfedges">Looping over edges and halfedges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edge-methods">Edge methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-halfedges">Looping over halfedges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#halfedge-methods">Halfedge methods</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

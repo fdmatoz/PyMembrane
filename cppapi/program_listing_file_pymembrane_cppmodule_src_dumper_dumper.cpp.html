@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File dumper.cpp &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/program_listing_file_pymembrane_cppmodule_src_dumper_dumper.cpp';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File dumper.cpp</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File dumper.cpp</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-dumper-cpp">
+<span id="program-listing-file-pymembrane-cppmodule-src-dumper-dumper-cpp"></span><h1>Program Listing for File dumper.cpp<a class="headerlink" href="#program-listing-for-file-dumper-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.cpp.html#file-pymembrane-cppmodule-src-dumper-dumper-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/dumper/dumper.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;dumper.hpp&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mesh/computegeometry.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mesh/halfedges.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../types/globaltypes.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../types/hostvector.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../system/systemclass.hpp&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkVersion.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkCellArray.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkCellData.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkPoints.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkPointData.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkPolygon.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkLine.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkXMLPolyDataWriter.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkPolyData.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkSmartPointer.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkDoubleArray.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_vertex_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="p">)</span>
+<span class="w">        </span><span class="n">vertex_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of vertices &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_face_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numfaces</span><span class="p">)</span>
+<span class="w">        </span><span class="n">face_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of faces &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_edge_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numedges</span><span class="p">)</span>
+<span class="w">        </span><span class="n">edge_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of edges &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_vertex_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="p">)</span>
+<span class="w">        </span><span class="n">vertex_tensor_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of vertices &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_face_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numfaces</span><span class="p">)</span>
+<span class="w">        </span><span class="n">face_tensor_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of faces &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::user_edge_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">Numedges</span><span class="p">)</span>
+<span class="w">        </span><span class="n">edge_tensor_data_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data must have the same size that the number of edges &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::mesh_vertices_faces</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">file_name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_vertices</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">faces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_faces</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">file_name2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.vtp&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolyData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">polydata_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolyData</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPoints</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertices_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPoints</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkCellArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">triangles_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkCellArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">normals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">forces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">velocities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vnormal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolygon</span><span class="o">&gt;</span><span class="w"> </span><span class="n">triangle_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolygon</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ids_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">areas_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">face_type_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertex_type_vtk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strain_xx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strain_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strain_yy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">face_pressure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">face_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Spins</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertex_spin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+
+
+<span class="w">    </span><span class="c1">//Faces</span>
+<span class="w">    </span><span class="n">face_type_vtk</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;FaceType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">face_type_vtk</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_xx</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;CauchyStrain_XX&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_xx</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_xy</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;CauchyStrain_XY&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_xy</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_yy</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;CauchyStrain_YY&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strain_yy</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">normals</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;FaceNormal&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">normals</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">areas_vtk</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;FaceArea&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">areas_vtk</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">face_pressure</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;face_pressure&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">face_pressure</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">face_energy</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;face_energy&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">face_energy</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">vertex_spin</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;spin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vertex_spin</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">face_data_vtk</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">facenumitems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_data_map</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">face_data_vtk</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">facenumitems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">        </span><span class="n">face_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">facenumitems</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">face_tensor_data_vtk</span><span class="p">;</span>
+<span class="w">    </span><span class="n">facenumitems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_tensor_data_map</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">face_tensor_data_vtk</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">facenumitems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_tensor_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">        </span><span class="n">face_tensor_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_tensor_data_vtk</span><span class="p">[</span><span class="n">facenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="w">        </span><span class="n">facenumitems</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//Vertices</span>
+<span class="w">    </span><span class="n">ids_vtk</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ids_vtk</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">coord</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;VertexCoord&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">coord</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vertex_type_vtk</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;VertexType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vertex_type_vtk</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">forces</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;VertexForce&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">forces</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">velocities</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;VertexVel&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">velocities</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vnormal</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;VertexNormal&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vnormal</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">vertex_data_vtk</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vertexnumitems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_data_map</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vertex_data_vtk</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">vertexnumitems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertex_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">        </span><span class="n">vertex_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertex_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertexnumitems</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">vertex_tensor_data_vtk</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vertexnumitems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_tensor_data_map</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vertex_tensor_data_vtk</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">vertexnumitems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertex_tensor_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">        </span><span class="n">vertex_tensor_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertex_tensor_data_vtk</span><span class="p">[</span><span class="n">vertexnumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertexnumitems</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">faces</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v1</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v3</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">triangle_vtk</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetNumberOfIds</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">triangle_vtk</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetId</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">triangle_vtk</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetId</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">triangle_vtk</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetId</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">v3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">triangles_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextCell</span><span class="p">(</span><span class="n">triangle_vtk</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_type_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">type</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">normal_norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="n">normal</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">face_area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">);</span>
+<span class="w">        </span><span class="n">areas_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">face_area</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+<span class="w">        </span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+<span class="w">        </span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">normal_tuple</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="p">};</span>
+<span class="w">        </span><span class="n">normals</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">normal_tuple</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//&lt; strains</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">metric_now</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">        </span><span class="n">host</span><span class="o">::</span><span class="n">compute_form_factor_triangle</span><span class="p">(</span><span class="n">metric_now</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">strain_xx</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">metric_now</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+<span class="w">        </span><span class="n">strain_xy</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">metric_now</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+<span class="w">        </span><span class="n">strain_yy</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">metric_now</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]));</span>
+
+<span class="w">        </span><span class="n">face_energy</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">energy</span><span class="p">);</span>
+<span class="w">        </span><span class="n">face_pressure</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(((</span><span class="n">metric_now</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">metric_now</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">])));</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">item_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_data_map</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">face_data_vtk</span><span class="p">[</span><span class="n">item_index</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">item_index</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">item_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_tensor_data_map</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">real</span><span class="w"> </span><span class="n">tensor_data</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">xy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">xz</span><span class="p">,</span>
+<span class="w">                                   </span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">yx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">yy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">yz</span><span class="p">,</span>
+<span class="w">                                   </span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">zx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">zy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">zz</span><span class="p">};</span>
+<span class="w">            </span><span class="n">face_tensor_data_vtk</span><span class="p">[</span><span class="n">item_index</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">tensor_data</span><span class="p">);</span>
+<span class="w">            </span><span class="n">item_index</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">SetPolys</span><span class="p">(</span><span class="n">triangles_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//polydata_vtk-&gt;GetCellData()-&gt;AddArray(ids);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">areas_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetNormals</span><span class="p">(</span><span class="n">normals</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">face_type_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">strain_xx</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">strain_xy</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">strain_yy</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">face_pressure</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">face_energy</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vtk_user_data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_data_vtk</span><span class="p">)</span>
+<span class="w">        </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vtk_user_data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vtk_user_data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face_tensor_data_vtk</span><span class="p">)</span>
+<span class="w">        </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vtk_user_data</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vertices_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextPoint</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ids_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">z</span><span class="p">};</span>
+<span class="w">        </span><span class="n">coord</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vertex_type_vtk</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">type</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">z</span><span class="p">};</span>
+<span class="w">        </span><span class="n">forces</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">vel</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v</span><span class="p">.</span><span class="n">z</span><span class="p">};</span>
+<span class="w">        </span><span class="n">velocities</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="p">};</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">norm_norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">norm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">norm</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">norm_norm</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">norm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">norm_norm</span><span class="p">;</span>
+<span class="w">            </span><span class="n">norm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">norm_norm</span><span class="p">;</span>
+<span class="w">            </span><span class="n">norm</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">norm_norm</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">vnormal</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">norm</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">item_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_data_map</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">vertex_data_vtk</span><span class="p">[</span><span class="n">item_index</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">item_index</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">item_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_tensor_data_map</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">real</span><span class="w"> </span><span class="n">tensor_data</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">xy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">xz</span><span class="p">,</span>
+<span class="w">                                   </span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">yx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">yy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">yz</span><span class="p">,</span>
+<span class="w">                                   </span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]).</span><span class="n">zx</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">zy</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">].</span><span class="n">zz</span><span class="p">};</span>
+<span class="w">            </span><span class="n">vertex_tensor_data_vtk</span><span class="p">[</span><span class="n">item_index</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">InsertNextTuple</span><span class="p">(</span><span class="n">tensor_data</span><span class="p">);</span>
+<span class="w">            </span><span class="n">item_index</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//Spin</span>
+<span class="w">        </span><span class="n">vertex_spin</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">spin</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">SetPoints</span><span class="p">(</span><span class="n">vertices_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">ids_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">coord</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vertex_type_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">forces</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">velocities</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vertex_type_vtk</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vnormal</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vertex_spin</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vtk_user_data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_data_vtk</span><span class="p">)</span>
+<span class="w">        </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vtk_user_data</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vtk_user_data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertex_tensor_data_vtk</span><span class="p">)</span>
+<span class="w">        </span><span class="n">polydata_vtk</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vtk_user_data</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Write the file</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkXMLPolyDataWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkXMLPolyDataWriter</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">file_name2</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="cp">#if VTK_MAJOR_VERSION &lt;= 5</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetInput</span><span class="p">(</span><span class="n">polydata_vtk</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetInputData</span><span class="p">(</span><span class="n">polydata_vtk</span><span class="p">);</span>
+<span class="cp">#endif</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vtkLegacy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetDataModeToAscii</span><span class="p">();</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetDataModeToBinary</span><span class="p">();</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::mesh_edge_vtk</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">file_name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_vertices</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_edges</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">file_name2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_edges.vtp&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolyData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">polydata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPolyData</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPoints</span><span class="o">&gt;</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkPoints</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkCellArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkCellArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkLine</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkLine</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkIntArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">ids</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ids</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lens</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;Length&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lens</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">type</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="s">&quot;edge_type&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">type</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">edge_data_vtk</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edgenumitems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">edge_data_map</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">edge_data_vtk</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">edgenumitems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">edge_data_vtk</span><span class="p">[</span><span class="n">edgenumitems</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkDoubleArray</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cstr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">        </span><span class="n">edge_data_vtk</span><span class="p">[</span><span class="n">edgenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetName</span><span class="p">(</span><span class="n">cstr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">edge_data_vtk</span><span class="p">[</span><span class="n">edgenumitems</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">SetNumberOfComponents</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">edgenumitems</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">points</span><span class="o">-&gt;</span><span class="n">InsertNextPoint</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ids</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">SetPoints</span><span class="p">(</span><span class="n">points</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">ids</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">edges</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">edge</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetId</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="n">edge</span><span class="o">-&gt;</span><span class="n">GetPointIds</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SetId</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">j</span><span class="p">);</span>
+<span class="w">        </span><span class="n">lines</span><span class="o">-&gt;</span><span class="n">InsertNextCell</span><span class="p">(</span><span class="n">edge</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">rij</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vsub</span><span class="p">(</span><span class="n">rij</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">j</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">rij</span><span class="p">,</span><span class="w"> </span><span class="n">rij</span><span class="p">));</span>
+<span class="w">        </span><span class="n">lens</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">length</span><span class="p">);</span>
+<span class="w">        </span><span class="n">type</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">(</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">type</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">item_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">edge_data_map</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">edge_data_vtk</span><span class="p">[</span><span class="n">item_index</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">InsertNextValue</span><span class="p">((</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">)[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">item_index</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">SetLines</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">lens</span><span class="p">);</span>
+<span class="w">    </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">vtk_user_data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">edge_data_vtk</span><span class="p">)</span>
+<span class="w">        </span><span class="n">polydata</span><span class="o">-&gt;</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddArray</span><span class="p">(</span><span class="n">vtk_user_data</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Write the file</span>
+<span class="w">    </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkXMLPolyDataWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vtkSmartPointer</span><span class="o">&lt;</span><span class="n">vtkXMLPolyDataWriter</span><span class="o">&gt;::</span><span class="n">New</span><span class="p">();</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">file_name2</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="cp">#if VTK_MAJOR_VERSION &lt;= 5</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetInput</span><span class="p">(</span><span class="n">polydata</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetInputData</span><span class="p">(</span><span class="n">polydata</span><span class="p">);</span>
+<span class="cp">#endif</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vtkLegacy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetDataModeToAscii</span><span class="p">();</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">SetDataModeToBinary</span><span class="p">();</span>
+<span class="w">    </span><span class="n">writer</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DumperClass::mesh_ply</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">file_name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_vertices</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_edges</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">faces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_faces</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">halfedges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">get_halfedges</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Numvertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Numedges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Numfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ply_file2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.ply&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="w"> </span><span class="n">myfile</span><span class="p">(</span><span class="n">ply_file2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">myfile</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">            PLY file</span>
+<span class="cm">            ply</span>
+<span class="cm">            format ascii 1.0</span>
+<span class="cm">            comment created by platoply</span>
+<span class="cm">            element vertex 8</span>
+<span class="cm">            property float32 x</span>
+<span class="cm">            property float32 y</span>
+<span class="cm">            property float32 z</span>
+<span class="cm">            element face 6</span>
+<span class="cm">            property list uint8 int32 vertex_indices</span>
+<span class="cm">            end_header</span>
+<span class="cm">            -1 -1 -1</span>
+<span class="cm">            1 -1 -1</span>
+<span class="cm">            1 1 -1</span>
+<span class="cm">            -1 1 -1</span>
+<span class="cm">            -1 -1 1</span>
+<span class="cm">            1 -1 1</span>
+<span class="cm">            1 1 1</span>
+<span class="cm">            -1 1 1</span>
+<span class="cm">            4 0 1 2 3</span>
+<span class="cm">            4 5 4 7 6</span>
+<span class="cm">            4 6 2 1 5</span>
+<span class="cm">            4 3 7 4 0</span>
+<span class="cm">            4 7 3 2 6</span>
+<span class="cm">            4 5 1 0 4</span>
+<span class="cm">            */</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ply</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;format ascii 1.0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;comment created by D. A. Matoz-Fernandez</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;element vertex &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Numvertices</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 y</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 z</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;element face &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Numfaces</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property list uint8 int32 vertex_indices</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 nx</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 ny</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property float32 nz</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//myfile &lt;&lt; &quot;property uchar red\n&quot;;</span>
+<span class="w">        </span><span class="c1">//myfile &lt;&lt; &quot;property uchar green\n&quot;;</span>
+<span class="w">        </span><span class="c1">//myfile &lt;&lt; &quot;property uchar blue\n&quot;;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;element edge &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Numedges</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property int vertex1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;property int vertex2</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;end_header</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vert_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">vert_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Numvertices</span><span class="p">;</span><span class="w"> </span><span class="n">vert_index</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">vert_index</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">vert_index</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">vert_index</span><span class="p">].</span><span class="n">r</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">face_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">face_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Numfaces</span><span class="p">;</span><span class="w"> </span><span class="n">face_index</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">face_index</span><span class="p">].</span><span class="n">v1</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">face_index</span><span class="p">].</span><span class="n">v2</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">faces</span><span class="p">[</span><span class="n">face_index</span><span class="p">].</span><span class="n">v3</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">//int red = 255;</span>
+<span class="w">            </span><span class="c1">//int blue = 0;</span>
+<span class="w">            </span><span class="c1">//int green = 255;</span>
+<span class="w">            </span><span class="c1">//myfile &lt;&lt; &quot;3&quot; &lt;&lt; &quot; &quot; &lt;&lt; v1 &lt;&lt; &quot; &quot; &lt;&lt; v2 &lt;&lt; &quot; &quot; &lt;&lt; v3 &lt;&lt; &quot; &quot; &lt;&lt; red &lt;&lt; &quot; &quot; &lt;&lt; green &lt;&lt; &quot; &quot; &lt;&lt; blue &lt;&lt; &quot;\n&quot;;</span>
+
+<span class="w">            </span><span class="n">real3</span><span class="w"> </span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">;</span>
+<span class="w">            </span><span class="n">vsub</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vsub</span><span class="p">(</span><span class="n">v13</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+<span class="w">            </span><span class="n">vcross</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">);</span>
+<span class="w">            </span><span class="n">real</span><span class="w"> </span><span class="n">normal_norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="n">normal</span><span class="p">));</span>
+<span class="w">            </span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+<span class="w">            </span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+<span class="w">            </span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">normal_norm</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="w">                   </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Numedges</span><span class="p">;</span><span class="w"> </span><span class="n">id</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">j</span><span class="p">;</span>
+<span class="w">            </span><span class="n">myfile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">myfile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Unable to open dump mesh file</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

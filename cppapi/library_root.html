@@ -1,0 +1,2321 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>C++ API &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/library_root';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">C++ API</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="c-api">
+<h1>C++ API<a class="headerlink" href="#c-api" title="Permalink to this headline">#</a></h1>
+<section id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Permalink to this headline">#</a></h2>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li>Namespace <a href="namespace_host.html#namespace-host">host</a><ul><li>Template Struct <a href="structhost_1_1reduce__tensor.html#exhale-struct-structhost-1-1reduce-tensor">reduce_tensor</a></li><li>Struct <a href="structhost_1_1reset__edge__energy.html#exhale-struct-structhost-1-1reset-edge-energy">reset_edge_energy</a></li><li>Struct <a href="structhost_1_1reset__face__energy.html#exhale-struct-structhost-1-1reset-face-energy">reset_face_energy</a></li><li>Template Struct <a href="structhost_1_1reset__tensor.html#exhale-struct-structhost-1-1reset-tensor">reset_tensor</a></li><li>Struct <a href="structhost_1_1reset__vertex__energy.html#exhale-struct-structhost-1-1reset-vertex-energy">reset_vertex_energy</a></li><li>Struct <a href="structhost_1_1reset__vertex__external__forces.html#exhale-struct-structhost-1-1reset-vertex-external-forces">reset_vertex_external_forces</a></li><li>Struct <a href="structhost_1_1reset__vertex__forces.html#exhale-struct-structhost-1-1reset-vertex-forces">reset_vertex_forces</a></li><li class="lastChild">Struct <a href="structhost_1_1reset__vertex__velocities.html#exhale-struct-structhost-1-1reset-vertex-velocities">reset_vertex_velocities</a></li></ul></li><li>Struct <a href="struct_box_type.html#exhale-struct-struct-box-type">BoxType</a></li><li>Struct <a href="structforce_matrix.html#exhale-struct-structforce-matrix">forceMatrix</a></li><li>Template Struct <a href="struct_h_e___edge.html#exhale-struct-struct-h-e--edge">HE_Edge</a></li><li>Template Struct <a href="struct_h_e___face.html#exhale-struct-struct-h-e--face">HE_Face</a></li><li>Template Struct <a href="struct_h_e___half_edge.html#exhale-struct-struct-h-e--half-edge">HE_HalfEdge</a></li><li>Template Struct <a href="struct_h_e___vertex.html#exhale-struct-struct-h-e--vertex">HE_Vertex</a></li><li>Struct <a href="struct_property.html#exhale-struct-struct-property">Property</a></li><li>Struct <a href="struct_property_edges.html#exhale-struct-struct-property-edges">PropertyEdges</a></li><li>Struct <a href="struct_property_faces.html#exhale-struct-struct-property-faces">PropertyFaces</a></li><li>Struct <a href="struct_property_vertices.html#exhale-struct-struct-property-vertices">PropertyVertices</a></li><li>Template Struct <a href="struct_set_property.html#exhale-struct-struct-set-property">SetProperty</a></li><li>Template Struct <a href="struct_set_region_edges.html#exhale-struct-struct-set-region-edges">SetRegionEdges</a></li><li>Template Struct <a href="struct_set_region_faces.html#exhale-struct-struct-set-region-faces">SetRegionFaces</a></li><li>Template Struct <a href="struct_set_region_vertices.html#exhale-struct-struct-set-region-vertices">SetRegionVertices</a></li><li>Template Struct <a href="struct_tensor_type.html#exhale-struct-struct-tensor-type">TensorType</a></li><li>Struct <a href="structtriangle.html#exhale-struct-structtriangle">triangle</a></li><li>Struct <a href="structtriangle__type.html#exhale-struct-structtriangle-type">triangle_type</a></li><li>Struct <a href="structvertices__type.html#exhale-struct-structvertices-type">vertices_type</a></li><li>Template Struct <a href="structxy_type.html#exhale-struct-structxy-type">xyType</a></li><li>Class <a href="class_compute_force_class.html#exhale-class-class-compute-force-class">ComputeForceClass</a></li><li>Class <a href="class_compute_mesh.html#exhale-class-class-compute-mesh">ComputeMesh</a></li><li>Class <a href="class_compute_vertex_bending_energy.html#exhale-class-class-compute-vertex-bending-energy">ComputeVertexBendingEnergy</a></li><li>Class <a href="class_compute_vertex_bending_g_k_energy.html#exhale-class-class-compute-vertex-bending-g-k-energy">ComputeVertexBendingGKEnergy</a></li><li>Class <a href="class_compute_vertex_cauchy_green_energy.html#exhale-class-class-compute-vertex-cauchy-green-energy">ComputeVertexCauchyGreenEnergy</a></li><li>Class <a href="class_compute_vertex_constant_area_triangle_energy.html#exhale-class-class-compute-vertex-constant-area-triangle-energy">ComputeVertexConstantAreaTriangleEnergy</a></li><li>Class <a href="class_compute_vertex_dihedral_energy.html#exhale-class-class-compute-vertex-dihedral-energy">ComputeVertexDihedralEnergy</a></li><li>Class <a href="class_compute_vertex_ferromagnetic_energy.html#exhale-class-class-compute-vertex-ferromagnetic-energy">ComputeVertexFerromagneticEnergy</a></li><li>Class <a href="class_compute_vertex_harmonic_energy.html#exhale-class-class-compute-vertex-harmonic-energy">ComputeVertexHarmonicEnergy</a></li><li>Class <a href="class_compute_vertex_harmonic_spin_energy.html#exhale-class-class-compute-vertex-harmonic-spin-energy">ComputeVertexHarmonicSpinEnergy</a></li><li>Class <a href="class_compute_vertex_limit_energy.html#exhale-class-class-compute-vertex-limit-energy">ComputeVertexLimitEnergy</a></li><li>Class <a href="class_compute_vertex_line_tension.html#exhale-class-class-compute-vertex-line-tension">ComputeVertexLineTension</a></li><li>Class <a href="class_compute_vertex_substrate_energy.html#exhale-class-class-compute-vertex-substrate-energy">ComputeVertexSubstrateEnergy</a></li><li>Class <a href="class_constraint_area.html#exhale-class-class-constraint-area">ConstraintArea</a></li><li>Class <a href="class_constraint_class.html#exhale-class-class-constraint-class">ConstraintClass</a></li><li>Class <a href="class_constraint_volume.html#exhale-class-class-constraint-volume">ConstraintVolume</a></li><li>Class <a href="class_dumper_class.html#exhale-class-class-dumper-class">DumperClass</a></li><li>Class <a href="class_evolver_class.html#exhale-class-class-evolver-class">EvolverClass</a></li><li>Class <a href="class_integrator_brownian_mesh_vertex.html#exhale-class-class-integrator-brownian-mesh-vertex">IntegratorBrownianMeshVertex</a></li><li>Class <a href="class_integrator_class.html#exhale-class-class-integrator-class">IntegratorClass</a></li><li>Class <a href="class_minimizer_class.html#exhale-class-class-minimizer-class">MinimizerClass</a></li><li>Class <a href="class_minimizer_mesh_f_i_r_e.html#exhale-class-class-minimizer-mesh-f-i-r-e">MinimizerMeshFIRE</a></li><li>Class <a href="class_monte_carlo_integrator.html#exhale-class-class-monte-carlo-integrator">MonteCarloIntegrator</a></li><li>Class <a href="class_monte_carlo_integrator_flip_edge.html#exhale-class-class-monte-carlo-integrator-flip-edge">MonteCarloIntegratorFlipEdge</a></li><li>Class <a href="class_monte_carlo_integrator_spin_vertex.html#exhale-class-class-monte-carlo-integrator-spin-vertex">MonteCarloIntegratorSpinVertex</a></li><li>Class <a href="class_monte_carlo_integrator_swap_edge.html#exhale-class-class-monte-carlo-integrator-swap-edge">MonteCarloIntegratorSwapEdge</a></li><li>Class <a href="class_monte_carlo_integrator_swap_vertex.html#exhale-class-class-monte-carlo-integrator-swap-vertex">MonteCarloIntegratorSwapVertex</a></li><li>Class <a href="class_monte_carlo_integrator_vertex.html#exhale-class-class-monte-carlo-integrator-vertex">MonteCarloIntegratorVertex</a></li><li>Class <a href="class_read_mesh.html#exhale-class-class-read-mesh">ReadMesh</a></li><li>Class <a href="class_r_n_g.html#exhale-class-class-r-n-g">RNG</a></li><li class="lastChild">Class <a href="class_system_class.html#exhale-class-class-system-class">SystemClass</a></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></section>
+<section id="full-api">
+<h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">#</a></h2>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_host.html">Namespace host</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_host.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_host.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_host.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_util.html">Namespace util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_util.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_box_type.html">Struct BoxType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_box_type.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structforce_matrix.html">Struct forceMatrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structforce_matrix.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_h_e___edge.html">Template Struct HE_Edge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_h_e___edge.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_h_e___face.html">Template Struct HE_Face</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_h_e___face.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_h_e___half_edge.html">Template Struct HE_HalfEdge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_h_e___half_edge.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_h_e___vertex.html">Template Struct HE_Vertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_h_e___vertex.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reduce__tensor.html">Template Struct reduce_tensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reduce__tensor.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__edge__energy.html">Struct reset_edge_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__edge__energy.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__face__energy.html">Struct reset_face_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__face__energy.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__tensor.html">Template Struct reset_tensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__tensor.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__vertex__energy.html">Struct reset_vertex_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__vertex__energy.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__vertex__external__forces.html">Struct reset_vertex_external_forces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__vertex__external__forces.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__vertex__forces.html">Struct reset_vertex_forces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__vertex__forces.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhost_1_1reset__vertex__velocities.html">Struct reset_vertex_velocities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhost_1_1reset__vertex__velocities.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_property.html">Struct Property</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_property.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_property_edges.html">Struct PropertyEdges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_property_edges.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_property_faces.html">Struct PropertyFaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_property_faces.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_property_vertices.html">Struct PropertyVertices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_property_vertices.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_set_property.html">Template Struct SetProperty</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_property.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_set_region_edges.html">Template Struct SetRegionEdges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_edges.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_set_region_edges.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_edges.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_set_region_faces.html">Template Struct SetRegionFaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_faces.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_set_region_faces.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_faces.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_set_region_vertices.html">Template Struct SetRegionVertices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_vertices.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_set_region_vertices.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_set_region_vertices.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="struct_tensor_type.html">Template Struct TensorType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_tensor_type.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structtriangle.html">Struct triangle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structtriangle.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structtriangle__type.html">Struct triangle_type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structtriangle__type.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structvertices__type.html">Struct vertices_type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structvertices__type.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structxy_type.html">Template Struct xyType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structxy_type.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_force_class.html">Class ComputeForceClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_force_class.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_force_class.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_force_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_mesh.html">Class ComputeMesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_mesh.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_bending_energy.html">Class ComputeVertexBendingEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_bending_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_bending_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_bending_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_bending_g_k_energy.html">Class ComputeVertexBendingGKEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_bending_g_k_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_bending_g_k_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_bending_g_k_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html">Class ComputeVertexCauchyGreenEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html">Class ComputeVertexConstantAreaTriangleEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_dihedral_energy.html">Class ComputeVertexDihedralEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_dihedral_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_dihedral_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_dihedral_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_ferromagnetic_energy.html">Class ComputeVertexFerromagneticEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_ferromagnetic_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_ferromagnetic_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_ferromagnetic_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_harmonic_energy.html">Class ComputeVertexHarmonicEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_harmonic_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_harmonic_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_harmonic_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_harmonic_spin_energy.html">Class ComputeVertexHarmonicSpinEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_harmonic_spin_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_harmonic_spin_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_harmonic_spin_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_limit_energy.html">Class ComputeVertexLimitEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_limit_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_limit_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_limit_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_line_tension.html">Class ComputeVertexLineTension</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_line_tension.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_line_tension.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_line_tension.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_compute_vertex_substrate_energy.html">Class ComputeVertexSubstrateEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_substrate_energy.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_compute_vertex_substrate_energy.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_compute_vertex_substrate_energy.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_constraint_area.html">Class ConstraintArea</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_area.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_constraint_area.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_area.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_constraint_class.html">Class ConstraintClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_class.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_constraint_class.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_constraint_volume.html">Class ConstraintVolume</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_volume.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_constraint_volume.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_constraint_volume.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_dumper_class.html">Class DumperClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_dumper_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_evolver_class.html">Class EvolverClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_evolver_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_integrator_brownian_mesh_vertex.html">Class IntegratorBrownianMeshVertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_integrator_brownian_mesh_vertex.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_integrator_brownian_mesh_vertex.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_integrator_brownian_mesh_vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_integrator_class.html">Class IntegratorClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_integrator_class.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_integrator_class.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_integrator_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_minimizer_class.html">Class MinimizerClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_minimizer_class.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_minimizer_class.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_minimizer_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_minimizer_mesh_f_i_r_e.html">Class MinimizerMeshFIRE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_minimizer_mesh_f_i_r_e.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_minimizer_mesh_f_i_r_e.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_minimizer_mesh_f_i_r_e.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator.html">Class MonteCarloIntegrator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator.html#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator_flip_edge.html">Class MonteCarloIntegratorFlipEdge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_flip_edge.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator_flip_edge.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_flip_edge.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator_spin_vertex.html">Class MonteCarloIntegratorSpinVertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_spin_vertex.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator_spin_vertex.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_spin_vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator_swap_edge.html">Class MonteCarloIntegratorSwapEdge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_swap_edge.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator_swap_edge.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_swap_edge.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator_swap_vertex.html">Class MonteCarloIntegratorSwapVertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_swap_vertex.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator_swap_vertex.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_swap_vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_monte_carlo_integrator_vertex.html">Class MonteCarloIntegratorVertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_vertex.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_monte_carlo_integrator_vertex.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_monte_carlo_integrator_vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_read_mesh.html">Class ReadMesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_read_mesh.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_r_n_g.html">Class RNG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_r_n_g.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_system_class.html">Class SystemClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_system_class.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_computemesh_8cpp_1a1b2181aa9b3b5c83d227f66e3d10ad99.html">Function compute_edge_cotangents_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_computemesh_8cpp_1a1b2181aa9b3b5c83d227f66e3d10ad99.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_computemesh_8cpp_1a54c00678a4ae0e2f0a595d53d1de9fbd.html">Function compute_edge_length_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_computemesh_8cpp_1a54c00678a4ae0e2f0a595d53d1de9fbd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_computemesh_8cpp_1ac14912c051d6d64f27f868050d36b330.html">Function compute_face_normals_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_computemesh_8cpp_1ac14912c051d6d64f27f868050d36b330.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1a62335da159ee70be4093dbdcd3d9b37e.html">Function compute_mean_curvature_operature</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1a62335da159ee70be4093dbdcd3d9b37e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1ae7da2125e8b7de0a4f0206e985a1175e.html">Function compute_vertex_energy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1ae7da2125e8b7de0a4f0206e985a1175e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_ising_8cpp_1a31b3985c87980152bd7e2e7c5805b76c.html">Function ComputeEdgeFerroEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_ising_8cpp_1a31b3985c87980152bd7e2e7c5805b76c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1a6a7c77ede7c12918db0c99fae9b9c7a0.html">Function ComputeEdgeHarmonicEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1a6a7c77ede7c12918db0c99fae9b9c7a0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1aed5233ec22000c883743766d3597a36a.html">Function ComputeEdgeHarmonicSpinEnergy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1aed5233ec22000c883743766d3597a36a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1aae1d6eee3d3b99555befbb52bb3f8b76.html">Function ComputeEdgeHarmonicSpinEnergy_ferro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1aae1d6eee3d3b99555befbb52bb3f8b76.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_limit_8cpp_1a33ec812f3bbb8e8a931be4b2dafb1019.html">Function ComputeEdgeLimitEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_limit_8cpp_1a33ec812f3bbb8e8a931be4b2dafb1019.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_8cpp_1ae54983f9eb83cff2f800169728fe415d.html">Function ComputeVertexBendingEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_8cpp_1ae54983f9eb83cff2f800169728fe415d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_8cpp_1a34be6d8415d14941ab331bdaa1f8d100.html">Function ComputeVertexBendingEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_8cpp_1a34be6d8415d14941ab331bdaa1f8d100.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_8cpp_1ab9a8ec5bab66b4411db8cde3eaa57169.html">Function ComputeVertexBendingForce_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_8cpp_1ab9a8ec5bab66b4411db8cde3eaa57169.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_8cpp_1abbf6d218c01e9ca1692c2a478faf1394.html">Function ComputeVertexBendingForce_fn(int, const HE_EdgeProp *, const HE_FaceProp *, HE_VertexProp *, const double *)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_8cpp_1abbf6d218c01e9ca1692c2a478faf1394.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a0e23f26eb60159ea7e049464f2c3128a.html">Function ComputeVertexBendingForce_fn(int, const HE_EdgeProp *, const HE_FaceProp *, HE_VertexProp *, const double *, const double *)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a0e23f26eb60159ea7e049464f2c3128a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1ab622f9aea9e8d547e98b24bc370060da.html">Function ComputeVertexBendingStress_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1ab622f9aea9e8d547e98b24bc370060da.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a7c0c0a3b297dea1a282619ea3c22beea.html">Function ComputeVertexBendingStressAtom_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a7c0c0a3b297dea1a282619ea3c22beea.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1a649268b22e5009b315bd512986361166.html">Function ComputeVertexCauchyGreenEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1a649268b22e5009b315bd512986361166.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1af45981972812bcb75b33afc1bce06e56.html">Function ComputeVertexCauchyGreenEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1af45981972812bcb75b33afc1bce06e56.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1ae61559ba200ab9e498e32af4e200a191.html">Function ComputeVertexCauchyGreenForce_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1ae61559ba200ab9e498e32af4e200a191.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1a737546b8e0ef0644abd094b1857d8479.html">Function ComputeVertexCauchyGreenForce_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_cauchy_green_8cpp_1a737546b8e0ef0644abd094b1857d8479.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a48647b4af82a5e31457d756ebd4a4c6f.html">Function ComputeVertexConstantAreaTriangleEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a48647b4af82a5e31457d756ebd4a4c6f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a38e2d5b463504a85f26a5ae55ca142d1.html">Function ComputeVertexConstantAreaTriangleEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a38e2d5b463504a85f26a5ae55ca142d1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a0a6f649245c4ec0ad03b71dfad30f57c.html">Function ComputeVertexConstantAreaTriangleForce_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a0a6f649245c4ec0ad03b71dfad30f57c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a130e3e557c900641219bd5c9517481f5.html">Function ComputeVertexConstantAreaTriangleForce_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_constant_area_triangle_8cpp_1a130e3e557c900641219bd5c9517481f5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a65e5a633d7f4eac94535de00ca38218e.html">Function ComputeVertexDihedralEnergy_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a65e5a633d7f4eac94535de00ca38218e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a4af4927ac36fe19e42141627e199915c.html">Function ComputeVertexDihedralEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_dihedral_harmonics_8cpp_1a4af4927ac36fe19e42141627e199915c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_ising_8cpp_1ad0c1cbe63f4d0133b3bcb5cf17961af3.html">Function ComputeVertexFerroEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_ising_8cpp_1ad0c1cbe63f4d0133b3bcb5cf17961af3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1a524d448d38975050ead943901673b50b.html">Function ComputeVertexHarmonicEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1a524d448d38975050ead943901673b50b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1a60539d9e18c18f4c9de0a0c165263f1c.html">Function ComputeVertexHarmonicForce</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1a60539d9e18c18f4c9de0a0c165263f1c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1a2bddbba73173302d08a018b250fb1a68.html">Function ComputeVertexHarmonicForce_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1a2bddbba73173302d08a018b250fb1a68.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a2c9c61805a2ee398a64258f24d059e3c.html">Function ComputeVertexHarmonicSpinEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a2c9c61805a2ee398a64258f24d059e3c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a78cd6fc951e33249abb8ece30c566ab8.html">Function ComputeVertexHarmonicSpinForce</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a78cd6fc951e33249abb8ece30c566ab8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a1395f373c564c162ec40b5d12b4a7e13.html">Function ComputeVertexHarmonicSpinForce_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_sloutskin_8cpp_1a1395f373c564c162ec40b5d12b4a7e13.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1a5985069200c15a5935b423bfe7bcfc93.html">Function ComputeVertexHarmonicStress_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1a5985069200c15a5935b423bfe7bcfc93.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_harmonic_8cpp_1aa1530c3369a0aaf972041dbcecc675a4.html">Function ComputeVertexHarmonicStressAtom_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_harmonic_8cpp_1aa1530c3369a0aaf972041dbcecc675a4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_limit_8cpp_1ac5d55d309f04353dd4ad2691497f25db.html">Function ComputeVertexLimitEnergy_fn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_limit_8cpp_1ac5d55d309f04353dd4ad2691497f25db.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_limit_8cpp_1a984f068c1f12734783171c22c02655a9.html">Function ComputeVertexLimitForce</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_limit_8cpp_1a984f068c1f12734783171c22c02655a9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_limit_8cpp_1ae0ebc6695656ce149fd5aacfbfd7479b.html">Function ComputeVertexLimitForce_fn(int, HE_VertexProp *, HE_EdgeProp *, real *, real *)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_limit_8cpp_1ae0ebc6695656ce149fd5aacfbfd7479b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_substrate_8cpp_1af0b26c811fe7429c3f555e5e5fc5022a.html">Function ComputeVertexLimitForce_fn(int, HE_VertexProp *, real *, real *)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_substrate_8cpp_1af0b26c811fe7429c3f555e5e5fc5022a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__types_8hpp_1ac2078006888b108b4dd467f53b847118.html">Function export_bool3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__types_8hpp_1ac2078006888b108b4dd467f53b847118.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__box_8hpp_1a817a03bbe921ee0d08ecfe738d9dcca1.html">Function export_BoxType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__box_8hpp_1a817a03bbe921ee0d08ecfe738d9dcca1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__compute_8hpp_1affa5adc811da8b6faf761829f85a7f22.html">Function export_ComputeMesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__compute_8hpp_1affa5adc811da8b6faf761829f85a7f22.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__dumper_8hpp_1ae32e662a9ba7fbee97ec04e9c41de6d3.html">Function export_DumperClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__dumper_8hpp_1ae32e662a9ba7fbee97ec04e9c41de6d3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__evolver_8hpp_1af24e201041638cef32fc118f80ac8400.html">Function export_EvolverClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__evolver_8hpp_1af24e201041638cef32fc118f80ac8400.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a5cb9cb5910a8e6da45401f7c5991edba.html">Function export_HE_Edge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a5cb9cb5910a8e6da45401f7c5991edba.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a983654e7ec77041a65cc5424e9c15011.html">Function export_HE_Edge_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a983654e7ec77041a65cc5424e9c15011.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a69468b1e5300b7280ae83c003fa6070b.html">Function export_HE_Face</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a69468b1e5300b7280ae83c003fa6070b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a13b9f28ea1e843d4f940aee97aa1ead1.html">Function export_HE_Face_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a13b9f28ea1e843d4f940aee97aa1ead1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ae7bd130140bb5aedcd29b432c953c2b7.html">Function export_HE_HalfEdge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ae7bd130140bb5aedcd29b432c953c2b7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a0e73ba9052c737fdb60eccb5e29c6fe3.html">Function export_HE_HalfEdge_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a0e73ba9052c737fdb60eccb5e29c6fe3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ab37e0f79b2539813523a9c73af5c34b7.html">Function export_HE_Vertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ab37e0f79b2539813523a9c73af5c34b7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1aee6208134c2277bc1f44ba8fea41c810.html">Function export_HE_Vertex_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1aee6208134c2277bc1f44ba8fea41c810.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__types_8hpp_1a44c83d746b6f3b7a6b37bef4cbb91a73.html">Function export_inth3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__types_8hpp_1a44c83d746b6f3b7a6b37bef4cbb91a73.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1aedffeaea84c64b8cf98620432fa4657a.html">Function export_PropertyEdges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1aedffeaea84c64b8cf98620432fa4657a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1af8936f0fdf98a34e6a85812d6429398e.html">Function export_PropertyEdges_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1af8936f0fdf98a34e6a85812d6429398e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a16a936b4e74f859a90296c5cdf8d2d5a.html">Function export_PropertyFaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a16a936b4e74f859a90296c5cdf8d2d5a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1adce8e5d7405cc1fb90e8629a21b75907.html">Function export_PropertyFaces_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1adce8e5d7405cc1fb90e8629a21b75907.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1abdcb0a55474d44b1eba8b9d662ff6111.html">Function export_PropertyVertices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1abdcb0a55474d44b1eba8b9d662ff6111.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a2b441ba7cbbe435bf1552547e303d7cf.html">Function export_PropertyVertices_Vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1a2b441ba7cbbe435bf1552547e303d7cf.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ad9515d04f14437abbc1b3e5afdccd523.html">Function export_ReadMesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__mesh_8hpp_1ad9515d04f14437abbc1b3e5afdccd523.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__types_8hpp_1ad240db71e1dbbcbcda9fa7865024c8d4.html">Function export_real3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__types_8hpp_1ad240db71e1dbbcbcda9fa7865024c8d4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__types_8hpp_1aa600fa12d9773c4d34a44db8f20d57f5.html">Function export_realTensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__types_8hpp_1aa600fa12d9773c4d34a44db8f20d57f5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybind__export__system_8hpp_1ab88c02d11972fa0911105601e9d03643.html">Function export_SystemClass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybind__export__system_8hpp_1ab88c02d11972fa0911105601e9d03643.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga59f3b7959a11b607dabd5648670ce812.html">Function host::cmassT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga59f3b7959a11b607dabd5648670ce812.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1gacb0c3975ab2323b522db7cd16d073713.html">Function host::compute_angle_vertex()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1gacb0c3975ab2323b522db7cd16d073713.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga99e78433e22e1b0de2fedbe3f8799c28.html">Function host::compute_angle_vertex()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga99e78433e22e1b0de2fedbe3f8799c28.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga68a032ff10b623ed9bc1b1498aeb0033.html">Function host::compute_area_triangle_from_metric</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga68a032ff10b623ed9bc1b1498aeb0033.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1gad2a358fcbd16c10678e55c307fbb04e6.html">Function host::compute_area_triangle_from_vertex()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1gad2a358fcbd16c10678e55c307fbb04e6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga0cee5ae50225b692574e5c6505d09c1e.html">Function host::compute_area_triangle_from_vertex()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga0cee5ae50225b692574e5c6505d09c1e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga970b975e7240e677c3a9adcdb3423b3b.html">Function host::compute_form_factor_triangle()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga970b975e7240e677c3a9adcdb3423b3b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga47ecc5dc70f0f206bcffc5bee54d8932.html">Function host::compute_form_factor_triangle()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga47ecc5dc70f0f206bcffc5bee54d8932.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga3275ae1db0b27f4c3c72f5c299f8acca.html">Function host::compute_matrix_F</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga3275ae1db0b27f4c3c72f5c299f8acca.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1gab01124c2457c2af60d3917eb63da5f50.html">Function host::compute_normal_triangle()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1gab01124c2457c2af60d3917eb63da5f50.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1gaa61330dbe712542331d03b761e1b539c.html">Function host::compute_normal_triangle()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1gaa61330dbe712542331d03b761e1b539c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga7ebf01a7d6d2943b64b00edc564f6ef6.html">Function host::compute_normal_triangle_unit()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga7ebf01a7d6d2943b64b00edc564f6ef6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga470c1b01202c71ea72b0f59aa17f08d1.html">Function host::compute_normal_triangle_unit()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga470c1b01202c71ea72b0f59aa17f08d1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_hostvector_8hpp_1a55e59b72ca24ceb1df70bcdfa01beb2a.html">Template Function host::copy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_hostvector_8hpp_1a55e59b72ca24ceb1df70bcdfa01beb2a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pbc_8hpp_1a9479ad9811cdeaa3016e5309083ccb3d.html">Function host::enforce_periodic(const real3&amp;, const BoxType&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pbc_8hpp_1a9479ad9811cdeaa3016e5309083ccb3d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pbc_8hpp_1a803775505669379fa6cca5064c73b1a3.html">Function host::enforce_periodic(real3&amp;, inth3&amp;, const BoxType&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pbc_8hpp_1a803775505669379fa6cca5064c73b1a3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pbc_8hpp_1a7b02368c0d3faba529b6e0687ba21f2a.html">Function host::minimum_image</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pbc_8hpp_1a7b02368c0d3faba529b6e0687ba21f2a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga3d35944f0e1fc2a7fae5e5d9123fdbc5.html">Function host::RefMatrixFromCartesian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga3d35944f0e1fc2a7fae5e5d9123fdbc5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga4e9ede0e93079d65cfb9897d87402123.html">Function host::RefMatrixFromCylindrical</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga4e9ede0e93079d65cfb9897d87402123.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga75c2b28c5d0f73d9bd0464d3ce6da069.html">Function host::unit_vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga75c2b28c5d0f73d9bd0464d3ce6da069.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga90ebaee045ac1682a3c4af81af6a0c5f.html">Function host::vector_cross</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga90ebaee045ac1682a3c4af81af6a0c5f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga73f21e526241088e6348501868efe4b1.html">Function host::vector_subtract()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga73f21e526241088e6348501868efe4b1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga9ca64d8ac8e4b42f52e8db475d3b52a1.html">Function host::vector_subtract()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga9ca64d8ac8e4b42f52e8db475d3b52a1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga608fb0f3216f43f8001a6b87492aeb49.html">Function host::vector_sum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_group___compute_g_p_ufn_1ga608fb0f3216f43f8001a6b87492aeb49.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_pybindexport_8cpp_1a488edafdcfb5230ce6c7878790b80146.html">Function PYBIND11_MODULE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_pybindexport_8cpp_1a488edafdcfb5230ce6c7878790b80146.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_8cpp_1a9a29a85578cc86c385ad784f84e0b8a5.html">Function scale_BendingForceMatrix_dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_8cpp_1a9a29a85578cc86c385ad784f84e0b8a5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1a1c12c5383741d0fc1d3ba4c73c7ef3c5.html">Function update_face</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_potential_bending_gompper_kroll_8cpp_1a1c12c5383741d0fc1d3ba4c73c7ef3c5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437.html">Function util::from_dict_to_vector_types(std::vector&lt;int&gt;, std::map&lt;int, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490.html">Function util::from_dict_to_vector_types(std::vector&lt;double&gt;, std::map&lt;int, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d.html">Function util::from_dict_to_vector_types(std::vector&lt;bool&gt;, std::map&lt;int, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9.html">Function util::from_dict_to_vector_types(std::vector&lt;int&gt;, std::map&lt;std::string, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3.html">Function util::from_dict_to_vector_types(std::vector&lt;double&gt;, std::map&lt;std::string, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab.html">Function util::from_dict_to_vector_types(std::vector&lt;bool&gt;, std::map&lt;std::string, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6.html">Function util::from_dict_to_vector_types_pair(std::vector&lt;int&gt;, uint, std::map&lt;std::pair&lt;std::string, std::string&gt;, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472.html">Function util::from_dict_to_vector_types_pair(std::vector&lt;double&gt;, uint, std::map&lt;std::pair&lt;std::string, std::string&gt;, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3.html">Function util::from_dict_to_vector_types_pair(std::vector&lt;bool&gt;, uint, std::map&lt;std::pair&lt;std::string, std::string&gt;, std::string&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1ae14bf130ba37e8322c891026b87eec9b.html">Function util::from_string_bool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1ae14bf130ba37e8322c891026b87eec9b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a432ed281dbf37b22012c2918e1be0ee1.html">Function util::from_string_double</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a432ed281dbf37b22012c2918e1be0ee1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a16cdb2aefbafdfcdad6df9c567d9f551.html">Function util::from_string_int</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a16cdb2aefbafdfcdad6df9c567d9f551.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a5a63bf1eb56baca7965295f731af6a55.html">Function util::from_string_unsigned</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a5a63bf1eb56baca7965295f731af6a55.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a4a377564f83e5535541f029f76b9c4de.html">Template Function util::to_string</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a4a377564f83e5535541f029f76b9c4de.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a14eadb6387fd7b2834ade3621cd96e0f.html">Template Function util::to_string_scientific</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a14eadb6387fd7b2834ade3621cd96e0f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1a817b573485fc482d609f1bd50782b795.html">Template Function util::to_string_vec</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1a817b573485fc482d609f1bd50782b795.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fromstring_8hpp_1aa3bcaa5c21ec44a6c4e98c20c4da2c7a.html">Template Function util::to_string_with_precision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fromstring_8hpp_1aa3bcaa5c21ec44a6c4e98c20c4da2c7a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h3>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1ae0530566347ede8987efd13ce67116fc.html">Define aXvec</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1ae0530566347ede8987efd13ce67116fc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1aead13ecbc45a775b5188eb6c2398bba6.html">Define BIG_ENERGY_LIMIT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1aead13ecbc45a775b5188eb6c2398bba6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_group__computeenergy_1ga04dc8bba79b29dacbbac9ff2051c6f57.html">Define BIG_VERTEX_ENERGY_LIMIT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_group__computeenergy_1ga04dc8bba79b29dacbbac9ff2051c6f57.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1a7ef39629eaffde5edde41d12aee110e9.html">Define defPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1a7ef39629eaffde5edde41d12aee110e9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1afa99ec4acc4ecb2dc3c2d05da15d0e3f.html">Define MAX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1afa99ec4acc4ecb2dc3c2d05da15d0e3f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1a3acffbd305ee72dcd4593c0d8af64a4f.html">Define MIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1a3acffbd305ee72dcd4593c0d8af64a4f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1a5886e7212d7b5a4c93ce0e62e40efba7.html">Define vcross</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1a5886e7212d7b5a4c93ce0e62e40efba7.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1a909f1baa588275e828e8770e224502f0.html">Define vdot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1a909f1baa588275e828e8770e224502f0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1ae8b243addbf44089525434d278724a00.html">Define vset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1ae8b243addbf44089525434d278724a00.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1aea350326529792709751625bd70e1f94.html">Define vsub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1aea350326529792709751625bd70e1f94.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_globaltypes_8hpp_1a2bf259b1a89048663bd77b10aa6a940c.html">Define vsum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_globaltypes_8hpp_1a2bf259b1a89048663bd77b10aa6a940c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_fire_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html">Define Xvec1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_fire_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html">Define Xvec1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_dihedral_harmonics_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html">Define Xvec1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_dihedral_harmonics_8cpp_1aa8c9f07207827310c7f79cadf8a0c7c8.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_fire_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html">Define Xvec2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_fire_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html">Define Xvec2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_dihedral_harmonics_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html">Define Xvec2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_dihedral_harmonics_8cpp_1a6bdf714f0e556c91e8125b6c939a83c0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_fire_8cpp_1a1c315a2e32da20ede999fc811bf55122.html">Define Xvec3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_fire_8cpp_1a1c315a2e32da20ede999fc811bf55122.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a1c315a2e32da20ede999fc811bf55122.html">Define Xvec3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a1c315a2e32da20ede999fc811bf55122.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_fire_8cpp_1a45cece0c685bd03ee79219ef02f0707c.html">Define Xvec4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_fire_8cpp_1a45cece0c685bd03ee79219ef02f0707c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a45cece0c685bd03ee79219ef02f0707c.html">Define Xvec4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_potential_bending_gompper_kroll_8cpp_1a45cece0c685bd03ee79219ef02f0707c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_globaltypes_8hpp_1afe2370c07164ed241185946d72ac0eb8.html">Typedef bool3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_globaltypes_8hpp_1afe2370c07164ed241185946d72ac0eb8.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7.html">Typedef ComputeForceClass_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_constraintclass_8hpp_1ae2d778d2a3b3b1445313fad4af9aa2d1.html">Typedef ConstraintClass_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_constraintclass_8hpp_1ae2d778d2a3b3b1445313fad4af9aa2d1.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__mesh_1ga92b6815f5e1e981bc534da3e17e51529.html">Typedef HE_EdgeProp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__mesh_1ga92b6815f5e1e981bc534da3e17e51529.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__mesh_1ga040b94d03d4d83f06ede4550215fa069.html">Typedef HE_FaceProp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__mesh_1ga040b94d03d4d83f06ede4550215fa069.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19.html">Typedef HE_HalfEdgeProp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf.html">Typedef HE_VertexProp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_hostvector_8hpp_1a8282db000ccb56c0ace424db9c3e3efb.html">Typedef host::vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_hostvector_8hpp_1a8282db000ccb56c0ace424db9c3e3efb.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_integratorclass_8hpp_1ad19ee330adba0de839fae1e8a99bd1b8.html">Typedef IntegratorClass_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_integratorclass_8hpp_1ad19ee330adba0de839fae1e8a99bd1b8.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_globaltypes_8hpp_1af83700198ac00126d22152cf1545f0b9.html">Typedef inth3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_globaltypes_8hpp_1af83700198ac00126d22152cf1545f0b9.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_minimizerclass_8hpp_1ab8063756914324ad8dbca25eafc43a10.html">Typedef MinimizerClass_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_minimizerclass_8hpp_1ab8063756914324ad8dbca25eafc43a10.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montecarlointegrator_8hpp_1a620c22e302d4d8e060e25bdf46db5c7f.html">Typedef MonteCarloIntegrator_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montecarlointegrator_8hpp_1a620c22e302d4d8e060e25bdf46db5c7f.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montercarlo__flip__edge_8hpp_1af8ca7fd184249199255de74f55e17ac1.html">Typedef MonteCarloIntegratorFlipEdge_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montercarlo__flip__edge_8hpp_1af8ca7fd184249199255de74f55e17ac1.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montercarlo__spin__vertex_8hpp_1a646fdd4e495a91fbd845fa066b6c5b97.html">Typedef MonteCarloIntegratorSpinVertex_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montercarlo__spin__vertex_8hpp_1a646fdd4e495a91fbd845fa066b6c5b97.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montercarlo__swap__edge_8hpp_1a47e7d522f2502680301fd1adabb53f59.html">Typedef MonteCarloIntegratorSwapEdge_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montercarlo__swap__edge_8hpp_1a47e7d522f2502680301fd1adabb53f59.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montercarlo__swap__vertex_8hpp_1a30b1b0fa286371df74b61bdaf9559209.html">Typedef MonteCarloIntegratorSwapVertex_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montercarlo__swap__vertex_8hpp_1a30b1b0fa286371df74b61bdaf9559209.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_montercarlo__vertex_8hpp_1af85647aea7295fb64a221dc487c27a0c.html">Typedef MonteCarloIntegratorVertex_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_montercarlo__vertex_8hpp_1af85647aea7295fb64a221dc487c27a0c.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html">Typedef real</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10.html">Typedef real3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html">Typedef realTensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_rng_8hpp_1a37e80b87099994243f26622c41d5a28c.html">Typedef RNG_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_rng_8hpp_1a37e80b87099994243f26622c41d5a28c.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html">Typedef VertexCompute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-hierarchy">Class Hierarchy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-api">Full API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-structs">Classes and Structs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defines">Defines</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

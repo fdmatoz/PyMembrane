@@ -1,0 +1,643 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File potentialHarmonicSloutskin.cpp &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/program_listing_file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File potentialHarmonicSloutskin.cpp</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File potentialHarmonicSloutskin.cpp</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-potentialharmonicsloutskin-cpp">
+<span id="program-listing-file-pymembrane-cppmodule-src-potentials-potentialharmonicsloutskin-cpp"></span><h1>Program Listing for File potentialHarmonicSloutskin.cpp<a class="headerlink" href="#program-listing-for-file-potentialharmonicsloutskin-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html#file-pymembrane-cppmodule-src-potentials-potentialharmonicsloutskin-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;potentialHarmonicSloutskin.hpp&quot;</span>
+
+
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ComputeEdgeHarmonicSpinEnergy</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="n">r1</span><span class="p">,</span>
+<span class="w">                                 </span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span>
+<span class="w">                                 </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">k</span><span class="p">,</span>
+<span class="w">                                 </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">l0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">rij</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vsub</span><span class="p">(</span><span class="n">rij</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">rij</span><span class="p">,</span><span class="w"> </span><span class="n">rij</span><span class="p">));</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">dr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">dr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ComputeEdgeHarmonicSpinEnergy_ferro</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">J</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">J</span><span class="o">*</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinEnergy_fn</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Numedges</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">edges</span><span class="p">,</span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">*</span><span class="n">vertices</span><span class="p">,</span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">_k</span><span class="p">,</span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">_l0</span><span class="p">,</span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">_J</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Numedges</span><span class="p">;</span><span class="w"> </span><span class="n">edge_index</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">type</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">_s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">j</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">_s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//Harmonic Energy</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeEdgeHarmonicSpinEnergy</span><span class="p">(</span><span class="n">_r1</span><span class="p">,</span><span class="w"> </span><span class="n">_r2</span><span class="p">,</span><span class="w"> </span><span class="n">_k</span><span class="p">[</span><span class="n">type</span><span class="p">],</span><span class="w"> </span><span class="n">_l0</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+<span class="w">        </span><span class="c1">//Ferromagnetic Energy</span>
+<span class="w">        </span><span class="n">energy</span><span class="o">+=</span><span class="n">ComputeEdgeHarmonicSpinEnergy_ferro</span><span class="p">(</span><span class="n">_s1</span><span class="p">,</span><span class="w"> </span><span class="n">_s2</span><span class="p">,</span><span class="w"> </span><span class="n">_J</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+
+<span class="w">        </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinEnergy::compute_edge_energy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">query_edge_index</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">type</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">_r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">_s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">_r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">_s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//Harmonic Energy</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">edge_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeEdgeHarmonicSpinEnergy</span><span class="p">(</span><span class="n">_r1</span><span class="p">,</span><span class="w"> </span><span class="n">_r2</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">[</span><span class="n">type</span><span class="p">],</span><span class="w"> </span><span class="n">l0</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="c1">//Ferromagnetic Energy</span>
+<span class="w">    </span><span class="n">edge_energy</span><span class="o">+=</span><span class="n">ComputeEdgeHarmonicSpinEnergy_ferro</span><span class="p">(</span><span class="n">_s1</span><span class="p">,</span><span class="w"> </span><span class="n">_s2</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">edge_energy</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinEnergy::compute_vertex_energy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">query_vertex_index</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">harmonic_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">ferro_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">query_vertex_index</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">;</span>
+<span class="w">    </span><span class="k">do</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// DO SOMETHING WITH THAT FACE</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">edge</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">type</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">j</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="n">harmonic_energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">ComputeEdgeHarmonicSpinEnergy</span><span class="p">(</span><span class="n">_r1</span><span class="p">,</span><span class="w"> </span><span class="n">_r2</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">[</span><span class="n">type</span><span class="p">],</span><span class="w"> </span><span class="n">l0</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">_s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">_s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ferro_energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">ComputeEdgeHarmonicSpinEnergy_ferro</span><span class="p">(</span><span class="n">_s1</span><span class="p">,</span><span class="w"> </span><span class="n">_s2</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+<span class="w">        </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
+<span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">he</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">query_vertex_index</span><span class="p">].</span><span class="n">spin</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">vertex_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">query_vertex_index</span><span class="p">].</span><span class="n">type</span><span class="p">;</span>
+<span class="w">        </span><span class="n">harmonic_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ea</span><span class="p">[</span><span class="n">vertex_type</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">harmonic_energy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ferro_energy</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinEnergy::compute_energy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="n">ComputeVertexHarmonicSpinEnergy_fn</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">Numedges</span><span class="p">,</span>
+<span class="w">                                       </span><span class="o">&amp;</span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                       </span><span class="o">&amp;</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                       </span><span class="o">&amp;</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                       </span><span class="o">&amp;</span><span class="n">l0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                       </span><span class="o">&amp;</span><span class="n">J</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinForce</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="n">rij</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">k</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">l0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">rij</span><span class="p">,</span><span class="w"> </span><span class="n">rij</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">dr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fval</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinForce_fn</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Numedges</span><span class="p">,</span>
+<span class="w">                                       </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">*</span><span class="n">vertices</span><span class="p">,</span>
+<span class="w">                                       </span><span class="k">const</span><span class="w"> </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">edges</span><span class="p">,</span>
+<span class="w">                                       </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">_k</span><span class="p">,</span>
+<span class="w">                                       </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">__restrict__</span><span class="w"> </span><span class="n">_l0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//int i = blockIdx.x*blockDim.x + threadIdx.x;</span>
+<span class="w">    </span><span class="c1">//if(  i &lt; Numvertices )</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Numedges</span><span class="p">;</span><span class="w"> </span><span class="n">edge_index</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">j</span><span class="p">;</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">_rij</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vsub</span><span class="p">(</span><span class="n">_rij</span><span class="p">,</span><span class="w"> </span><span class="n">_r2</span><span class="p">,</span><span class="w"> </span><span class="n">_r1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">type</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeVertexHarmonicSpinForce</span><span class="p">(</span><span class="n">_rij</span><span class="p">,</span><span class="w"> </span><span class="n">_k</span><span class="p">[</span><span class="n">type</span><span class="p">],</span><span class="w"> </span><span class="n">_l0</span><span class="p">[</span><span class="n">type</span><span class="p">]);</span>
+
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">-1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">-1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">forceC</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">-1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fval</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_rij</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ComputeVertexHarmonicSpinEnergy::compute</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="n">ComputeVertexHarmonicSpinForce_fn</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">Numedges</span><span class="p">,</span>
+<span class="w">                                      </span><span class="o">&amp;</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                      </span><span class="o">&amp;</span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                      </span><span class="o">&amp;</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">                                      </span><span class="o">&amp;</span><span class="n">l0</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

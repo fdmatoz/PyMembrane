@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File evolverclass.cpp &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/program_listing_file_pymembrane_cppmodule_src_evolver_evolverclass.cpp';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File evolverclass.cpp</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File evolverclass.cpp</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-evolverclass-cpp">
+<span id="program-listing-file-pymembrane-cppmodule-src-evolver-evolverclass-cpp"></span><h1>Program Listing for File evolverclass.cpp<a class="headerlink" href="#program-listing-for-file-evolverclass-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.cpp.html#file-pymembrane-cppmodule-src-evolver-evolverclass-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/evolver/evolverclass.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;evolverclass.hpp&quot;</span>
+
+<span class="c1">//operators over the meshes</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mesh/meshoperators.hpp&quot;</span>
+
+<span class="c1">//here include all the hpp files of the mesh integrators</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/integrator_brownian_vertex.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montecarlointegrator.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_vertex.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_swap_vertex.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_swap_edge.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_flip_edge.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_spin_vertex.hpp&quot;</span>
+
+
+<span class="c1">//here we include all the Minimizers</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../minimizer/fire.hpp&quot;</span>
+
+<span class="c1">//contraints</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../constraints/constraintvolume.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../constraints/constraintarea.hpp&quot;</span>
+
+<span class="c1">//compute</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_forces</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_vertex_forces</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">//compute</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_energy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_vertex_energy</span><span class="p">());</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_edge_energy</span><span class="p">());</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">faces</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">faces</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">faces</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_face_energy</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::compute_mesh_forces</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">force</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">force</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::compute_mesh_energy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">force</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">force</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute_energy</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_stresses</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">has_face_forces</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_faces</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_faces</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_faces</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_tensor</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">has_vertex_forces</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_vertices</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_tensor</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">has_edge_forces</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_edges</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_edges</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_group_edges</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_tensor</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_atom_stresses</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">stress_virial_atom</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_virial_atom</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">stress_virial_atom</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">reset_tensor</span><span class="o">&lt;</span><span class="n">realTensor</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::compute_mesh_stresses</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">force</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">force</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute_stress</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::compute_mesh_atom_stresses</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">force</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">force</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute_atomic_stress</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::add_integrator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parameters</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Brownian&gt;Positions&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">IntegratorBrownianMeshVertex</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;move&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorVertex</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;swap&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorSwapVertex</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;edge&gt;swap&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorSwapEdge</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;edge&gt;flip&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorFlipEdge</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;spin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorSpinVertex</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; integrator not found&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::delete_integrator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it_mesh_integrator_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it_mesh_integrator_list</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+<span class="w">        </span><span class="n">mesh_integrator_list</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it_mesh_integrator_list</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it_mesh_integrator_montecarlo_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it_mesh_integrator_montecarlo_list</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it_mesh_integrator_montecarlo_list</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::add_minimizer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parameters</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Fire&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_minimizer_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimizerMeshFIRE</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh_minimizer_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; minimizer not found&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::delete_minimizer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it_mesh_minimizer_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh_minimizer_list</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it_mesh_minimizer_list</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mesh_minimizer_list</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+<span class="w">        </span><span class="n">mesh_minimizer_list</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it_mesh_minimizer_list</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::minimize</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">minimizer</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_minimizer_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">minimizer</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">minimize</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::set_time_step</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">set_time_step</span><span class="p">(</span><span class="n">util</span><span class="o">::</span><span class="n">from_string_double</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::set_global_temperature</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">set_temperature</span><span class="p">(</span><span class="n">util</span><span class="o">::</span><span class="n">from_string_double</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">set_temperature</span><span class="p">(</span><span class="n">util</span><span class="o">::</span><span class="n">from_string_double</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::evolve_mesh_md</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Perform the preintegration step, i.e., step before forces and torques are computed</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_prestep</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Reset all forces and toques</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">reset_mesh_forces</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Compute all forces and torques</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">compute_mesh_forces</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Perform the second step of integration</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_poststep</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_mc</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mcs</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accepted_moves</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">drv</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">accepted_moves</span><span class="p">[</span><span class="n">drv</span><span class="p">.</span><span class="n">first</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mcs</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">drv</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">step</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">drv</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">get_integrate_every</span><span class="p">()))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                </span><span class="n">accepted_moves</span><span class="p">[</span><span class="n">drv</span><span class="p">.</span><span class="n">first</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">drv</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">integrate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">accepted_moves</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_prestep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">prestep</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_poststep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">poststep</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_prestep</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">mesh_integrator_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">prestep</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_poststep</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">mesh_integrator_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">poststep</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">add_constraints</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parameters</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Volume&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ConstraintVolume</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Area&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ConstraintArea</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">set_max_iter_mesh_contraint</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">enforce_mesh_constraints</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">satisfied</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">constraint</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_constraints_list</span><span class="p">)</span>
+<span class="w">        </span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute_ref_gradient</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_iter_mesh_contraint</span><span class="p">;</span><span class="w"> </span><span class="n">iter</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">satisfied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">constraint</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_constraints_list</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">should_apply</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">compute_gradient</span><span class="p">();</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">is_satisfied</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">satisfied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">reset_LagrangeMultiplier</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">satisfied</span><span class="p">)</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">constraint</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_constraints_list</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">should_apply</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">                </span><span class="n">constraint</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">enforce</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class EvolverClass &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/class_evolver_class';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class IntegratorBrownianMeshVertex" href="class_integrator_brownian_mesh_vertex.html" />
+    <link rel="prev" title="Class DumperClass" href="class_dumper_class.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Class EvolverClass</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="class-evolverclass">
+<span id="exhale-class-class-evolver-class"></span><h1>Class EvolverClass<a class="headerlink" href="#class-evolverclass" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html#file-pymembrane-cppmodule-src-evolver-evolverclass-hpp"><span class="std std-ref">File evolverclass.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv412EvolverClass">
+<span id="_CPPv312EvolverClass"></span><span id="_CPPv212EvolverClass"></span><span id="EvolverClass"></span><span class="target" id="class_evolver_class"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EvolverClass</span></span></span><a class="headerlink" href="#_CPPv412EvolverClass" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass12EvolverClassER11SystemClass">
+<span id="_CPPv3N12EvolverClass12EvolverClassER11SystemClass"></span><span id="_CPPv2N12EvolverClass12EvolverClassER11SystemClass"></span><span id="EvolverClass::EvolverClass__SystemClassR"></span><span class="target" id="class_evolver_class_1add63a3ed76e2ce50b38daf13e7036f26"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EvolverClass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="class_system_class.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass12EvolverClassER11SystemClass" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClassD0Ev">
+<span id="_CPPv3N12EvolverClassD0Ev"></span><span id="_CPPv2N12EvolverClassD0Ev"></span><span id="EvolverClass::~EvolverClass"></span><span class="target" id="class_evolver_class_1a3b513e27b144a7ee2d9f5037595cc914"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~EvolverClass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClassD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12EvolverClass9add_forceEvRKNSt6stringER1T">
+<span id="_CPPv3I0EN12EvolverClass9add_forceERKNSt6stringER1T"></span><span id="_CPPv2I0EN12EvolverClass9add_forceERKNSt6stringER1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="class_evolver_class_1a2839ec9a92ca59dc512dc8008343bded"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_force</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="#_CPPv4I0EN12EvolverClass9add_forceEvRKNSt6stringER1T" title="EvolverClass::add_force::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parameters</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12EvolverClass9add_forceEvRKNSt6stringER1T" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass12delete_forceERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass12delete_forceERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass12delete_forceERKNSt6stringE"></span><span id="EvolverClass::delete_force__ssCR"></span><span class="target" id="class_evolver_class_1a805a38acf6ed7d8b5ad9601d1a476550"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delete_force</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass12delete_forceERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12EvolverClass12set_propertyEvRKNSt6stringER1T">
+<span id="_CPPv3I0EN12EvolverClass12set_propertyERKNSt6stringER1T"></span><span id="_CPPv2I0EN12EvolverClass12set_propertyERKNSt6stringER1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="class_evolver_class_1a2388c30b884208ea3f91fe1bc27406b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="#_CPPv4I0EN12EvolverClass12set_propertyEvRKNSt6stringER1T" title="EvolverClass::set_property::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parameters</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12EvolverClass12set_propertyEvRKNSt6stringER1T" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass14get_force_infoEv">
+<span id="_CPPv3N12EvolverClass14get_force_infoEv"></span><span id="_CPPv2N12EvolverClass14get_force_infoEv"></span><span id="EvolverClass::get_force_info__void"></span><span class="target" id="class_evolver_class_1ad2f651addf0b712237e6fd7fc40e9157"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_force_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass14get_force_infoEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass18get_minimizer_infoEv">
+<span id="_CPPv3N12EvolverClass18get_minimizer_infoEv"></span><span id="_CPPv2N12EvolverClass18get_minimizer_infoEv"></span><span id="EvolverClass::get_minimizer_info__void"></span><span class="target" id="class_evolver_class_1a69cdac5b547fdf6436deda46fb7af9f4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_minimizer_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass18get_minimizer_infoEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass17reset_mesh_forcesEv">
+<span id="_CPPv3N12EvolverClass17reset_mesh_forcesEv"></span><span id="_CPPv2N12EvolverClass17reset_mesh_forcesEv"></span><span id="EvolverClass::reset_mesh_forces__void"></span><span class="target" id="class_evolver_class_1aea7f457f7e3b54a99e24f737c5ca735a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_mesh_forces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass17reset_mesh_forcesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19compute_mesh_forcesEv">
+<span id="_CPPv3N12EvolverClass19compute_mesh_forcesEv"></span><span id="_CPPv2N12EvolverClass19compute_mesh_forcesEv"></span><span id="EvolverClass::compute_mesh_forces__void"></span><span class="target" id="class_evolver_class_1a9afd679e3fa1b7fa4c14bcd993360184"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_forces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass19compute_mesh_forcesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass17reset_mesh_energyEv">
+<span id="_CPPv3N12EvolverClass17reset_mesh_energyEv"></span><span id="_CPPv2N12EvolverClass17reset_mesh_energyEv"></span><span id="EvolverClass::reset_mesh_energy__void"></span><span class="target" id="class_evolver_class_1a493378e50dd678160a236814387e1fb4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_mesh_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass17reset_mesh_energyEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19compute_mesh_energyEv">
+<span id="_CPPv3N12EvolverClass19compute_mesh_energyEv"></span><span id="_CPPv2N12EvolverClass19compute_mesh_energyEv"></span><span id="EvolverClass::compute_mesh_energy__void"></span><span class="target" id="class_evolver_class_1acc8d209c341796fc4cef4c3f2831ac8a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass19compute_mesh_energyEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass14add_integratorERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE">
+<span id="_CPPv3N12EvolverClass14add_integratorERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N12EvolverClass14add_integratorERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="EvolverClass::add_integrator__ssCR.std::map:ss.ss:R"></span><span class="target" id="class_evolver_class_1adfbe364fab9961729a6bea7fc338284c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_integrator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass14add_integratorERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass17delete_integratorERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass17delete_integratorERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass17delete_integratorERKNSt6stringE"></span><span id="EvolverClass::delete_integrator__ssCR"></span><span class="target" id="class_evolver_class_1a03d5cfecc16f41b4b1b4f13a146c80de"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delete_integrator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass17delete_integratorERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass13set_time_stepERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass13set_time_stepERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass13set_time_stepERKNSt6stringE"></span><span id="EvolverClass::set_time_step__ssCR"></span><span class="target" id="class_evolver_class_1a76341931f517355b548beb0f8cfa9542"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_time_step</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass13set_time_stepERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass22set_global_temperatureERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass22set_global_temperatureERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass22set_global_temperatureERKNSt6stringE"></span><span id="EvolverClass::set_global_temperature__ssCR"></span><span class="target" id="class_evolver_class_1ab13ba25ff0fd8c716d24e30ee057e3ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_global_temperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass22set_global_temperatureERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass13add_minimizerERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE">
+<span id="_CPPv3N12EvolverClass13add_minimizerERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N12EvolverClass13add_minimizerERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="EvolverClass::add_minimizer__ssCR.std::map:ss.ss:R"></span><span class="target" id="class_evolver_class_1ab0d8e41d37b1a5dce2997f0a4d579d65"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_minimizer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass13add_minimizerERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass16delete_minimizerERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass16delete_minimizerERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass16delete_minimizerERKNSt6stringE"></span><span id="EvolverClass::delete_minimizer__ssCR"></span><span class="target" id="class_evolver_class_1a631a30506b15f887cbad2709a8ba69d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delete_minimizer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass16delete_minimizerERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass8minimizeEv">
+<span id="_CPPv3N12EvolverClass8minimizeEv"></span><span id="_CPPv2N12EvolverClass8minimizeEv"></span><span id="EvolverClass::minimize__void"></span><span class="target" id="class_evolver_class_1ac11738f3dee15f54cbc4e3cc682e7e50"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">minimize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass8minimizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass15add_constraintsERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE">
+<span id="_CPPv3N12EvolverClass15add_constraintsERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N12EvolverClass15add_constraintsERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE"></span><span id="EvolverClass::add_constraints__ssCR.std::map:ss.ss:R"></span><span class="target" id="class_evolver_class_1af6aa1916f04d2695da477c2690f31f84"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_constraints</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass15add_constraintsERKNSt6stringERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass24enforce_mesh_constraintsEv">
+<span id="_CPPv3N12EvolverClass24enforce_mesh_constraintsEv"></span><span id="_CPPv2N12EvolverClass24enforce_mesh_constraintsEv"></span><span id="EvolverClass::enforce_mesh_constraints__void"></span><span class="target" id="class_evolver_class_1a9c764e4d798aa40702aea765b851be42"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enforce_mesh_constraints</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass24enforce_mesh_constraintsEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass27set_max_iter_mesh_contraintERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass27set_max_iter_mesh_contraintERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass27set_max_iter_mesh_contraintERKNSt6stringE"></span><span id="EvolverClass::set_max_iter_mesh_contraint__ssCR"></span><span class="target" id="class_evolver_class_1a9e96753feca04af3485ff95b851c5c2f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_max_iter_mesh_contraint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass27set_max_iter_mesh_contraintERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19reset_mesh_stressesEv">
+<span id="_CPPv3N12EvolverClass19reset_mesh_stressesEv"></span><span id="_CPPv2N12EvolverClass19reset_mesh_stressesEv"></span><span id="EvolverClass::reset_mesh_stresses__void"></span><span class="target" id="class_evolver_class_1a914ab384af975d2e3aae32cd58583a58"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_mesh_stresses</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass19reset_mesh_stressesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass21compute_mesh_stressesEv">
+<span id="_CPPv3N12EvolverClass21compute_mesh_stressesEv"></span><span id="_CPPv2N12EvolverClass21compute_mesh_stressesEv"></span><span id="EvolverClass::compute_mesh_stresses__void"></span><span class="target" id="class_evolver_class_1ac18411c962e9a3d8b4000e93e23fd83f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_stresses</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass21compute_mesh_stressesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass24reset_mesh_atom_stressesEv">
+<span id="_CPPv3N12EvolverClass24reset_mesh_atom_stressesEv"></span><span id="_CPPv2N12EvolverClass24reset_mesh_atom_stressesEv"></span><span id="EvolverClass::reset_mesh_atom_stresses__void"></span><span class="target" id="class_evolver_class_1acf28aa4e50df20cd9145daa54a295e04"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_mesh_atom_stresses</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass24reset_mesh_atom_stressesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass26compute_mesh_atom_stressesEv">
+<span id="_CPPv3N12EvolverClass26compute_mesh_atom_stressesEv"></span><span id="_CPPv2N12EvolverClass26compute_mesh_atom_stressesEv"></span><span id="EvolverClass::compute_mesh_atom_stresses__void"></span><span class="target" id="class_evolver_class_1a93e10ff77e35187fdc264a707e4cdf5a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_atom_stresses</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass26compute_mesh_atom_stressesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass14evolve_mesh_mdEv">
+<span id="_CPPv3N12EvolverClass14evolve_mesh_mdEv"></span><span id="_CPPv2N12EvolverClass14evolve_mesh_mdEv"></span><span id="EvolverClass::evolve_mesh_md__void"></span><span class="target" id="class_evolver_class_1a36e9077c2f228c91e5d81c9f22a7d92f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_md</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass14evolve_mesh_mdEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass14evolve_mesh_mcERKi">
+<span id="_CPPv3N12EvolverClass14evolve_mesh_mcERKi"></span><span id="_CPPv2N12EvolverClass14evolve_mesh_mcERKi"></span><span id="EvolverClass::evolve_mesh_mc__iCR"></span><span class="target" id="class_evolver_class_1aaeec8777508e93f6157bef7699a784a0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_mc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass14evolve_mesh_mcERKi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19evolve_mesh_prestepERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass19evolve_mesh_prestepERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass19evolve_mesh_prestepERKNSt6stringE"></span><span id="EvolverClass::evolve_mesh_prestep__ssCR"></span><span class="target" id="class_evolver_class_1a3f35826e325046f1020002208f985be6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_prestep</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass19evolve_mesh_prestepERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass20evolve_mesh_poststepERKNSt6stringE">
+<span id="_CPPv3N12EvolverClass20evolve_mesh_poststepERKNSt6stringE"></span><span id="_CPPv2N12EvolverClass20evolve_mesh_poststepERKNSt6stringE"></span><span id="EvolverClass::evolve_mesh_poststep__ssCR"></span><span class="target" id="class_evolver_class_1ada89a23a971ab7e33e097600af1cc84d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_poststep</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass20evolve_mesh_poststepERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19evolve_mesh_prestepEv">
+<span id="_CPPv3N12EvolverClass19evolve_mesh_prestepEv"></span><span id="_CPPv2N12EvolverClass19evolve_mesh_prestepEv"></span><span id="EvolverClass::evolve_mesh_prestep__void"></span><span class="target" id="class_evolver_class_1a59be1b0244f5d07ddd209de1efcf3280"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_prestep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass19evolve_mesh_prestepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass20evolve_mesh_poststepEv">
+<span id="_CPPv3N12EvolverClass20evolve_mesh_poststepEv"></span><span id="_CPPv2N12EvolverClass20evolve_mesh_poststepEv"></span><span id="EvolverClass::evolve_mesh_poststep__void"></span><span class="target" id="class_evolver_class_1a6ba26fd3579d510ab409b547f0c352fc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">evolve_mesh_poststep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EvolverClass20evolve_mesh_poststepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass23max_iter_mesh_contraintE">
+<span id="_CPPv3N12EvolverClass23max_iter_mesh_contraintE"></span><span id="_CPPv2N12EvolverClass23max_iter_mesh_contraintE"></span><span id="EvolverClass::max_iter_mesh_contraint__i"></span><span class="target" id="class_evolver_class_1a132529d2477b118c31ccaabe2199c8d8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_iter_mesh_contraint</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span><a class="headerlink" href="#_CPPv4N12EvolverClass23max_iter_mesh_contraintE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass17has_vertex_forcesE">
+<span id="_CPPv3N12EvolverClass17has_vertex_forcesE"></span><span id="_CPPv2N12EvolverClass17has_vertex_forcesE"></span><span id="EvolverClass::has_vertex_forces__b"></span><span class="target" id="class_evolver_class_1a3d496b35fdd5f89f5faae41a5c3628a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">has_vertex_forces</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass17has_vertex_forcesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass15has_face_forcesE">
+<span id="_CPPv3N12EvolverClass15has_face_forcesE"></span><span id="_CPPv2N12EvolverClass15has_face_forcesE"></span><span id="EvolverClass::has_face_forces__b"></span><span class="target" id="class_evolver_class_1aa666eed0069e2a596f492c7c31706ff0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">has_face_forces</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass15has_face_forcesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass15has_edge_forcesE">
+<span id="_CPPv3N12EvolverClass15has_edge_forcesE"></span><span id="_CPPv2N12EvolverClass15has_edge_forcesE"></span><span id="EvolverClass::has_edge_forces__b"></span><span class="target" id="class_evolver_class_1a5e6f5b747472ffefdce63d520a958f7e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">has_edge_forces</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass15has_edge_forcesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass7_systemE">
+<span id="_CPPv3N12EvolverClass7_systemE"></span><span id="_CPPv2N12EvolverClass7_systemE"></span><span id="EvolverClass::_system__SystemClassR"></span><span class="target" id="class_evolver_class_1a884c7b666944551023581ae816caaf5e"></span><a class="reference internal" href="class_system_class.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_system</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass7_systemE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>reference to system class where the box and particles are stored </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass15mesh_force_listE">
+<span id="_CPPv3N12EvolverClass15mesh_force_listE"></span><span id="_CPPv2N12EvolverClass15mesh_force_listE"></span><span id="EvolverClass::mesh_force_list__std::map:ss.ComputeForceClass_ptr:"></span><span class="target" id="class_evolver_class_1a5795eba74eb0e94ed11b4c0b7c41f58c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7.html#_CPPv421ComputeForceClass_ptr" title="ComputeForceClass_ptr"><span class="n"><span class="pre">ComputeForceClass_ptr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_force_list</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass15mesh_force_listE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>list of all the pointer to the forces </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass20mesh_integrator_listE">
+<span id="_CPPv3N12EvolverClass20mesh_integrator_listE"></span><span id="_CPPv2N12EvolverClass20mesh_integrator_listE"></span><span id="EvolverClass::mesh_integrator_list__std::map:ss.IntegratorClass_ptr:"></span><span class="target" id="class_evolver_class_1a6bb2008a32905d683218c52f04da0c4d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_integratorclass_8hpp_1ad19ee330adba0de839fae1e8a99bd1b8.html#_CPPv419IntegratorClass_ptr" title="IntegratorClass_ptr"><span class="n"><span class="pre">IntegratorClass_ptr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_integrator_list</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass20mesh_integrator_listE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>list of all the pointer to the md integrators </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass31mesh_integrator_montecarlo_listE">
+<span id="_CPPv3N12EvolverClass31mesh_integrator_montecarlo_listE"></span><span id="_CPPv2N12EvolverClass31mesh_integrator_montecarlo_listE"></span><span id="EvolverClass::mesh_integrator_montecarlo_list__std::map:ss.MonteCarloIntegrator_ptr:"></span><span class="target" id="class_evolver_class_1a96416dba1d73ff7a3c85c05bd99b7fdd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_montecarlointegrator_8hpp_1a620c22e302d4d8e060e25bdf46db5c7f.html#_CPPv424MonteCarloIntegrator_ptr" title="MonteCarloIntegrator_ptr"><span class="n"><span class="pre">MonteCarloIntegrator_ptr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_integrator_montecarlo_list</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass31mesh_integrator_montecarlo_listE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>list of all the pointer to the mc intergators </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass21mesh_constraints_listE">
+<span id="_CPPv3N12EvolverClass21mesh_constraints_listE"></span><span id="_CPPv2N12EvolverClass21mesh_constraints_listE"></span><span id="EvolverClass::mesh_constraints_list__std::map:ss.ConstraintClass_ptr:"></span><span class="target" id="class_evolver_class_1a70c229bfd4a9670c45bd7b1809d55588"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_constraintclass_8hpp_1ae2d778d2a3b3b1445313fad4af9aa2d1.html#_CPPv419ConstraintClass_ptr" title="ConstraintClass_ptr"><span class="n"><span class="pre">ConstraintClass_ptr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_constraints_list</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass21mesh_constraints_listE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>list of all the pointer to the constrainnts </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12EvolverClass19mesh_minimizer_listE">
+<span id="_CPPv3N12EvolverClass19mesh_minimizer_listE"></span><span id="_CPPv2N12EvolverClass19mesh_minimizer_listE"></span><span id="EvolverClass::mesh_minimizer_list__std::map:ss.MinimizerClass_ptr:"></span><span class="target" id="class_evolver_class_1a189dbad14a1371f9722ff3222018b143"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_minimizerclass_8hpp_1ab8063756914324ad8dbca25eafc43a10.html#_CPPv418MinimizerClass_ptr" title="MinimizerClass_ptr"><span class="n"><span class="pre">MinimizerClass_ptr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_minimizer_list</span></span></span><a class="headerlink" href="#_CPPv4N12EvolverClass19mesh_minimizer_listE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>list of all the pointer to the constrainnts </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="class_dumper_class.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class DumperClass</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="class_integrator_brownian_mesh_vertex.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class IntegratorBrownianMeshVertex</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

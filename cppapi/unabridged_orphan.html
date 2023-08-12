@@ -1,0 +1,1628 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Full API &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/unabridged_orphan';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Full API</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">#</a></h1>
+<section id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane.html">Directory pymembrane</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule.html">Directory cppmodule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src.html">Directory src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_box.html">Directory box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_box.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_compute.html">Directory compute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_compute.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_constraints.html">Directory constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_constraints.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_dumper.html">Directory dumper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_dumper.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_evolver.html">Directory evolver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_evolver.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_integrators.html">Directory integrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_integrators.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_mesh.html">Directory mesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_mesh.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_minimizer.html">Directory minimizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_minimizer.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_potentials.html">Directory potentials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_potentials.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_rng.html">Directory rng</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_rng.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_system.html">Directory system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_system.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_types.html">Directory types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_types.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_pymembrane_cppmodule_src_utils.html">Directory utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_pymembrane_cppmodule_src_utils.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_box.hpp.html">File box.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_box.hpp.html#definition-pymembrane-cppmodule-src-box-box-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/box/box.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_box_box.hpp.html">Program Listing for File box.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_box.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_box.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_box.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html">File computeforceclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#definition-pymembrane-cppmodule-src-potentials-computeforceclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/computeforceclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html">Program Listing for File computeforceclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#defines">Defines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_computeforceclass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html">File computegeometry.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html#definition-pymembrane-cppmodule-src-mesh-computegeometry-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/computegeometry.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html">Program Listing for File computegeometry.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_computegeometry.hpp.html#namespaces">Namespaces</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.cpp.html">File computemesh.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.cpp.html#definition-pymembrane-cppmodule-src-compute-computemesh-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/compute/computemesh.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_compute_computemesh.cpp.html">Program Listing for File computemesh.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html">File computemesh.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html#definition-pymembrane-cppmodule-src-compute-computemesh-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/compute/computemesh.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_compute_computemesh.hpp.html">Program Listing for File computemesh.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.cpp.html">File constraintarea.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.cpp.html#definition-pymembrane-cppmodule-src-constraints-constraintarea-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/constraints/constraintarea.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_constraints_constraintarea.cpp.html">Program Listing for File constraintarea.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html">File constraintarea.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html#definition-pymembrane-cppmodule-src-constraints-constraintarea-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/constraints/constraintarea.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html">Program Listing for File constraintarea.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintarea.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html">File constraintclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html#definition-pymembrane-cppmodule-src-constraints-constraintclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/constraints/constraintclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html">Program Listing for File constraintclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintclass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.cpp.html">File constraintvolume.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.cpp.html#definition-pymembrane-cppmodule-src-constraints-constraintvolume-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/constraints/constraintvolume.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_constraints_constraintvolume.cpp.html">Program Listing for File constraintvolume.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html">File constraintvolume.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html#definition-pymembrane-cppmodule-src-constraints-constraintvolume-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/constraints/constraintvolume.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html">Program Listing for File constraintvolume.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_constraints_constraintvolume.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.cpp.html">File dumper.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.cpp.html#definition-pymembrane-cppmodule-src-dumper-dumper-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/dumper/dumper.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_dumper_dumper.cpp.html">Program Listing for File dumper.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.hpp.html">File dumper.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.hpp.html#definition-pymembrane-cppmodule-src-dumper-dumper-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/dumper/dumper.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_dumper_dumper.hpp.html">Program Listing for File dumper.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_dumper.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.cpp.html">File evolverclass.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.cpp.html#definition-pymembrane-cppmodule-src-evolver-evolverclass-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/evolver/evolverclass.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_evolver_evolverclass.cpp.html">Program Listing for File evolverclass.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html">File evolverclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html#definition-pymembrane-cppmodule-src-evolver-evolverclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/evolver/evolverclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html">Program Listing for File evolverclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_evolverclass.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.cpp.html">File fire.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.cpp.html#definition-pymembrane-cppmodule-src-minimizer-fire-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/minimizer/fire.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_minimizer_fire.cpp.html">Program Listing for File fire.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.cpp.html#defines">Defines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.hpp.html">File fire.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.hpp.html#definition-pymembrane-cppmodule-src-minimizer-fire-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/minimizer/fire.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_minimizer_fire.hpp.html">Program Listing for File fire.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_fire.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html">File fromdicttovec.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html#definition-pymembrane-cppmodule-src-utils-fromdicttovec-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/utils/fromdicttovec.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html">Program Listing for File fromdicttovec.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromdicttovec.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html">File fromstring.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html#definition-pymembrane-cppmodule-src-utils-fromstring-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/utils/fromstring.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_utils_fromstring.hpp.html">Program Listing for File fromstring.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_utils_fromstring.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html">File globaltypes.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#definition-pymembrane-cppmodule-src-types-globaltypes-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/types/globaltypes.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_types_globaltypes.hpp.html">Program Listing for File globaltypes.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#defines">Defines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_globaltypes.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html">File halfedges.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html#definition-pymembrane-cppmodule-src-mesh-halfedges-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/halfedges.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html">Program Listing for File halfedges.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_halfedges.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html">File hostvector.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#definition-pymembrane-cppmodule-src-types-hostvector-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/types/hostvector.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_types_hostvector.hpp.html">Program Listing for File hostvector.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_hostvector.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.cpp.html">File integrator_brownian_vertex.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.cpp.html#definition-pymembrane-cppmodule-src-integrators-integrator-brownian-vertex-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.cpp.html">Program Listing for File integrator_brownian_vertex.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html">File integrator_brownian_vertex.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html#definition-pymembrane-cppmodule-src-integrators-integrator-brownian-vertex-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html">Program Listing for File integrator_brownian_vertex.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html">File integratorclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html#definition-pymembrane-cppmodule-src-integrators-integratorclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/integratorclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html">Program Listing for File integratorclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integratorclass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html">File meshoperators.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html#definition-pymembrane-cppmodule-src-mesh-meshoperators-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/meshoperators.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html">Program Listing for File meshoperators.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshoperators.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html">File meshproperties.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html#definition-pymembrane-cppmodule-src-mesh-meshproperties-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/meshproperties.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html">Program Listing for File meshproperties.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_meshproperties.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html">File minimizerclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html#definition-pymembrane-cppmodule-src-minimizer-minimizerclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html">Program Listing for File minimizerclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_minimizer_minimizerclass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html">File montecarlointegrator.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#definition-pymembrane-cppmodule-src-integrators-montecarlointegrator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html">Program Listing for File montecarlointegrator.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.cpp.html">File montercarlo_flip_edge.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.cpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-flip-edge-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.cpp.html">Program Listing for File montercarlo_flip_edge.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html">File montercarlo_flip_edge.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-flip-edge-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html">Program Listing for File montercarlo_flip_edge.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_flip_edge.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.cpp.html">File montercarlo_spin_vertex.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.cpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-spin-vertex-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.cpp.html">Program Listing for File montercarlo_spin_vertex.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html">File montercarlo_spin_vertex.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-spin-vertex-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html">Program Listing for File montercarlo_spin_vertex.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_spin_vertex.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.cpp.html">File montercarlo_swap_edge.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.cpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-swap-edge-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.cpp.html">Program Listing for File montercarlo_swap_edge.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html">File montercarlo_swap_edge.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-swap-edge-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html">Program Listing for File montercarlo_swap_edge.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_edge.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.cpp.html">File montercarlo_swap_vertex.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.cpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-swap-vertex-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.cpp.html">Program Listing for File montercarlo_swap_vertex.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html">File montercarlo_swap_vertex.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-swap-vertex-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html">Program Listing for File montercarlo_swap_vertex.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_swap_vertex.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.cpp.html">File montercarlo_vertex.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.cpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-vertex-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_vertex.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.cpp.html">Program Listing for File montercarlo_vertex.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html">File montercarlo_vertex.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#definition-pymembrane-cppmodule-src-integrators-montercarlo-vertex-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html">Program Listing for File montercarlo_vertex.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montercarlo_vertex.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html">File pbc.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html#definition-pymembrane-cppmodule-src-box-pbc-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/box/pbc.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_box_pbc.hpp.html">Program Listing for File pbc.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pbc.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.cpp.html">File potentialBending.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialbending-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialBending.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialBending.cpp.html">Program Listing for File potentialBending.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html">File potentialBending.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialbending-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialBending.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html">Program Listing for File potentialBending.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBending.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html">File potentialBendingGompperKroll.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialbendinggompperkroll-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialBendingGompperKroll.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html">Program Listing for File potentialBendingGompperKroll.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html#defines">Defines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html">File potentialBendingGompperKroll.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialbendinggompperkroll-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialBendingGompperKroll.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html">Program Listing for File potentialBendingGompperKroll.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.cpp.html">File potentialCauchyGreen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialcauchygreen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.cpp.html">Program Listing for File potentialCauchyGreen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html">File potentialCauchyGreen.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialcauchygreen-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html">Program Listing for File potentialCauchyGreen.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.cpp.html">File potentialConstantAreaTriangle.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialconstantareatriangle-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.cpp.html">Program Listing for File potentialConstantAreaTriangle.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html">File potentialConstantAreaTriangle.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialconstantareatriangle-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html">Program Listing for File potentialConstantAreaTriangle.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialConstantAreaTriangle.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html">File potentialDihedralHarmonics.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialdihedralharmonics-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html">Program Listing for File potentialDihedralHarmonics.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.cpp.html#defines">Defines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html">File potentialDihedralHarmonics.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialdihedralharmonics-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html">Program Listing for File potentialDihedralHarmonics.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialDihedralHarmonics.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.cpp.html">File potentialHarmonic.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialharmonic-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialHarmonic.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialHarmonic.cpp.html">Program Listing for File potentialHarmonic.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html">File potentialHarmonic.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialharmonic-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html">Program Listing for File potentialHarmonic.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonic.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html">File potentialHarmonicSloutskin.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialharmonicsloutskin-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html">Program Listing for File potentialHarmonicSloutskin.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html">File potentialHarmonicSloutskin.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialharmonicsloutskin-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html">Program Listing for File potentialHarmonicSloutskin.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialHarmonicSloutskin.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.cpp.html">File potentialIsing.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialising-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialIsing.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialIsing.cpp.html">Program Listing for File potentialIsing.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html">File potentialIsing.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialising-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialIsing.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html">Program Listing for File potentialIsing.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialIsing.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.cpp.html">File potentialLimit.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentiallimit-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialLimit.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialLimit.cpp.html">Program Listing for File potentialLimit.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html">File potentialLimit.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentiallimit-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialLimit.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html">Program Listing for File potentialLimit.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLimit.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.cpp.html">File potentialLineTension.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentiallinetension-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialLineTension.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialLineTension.cpp.html">Program Listing for File potentialLineTension.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html">File potentialLineTension.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentiallinetension-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html">Program Listing for File potentialLineTension.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialLineTension.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.cpp.html">File potentialSubstrate.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.cpp.html#definition-pymembrane-cppmodule-src-potentials-potentialsubstrate-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialSubstrate.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialSubstrate.cpp.html">Program Listing for File potentialSubstrate.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html">File potentialSubstrate.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html#definition-pymembrane-cppmodule-src-potentials-potentialsubstrate-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html">Program Listing for File potentialSubstrate.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialSubstrate.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html">File pybind_export_box.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html#definition-pymembrane-cppmodule-src-box-pybind-export-box-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/box/pybind_export_box.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html">Program Listing for File pybind_export_box.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_box_pybind_export_box.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html">File pybind_export_compute.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html#definition-pymembrane-cppmodule-src-compute-pybind-export-compute-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html">Program Listing for File pybind_export_compute.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_compute_pybind_export_compute.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html">File pybind_export_dumper.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html#definition-pymembrane-cppmodule-src-dumper-pybind-export-dumper-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html">Program Listing for File pybind_export_dumper.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_dumper_pybind_export_dumper.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html">File pybind_export_evolver.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html#definition-pymembrane-cppmodule-src-evolver-pybind-export-evolver-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html">Program Listing for File pybind_export_evolver.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_evolver_pybind_export_evolver.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html">File pybind_export_mesh.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html#definition-pymembrane-cppmodule-src-mesh-pybind-export-mesh-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/pybind_export_mesh.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html">Program Listing for File pybind_export_mesh.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_pybind_export_mesh.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html">File pybind_export_system.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html#definition-pymembrane-cppmodule-src-system-pybind-export-system-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/system/pybind_export_system.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html">Program Listing for File pybind_export_system.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_pybind_export_system.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html">File pybind_export_types.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html#definition-pymembrane-cppmodule-src-types-pybind-export-types-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/types/pybind_export_types.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html">Program Listing for File pybind_export_types.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_types_pybind_export_types.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_pybindexport.cpp.html">File pybindexport.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_pybindexport.cpp.html#definition-pymembrane-cppmodule-src-pybindexport-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/pybindexport.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_pybindexport.cpp.html">Program Listing for File pybindexport.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_pybindexport.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_pybindexport.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.cpp.html">File read_mesh.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.cpp.html#definition-pymembrane-cppmodule-src-read-mesh-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/read_mesh.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_read_mesh.cpp.html">Program Listing for File read_mesh.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.hpp.html">File read_mesh.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.hpp.html#definition-pymembrane-cppmodule-src-read-mesh-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/read_mesh.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_read_mesh.hpp.html">Program Listing for File read_mesh.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_read_mesh.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html">File rng.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html#definition-pymembrane-cppmodule-src-rng-rng-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/rng/rng.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_rng_rng.hpp.html">Program Listing for File rng.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_rng_rng.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_systemclass.hpp.html">File systemclass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_systemclass.hpp.html#definition-pymembrane-cppmodule-src-system-systemclass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/system/systemclass.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_pymembrane_cppmodule_src_system_systemclass.hpp.html">Program Listing for File systemclass.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_systemclass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_systemclass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_pymembrane_cppmodule_src_system_systemclass.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories">Directories</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files">Files</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
