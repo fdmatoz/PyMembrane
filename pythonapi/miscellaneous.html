@@ -49,8 +49,8 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ReadMesh" href="readmesh.html" />
-    <link rel="prev" title="Integrators and Minimizers" href="integrators.html" />
+    <link rel="next" title="C++ API" href="../cppapi/cppapi.html" />
+    <link rel="prev" title="Minimization Algorithms" href="minintegrators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -336,31 +336,44 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Miscellaneous</a></li>
-<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Miscellaneous</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -420,6 +433,8 @@ document.write(`
                   
   <section id="miscellaneous">
 <h1>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
 
@@ -434,20 +449,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="integrators.html"
+       href="minintegrators.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Integrators and Minimizers</p>
+        <p class="prev-next-title">Minimization Algorithms</p>
       </div>
     </a>
     <a class="right-next"
-       href="readmesh.html"
+       href="../cppapi/cppapi.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ReadMesh</p>
+        <p class="prev-next-title">C++ API</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

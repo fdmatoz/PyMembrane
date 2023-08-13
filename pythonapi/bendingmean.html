@@ -341,31 +341,44 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Helfrich Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
-<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -405,6 +418,9 @@ document.write(`
     </li>
     
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="potentials.html" class="nav-link">Force Potentials</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">Helfrich Bending</li>
   </ul>
@@ -460,7 +476,7 @@ document.write(`
 - <span class="math notranslate nohighlight">\(\kappa_G\)</span> is the Gaussian rigidity.
 - <span class="math notranslate nohighlight">\(K\)</span> is the Gaussian curvature.
 - <span class="math notranslate nohighlight">\(dA\)</span> denotes integration over the membrane surface area.</p>
-<p>In the code we follow the Itzykson discretization of the curvature energy <span id="id1">[<a class="reference internal" href="references.html#id3" title="T Kohyama, DM Kroll, and G Gompper. Budding of crystalline domains in fluid membranes. Physical Review E, 68(6):061905, 2003.">KKG03</a>, <a class="reference internal" href="references.html#id2" title="Siyu Li, Daniel A. Matoz-Fernandez, Aaveg Aggarwal, and Monica Olvera de la Cruz. Chemically controlled pattern formation in self-oscillating elastic shells. Proceedings of the National Academy of Sciences, 118(10):e2025717118, 2021.">LMFAdlC21</a>]</span> we have the bending term</p>
+<p>In the code we follow the Itzykson discretization of the curvature energy <span id="id1">[<a class="reference internal" href="references.html#id4" title="T Kohyama, DM Kroll, and G Gompper. Budding of crystalline domains in fluid membranes. Physical Review E, 68(6):061905, 2003.">KKG03</a>, <a class="reference internal" href="references.html#id3" title="Siyu Li, Daniel A. Matoz-Fernandez, Aaveg Aggarwal, and Monica Olvera de la Cruz. Chemically controlled pattern formation in self-oscillating elastic shells. Proceedings of the National Academy of Sciences, 118(10):e2025717118, 2021.">LMFAdlC21</a>]</span> we have the bending term</p>
 <div class="math notranslate nohighlight">
 \[U =  [2\kappa_i (H_i-H_0 )^2+\kappa_{G,i} K_i] A_i\]</div>
 <p>where <span class="math notranslate nohighlight">\(\kappa (\kappa_G)\)</span> is the mean (Gaussian) rigidity of the component, <span class="math notranslate nohighlight">\(A_i\)</span> is the dual-lattice area of vertex <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(H_i (K_i)\)</span> is the mean (Gaussian) curvature at the vertex <span class="math notranslate nohighlight">\(i\)</span>:</p>

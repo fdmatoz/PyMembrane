@@ -341,31 +341,44 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
-<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -407,7 +420,7 @@ document.write(`
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
     
-    <li class="breadcrumb-item"><a href="potentials.html" class="nav-link">&lt;no title&gt;</a></li>
+    <li class="breadcrumb-item"><a href="potentials.html" class="nav-link">Force Potentials</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">Cauchy-Green</li>
   </ul>
@@ -453,7 +466,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>Stretching energy density is calculated as <span id="id1">[<a class="reference internal" href="references.html#id6" title="Kenneth A Brakke. The surface evolver. Experimental mathematics, 1(2):141–165, 1992.">Bra92</a>, <a class="reference internal" href="references.html#id7" title="D. A. Matoz-Fernandez, Fordyce A. Davidson, Nicola R. Stanley-Wall, and Rastko Sknepnek. Wrinkle patterns in active viscoelastic thin sheets. Phys. Rev. Research, 2:013165, Feb 2020. doi:10.1103/PhysRevResearch.2.013165.">MFDSWS20</a>, <a class="reference internal" href="references.html#id5" title="Rastko Sknepnek and Monica Olvera de la Cruz. Nonlinear elastic model for faceting of vesicles with soft grain boundaries. Phys. Rev. E, 85(5):050501, 2012.">SOdlC12</a>]</span>:</p>
+<p>Stretching energy density is calculated as <span id="id1">[<a class="reference internal" href="references.html#id7" title="Kenneth A Brakke. The surface evolver. Experimental mathematics, 1(2):141–165, 1992.">Bra92</a>, <a class="reference internal" href="references.html#id8" title="D. A. Matoz-Fernandez, Fordyce A. Davidson, Nicola R. Stanley-Wall, and Rastko Sknepnek. Wrinkle patterns in active viscoelastic thin sheets. Phys. Rev. Research, 2:013165, Feb 2020. doi:10.1103/PhysRevResearch.2.013165.">MFDSWS20</a>, <a class="reference internal" href="references.html#id6" title="Rastko Sknepnek and Monica Olvera de la Cruz. Nonlinear elastic model for faceting of vesicles with soft grain boundaries. Phys. Rev. E, 85(5):050501, 2012.">SOdlC12</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[U = \frac{E\,h}{2}\frac{1}{1+\nu}\left[Tr\left(C^2\right) + \frac{\nu}{1-\nu}\left(Tr C\right)^2\right]\]</div>
 <p>where <span class="math notranslate nohighlight">\(E\)</span> is the elastic constant, <span class="math notranslate nohighlight">\(h\)</span> is the membrane thickness, <span class="math notranslate nohighlight">\(\nu\)</span> is the Poisson ratio, and</p>

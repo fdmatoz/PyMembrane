@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Namespace pymemb &#8212; PyMembrane  documentation</title>
+    <title>Monte Carlo Edge Flip &#8212; PyMembrane  documentation</title>
   
   
   
@@ -45,12 +45,13 @@
     <script src="../_static/design-tabs.js"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/namespace_pymemb';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pythonapi/mcedgeflip';</script>
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Namespace util" href="namespace_util.html" />
-    <link rel="prev" title="C++ API" href="cppapi.html" />
+    <link rel="next" title="Molecular Dynamics Integrators" href="mdintegrators.html" />
+    <link rel="prev" title="Monte Carlo Edge Swap" href="mcedgeswap.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -150,15 +151,15 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pythonapi.html">
                         Python API
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
                         C++ API
                       </a>
                     </li>
@@ -177,7 +178,7 @@
                 <div class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link nav-internal" href="references.html">
                         References
                       </a>
                     </li>
@@ -244,7 +245,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -276,15 +277,15 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pythonapi.html">
                         Python API
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
                         C++ API
                       </a>
                     </li>
@@ -303,7 +304,7 @@ document.write(`
                 <div class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link nav-internal" href="references.html">
                         References
                       </a>
                     </li>
@@ -334,6 +335,54 @@ document.write(`
       </div>
     
   </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
@@ -368,9 +417,12 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
+    <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Namespace pymemb</li>
+    
+    <li class="breadcrumb-item"><a href="mcintegrators.html" class="nav-link">Monte Carlo Integrators</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Monte Carlo Edge Flip</li>
   </ul>
 </nav>
 </div>
@@ -387,64 +439,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="namespace-pymemb">
-<span id="id1"></span><h1>Namespace pymemb<a class="headerlink" href="#namespace-pymemb" title="Permalink to this headline">#</a></h1>
+  <section id="monte-carlo-edge-flip">
+<h1>Monte Carlo Edge Flip<a class="headerlink" href="#monte-carlo-edge-flip" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
-<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#classes" id="id2">Classes</a></p></li>
-<li><p><a class="reference internal" href="#functions" id="id3">Functions</a></p></li>
-<li><p><a class="reference internal" href="#typedefs" id="id4">Typedefs</a></p></li>
+<li><p><a class="reference internal" href="#definition" id="id1">Definition</a></p></li>
+<li><p><a class="reference internal" href="#python-calling" id="id2">Python calling</a></p></li>
+<li><p><a class="reference internal" href="#property" id="id3">Property</a></p></li>
 </ul>
 </div>
-<section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="structpymemb_1_1reduce__tensor.html#exhale-struct-structpymemb-1-1reduce-tensor"><span class="std std-ref">Template Struct reduce_tensor</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__edge__energy.html#exhale-struct-structpymemb-1-1reset-edge-energy"><span class="std std-ref">Struct reset_edge_energy</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__face__energy.html#exhale-struct-structpymemb-1-1reset-face-energy"><span class="std std-ref">Struct reset_face_energy</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__tensor.html#exhale-struct-structpymemb-1-1reset-tensor"><span class="std std-ref">Template Struct reset_tensor</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__energy.html#exhale-struct-structpymemb-1-1reset-vertex-energy"><span class="std std-ref">Struct reset_vertex_energy</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__external__forces.html#exhale-struct-structpymemb-1-1reset-vertex-external-forces"><span class="std std-ref">Struct reset_vertex_external_forces</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__forces.html#exhale-struct-structpymemb-1-1reset-vertex-forces"><span class="std std-ref">Struct reset_vertex_forces</span></a></p></li>
-<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__velocities.html#exhale-struct-structpymemb-1-1reset-vertex-velocities"><span class="std std-ref">Struct reset_vertex_velocities</span></a></p></li>
-</ul>
+<section id="definition">
+<h2><a class="toc-backref" href="#id1">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p>Mesh&gt;MonteCarlo&gt;edge&gt;flip</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Type</strong></p></td>
+<td><p>Monte Carlo</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Defined in</strong></p></td>
+<td><p>Edges</p></td>
+</tr>
+</tbody>
+</table>
+<p>Monte Carlo edge flip integrator attempts to flip <span class="math notranslate nohighlight">\(N_e\)</span> system edges at each runtime.</p>
 </section>
-<section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1aed421c26c21a7ec4a0bbcaa3e903a07a.html#exhale-function-computegeometry-8hpp-1aed421c26c21a7ec4a0bbcaa3e903a07a"><span class="std std-ref">Function pymemb::cmassT</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ae45403bd18a1ec3512afde3bc2791cf3.html#exhale-function-computegeometry-8hpp-1ae45403bd18a1ec3512afde3bc2791cf3"><span class="std std-ref">Function pymemb::compute_angle_vertex(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a5ad813413260cd138a3c9df1ed7967cc.html#exhale-function-computegeometry-8hpp-1a5ad813413260cd138a3c9df1ed7967cc"><span class="std std-ref">Function pymemb::compute_angle_vertex(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ad3c5d3226766dae0532f61b611059e9c.html#exhale-function-computegeometry-8hpp-1ad3c5d3226766dae0532f61b611059e9c"><span class="std std-ref">Function pymemb::compute_area_triangle_from_metric</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a37e0e152109784019fe6816ba03404cc.html#exhale-function-computegeometry-8hpp-1a37e0e152109784019fe6816ba03404cc"><span class="std std-ref">Function pymemb::compute_area_triangle_from_vertex(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0aac5bd062ed76cafdaad63e3b13794f.html#exhale-function-computegeometry-8hpp-1a0aac5bd062ed76cafdaad63e3b13794f"><span class="std std-ref">Function pymemb::compute_area_triangle_from_vertex(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1aa1e2de1f7423bf20c203754168605963.html#exhale-function-computegeometry-8hpp-1aa1e2de1f7423bf20c203754168605963"><span class="std std-ref">Function pymemb::compute_form_factor_triangle(real *, const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a079b181dd8d2a8ae2df15852763525d7.html#exhale-function-computegeometry-8hpp-1a079b181dd8d2a8ae2df15852763525d7"><span class="std std-ref">Function pymemb::compute_form_factor_triangle(real *, const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a1bd0c5664831afcd5fda856f9603af84.html#exhale-function-computegeometry-8hpp-1a1bd0c5664831afcd5fda856f9603af84"><span class="std std-ref">Function pymemb::compute_matrix_F</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a3631be2a35e816d16eea2707497b3a6d.html#exhale-function-computegeometry-8hpp-1a3631be2a35e816d16eea2707497b3a6d"><span class="std std-ref">Function pymemb::compute_normal_triangle(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0512deaac09c6a4b100259689f2c761c.html#exhale-function-computegeometry-8hpp-1a0512deaac09c6a4b100259689f2c761c"><span class="std std-ref">Function pymemb::compute_normal_triangle(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a1ed85412113fda9c339e5180d2984783.html#exhale-function-computegeometry-8hpp-1a1ed85412113fda9c339e5180d2984783"><span class="std std-ref">Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d.html#exhale-function-computegeometry-8hpp-1a2a7e4b1cdb3e980f81f550b99f4bdb9d"><span class="std std-ref">Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#exhale-function-pymembvector-8hpp-1accd2379946f7e5659d0a54b0768db0e9"><span class="std std-ref">Template Function pymemb::copy</span></a></p></li>
-<li><p><a class="reference internal" href="function_pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b.html#exhale-function-pbc-8hpp-1ade2dd4a2125a35817b77f7765f1d179b"><span class="std std-ref">Function pymemb::enforce_periodic(const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_pbc_8hpp_1ad38535063c05017603e91eaee14c6f57.html#exhale-function-pbc-8hpp-1ad38535063c05017603e91eaee14c6f57"><span class="std std-ref">Function pymemb::enforce_periodic(real3&amp;, inth3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_pbc_8hpp_1a597a6c2a723fcdd5a1dacc3626c8e15f.html#exhale-function-pbc-8hpp-1a597a6c2a723fcdd5a1dacc3626c8e15f"><span class="std std-ref">Function pymemb::minimum_image</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a9e80a65c8f995da594b290b1632bf10f.html#exhale-function-computegeometry-8hpp-1a9e80a65c8f995da594b290b1632bf10f"><span class="std std-ref">Function pymemb::need_wrapping</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ad07da6cfe525b88763fb1263cb4eb142.html#exhale-function-computegeometry-8hpp-1ad07da6cfe525b88763fb1263cb4eb142"><span class="std std-ref">Function pymemb::RefMatrixFromCartesian</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a2508744cc72f6b4c2416148bf2d92397.html#exhale-function-computegeometry-8hpp-1a2508744cc72f6b4c2416148bf2d92397"><span class="std std-ref">Function pymemb::RefMatrixFromCylindrical</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0e484fe8d885ee2bd74dc95569f68198.html#exhale-function-computegeometry-8hpp-1a0e484fe8d885ee2bd74dc95569f68198"><span class="std std-ref">Function pymemb::unit_vector</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ab8b502b5fd2c97b54c1dda3594147362.html#exhale-function-computegeometry-8hpp-1ab8b502b5fd2c97b54c1dda3594147362"><span class="std std-ref">Function pymemb::vector_cross</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ae323aff34acd8098c5d30f5bf5efb9fa.html#exhale-function-computegeometry-8hpp-1ae323aff34acd8098c5d30f5bf5efb9fa"><span class="std std-ref">Function pymemb::vector_subtract(const real3&amp;, const real3&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a00eee6717b533db780f1d78cd29a1aeb.html#exhale-function-computegeometry-8hpp-1a00eee6717b533db780f1d78cd29a1aeb"><span class="std std-ref">Function pymemb::vector_subtract(const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a284300b645a991ff409532781d374f4b.html#exhale-function-computegeometry-8hpp-1a284300b645a991ff409532781d374f4b"><span class="std std-ref">Function pymemb::vector_sum</span></a></p></li>
-</ul>
+<section id="python-calling">
+<h2><a class="toc-backref" href="#id2">Python calling</a><a class="headerlink" href="#python-calling" title="Permalink to this headline">#</a></h2>
+<p><strong>add</strong>
+.. code-block:: python</p>
+<blockquote>
+<div><p>evolver.add_integrator(“Mesh&gt;MonteCarlo&gt;edge&gt;flip”, {“every step”: “1”})</p>
+</div></blockquote>
+<p><strong>evolveMC(MCS)</strong>
+.. code-block:: python</p>
+<blockquote>
+<div><p>evolver.evolveMC(1000)</p>
+</div></blockquote>
+<p><strong>set</strong>
+.. code-block:: python</p>
+<blockquote>
+<div><p>evolver.set(“Mesh&gt;MonteCarlo&gt;edge&gt;flip”, {“every step”: “2”})</p>
+</div></blockquote>
+<p><strong>delete</strong>
+.. code-block:: python</p>
+<blockquote>
+<div><p>evolver.delete_integrator(“Mesh&gt;MonteCarlo&gt;edge&gt;flip”)</p>
+</div></blockquote>
 </section>
-<section id="typedefs">
-<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#exhale-typedef-pymembvector-8hpp-1a36ab625e2dcdbfdb850232a7ce9a2d67"><span class="std std-ref">Typedef pymemb::vector</span></a></p></li>
-</ul>
+<section id="property">
+<h2><a class="toc-backref" href="#id3">Property</a><a class="headerlink" href="#property" title="Permalink to this headline">#</a></h2>
+<p><strong>T</strong>
+Temperature used in simulation.</p>
+<blockquote>
+<div><p>type: double
+default: 0.0</p>
+</div></blockquote>
+<p><strong>seed</strong>
+Seed used to generate the random number.</p>
+<blockquote>
+<div><p>type: int
+default: 123456</p>
+</div></blockquote>
+<p><strong>every step</strong>
+Perform the Monte Carlo movement every n steps.</p>
+<blockquote>
+<div><p>type: int</p>
+</div></blockquote>
 </section>
 </section>
 
@@ -460,20 +526,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="cppapi.html"
+       href="mcedgeswap.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C++ API</p>
+        <p class="prev-next-title">Monte Carlo Edge Swap</p>
       </div>
     </a>
     <a class="right-next"
-       href="namespace_util.html"
+       href="mdintegrators.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Namespace util</p>
+        <p class="prev-next-title">Molecular Dynamics Integrators</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -495,9 +561,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-calling">Python calling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#property">Property</a></li>
 </ul>
   </nav></div>
 

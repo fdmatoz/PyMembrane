@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; PyMembrane  documentation</title>
+    <title>Force Potentials &#8212; PyMembrane  documentation</title>
   
   
   
@@ -335,32 +335,45 @@ document.write(`
         <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
-<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Force Potentials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -401,7 +414,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">&lt;no title&gt;</li>
+    <li class="breadcrumb-item active" aria-current="page">Force Potentials</li>
   </ul>
 </nav>
 </div>
@@ -418,7 +431,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="toctree-wrapper compound">
+  <section id="force-potentials">
+<h1>Force Potentials<a class="headerlink" href="#force-potentials" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
@@ -426,19 +441,13 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 </ul>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Potentials<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><a class="reference internal" href="harmonic.html"><span class="doc">Harmonic</span></a></p>
-<p class="sd-card-text"><a class="reference internal" href="cauchygreen.html"><span class="doc">Harmonic</span></a></p>
-</div>
-</details>
+</section>
+
 
                 </article>
               

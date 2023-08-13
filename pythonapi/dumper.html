@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Dumper (Python Interface) &#8212; PyMembrane  documentation</title>
+    <title>Dumper &#8212; PyMembrane  documentation</title>
   
   
   
@@ -49,7 +49,7 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ComputeMesh (Python Interface)" href="compute.html" />
+    <link rel="next" title="Compute Mesh Properties" href="compute.html" />
     <link rel="prev" title="Box Class" href="box.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -340,31 +340,44 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dumper (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
-<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="core.html">Core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dumper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
-<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mcintegrators.html">Monte Carlo Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcvertexswap.html">Monte Carlo Vertex Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeswap.html">Monte Carlo Edge Swap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mdintegrators.html">Molecular Dynamics Integrators</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -405,7 +418,10 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Dumper (Python Interface)</li>
+    
+    <li class="breadcrumb-item"><a href="core.html" class="nav-link">Core</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Dumper</li>
   </ul>
 </nav>
 </div>
@@ -422,14 +438,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="dumper-python-interface">
-<h1>Dumper (Python Interface)<a class="headerlink" href="#dumper-python-interface" title="Permalink to this headline">#</a></h1>
+  <section id="dumper">
+<h1>Dumper<a class="headerlink" href="#dumper" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
+<li><p><a class="reference internal" href="#constructor" id="id2">Constructor</a></p></li>
+<li><p><a class="reference internal" href="#methods" id="id3">Methods</a></p></li>
+</ul>
+</div>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id1">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
 <p><cite>Dumper</cite> is a Python class interfacing with the underlying C++ <cite>DumperClass</cite>. It allows for exporting mesh data in various formats and handling custom user data.</p>
 </section>
 <section id="constructor">
-<h2>Constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id2">Constructor</a><a class="headerlink" href="#constructor" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p><strong>Dumper(SystemClass)</strong>: Constructor that requires a <cite>SystemClass</cite> instance.
 Example:
@@ -441,7 +464,7 @@ Example:
 </ul>
 </section>
 <section id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Methods</a><a class="headerlink" href="#methods" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>vtk()</strong>:
 Dump the mesh (vertices and faces) in vtk format.</p></li>
@@ -488,7 +511,7 @@ Dump user data on edges. Overloaded to handle both a list of real values and rea
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ComputeMesh (Python Interface)</p>
+        <p class="prev-next-title">Compute Mesh Properties</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
