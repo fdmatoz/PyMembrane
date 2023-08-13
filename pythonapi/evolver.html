@@ -443,7 +443,11 @@ document.write(`
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#creating-an-evolver-class" id="id2">Creating an evolver class</a></p></li>
-<li><p><a class="reference internal" href="#evolver-methods" id="id3">Evolver methods</a></p></li>
+<li><p><a class="reference internal" href="#evolver-methods" id="id3">Evolver methods</a></p>
+<ul>
+<li><p><a class="reference internal" href="#main-methods" id="id4">Main methods</a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>The <cite>Evolver</cite> class stands as a central component in the design and implementation of the PyMembrane framework. Its primary role is to oversee the dynamics of the simulated system. To achieve this, the <cite>Evolver</cite> class maintains a comprehensive list of Forces, Integrators, Minimizers, and Constraints.</p>
@@ -471,6 +475,8 @@ document.write(`
 </section>
 <section id="evolver-methods">
 <h2><a class="toc-backref" href="#id3">Evolver methods</a><a class="headerlink" href="#evolver-methods" title="Permalink to this headline">#</a></h2>
+<section id="main-methods">
+<h3><a class="toc-backref" href="#id4">Main methods</a><a class="headerlink" href="#main-methods" title="Permalink to this headline">#</a></h3>
 <ul>
 <li><p><cite>add_force(…)</cite></p>
 <ol class="arabic">
@@ -509,14 +515,12 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p><cite>set(…)</cite>: set/modify properties for integrators/forces/minimizers/constraints
-1.</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">,</span> <span class="n">arg0</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<li><p><cite>set(…)</cite>: set/modify properties for integrators/forces/minimizers/constraints</p>
+<ol class="arabic">
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">,</span> <span class="n">arg0</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic" start="2">
+</li>
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">,</span> <span class="n">arg0</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
@@ -528,6 +532,8 @@ document.write(`
 </ol>
 </li>
 </ul>
+<section id="temperature-and-time-methods">
+<h4>Temperature and time methods<a class="headerlink" href="#temperature-and-time-methods" title="Permalink to this headline">#</a></h4>
 <p>In addition to the methods defined above, the Evolver class also provides a way to propagate important information into the all of the integrators at once. The latter is important when more than one integrators is present in the system. In the same way for molecular dynamics the time step needs to be set globally.</p>
 <ul>
 <li><p><cite>set_global_temperature(…)</cite>: set the temperature in the whole system</p>
@@ -541,6 +547,9 @@ document.write(`
 </div>
 </li>
 </ul>
+</section>
+<section id="dynamics-methods">
+<h4>Dynamics methods<a class="headerlink" href="#dynamics-methods" title="Permalink to this headline">#</a></h4>
 <p>As we mentioned earlier, the Evolver class is responsible for the dynamics of the system. The following methods are used to propagate the system forward in time.</p>
 <ul>
 <li><p><cite>evolveMC(…)</cite>: Evolve the mesh following Monte Carlos methods loaded. Arg: steps Return: accepted moves</p>
@@ -549,7 +558,7 @@ document.write(`
 </div>
 </li>
 <li><p><cite>evolveMD(…)</cite>: evolve the mesh following Molecular Dynamics methods loaded</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolveMD</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolveMD</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">,</span> <span class="n">arg0</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </li>
@@ -559,7 +568,10 @@ document.write(`
 </div>
 </li>
 </ul>
-<p>Other methods that are not required to be used by the user are unless debugging or testing:</p>
+</section>
+<section id="other-methods">
+<h4>Other methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">#</a></h4>
+<p>Other methods that are not required to be used by the user are unless debugging or testing, for example, the following methods are used to compute the mesh energy and forces.</p>
 <ul>
 <li><p><cite>compute_mesh_energy(…)</cite>: compute the mesh energy and store in the mesh</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">compute_mesh_energy</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">pymembrane</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">cppmodule</span><span class="o">.</span><span class="n">Evolver</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -582,6 +594,12 @@ document.write(`
 </div>
 </li>
 </ul>
+<p>To know more about the Evolver class, please refer to contextual help in python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Evolver</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -633,7 +651,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-evolver-class">Creating an evolver class</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolver-methods">Evolver methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolver-methods">Evolver methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-methods">Main methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-time-methods">Temperature and time methods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics-methods">Dynamics methods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">Other methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
