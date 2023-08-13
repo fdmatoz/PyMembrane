@@ -337,18 +337,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -405,84 +417,26 @@ document.write(`
                   
   <section id="python-api">
 <h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="system.html#before-you-start">Before you start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#loading-my-first-mesh">Loading my first mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#visualization">Visualization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#data-structures">Data structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#looping-over-vertices">Looping over vertices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#looping-over-faces">Looping over faces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#looping-over-edges-and-halfedges">Looping over edges and halfedges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system.html#looping-over-halfedges">Looping over halfedges</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="evolver.html#creating-an-evolver-class">Creating an evolver class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="evolver.html#evolver-methods">Evolver methods</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="harmonic.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="harmonic.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cauchygreen.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="limit.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="limit.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linetension.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linetension.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="constantarea.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constantarea.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bending.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bending.html#python-calling">Python calling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
-</ul>
-</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<a class="reference internal" href="system.html"><span class="doc">System Class</span></a><div class="sd-summary-down docutils">
+Core<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference internal" href="system.html"><span class="doc">System Class</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="box.html"><span class="doc">Box</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="dumper.html"><span class="doc">Dumper</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="compute.html"><span class="doc">Compute</span></a></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<a class="reference internal" href="evolver.html"><span class="doc">Evolver Class</span></a><div class="sd-summary-down docutils">
+Simulation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<a class="reference internal" href="box.html"><span class="doc">Box Class</span></a><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference internal" href="evolver.html"><span class="doc">Evolver</span></a></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -492,7 +446,14 @@ Force Potentials<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><a class="reference internal" href="harmonic.html"><span class="doc">Harmonic</span></a></p>
-<p class="sd-card-text"><a class="reference internal" href="cauchygreen.html"><span class="doc">Harmonic</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="cauchygreen.html"><span class="doc">Cauchy Green</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="limit.html"><span class="doc">Limit Green</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="linetension.html"><span class="doc">Line Tension</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="constantarea.html"><span class="doc">Constant Area</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="substrate.html"><span class="doc">Substrate</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="bending.html"><span class="doc">Bending</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="bendingdihedral.html"><span class="doc">Bending Harmonic Dihedral</span></a></p>
+<p class="sd-card-text"><a class="reference internal" href="bendingmean.html"><span class="doc">Bending Helfrich</span></a></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -502,7 +463,15 @@ Integrators<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><a class="reference internal" href="harmonic.html"><span class="doc">Harmonic</span></a></p>
-<p class="sd-card-text"><a class="reference internal" href="cauchygreen.html"><span class="doc">Harmonic</span></a></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Minimizers<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference internal" href="harmonic.html"><span class="doc">Harmonic</span></a></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -511,8 +480,11 @@ Miscellaneous<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference internal" href="readmesh.html"><span class="doc">Read Mesh</span></a></p>
 </div>
-</details></section>
+</details><div class="toctree-wrapper compound">
+</div>
+</section>
 
 
                 </article>

@@ -397,15 +397,12 @@ document.write(`
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;halfedges.hpp&quot;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">host</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">pymemb</span>
 <span class="p">{</span>
-
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">reset_vertex_external_forces</span>
 <span class="w">    </span><span class="p">{</span>
-
 <span class="w">        </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="n">vertex</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-
 <span class="w">            </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertex</span><span class="p">;</span>
 <span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">forceE</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">forceE</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>

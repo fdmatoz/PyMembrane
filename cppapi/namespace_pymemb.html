@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Namespace pymemb &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/namespace_pymemb';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace util" href="namespace_util.html" />
+    <link rel="prev" title="C++ API" href="cppapi.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Namespace pymemb</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="namespace-pymemb">
+<span id="id1"></span><h1>Namespace pymemb<a class="headerlink" href="#namespace-pymemb" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#classes" id="id2">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id3">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id4">Typedefs</a></p></li>
+</ul>
+</div>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structpymemb_1_1reduce__tensor.html#exhale-struct-structpymemb-1-1reduce-tensor"><span class="std std-ref">Template Struct reduce_tensor</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__edge__energy.html#exhale-struct-structpymemb-1-1reset-edge-energy"><span class="std std-ref">Struct reset_edge_energy</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__face__energy.html#exhale-struct-structpymemb-1-1reset-face-energy"><span class="std std-ref">Struct reset_face_energy</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__tensor.html#exhale-struct-structpymemb-1-1reset-tensor"><span class="std std-ref">Template Struct reset_tensor</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__energy.html#exhale-struct-structpymemb-1-1reset-vertex-energy"><span class="std std-ref">Struct reset_vertex_energy</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__external__forces.html#exhale-struct-structpymemb-1-1reset-vertex-external-forces"><span class="std std-ref">Struct reset_vertex_external_forces</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__forces.html#exhale-struct-structpymemb-1-1reset-vertex-forces"><span class="std std-ref">Struct reset_vertex_forces</span></a></p></li>
+<li><p><a class="reference internal" href="structpymemb_1_1reset__vertex__velocities.html#exhale-struct-structpymemb-1-1reset-vertex-velocities"><span class="std std-ref">Struct reset_vertex_velocities</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1aed421c26c21a7ec4a0bbcaa3e903a07a.html#exhale-function-computegeometry-8hpp-1aed421c26c21a7ec4a0bbcaa3e903a07a"><span class="std std-ref">Function pymemb::cmassT</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a5ad813413260cd138a3c9df1ed7967cc.html#exhale-function-computegeometry-8hpp-1a5ad813413260cd138a3c9df1ed7967cc"><span class="std std-ref">Function pymemb::compute_angle_vertex(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ae45403bd18a1ec3512afde3bc2791cf3.html#exhale-function-computegeometry-8hpp-1ae45403bd18a1ec3512afde3bc2791cf3"><span class="std std-ref">Function pymemb::compute_angle_vertex(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ad3c5d3226766dae0532f61b611059e9c.html#exhale-function-computegeometry-8hpp-1ad3c5d3226766dae0532f61b611059e9c"><span class="std std-ref">Function pymemb::compute_area_triangle_from_metric</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0aac5bd062ed76cafdaad63e3b13794f.html#exhale-function-computegeometry-8hpp-1a0aac5bd062ed76cafdaad63e3b13794f"><span class="std std-ref">Function pymemb::compute_area_triangle_from_vertex(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a37e0e152109784019fe6816ba03404cc.html#exhale-function-computegeometry-8hpp-1a37e0e152109784019fe6816ba03404cc"><span class="std std-ref">Function pymemb::compute_area_triangle_from_vertex(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1aa1e2de1f7423bf20c203754168605963.html#exhale-function-computegeometry-8hpp-1aa1e2de1f7423bf20c203754168605963"><span class="std std-ref">Function pymemb::compute_form_factor_triangle(real *, const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a079b181dd8d2a8ae2df15852763525d7.html#exhale-function-computegeometry-8hpp-1a079b181dd8d2a8ae2df15852763525d7"><span class="std std-ref">Function pymemb::compute_form_factor_triangle(real *, const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a1bd0c5664831afcd5fda856f9603af84.html#exhale-function-computegeometry-8hpp-1a1bd0c5664831afcd5fda856f9603af84"><span class="std std-ref">Function pymemb::compute_matrix_F</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a3631be2a35e816d16eea2707497b3a6d.html#exhale-function-computegeometry-8hpp-1a3631be2a35e816d16eea2707497b3a6d"><span class="std std-ref">Function pymemb::compute_normal_triangle(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0512deaac09c6a4b100259689f2c761c.html#exhale-function-computegeometry-8hpp-1a0512deaac09c6a4b100259689f2c761c"><span class="std std-ref">Function pymemb::compute_normal_triangle(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a1ed85412113fda9c339e5180d2984783.html#exhale-function-computegeometry-8hpp-1a1ed85412113fda9c339e5180d2984783"><span class="std std-ref">Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d.html#exhale-function-computegeometry-8hpp-1a2a7e4b1cdb3e980f81f550b99f4bdb9d"><span class="std std-ref">Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#exhale-function-pymembvector-8hpp-1accd2379946f7e5659d0a54b0768db0e9"><span class="std std-ref">Template Function pymemb::copy</span></a></p></li>
+<li><p><a class="reference internal" href="function_pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b.html#exhale-function-pbc-8hpp-1ade2dd4a2125a35817b77f7765f1d179b"><span class="std std-ref">Function pymemb::enforce_periodic(const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_pbc_8hpp_1ad38535063c05017603e91eaee14c6f57.html#exhale-function-pbc-8hpp-1ad38535063c05017603e91eaee14c6f57"><span class="std std-ref">Function pymemb::enforce_periodic(real3&amp;, inth3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_pbc_8hpp_1a597a6c2a723fcdd5a1dacc3626c8e15f.html#exhale-function-pbc-8hpp-1a597a6c2a723fcdd5a1dacc3626c8e15f"><span class="std std-ref">Function pymemb::minimum_image</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a9e80a65c8f995da594b290b1632bf10f.html#exhale-function-computegeometry-8hpp-1a9e80a65c8f995da594b290b1632bf10f"><span class="std std-ref">Function pymemb::need_wrapping</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ad07da6cfe525b88763fb1263cb4eb142.html#exhale-function-computegeometry-8hpp-1ad07da6cfe525b88763fb1263cb4eb142"><span class="std std-ref">Function pymemb::RefMatrixFromCartesian</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a2508744cc72f6b4c2416148bf2d92397.html#exhale-function-computegeometry-8hpp-1a2508744cc72f6b4c2416148bf2d92397"><span class="std std-ref">Function pymemb::RefMatrixFromCylindrical</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a0e484fe8d885ee2bd74dc95569f68198.html#exhale-function-computegeometry-8hpp-1a0e484fe8d885ee2bd74dc95569f68198"><span class="std std-ref">Function pymemb::unit_vector</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ab8b502b5fd2c97b54c1dda3594147362.html#exhale-function-computegeometry-8hpp-1ab8b502b5fd2c97b54c1dda3594147362"><span class="std std-ref">Function pymemb::vector_cross</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a00eee6717b533db780f1d78cd29a1aeb.html#exhale-function-computegeometry-8hpp-1a00eee6717b533db780f1d78cd29a1aeb"><span class="std std-ref">Function pymemb::vector_subtract(const real3&amp;, const real3&amp;, const BoxType&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1ae323aff34acd8098c5d30f5bf5efb9fa.html#exhale-function-computegeometry-8hpp-1ae323aff34acd8098c5d30f5bf5efb9fa"><span class="std std-ref">Function pymemb::vector_subtract(const real3&amp;, const real3&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_computegeometry_8hpp_1a284300b645a991ff409532781d374f4b.html#exhale-function-computegeometry-8hpp-1a284300b645a991ff409532781d374f4b"><span class="std std-ref">Function pymemb::vector_sum</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#exhale-typedef-pymembvector-8hpp-1a36ab625e2dcdbfdb850232a7ce9a2d67"><span class="std std-ref">Typedef pymemb::vector</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cppapi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">C++ API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="namespace_util.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Namespace util</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

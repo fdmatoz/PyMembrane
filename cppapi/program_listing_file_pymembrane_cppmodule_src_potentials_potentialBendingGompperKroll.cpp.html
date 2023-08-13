@@ -238,7 +238,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -329,17 +329,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File potentialBendingGompperKroll.cpp</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -394,23 +383,6 @@ document.write(`
 <p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialBendingGompperKroll.cpp.html#file-pymembrane-cppmodule-src-potentials-potentialbendinggompperkroll-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/potentials/potentialBendingGompperKroll.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;potentialBendingGompperKroll.hpp&quot;</span>
 
-<span class="cp">#define Xvec1(v, a, v1) \</span>
-<span class="cp">  (v.x = (a)*v1.x),     \</span>
-<span class="cp">      (v.y = (a)*v1.y), \</span>
-<span class="cp">      (v.z = (a)*v1.z)</span>
-<span class="cp">#define Xvec2(v, a, v1, b, v2)     \</span>
-<span class="cp">  (v.x = (a)*v1.x + (b)*v2.x),     \</span>
-<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y), \</span>
-<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z)</span>
-<span class="cp">#define Xvec3(v, a, v1, b, v2, c, v3)         \</span>
-<span class="cp">  (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x),     \</span>
-<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y), \</span>
-<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z)</span>
-<span class="cp">#define Xvec4(v, a, v1, b, v2, c, v3, d, v4)             \</span>
-<span class="cp">  (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x + (d)*v4.x),     \</span>
-<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y + (d)*v4.y), \</span>
-<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z + (d)*v4.z)</span>
-
 <span class="c1">//update face global index, normal vector, area and cotangent</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">update_face</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">local_index</span><span class="p">,</span>
 <span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">local_vertices</span><span class="p">,</span>
@@ -419,7 +391,7 @@ document.write(`
 <span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_sigma</span><span class="p">,</span>
 <span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">At</span><span class="p">,</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">nf</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">nf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">nf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">local_vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 <span class="w">    </span><span class="n">At</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">nf</span><span class="p">,</span><span class="n">nf</span><span class="p">));</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -652,7 +624,7 @@ document.write(`
 <span class="w">            </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">vert_to</span><span class="p">;</span>
 <span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">he_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
 <span class="w">            </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_next</span><span class="p">].</span><span class="n">vert_to</span><span class="p">;</span>
-<span class="w">            </span><span class="n">nf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">host</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+<span class="w">            </span><span class="n">nf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
 <span class="w">            </span><span class="n">nv</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nf</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
 <span class="w">            </span><span class="n">nv</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nf</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
 <span class="w">            </span><span class="n">nv</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nf</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
@@ -724,7 +696,7 @@ document.write(`
 
 <span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexBendingGKEnergy::compute_edge_energy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">query_edge_index</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_index_vec</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_index_vec</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 <span class="w">    </span><span class="n">v_index_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">v0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">v_index_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">v1</span><span class="p">;</span>
 <span class="w">    </span><span class="n">v_index_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">query_edge_index</span><span class="p">].</span><span class="n">v2</span><span class="p">;</span>

@@ -342,18 +342,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -441,9 +453,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>Calculate harmonic energy of the edge using  <span id="id2">[<a class="reference internal" href="references.html#id2" title="H. S. Seung and D. R. Nelson. Defects in flexible membranes with crystalline order. Physical Review A, 38:1005-1018, 1988.">SN88</a>]</span>:</p>
+<p>Calculate harmonic energy of the edge using  <span id="id2">[<a class="reference internal" href="references.html#id4" title="H. S. Seung and D. R. Nelson. Defects in flexible membranes with crystalline order. Physical Review A, 38:1005-1018, 1988.">SN88</a>]</span>:</p>
 <div class="math notranslate nohighlight">
-\[E = \frac{1}{2} k \left( l - l_0 \right)^2\]</div>
+\[U = \frac{1}{2} k \left( l - l_0 \right)^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is the spring constant, <span class="math notranslate nohighlight">\(l_0\)</span> is the length of the unstretched bond (edge), and <span class="math notranslate nohighlight">\(l\)</span> is the current edge length.</p>
 </section>
 <section id="python-calling">

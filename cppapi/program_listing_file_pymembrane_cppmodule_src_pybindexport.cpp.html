@@ -415,6 +415,10 @@ document.write(`
 <span class="cm">* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE     *</span>
 <span class="cm">* SOFTWARE.                                                                         *</span>
 <span class="cm">*************************************************************************************/</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/stl.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/numpy.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pybind11/iostream.h&gt;</span>
@@ -443,17 +447,68 @@ document.write(`
 <span class="c1">//dumper</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;dumper/pybind_export_dumper.hpp&quot;</span>
 
+<span class="cm">/*</span>
+<span class="cm">Utils functions for the module</span>
+<span class="cm">*/</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getCurrentDate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">in_time_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">to_time_t</span><span class="p">(</span><span class="n">now</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">put_time</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">in_time_t</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%Y-%m-%d&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Function to get the current operating system</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getOperatingSystem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#if defined(_WIN32) || defined(_WIN64)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Windows&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="cp">#elif defined(__APPLE__) || defined(__MACH__)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;macOS&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="cp">#elif defined(__linux__)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Linux&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="cp">#else</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="cm">/*end*/</span>
+
 <span class="n">PYBIND11_MODULE</span><span class="p">(</span><span class="n">cppmodule</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span>
 <span class="p">{</span>
+<span class="w">    </span><span class="c1">// Module documentation</span>
 <span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">doc</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">pbdoc(</span>
 <span class="s">        PyMembrane Engine</span>
 <span class="s">        -----------------------</span>
-<span class="s">        .. author:: D A Matoz-Fernandez (all right reserved)</span>
-<span class="s">        .. currentmodule:: cppmodule</span>
+<span class="s">        .. module:: cppmodule</span>
+<span class="s">        .. synopsis:: A cutting-edge membrane elasticity simulation engine.</span>
+
+<span class="s">        PyMembrane Engine is designed to provide a suite of advanced tools</span>
+<span class="s">        for membrane elasticity simulations. The module encompasses various</span>
+<span class="s">        functionalities tailored for specific simulation scenarios, ranging</span>
+<span class="s">        from stretching and bending potentials to advanced integrative methods.</span>
+
+<span class="s">        .. author:: Dr. D A Matoz-Fernandez</span>
+<span class="s">        .. note:: Copyright 2023, D A Matoz-Fernandez. All rights reserved.</span>
+<span class="s">        .. version:: 1.0a</span>
 <span class="s">        .. autosummary::</span>
 <span class="s">           :toctree: _generate</span>
+
+<span class="s">        .. seealso::</span>
+<span class="s">           For detailed information, tutorials, and API documentation,</span>
+<span class="s">           please refer to the official PyMembrane documentation.</span>
 <span class="s">    </span><span class="dl">)pbdoc</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__version__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.0a&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Module version</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__author__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Daniel Matoz-Fernandez&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__repository_url__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://github.com/username/pymembrane&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__version__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.0&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// version</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__release_date__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;August 2023&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// release date</span>
+<span class="w">    </span><span class="c1">//Compilation date</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__compiled_date__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getCurrentDate</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Operating system</span>
+<span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&quot;__OS__&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getOperatingSystem</span><span class="p">().</span><span class="n">c_str</span><span class="p">();</span>
+
 <span class="w">    </span><span class="n">add_ostream_redirect</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ostream_redirect&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">export_real3</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
 <span class="w">    </span><span class="n">export_inth3</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>

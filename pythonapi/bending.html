@@ -50,7 +50,7 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Integrators and Minimizers" href="integrators.html" />
+    <link rel="next" title="Dihedral Bending" href="bendingdihedral.html" />
     <link rel="prev" title="Constant Face Area" href="constantarea.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -342,18 +342,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -441,7 +453,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>Use normals that belong to the two triangles that share the edge and calculate bending energy as <span id="id2">[<a class="reference internal" href="references.html#id2" title="H. S. Seung and D. R. Nelson. Defects in flexible membranes with crystalline order. Physical Review A, 38:1005-1018, 1988.">SN88</a>]</span>:</p>
+<p>Use normals that belong to the two triangles that share the edge and calculate bending energy as <span id="id2">[<a class="reference internal" href="references.html#id4" title="H. S. Seung and D. R. Nelson. Defects in flexible membranes with crystalline order. Physical Review A, 38:1005-1018, 1988.">SN88</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[U = \frac{1}{2} \kappa \vert \hat{n}_k- \hat{n}_l \vert^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(( \kappa )\)</span> is the bending rigidity and <span class="math notranslate nohighlight">\(( \hat{n}_i, \hat{n}_j )\)</span> are the normal unit vectors of the triangles meeting at the edge.</p>
@@ -475,11 +487,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="integrators.html"
+       href="bendingdihedral.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Integrators and Minimizers</p>
+        <p class="prev-next-title">Dihedral Bending</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

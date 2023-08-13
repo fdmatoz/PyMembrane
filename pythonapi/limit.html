@@ -342,18 +342,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -441,14 +453,15 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>If the edge is longer or shorter than given values, the energy is infinity, otherwise it is zero <span id="id2">[<a class="reference internal" href="references.html#id6" title="D.R. Nelson, T. Piran, and S. Weinberg. Statistical mechanics of membranes and surfaces. World Scientific Singapore, 2nd edition, 2004.">NPW04</a>]</span>:</p>
+<p>If the edge is longer or shorter than given values, the energy is infinity, otherwise it is zero <span id="id2">[<a class="reference internal" href="references.html#id8" title="D.R. Nelson, T. Piran, and S. Weinberg. Statistical mechanics of membranes and surfaces. World Scientific Singapore, 2nd edition, 2004.">NPW04</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}E =
 \begin{cases}
-\infty &amp; \text{if} \quad r &lt; l_{min}\\
-\infty &amp; \text{if} \quad r &gt; l_{max}\\
+\infty &amp; \text{if} \quad l &lt; l_{min}\\
+\infty &amp; \text{if} \quad l &gt; l_{max}\\
 0 &amp; \text{otherwise}
 \end{cases}\end{split}\]</div>
+<p>there <span class="math notranslate nohighlight">\(l\)</span> is the current edge length.</p>
 </section>
 <section id="python-calling">
 <h2><a class="toc-backref" href="#id4">Python calling</a><a class="headerlink" href="#python-calling" title="Permalink to this headline">#</a></h2>

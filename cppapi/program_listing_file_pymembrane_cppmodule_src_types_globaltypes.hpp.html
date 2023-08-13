@@ -473,6 +473,24 @@ document.write(`
 <span class="cp">        (v.y = (a)*v.y), \</span>
 <span class="cp">        (v.z = (a)*v.z)</span>
 
+<span class="cp">#define Xvec1(v, a, v1) \</span>
+<span class="cp">  (v.x = (a)*v1.x),     \</span>
+<span class="cp">      (v.y = (a)*v1.y), \</span>
+<span class="cp">      (v.z = (a)*v1.z)</span>
+<span class="cp">#define Xvec2(v, a, v1, b, v2)     \</span>
+<span class="cp">  (v.x = (a)*v1.x + (b)*v2.x),     \</span>
+<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y), \</span>
+<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z)</span>
+<span class="cp">#define Xvec3(v, a, v1, b, v2, c, v3)         \</span>
+<span class="cp">      (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x),     \</span>
+<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y), \</span>
+<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z)</span>
+<span class="cp">#define Xvec4(v, a, v1, b, v2, c, v3, d, v4)             \</span>
+<span class="cp">  (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x + (d)*v4.x),     \</span>
+<span class="cp">      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y + (d)*v4.y), \</span>
+<span class="cp">      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z + (d)*v4.z)</span>
+
+
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 <span class="p">{</span>

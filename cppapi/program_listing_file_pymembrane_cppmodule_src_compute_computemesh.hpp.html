@@ -399,7 +399,7 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../types/globaltypes.hpp&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../types/hostvector.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../types/pymembvector.hpp&quot;</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">SystemClass</span><span class="p">;</span><span class="w"> </span><span class="c1">// forward declaration</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">EvolverClass</span><span class="p">;</span>
@@ -413,31 +413,27 @@ document.write(`
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_face_normals</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_edge_lengths</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_edge_lengths</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gaussiancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gaussiancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">meancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">meancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">compute_face_metric</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">compute_face_metric</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">compute_mesh_volume</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_face_area</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_face_area</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">compute_mesh_area</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_vertex_area</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_vertex_area</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_mesh_energy</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_vertex_forces</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_vertex_forces</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
 
-
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_mesh_energy</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_vertex_forces</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">realTensor</span><span class="w"> </span><span class="nf">compute_stresses</span><span class="p">(</span><span class="n">EvolverClass</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
 

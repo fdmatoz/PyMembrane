@@ -49,8 +49,8 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="potentials.html" />
-    <link rel="prev" title="Evolver Class" href="evolver.html" />
+    <link rel="next" title="Dumper (Python Interface)" href="dumper.html" />
+    <link rel="prev" title="System Class" href="system.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -233,6 +233,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
     </nav>
@@ -337,18 +341,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cauchygreen.html">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -408,6 +424,108 @@ document.write(`
                   
   <section id="box-class">
 <h1>Box Class<a class="headerlink" href="#box-class" title="Permalink to this headline">#</a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p><cite>Box</cite> is a Python class interfacing with the underlying C++ implementation. It provides operations and attributes related to a box.</p>
+</section>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p><strong>Box()</strong>: Default constructor.</p></li>
+<li><p><strong>Box(Lx, Ly, Lz)</strong>:
+Initializes the box dimensions.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box(10, 20, 30)</p>
+</div></blockquote>
+</li>
+<li><p><strong>Box(Lxpair, Lypair, Lzpair)</strong>:
+Initializes the box dimensions using pairs for low and high values for each dimension.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box((-5,5), (-10,10), (-15,15))</p>
+</div></blockquote>
+</li>
+<li><p><strong>Box(Lx, Ly, Lz, periodic_x, periodic_y, periodic_z)</strong>:
+Initializes the box dimensions and allows specification of periodicity for each dimension.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box(10, 20, 30, True, False, True)</p>
+</div></blockquote>
+</li>
+<li><p><strong>scale()</strong>:
+Scale the box by a factors scalex, scaley, scalez for each dimension.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box(10, 20, 30)
+box.scale(2.0, 2.0, 2.0)</p>
+</div></blockquote>
+</li>
+<li><p><strong>volume</strong>:
+Return the volume of the box.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box(10, 20, 30)
+print(“The box volume is: “, box.volume)</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p><strong>Lhi</strong>:
+Upper boundary of the box.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>upper_bound = box.Lhi</p>
+</div></blockquote>
+</li>
+<li><p><strong>Llo</strong>:
+Lower boundary of the box.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>lower_bound = box.Llo</p>
+</div></blockquote>
+</li>
+<li><p><strong>L</strong>:
+Box lengths in each direction.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>length = box.L</p>
+</div></blockquote>
+</li>
+<li><p><strong>periodic</strong>:
+Box periodicity in each direction.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>is_periodic = box.periodic</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p><strong>__repr__()</strong>:
+Returns a string representation of the <cite>Box</cite> object, detailing its dimensions and periodicities.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>print(box)</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
 </section>
 
 
@@ -422,20 +540,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="evolver.html"
+       href="system.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Evolver Class</p>
+        <p class="prev-next-title">System Class</p>
       </div>
     </a>
     <a class="right-next"
-       href="potentials.html"
+       href="dumper.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Dumper (Python Interface)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -448,6 +566,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructors">Constructors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

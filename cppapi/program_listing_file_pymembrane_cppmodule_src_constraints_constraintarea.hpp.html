@@ -431,7 +431,7 @@ document.write(`
 <span class="w">                </span><span class="p">}</span>
 <span class="w">                </span><span class="k">else</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Negative volume constraint. Targeted volume in the volume constraint has to be larger then zero.&quot;</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Negative area constraint. Targeted volume in the volume constraint has to be larger then zero.&quot;</span><span class="p">;</span>
 <span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">print_warning_calling_err</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">_system</span><span class="p">.</span><span class="n">close_surface</span><span class="p">)</span>
@@ -451,8 +451,8 @@ document.write(`
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_gradient</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">;</span>
-<span class="w">    </span><span class="n">host</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ref_grad</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ref_grad</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="cp">#endif</span>

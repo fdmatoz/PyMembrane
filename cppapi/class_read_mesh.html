@@ -397,120 +397,122 @@ document.write(`
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48ReadMesh">
 <span id="_CPPv38ReadMesh"></span><span id="_CPPv28ReadMesh"></span><span id="ReadMesh"></span><span class="target" id="class_read_mesh"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><a class="headerlink" href="#_CPPv48ReadMesh" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>A class to read and manage mesh data. </p>
-<p>This class is designed to read and handle mesh data from various input types including JSON and separate files for faces and vertices. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-constructors">Constructors</p>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh8ReadMeshEv">
 <span id="_CPPv3N8ReadMesh8ReadMeshEv"></span><span id="_CPPv2N8ReadMesh8ReadMeshEv"></span><span id="ReadMesh::ReadMesh"></span><span class="target" id="class_read_mesh_1af75c7bbd8ccc4053e4d465a93de319ea"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh8ReadMeshEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Default constructor. Clears all internal structures. </p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh8ReadMeshERNSt6stringE">
 <span id="_CPPv3N8ReadMesh8ReadMeshERNSt6stringE"></span><span id="_CPPv2N8ReadMesh8ReadMeshERNSt6stringE"></span><span id="ReadMesh::ReadMesh__ssR"></span><span class="target" id="class_read_mesh_1a4615dd6d5f9a7a35cee7a00218ef3f31"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh8ReadMeshERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor that reads mesh data from a JSON file. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>json_file</strong> – Path to the JSON file containing the mesh data. </p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh8ReadMeshERNSt6stringERNSt6stringE">
 <span id="_CPPv3N8ReadMesh8ReadMeshERNSt6stringERNSt6stringE"></span><span id="_CPPv2N8ReadMesh8ReadMeshERNSt6stringERNSt6stringE"></span><span id="ReadMesh::ReadMesh__ssR.ssR"></span><span class="target" id="class_read_mesh_1a1a19ec24771515eee42378e57f81a8d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">faces_file</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertices_file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh8ReadMeshERNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor that reads mesh data from separate files for faces and vertices. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>faces_file</strong> – Path to the file containing face data. </p></li>
-<li><p><strong>vertices_file</strong> – Path to the file containing vertex data. </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE"></span><span id="ReadMesh::ReadMesh__std::map:ss.ss:"></span><span class="target" id="class_read_mesh_1a0a63e2750dca7124c78c5c697182ef86"></span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">files</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor that reads mesh data from a map of filenames. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>files</strong> – Map of file types to filenames. </p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-accessors">Accessors</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh13get_halfedgesEv">
-<span id="_CPPv3N8ReadMesh13get_halfedgesEv"></span><span id="_CPPv2N8ReadMesh13get_halfedgesEv"></span><span id="ReadMesh::get_halfedges__void"></span><span class="target" id="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19.html#_CPPv415HE_HalfEdgeProp" title="HE_HalfEdgeProp"><span class="n"><span class="pre">HE_HalfEdgeProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_halfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh13get_halfedgesEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE"></span><span id="ReadMesh::ReadMesh__std::map:ss.ss:"></span><span class="target" id="class_read_mesh_1a0a63e2750dca7124c78c5c697182ef86"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ReadMesh</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">files</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh8ReadMeshENSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh12get_verticesEv">
-<span id="_CPPv3N8ReadMesh12get_verticesEv"></span><span id="_CPPv2N8ReadMesh12get_verticesEv"></span><span id="ReadMesh::get_vertices__void"></span><span class="target" id="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf.html#_CPPv413HE_VertexProp" title="HE_VertexProp"><span class="n"><span class="pre">HE_VertexProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh12get_verticesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh9get_edgesEv">
-<span id="_CPPv3N8ReadMesh9get_edgesEv"></span><span id="_CPPv2N8ReadMesh9get_edgesEv"></span><span id="ReadMesh::get_edges__void"></span><span class="target" id="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga92b6815f5e1e981bc534da3e17e51529.html#_CPPv411HE_EdgeProp" title="HE_EdgeProp"><span class="n"><span class="pre">HE_EdgeProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh9get_edgesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh9get_facesEv">
-<span id="_CPPv3N8ReadMesh9get_facesEv"></span><span id="_CPPv2N8ReadMesh9get_facesEv"></span><span id="ReadMesh::get_faces__void"></span><span class="target" id="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga040b94d03d4d83f06ede4550215fa069.html#_CPPv411HE_FaceProp" title="HE_FaceProp"><span class="n"><span class="pre">HE_FaceProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh9get_facesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh14getNumverticesEv">
-<span id="_CPPv3N8ReadMesh14getNumverticesEv"></span><span id="_CPPv2N8ReadMesh14getNumverticesEv"></span><span id="ReadMesh::getNumvertices__void"></span><span class="target" id="class_read_mesh_1a6846e9a11e684dde971df9689427db12"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumvertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh14getNumverticesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh11getNumedgesEv">
-<span id="_CPPv3N8ReadMesh11getNumedgesEv"></span><span id="_CPPv2N8ReadMesh11getNumedgesEv"></span><span id="ReadMesh::getNumedges__void"></span><span class="target" id="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh11getNumedgesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh11getNumfacesEv">
-<span id="_CPPv3N8ReadMesh11getNumfacesEv"></span><span id="_CPPv2N8ReadMesh11getNumfacesEv"></span><span id="ReadMesh::getNumfaces__void"></span><span class="target" id="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumfaces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh11getNumfacesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh15getNumhalfedgesEv">
-<span id="_CPPv3N8ReadMesh15getNumhalfedgesEv"></span><span id="_CPPv2N8ReadMesh15getNumhalfedgesEv"></span><span id="ReadMesh::getNumhalfedges__void"></span><span class="target" id="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumhalfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh15getNumhalfedgesEv" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh16is_close_surfaceEv">
-<span id="_CPPv3N8ReadMesh16is_close_surfaceEv"></span><span id="_CPPv2N8ReadMesh16is_close_surfaceEv"></span><span id="ReadMesh::is_close_surface"></span><span class="target" id="class_read_mesh_1a9d6cfc5e0430d34df396f6e38bcd8f2d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_close_surface</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh16is_close_surfaceEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Check if the mesh forms a closed surface. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>True if the mesh is a closed surface, otherwise false. </p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh5clearEv">
-<span id="_CPPv3N8ReadMesh5clearEv"></span><span id="_CPPv2N8ReadMesh5clearEv"></span><span id="ReadMesh::clear__void"></span><span class="target" id="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh5clearEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Clears all mesh data stored in the object. </p>
-</dd></dl>
+<span id="_CPPv3N8ReadMesh5clearEv"></span><span id="_CPPv2N8ReadMesh5clearEv"></span><span id="ReadMesh::clear__void"></span><span class="target" id="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh5clearEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8ReadMeshD0Ev">
 <span id="_CPPv3N8ReadMeshD0Ev"></span><span id="_CPPv2N8ReadMeshD0Ev"></span><span id="ReadMesh::~ReadMesh"></span><span class="target" id="class_read_mesh_1a25453630aefa536d5a357431f5efc032"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ReadMesh</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMeshD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor. Clears all internal structures. </p>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh13get_halfedgesEv">
+<span id="_CPPv3N8ReadMesh13get_halfedgesEv"></span><span id="_CPPv2N8ReadMesh13get_halfedgesEv"></span><span id="ReadMesh::get_halfedges__void"></span><span class="target" id="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19.html#_CPPv415HE_HalfEdgeProp" title="HE_HalfEdgeProp"><span class="n"><span class="pre">HE_HalfEdgeProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_halfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh13get_halfedgesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>get the halfedges loaded in the system </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>std::vector&lt;HE_HalfEdgeProp&gt; </p>
+</dd>
+</dl>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh12get_verticesEv">
+<span id="_CPPv3N8ReadMesh12get_verticesEv"></span><span id="_CPPv2N8ReadMesh12get_verticesEv"></span><span id="ReadMesh::get_vertices__void"></span><span class="target" id="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf.html#_CPPv413HE_VertexProp" title="HE_VertexProp"><span class="n"><span class="pre">HE_VertexProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh12get_verticesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>get the vertices loaded in the system </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>std::vector&lt;HE_VertexProp&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh9get_edgesEv">
+<span id="_CPPv3N8ReadMesh9get_edgesEv"></span><span id="_CPPv2N8ReadMesh9get_edgesEv"></span><span id="ReadMesh::get_edges__void"></span><span class="target" id="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga92b6815f5e1e981bc534da3e17e51529.html#_CPPv411HE_EdgeProp" title="HE_EdgeProp"><span class="n"><span class="pre">HE_EdgeProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh9get_edgesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>get the edges loaded in the system </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>std::vector&lt;HE_EdgeProp&gt;&amp; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh9get_facesEv">
+<span id="_CPPv3N8ReadMesh9get_facesEv"></span><span id="_CPPv2N8ReadMesh9get_facesEv"></span><span id="ReadMesh::get_faces__void"></span><span class="target" id="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_group__mesh_1ga040b94d03d4d83f06ede4550215fa069.html#_CPPv411HE_FaceProp" title="HE_FaceProp"><span class="n"><span class="pre">HE_FaceProp</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh9get_facesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>get the faces loaded in the system </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>std::vector&lt;HE_FaceProp&gt;&amp; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh14getNumverticesEv">
+<span id="_CPPv3N8ReadMesh14getNumverticesEv"></span><span id="_CPPv2N8ReadMesh14getNumverticesEv"></span><span id="ReadMesh::getNumvertices__void"></span><span class="target" id="class_read_mesh_1a6846e9a11e684dde971df9689427db12"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumvertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh14getNumverticesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Number of vertices. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh11getNumedgesEv">
+<span id="_CPPv3N8ReadMesh11getNumedgesEv"></span><span id="_CPPv2N8ReadMesh11getNumedgesEv"></span><span id="ReadMesh::getNumedges__void"></span><span class="target" id="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh11getNumedgesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Number of edges. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh11getNumfacesEv">
+<span id="_CPPv3N8ReadMesh11getNumfacesEv"></span><span id="_CPPv2N8ReadMesh11getNumfacesEv"></span><span id="ReadMesh::getNumfaces__void"></span><span class="target" id="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumfaces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh11getNumfacesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Number of faces. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh15getNumhalfedgesEv">
+<span id="_CPPv3N8ReadMesh15getNumhalfedgesEv"></span><span id="_CPPv2N8ReadMesh15getNumhalfedgesEv"></span><span id="ReadMesh::getNumhalfedges__void"></span><span class="target" id="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumhalfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh15getNumhalfedgesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Number of halfedges. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ReadMesh16is_close_surfaceEv">
+<span id="_CPPv3N8ReadMesh16is_close_surfaceEv"></span><span id="_CPPv2N8ReadMesh16is_close_surfaceEv"></span><span id="ReadMesh::is_close_surface"></span><span class="target" id="class_read_mesh_1a9d6cfc5e0430d34df396f6e38bcd8f2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_close_surface</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ReadMesh16is_close_surfaceEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>

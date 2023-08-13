@@ -342,18 +342,30 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="box.html">Box Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumper.html">Dumper (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compute.html">ComputeMesh (Python Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cauchy-Green</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="harmonic.html">Harmonic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cauchy-Green</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit.html">Limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linetension.html">Line Tension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constantarea.html">Constant Face Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bending.html">Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingdihedral.html">Dihedral Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bendingmean.html">Helfrich Bending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="substrate.html">Substrate</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="integrators.html">Integrators and Minimizers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </div>
 </nav></div>
@@ -441,7 +453,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>Stretching energy density is calculated as <span id="id1">[<a class="reference internal" href="references.html#id4" title="Kenneth A Brakke. The surface evolver. Experimental mathematics, 1(2):141–165, 1992.">Bra92</a>, <a class="reference internal" href="references.html#id5" title="D. A. Matoz-Fernandez, Fordyce A. Davidson, Nicola R. Stanley-Wall, and Rastko Sknepnek. Wrinkle patterns in active viscoelastic thin sheets. Phys. Rev. Research, 2:013165, Feb 2020. doi:10.1103/PhysRevResearch.2.013165.">MFDSWS20</a>, <a class="reference internal" href="references.html#id3" title="Rastko Sknepnek and Monica Olvera de la Cruz. Nonlinear elastic model for faceting of vesicles with soft grain boundaries. Phys. Rev. E, 85(5):050501, 2012.">SOdlC12</a>]</span>:</p>
+<p>Stretching energy density is calculated as <span id="id1">[<a class="reference internal" href="references.html#id6" title="Kenneth A Brakke. The surface evolver. Experimental mathematics, 1(2):141–165, 1992.">Bra92</a>, <a class="reference internal" href="references.html#id7" title="D. A. Matoz-Fernandez, Fordyce A. Davidson, Nicola R. Stanley-Wall, and Rastko Sknepnek. Wrinkle patterns in active viscoelastic thin sheets. Phys. Rev. Research, 2:013165, Feb 2020. doi:10.1103/PhysRevResearch.2.013165.">MFDSWS20</a>, <a class="reference internal" href="references.html#id5" title="Rastko Sknepnek and Monica Olvera de la Cruz. Nonlinear elastic model for faceting of vesicles with soft grain boundaries. Phys. Rev. E, 85(5):050501, 2012.">SOdlC12</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[U = \frac{E\,h}{2}\frac{1}{1+\nu}\left[Tr\left(C^2\right) + \frac{\nu}{1-\nu}\left(Tr C\right)^2\right]\]</div>
 <p>where <span class="math notranslate nohighlight">\(E\)</span> is the elastic constant, <span class="math notranslate nohighlight">\(h\)</span> is the membrane thickness, <span class="math notranslate nohighlight">\(\nu\)</span> is the Poisson ratio, and</p>
