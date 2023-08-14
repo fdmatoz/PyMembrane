@@ -49,7 +49,7 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Miscellaneous" href="miscellaneous.html" />
+    <link rel="next" title="Miscellaneous Functions and Classes in PyMembrane" href="miscellaneous.html" />
     <link rel="prev" title="Brownian" href="mdbrownian.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -182,6 +182,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -232,6 +239,10 @@ document.write(`
     </div>
   
 
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
   
 </div>
 
@@ -304,6 +315,13 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -336,7 +354,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core Components</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
@@ -369,10 +387,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Minimization Algorithms</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Minimization Algorithms</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous Functions and Classes in PyMembrane</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </li>
 </ul>
@@ -434,8 +452,44 @@ document.write(`
                   
   <section id="minimization-algorithms">
 <h1>Minimization Algorithms<a class="headerlink" href="#minimization-algorithms" title="Permalink to this headline">#</a></h1>
+</section>
+<section id="minimizers-in-pymembrane">
+<h1>Minimizers in PyMembrane<a class="headerlink" href="#minimizers-in-pymembrane" title="Permalink to this headline">#</a></h1>
+<p>Minimization is a critical operation in many computational systems, allowing for the optimization of configurations or properties. In the PyMembrane framework, minimizers work to find an optimal state of the system by adjusting configurations to minimize certain energy or force criteria.</p>
+<section id="parameters-and-minimizers">
+<h2>Parameters and Minimizers<a class="headerlink" href="#parameters-and-minimizers" title="Permalink to this headline">#</a></h2>
+<p>Minimizers in PyMembrane are integrated into the system using the <cite>add_minimizer</cite> method of the <cite>Evolver</cite> class. Like the other components, parameters for minimizers are provided in a dictionary format.</p>
+<p>The standard format to integrate a minimizer is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_minimizer</span><span class="p">(</span><span class="s2">&quot;&lt;MinimizerName&gt;&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;&lt;Parameter1&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value1&gt;&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;&lt;Parameter2&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value2&gt;&quot;</span><span class="p">,</span>
+                                          <span class="o">...</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Here’s a quick breakdown:</p>
+<ul class="simple">
+<li><p><cite>&lt;MinimizerName&gt;</cite>: The specific name of the minimizer.</p></li>
+<li><p><cite>&lt;Parameter1&gt;</cite>, <cite>&lt;Parameter2&gt;</cite>, …: Parameters specific to the behavior of the minimizer.</p></li>
+<li><p><cite>&lt;Value1&gt;</cite>, <cite>&lt;Value2&gt;</cite>, …: The corresponding values for these parameters, typically specified as strings.</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>Take the following as an illustrative example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_minimizer</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Fire&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dt&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span><span class="p">,</span> <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="s2">&quot;100000&quot;</span><span class="p">,</span> <span class="s2">&quot;ftol&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0001&quot;</span><span class="p">,</span> <span class="s2">&quot;etol&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0000001&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>In this instance:
+- The minimizer <a class="reference internal" href="fire.html"><span class="doc">“Mesh&gt;Fire”</span></a> refers to the Fast Inertial Relaxation Engine (FIRE) algorithm, which is particularly effective for energy minimization in atomistic simulations.
+- <cite>“dt”</cite> specifies the time step for the minimization, set to <cite>“0.01”</cite>.
+- <cite>“max_iter”</cite> denotes the maximum number of iterations for the minimizer, in this case, <cite>“100000”</cite>.
+- <cite>“ftol”</cite> and <cite>“etol”</cite> represent force and energy tolerance levels, respectively. The minimization stops when these thresholds are reached, ensuring an optimized and stable configuration.</p>
+<p>It’s crucial to fine-tune the parameters when using minimizers to ensure the effectiveness and reliability of the simulation results.</p>
+</section>
+<section id="minimizers-defined-in-pymembrane">
+<h2>Minimizers defined in PyMembrane<a class="headerlink" href="#minimizers-defined-in-pymembrane" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -463,7 +517,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Miscellaneous</p>
+        <p class="prev-next-title">Miscellaneous Functions and Classes in PyMembrane</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -476,6 +530,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Minimization Algorithms</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#minimizers-in-pymembrane">Minimizers in PyMembrane</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-and-minimizers">Parameters and Minimizers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimizers-defined-in-pymembrane">Minimizers defined in PyMembrane</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

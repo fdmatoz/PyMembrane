@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Evolver Class" href="evolver.html" />
-    <link rel="prev" title="Core" href="core.html" />
+    <link rel="prev" title="Core Components" href="core.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -182,6 +182,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -308,6 +315,13 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -340,7 +354,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="core.html">Core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="core.html">Core Components</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">System Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
@@ -373,10 +387,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous Functions and Classes in PyMembrane</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </li>
 </ul>
@@ -420,7 +434,7 @@ document.write(`
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
     
-    <li class="breadcrumb-item"><a href="core.html" class="nav-link">Core</a></li>
+    <li class="breadcrumb-item"><a href="core.html" class="nav-link">Core Components</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">System Class</li>
   </ul>
@@ -443,14 +457,15 @@ document.write(`
 <span id="id1"></span><h1>System Class<a class="headerlink" href="#system-class" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#before-you-start" id="id2">Before you start</a></p></li>
-<li><p><a class="reference internal" href="#loading-my-first-mesh" id="id3">Loading my first mesh</a></p></li>
-<li><p><a class="reference internal" href="#visualization" id="id4">Visualization</a></p></li>
+<li><p><a class="reference internal" href="#before-you-start" id="id3">Before you start</a></p></li>
+<li><p><a class="reference internal" href="#loading-my-first-mesh" id="id4">Loading my first mesh</a></p></li>
+<li><p><a class="reference internal" href="#visualization" id="id5">Visualization</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id6">Visualization</a></p></li>
 </ul>
 </div>
 <p>The design of <strong>PyMembrane</strong>  encapsulates entities from one another, grouping all function and data definitions together, making the core structure clear and accessible for future developers. The System class encompasses five independent classes, which include three that form the <a class="reference internal" href="triangularmeshes.html"><span class="doc">mesh</span></a> (vertices, edges, and faces), two supplementary classes to <a class="reference internal" href="compute.html"><span class="doc">compute geometrical properties</span></a>  over the mesh, and functions for <cite>data export for visualization and analysis&lt;dumper&gt;</cite>.</p>
 <section id="before-you-start">
-<h2><a class="toc-backref" href="#id2">Before you start</a><a class="headerlink" href="#before-you-start" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Before you start</a><a class="headerlink" href="#before-you-start" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pymembrane</span>
 <span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
 
@@ -460,7 +475,7 @@ document.write(`
 </div>
 </section>
 <section id="loading-my-first-mesh">
-<h2><a class="toc-backref" href="#id3">Loading my first mesh</a><a class="headerlink" href="#loading-my-first-mesh" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Loading my first mesh</a><a class="headerlink" href="#loading-my-first-mesh" title="Permalink to this headline">#</a></h2>
 <p><strong>Pymembrane</strong> work with meshes in _inp_ format. For example, a vertex file for a hexagon looks like:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Vertex</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="o">:</span>
 
@@ -492,7 +507,7 @@ document.write(`
 </div>
 </section>
 <section id="visualization">
-<h2><a class="toc-backref" href="#id4">Visualization</a><a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id5">Visualization</a><a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h2>
 <p><strong>PyMembrane</strong> can export meshes to <a class="reference external" href="https://en.wikipedia.org/wiki/VTK">vtk</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/PLY_(file_format)">ply</a> files. To create a dumper for a given mesh, we need to do:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dump</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
 <span class="n">dump</span><span class="o">.</span><span class="n">ply</span><span class="p">(</span><span class="s2">&quot;hexagon&quot;</span><span class="p">)</span>      <span class="c1">#for ply</span>
@@ -507,6 +522,24 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>_VTK_ and _json_ format is desirable since all the properties of the mesh are fully exported.</p>
+</div>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id6">Visualization</a><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>PyMembrane offers various mesh-related computations using the compute class. To execute computations for a given mesh, follow the steps:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_compute</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<span class="n">edge_lengths</span> <span class="o">=</span> <span class="n">mesh_compute</span><span class="o">.</span><span class="n">edge_lengths</span><span class="p">()</span>
+<span class="n">face_areas</span> <span class="o">=</span> <span class="n">mesh_compute</span><span class="o">.</span><span class="n">face_areas</span><span class="p">()</span>
+<span class="n">face_normals</span> <span class="o">=</span> <span class="n">mesh_compute</span><span class="o">.</span><span class="n">face_normals</span><span class="p">()</span> <span class="c1">#to be stored in the face class</span>
+</pre></div>
+</div>
+<p>Additionally, <cite>compute</cite> class can be used to compute thermodynamic properties of the mesh. For example, the following code computes the pressure of a given mesh:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_compute</span><span class="o">.</span><span class="n">pressure</span><span class="p">(</span><span class="n">evolver</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To calculate thermodynamic quantities, one must define an <a class="reference internal" href="evolver.html"><span class="doc">Evolver</span></a> class. This necessity arises because thermodynamic properties are intrinsically linked to the force potentials in the system. Although the <cite>compute&lt;compute&gt;</cite> class operates independently and isn’t a subset of the <cite>system</cite> class, it has been integrated with the <cite>system</cite> class for user convenience. This setup facilitates the computation of various properties for a specified mesh.</p>
 </div>
 </section>
 </section>
@@ -528,7 +561,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Core</p>
+        <p class="prev-next-title">Core Components</p>
       </div>
     </a>
     <a class="right-next"
@@ -561,6 +594,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-my-first-mesh">Loading my first mesh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Visualization</a></li>
 </ul>
   </nav></div>
 

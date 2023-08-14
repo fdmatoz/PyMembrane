@@ -182,6 +182,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -232,6 +239,10 @@ document.write(`
     </div>
   
 
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
   
 </div>
 
@@ -304,6 +315,13 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -336,7 +354,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core Components</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
@@ -369,10 +387,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous Functions and Classes in PyMembrane</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </li>
 </ul>
@@ -434,11 +452,42 @@ document.write(`
                   
   <section id="molecular-dynamics-integrators">
 <h1>Molecular Dynamics Integrators<a class="headerlink" href="#molecular-dynamics-integrators" title="Permalink to this headline">#</a></h1>
+<p>Molecular Dynamics (MD) is a computational method used to model the physical movements of atoms and molecules. In the context of PyMembrane, MD integrators simulate the dynamics of coarse-grained systems. These integrators are especially valuable when considering thermal fluctuations or the dynamics of interacting particles. The <cite>Evolver</cite> class incorporates the capability to include Molecular Dynamics integrators to handle the evolution of the system under various physical interactions.</p>
+<section id="parameters-and-md-integrators">
+<h2>Parameters and MD Integrators<a class="headerlink" href="#parameters-and-md-integrators" title="Permalink to this headline">#</a></h2>
+<p>Molecular Dynamics integrators in PyMembrane are added to the system using the <cite>add_integrator</cite> method of the <cite>Evolver</cite> class. Like other integrators and force potentials, parameters for MD integrators are passed in a dictionary format.</p>
+<p>The typical format to add an MD integrator is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;&lt;MD_IntegratorName&gt;&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;&lt;Parameter1&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value1&gt;&quot;</span><span class="p">,</span>
+                                               <span class="s2">&quot;&lt;Parameter2&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value2&gt;&quot;</span><span class="p">,</span>
+                                               <span class="o">...</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>A quick breakdown of the components:</p>
+<ul class="simple">
+<li><p><cite>&lt;MD_IntegratorName&gt;</cite>: The specific name of the Molecular Dynamics integrator.</p></li>
+<li><p><cite>&lt;Parameter1&gt;</cite>, <cite>&lt;Parameter2&gt;</cite>, …: Parameters that guide the behavior of the integrator.</p></li>
+<li><p><cite>&lt;Value1&gt;</cite>, <cite>&lt;Value2&gt;</cite>, …: The corresponding values for the parameters, typically passed as strings.</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>Consider the following example for a clearer understanding:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;brownian&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>In this example:
+- The integrator, <a class="reference internal" href="mdbrownian.html"><span class="doc">“Mesh&gt;brownian”</span></a>, represents a Brownian dynamics simulation, which models the random motion of particles suspended in a fluid (a liquid or a gas) resulting from their collision with the quick atoms or molecules in the gas or liquid.
+- The parameter <cite>“T”</cite> denotes the temperature of the system and is set to a value of <cite>“0.2”</cite>.</p>
+<p>When employing Molecular Dynamics integrators, it’s vital to set the right parameters to get a representative simulation that aligns with physical reality.</p>
+</section>
+<section id="molecular-dynamics-integrators-defined-in-pymembrane">
+<h2>Molecular dynamics integrators defined in PyMembrane<a class="headerlink" href="#molecular-dynamics-integrators-defined-in-pymembrane" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -479,6 +528,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-and-md-integrators">Parameters and MD Integrators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-integrators-defined-in-pymembrane">Molecular dynamics integrators defined in PyMembrane</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

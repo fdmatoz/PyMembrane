@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Core &#8212; PyMembrane  documentation</title>
+    <title>Core Components &#8212; PyMembrane  documentation</title>
   
   
   
@@ -182,6 +182,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -232,6 +239,10 @@ document.write(`
     </div>
   
 
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
   
 </div>
 
@@ -304,6 +315,13 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -336,7 +354,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Core Components</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
@@ -369,10 +387,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous Functions and Classes in PyMembrane</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +433,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="pythonapi.html" class="nav-link">Python API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Core</li>
+    <li class="breadcrumb-item active" aria-current="page">Core Components</li>
   </ul>
 </nav>
 </div>
@@ -432,8 +450,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="core">
-<h1>Core<a class="headerlink" href="#core" title="Permalink to this headline">#</a></h1>
+  <section id="core-components">
+<h1>Core Components<a class="headerlink" href="#core-components" title="Permalink to this headline">#</a></h1>
+<p>PyMembrane operates mainly through two pivotal user-facing components: <cite>System</cite> and <cite>Evolver</cite>. These classes form the backbone of PyMembrane, and gaining a clear understanding of their operations is vital for users.</p>
+<section id="system-class">
+<h2>System Class<a class="headerlink" href="#system-class" title="Permalink to this headline">#</a></h2>
+<p>The <cite>System</cite> class consolidates five specialized sub-classes:</p>
+<ul class="simple">
+<li><p>Three that construct the mesh: vertices, edges, and faces.</p></li>
+<li><p>Two that calculate the mesh’s geometrical properties.</p></li>
+</ul>
+<p>Additionally, this class offers functions that facilitate data exportation, enabling visualization and thorough analysis of results.</p>
+</section>
+<section id="evolver-class">
+<h2>Evolver Class<a class="headerlink" href="#evolver-class" title="Permalink to this headline">#</a></h2>
+<p><cite>Evolver</cite> plays a critical role within PyMembrane. Its design revolves around controlling the system’s dynamics, involving the coordination of various forces, integrators, minimizers, and constraints. By orchestrating these elements, the <cite>Evolver</cite> class ensures the simulated system’s accurate behavior. The primary duties of the Evolver class encompass:</p>
+<ul class="simple">
+<li><p>Keeping a structured record of <cite>Forces</cite>, <cite>Integrators</cite>, <cite>Minimizers</cite>, and <cite>Constraints</cite>.</p></li>
+<li><p>Steering the system’s progression by diligently applying forces, employing integrators, and upholding the defined minimizers and constraints.</p></li>
+</ul>
+</section>
+<section id="list-of-core-components">
+<h2>List of Core components<a class="headerlink" href="#list-of-core-components" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="system.html">System Class</a></li>
@@ -445,6 +483,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -485,6 +524,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-class">System Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolver-class">Evolver Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-core-components">List of Core components</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

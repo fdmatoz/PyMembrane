@@ -182,6 +182,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -232,6 +239,10 @@ document.write(`
     </div>
   
 
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
   
 </div>
 
@@ -304,6 +315,13 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -336,7 +354,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="core.html">Core Components</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
@@ -369,10 +387,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mdbrownian.html">Brownian</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="minintegrators.html">Minimization Algorithms</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="miscellaneous.html">Miscellaneous Functions and Classes in PyMembrane</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="readmesh.html">ReadMesh</a></li>
 </ul>
 </li>
 </ul>
@@ -434,6 +452,37 @@ document.write(`
                   
   <section id="monte-carlo-integrators">
 <h1>Monte Carlo Integrators<a class="headerlink" href="#monte-carlo-integrators" title="Permalink to this headline">#</a></h1>
+<p>In PyMembrane’s simulation framework, integrators serve to progressively update the system’s state over time. By incorporating the effects of forces, constraints, and other dynamics, integrators allow the simulation to evolve. The <cite>Evolver</cite> class provides the capability to add specific integrators to drive the system’s behavior.</p>
+<section id="parameters-and-integrators">
+<h2>Parameters and Integrators<a class="headerlink" href="#parameters-and-integrators" title="Permalink to this headline">#</a></h2>
+<p>The integrators, such as those belonging to the <cite>“Mesh&gt;MonteCarlo”</cite> family, are added to the system using the <cite>add_integrator</cite> method of the <a class="reference internal" href="evolver.html"><span class="doc">Evolver</span></a> class. Parameters for these integrators are also passed in dictionary format, much like force potentials.</p>
+<p>The general format for adding an integrator is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;&lt;IntegratorName&gt;&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;&lt;Parameter1&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value1&gt;&quot;</span><span class="p">,</span>
+                                            <span class="s2">&quot;&lt;Parameter2&gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Value2&gt;&quot;</span><span class="p">,</span>
+                                            <span class="o">...</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Here’s a breakdown of the components:</p>
+<ul class="simple">
+<li><p><cite>&lt;IntegratorName&gt;</cite>: The specific name of the integrator. Examples include <cite>“Mesh&gt;MonteCarlo&gt;vertex&gt;move”</cite> and <cite>“Mesh&gt;MonteCarlo&gt;vertex&gt;swap”</cite>.</p></li>
+<li><p><cite>&lt;Parameter1&gt;</cite>, <cite>&lt;Parameter2&gt;</cite>, …: These are parameters that influence the behavior of the integrator. Their nature depends on the specific integrator being used.</p></li>
+<li><p><cite>&lt;Value1&gt;</cite>, <cite>&lt;Value2&gt;</cite>, …: The corresponding values for the parameters. They are typically passed as strings.</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>For a clearer understanding, let’s consider the provided examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;move&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dr&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05&quot;</span><span class="p">})</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;swap&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;every step&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>In these examples:
+- The first integrator, <a class="reference internal" href="mcvertexmove.html"><span class="doc">“Mesh&gt;MonteCarlo&gt;vertex&gt;move”</span></a>, uses a parameter <cite>“dr”</cite> with a value of <cite>“0.05”</cite>.
+- The second integrator, <a class="reference internal" href="mcedgeswap.html"><span class="doc">“Mesh&gt;MonteCarlo&gt;vertex&gt;swap”</span></a>, has a parameter <cite>“every step”</cite> set to a value of <cite>“1”</cite>.</p>
+<p>When working with integrators, ensuring the correct parameterization is essential for accurate and reliable simulation outcomes.</p>
+</section>
+<section id="monte-carlo-integrators-defined-in-pymembrane">
+<h2>Monte Carlo integrators defined in PyMembrane<a class="headerlink" href="#monte-carlo-integrators-defined-in-pymembrane" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mcvertexmove.html">Monte Carlo Vertex Move</a></li>
@@ -442,6 +491,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="mcedgeflip.html">Monte Carlo Edge Flip</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -482,6 +532,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-and-integrators">Parameters and Integrators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-integrators-defined-in-pymembrane">Monte Carlo integrators defined in PyMembrane</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
