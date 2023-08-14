@@ -342,11 +342,12 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="core.html">Core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="system.html">System Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="triangularmeshes.html">Triangular Meshes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="halfedge.html">Halfedge Data Structure</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Box Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dumper.html">Dumper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compute.html">Compute Mesh Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="evolver.html">Evolver Class</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="potentials.html">Force Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -443,19 +444,20 @@ document.write(`
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
-<li><p><a class="reference internal" href="#constructors" id="id2">Constructors</a></p></li>
-<li><p><a class="reference internal" href="#attributes" id="id3">Attributes</a></p></li>
-<li><p><a class="reference internal" href="#methods" id="id4">Methods</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-box" id="id2">Creating a box</a></p></li>
+<li><p><a class="reference internal" href="#box-methods" id="id3">Box methods</a></p></li>
+<li><p><a class="reference internal" href="#attributes" id="id4">Attributes</a></p></li>
+<li><p><a class="reference internal" href="#other-methods" id="id5">Other methods</a></p></li>
 </ul>
 </div>
 <section id="description">
 <h2><a class="toc-backref" href="#id1">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
-<p><cite>Box</cite> is a Python class interfacing with the underlying C++ implementation. It provides operations and attributes related to a box.</p>
+<p><cite>PyMembrane</cite> uses boxes to implement periodic boundary conditions. A <cite>Box</cite> object is used to represent a box. It is used to define the simulation box and to wrap coordinates into the box. The box can be controlled with 6 parameters: the box lengths in each direction, and the periodicity in each direction. The box is defined by the lower and upper boundaries in each direction.</p>
 </section>
-<section id="constructors">
-<h2><a class="toc-backref" href="#id2">Constructors</a><a class="headerlink" href="#constructors" title="Permalink to this headline">#</a></h2>
+<section id="creating-a-box">
+<h2><a class="toc-backref" href="#id2">Creating a box</a><a class="headerlink" href="#creating-a-box" title="Permalink to this headline">#</a></h2>
+<p>There are several ways to initialize a <cite>Box</cite> object. The simplest way is to specify the box lengths in each direction. For example, the following code creates a box with lengths 10, 20, and 30 in the x, y, and z directions, respectively:</p>
 <ul>
-<li><p><strong>Box()</strong>: Default constructor.</p></li>
 <li><p><strong>Box(Lx, Ly, Lz)</strong>:
 Initializes the box dimensions.
 Example:
@@ -464,14 +466,9 @@ Example:
 <div><p>box = Box(10, 20, 30)</p>
 </div></blockquote>
 </li>
-<li><p><strong>Box(Lxpair, Lypair, Lzpair)</strong>:
-Initializes the box dimensions using pairs for low and high values for each dimension.
-Example:
-.. code-block:: python</p>
-<blockquote>
-<div><p>box = Box((-5,5), (-10,10), (-15,15))</p>
-</div></blockquote>
-</li>
+</ul>
+<p>In addition to the box lengths, the periodicity in each direction can be specified. For example, the following code creates a box with lengths 10, 20, and 30 in the x, y, and z directions, respectively, and periodicity in the x and z directions:</p>
+<ul>
 <li><p><strong>Box(Lx, Ly, Lz, periodic_x, periodic_y, periodic_z)</strong>:
 Initializes the box dimensions and allows specification of periodicity for each dimension.
 Example:
@@ -480,6 +477,23 @@ Example:
 <div><p>box = Box(10, 20, 30, True, False, True)</p>
 </div></blockquote>
 </li>
+</ul>
+<p>The box can also be initialized using pairs for the lower and upper boundaries in each direction. For example, the following code creates a box with lower and upper boundaries (-5, 5), (-10, 10), and (-15, 15) in the x, y, and z directions, respectively:</p>
+<ul>
+<li><p><strong>Box(Lxpair, Lypair, Lzpair)</strong>:
+Initializes the box dimensions using pairs for low and high values for each dimension.
+Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p>box = Box((-5,5), (-10,10), (-15,15))</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="box-methods">
+<h2><a class="toc-backref" href="#id3">Box methods</a><a class="headerlink" href="#box-methods" title="Permalink to this headline">#</a></h2>
+<p>In addition to the initialization methods, the <cite>Box</cite> class has several methods that can be used to manipulate or get information from the box</p>
+<ul>
 <li><p><strong>scale()</strong>:
 Scale the box by a factors scalex, scaley, scalez for each dimension.
 Example:
@@ -501,7 +515,8 @@ print(“The box volume is: “, box.volume)</p>
 </ul>
 </section>
 <section id="attributes">
-<h2><a class="toc-backref" href="#id3">Attributes</a><a class="headerlink" href="#attributes" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Attributes</a><a class="headerlink" href="#attributes" title="Permalink to this headline">#</a></h2>
+<p>The following attributes are available for the <cite>Box</cite> class:</p>
 <ul>
 <li><p><strong>Lhi</strong>:
 Upper boundary of the box.
@@ -537,8 +552,8 @@ Example:
 </li>
 </ul>
 </section>
-<section id="methods">
-<h2><a class="toc-backref" href="#id4">Methods</a><a class="headerlink" href="#methods" title="Permalink to this headline">#</a></h2>
+<section id="other-methods">
+<h2><a class="toc-backref" href="#id5">Other methods</a><a class="headerlink" href="#other-methods" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p><strong>__repr__()</strong>:
 Returns a string representation of the <cite>Box</cite> object, detailing its dimensions and periodicities.
@@ -549,6 +564,10 @@ Example:
 </div></blockquote>
 </li>
 </ul>
+<p>To know more about the <cite>Box</cite> object, please refer to contextual help in python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -600,9 +619,10 @@ Example:
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructors">Constructors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-box">Creating a box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box-methods">Box methods</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">Other methods</a></li>
 </ul>
   </nav></div>
 
