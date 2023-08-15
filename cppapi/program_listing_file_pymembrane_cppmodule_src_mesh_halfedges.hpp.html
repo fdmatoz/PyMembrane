@@ -415,18 +415,20 @@ document.write(`
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PropertyVertices</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">HE_Vertex</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">//properties</span>
+<span class="w">    </span><span class="c1">// properties</span>
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">boundary</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">coordination</span><span class="p">;</span>
 <span class="w">    </span><span class="n">inth3</span><span class="w"> </span><span class="n">cellId</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">normal</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//handle</span>
+<span class="w">    </span><span class="c1">// handle</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_hedge</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//md properties</span>
+<span class="w">    </span><span class="c1">// md properties</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">accel</span><span class="p">;</span>
+
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">forceC</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">forceD</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">forceE</span><span class="p">;</span>
@@ -451,10 +453,10 @@ document.write(`
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="n">l0</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// handle</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_hedge</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//md</span>
+<span class="w">    </span><span class="c1">// md</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//properties</span>
+<span class="w">    </span><span class="c1">// properties</span>
 <span class="w">    </span><span class="n">PropertyEdges</span><span class="w"> </span><span class="n">_property</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="k">using</span><span class="w"> </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HE_Edge</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="p">;</span>
@@ -462,7 +464,7 @@ document.write(`
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PropertyFaces</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">HE_Face</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">//properties</span>
+<span class="w">    </span><span class="c1">// properties</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">outer</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nsides</span><span class="p">;</span>
@@ -475,19 +477,19 @@ document.write(`
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="n">r13_reference</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">boundary</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//handle</span>
+<span class="w">    </span><span class="c1">// handle</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_hedge</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// md</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//properties</span>
+<span class="w">    </span><span class="c1">// properties</span>
 <span class="w">    </span><span class="n">PropertyFaces</span><span class="w"> </span><span class="n">_property</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="k">using</span><span class="w"> </span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HE_Face</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PropertyEdges</span><span class="o">&gt;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">HE_HalfEdge</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">//handle</span>
+<span class="w">    </span><span class="c1">// handle</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vert_from</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vert_to</span><span class="p">;</span>
@@ -497,7 +499,7 @@ document.write(`
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">prev</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">boundary</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//properties</span>
+<span class="w">    </span><span class="c1">// properties</span>
 <span class="w">    </span><span class="n">PropertyEdges</span><span class="w"> </span><span class="n">_property</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="k">using</span><span class="w"> </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HE_HalfEdge</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="p">;</span>

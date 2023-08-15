@@ -409,10 +409,10 @@ document.write(`
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;evolverclass.hpp&quot;</span>
 
-<span class="c1">//operators over the meshes</span>
+<span class="c1">// operators over the meshes</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mesh/meshoperators.hpp&quot;</span>
 
-<span class="c1">//here include all the hpp files of the mesh integrators</span>
+<span class="c1">// here include all the hpp files of the mesh integrators</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/integrator_brownian_vertex.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montecarlointegrator.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_vertex.hpp&quot;</span>
@@ -421,21 +421,20 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_flip_edge.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_spin_vertex.hpp&quot;</span>
 
-
-<span class="c1">//here we include all the Minimizers</span>
+<span class="c1">// here we include all the Minimizers</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../minimizer/fire.hpp&quot;</span>
 
-<span class="c1">//contraints</span>
+<span class="c1">// contraints</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../constraints/constraintvolume.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../constraints/constraintarea.hpp&quot;</span>
 
-<span class="c1">//compute</span>
+<span class="c1">// compute</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_forces</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">reset_vertex_forces</span><span class="p">());</span>
 <span class="p">}</span>
 
-<span class="c1">//compute</span>
+<span class="c1">// compute</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::reset_mesh_energy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">reset_vertex_energy</span><span class="p">());</span>
@@ -567,19 +566,22 @@ document.write(`
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">integrator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">)</span>
 <span class="w">        </span><span class="n">integrator</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">set_temperature</span><span class="p">(</span><span class="n">util</span><span class="o">::</span><span class="n">from_string_double</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
 <span class="p">}</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::evolve_mesh_md</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::evolve_mesh_md</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mdsteps</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">// Perform the preintegration step, i.e., step before forces and torques are computed</span>
-<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_prestep</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mdsteps</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Perform the preintegration step, i.e., step before forces and torques are computed</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_prestep</span><span class="p">();</span>
 
-<span class="w">    </span><span class="c1">// Reset all forces and toques</span>
-<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">reset_mesh_forces</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Reset all forces and toques</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">reset_mesh_forces</span><span class="p">();</span>
 
-<span class="w">    </span><span class="c1">// Compute all forces and torques</span>
-<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">compute_mesh_forces</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Compute all forces and torques</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">compute_mesh_forces</span><span class="p">();</span>
 
-<span class="w">    </span><span class="c1">// Perform the second step of integration</span>
-<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_poststep</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Perform the second step of integration</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_poststep</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">evolve_mesh_mc</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mcs</span><span class="p">)</span>
@@ -628,19 +630,28 @@ document.write(`
 <span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ConstraintVolume</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Area&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;Area&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ConstraintArea</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ConstraintArea</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;max_iter&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                </span><span class="n">max_iter_mesh_contraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">from_string_int</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">delete_constraints</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it_mesh_constraints_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh_constraints_list</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it_mesh_constraints_list</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mesh_constraints_list</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+<span class="w">        </span><span class="n">mesh_constraints_list</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it_mesh_constraints_list</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">EvolverClass</span><span class="o">::</span><span class="n">set_max_iter_mesh_contraint</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>

@@ -49,8 +49,6 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class ConstraintArea" href="class_constraint_area.html" />
-    <link rel="prev" title="Class ComputeVertexLineTension" href="class_compute_vertex_line_tension.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -381,9 +379,6 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
-    
     <li class="breadcrumb-item active" aria-current="page">Class ComputeVertexSubstrateEnergy</li>
   </ul>
 </nav>
@@ -419,24 +414,112 @@ document.write(`
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv428ComputeVertexSubstrateEnergy">
-<span id="_CPPv328ComputeVertexSubstrateEnergy"></span><span id="_CPPv228ComputeVertexSubstrateEnergy"></span><span id="ComputeVertexSubstrateEnergy"></span><span class="target" id="class_compute_vertex_substrate_energy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexSubstrateEnergy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="class_compute_force_class.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><a class="headerlink" href="#_CPPv428ComputeVertexSubstrateEnergy" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv328ComputeVertexSubstrateEnergy"></span><span id="_CPPv228ComputeVertexSubstrateEnergy"></span><span id="ComputeVertexSubstrateEnergy"></span><span class="target" id="classComputeVertexSubstrateEnergy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexSubstrateEnergy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classComputeForceClass.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><br /></dt>
 <dd><p>Example class that acts on the edges. </p>
-<p><a class="reference internal" href="#class_compute_vertex_substrate_energy"><span class="std std-ref">ComputeVertexSubstrateEnergy</span></a> the tethering potential, if the edge length is larger than lmax then the energy is equal to inf.</p>
+<p><a class="reference internal" href="#classComputeVertexSubstrateEnergy"><span class="std std-ref">ComputeVertexSubstrateEnergy</span></a> the tethering potential, if the edge length is larger than lmax then the energy is equal to inf. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="class_compute_vertex_substrate_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy28ComputeVertexSubstrateEnergyER11SystemClass">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy28ComputeVertexSubstrateEnergyER11SystemClass"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy28ComputeVertexSubstrateEnergyER11SystemClass"></span><span id="ComputeVertexSubstrateEnergy::ComputeVertexSubstrateEnergy__SystemClassR"></span><span class="target" id="group__computeenergy_1gaee8be9bda385b3884a92f58c76254d7e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexSubstrateEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergyD0Ev">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergyD0Ev"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergyD0Ev"></span><span id="ComputeVertexSubstrateEnergy::~ComputeVertexSubstrateEnergy"></span><span class="target" id="group__computeenergy_1gac79b9168a12817f5a4ea334eb3dd0a18"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ComputeVertexSubstrateEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy22set_default_propertiesEv">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy22set_default_propertiesEv"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy22set_default_propertiesEv"></span><span id="ComputeVertexSubstrateEnergy::set_default_properties__void"></span><span class="target" id="group__computeenergy_1ga494591a77b11455e1be118b56c14165f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
+<dd><p>Set property. </p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="class_compute_vertex_substrate_energy_1aed03d57ba661016fdb23695e588c96df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="group__computeenergy_1ga7da848d2c5e5e4c5b107ce9197e684b0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy8get_infoEv">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy8get_infoEv"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy8get_infoEv"></span><span id="ComputeVertexSubstrateEnergy::get_info__void"></span><span class="target" id="group__computeenergy_1ga05cd09139ddf857272427eccc8b13c45"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get the type object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>std::string </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy14compute_energyEv">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy14compute_energyEv"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy14compute_energyEv"></span><span id="ComputeVertexSubstrateEnergy::compute_energy__void"></span><span class="target" id="group__computeenergy_1ga3c241036eed969915265f9255f66d68c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute energy for the actual configuration </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy7computeEv">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy7computeEv"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy7computeEv"></span><span id="ComputeVertexSubstrateEnergy::compute__void"></span><span class="target" id="group__computeenergy_1gaa52118af36e48b37fe08d1863cae7720"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute force for the actual configuration </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy19compute_edge_energyEi">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy19compute_edge_energyEi"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy19compute_edge_energyEi"></span><span id="ComputeVertexSubstrateEnergy::compute_edge_energy__i"></span><span class="target" id="group__computeenergy_1ga196655231af0228dee5befabea759f4a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute the energy in a given edge </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>edge</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>real </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy21compute_vertex_energyEi">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexSubstrateEnergy::compute_vertex_energy__i"></span><span class="target" id="group__computeenergy_1ga385fe36c8207324b22a0e9e94c03e107"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute the energy in a vertex edge </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>face</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>real </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classComputeVertexSubstrateEnergy_1a2a3d0a2d91098d3eef0c5c0b5edab0dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classComputeVertexSubstrateEnergy_1a490ec911ebfb57c97aa76d22074a666c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.ss:R"></span><span class="target" id="class_compute_vertex_substrate_energy_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexSubstrateEnergy::set_property__std::map:ss.ss:R"></span><span class="target" id="classComputeVertexSubstrateEnergy_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -456,24 +539,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="class_compute_vertex_line_tension.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Class ComputeVertexLineTension</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="class_constraint_area.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class ConstraintArea</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>

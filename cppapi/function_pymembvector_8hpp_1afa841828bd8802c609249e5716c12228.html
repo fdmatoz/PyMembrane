@@ -1,14 +1,15 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-theme="light">
+<html data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Dihedral &#8212; PyMembrane  documentation</title>
+    <title>Template Function pymemb::copy &#8212; PyMembrane  documentation</title>
   
   
   
@@ -28,27 +29,30 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=d1cf73e6"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pythonapi/dihedral';</script>
-    <link rel="icon" href="../_static/logo.ico"/>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/function_pymembvector_8hpp_1afa841828bd8802c609249e5716c12228';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function pymemb::enforce_periodic(const real3&amp;, const BoxType&amp;)" href="function_pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b.html" />
+    <link rel="prev" title="Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;)" href="function_computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -147,14 +151,14 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="pythonapi.html">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
                         Python API
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                      <a class="nav-link nav-internal" href="cppapi.html">
                         C++ API
                       </a>
                     </li>
@@ -173,8 +177,15 @@
                 <div class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="references.html">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
                         References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
                       </a>
                     </li>
                 
@@ -229,6 +240,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
     </nav>
@@ -269,14 +284,14 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="pythonapi.html">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
                         Python API
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                      <a class="nav-link nav-internal" href="cppapi.html">
                         C++ API
                       </a>
                     </li>
@@ -295,8 +310,15 @@ document.write(`
                 <div class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="references.html">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
                         References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
                       </a>
                     </li>
                 
@@ -359,7 +381,10 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Dihedral</li>
+    
+    <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Template Function pymemb::copy</li>
   </ul>
 </nav>
 </div>
@@ -376,8 +401,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="dihedral">
-<h1>Dihedral<a class="headerlink" href="#dihedral" title="Permalink to this heading">#</a></h1>
+  <section id="template-function-pymemb-copy">
+<span id="exhale-function-pymembvector-8hpp-1afa841828bd8802c609249e5716c12228"></span><h1>Template Function pymemb::copy<a class="headerlink" href="#template-function-pymemb-copy" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_pymembrane_cppmodule_src_types_pymembvector.hpp.html#file-pymembrane-cppmodule-src-types-pymembvector-hpp"><span class="std std-ref">File pymembvector.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE">
+<span id="_CPPv3I0EN6pymemb4copyERNSt6vectorI1TEE"></span><span id="_CPPv2I0EN6pymemb4copyERNSt6vectorI1TEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="pymembvector_8hpp_1afa841828bd8802c609249e5716c12228"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE" title="pymemb::copy::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE" title="pymemb::copy::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</section>
 </section>
 
 
@@ -391,6 +427,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="function_computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Function pymemb::compute_normal_triangle_unit(const real3&amp;, const real3&amp;, const real3&amp;)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="function_pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Function pymemb::enforce_periodic(const real3&amp;, const BoxType&amp;)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -400,6 +454,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-documentation">Function Documentation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -431,7 +499,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
     <br/>
   </p>
 </div>

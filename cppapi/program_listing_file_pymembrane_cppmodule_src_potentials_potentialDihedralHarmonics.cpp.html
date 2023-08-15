@@ -499,7 +499,7 @@ document.write(`
 <span class="w">                                       </span><span class="o">&amp;</span><span class="n">m_theta0</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
 <span class="p">}</span>
 
-<span class="c1">// this is done in the cpu the user is responsible for calling get_host_mesh()</span>
+
 <span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexDihedralEnergy::compute_edge_energy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">query_edge_index</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">//we need to loop the 4 edges that are connected to the edge_index</span>
@@ -527,7 +527,7 @@ document.write(`
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">edge_energy</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// this is done in the cpu the user is responsible for calling get_host_mesh()</span>
+
 <span class="kt">double</span><span class="w"> </span><span class="nf">ComputeVertexDihedralEnergy::compute_vertex_energy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">query_vertex_index</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
