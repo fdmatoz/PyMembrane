@@ -45,7 +45,6 @@
     <script src="../_static/design-tabs.js"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pythonapi/triangularmeshes';</script>
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -458,25 +457,21 @@ document.write(`
 <h1>Triangular Meshes<a class="headerlink" href="#triangular-meshes" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#components-of-triangular-meshes" id="id1">Components of Triangular Meshes</a></p>
+<li><p><a class="reference internal" href="#components-of-triangular-meshes" id="id1">Components of Triangular Meshes</a></p></li>
+<li><p><a class="reference internal" href="#pymembrane-s-triangular-mesh-classes" id="id2">PyMembrane’s Triangular Mesh Classes</a></p></li>
+<li><p><a class="reference internal" href="#looping-over-vertices" id="id3">Looping over vertices</a></p>
 <ul>
-<li><p><a class="reference internal" href="#euler-s-formula-for-triangular-meshes" id="id2">Euler’s Formula for Triangular Meshes</a></p></li>
+<li><p><a class="reference internal" href="#vertex-attributes" id="id4">Vertex Attributes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#pymembrane-s-triangular-mesh-classes" id="id3">PyMembrane’s Triangular Mesh Classes</a></p></li>
-<li><p><a class="reference internal" href="#looping-over-vertices" id="id4">Looping over vertices</a></p>
+<li><p><a class="reference internal" href="#looping-over-faces" id="id5">Looping over faces</a></p>
 <ul>
-<li><p><a class="reference internal" href="#vertex-attributes" id="id5">Vertex Attributes</a></p></li>
+<li><p><a class="reference internal" href="#face-attributes" id="id6">Face Attributes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#looping-over-faces" id="id6">Looping over faces</a></p>
+<li><p><a class="reference internal" href="#looping-over-edges" id="id7">Looping over edges</a></p>
 <ul>
-<li><p><a class="reference internal" href="#face-attributes" id="id7">Face Attributes</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#looping-over-edges" id="id8">Looping over edges</a></p>
-<ul>
-<li><p><a class="reference internal" href="#edge-attributes" id="id9">Edge Attributes</a></p></li>
+<li><p><a class="reference internal" href="#edge-attributes" id="id8">Edge Attributes</a></p></li>
 </ul>
 </li>
 </ul>
@@ -519,16 +514,9 @@ document.write(`
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/triangular_mesh.svg"><img alt="Triangular Mesh" src="../_images/triangular_mesh.svg" width="500" /></a>
 </figure>
-<section id="euler-s-formula-for-triangular-meshes">
-<h3><a class="toc-backref" href="#id2">Euler’s Formula for Triangular Meshes</a><a class="headerlink" href="#euler-s-formula-for-triangular-meshes" title="Permalink to this headline">#</a></h3>
-<p>For a simply-connected, planar triangular mesh, Euler’s formula gives a relationship between its vertices (V), edges (E), and faces (F):</p>
-<div class="math notranslate nohighlight">
-\[V - E + F = 2\]</div>
-<p>This formula ensures the mesh’s consistency, particularly vital when initializing or refining the mesh for simulations in PyMembrane.</p>
-</section>
 </section>
 <section id="pymembrane-s-triangular-mesh-classes">
-<h2><a class="toc-backref" href="#id3">PyMembrane’s Triangular Mesh Classes</a><a class="headerlink" href="#pymembrane-s-triangular-mesh-classes" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id2">PyMembrane’s Triangular Mesh Classes</a><a class="headerlink" href="#pymembrane-s-triangular-mesh-classes" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The following explain in brief each of the methods for Face, Vertex, and Edge classes. Note that not all of this method can be modefied by the user. Some of them are read-only. For more details, please refer to the contextual help as so:</p>
@@ -541,7 +529,7 @@ document.write(`
 </div>
 </section>
 <section id="looping-over-vertices">
-<h2><a class="toc-backref" href="#id4">Looping over vertices</a><a class="headerlink" href="#looping-over-vertices" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Looping over vertices</a><a class="headerlink" href="#looping-over-vertices" title="Permalink to this headline">#</a></h2>
 <p>As an example, let’s say that we want to deform the mesh that we just loaded. To do this, we need to access the vertices in the <cite>System</cite> class as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve the vertices</span>
 <span class="n">vertices</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">vertices</span>
@@ -559,7 +547,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="vertex-attributes">
-<h3><a class="toc-backref" href="#id5">Vertex Attributes</a><a class="headerlink" href="#vertex-attributes" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id4">Vertex Attributes</a><a class="headerlink" href="#vertex-attributes" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><cite>boundary</cite>: Vertex True if it is at the boundary</p></li>
 <li><p><cite>coordination</cite>: Vertex Coordination</p></li>
@@ -577,7 +565,7 @@ document.write(`
 </section>
 </section>
 <section id="looping-over-faces">
-<h2><a class="toc-backref" href="#id6">Looping over faces</a><a class="headerlink" href="#looping-over-faces" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id5">Looping over faces</a><a class="headerlink" href="#looping-over-faces" title="Permalink to this headline">#</a></h2>
 <p>As an example, let’s say that we want to change the face type in the mesh that we just loaded. To do this, we need to access the faces in the <a class="reference internal" href="system.html"><span class="doc">System</span></a> class as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve the faces</span>
 <span class="n">faces</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">faces</span>
@@ -594,7 +582,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="face-attributes">
-<h3><a class="toc-backref" href="#id7">Face Attributes</a><a class="headerlink" href="#face-attributes" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id6">Face Attributes</a><a class="headerlink" href="#face-attributes" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><cite>area</cite>: area of the face</p></li>
 <li><p><cite>boundary</cite>: True if it is at the boundary</p></li>
@@ -613,7 +601,7 @@ document.write(`
 </section>
 </section>
 <section id="looping-over-edges">
-<h2><a class="toc-backref" href="#id8">Looping over edges</a><a class="headerlink" href="#looping-over-edges" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id7">Looping over edges</a><a class="headerlink" href="#looping-over-edges" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edges</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">edges</span>
 <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edges</span><span class="p">)):</span>
     <span class="n">edge</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
@@ -625,7 +613,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="edge-attributes">
-<h3><a class="toc-backref" href="#id9">Edge Attributes</a><a class="headerlink" href="#edge-attributes" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id8">Edge Attributes</a><a class="headerlink" href="#edge-attributes" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><cite>id</cite>: The unique identifier for the edge.</p></li>
 <li><p><cite>i</cite>: One of the connected vertices.</p></li>
@@ -692,10 +680,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-triangular-meshes">Components of Triangular Meshes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-s-formula-for-triangular-meshes">Euler’s Formula for Triangular Meshes</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-triangular-meshes">Components of Triangular Meshes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pymembrane-s-triangular-mesh-classes">PyMembrane’s Triangular Mesh Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-vertices">Looping over vertices</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertex-attributes">Vertex Attributes</a></li>
