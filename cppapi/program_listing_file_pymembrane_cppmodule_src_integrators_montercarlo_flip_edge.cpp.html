@@ -435,7 +435,7 @@ document.write(`
 <span class="w">    </span><span class="k">do</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">n_neighbors_v0</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+
 <span class="w">        </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
 <span class="w">        </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
 <span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
@@ -448,7 +448,7 @@ document.write(`
 <span class="w">    </span><span class="k">do</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">n_neighbors_v2</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+
 <span class="w">        </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
 <span class="w">        </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
 <span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>

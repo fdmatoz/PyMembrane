@@ -409,7 +409,6 @@ document.write(`
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __potentialConstantAreaTriangle_HPP__</span>
 <span class="cp">#define __potentialConstantAreaTriangle_HPP__</span>
 
-
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;computeforceclass.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../system/systemclass.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mesh/computegeometry.hpp&quot;</span>
@@ -468,6 +467,8 @@ document.write(`
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">compute_edge_energy</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">compute_vertex_energy</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_stress</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_atomic_stress</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span>

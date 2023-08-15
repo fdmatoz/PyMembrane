@@ -454,9 +454,7 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N26ComputeVertexBendingEnergy14compute_energyEv">
 <span id="_CPPv3N26ComputeVertexBendingEnergy14compute_energyEv"></span><span id="_CPPv2N26ComputeVertexBendingEnergy14compute_energyEv"></span><span id="ComputeVertexBendingEnergy::compute_energy__void"></span><span class="target" id="group__computeenergy_1gafb95db3f5edc251b6f28809112b465b0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Use normals that belong to the two traingles that share a vertex and calculate bengind energy as <span class="math notranslate nohighlight">\( E_{bend} = \frac 1 2 k_b \left( \hat{n}_i- \hat{n}_j \right)^2 r \)</span>, where <span class="math notranslate nohighlight">\( k_b \)</span> is the bending rigidity, <span class="math notranslate nohighlight">\( r \)</span> is edge length, and <span class="math notranslate nohighlight">\( \hat{n}_i, \hat{n}_j \)</span><p>are the normal unit vectors of the triangles meeting at the edge.</p>
-<p>the method used here is the Seung and Nelson bending energy, Seung, H. S. &amp; Nelson, D. R. Defects in flexible membranes with crystalline order. Phys. Rev. A 38, 1005–1018 (1988).</p>
-</p>
+<dd><p>Use normals that belong to the two traingles that share a vertex and calculate bengind energy as <span class="math notranslate nohighlight">\( E_{bend} = \frac 1 2 k_b \left( \hat{n}_i- \hat{n}_j \right)^2 r \)</span>, where <span class="math notranslate nohighlight">\( k_b \)</span> is the bending rigidity, <span class="math notranslate nohighlight">\( r \)</span> is edge length, and <span class="math notranslate nohighlight">\( \hat{n}_i, \hat{n}_j \)</span> are the normal unit vectors of the triangles meeting at the edge. the method used here is the Seung and Nelson bending energy, Seung, H. S. &amp; Nelson, D. R. Defects in flexible membranes with crystalline order. Phys. Rev. A 38, 1005–1018 (1988). </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>vertex</strong> – id </p>
@@ -483,7 +481,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N26ComputeVertexBendingEnergy19compute_edge_energyEi">
-<span id="_CPPv3N26ComputeVertexBendingEnergy19compute_edge_energyEi"></span><span id="_CPPv2N26ComputeVertexBendingEnergy19compute_edge_energyEi"></span><span id="ComputeVertexBendingEnergy::compute_edge_energy__i"></span><span class="target" id="group__computeenergy_1ga747c98c408e4f4e657976059fa5f15c2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N26ComputeVertexBendingEnergy19compute_edge_energyEi"></span><span id="_CPPv2N26ComputeVertexBendingEnergy19compute_edge_energyEi"></span><span id="ComputeVertexBendingEnergy::compute_edge_energy__i"></span><span class="target" id="group__computeenergy_1ga336d7e1d0b64d499405267612af67746"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>compute the energy in a given edge </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -497,7 +495,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N26ComputeVertexBendingEnergy21compute_vertex_energyEi">
-<span id="_CPPv3N26ComputeVertexBendingEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N26ComputeVertexBendingEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexBendingEnergy::compute_vertex_energy__i"></span><span class="target" id="group__computeenergy_1gab81c3fc88be2e9d06b7e26f3ae81a400"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N26ComputeVertexBendingEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N26ComputeVertexBendingEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexBendingEnergy::compute_vertex_energy__i"></span><span class="target" id="group__computeenergy_1ga768a5cc2d11c61a5830883ac71e5537f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>compute the energy in a vertex edge </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -505,6 +503,34 @@ document.write(`
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>real </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N26ComputeVertexBendingEnergy14compute_stressEv">
+<span id="_CPPv3N26ComputeVertexBendingEnergy14compute_stressEv"></span><span id="_CPPv2N26ComputeVertexBendingEnergy14compute_stressEv"></span><span id="ComputeVertexBendingEnergy::compute_stress__void"></span><span class="target" id="group__computeenergy_1gaf0cd135ea2f063c029b00f29cb90a385"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute force for the actual configuration </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N26ComputeVertexBendingEnergy21compute_atomic_stressEv">
+<span id="_CPPv3N26ComputeVertexBendingEnergy21compute_atomic_stressEv"></span><span id="_CPPv2N26ComputeVertexBendingEnergy21compute_atomic_stressEv"></span><span id="ComputeVertexBendingEnergy::compute_atomic_stress__void"></span><span class="target" id="group__computeenergy_1gacc13c4ce7e06f1d22c3d3d2dc41b5044"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_atomic_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>compute force for the actual configuration </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>void</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>void </p>
 </dd>
 </dl>
 </dd></dl>
