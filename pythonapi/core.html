@@ -452,22 +452,22 @@ document.write(`
                   
   <section id="core-components">
 <h1>Core Components<a class="headerlink" href="#core-components" title="Permalink to this headline">#</a></h1>
-<p>PyMembrane operates mainly through two pivotal user-facing components: <cite>System</cite> and <cite>Evolver</cite>. These classes form the backbone of PyMembrane, and gaining a clear understanding of their operations is vital for users.</p>
+<p>PyMembrane operates mainly through two user-facing components: <cite>System</cite> and <cite>Evolver</cite>. These classes form the backbone of PyMembrane, and gaining a clear understanding of their operations is vital for users.</p>
 <section id="system-class">
 <h2>System Class<a class="headerlink" href="#system-class" title="Permalink to this headline">#</a></h2>
-<p>The <cite>System</cite> class consolidates five specialized sub-classes:</p>
+<p>The <cite>System</cite> class encompasses five specialized sub-classes:</p>
 <ul class="simple">
-<li><p>Three that construct the mesh: vertices, edges, and faces.</p></li>
-<li><p>Two that calculate the mesh’s geometrical properties.</p></li>
+<li><p>Three classes that construct the mesh: vertices, edges, and faces.</p></li>
+<li><p>Two classes that calculate the mesh’s geometrical properties.</p></li>
 </ul>
-<p>Additionally, this class offers functions that facilitate data exportation, enabling visualization and thorough analysis of results.</p>
+<p>Additionally, this class offers functions that facilitate data exportation, enabling visualization and analysis of results.</p>
 </section>
 <section id="evolver-class">
 <h2>Evolver Class<a class="headerlink" href="#evolver-class" title="Permalink to this headline">#</a></h2>
-<p><cite>Evolver</cite> plays a critical role within PyMembrane. Its design revolves around controlling the system’s dynamics, involving the coordination of various forces, integrators, minimizers, and constraints. By orchestrating these elements, the <cite>Evolver</cite> class ensures the simulated system’s accurate behavior. The primary duties of the Evolver class encompass:</p>
+<p><cite>Evolver</cite> plays a central role within PyMembrane. It is responsible for controlling the system’s dynamics, coordination of various forces, integrators, minimizers, and constraints. The primary duties of the Evolver class encompass:</p>
 <ul class="simple">
 <li><p>Keeping a structured record of <cite>Forces</cite>, <cite>Integrators</cite>, <cite>Minimizers</cite>, and <cite>Constraints</cite>.</p></li>
-<li><p>Steering the system’s progression by diligently applying forces, employing integrators, and upholding the defined minimizers and constraints.</p></li>
+<li><p>Controlling the system’s evolution by computing energies, applying forces on vertices, executing integrators, and ensuring that all constraints are satisfied.</p></li>
 </ul>
 </section>
 <section id="list-of-core-components">

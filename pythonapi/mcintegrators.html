@@ -452,7 +452,7 @@ document.write(`
                   
   <section id="monte-carlo-integrators">
 <h1>Monte Carlo Integrators<a class="headerlink" href="#monte-carlo-integrators" title="Permalink to this headline">#</a></h1>
-<p>In PyMembrane’s simulation framework, integrators serve to progressively update the system’s state over time. By incorporating the effects of forces, constraints, and other dynamics, integrators allow the simulation to evolve. The <cite>Evolver</cite> class provides the capability to add specific integrators to drive the system’s behavior.</p>
+<p>In PyMembrane’s simulation framework, integrators serve to evolve the system. The <cite>Evolver</cite> class provides the capability to add specific integrators to drive the system’s behavior.</p>
 <section id="parameters-and-integrators">
 <h2>Parameters and Integrators<a class="headerlink" href="#parameters-and-integrators" title="Permalink to this headline">#</a></h2>
 <p>The integrators, such as those belonging to the <cite>“Mesh&gt;MonteCarlo”</cite> family, are added to the system using the <cite>add_integrator</cite> method of the <a class="reference internal" href="evolver.html"><span class="doc">Evolver</span></a> class. Parameters for these integrators are also passed in dictionary format, much like force potentials.</p>

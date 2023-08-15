@@ -471,14 +471,13 @@ document.write(`
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
-<p>Consider the following example for a clearer understanding:</p>
+<p>Consider the following example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;brownian&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2&quot;</span><span class="p">})</span>
 </pre></div>
 </div>
 <p>In this example:
-- The integrator, <a class="reference internal" href="mdbrownian.html"><span class="doc">“Mesh&gt;brownian”</span></a>, represents a Brownian dynamics simulation, which models the random motion of particles suspended in a fluid (a liquid or a gas) resulting from their collision with the quick atoms or molecules in the gas or liquid.
-- The parameter <cite>“T”</cite> denotes the temperature of the system and is set to a value of <cite>“0.2”</cite>.</p>
-<p>When employing Molecular Dynamics integrators, it’s vital to set the right parameters to get a representative simulation that aligns with physical reality.</p>
+- The integrator, <a class="reference internal" href="mdbrownian.html"><span class="doc">“Mesh&gt;brownian”</span></a>, represents a Brownian dynamics simulation, which models the random motion of particles suspended in a fluid resulting from their collision with the quick atoms or molecules in the gas or liquid.
+- The parameter <cite>“T”</cite> denotes the temperature of the system and is set to a value of <cite>“0.2”</cite> (in appropriate units).</p>
 </section>
 <section id="molecular-dynamics-integrators-defined-in-pymembrane">
 <h2>Molecular dynamics integrators defined in PyMembrane<a class="headerlink" href="#molecular-dynamics-integrators-defined-in-pymembrane" title="Permalink to this headline">#</a></h2>

@@ -470,11 +470,11 @@ document.write(`
 </div>
 <section id="introduction">
 <h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>In <strong>PyMembrane</strong>, a sophisticated data structure known as the <em>halfedge data structure</em> is employed to represent complex meshes. This data structure introduces a novel way to organize the vertices, edges, and faces of a polygonal mesh. By augmenting the mesh components with additional entities called <em>halfedges</em>, we can achieve more efficient traversal and manipulation of the mesh.</p>
+<p>In <strong>PyMembrane</strong>, a sophisticated data structure known as the <em>halfedge data structure</em> is used to represent complex meshes. This data structure introduces a convenient way to organize the vertices, edges, and faces of a polygonal mesh. By augmenting the mesh components with additional entities called <em>halfedges</em>, we can achieve more efficient traversal and manipulation of the mesh.</p>
 </section>
 <section id="halfedge-structure">
 <h2><a class="toc-backref" href="#id2">Halfedge Structure</a><a class="headerlink" href="#halfedge-structure" title="Permalink to this headline">#</a></h2>
-<p>The essence of the halfedge data structure lies in the concept of splitting each edge of a face into two <em>twin directional edges</em>. This new entity, the <em>halfedge</em>, acts as a guide within each triangle, creating a network of interconnected edges that facilitate navigation within the mesh. The illustration below provides a visual representation:</p>
+<p>The essence of the halfedge data structure lies in the concept of splitting each edge of a face into two <em>twin directed half-edges</em>. This new entity, the <em>halfedge</em>, acts as a guide within each triangle, creating a network of interconnected edges that facilitate quick navigation within the mesh. The illustration below provides a visual representation:</p>
 <img alt="halfedge" class="align-center" src="../_images/halfedge.svg" /></section>
 <section id="key-features">
 <h2><a class="toc-backref" href="#id3">Key Features</a><a class="headerlink" href="#key-features" title="Permalink to this headline">#</a></h2>

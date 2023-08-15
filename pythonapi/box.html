@@ -466,7 +466,8 @@ document.write(`
 </div>
 <section id="description">
 <h2><a class="toc-backref" href="#id1">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
-<p><cite>PyMembrane</cite> uses boxes to implement periodic boundary conditions. A <cite>Box</cite> object is used to represent a box. It is used to define the simulation box and to wrap coordinates into the box. The box can be controlled with 6 parameters: the box lengths in each direction, and the periodicity in each direction. The box is defined by the lower and upper boundaries in each direction.</p>
+<p><cite>PyMembrane</cite> uses boxes to implement periodic boundary conditions. A <cite>Box</cite> object is used to represent the simulation box and to wrap coordinates into the box. The box can be controlled with 6 parameters: the box lengths in each direction, and the periodicity in each direction. The box is defined by the lower and upper boundaries in each direction.</p>
+<p>Note: All sides of the simulation box have to be orthogonal to each other.</p>
 </section>
 <section id="creating-a-box">
 <h2><a class="toc-backref" href="#id2">Creating a box</a><a class="headerlink" href="#creating-a-box" title="Permalink to this headline">#</a></h2>
@@ -578,7 +579,7 @@ Example:
 </div></blockquote>
 </li>
 </ul>
-<p>To know more about the <cite>Box</cite> object, please refer to contextual help in python:</p>
+<p>For further information about the <cite>Box</cite> class, please refer to contextual help in python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">)</span>
 </pre></div>
 </div>
