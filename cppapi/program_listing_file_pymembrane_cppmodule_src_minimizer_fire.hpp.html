@@ -428,7 +428,7 @@ document.write(`
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="o">~</span><span class="n">MinimizerMeshFIRE</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">m_nmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="w">    </span><span class="n">m_finc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span>
@@ -452,13 +452,13 @@ document.write(`
 <span class="w">    </span><span class="n">m_max_iter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_time_step_parameters</span><span class="p">()</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_time_step_parameters</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">m_dT_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_dt</span><span class="p">;</span>
 <span class="w">    </span><span class="n">m_dT_set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_dt</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">MinimizerClass</span><span class="o">::</span><span class="n">set_property</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">value_map</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -525,7 +525,7 @@ document.write(`
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_satisfied</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_converged</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_info</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_info</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
 <span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">());</span>
@@ -545,7 +545,7 @@ document.write(`
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep1</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep2</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep3</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">minimize</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">minimize</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m_max_iter</span><span class="p">;</span>

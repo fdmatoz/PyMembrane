@@ -458,6 +458,20 @@ document.write(`
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">};</span>
 
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">reset_vertex_acceleration</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="n">vertex</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertex</span><span class="p">;</span>
+<span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">accel</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">accel</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">accel</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">reset_vertex_energy</span>
 <span class="w">    </span><span class="p">{</span>
 
@@ -469,6 +483,7 @@ document.write(`
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">};</span>
+
 
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">reset_face_energy</span>
 <span class="w">    </span><span class="p">{</span>

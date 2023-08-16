@@ -429,7 +429,7 @@ document.write(`
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="o">~</span><span class="n">MonteCarloIntegratorSwapVertex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_freezed_vertex</span><span class="p">(</span><span class="n">NUM_TYPES_ALLOWED</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 <span class="w">    </span><span class="n">freezed_vertex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_freezed_vertex</span><span class="p">;</span>
@@ -440,7 +440,7 @@ document.write(`
 <span class="w">    </span><span class="n">stochastic_gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">MonteCarloIntegrator</span><span class="o">::</span><span class="n">set_property</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">value_map</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -486,7 +486,7 @@ document.write(`
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">integrate</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">integrate</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">m_dx</span><span class="p">,</span><span class="w"> </span><span class="n">m_dy</span><span class="p">,</span><span class="w"> </span><span class="n">m_dz</span><span class="p">;</span>

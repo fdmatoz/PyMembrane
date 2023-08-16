@@ -449,7 +449,7 @@ document.write(`
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="o">~</span><span class="n">IntegratorBrownianMeshVertex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">m_gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">m_mu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">m_gamma</span><span class="p">;</span>
@@ -461,17 +461,17 @@ document.write(`
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">update_time_step_parameters</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_temperature_parameters</span><span class="p">()</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_temperature_parameters</span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">m_B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_mu</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_time_step_parameters</span><span class="p">()</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">update_time_step_parameters</span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="n">m_sqrt_dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_time_step</span><span class="p">());</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">IntegratorClass</span><span class="o">::</span><span class="n">set_property</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_map</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">value_map</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -496,9 +496,9 @@ document.write(`
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">prestep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">prestep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">  </span><span class="n">real</span><span class="w"> </span><span class="n">m_gamma</span><span class="p">;</span>

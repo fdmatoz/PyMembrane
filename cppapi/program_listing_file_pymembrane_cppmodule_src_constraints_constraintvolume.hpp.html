@@ -423,14 +423,14 @@ document.write(`
 
 <span class="w">    </span><span class="o">~</span><span class="n">ConstraintVolume</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set_default_properties</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">grad</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="p">);</span>
 <span class="w">        </span><span class="n">ref_grad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grad</span><span class="p">;</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">compute_ref_gradient</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">region_map</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set_property</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">region_map</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">region_map</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
@@ -459,9 +459,9 @@ document.write(`
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">enforce</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_ref_gradient</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_gradient</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">enforce</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_ref_gradient</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compute_gradient</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">;</span>

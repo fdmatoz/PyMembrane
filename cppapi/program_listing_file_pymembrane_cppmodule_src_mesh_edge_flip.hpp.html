@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File edge_flip.hpp &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/program_listing_file_pymembrane_cppmodule_src_mesh_edge_flip.hpp';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                        Quick Start and Examples — PyMembrane documentation
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File edge_flip.hpp</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File edge_flip.hpp</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-edge-flip-hpp">
+<span id="program-listing-file-pymembrane-cppmodule-src-mesh-edge-flip-hpp"></span><h1>Program Listing for File edge_flip.hpp<a class="headerlink" href="#program-listing-for-file-edge-flip-hpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_mesh_edge_flip.hpp.html#file-pymembrane-cppmodule-src-mesh-edge-flip-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/mesh/edge_flip.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __edge_flip_hpp__</span>
+<span class="cp">#define __edge_flip_hpp__</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../system/systemclass.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../box/pbc.hpp&quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">pymemb</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">CheckEdgeFlip_lambda</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">*</span><span class="n">faces</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">*</span><span class="n">vertices</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">edges</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">halfedges</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="n">BoxType</span><span class="w"> </span><span class="n">_box</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// printf(&quot;trying to flip the edge =%i\n&quot;, flip_edge_index);</span>
+<span class="w">        </span><span class="c1">// by default the edge can flip</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// retrieve the vertices around the edge</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v1</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v3</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">face_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">face_k</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">face_l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">face_l</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//(0) Check that the edge is not a boundary edge</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">boundary</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;the edge id &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; is a boundary edge&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// can_flip = false;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//(1) first we need to check if we don&#39;t destroy the triangulation by flipping the edge.</span>
+<span class="w">        </span><span class="c1">// This can be done by checking that the connectivity of the edges v0, v2 of the involve edge is</span>
+<span class="w">        </span><span class="c1">// strictly larger than 3.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">he</span><span class="p">,</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">he_pair</span><span class="p">,</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n_neighbors_v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n_neighbors_v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// check v0</span>
+<span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">n_neighbors_v0</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+<span class="w">            </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">he</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// check v2</span>
+<span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">n_neighbors_v2</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+<span class="w">            </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">he</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// if (n_neighbors_v0 &lt;= 4 || n_neighbors_v2 &lt;= 4)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_neighbors_v0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n_neighbors_v2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;the edge id &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex the connectivity v0 or v2 is smaller than 3&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// can_flip = false;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// If that happens then an edge flip might destroy the triangulation.</span>
+<span class="w">        </span><span class="c1">// If the sum of angles next to each of the two sides of the edge is &gt;= PI</span>
+<span class="w">        </span><span class="c1">// the flip would break triangulation. We disallow such a move.</span>
+<span class="w">        </span><span class="c1">// For example, in this case edge cannot be flipped</span>
+<span class="w">        </span><span class="c1">//          1:X</span>
+<span class="w">        </span><span class="c1">//          * *</span>
+<span class="w">        </span><span class="c1">//        *  *</span>
+<span class="w">        </span><span class="c1">//      *   *</span>
+<span class="w">        </span><span class="c1">//   0:X---X:2 &lt;-- This angle is &lt; PI and the edge cannot be flipped!</span>
+<span class="w">        </span><span class="c1">//      *   *</span>
+<span class="w">        </span><span class="c1">//       *  *</span>
+<span class="w">        </span><span class="c1">//         * *</span>
+<span class="w">        </span><span class="c1">//          3:X</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">r02</span><span class="p">,</span><span class="w"> </span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r03</span><span class="p">;</span>
+<span class="w">        </span><span class="n">r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r02</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r03_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r03</span><span class="p">,</span><span class="w"> </span><span class="n">r03</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r01_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r01</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r01_r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r01_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r03_r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r03</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r03_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">angle_r01_r02</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angle_r03_r02</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">defPI</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;the edge id &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; vertex v0 &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; take part of an obtuse triangles&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// can_flip = false;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">r20</span><span class="p">,</span><span class="w"> </span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r23</span><span class="p">;</span>
+<span class="w">        </span><span class="n">r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r23</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r21</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r23_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r23</span><span class="p">,</span><span class="w"> </span><span class="n">r23</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r21_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r21</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r21_r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r20</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r21_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r23_r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r23</span><span class="p">,</span><span class="w"> </span><span class="n">r20</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r23_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">angle_r21_r20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angle_r23_r20</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">defPI</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;the edge id &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; vertex v2 &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; take part of an obtuse triangles&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// can_flip = false;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">EdgeFlip_lambda</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flip_edge_index</span><span class="p">,</span>
+<span class="w">                                </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">flip_face_up</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">*</span><span class="n">faces</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">*</span><span class="n">vertices</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">edges</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="o">*</span><span class="n">halfedges</span><span class="p">,</span>
+<span class="w">                                </span><span class="k">const</span><span class="w"> </span><span class="n">BoxType</span><span class="w"> </span><span class="n">_box</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// printf(&quot;trying to flip the edge =%i\n&quot;, flip_edge_index);</span>
+<span class="w">        </span><span class="c1">// by default the edge can flip</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// retrieve the vertices around the edge</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v1</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">v3</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">face_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">face_k</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">face_l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">face_l</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//(0) Check that the edge is not a boundary edge</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">boundary</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// py::print(&quot;the edge is a boundary edge\n&quot;);</span>
+<span class="w">            </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// break;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//(1) first we need to check if we don&#39;t destroy the triangulation by flipping the edge.</span>
+<span class="w">        </span><span class="c1">// This can be done by checking that the connectivity of the edges v0, v2 of the involve edge is</span>
+<span class="w">        </span><span class="c1">// strictly larger than 3.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">he</span><span class="p">,</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">he_pair</span><span class="p">,</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n_neighbors_v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n_neighbors_v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// check v0</span>
+<span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">n_neighbors_v0</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+<span class="w">            </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">he</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// check v2</span>
+<span class="w">        </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">n_neighbors_v2</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// MOVE TO THE NEXT FACE</span>
+<span class="w">            </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">pair</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_pair</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair_next</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">he</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// if (n_neighbors_v0 &lt;= 4 || n_neighbors_v2 &lt;= 4)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_neighbors_v0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n_neighbors_v2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// py::print(&quot;the connectivity of the edges v0, v2 of the involve edge is smaller than 3\n&quot;);</span>
+<span class="w">            </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// break;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// If that happens then an edge flip might destroy the triangulation.</span>
+<span class="w">        </span><span class="c1">// If the sum of angles next to each of the two sides of the edge is &gt;= PI</span>
+<span class="w">        </span><span class="c1">// the flip would break triangulation. We disallow such a move.</span>
+<span class="w">        </span><span class="c1">// For example, in this case edge cannot be flipped</span>
+<span class="w">        </span><span class="c1">//          1:X</span>
+<span class="w">        </span><span class="c1">//          * *</span>
+<span class="w">        </span><span class="c1">//        *  *</span>
+<span class="w">        </span><span class="c1">//      *   *</span>
+<span class="w">        </span><span class="c1">//   0:X---X:2 &lt;-- This angle is &lt; PI and the edge cannot be flipped!</span>
+<span class="w">        </span><span class="c1">//      *   *</span>
+<span class="w">        </span><span class="c1">//       *  *</span>
+<span class="w">        </span><span class="c1">//         * *</span>
+<span class="w">        </span><span class="c1">//          3:X</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">r02</span><span class="p">,</span><span class="w"> </span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r03</span><span class="p">;</span>
+<span class="w">        </span><span class="n">r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r02</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r03_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r03</span><span class="p">,</span><span class="w"> </span><span class="n">r03</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r01_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r01</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r01_r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r01</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r01_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r03_r02</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r03</span><span class="p">,</span><span class="w"> </span><span class="n">r02</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r03_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">angle_r01_r02</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angle_r03_r02</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">defPI</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// py::print(&quot;v0 and v2 take part of an obtuse triangles\n&quot;);</span>
+<span class="w">            </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// break;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">r20</span><span class="p">,</span><span class="w"> </span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r23</span><span class="p">;</span>
+<span class="w">        </span><span class="n">r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r23</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v3</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">r21</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r23_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r23</span><span class="p">,</span><span class="w"> </span><span class="n">r23</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">r21_norm_sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r21</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r21_r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r21</span><span class="p">,</span><span class="w"> </span><span class="n">r20</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r21_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle_r23_r20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r23</span><span class="p">,</span><span class="w"> </span><span class="n">r20</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r23_norm_sq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r02_norm_sq</span><span class="p">));</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">angle_r21_r20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angle_r23_r20</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">defPI</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">can_flip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// break;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">can_flip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// update the halfedges</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w"> </span><span class="c1">// he01, he12, he20, he02, he23, he30;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">he_edge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edges</span><span class="p">[</span><span class="n">flip_edge_index</span><span class="p">].</span><span class="n">_hedge</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_edge</span><span class="p">].</span><span class="n">vert_from</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_edge</span><span class="p">;</span><span class="w">                   </span><span class="c1">// he02</span>
+<span class="w">                </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">pair</span><span class="p">;</span><span class="w"> </span><span class="c1">// he20</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_edge</span><span class="p">;</span><span class="w">                   </span><span class="c1">// he20</span>
+<span class="w">                </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">pair</span><span class="p">;</span><span class="w"> </span><span class="c1">// he02</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">next</span><span class="p">;</span><span class="w"> </span><span class="c1">// he01</span>
+<span class="w">            </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">prev</span><span class="p">;</span><span class="w"> </span><span class="c1">// he12</span>
+<span class="w">            </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">next</span><span class="p">;</span><span class="w"> </span><span class="c1">// he23</span>
+<span class="w">            </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">prev</span><span class="p">;</span><span class="w"> </span><span class="c1">// he30</span>
+
+<span class="w">            </span><span class="c1">// deal with the from, to vertices in the &quot;new&quot; flip edge</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">vert_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">vert_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">vert_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">vert_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// flip face: this stage is crucial if we want to make the faces diffuse</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">new_face_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face_k</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">new_face_l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face_l</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flip_face_up</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="c1">// counter-clock wise</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">new_face_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face_l</span><span class="p">;</span>
+<span class="w">                </span><span class="n">new_face_l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face_k</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// deal with the references inside of the halfedges</span>
+<span class="w">            </span><span class="c1">// he12 &gt; h23 &gt; h20</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">            </span><span class="c1">// faces</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_k</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_k</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_k</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// he01 &gt; h02 &gt; h30</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">]].</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">]].</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">            </span><span class="c1">// faces</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">5</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_l</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_l</span><span class="p">;</span>
+<span class="w">            </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]].</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_face_l</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// deal with the faces and references to the halfedges</span>
+<span class="w">            </span><span class="c1">// face_k</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v1k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v2k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v3k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">pymemb</span><span class="o">::</span><span class="n">arrange_vertices_by_smallest</span><span class="p">(</span><span class="n">_v1k</span><span class="p">,</span><span class="w"> </span><span class="n">_v2k</span><span class="p">,</span><span class="w"> </span><span class="n">_v3k</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_k</span><span class="p">].</span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v1k</span><span class="p">;</span><span class="w"> </span><span class="c1">// v1;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_k</span><span class="p">].</span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v2k</span><span class="p">;</span><span class="w"> </span><span class="c1">// v2;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_k</span><span class="p">].</span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v3k</span><span class="p">;</span><span class="w"> </span><span class="c1">// v3;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_k</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="c1">// face_l</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v1l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v0</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v2l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">_v3l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span>
+<span class="w">            </span><span class="n">pymemb</span><span class="o">::</span><span class="n">arrange_vertices_by_smallest</span><span class="p">(</span><span class="n">_v1l</span><span class="p">,</span><span class="w"> </span><span class="n">_v2l</span><span class="p">,</span><span class="w"> </span><span class="n">_v3l</span><span class="p">);</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_l</span><span class="p">].</span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v1l</span><span class="p">;</span><span class="w"> </span><span class="c1">// v3;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_l</span><span class="p">].</span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v2l</span><span class="p">;</span><span class="w"> </span><span class="c1">// v0;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_l</span><span class="p">].</span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_v3l</span><span class="p">;</span><span class="w"> </span><span class="c1">// v1;</span>
+<span class="w">            </span><span class="n">faces</span><span class="p">[</span><span class="n">new_face_l</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="w">            </span><span class="c1">// deal with the halfedge references to the vertices</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="cm">/*he02*/</span><span class="p">)</span>
+<span class="w">                </span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="cm">/*h01*/</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="cm">/*he20*/</span><span class="p">)</span>
+<span class="w">                </span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">_hedge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_vec</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="cm">/*h23*/</span>
+
+<span class="w">            </span><span class="c1">// deal with the i,j,v0,v1,v2,v3 in the edge list</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">he_index</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">he_vec</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="n">he</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_index</span><span class="p">];</span>
+<span class="w">                </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="n">he_pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_index</span><span class="p">].</span><span class="n">pair</span><span class="p">];</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">edge_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">edge</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">face_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">face</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">face_l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair</span><span class="p">.</span><span class="n">face</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">vert_to</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">vert_from</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">vert_to</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">vert_from</span><span class="p">;</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">he_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_next</span><span class="p">].</span><span class="n">vert_to</span><span class="p">;</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">he_index_pair_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he_pair</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
+<span class="w">                </span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">v3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">halfedges</span><span class="p">[</span><span class="n">he_index_pair_next</span><span class="p">].</span><span class="n">vert_to</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// printf(&quot;flipped edge =%i\n&quot;, flip_edge_index);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">can_flip</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

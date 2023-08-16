@@ -544,6 +544,7 @@ document.write(`
 <span class="w">    </span><span class="n">_evolver</span><span class="p">.</span><span class="n">reset_mesh_forces</span><span class="p">();</span>
 <span class="w">    </span><span class="n">_evolver</span><span class="p">.</span><span class="n">compute_mesh_forces</span><span class="p">();</span>
 <span class="w">    </span><span class="n">poststep1</span><span class="p">();</span>
+<span class="w">    </span><span class="n">_system</span><span class="p">.</span><span class="n">enforce_periodic_boundary_conditions</span><span class="p">();</span>
 
 <span class="w">    </span><span class="n">_evolver</span><span class="p">.</span><span class="n">reset_mesh_forces</span><span class="p">();</span>
 <span class="w">    </span><span class="n">_evolver</span><span class="p">.</span><span class="n">compute_mesh_forces</span><span class="p">();</span>
