@@ -429,10 +429,14 @@ document.write(`
 
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compute_edge_lengths</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
+<span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">gaussiancurvature_vertex</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vertex_index</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">meancurvature_vertex</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vertex_index</span><span class="p">);</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gaussiancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">meancurvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">compute_mesh_curvature</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">compute_face_metric</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">compute_mesh_volume</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
