@@ -405,34 +405,26 @@ document.write(`
 <ul class="simple">
 <li><p>Currently supported on Linux and Mac OSX.</p></li>
 <li><p>Required installations: Python, associated libraries, and suitable compilers.</p></li>
-<li><p>Recommended to use <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a>.</p></li>
+<li><p>Recommended to use <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>.</p></li>
 </ul>
 <section id="steps">
 <h3>Steps:<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
-<li><p>Clone the repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/fdmatoz/pymembrane.git
-</pre></div>
-</div>
+<li><p>Ensure a C++14 or later standard-supported C/C++ compiler is present.</p></li>
+<li><p>Clone the repository:</p></li>
+<li><p>Create a new conda environment:
+.. code-block:: bash</p>
+<blockquote>
+<div><p>conda create -n PYMEMB python=3.8 numpy</p>
+</div></blockquote>
 </li>
-<li><p>Create a new conda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>PYMEMB<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>matplotlib<span class="w"> </span>jupyter<span class="w"> </span>jupyterlab<span class="w"> </span>pip
-</pre></div>
-</div>
+<li><p>Install necessary packages in the conda environment:
+.. code-block:: bash</p>
+<blockquote>
+<div><p>conda install -c anaconda cmake</p>
+</div></blockquote>
 </li>
-<li><p>Install necessary packages in the conda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>anaconda<span class="w"> </span>cmake
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ipympl<span class="w"> </span>nodejs
-</pre></div>
-</div>
-</li>
-<li><p>For JupyterLab:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>labextension<span class="w"> </span>install<span class="w"> </span>@jupyter-widgets/jupyterlab-manager<span class="w"> </span>jupyter-matplotlib
-</pre></div>
-</div>
-</li>
-<li><p>Ensure a C++14 or later standard supported C/C++ compiler is present.</p></li>
-<li><p>Issues with VTK libraries? PyMembrane utilizes <a class="reference external" href="https://vtk.org/download/">VTK</a> for VTP files, viewable with <a class="reference external" href="https://www.paraview.org/">ParaView</a>. On Linux, use a package manager (e.g., apt) for VTK libraries. For Mac OSX, let PyMembrane fetch and compile VTK locally.</p></li>
+<li><p>Issues with VTK libraries? PyMembrane utilizes [VTK](<a class="reference external" href="https://vtk.org/download/">https://vtk.org/download/</a>) for VTP files, viewable with [ParaView](<a class="reference external" href="https://www.paraview.org/">https://www.paraview.org/</a>). On Linux, use a package manager (e.g., apt) for VTK libraries. For Mac OSX, let PyMembrane fetch and compile VTK locally.</p></li>
 </ol>
 </section>
 </section>
@@ -444,7 +436,7 @@ conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> <
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Without Anaconda, you might need root access. The ‘python setup.py install –user’ option is currently unsupported.</p>
+<p>Without Anaconda, you might need root access. The :code::<cite>python setup.py install –user</cite> option is currently unsupported.</p>
 </div>
 </section>
 <section id="visualizing-results">
@@ -454,7 +446,7 @@ conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> <
 <section id="documentation-community">
 <h2>Documentation &amp; Community<a class="headerlink" href="#documentation-community" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><strong>Detailed Documentation</strong>: For an in-depth understanding, visit the <a class="reference external" href="https://fdmatoz.github.io/pymembrane/">official documentation</a>.</p></li>
+<li><p><strong>Detailed Documentation</strong>: For an in-depth understanding, visit the <a class="reference external" href="https://fdmatoz.github.io/PyMembrane/">official documentation</a>.</p></li>
 <li><p><strong>Community Interaction</strong>: Engage with the PyMembrane community through forums, chats, or on GitHub.</p></li>
 </ul>
 </section>
