@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Caspar-Klug Thin Shells Buckling &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/shell_buckling';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Constant Volume Energy Minimization Tutorial" href="minimization.html" />
+    <link rel="prev" title="+1 Disclination Buckling: A PyMembrane Tutorial" href="disclination.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Caspar-Klug Thin Shells Buckling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="quickstart.html" class="nav-link">Quick Start and Examples</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="examples.html" class="nav-link">PyMembrane Examples</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Caspar-Klug Thin Shells Buckling</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="caspar-klug-thin-shells-buckling">
+<h1>Caspar-Klug Thin Shells Buckling<a class="headerlink" href="#caspar-klug-thin-shells-buckling" title="Permalink to this headline">#</a></h1>
+<figure class="align-center" id="id1">
+<img alt="initial mesh" src="../_images/sphere_buckling.png" />
+<figcaption>
+<p><span class="caption-text">Figure: Snapshots of a Monte Carlo simulation of an icosahedral closed shell, representing a virus with $T=108$ ($(p,q)=(6,6)$), according to the Caspar-Klug classification~cite{caspar1962physical}. The material parameters are chosen such that the F&quot;oppl-von K'arm'an number is $gamma approx 400$. (Left) The sphere with 12 5-fold defects at the corners of an icosahedron prior to buckling; (Right) a buckled, faceted structure. The colour bar represents the local mean curvature of the mesh.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>This tutorial demonstrates how PyMembrane can be used to understand the shape of certain types of viruses through the mechanics of thin shells. Caspar and Klug showed that shell proteins in viruses form an icosahedral triangulation of a sphere, resulting in at least 12 pentavalent sites that are +1 disclinations. These can buckle if the Föppl-von Kármán number is sufficiently large, explaining why smaller viruses are spherical and larger ones are faceted.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section.</p>
+</div>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>NumPy</p></li>
+<li><p>Matplotlib</p></li>
+<li><p>SciencePlots</p></li>
+</ul>
+</section>
+<section id="running-the-code">
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p>Save the provided code as <a class="reference download internal" download="" href="../_downloads/34f655865ef9ebcf787608ae7d8b0fa8/buckling.py"><code class="xref download docutils literal notranslate"><span class="pre">buckling.py</span></code></a>.</p></li>
+<li><p>Download  <a class="reference download internal" download="" href="../_downloads/623888fcd81025a821a88f63959a8d48/vertices.dat"><code class="xref download docutils literal notranslate"><span class="pre">vertices</span></code></a>, <a class="reference download internal" download="" href="../_downloads/aae683d9db94a52c7b3974d27fd3c4b5/faces.dat"><code class="xref download docutils literal notranslate"><span class="pre">faces</span></code></a>.</p></li>
+<li><p>Run the script by executing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>buckling.py<span class="w"> </span>--snapshots<span class="w"> </span>N_SNAPSHOTS<span class="w"> </span>--run_steps<span class="w"> </span>N_RUN_STEPS
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="pymembrane-implementation">
+<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Permalink to this headline">#</a></h2>
+<p>First, you’ll need to import the PyMembrane library and other necessary components. Then, parse the required arguments, such as snapshots, run_steps, and the spring constant, k=350.0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">import</span> <span class="nn">scienceplots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">([</span><span class="s1">&#39;science&#39;</span><span class="p">])</span>
+
+
+<span class="c1">### Parse arguments</span>
+<span class="c1">## Now we want to have X snapshots every X steps each</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Please provide: snapshots and run_steps&quot;</span><span class="p">)</span>
+<span class="c1">## Add arguments for snapshots and run_steps</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--snapshots&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of snapshots&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--run_steps&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of run steps&quot;</span><span class="p">)</span>
+
+<span class="n">user_args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="c1"># Access the parsed arguments</span>
+<span class="n">snapshots</span> <span class="o">=</span> <span class="n">user_args</span><span class="o">.</span><span class="n">snapshots</span>
+<span class="n">run_steps</span> <span class="o">=</span> <span class="n">user_args</span><span class="o">.</span><span class="n">run_steps</span>
+
+<span class="c1">#create a system</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+
+<span class="c1">#check if the box is loaded correctly</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">box</span><span class="p">)</span>
+
+<span class="c1">#read the mesh</span>
+<span class="n">vertex_file</span> <span class="o">=</span> <span class="s1">&#39;vertices.dat&#39;</span>
+<span class="n">face_file</span> <span class="o">=</span> <span class="s1">&#39;faces.dat&#39;</span>
+<span class="n">system</span><span class="o">.</span><span class="n">read_mesh_from_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;vertices&#39;</span><span class="p">:</span><span class="n">vertex_file</span><span class="p">,</span> <span class="s1">&#39;faces&#39;</span><span class="p">:</span><span class="n">face_file</span><span class="p">})</span>
+
+
+<span class="c1">#save the mesh to display</span>
+<span class="c1">#create dumper</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dumper</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;initial mesh&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+
+<span class="c1">#add the evolver class where the potentials and integrators are added</span>
+<span class="n">evolver</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Evolver</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+
+<span class="c1">#add the potentials in this case we will add bending and stretching</span>
+<span class="c1"># stretching</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">350.0</span><span class="p">)</span>
+<span class="n">l0</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Harmonic&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;k&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">k</span><span class="p">},</span>
+                                    <span class="s2">&quot;l0&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">l0</span><span class="p">}})</span>
+
+<span class="c1"># limit potential</span>
+<span class="n">lmin</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">lmax</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Limit&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;lmin&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">lmin</span><span class="p">},</span>
+                                <span class="s2">&quot;lmax&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">lmax</span><span class="p">}})</span>
+<span class="c1"># bending potential</span>
+<span class="n">kappa</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Bending&gt;Dihedral&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;kappa&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">kappa</span><span class="p">}})</span>
+
+<span class="c1">#Print the loaded forces</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">evolver</span><span class="o">.</span><span class="n">get_force_info</span><span class="p">())</span>
+
+
+<span class="c1"># vertex move:</span>
+<span class="c1"># first we need to know the edge length to move it appropriate:</span>
+<span class="n">compute</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">compute</span>
+<span class="n">edge_lengths</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">edge_lengths</span><span class="p">()</span>
+<span class="n">avg_edge_length</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Initial] avg_edge_length = &quot;</span><span class="p">,</span> <span class="n">avg_edge_length</span><span class="p">)</span>
+
+<span class="c1">#add the monte carlo integrator</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;move&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dr&quot;</span><span class="p">:</span><span class="s2">&quot;0.008&quot;</span><span class="p">})</span>
+
+
+<span class="c1">## Compute the initial energy</span>
+<span class="n">mc_energy</span> <span class="o">=</span> <span class="n">snapshots</span><span class="o">*</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+<span class="n">mc_energy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span><span class="o">*</span><span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)[</span><span class="s1">&#39;edges&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">Numedges</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Initial] energy = </span><span class="si">{}</span><span class="s2"> x 10^-2&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mc_energy</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;sphere_t0&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">snapshot</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">snapshots</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">temperature</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]:</span> <span class="c1">#using heating and cooling cycles</span>
+        <span class="n">evolver</span><span class="o">.</span><span class="n">set_global_temperature</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span>
+        <span class="n">evolver</span><span class="o">.</span><span class="n">evolveMC</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">run_steps</span><span class="p">)</span>
+    <span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;sphere_t&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">snapshot</span><span class="o">*</span><span class="n">run_steps</span><span class="p">))</span>
+    <span class="n">mc_energy</span><span class="p">[</span><span class="n">snapshot</span><span class="p">]</span> <span class="o">=</span>  <span class="mf">100.0</span><span class="o">*</span><span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)[</span><span class="s1">&#39;edges&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">Numedges</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">{}</span><span class="s2">] energy = </span><span class="si">{}</span><span class="s2"> x 10^-2&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">snapshot</span><span class="p">,</span>  <span class="n">mc_energy</span><span class="p">[</span><span class="n">snapshot</span><span class="p">]))</span>
+
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s1">&#39;final_mesh&#39;</span><span class="p">)</span>
+
+<span class="n">edge_lengths</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">edge_lengths</span><span class="p">()</span>
+<span class="n">avg_edge_length</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Final] avg_edge_length = &quot;</span><span class="p">,</span> <span class="n">avg_edge_length</span><span class="p">)</span>
+
+<span class="n">energy</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Final] energy = &quot;</span><span class="p">,</span> <span class="n">mc_energy</span><span class="p">[</span><span class="n">snapshots</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">dump</span><span class="o">.</span><span class="n">txt</span><span class="p">(</span><span class="s2">&quot;pentagon&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.3</span><span class="p">,</span><span class="mf">3.3</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc_energy</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$MC steps$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">labelpad</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$Energy/NumEdges \times 10^{-2}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">labelpad</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useMathText</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">ScalarFormatter</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">ScalarFormatter</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;energy.svg&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="result-and-interpretation">
+<h2>Result and Interpretation<a class="headerlink" href="#result-and-interpretation" title="Permalink to this headline">#</a></h2>
+<p>This example highlights the capability of PyMembrane in handling closed membranes, specifically in understanding the mechanics of thin shells. Follow the code snippets provided to configure and run the simulation.</p>
+</section>
+<section id="attached-files">
+<h2>Attached Files<a class="headerlink" href="#attached-files" title="Permalink to this headline">#</a></h2>
+<p>Python script: <code class="xref download docutils literal notranslate"><span class="pre">Monte</span> <span class="pre">Carlo</span> <span class="pre">Sphere</span></code></p>
+<p>Input files: <a class="reference download internal" download="" href="../_downloads/623888fcd81025a821a88f63959a8d48/vertices.dat"><code class="xref download docutils literal notranslate"><span class="pre">vertices</span></code></a>, <code class="xref download docutils literal notranslate"><span class="pre">faces</span></code></p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<dl class="citation">
+<dt class="label" id="lidmar03"><span class="brackets">Lidmar03</span></dt>
+<dd><ol class="upperalpha simple" start="10">
+<li><p>Lidmar, L. Mirny, D. R. Nelson, Virus shapes and buckling transitions in spherical shells, Physical Review E 68 (2003)</p></li>
+</ol>
+</dd>
+</dl>
+<p>051910</p>
+</section>
+<section id="note">
+<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">#</a></h2>
+<p>Please refer to the PyMembrane documentation for more specific details about classes and methods used in this tutorial. Feel free to modify parameters and observe how they influence the results.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="disclination.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">+1 Disclination Buckling: A PyMembrane Tutorial</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="minimization.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Constant Volume Energy Minimization Tutorial</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pymembrane-implementation">PyMembrane Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-and-interpretation">Result and Interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attached-files">Attached Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
