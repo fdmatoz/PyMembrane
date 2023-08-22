@@ -424,6 +424,12 @@ document.write(`
                   
   <section id="constant-volume-energy-minimization-tutorial">
 <h1>Constant Volume Energy Minimization Tutorial<a class="headerlink" href="#constant-volume-energy-minimization-tutorial" title="Permalink to this headline">#</a></h1>
+<figure class="align-center" id="id1">
+<img alt="initial mesh" src="../_images/minimization.png" />
+<figcaption>
+<p><span class="caption-text">Figure: (Left) Initial configuration of a vesicle with unit radius comprising $N=6281$ vertices. The vesicle is subjected to a strain by increasing the edge rest length as $l_0 = (1+epsilon) left&lt;l_eright&gt;$, where $epsilon = 0.1$ and $left&lt;l_eright&gt;$ denotes the average edge length of the mesh. As a result, the vesicle buckles, leading to surface wrinkles, as depicted in (Right). The colour bar indicates the local mean curvature. The final shape of the vesicle, after energy minimization under volume constraint, is obtained using the FIRE method</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this tutorial, you will learn how to use PyMembrane to perform constant volume energy minimization of a closed elastic vesicle. This example minimizes the total elastic energy subject to the volume constraint, following the given code.</p>
