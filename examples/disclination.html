@@ -50,7 +50,7 @@
     <link rel="shortcut icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python API" href="../pythonapi/pythonapi.html" />
+    <link rel="next" title="Caspar-Klug Thin Shells Buckling" href="shell_buckling.html" />
     <link rel="prev" title="PyMembrane Examples" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -146,7 +146,7 @@
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="quickstart.html">
-                        Quick Start and Examples — PyMembrane documentation
+                        Quick Start and Examples
                       </a>
                     </li>
                 
@@ -186,7 +186,7 @@
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="quickstart.html">
-                        Quick Start and Examples — PyMembrane documentation
+                        Quick Start and Examples
                       </a>
                     </li>
                 
@@ -279,7 +279,7 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="quickstart.html">
-                        Quick Start and Examples — PyMembrane documentation
+                        Quick Start and Examples
                       </a>
                     </li>
                 
@@ -319,7 +319,7 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="quickstart.html">
-                        Quick Start and Examples — PyMembrane documentation
+                        Quick Start and Examples
                       </a>
                     </li>
                 
@@ -358,6 +358,9 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
 </ul>
 </li>
 </ul>
@@ -398,7 +401,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="quickstart.html" class="nav-link">Quick Start and Examples — PyMembrane documentation</a></li>
+    <li class="breadcrumb-item"><a href="quickstart.html" class="nav-link">Quick Start and Examples</a></li>
     
     
     <li class="breadcrumb-item"><a href="examples.html" class="nav-link">PyMembrane Examples</a></li>
@@ -422,9 +425,6 @@ document.write(`
                   
   <section id="disclination-buckling-a-pymembrane-tutorial">
 <h1>+1 Disclination Buckling: A PyMembrane Tutorial<a class="headerlink" href="#disclination-buckling-a-pymembrane-tutorial" title="Permalink to this headline">#</a></h1>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/disclination.png"><img alt="initial mesh" src="../_images/disclination.png" style="width: 500px;" /></a>
-</figure>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>We start with the well-known problem in thin-sheet mechanics that studies out-of-plane buckling of a +1 disclination~cite{Seung88}. This is a common phenomenon observed in mechanics and can be used to create interesting structures like cone-shaped party hats.</p>
@@ -434,12 +434,33 @@ document.write(`
 <p>For simplicity, we discuss the underlying physics using the discrete version of the problem. Let’s assume we have a hexagonal flat patch tiled by equilateral triangles. The hexagon is made of six equilateral triangular wedges. If we remove one wedge (i.e., a section of angle <span class="math notranslate nohighlight">\(\pi/3\equiv2\pi/6\)</span>) and glue together the two free edges, the resulting plate will be a pentagon, with the vertex in the center having five nearest neighbors. This is a +1 disclination.</p>
 <p>The elastic energy can be reduced if the patch is allowed to buckle out of the plane. This introduces some bending penalty but reduces the stretching energy. One can show that the buckling transition happens if the F&quot;oppl-von K'arm'an number <span class="math notranslate nohighlight">\(YR^2/\kappa\ge154\)</span> is Young’s modulus, <span class="math notranslate nohighlight">\(R\)</span> is the patch radius, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the bending rigidity.</p>
 </section>
-<section id="pymembrane-implementation">
-<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Permalink to this headline">#</a></h2>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section. In addition, this tutorial uses <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and <a class="reference external" href="https://github.com/garrettj403/SciencePlots">scienceplots</a> for plotting. Please install them using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">matplotlib</span> <span class="pre">scienceplots</span></code> or use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> if you are using Anaconda.</p>
+<p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section.</p>
 </div>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>NumPy</p></li>
+<li><p>Matplotlib</p></li>
+<li><p>SciencePlots</p></li>
+</ul>
+</section>
+<section id="running-the-code">
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p>Save the provided code as <a class="reference download internal" download="" href="../_downloads/00d7a7cfa87357f66b161a82f7a58a53/disclination.py"><code class="xref download docutils literal notranslate"><span class="pre">disclination.py</span></code></a></p></li>
+<li><p>Download or create your vertex and face input files, such as <a class="reference download internal" download="" href="../_downloads/78a5b86918e8225e37bafeca86ce6089/InputFiles.zip"><code class="xref download docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Files</span></code></a>.</p></li>
+<li><p>Run the script by executing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>disclination.py<span class="w"> </span>--N<span class="w"> </span>PENTAGON_SIZE<span class="w"> </span>--snapshots<span class="w"> </span>N_SNAPSHOTS<span class="w"> </span>--run_steps<span class="w"> </span>N_RUN_STEPS
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="pymembrane-implementation">
+<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
@@ -619,11 +640,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../pythonapi/pythonapi.html"
+       href="shell_buckling.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python API</p>
+        <p class="prev-next-title">Caspar-Klug Thin Shells Buckling</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -647,6 +668,8 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem">The Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pymembrane-implementation">PyMembrane Implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-and-interpretation">Result and Interpretation</a></li>

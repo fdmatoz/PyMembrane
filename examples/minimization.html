@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+
+
+<html data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Constant Volume Energy Minimization Tutorial &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/minimization';</script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Periodic Boundary" href="periodic.html" />
+    <link rel="prev" title="Caspar-Klug Thin Shells Buckling" href="shell_buckling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+                        Python API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                        References
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="quickstart.html">
+                        Quick Start and Examples
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Constant Volume Energy Minimization Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="quickstart.html" class="nav-link">Quick Start and Examples</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="examples.html" class="nav-link">PyMembrane Examples</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Constant Volume Energy Minimization Tutorial</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="constant-volume-energy-minimization-tutorial">
+<h1>Constant Volume Energy Minimization Tutorial<a class="headerlink" href="#constant-volume-energy-minimization-tutorial" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>In this tutorial, you will learn how to use PyMembrane to perform constant volume energy minimization of a closed elastic vesicle. This example minimizes the total elastic energy subject to the volume constraint, following the given code.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>NumPy</p></li>
+<li><p>Matplotlib</p></li>
+<li><p>SciencePlots</p></li>
+</ul>
+</section>
+<section id="running-the-code">
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section.</p>
+</div>
+<ol class="arabic">
+<li><p>Save the provided code as <a class="reference download internal" download="" href="../_downloads/53f9705a4f369f11d65af6cbf0320b16/minimizer.py"><code class="xref download docutils literal notranslate"><span class="pre">minimizer.py</span></code></a></p></li>
+<li><p>Download <code class="xref download docutils literal notranslate"><span class="pre">vertices</span></code> and <code class="xref download docutils literal notranslate"><span class="pre">faces</span></code>.</p></li>
+<li><p>Run the script by executing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>minimization.py<span class="w"> </span>--snapshots<span class="w"> </span>N_SNAPSHOTS<span class="w"> </span>--max_iter<span class="w"> </span>MAX_ITER
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="pymembrane-implementation">
+<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the code</span>
+<span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">import</span> <span class="nn">scienceplots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">([</span><span class="s1">&#39;science&#39;</span><span class="p">])</span>
+
+
+<span class="c1">### Parse arguments</span>
+<span class="c1">## Now we want to have X snapshots every X steps each</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Please provide: snapshots and run_steps&quot;</span><span class="p">)</span>
+<span class="c1">## Add arguments for snapshots and run_steps</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--snapshots&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of snapshots&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--max_iter&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of iteration steps&quot;</span><span class="p">)</span>
+
+<span class="n">user_args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="c1"># Access the parsed arguments</span>
+<span class="n">snapshots</span> <span class="o">=</span> <span class="n">user_args</span><span class="o">.</span><span class="n">snapshots</span>
+<span class="n">max_iter</span> <span class="o">=</span> <span class="n">user_args</span><span class="o">.</span><span class="n">max_iter</span>
+
+<span class="n">vertex_file</span> <span class="o">=</span> <span class="s1">&#39;vertices_R1.0_l01.inp&#39;</span>
+<span class="n">face_file</span> <span class="o">=</span> <span class="s1">&#39;faces_R1.0_l01.inp&#39;</span>
+
+<span class="c1">#create a system</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">read_mesh_from_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;vertices&#39;</span><span class="p">:</span><span class="n">vertex_file</span><span class="p">,</span> <span class="s1">&#39;faces&#39;</span><span class="p">:</span><span class="n">face_file</span><span class="p">})</span>
+
+<span class="c1">#save the mesh to display</span>
+<span class="c1">#create dumper</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dumper</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;initial mesh&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+
+<span class="c1">#add the evolver class where the potentials and integrators are added</span>
+<span class="n">evolver</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Evolver</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="c1"># first we need to know the edge length to move it appropriate:</span>
+<span class="n">compute</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">compute</span>
+<span class="n">edge_lengths</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">edge_lengths</span><span class="p">()</span>
+<span class="n">avg_edge_length</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Initial] avg_edge_length = &quot;</span><span class="p">,</span> <span class="n">avg_edge_length</span><span class="p">)</span>
+
+<span class="c1">#add the potentials in this case we will add bending and stretching</span>
+<span class="c1"># stretching</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">400.0</span><span class="p">)</span>
+<span class="c1"># add some strain into the edges</span>
+<span class="n">l0</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.1</span><span class="o">*</span><span class="n">avg_edge_length</span><span class="p">)</span>
+<span class="c1">#l0 = str(avg_edge_length)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Harmonic&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;k&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">k</span><span class="p">},</span>
+                                    <span class="s2">&quot;l0&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">l0</span><span class="p">}})</span>
+
+<span class="c1"># limit potential</span>
+<span class="n">lmin</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">))</span>
+<span class="n">lmax</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">))</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Limit&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;lmin&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">lmin</span><span class="p">},</span>
+                                <span class="s2">&quot;lmax&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">lmax</span><span class="p">}})</span>
+
+<span class="c1"># bending potential</span>
+<span class="n">kappa</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Bending&gt;Dihedral&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;kappa&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">kappa</span><span class="p">}})</span>
+
+<span class="c1"># Add the minimizer</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_minimizer</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Fire&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dt&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1e-2</span><span class="p">),</span>
+                                    <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">max_iter</span><span class="p">),</span>
+                                    <span class="s2">&quot;ftol&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1e-2</span><span class="p">),</span>
+                                    <span class="s2">&quot;etol&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">)})</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">evolver</span><span class="o">.</span><span class="n">get_minimizer_info</span><span class="p">())</span>
+
+<span class="c1"># Add volume constraint</span>
+<span class="n">initial_volume</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_constraint</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Volume&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">initial_volume</span><span class="p">),</span>
+                                    <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span>
+                                    <span class="s2">&quot;tol&quot;</span><span class="p">:</span><span class="nb">str</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">)})</span>
+
+<span class="c1"># Randomize the mesh to avoid initial freezing</span>
+<span class="n">rnd_move</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">)</span><span class="o">/</span><span class="mf">6.0</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">vertices</span>
+<span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">:</span>
+    <span class="n">vertex</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">rnd_move</span><span class="p">,</span> <span class="n">rnd_move</span><span class="p">)</span>
+    <span class="n">vertex</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">rnd_move</span><span class="p">,</span> <span class="n">rnd_move</span><span class="p">)</span>
+    <span class="n">vertex</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">z</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">rnd_move</span><span class="p">,</span> <span class="n">rnd_move</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">vertices</span>
+
+<span class="c1">## Compute the initial energy</span>
+<span class="n">min_energy</span> <span class="o">=</span> <span class="n">snapshots</span><span class="o">*</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+<span class="n">min_energy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span><span class="o">*</span><span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)[</span><span class="s1">&#39;edges&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">Numedges</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Initial] energy:</span><span class="si">{}</span><span class="s2"> x 10^-2 volume:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_energy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">compute</span><span class="o">.</span><span class="n">volume</span><span class="p">()))</span>
+
+<span class="c1"># Minimize</span>
+<span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;minimization_t0&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">snapshot</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">snapshots</span><span class="p">):</span>
+    <span class="n">evolver</span><span class="o">.</span><span class="n">minimize</span><span class="p">()</span>
+    <span class="n">dump</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;minimization_t</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">snapshot</span><span class="p">))</span>
+    <span class="n">min_energy</span><span class="p">[</span><span class="n">snapshot</span><span class="p">]</span> <span class="o">=</span>  <span class="mf">100.0</span><span class="o">*</span><span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)[</span><span class="s1">&#39;edges&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">system</span><span class="o">.</span><span class="n">Numedges</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">{}</span><span class="s2">] energy:</span><span class="si">{}</span><span class="s2"> x 10^-2 volume:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">snapshot</span><span class="p">,</span> <span class="n">min_energy</span><span class="p">[</span><span class="n">snapshot</span><span class="p">],</span> <span class="n">compute</span><span class="o">.</span><span class="n">volume</span><span class="p">()))</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">evolver</span><span class="o">.</span><span class="n">get_minimizer_info</span><span class="p">())</span>
+
+<span class="c1"># Compute the final volume</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="n">evolver</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[Final] energy:</span><span class="si">{}</span><span class="s2"> x 10^-2 volume:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_energy</span><span class="p">[</span><span class="n">snapshots</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">compute</span><span class="o">.</span><span class="n">volume</span><span class="p">()))</span>
+<span class="n">final_volume</span> <span class="o">=</span> <span class="n">compute</span><span class="o">.</span><span class="n">volume</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;volume difference: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_volume</span><span class="o">-</span><span class="n">initial_volume</span><span class="p">))</span>
+
+<span class="n">dump</span><span class="o">.</span><span class="n">txt</span><span class="p">(</span><span class="s2">&quot;minimized&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.3</span><span class="p">,</span><span class="mf">3.3</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">min_energy</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$Steps$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">labelpad</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$Energy/NumEdges \times 10^{-2}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">labelpad</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useMathText</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">ScalarFormatter</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">ScalarFormatter</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;energy.svg&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p>The code begins by importing required libraries and parsing command-line arguments for the number of snapshots and iteration steps.</p>
+<ol class="arabic simple">
+<li><p><strong>Create the System</strong>: A system is created with a specified box size, and the mesh is read from files.</p></li>
+<li><p><strong>Initial Mesh</strong>: The initial mesh is saved for visualization.</p></li>
+<li><p><strong>Evolver and Potentials</strong>: An Evolver class is created, where potentials and integrators are added. The stretching and bending potentials are defined based on the provided parameters.</p></li>
+<li><p><strong>Minimizer and Constraints</strong>: The minimizer is added, and the volume constraint is set. The mesh can be randomized to avoid initial freezing.</p></li>
+<li><p><strong>Minimization</strong>: The code runs the minimization algorithm, saving snapshots of the mesh and computing energy at each step.</p></li>
+<li><p><strong>Results and Visualization</strong>: The code prints the final energy and volume, and a plot of the energy is saved.</p></li>
+</ol>
+</section>
+<section id="final-remarks">
+<h2>Final Remarks<a class="headerlink" href="#final-remarks" title="Permalink to this headline">#</a></h2>
+<p>This example demonstrates the power of PyMembrane in handling complex elastic vesicle simulations. The ability to perform energy minimization while maintaining a constant volume is a crucial aspect of simulating biological systems. Modify the parameters and potentials to explore different behaviors and study various physical phenomena.</p>
+<p>Please refer to the references cited in the text for detailed methodologies and theoretical background.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="shell_buckling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Caspar-Klug Thin Shells Buckling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="periodic.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Periodic Boundary</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pymembrane-implementation">PyMembrane Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-remarks">Final Remarks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
