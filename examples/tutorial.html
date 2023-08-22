@@ -240,6 +240,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
     </nav>
@@ -351,7 +355,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMembrane Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">PyMembrane Examples</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -411,6 +418,53 @@ document.write(`
                   
   <section id="pymembrane-tutorial">
 <h1>PyMembrane Tutorial<a class="headerlink" href="#pymembrane-tutorial" title="Permalink to this headline">#</a></h1>
+<p>This tutorial provides an introduction to the PyMembrane package, focusing on its applications in the physics of liquid and solid membranes. The package includes fully commented Python codes along with input files to facilitate understanding and usage (refer to Matoz, 2023).</p>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">#</a></h2>
+<p>The demonstrations herein not only highlight PyMembrane’s capabilities but also guide users through a standard workflow for setting up a simulation. The examples follow a consistent layout, with code comments providing details on each step.</p>
+</section>
+<section id="key-steps">
+<h2>Key Steps<a class="headerlink" href="#key-steps" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Step 1</strong>: Initialize the simulation box by creating an instance of the <code class="docutils literal notranslate"><span class="pre">Box</span></code> class.</p></li>
+<li><p><strong>Step 2</strong>: Create an instance of the <code class="docutils literal notranslate"><span class="pre">System()</span></code> class to handle mesh, boundary conditions, and visualization outputs.</p></li>
+<li><p><strong>Step 3</strong>: Create an instance of the <code class="docutils literal notranslate"><span class="pre">Evolver()</span></code> class, which is responsible for managing energy and force models, constraints, integrators, minimizers, and simulation runs (using methods like <code class="docutils literal notranslate"><span class="pre">evolveMC(steps)</span></code>, <code class="docutils literal notranslate"><span class="pre">evolveMD(steps)</span></code>, or <code class="docutils literal notranslate"><span class="pre">minimize()</span></code>).</p></li>
+</ol>
+</section>
+<section id="typical-use-case-for-system-and-evolver-classes">
+<h2>Typical Use Case for System and Evolver Classes<a class="headerlink" href="#typical-use-case-for-system-and-evolver-classes" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="force-potentials-and-integrators">
+<h2>Force Potentials and Integrators<a class="headerlink" href="#force-potentials-and-integrators" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">#</a></h2>
+<dl>
+<dt>Stretching Energy</dt><dd><p>The discrete stretching energy uses Hookean springs assigned to mesh edges and is modeled as:
+.. math:: E_{text{stretch}} = frac{1}{2} k (l_e - l_0)^2
+In PyMembrane, this is implemented with the setting ‘Mesh&gt;Harmonic’, using parameters ‘k’ for spring constant and ‘l0’ for rest length.</p>
+</dd>
+<dt>Bending Energy</dt><dd><p>The bending energy model is based on the dihedral angle between triangles sharing an edge:
+.. math:: E_{text{bend}} = frac{1}{2}kappa sum_{e} (1-hat{mathbf{n}}_{e}^{(1)}cdothat{mathbf{n}}_{e}^{(2)})</p>
+</dd>
+<dt>Edge Length Limit</dt><dd><p>To prevent deformed triangles causing numerical instability, PyMembrane restricts edge length:
+.. math:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">cases</span><span class="p">}</span>
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="n">l_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="nb">min</span><span class="p">}}</span> <span class="o">&lt;</span> <span class="n">l_e</span> <span class="o">&lt;</span> <span class="n">l_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="nb">max</span><span class="p">}}</span>\\
+\<span class="n">infty</span> <span class="o">&amp;</span> \<span class="n">text</span><span class="p">{</span><span class="n">otherwise</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">cases</span><span class="p">},</span>
+</pre></div>
+</div>
+<p>You can set these limits using ‘Mesh&gt;Limit’, with parameters ‘lmin’ and ‘lmax’.</p>
+</dd>
+</dl>
+</section>
+<section id="additional-details">
+<h2>Additional Details<a class="headerlink" href="#additional-details" title="Permalink to this headline">#</a></h2>
+<p>We have chosen the simplest models for demonstration purposes, although other combinations of stretching and bending energy models are available. Consult the full documentation <a class="reference internal" href="../pythonapi/potentials.html"><span class="doc">Force Potentials</span></a> in the main documentation for more information.</p>
+<p>Please refer to the full documentation and examples provided in the package for further understanding and practical insights into using PyMembrane for your specific membrane physics simulations.</p>
+</section>
 </section>
 
 
@@ -451,6 +505,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-steps">Key Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-use-case-for-system-and-evolver-classes">Typical Use Case for System and Evolver Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-potentials-and-integrators">Force Potentials and Integrators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-details">Additional Details</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
