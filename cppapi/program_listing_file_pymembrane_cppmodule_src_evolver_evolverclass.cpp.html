@@ -420,7 +420,6 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_swap_vertex.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_swap_edge.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_flip_edge.hpp&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../integrators/montercarlo_spin_vertex.hpp&quot;</span>
 
 <span class="c1">// here we include all the Minimizers</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../minimizer/fire.hpp&quot;</span>
@@ -512,11 +511,6 @@ document.write(`
 <span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;edge&gt;flip&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorFlipEdge</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
-<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="s">&quot;Mesh&gt;MonteCarlo&gt;vertex&gt;spin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MonteCarloIntegratorSpinVertex</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_system</span><span class="p">,</span><span class="w"> </span><span class="n">mesh_force_list</span><span class="p">);</span>
 <span class="w">        </span><span class="n">mesh_integrator_montecarlo_list</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">set_property</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">else</span>
