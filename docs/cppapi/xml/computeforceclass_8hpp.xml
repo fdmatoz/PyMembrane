@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="computeforceclass_8hpp" kind="file" language="C++">
+    <compoundname>computeforceclass.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">map</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="fromdicttovec_8hpp" local="yes">../utils/fromdicttovec.hpp</includes>
+    <includes refid="fromstring_8hpp" local="yes">../utils/fromstring.hpp</includes>
+    <includes refid="globaltypes_8hpp" local="yes">../types/globaltypes.hpp</includes>
+    <includes refid="systemclass_8hpp" local="yes">../system/systemclass.hpp</includes>
+    <includes local="no">pybind11/pybind11.h</includes>
+    <includedby refid="evolverclass_8hpp" local="yes">pymembrane/cppmodule/src/evolver/evolverclass.hpp</includedby>
+    <includedby refid="montecarlointegrator_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</includedby>
+    <includedby refid="fire_8hpp" local="yes">pymembrane/cppmodule/src/minimizer/fire.hpp</includedby>
+    <includedby refid="minimizerclass_8hpp" local="yes">pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</includedby>
+    <includedby refid="potential_bending_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialBending.hpp</includedby>
+    <includedby refid="potential_bending_helfrich_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialBendingHelfrich.hpp</includedby>
+    <includedby refid="potential_cauchy_green_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</includedby>
+    <includedby refid="potential_constant_area_triangle_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</includedby>
+    <includedby refid="potential_dihedral_harmonics_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</includedby>
+    <includedby refid="potential_harmonic_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</includedby>
+    <includedby refid="potential_harmonic_sloutskin_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</includedby>
+    <includedby refid="potential_ising_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialIsing.hpp</includedby>
+    <includedby refid="potential_limit_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialLimit.hpp</includedby>
+    <includedby refid="potential_line_tension_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</includedby>
+    <includedby refid="potential_substrate_8hpp" local="yes">pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</includedby>
+    <incdepgraph>
+      <node id="21">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../utils/fromdicttovec.hpp</label>
+        <link refid="fromdicttovec_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fromstring.hpp</label>
+        <link refid="fromstring_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cctype</label>
+      </node>
+      <node id="10">
+        <label>fstream</label>
+      </node>
+      <node id="26">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>iomanip</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>iterator</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="32">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>type_traits</label>
+      </node>
+      <node id="25">
+        <label>typeinfo</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</label>
+        <link refid="pybind__export__compute_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>pymembrane/cppmodule/src/evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</label>
+        <link refid="pybind__export__evolver_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</label>
+        <link refid="montercarlo__flip__edge_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</label>
+        <link refid="montercarlo__spin__vertex_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</label>
+        <link refid="montercarlo__swap__edge_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</label>
+        <link refid="montercarlo__swap__vertex_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</label>
+        <link refid="montercarlo__vertex_8hpp"/>
+      </node>
+      <node id="5">
+        <label>pymembrane/cppmodule/src/minimizer/fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+      </node>
+      <node id="12">
+        <label>pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</label>
+        <link refid="minimizerclass_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>pymembrane/cppmodule/src/potentials/potentialBending.hpp</label>
+        <link refid="potential_bending_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pymembrane/cppmodule/src/potentials/potentialBendingHelfrich.hpp</label>
+        <link refid="potential_bending_helfrich_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</label>
+        <link refid="potential_cauchy_green_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</label>
+        <link refid="potential_constant_area_triangle_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</label>
+        <link refid="potential_dihedral_harmonics_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</label>
+        <link refid="potential_harmonic_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</label>
+        <link refid="potential_harmonic_sloutskin_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pymembrane/cppmodule/src/potentials/potentialIsing.hpp</label>
+        <link refid="potential_ising_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pymembrane/cppmodule/src/potentials/potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</label>
+        <link refid="potential_substrate_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_compute_force_class" prot="public">ComputeForceClass</innerclass>
+      <sectiondef kind="typedef">
+      <member refid="group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7" kind="typedef"><name>ComputeForceClass_ptr</name></member>
+      <member refid="group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41" kind="typedef"><name>VertexCompute</name></member>
+      </sectiondef>
+      <sectiondef kind="var">
+      <member refid="group__computeenergy_1gadeb33ca9b887a1e6c491711d7d4f8217" kind="variable"><name>BIG_VERTEX_ENERGY_LIMIT</name></member>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__computeforceclass_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__computeforceclass_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/fromdicttovec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utils/fromstring.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../types/globaltypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../system/systemclass.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pybind11/pybind11.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BIG_VERTEX_ENERGY_LIMIT<sp/>=<sp/>1e15;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_compute_force_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" kindref="member">ComputeForceClass</ref>(<ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;system)<sp/>:<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>(system),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NUM_TYPES_ALLOWED(10),<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NUM_TYPES_PAIR(NUM_TYPES_ALLOWED<sp/>*<sp/>NUM_TYPES_ALLOWED<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39" refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" kindref="member">~ComputeForceClass</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="45" refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" kindref="member">compute_energy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="51" refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" kindref="member">compute</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="57" refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>real<sp/><ref refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" kindref="member">compute_edge_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/>}</highlight></codeline>
+<codeline lineno="63" refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>real<sp/><ref refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" kindref="member">compute_face_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/>}</highlight></codeline>
+<codeline lineno="69" refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>real<sp/><ref refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" kindref="member">compute_vertex_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;<sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" kindref="member">compute_stress</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" kindref="member">compute_atomic_stress</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" kindref="member">get_name</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kindref="member">m_name</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="94" refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" kindref="member">get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" kindref="member">m_type</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="99" refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" kindref="member">get_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103" refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" kindref="member">set_default_properties</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::map&lt;std::pair&lt;std::string,<sp/>std::string&gt;,<sp/>std::string&gt;&gt;<sp/>&amp;region_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;map&lt;string,<sp/>map&lt;pair&lt;string,<sp/>string&gt;,<sp/>string&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">);<sp/>};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::map&lt;std::string,<sp/>std::string&gt;&gt;<sp/>&amp;region_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;map&lt;string,<sp/>map&lt;string,<sp/>string&gt;&gt;&quot;</highlight><highlight class="normal">);<sp/>};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::string&gt;<sp/>&amp;region_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;std::map&lt;std::string,<sp/>std::string&gt;&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_warning_calling(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message)<sp/>{<sp/>pybind11::print(</highlight><highlight class="stringliteral">&quot;potential<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kindref="member">m_name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>cannot<sp/>be<sp/>called<sp/>with<sp/>&quot;</highlight><highlight class="normal">,<sp/>message);<sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_warning_property_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message)<sp/>{<sp/>pybind11::print(</highlight><highlight class="stringliteral">&quot;parameter<sp/>&quot;</highlight><highlight class="normal">,<sp/>message,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>part<sp/>of<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kindref="member">m_name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>potential&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="111" refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>;<sp/></highlight></codeline>
+<codeline lineno="112" refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kindref="member">m_name</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" kindref="member">m_type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NUM_TYPES_ALLOWED;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NUM_TYPES_PAIR;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;ComputeForceClass&gt;<sp/>ComputeForceClass_ptr;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>ComputeForceClass_ptr&gt;<sp/>VertexCompute;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp"/>
+  </compounddef>
+</doxygen>

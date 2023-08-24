@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_b9a03d00605cae440e149fd8e6dbb7c4" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/types</compoundname>
+    <innerfile refid="globaltypes_8hpp">globaltypes.hpp</innerfile>
+    <innerfile refid="pybind__export__types_8hpp">pybind_export_types.hpp</innerfile>
+    <innerfile refid="pymembvector_8hpp">pymembvector.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/types/"/>
+  </compounddef>
+</doxygen>

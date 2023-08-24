@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_364ecfde561c3936f0a04dd7c2f8516f" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/mesh</compoundname>
+    <innerfile refid="computegeometry_8hpp">computegeometry.hpp</innerfile>
+    <innerfile refid="edge__flip_8hpp">edge_flip.hpp</innerfile>
+    <innerfile refid="halfedges_8hpp">halfedges.hpp</innerfile>
+    <innerfile refid="meshoperations_8cpp">meshoperations.cpp</innerfile>
+    <innerfile refid="meshoperations_8hpp">meshoperations.hpp</innerfile>
+    <innerfile refid="meshoperators_8hpp">meshoperators.hpp</innerfile>
+    <innerfile refid="meshproperties_8hpp">meshproperties.hpp</innerfile>
+    <innerfile refid="pybind__export__mesh_8hpp">pybind_export_mesh.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/"/>
+  </compounddef>
+</doxygen>

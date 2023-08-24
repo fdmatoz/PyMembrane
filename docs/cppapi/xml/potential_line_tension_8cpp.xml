@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="potential_line_tension_8cpp" kind="file" language="C++">
+    <compoundname>potentialLineTension.cpp</compoundname>
+    <includes refid="potential_line_tension_8hpp" local="yes">potentialLineTension.hpp</includes>
+    <incdepgraph>
+      <node id="23">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/potentials/potentialLineTension.cpp</label>
+        <link refid="potential_line_tension_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../utils/fromdicttovec.hpp</label>
+        <link refid="fromdicttovec_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>fromstring.hpp</label>
+        <link refid="fromstring_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="17">
+        <label>cctype</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="28">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>iterator</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="20">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="34">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="13">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>tuple</label>
+      </node>
+      <node id="10">
+        <label>type_traits</label>
+      </node>
+      <node id="27">
+        <label>typeinfo</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;potentialLineTension.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" kindref="member">ComputeVertexLineTension::compute_energy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vertex_index=0;vertex_index&lt;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;vertex_index++)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[vertex_index].energy=this-&gt;<ref refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kindref="member">compute_vertex_energy</ref>(vertex_index);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">real<sp/><ref refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" kindref="member">ComputeVertexLineTension::compute_edge_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>query_edge_index)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>edge_energy<sp/>=<sp/>this-&gt;<ref refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kindref="member">compute_vertex_energy</ref>(<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[query_edge_index].i);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>edge_energy+=this-&gt;<ref refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kindref="member">compute_vertex_energy</ref>(<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[query_edge_index].j);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>edge_energy;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">real<sp/><ref refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kindref="member">ComputeVertexLineTension::compute_vertex_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>query_vertex_index)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>he<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[query_vertex_index]._hedge;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>first<sp/>=<sp/>he;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type_0<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[query_vertex_index].type;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/>r0<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[query_vertex_index].r;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>scale_gamma,<sp/>gamma_type;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he].vert_to;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type_1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[v1].type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type_0!=type_1)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_flag_avg==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gamma_type<sp/>=<sp/>0.5*(m_gamma[type_0]+m_gamma[type_1]);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gamma_type<sp/>=<sp/>m_gamma[type_0];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_flag_scale==</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[query_vertex_index].r;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rij<sp/>=<sp/>pymemb::vector_subtract(r1,<sp/>r0,<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale_gamma<sp/>=<sp/>sqrt(vdot(rij,<sp/>rij));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale_gamma<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy+=<sp/>scale_gamma*gamma_type;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MOVE<sp/>TO<sp/>THE<sp/>NEXT<sp/>edge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>he_pair<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he].pair;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>he<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he_pair].next;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((he!=first));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>energy;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.cpp"/>
+  </compounddef>
+</doxygen>

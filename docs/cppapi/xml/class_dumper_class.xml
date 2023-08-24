@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_dumper_class" kind="class" language="C++" prot="public">
+    <compoundname>DumperClass</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dumper_class_1ae1806fe365d56e39c2ec735f14db55db" prot="private" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; DumperClass::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>DumperClass::_system</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="51" column="17" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1a5ad49b27b1002ed39c0094871ddac02a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DumperClass::vtkLegacy</definition>
+        <argsstring></argsstring>
+        <name>vtkLegacy</name>
+        <qualifiedname>DumperClass::vtkLegacy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="52" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1a79985a7e46f55101dfece905e1e4f5dc" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;realTensor&gt; &gt; DumperClass::vertex_tensor_data_map</definition>
+        <argsstring></argsstring>
+        <name>vertex_tensor_data_map</name>
+        <qualifiedname>DumperClass::vertex_tensor_data_map</qualifiedname>
+        <briefdescription>
+<para>USER VTK DATA DUMP. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="55" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1a588fbdae1a5d56992e25c86d4b7e1a22" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;realTensor&gt; &gt; DumperClass::face_tensor_data_map</definition>
+        <argsstring></argsstring>
+        <name>face_tensor_data_map</name>
+        <qualifiedname>DumperClass::face_tensor_data_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="56" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1ada3694e0e6482298bd6bb01e4fffbc53" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;realTensor&gt; &gt; DumperClass::edge_tensor_data_map</definition>
+        <argsstring></argsstring>
+        <name>edge_tensor_data_map</name>
+        <qualifiedname>DumperClass::edge_tensor_data_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="57" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1aaad85aaae9e225fec0ecbaf97d5a978d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; real &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;real&gt; &gt; DumperClass::vertex_data_map</definition>
+        <argsstring></argsstring>
+        <name>vertex_data_map</name>
+        <qualifiedname>DumperClass::vertex_data_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="59" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1abb522c90139260590d4cef09572c3490" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; real &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;real&gt; &gt; DumperClass::face_data_map</definition>
+        <argsstring></argsstring>
+        <name>face_data_map</name>
+        <qualifiedname>DumperClass::face_data_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="60" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dumper_class_1aa7f92d3e83af572283414f72d3d2ad2b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; real &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::vector&lt;real&gt; &gt; DumperClass::edge_data_map</definition>
+        <argsstring></argsstring>
+        <name>edge_data_map</name>
+        <qualifiedname>DumperClass::edge_data_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="61" column="14" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dumper_class_1aa0b00f3c5f9edbd69b50496bc9f83026" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DumperClass::DumperClass</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>DumperClass</name>
+        <qualifiedname>DumperClass::DumperClass</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="16" column="5" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1ad7326148144b31476a1a16f7a17ceeea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_vertices_faces</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>mesh_vertices_faces</name>
+        <qualifiedname>DumperClass::mesh_vertices_faces</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>USER DATA</para>
+<para>USER DATA</para>
+<para>USER DATA</para>
+<para>USER DATA</para>
+<para>USER DATA</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="19" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="68" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a0578ca731372268fae9c9ee18760c65a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_edge_vtk</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>mesh_edge_vtk</name>
+        <qualifiedname>DumperClass::mesh_edge_vtk</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>USER DATA</para>
+<para>USER DATA</para>
+<para>USER DATA</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="20" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="326" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1aa586c8c7cbe26ba9e24c52eb174c7de9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_vtk</definition>
+        <argsstring>(const std::string &amp;file_name, bool periodic=false)</argsstring>
+        <name>mesh_vtk</name>
+        <qualifiedname>DumperClass::mesh_vtk</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>periodic</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="21" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="21" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a7e8c0772aea606d52fb3e6e79c57ea89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_vtk_periodic</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>mesh_vtk_periodic</name>
+        <qualifiedname>DumperClass::mesh_vtk_periodic</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="31" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="513" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1adb3d8d4bd4a7b74389756e32d7982b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_ply</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>mesh_ply</name>
+        <qualifiedname>DumperClass::mesh_ply</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; vertices index</para>
+<para>&lt; vertices index</para>
+<para>&lt; vertices index</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="32" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="410" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a6dae61046b7a64c9b7901901dc208b00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_ply_periodic</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>mesh_ply_periodic</name>
+        <qualifiedname>DumperClass::mesh_ply_periodic</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="33" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a753e7b3f91da7c424bfe9595a51aba8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_json</definition>
+        <argsstring>(const std::string &amp;file_name, const bool &amp;ffaces, const bool &amp;fvertices)</argsstring>
+        <name>mesh_json</name>
+        <qualifiedname>DumperClass::mesh_json</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>ffaces</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>fvertices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="35" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1ad42599d2b5c663b5634bf06f869cbf72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::mesh_txt</definition>
+        <argsstring>(const std::string &amp;file_name, const bool &amp;ffaces, const bool &amp;fvertices)</argsstring>
+        <name>mesh_txt</name>
+        <qualifiedname>DumperClass::mesh_txt</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>ffaces</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>fvertices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="36" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.cpp" bodystart="16" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a564de8513295a4ba3ad5bf35ba5e01bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::setvtkLegacyFormat</definition>
+        <argsstring>(const bool &amp;flag)</argsstring>
+        <name>setvtkLegacyFormat</name>
+        <qualifiedname>DumperClass::setvtkLegacyFormat</qualifiedname>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="37" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a303f56d8a359d677e0ef45aaddde611c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_vertex_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; real &gt; &amp;data)</argsstring>
+        <name>user_vertex_data</name>
+        <qualifiedname>DumperClass::user_vertex_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; real &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="42" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a4b541b02f4bdadcb117593f7bd3200ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_face_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; real &gt; &amp;data)</argsstring>
+        <name>user_face_data</name>
+        <qualifiedname>DumperClass::user_face_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; real &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="43" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a346d728804b23f4dd20d32f79221b78a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_edge_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; real &gt; &amp;data)</argsstring>
+        <name>user_edge_data</name>
+        <qualifiedname>DumperClass::user_edge_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; real &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="44" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1a36b423670b38c43ccf5f274bca6a4a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_vertex_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; realTensor &gt; &amp;data)</argsstring>
+        <name>user_vertex_data</name>
+        <qualifiedname>DumperClass::user_vertex_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="46" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1af6cc158be0d5367dbbebd67e0246bb0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_face_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; realTensor &gt; &amp;data)</argsstring>
+        <name>user_face_data</name>
+        <qualifiedname>DumperClass::user_face_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="47" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dumper_class_1abf090ecef63163eadac67a7c507b2a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumperClass::user_edge_data</definition>
+        <argsstring>(const std::string &amp;name, std::vector&lt; realTensor &gt; &amp;data)</argsstring>
+        <name>user_edge_data</name>
+        <qualifiedname>DumperClass::user_edge_data</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="48" column="10" bodyfile="pymembrane/cppmodule/src/dumper/dumper_vis.cpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/dumper/dumper.hpp" line="13" column="1" bodyfile="pymembrane/cppmodule/src/dumper/dumper.hpp" bodystart="14" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_dumper_class_1ae1806fe365d56e39c2ec735f14db55db" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>_system</name></member>
+      <member refid="class_dumper_class_1aa0b00f3c5f9edbd69b50496bc9f83026" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>DumperClass</name></member>
+      <member refid="class_dumper_class_1aa7f92d3e83af572283414f72d3d2ad2b" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>edge_data_map</name></member>
+      <member refid="class_dumper_class_1ada3694e0e6482298bd6bb01e4fffbc53" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>edge_tensor_data_map</name></member>
+      <member refid="class_dumper_class_1abb522c90139260590d4cef09572c3490" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>face_data_map</name></member>
+      <member refid="class_dumper_class_1a588fbdae1a5d56992e25c86d4b7e1a22" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>face_tensor_data_map</name></member>
+      <member refid="class_dumper_class_1a0578ca731372268fae9c9ee18760c65a" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_edge_vtk</name></member>
+      <member refid="class_dumper_class_1a753e7b3f91da7c424bfe9595a51aba8f" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_json</name></member>
+      <member refid="class_dumper_class_1adb3d8d4bd4a7b74389756e32d7982b46" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_ply</name></member>
+      <member refid="class_dumper_class_1a6dae61046b7a64c9b7901901dc208b00" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_ply_periodic</name></member>
+      <member refid="class_dumper_class_1ad42599d2b5c663b5634bf06f869cbf72" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_txt</name></member>
+      <member refid="class_dumper_class_1ad7326148144b31476a1a16f7a17ceeea" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_vertices_faces</name></member>
+      <member refid="class_dumper_class_1aa586c8c7cbe26ba9e24c52eb174c7de9" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_vtk</name></member>
+      <member refid="class_dumper_class_1a7e8c0772aea606d52fb3e6e79c57ea89" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>mesh_vtk_periodic</name></member>
+      <member refid="class_dumper_class_1a564de8513295a4ba3ad5bf35ba5e01bb" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>setvtkLegacyFormat</name></member>
+      <member refid="class_dumper_class_1a346d728804b23f4dd20d32f79221b78a" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_edge_data</name></member>
+      <member refid="class_dumper_class_1abf090ecef63163eadac67a7c507b2a60" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_edge_data</name></member>
+      <member refid="class_dumper_class_1a4b541b02f4bdadcb117593f7bd3200ed" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_face_data</name></member>
+      <member refid="class_dumper_class_1af6cc158be0d5367dbbebd67e0246bb0a" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_face_data</name></member>
+      <member refid="class_dumper_class_1a303f56d8a359d677e0ef45aaddde611c" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_vertex_data</name></member>
+      <member refid="class_dumper_class_1a36b423670b38c43ccf5f274bca6a4a9c" prot="public" virt="non-virtual"><scope>DumperClass</scope><name>user_vertex_data</name></member>
+      <member refid="class_dumper_class_1aaad85aaae9e225fec0ecbaf97d5a978d" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>vertex_data_map</name></member>
+      <member refid="class_dumper_class_1a79985a7e46f55101dfece905e1e4f5dc" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>vertex_tensor_data_map</name></member>
+      <member refid="class_dumper_class_1a5ad49b27b1002ed39c0094871ddac02a" prot="private" virt="non-virtual"><scope>DumperClass</scope><name>vtkLegacy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

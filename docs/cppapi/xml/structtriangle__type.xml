@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structtriangle__type" kind="struct" language="C++" prot="public">
+    <compoundname>triangle_type</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtriangle__type_1a19171767ddfd70fd72251aafdc87e134" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>triangle_type::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="133" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1adac6af28ae3c7692793a0d43f4a5d1b3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::v1</definition>
+        <argsstring></argsstring>
+        <name>v1</name>
+        <qualifiedname>triangle_type::v1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="134" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1aba9682840045f6b304ba39e52344dc44" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::v2</definition>
+        <argsstring></argsstring>
+        <name>v2</name>
+        <qualifiedname>triangle_type::v2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="134" column="12" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a9dcd3819568221dc66312ef13804b976" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::v3</definition>
+        <argsstring></argsstring>
+        <name>v3</name>
+        <qualifiedname>triangle_type::v3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="134" column="15" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a1a45ceddb04329cd2e382fdca7b49caf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <qualifiedname>triangle_type::orientation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="135" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a21d840de1d251e00ed821c660f03db23" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real triangle_type::g_reference[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>g_reference</name>
+        <qualifiedname>triangle_type::g_reference</qualifiedname>
+        <briefdescription>
+<para>reference metric tensor [0] |(v2-v1)|^2 [1] (v2-v1)*(v3-v1) [2]|(v3-v1)|^2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="136" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a8a85c86701038e765042ab2e42472e59" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 triangle_type::normal_reference</definition>
+        <argsstring></argsstring>
+        <name>normal_reference</name>
+        <qualifiedname>triangle_type::normal_reference</qualifiedname>
+        <briefdescription>
+<para>reference normal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="137" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a20e9b039927b4680e46fa3d12c558ab5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool triangle_type::is_reference_normal</definition>
+        <argsstring></argsstring>
+        <name>is_reference_normal</name>
+        <qualifiedname>triangle_type::is_reference_normal</qualifiedname>
+        <briefdescription>
+<para>if is false then use &lt;0,0,1&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="138" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a342f5a7b7415e4ddf88ffc6a5f4aac30" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool triangle_type::is_reference_g</definition>
+        <argsstring></argsstring>
+        <name>is_reference_g</name>
+        <qualifiedname>triangle_type::is_reference_g</qualifiedname>
+        <briefdescription>
+<para>if is false then use gnow </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="139" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a225f8fbd646668be41f5b5fe11205818" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int triangle_type::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>triangle_type::type</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="140" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1a6c0a86b449257756e57db8c20dfa647c" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real triangle_type::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>triangle_type::energy</qualifiedname>
+        <briefdescription>
+<para>Vertex energy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="141" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtriangle__type_1ac93377896ad9cde40097fbb764872b95" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref></type>
+        <definition>PropertyFaces triangle_type::prop</definition>
+        <argsstring></argsstring>
+        <name>prop</name>
+        <qualifiedname>triangle_type::prop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="142" column="19" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtriangle__type_1a029b9faf314b5ab2727d87f5ddfc3ed2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool triangle_type::operator&lt;</definition>
+        <argsstring>(const triangle_type &amp;rhs) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>triangle_type::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structtriangle__type" kindref="compound">triangle_type</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="143" column="5" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>PropertyFaces</label>
+        <link refid="struct_property_faces"/>
+      </node>
+      <node id="1">
+        <label>triangle_type</label>
+        <link refid="structtriangle__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>normal_reference</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>prop</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xyType&lt; real &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="131" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="132" bodyend="144"/>
+    <listofallmembers>
+      <member refid="structtriangle__type_1a6c0a86b449257756e57db8c20dfa647c" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>energy</name></member>
+      <member refid="structtriangle__type_1a21d840de1d251e00ed821c660f03db23" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>g_reference</name></member>
+      <member refid="structtriangle__type_1a19171767ddfd70fd72251aafdc87e134" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>id</name></member>
+      <member refid="structtriangle__type_1a342f5a7b7415e4ddf88ffc6a5f4aac30" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>is_reference_g</name></member>
+      <member refid="structtriangle__type_1a20e9b039927b4680e46fa3d12c558ab5" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>is_reference_normal</name></member>
+      <member refid="structtriangle__type_1a8a85c86701038e765042ab2e42472e59" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>normal_reference</name></member>
+      <member refid="structtriangle__type_1a029b9faf314b5ab2727d87f5ddfc3ed2" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>operator&lt;</name></member>
+      <member refid="structtriangle__type_1a1a45ceddb04329cd2e382fdca7b49caf" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>orientation</name></member>
+      <member refid="structtriangle__type_1ac93377896ad9cde40097fbb764872b95" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>prop</name></member>
+      <member refid="structtriangle__type_1a225f8fbd646668be41f5b5fe11205818" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>type</name></member>
+      <member refid="structtriangle__type_1adac6af28ae3c7692793a0d43f4a5d1b3" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>v1</name></member>
+      <member refid="structtriangle__type_1aba9682840045f6b304ba39e52344dc44" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>v2</name></member>
+      <member refid="structtriangle__type_1a9dcd3819568221dc66312ef13804b976" prot="public" virt="non-virtual"><scope>triangle_type</scope><name>v3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

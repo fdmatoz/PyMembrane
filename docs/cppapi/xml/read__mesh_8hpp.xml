@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="read__mesh_8hpp" kind="file" language="C++">
+    <compoundname>read_mesh.hpp</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="globaltypes_8hpp" local="yes">types/globaltypes.hpp</includes>
+    <includes refid="halfedges_8hpp" local="yes">mesh/halfedges.hpp</includes>
+    <includedby refid="read__mesh_8cpp" local="yes">pymembrane/cppmodule/src/read_mesh.cpp</includedby>
+    <includedby refid="systemclass_8hpp" local="yes">pymembrane/cppmodule/src/system/systemclass.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fstream</label>
+      </node>
+      <node id="11">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>typeinfo</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</label>
+        <link refid="pybind__export__compute_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>pymembrane/cppmodule/src/constraints/constraintarea.hpp</label>
+        <link refid="constraintarea_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>pymembrane/cppmodule/src/constraints/constraintclass.hpp</label>
+        <link refid="constraintclass_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pymembrane/cppmodule/src/constraints/constraintvolume.hpp</label>
+        <link refid="constraintvolume_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>pymembrane/cppmodule/src/evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</label>
+        <link refid="pybind__export__evolver_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.hpp</label>
+        <link refid="integrator__brownian__vertex_8hpp_source"/>
+      </node>
+      <node id="12">
+        <label>pymembrane/cppmodule/src/integrators/integrator_verlet_vertex.hpp</label>
+        <link refid="integrator__verlet__vertex_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>pymembrane/cppmodule/src/integrators/integratorclass.hpp</label>
+        <link refid="integratorclass_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</label>
+        <link refid="montercarlo__flip__edge_8hpp_source"/>
+      </node>
+      <node id="15">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</label>
+        <link refid="montercarlo__spin__vertex_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</label>
+        <link refid="montercarlo__swap__edge_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</label>
+        <link refid="montercarlo__swap__vertex_8hpp_source"/>
+      </node>
+      <node id="18">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</label>
+        <link refid="montercarlo__vertex_8hpp"/>
+      </node>
+      <node id="19">
+        <label>pymembrane/cppmodule/src/mesh/edge_flip.hpp</label>
+        <link refid="edge__flip_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>pymembrane/cppmodule/src/minimizer/fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+      </node>
+      <node id="20">
+        <label>pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</label>
+        <link refid="minimizerclass_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pymembrane/cppmodule/src/potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pymembrane/cppmodule/src/potentials/potentialBending.hpp</label>
+        <link refid="potential_bending_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pymembrane/cppmodule/src/potentials/potentialBendingHelfrich.hpp</label>
+        <link refid="potential_bending_helfrich_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</label>
+        <link refid="potential_cauchy_green_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</label>
+        <link refid="potential_constant_area_triangle_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</label>
+        <link refid="potential_dihedral_harmonics_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</label>
+        <link refid="potential_harmonic_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</label>
+        <link refid="potential_harmonic_sloutskin_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pymembrane/cppmodule/src/potentials/potentialIsing.hpp</label>
+        <link refid="potential_ising_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>pymembrane/cppmodule/src/potentials/potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</label>
+        <link refid="potential_substrate_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>pymembrane/cppmodule/src/system/pybind_export_system.hpp</label>
+        <link refid="pybind__export__system_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>pymembrane/cppmodule/src/system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_read_mesh" prot="public">ReadMesh</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__READ_MESH_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__READ_MESH_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;types/globaltypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mesh/halfedges.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_read_mesh" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_read_mesh" kindref="compound">ReadMesh</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_read_mesh" kindref="compound">ReadMesh</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_read_mesh" kindref="compound">ReadMesh</ref>(std::string<sp/>&amp;json_file)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;__json_mesh(json_file);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_read_mesh" kindref="compound">ReadMesh</ref>(std::string<sp/>&amp;faces_file,<sp/>std::string<sp/>&amp;vertices_file)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;__build_mesh(faces_file,<sp/>vertices_file);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_read_mesh" kindref="compound">ReadMesh</ref>(std::map&lt;std::string,<sp/>std::string&gt;<sp/>files)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>faces_file;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>vertices_file;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//its<sp/>seems<sp/>that<sp/>py::dict<sp/>doesn&apos;t<sp/>have<sp/>.get()<sp/>or<sp/>find()<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>workaround</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>item<sp/>:<sp/>files)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>key<sp/>=<sp/>std::string(item.first);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>std::string(item.second);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key.compare(</highlight><highlight class="stringliteral">&quot;faces&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>faces_file<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key.compare(</highlight><highlight class="stringliteral">&quot;vertices&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices_file<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout&lt;&lt;<sp/>faces_file<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>vertices_file<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;__build_mesh(faces_file,<sp/>vertices_file);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47" refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" kindref="member">clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>faces.clear();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.clear();<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edges.clear();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>halfedges.clear();<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Numvertices<sp/>=<sp/>0;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Numedges<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Numfaces<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Numhalfedges<sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_read_mesh" kindref="compound">~ReadMesh</ref>()<sp/>{<sp/>this-&gt;<ref refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" kindref="member">clear</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_HalfEdgeProp&gt;<sp/>&amp;<ref refid="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959" kindref="member">get_halfedges</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>halfedges;<sp/>}</highlight></codeline>
+<codeline lineno="72" refid="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_VertexProp&gt;<sp/>&amp;<ref refid="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8" kindref="member">get_vertices</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vertices;<sp/>}</highlight></codeline>
+<codeline lineno="78" refid="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_EdgeProp&gt;<sp/>&amp;<ref refid="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce" kindref="member">get_edges</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>edges;<sp/>}</highlight></codeline>
+<codeline lineno="84" refid="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_FaceProp&gt;<sp/>&amp;<ref refid="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175" kindref="member">get_faces</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>faces;<sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_read_mesh_1a6846e9a11e684dde971df9689427db12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_read_mesh_1a6846e9a11e684dde971df9689427db12" kindref="member">getNumvertices</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Numvertices;<sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b" kindref="member">getNumedges</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Numedges;<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e" kindref="member">getNumfaces</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Numfaces;<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9" kindref="member">getNumhalfedges</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Numhalfedges;<sp/>}<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_close_surface()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>close_surface;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__add_vertex(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>real,<sp/>real,<sp/>real,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__add_face(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__add_edge(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref>&amp;);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__build_boundary(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__build_edges(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__build_mesh(std::string<sp/>&amp;,<sp/>std::string<sp/>&amp;);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__json_mesh(std::string<sp/>&amp;);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::pair&lt;int,<sp/>int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>hep_map;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_FaceProp&gt;<sp/>faces;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_VertexProp&gt;<sp/>vertices;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_EdgeProp&gt;<sp/>edges;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;HE_HalfEdgeProp&gt;<sp/>halfedges;<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numvertices;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numedges;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numfaces;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numhalfedges;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>close_surface;<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/read_mesh.hpp"/>
+  </compounddef>
+</doxygen>

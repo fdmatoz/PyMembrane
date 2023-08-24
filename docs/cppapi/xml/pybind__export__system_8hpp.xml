@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="pybind__export__system_8hpp" kind="file" language="C++">
+    <compoundname>pybind_export_system.hpp</compoundname>
+    <includes refid="systemclass_8hpp" local="yes">systemclass.hpp</includes>
+    <includedby refid="pybindexport_8cpp" local="yes">pymembrane/cppmodule/src/pybindexport.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/system/pybind_export_system.hpp</label>
+        <link refid="pybind__export__system_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="21">
+        <label>fstream</label>
+      </node>
+      <node id="16">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+      </node>
+      <node id="23">
+        <label>memory</label>
+      </node>
+      <node id="25">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>typeinfo</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pybind__export__system_8hpp_1a03fd25db433de7b594dbb81ec30a20c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void export_SystemClass</definition>
+        <argsstring>(pybind11::module &amp;m)</argsstring>
+        <name>export_SystemClass</name>
+        <param>
+          <type>pybind11::module &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/system/pybind_export_system.hpp" line="29" column="6" bodyfile="pymembrane/cppmodule/src/system/pybind_export_system.hpp" bodystart="29" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>MIT<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>Dr.<sp/>Daniel<sp/>Alejandro<sp/>Matoz<sp/>Fernandez<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fdamatoz@gmail.com<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>SOFTWARE.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__pybind_export_system_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pybind_export_system_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;systemclass.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>export_SystemClass(pybind11::module<sp/>&amp;m)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>pybind11::class_&lt;SystemClass&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;System&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(pybind11::init&lt;&gt;())</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(pybind11::init&lt;const<sp/>BoxType<sp/>&amp;&gt;())</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;read_mesh_from_files&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a72717f6856d02d08c744ff6e2bdcd98d" kindref="member">SystemClass::read_mesh_from_files</ref>,<sp/>pybind11::arg(</highlight><highlight class="stringliteral">&quot;files&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;read<sp/>the<sp/>mesh<sp/>from<sp/>a<sp/>file,<sp/>needs<sp/>file<sp/>route<sp/>&lt;faces,<sp/>vertices&gt;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;read_mesh_from_json&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a49b2d8feab87b7e531b8e6ae11ac8563" kindref="member">SystemClass::read_mesh_from_json</ref>,<sp/>pybind11::arg(</highlight><highlight class="stringliteral">&quot;file&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;read<sp/>the<sp/>mesh<sp/>from<sp/>a<sp/>json<sp/>file<sp/>lists&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;mesh_is_close&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a1530a09cdc13807434a09aa8035aabd8" kindref="member">SystemClass::close_surface</ref>,<sp/></highlight><highlight class="stringliteral">&quot;return<sp/>true<sp/>if<sp/>is<sp/>close<sp/>false<sp/>otherwise&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*.def(&quot;getVertices&quot;,<sp/>&amp;SystemClass::get_vertices,<sp/>&quot;get<sp/>the<sp/>vertices<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getEdges&quot;,<sp/>&amp;SystemClass::get_edges,<sp/>&quot;get<sp/>the<sp/>edges<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getFaces&quot;,<sp/>&amp;SystemClass::get_faces,<sp/>&quot;get<sp/>the<sp/>faces<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getHalfedges&quot;,<sp/>&amp;SystemClass::get_halfedges,<sp/>&quot;return<sp/>the<sp/>halfedges<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;setVertices&quot;,<sp/>&amp;SystemClass::set_vertices,<sp/>&quot;set<sp/>the<sp/>vertices,<sp/>needs<sp/>vertices<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;setEdges&quot;,<sp/>&amp;SystemClass::set_edges,<sp/>&quot;set<sp/>the<sp/>edges,<sp/>needs<sp/>edges<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;setFaces&quot;,<sp/>&amp;SystemClass::set_faces,<sp/>&quot;set<sp/>the<sp/>faces,<sp/>needs<sp/>faces<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;setHalfedges&quot;,<sp/>&amp;SystemClass::set_halfedges,<sp/>&quot;set<sp/>the<sp/>halfedges,<sp/>needs<sp/>halfedges<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;setMesh&quot;,<sp/>&amp;SystemClass::set,<sp/>&quot;set<sp/>the<sp/>vertices,<sp/>faces,<sp/>halfedges<sp/>and<sp/>edges,<sp/>needs<sp/>vertices,<sp/>faces,<sp/>halfedges<sp/>and<sp/>edges<sp/>in<sp/>memb<sp/>format&quot;)</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;compute_mesh&quot;,<sp/>&amp;SystemClass::get_compute_mesh)</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;dump&quot;,<sp/>&amp;SystemClass::get_dumper)</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(&quot;Numvertices&quot;,<sp/>&amp;SystemClass::Numvertices)</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(&quot;Numedges&quot;,<sp/>&amp;SystemClass::Numedges)</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(&quot;Numhalfedges&quot;,<sp/>&amp;SystemClass::Numhalfedges)</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;get_mesh_info&quot;,<sp/>&amp;SystemClass::get_mesh_info)</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getStressVertices&quot;,<sp/>&amp;SystemClass::get_stress_vertices)</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getStressEdges&quot;,<sp/>&amp;SystemClass::get_stress_edges)</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getStressFaces&quot;,<sp/>&amp;SystemClass::get_stress_faces)</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getStressVirial&quot;,<sp/>&amp;SystemClass::get_stress_virial)</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(&quot;getStressKinetic&quot;,<sp/>&amp;SystemClass::get_stress_kinetic)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;Numfaces&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a5992b8da85bccf096c78d56c5395edfb" kindref="member">SystemClass::Numfaces</ref>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;Numedges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kindref="member">SystemClass::Numedges</ref>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;Numvertices&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">SystemClass::Numvertices</ref>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;Numedges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kindref="member">SystemClass::Numedges</ref>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_readonly(</highlight><highlight class="stringliteral">&quot;Numhalfedges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1abb70633e54a765af41b23b8f772e3573" kindref="member">SystemClass::Numhalfedges</ref>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;get_mesh_info&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::get_mesh_info)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;stress_vertices&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a8618528642290b846ec1de06b53f1484" kindref="member">SystemClass::get_stress_vertices</ref>,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,pymemb::vector&lt;realTensor&gt;<sp/>&amp;<sp/>_stress<sp/>){})</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;stress_edges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a8252fff3b742b7c32d584049ee84d509" kindref="member">SystemClass::get_stress_edges</ref>,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,pymemb::vector&lt;realTensor&gt;<sp/>&amp;<sp/>_stress<sp/>){})</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;stress_faces&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a413e6466d0314f049cdd6dd0dc1b513c" kindref="member">SystemClass::get_stress_faces</ref>,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,pymemb::vector&lt;realTensor&gt;<sp/>&amp;<sp/>_stress<sp/>){})</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;stress_virial&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1ad61924c4d9085d350ce8eb193876958d" kindref="member">SystemClass::get_stress_virial</ref>,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,pymemb::vector&lt;realTensor&gt;<sp/>&amp;<sp/>_stress<sp/>){})</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;stress_kinetic&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a58de20ca307a29c2789976a4b5868f80" kindref="member">SystemClass::get_stress_kinetic</ref>,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,pymemb::vector&lt;realTensor&gt;<sp/>&amp;<sp/>_stress<sp/>){})</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;dumper&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::get_dumper,<sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,<ref refid="class_dumper_class" kindref="compound">DumperClass</ref><sp/>&amp;<sp/>_dumper<sp/>){})</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;compute&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::get_compute_mesh,<sp/><sp/>[]<sp/>(<ref refid="class_system_class" kindref="compound">SystemClass</ref>&amp;<sp/>self,<ref refid="class_compute_mesh" kindref="compound">ComputeMesh</ref><sp/>&amp;<sp/>_computer<sp/>){})</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;vertices&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a358f577e5c199c3b03621949d320426b" kindref="member">SystemClass::get_vertices</ref>,<sp/>&amp;<ref refid="class_system_class_1a83179b885c7c1ba96220e9b50ccf651d" kindref="member">SystemClass::set_vertices</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;edges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1af870897ec067425a7eb72d63c3303ce7" kindref="member">SystemClass::get_edges</ref>,<sp/>&amp;<ref refid="class_system_class_1ae1a320d84eec87faca57b66c36fe09d9" kindref="member">SystemClass::set_edges</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;faces&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1ad956189f4da76e1bf90efbd98c33c034" kindref="member">SystemClass::get_faces</ref>,<sp/>&amp;<ref refid="class_system_class_1a83179b885c7c1ba96220e9b50ccf651d" kindref="member">SystemClass::set_vertices</ref>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;halfedges&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_system_class_1a5d08492e1783a7f0ed81482a79ed6708" kindref="member">SystemClass::get_halfedges</ref>,<sp/>&amp;<ref refid="class_system_class_1a757bdd9f24ef3d094454cf48fc6187d9" kindref="member">SystemClass::set_halfedges</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;vertices_to_numpy&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;self)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>vertices;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;int&gt;&gt;<sp/>faces;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;v<sp/>:<sp/>self.vertices)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.push_back({v.r.x,<sp/>v.r.y,<sp/>v.r.z});</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vertices;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/></highlight><highlight class="stringliteral">&quot;return<sp/>the<sp/>mesh<sp/>vertices<sp/>in<sp/>numpy<sp/>format&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;faces_to_numpy&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;self)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;int&gt;&gt;<sp/>faces;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;f<sp/>:<sp/>self.faces)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>faces.push_back({f.v1,<sp/>f.v2,<sp/>f.v3});</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>faces;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/></highlight><highlight class="stringliteral">&quot;return<sp/>the<sp/>mesh<sp/>faces<sp/>in<sp/>numpy<sp/>format&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_property(</highlight><highlight class="stringliteral">&quot;box&quot;</highlight><highlight class="normal">,&amp;<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">SystemClass::get_box</ref>,<sp/>&amp;<ref refid="class_system_class_1aff02cbb0ec87a74c7fc8b8ede9254a76" kindref="member">SystemClass::set_box</ref>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;minImage&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::minImage)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;need_wrapping&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::need_wrapping)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;enforce_boundaries&quot;</highlight><highlight class="normal">,<sp/>&amp;SystemClass::enforce_periodic_boundary_conditions)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/system/pybind_export_system.hpp"/>
+  </compounddef>
+</doxygen>

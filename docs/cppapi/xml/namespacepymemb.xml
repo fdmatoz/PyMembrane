@@ -1,0 +1,830 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespacepymemb" kind="namespace" language="C++">
+    <compoundname>pymemb</compoundname>
+    <innerclass refid="structpymemb_1_1reduce__tensor" prot="public">pymemb::reduce_tensor</innerclass>
+    <innerclass refid="structpymemb_1_1reset__edge__energy" prot="public">pymemb::reset_edge_energy</innerclass>
+    <innerclass refid="structpymemb_1_1reset__face__energy" prot="public">pymemb::reset_face_energy</innerclass>
+    <innerclass refid="structpymemb_1_1reset__tensor" prot="public">pymemb::reset_tensor</innerclass>
+    <innerclass refid="structpymemb_1_1reset__vertex__acceleration" prot="public">pymemb::reset_vertex_acceleration</innerclass>
+    <innerclass refid="structpymemb_1_1reset__vertex__energy" prot="public">pymemb::reset_vertex_energy</innerclass>
+    <innerclass refid="structpymemb_1_1reset__vertex__external__forces" prot="public">pymemb::reset_vertex_external_forces</innerclass>
+    <innerclass refid="structpymemb_1_1reset__vertex__forces" prot="public">pymemb::reset_vertex_forces</innerclass>
+    <innerclass refid="structpymemb_1_1reset__vertex__velocities" prot="public">pymemb::reset_vertex_velocities</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T &gt;</type>
+        <definition>using pymemb::vector = typedef std::vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>vector</name>
+        <qualifiedname>pymemb::vector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/pymembvector.hpp" line="32" column="5" bodyfile="pymembrane/cppmodule/src/types/pymembvector.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pbc_8hpp_1a597a6c2a723fcdd5a1dacc3626c8e15f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::minimum_image</definition>
+        <argsstring>(const real3 &amp;ri, const real3 &amp;rj, const BoxType &amp;box)</argsstring>
+        <name>minimum_image</name>
+        <qualifiedname>pymemb::minimum_image</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>ri</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>rj</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/pbc.hpp" line="40" column="18" bodyfile="pymembrane/cppmodule/src/box/pbc.hpp" bodystart="40" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::enforce_periodic</definition>
+        <argsstring>(const real3 &amp;r, const BoxType &amp;box)</argsstring>
+        <name>enforce_periodic</name>
+        <qualifiedname>pymemb::enforce_periodic</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/pbc.hpp" line="70" column="18" bodyfile="pymembrane/cppmodule/src/box/pbc.hpp" bodystart="70" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="pbc_8hpp_1ad38535063c05017603e91eaee14c6f57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::enforce_periodic</definition>
+        <argsstring>(real3 &amp;r, inth3 &amp;ip, const BoxType &amp;box)</argsstring>
+        <name>enforce_periodic</name>
+        <qualifiedname>pymemb::enforce_periodic</qualifiedname>
+        <param>
+          <type><ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structxy_type" kindref="compound">inth3</ref> &amp;</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/pbc.hpp" line="106" column="17" bodyfile="pymembrane/cppmodule/src/box/pbc.hpp" bodystart="106" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a0e484fe8d885ee2bd74dc95569f68198" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::unit_vector</definition>
+        <argsstring>(const real3 &amp;v)</argsstring>
+        <name>unit_vector</name>
+        <qualifiedname>pymemb::unit_vector</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="12" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="12" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ab8b502b5fd2c97b54c1dda3594147362" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::vector_cross</definition>
+        <argsstring>(const real3 &amp;v1, const real3 &amp;v2)</argsstring>
+        <name>vector_cross</name>
+        <qualifiedname>pymemb::vector_cross</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="23" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a284300b645a991ff409532781d374f4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::vector_sum</definition>
+        <argsstring>(const real3 &amp;v1, const real3 &amp;v2)</argsstring>
+        <name>vector_sum</name>
+        <qualifiedname>pymemb::vector_sum</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="31" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ae323aff34acd8098c5d30f5bf5efb9fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::vector_subtract</definition>
+        <argsstring>(const real3 &amp;v1, const real3 &amp;v2)</argsstring>
+        <name>vector_subtract</name>
+        <qualifiedname>pymemb::vector_subtract</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="41" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="41" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a00eee6717b533db780f1d78cd29a1aeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::vector_subtract</definition>
+        <argsstring>(const real3 &amp;v1, const real3 &amp;v2, const BoxType &amp;box)</argsstring>
+        <name>vector_subtract</name>
+        <qualifiedname>pymemb::vector_subtract</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="51" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1aa1e2de1f7423bf20c203754168605963" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::compute_form_factor_triangle</definition>
+        <argsstring>(real *_metric, const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>compute_form_factor_triangle</name>
+        <qualifiedname>pymemb::compute_form_factor_triangle</qualifiedname>
+        <param>
+          <type>real *</type>
+          <declname>_metric</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="57" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a079b181dd8d2a8ae2df15852763525d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::compute_form_factor_triangle</definition>
+        <argsstring>(real *_metric, const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>compute_form_factor_triangle</name>
+        <qualifiedname>pymemb::compute_form_factor_triangle</qualifiedname>
+        <param>
+          <type>real *</type>
+          <declname>_metric</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="68" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a3631be2a35e816d16eea2707497b3a6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::compute_normal_triangle</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>compute_normal_triangle</name>
+        <qualifiedname>pymemb::compute_normal_triangle</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="79" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a0512deaac09c6a4b100259689f2c761c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::compute_normal_triangle</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>compute_normal_triangle</name>
+        <qualifiedname>pymemb::compute_normal_triangle</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="89" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="89" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a1ed85412113fda9c339e5180d2984783" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::compute_normal_triangle_unit</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>compute_normal_triangle_unit</name>
+        <qualifiedname>pymemb::compute_normal_triangle_unit</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="99" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::compute_normal_triangle_unit</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>compute_normal_triangle_unit</name>
+        <qualifiedname>pymemb::compute_normal_triangle_unit</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="105" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a0aac5bd062ed76cafdaad63e3b13794f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real pymemb::compute_area_triangle_from_vertex</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>compute_area_triangle_from_vertex</name>
+        <qualifiedname>pymemb::compute_area_triangle_from_vertex</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="111" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a37e0e152109784019fe6816ba03404cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real pymemb::compute_area_triangle_from_vertex</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>compute_area_triangle_from_vertex</name>
+        <qualifiedname>pymemb::compute_area_triangle_from_vertex</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="118" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="118" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ad3c5d3226766dae0532f61b611059e9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real pymemb::compute_area_triangle_from_metric</definition>
+        <argsstring>(const real *_metric)</argsstring>
+        <name>compute_area_triangle_from_metric</name>
+        <qualifiedname>pymemb::compute_area_triangle_from_metric</qualifiedname>
+        <param>
+          <type>const real *</type>
+          <declname>_metric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="125" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ae45403bd18a1ec3512afde3bc2791cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real pymemb::compute_angle_vertex</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>compute_angle_vertex</name>
+        <qualifiedname>pymemb::compute_angle_vertex</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="131" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="131" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a5ad813413260cd138a3c9df1ed7967cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real pymemb::compute_angle_vertex</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>compute_angle_vertex</name>
+        <qualifiedname>pymemb::compute_angle_vertex</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="141" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="141" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ae1cf95c8fbad1ebc411442516c137a64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pymemb::is_equiangular</definition>
+        <argsstring>(const real3 &amp;r0, const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3, const BoxType &amp;box)</argsstring>
+        <name>is_equiangular</name>
+        <qualifiedname>pymemb::is_equiangular</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="150" column="17" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="150" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ab9ea6ec2ef6f0b069cba8c1a7d2c58b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::arrange_vertices_by_smallest</definition>
+        <argsstring>(int &amp;v1, int &amp;v2, int &amp;v3)</argsstring>
+        <name>arrange_vertices_by_smallest</name>
+        <qualifiedname>pymemb::arrange_vertices_by_smallest</qualifiedname>
+        <param>
+          <type>int &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>v3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="175" column="17" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="175" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a1bd0c5664831afcd5fda856f9603af84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::compute_matrix_F</definition>
+        <argsstring>(real *F, const real *g_reference_inv, const real *g_now)</argsstring>
+        <name>compute_matrix_F</name>
+        <qualifiedname>pymemb::compute_matrix_F</qualifiedname>
+        <param>
+          <type>real *</type>
+          <declname>F</declname>
+        </param>
+        <param>
+          <type>const real *</type>
+          <declname>g_reference_inv</declname>
+        </param>
+        <param>
+          <type>const real *</type>
+          <declname>g_now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="203" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="203" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1aed421c26c21a7ec4a0bbcaa3e903a07a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 pymemb::cmassT</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const real3 &amp;r3)</argsstring>
+        <name>cmassT</name>
+        <qualifiedname>pymemb::cmassT</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="219" column="11" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="219" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1ad07da6cfe525b88763fb1263cb4eb142" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::RefMatrixFromCartesian</definition>
+        <argsstring>(const real theta, const real *__restrict__ grefCart, real *grefCylin)</argsstring>
+        <name>RefMatrixFromCartesian</name>
+        <qualifiedname>pymemb::RefMatrixFromCartesian</qualifiedname>
+        <param>
+          <type>const real</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const real *__restrict__</type>
+          <declname>grefCart</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>grefCylin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="229" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="229" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a2508744cc72f6b4c2416148bf2d92397" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pymemb::RefMatrixFromCylindrical</definition>
+        <argsstring>(const real theta, const real *__restrict__ grefCylin, real *grefCart)</argsstring>
+        <name>RefMatrixFromCylindrical</name>
+        <qualifiedname>pymemb::RefMatrixFromCylindrical</qualifiedname>
+        <param>
+          <type>const real</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const real *__restrict__</type>
+          <declname>grefCylin</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>grefCart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="242" column="10" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="242" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="computegeometry_8hpp_1a9e80a65c8f995da594b290b1632bf10f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pymemb::need_wrapping</definition>
+        <argsstring>(const real3 &amp;r1, const real3 &amp;r2, const BoxType &amp;box)</argsstring>
+        <name>need_wrapping</name>
+        <qualifiedname>pymemb::need_wrapping</qualifiedname>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/computegeometry.hpp" line="255" column="17" bodyfile="pymembrane/cppmodule/src/mesh/computegeometry.hpp" bodystart="255" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="edge__flip_8hpp_1af47d81965cf9d3b7f6efcdc91ec87eee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pymemb::CheckEdgeFlip_lambda</definition>
+        <argsstring>(const int flip_edge_index, HE_FaceProp *faces, HE_VertexProp *vertices, HE_EdgeProp *edges, HE_HalfEdgeProp *halfedges, const BoxType _box)</argsstring>
+        <name>CheckEdgeFlip_lambda</name>
+        <qualifiedname>pymemb::CheckEdgeFlip_lambda</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>flip_edge_index</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref> *</type>
+          <declname>faces</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> *</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> *</type>
+          <declname>halfedges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref></type>
+          <declname>_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>(2) Check that the vertices v0 and v2 do not take part of an obtuse triangles.</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/edge_flip.hpp" line="9" column="17" bodyfile="pymembrane/cppmodule/src/mesh/edge_flip.hpp" bodystart="9" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="edge__flip_8hpp_1a9135550564a385d5b208eff841120104" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pymemb::EdgeFlip_lambda</definition>
+        <argsstring>(const int flip_edge_index, const bool flip_face_up, HE_FaceProp *faces, HE_VertexProp *vertices, HE_EdgeProp *edges, HE_HalfEdgeProp *halfedges, const BoxType _box)</argsstring>
+        <name>EdgeFlip_lambda</name>
+        <qualifiedname>pymemb::EdgeFlip_lambda</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>flip_edge_index</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>flip_face_up</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref> *</type>
+          <declname>faces</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> *</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> *</type>
+          <declname>halfedges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref></type>
+          <declname>_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>(2) Check that the vertices v0 and v2 do not take part of an obtuse triangles.</para>
+<para>&lt; index to one of the faces shared by this edge -1 if is outer face</para>
+<para>&lt; index to one of the faces shared by this edge -1 if is outer face</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/edge_flip.hpp" line="121" column="17" bodyfile="pymembrane/cppmodule/src/mesh/edge_flip.hpp" bodystart="121" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>const std::vector&lt; T &gt;</type>
+        <definition>const std::vector&lt; T &gt; pymemb::copy</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;vec)</argsstring>
+        <name>copy</name>
+        <qualifiedname>pymemb::copy</qualifiedname>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/pymembvector.hpp" line="35" column="23" bodyfile="pymembrane/cppmodule/src/types/pymembvector.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/box/pbc.hpp" line="30" column="1"/>
+  </compounddef>
+</doxygen>

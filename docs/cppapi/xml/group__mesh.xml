@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group__mesh" kind="group">
+    <compoundname>mesh</compoundname>
+    <title>Mesh</title>
+    <innerclass refid="struct_h_e___vertex" prot="public">HE_Vertex</innerclass>
+    <innerclass refid="struct_h_e___edge" prot="public">HE_Edge</innerclass>
+    <innerclass refid="struct_h_e___face" prot="public">HE_Face</innerclass>
+    <innerclass refid="struct_h_e___half_edge" prot="public">HE_HalfEdge</innerclass>
+    <innerclass refid="structtriangle__type" prot="public">triangle_type</innerclass>
+    <innerclass refid="structvertices__type" prot="public">vertices_type</innerclass>
+    <innerclass refid="struct_property_faces" prot="public">PropertyFaces</innerclass>
+    <innerclass refid="struct_property_vertices" prot="public">PropertyVertices</innerclass>
+    <innerclass refid="struct_property_edges" prot="public">PropertyEdges</innerclass>
+    <innerclass refid="struct_set_region_vertices" prot="public">SetRegionVertices</innerclass>
+    <innerclass refid="struct_set_region_faces" prot="public">SetRegionFaces</innerclass>
+    <innerclass refid="struct_set_region_edges" prot="public">SetRegionEdges</innerclass>
+    <innerclass refid="structtriangle" prot="public">triangle</innerclass>
+    <innerclass refid="struct_property" prot="public">Property</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf" prot="public" static="no">
+        <type><ref refid="struct_h_e___vertex" kindref="compound">HE_Vertex</ref>&lt; <ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref> &gt;</type>
+        <definition>using HE_VertexProp =  HE_Vertex&lt;PropertyVertices&gt;</definition>
+        <argsstring></argsstring>
+        <name>HE_VertexProp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="44" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mesh_1ga92b6815f5e1e981bc534da3e17e51529" prot="public" static="no">
+        <type><ref refid="struct_h_e___edge" kindref="compound">HE_Edge</ref>&lt; <ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref> &gt;</type>
+        <definition>using HE_EdgeProp =  HE_Edge&lt;PropertyEdges&gt;</definition>
+        <argsstring></argsstring>
+        <name>HE_EdgeProp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="70" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mesh_1ga040b94d03d4d83f06ede4550215fa069" prot="public" static="no">
+        <type><ref refid="struct_h_e___face" kindref="compound">HE_Face</ref>&lt; <ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref> &gt;</type>
+        <definition>using HE_FaceProp =  HE_Face&lt;PropertyFaces&gt;</definition>
+        <argsstring></argsstring>
+        <name>HE_FaceProp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="103" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19" prot="public" static="no">
+        <type><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdge</ref>&lt; <ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref> &gt;</type>
+        <definition>using HE_HalfEdgeProp =  HE_HalfEdge&lt;PropertyEdges&gt;</definition>
+        <argsstring></argsstring>
+        <name>HE_HalfEdgeProp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="125" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

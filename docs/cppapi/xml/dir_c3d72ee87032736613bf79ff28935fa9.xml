@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_c3d72ee87032736613bf79ff28935fa9" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/rng</compoundname>
+    <innerfile refid="rng_8hpp">rng.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/rng/"/>
+  </compounddef>
+</doxygen>

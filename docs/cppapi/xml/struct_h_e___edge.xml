@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_h_e___edge" kind="struct" language="C++" prot="public">
+    <compoundname>HE_Edge</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename <ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref></type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_e___edge_1adc7e18ea8a4f4aeee5fd62eaf9dd6d00" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <qualifiedname>HE_Edge::i</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="55" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <qualifiedname>HE_Edge::j</qualifiedname>
+        <briefdescription>
+<para>indices of two vertices that connect the edge </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="55" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1ac51fa0631b220e2deef78ca1ca3b5d86" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>HE_Edge::id</qualifiedname>
+        <briefdescription>
+<para>unique id </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="56" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a128f8333f20d03403588f48100585c56" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HE_Edge&lt; PropertyEdges &gt;::boundary</definition>
+        <argsstring></argsstring>
+        <name>boundary</name>
+        <qualifiedname>HE_Edge::boundary</qualifiedname>
+        <briefdescription>
+<para>if true, edge is a boundary edge </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="57" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a1524f3bb94b45ff3cb7ac5873a4cf315" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::face_k</definition>
+        <argsstring></argsstring>
+        <name>face_k</name>
+        <qualifiedname>HE_Edge::face_k</qualifiedname>
+        <briefdescription>
+<para>index to one of the faces shared by this edge -1 if is outer face </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="58" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a97fef738737dc59cebb0c55d295ed3c7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::face_l</definition>
+        <argsstring></argsstring>
+        <name>face_l</name>
+        <qualifiedname>HE_Edge::face_l</qualifiedname>
+        <briefdescription>
+<para>index to one of the faces shared by this edge -1 if is outer face </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="59" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1ab7c93926f7cbb7fa5fcf227124256a06" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::v0</definition>
+        <argsstring></argsstring>
+        <name>v0</name>
+        <qualifiedname>HE_Edge::v0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="60" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a13ca5b0333c69fa18a0bc94487bef417" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::v1</definition>
+        <argsstring></argsstring>
+        <name>v1</name>
+        <qualifiedname>HE_Edge::v1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="60" column="12" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a756ecd61aaf28a53233715fdb8db7cc6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::v2</definition>
+        <argsstring></argsstring>
+        <name>v2</name>
+        <qualifiedname>HE_Edge::v2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="60" column="15" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a57178b673bc051de1144cd99d5919bb4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::v3</definition>
+        <argsstring></argsstring>
+        <name>v3</name>
+        <qualifiedname>HE_Edge::v3</qualifiedname>
+        <briefdescription>
+<para>indices to the vertices around that edge </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="60" column="18" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1ae678b1bf199ab564d995b1713a3a26da" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Edge&lt; PropertyEdges &gt;::l0</definition>
+        <argsstring></argsstring>
+        <name>l0</name>
+        <qualifiedname>HE_Edge::l0</qualifiedname>
+        <briefdescription>
+<para>equilibrium rest length </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="61" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1abc2832d50a37f1ffaefa91e5bd8cb106" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::_hedge</definition>
+        <argsstring></argsstring>
+        <name>_hedge</name>
+        <qualifiedname>HE_Edge::_hedge</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: one of the two half edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="63" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Edge&lt; PropertyEdges &gt;::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>HE_Edge::type</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="65" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Edge&lt; PropertyEdges &gt;::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>HE_Edge::energy</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face energy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="66" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___edge_1a91336318b1ce53c25a96dc8d389d00a2" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref></type>
+        <definition>PropertyEdges HE_Edge&lt; PropertyEdges &gt;::_property</definition>
+        <argsstring></argsstring>
+        <name>_property</name>
+        <qualifiedname>HE_Edge::_property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="68" column="19" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure that contains all the edges in the mesh, as well basic information for each one. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_property" kindref="compound">Property</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HE_Edge&lt; PropertyEdges &gt;</label>
+        <link refid="struct_h_e___edge"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_property</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PropertyEdges</label>
+        <link refid="struct_property_edges"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="53" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="54" bodyend="69"/>
+    <listofallmembers>
+      <member refid="struct_h_e___edge_1abc2832d50a37f1ffaefa91e5bd8cb106" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>_hedge</name></member>
+      <member refid="struct_h_e___edge_1a91336318b1ce53c25a96dc8d389d00a2" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>_property</name></member>
+      <member refid="struct_h_e___edge_1a128f8333f20d03403588f48100585c56" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>boundary</name></member>
+      <member refid="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>energy</name></member>
+      <member refid="struct_h_e___edge_1a1524f3bb94b45ff3cb7ac5873a4cf315" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>face_k</name></member>
+      <member refid="struct_h_e___edge_1a97fef738737dc59cebb0c55d295ed3c7" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>face_l</name></member>
+      <member refid="struct_h_e___edge_1adc7e18ea8a4f4aeee5fd62eaf9dd6d00" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>i</name></member>
+      <member refid="struct_h_e___edge_1ac51fa0631b220e2deef78ca1ca3b5d86" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>id</name></member>
+      <member refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>j</name></member>
+      <member refid="struct_h_e___edge_1ae678b1bf199ab564d995b1713a3a26da" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>l0</name></member>
+      <member refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>type</name></member>
+      <member refid="struct_h_e___edge_1ab7c93926f7cbb7fa5fcf227124256a06" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>v0</name></member>
+      <member refid="struct_h_e___edge_1a13ca5b0333c69fa18a0bc94487bef417" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>v1</name></member>
+      <member refid="struct_h_e___edge_1a756ecd61aaf28a53233715fdb8db7cc6" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>v2</name></member>
+      <member refid="struct_h_e___edge_1a57178b673bc051de1144cd99d5919bb4" prot="public" virt="non-virtual"><scope>HE_Edge</scope><name>v3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

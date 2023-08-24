@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_mesh_operations" kind="class" language="C++" prot="public">
+    <compoundname>MeshOperations</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mesh_operations_1a426d5604eb950b791aff8c921bb73b24" prot="private" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; MeshOperations::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>MeshOperations::_system</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="27" column="17" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mesh_operations_1a3bf8fbfa8df05976c5df4d242900553d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MeshOperations::MeshOperations</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>MeshOperations</name>
+        <qualifiedname>MeshOperations::MeshOperations</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="18" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.hpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_operations_1a0470d0bc9932a0341665b1ec85fd60e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MeshOperations::~MeshOperations</definition>
+        <argsstring>(void)</argsstring>
+        <name>~MeshOperations</name>
+        <qualifiedname>MeshOperations::~MeshOperations</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="21" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_operations_1a52d868a356d5a7a13fa95fc31d1f188a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MeshOperations::check_if_edge_can_flip</definition>
+        <argsstring>(const int &amp;flip_edge_index)</argsstring>
+        <name>check_if_edge_can_flip</name>
+        <qualifiedname>MeshOperations::check_if_edge_can_flip</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>flip_edge_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="23" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.cpp" bodystart="7" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_operations_1a05b32f7f076c4e4ec9c3b8195b60060b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshOperations::edge_flip</definition>
+        <argsstring>(const int &amp;flip_edge_index, const bool &amp;flip_face_up)</argsstring>
+        <name>edge_flip</name>
+        <qualifiedname>MeshOperations::edge_flip</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>flip_edge_index</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>flip_face_up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="24" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.cpp" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_operations_1a37b9f05448705ad429f69adb16e12080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshOperations::equiangulation</definition>
+        <argsstring>(void)</argsstring>
+        <name>equiangulation</name>
+        <qualifiedname>MeshOperations::equiangulation</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="25" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.cpp" bodystart="31" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshoperations.hpp" line="15" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshoperations.hpp" bodystart="16" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_mesh_operations_1a426d5604eb950b791aff8c921bb73b24" prot="private" virt="non-virtual"><scope>MeshOperations</scope><name>_system</name></member>
+      <member refid="class_mesh_operations_1a52d868a356d5a7a13fa95fc31d1f188a" prot="public" virt="non-virtual"><scope>MeshOperations</scope><name>check_if_edge_can_flip</name></member>
+      <member refid="class_mesh_operations_1a05b32f7f076c4e4ec9c3b8195b60060b" prot="public" virt="non-virtual"><scope>MeshOperations</scope><name>edge_flip</name></member>
+      <member refid="class_mesh_operations_1a37b9f05448705ad429f69adb16e12080" prot="public" virt="non-virtual"><scope>MeshOperations</scope><name>equiangulation</name></member>
+      <member refid="class_mesh_operations_1a3bf8fbfa8df05976c5df4d242900553d" prot="public" virt="non-virtual"><scope>MeshOperations</scope><name>MeshOperations</name></member>
+      <member refid="class_mesh_operations_1a0470d0bc9932a0341665b1ec85fd60e5" prot="public" virt="non-virtual"><scope>MeshOperations</scope><name>~MeshOperations</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_6e27a0a734d445e486d6e70b2245df81" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/dumper</compoundname>
+    <innerfile refid="dumper_8cpp">dumper.cpp</innerfile>
+    <innerfile refid="dumper_8hpp">dumper.hpp</innerfile>
+    <innerfile refid="dumper__vis_8cpp">dumper_vis.cpp</innerfile>
+    <innerfile refid="pybind__export__dumper_8hpp">pybind_export_dumper.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/dumper/"/>
+  </compounddef>
+</doxygen>

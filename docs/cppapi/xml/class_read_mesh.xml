@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_read_mesh" kind="class" language="C++" prot="public">
+    <compoundname>ReadMesh</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_read_mesh_1a437c87d52b730a310bfbe2ac86be753b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::pair&lt; int, int &gt;, int &gt;</type>
+        <definition>std::map&lt;std::pair&lt;int, int&gt;, int&gt; ReadMesh::hep_map</definition>
+        <argsstring></argsstring>
+        <name>hep_map</name>
+        <qualifiedname>ReadMesh::hep_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="103" column="14" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1afc30da692324721d8a82f6c90f92ba0d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref> &gt;</type>
+        <definition>std::vector&lt;HE_FaceProp&gt; ReadMesh::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <qualifiedname>ReadMesh::faces</qualifiedname>
+        <briefdescription>
+<para>Faces list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MESH Parameters </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="107" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1afb3e4843e04134e0845185fee338136a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> &gt;</type>
+        <definition>std::vector&lt;HE_VertexProp&gt; ReadMesh::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>ReadMesh::vertices</qualifiedname>
+        <briefdescription>
+<para>Vertex list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="108" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1ad483bb1ae2c2ea9c9475b041546054bb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> &gt;</type>
+        <definition>std::vector&lt;HE_EdgeProp&gt; ReadMesh::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <qualifiedname>ReadMesh::edges</qualifiedname>
+        <briefdescription>
+<para>Edges list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="109" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1ac29b70913d8fbbb93dbcf0e5b928a0b5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> &gt;</type>
+        <definition>std::vector&lt;HE_HalfEdgeProp&gt; ReadMesh::halfedges</definition>
+        <argsstring></argsstring>
+        <name>halfedges</name>
+        <qualifiedname>ReadMesh::halfedges</qualifiedname>
+        <briefdescription>
+<para>Half-edge list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="110" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1a3742ec08bc608a7b57e825ba599f474a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReadMesh::Numvertices</definition>
+        <argsstring></argsstring>
+        <name>Numvertices</name>
+        <qualifiedname>ReadMesh::Numvertices</qualifiedname>
+        <briefdescription>
+<para>Number of vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="112" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1abade0d457cdfe496622235eda7b90968" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReadMesh::Numedges</definition>
+        <argsstring></argsstring>
+        <name>Numedges</name>
+        <qualifiedname>ReadMesh::Numedges</qualifiedname>
+        <briefdescription>
+<para>Number of edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="113" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1aa459a5a128d4fd39073a5e9be557fef8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReadMesh::Numfaces</definition>
+        <argsstring></argsstring>
+        <name>Numfaces</name>
+        <qualifiedname>ReadMesh::Numfaces</qualifiedname>
+        <briefdescription>
+<para>Number of faces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="114" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1a42b31523d2b946c54378752b9c7dc483" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReadMesh::Numhalfedges</definition>
+        <argsstring></argsstring>
+        <name>Numhalfedges</name>
+        <qualifiedname>ReadMesh::Numhalfedges</qualifiedname>
+        <briefdescription>
+<para>Number of halfedges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="115" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_read_mesh_1afc14ab8cf95e5916fee1e477f96d97d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ReadMesh::close_surface</definition>
+        <argsstring></argsstring>
+        <name>close_surface</name>
+        <qualifiedname>ReadMesh::close_surface</qualifiedname>
+        <briefdescription>
+<para>Is a close surface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="116" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_read_mesh_1af75c7bbd8ccc4053e4d465a93de319ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReadMesh::ReadMesh</definition>
+        <argsstring>()</argsstring>
+        <name>ReadMesh</name>
+        <qualifiedname>ReadMesh::ReadMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="14" column="5" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a4615dd6d5f9a7a35cee7a00218ef3f31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReadMesh::ReadMesh</definition>
+        <argsstring>(std::string &amp;json_file)</argsstring>
+        <name>ReadMesh</name>
+        <qualifiedname>ReadMesh::ReadMesh</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>json_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="18" column="5" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a1a19ec24771515eee42378e57f81a8d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReadMesh::ReadMesh</definition>
+        <argsstring>(std::string &amp;faces_file, std::string &amp;vertices_file)</argsstring>
+        <name>ReadMesh</name>
+        <qualifiedname>ReadMesh::ReadMesh</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>faces_file</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>vertices_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="22" column="5" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a0a63e2750dca7124c78c5c697182ef86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReadMesh::ReadMesh</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; files)</argsstring>
+        <name>ReadMesh</name>
+        <qualifiedname>ReadMesh::ReadMesh</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>files</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="27" column="5" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="27" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>clear</name>
+        <qualifiedname>ReadMesh::clear</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Faces list</para>
+<para>&lt; Vertex list</para>
+<para>&lt; Edges list</para>
+<para>&lt; Half-edge list</para>
+<para>&lt; Number of vertices</para>
+<para>&lt; Number of edges</para>
+<para>&lt; Number of faces</para>
+<para>&lt; Number of halfedges</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="47" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a25453630aefa536d5a357431f5efc032" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReadMesh::~ReadMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~ReadMesh</name>
+        <qualifiedname>ReadMesh::~ReadMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="59" column="5" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; HE_HalfEdgeProp &gt; &amp; ReadMesh::get_halfedges</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_halfedges</name>
+        <qualifiedname>ReadMesh::get_halfedges</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>get the halfedges loaded in the system </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;HE_HalfEdgeProp&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="66" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; HE_VertexProp &gt; &amp; ReadMesh::get_vertices</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_vertices</name>
+        <qualifiedname>ReadMesh::get_vertices</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>get the vertices loaded in the system </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;HE_VertexProp&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="72" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; HE_EdgeProp &gt; &amp; ReadMesh::get_edges</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_edges</name>
+        <qualifiedname>ReadMesh::get_edges</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>get the edges loaded in the system </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;HE_EdgeProp&gt;&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="78" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; HE_FaceProp &gt; &amp; ReadMesh::get_faces</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_faces</name>
+        <qualifiedname>ReadMesh::get_faces</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>get the faces loaded in the system </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;HE_FaceProp&gt;&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="84" column="17" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a6846e9a11e684dde971df9689427db12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadMesh::getNumvertices</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNumvertices</name>
+        <qualifiedname>ReadMesh::getNumvertices</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Number of vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="86" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadMesh::getNumedges</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNumedges</name>
+        <qualifiedname>ReadMesh::getNumedges</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Number of edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="87" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="87" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadMesh::getNumfaces</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNumfaces</name>
+        <qualifiedname>ReadMesh::getNumfaces</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Number of faces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="88" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="88" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadMesh::getNumhalfedges</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNumhalfedges</name>
+        <qualifiedname>ReadMesh::getNumhalfedges</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Number of halfedges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="89" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="89" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a9d6cfc5e0430d34df396f6e38bcd8f2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ReadMesh::is_close_surface</definition>
+        <argsstring>()</argsstring>
+        <name>is_close_surface</name>
+        <qualifiedname>ReadMesh::is_close_surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="90" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_read_mesh_1acce5a0fc1b72b5708e6f88e657666b42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__add_vertex</definition>
+        <argsstring>(int, real, real, real, int)</argsstring>
+        <name>__add_vertex</name>
+        <qualifiedname>ReadMesh::__add_vertex</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>real</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>real</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>real</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>type</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rastko mesh builder </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; unique id</para>
+<para>&lt; position of the vertex in a 3D space</para>
+<para>&lt; position of the vertex in a 3D space</para>
+<para>&lt; position of the vertex in a 3D space</para>
+<para>&lt; by default all the vertices are not boundary</para>
+<para>&lt; number of neighbours</para>
+<para>&lt; no halfedge is assigned</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="96" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="10" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a8ff3fab09bfaec80fb957fdcbfa15ce5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__add_face</definition>
+        <argsstring>(int, std::vector&lt; int &gt;, int, int)</argsstring>
+        <name>__add_face</name>
+        <qualifiedname>ReadMesh::__add_face</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <defname>verts</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>orientation</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>type</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="97" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="30" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a27a0b930d120e24408ae23884ddd03af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadMesh::__add_edge</definition>
+        <argsstring>(const HE_HalfEdgeProp &amp;, const HE_HalfEdgeProp &amp;)</argsstring>
+        <name>__add_edge</name>
+        <qualifiedname>ReadMesh::__add_edge</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> &amp;</type>
+          <defname>he</defname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref> &amp;</type>
+          <defname>he_pair</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; index to one of the faces shared by this edge -1 if is outer face</para>
+<para>&lt; index to one of the faces shared by this edge -1 if is outer face</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="98" column="9" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="124" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a138d193c2db98bfc72b9ab7beb7acb37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__build_boundary</definition>
+        <argsstring>(void)</argsstring>
+        <name>__build_boundary</name>
+        <qualifiedname>ReadMesh::__build_boundary</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="99" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="150" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a86d94d74d21bcb671e87850a665a843d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__build_edges</definition>
+        <argsstring>(void)</argsstring>
+        <name>__build_edges</name>
+        <qualifiedname>ReadMesh::__build_edges</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>update the edge reference in the halfedge <linebreak/>
+</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="100" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="180" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1a875ad7e831e4a289e841b228a626c744" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__build_mesh</definition>
+        <argsstring>(std::string &amp;, std::string &amp;)</argsstring>
+        <name>__build_mesh</name>
+        <qualifiedname>ReadMesh::__build_mesh</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <defname>faces_file</defname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <defname>vertices_file</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>read vertex</para>
+<para>&lt; sanity check</para>
+<para>read triangles</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="101" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="206" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_read_mesh_1ab1287e46d7f42a42ce725332e4bfeae6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadMesh::__json_mesh</definition>
+        <argsstring>(std::string &amp;)</argsstring>
+        <name>__json_mesh</name>
+        <qualifiedname>ReadMesh::__json_mesh</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <defname>json_file</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="102" column="10" bodyfile="pymembrane/cppmodule/src/read_mesh.cpp" bodystart="271" bodyend="274"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/read_mesh.hpp" line="11" column="1" bodyfile="pymembrane/cppmodule/src/read_mesh.hpp" bodystart="12" bodyend="117"/>
+    <listofallmembers>
+      <member refid="class_read_mesh_1a27a0b930d120e24408ae23884ddd03af" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__add_edge</name></member>
+      <member refid="class_read_mesh_1a8ff3fab09bfaec80fb957fdcbfa15ce5" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__add_face</name></member>
+      <member refid="class_read_mesh_1acce5a0fc1b72b5708e6f88e657666b42" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__add_vertex</name></member>
+      <member refid="class_read_mesh_1a138d193c2db98bfc72b9ab7beb7acb37" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__build_boundary</name></member>
+      <member refid="class_read_mesh_1a86d94d74d21bcb671e87850a665a843d" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__build_edges</name></member>
+      <member refid="class_read_mesh_1a875ad7e831e4a289e841b228a626c744" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__build_mesh</name></member>
+      <member refid="class_read_mesh_1ab1287e46d7f42a42ce725332e4bfeae6" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>__json_mesh</name></member>
+      <member refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>clear</name></member>
+      <member refid="class_read_mesh_1afc14ab8cf95e5916fee1e477f96d97d5" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>close_surface</name></member>
+      <member refid="class_read_mesh_1ad483bb1ae2c2ea9c9475b041546054bb" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>edges</name></member>
+      <member refid="class_read_mesh_1afc30da692324721d8a82f6c90f92ba0d" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>faces</name></member>
+      <member refid="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>get_edges</name></member>
+      <member refid="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>get_faces</name></member>
+      <member refid="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>get_halfedges</name></member>
+      <member refid="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>get_vertices</name></member>
+      <member refid="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>getNumedges</name></member>
+      <member refid="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>getNumfaces</name></member>
+      <member refid="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>getNumhalfedges</name></member>
+      <member refid="class_read_mesh_1a6846e9a11e684dde971df9689427db12" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>getNumvertices</name></member>
+      <member refid="class_read_mesh_1ac29b70913d8fbbb93dbcf0e5b928a0b5" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>halfedges</name></member>
+      <member refid="class_read_mesh_1a437c87d52b730a310bfbe2ac86be753b" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>hep_map</name></member>
+      <member refid="class_read_mesh_1a9d6cfc5e0430d34df396f6e38bcd8f2d" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>is_close_surface</name></member>
+      <member refid="class_read_mesh_1abade0d457cdfe496622235eda7b90968" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>Numedges</name></member>
+      <member refid="class_read_mesh_1aa459a5a128d4fd39073a5e9be557fef8" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>Numfaces</name></member>
+      <member refid="class_read_mesh_1a42b31523d2b946c54378752b9c7dc483" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>Numhalfedges</name></member>
+      <member refid="class_read_mesh_1a3742ec08bc608a7b57e825ba599f474a" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>Numvertices</name></member>
+      <member refid="class_read_mesh_1af75c7bbd8ccc4053e4d465a93de319ea" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>ReadMesh</name></member>
+      <member refid="class_read_mesh_1a4615dd6d5f9a7a35cee7a00218ef3f31" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>ReadMesh</name></member>
+      <member refid="class_read_mesh_1a1a19ec24771515eee42378e57f81a8d3" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>ReadMesh</name></member>
+      <member refid="class_read_mesh_1a0a63e2750dca7124c78c5c697182ef86" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>ReadMesh</name></member>
+      <member refid="class_read_mesh_1afb3e4843e04134e0845185fee338136a" prot="private" virt="non-virtual"><scope>ReadMesh</scope><name>vertices</name></member>
+      <member refid="class_read_mesh_1a25453630aefa536d5a357431f5efc032" prot="public" virt="non-virtual"><scope>ReadMesh</scope><name>~ReadMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

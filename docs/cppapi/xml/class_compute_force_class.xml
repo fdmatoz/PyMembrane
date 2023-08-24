@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_force_class" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ComputeForceClass</compoundname>
+    <derivedcompoundref refid="class_compute_vertex_bending_energy" prot="public" virt="non-virtual">ComputeVertexBendingEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_bending_helfrich_energy" prot="public" virt="non-virtual">ComputeVertexBendingHelfrichEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_cauchy_green_energy" prot="public" virt="non-virtual">ComputeVertexCauchyGreenEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_constant_area_triangle_energy" prot="public" virt="non-virtual">ComputeVertexConstantAreaTriangleEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_dihedral_energy" prot="public" virt="non-virtual">ComputeVertexDihedralEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_ferromagnetic_energy" prot="public" virt="non-virtual">ComputeVertexFerromagneticEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_harmonic_energy" prot="public" virt="non-virtual">ComputeVertexHarmonicEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_harmonic_spin_energy" prot="public" virt="non-virtual">ComputeVertexHarmonicSpinEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_limit_energy" prot="public" virt="non-virtual">ComputeVertexLimitEnergy</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_line_tension" prot="public" virt="non-virtual">ComputeVertexLineTension</derivedcompoundref>
+    <derivedcompoundref refid="class_compute_vertex_substrate_energy" prot="public" virt="non-virtual">ComputeVertexSubstrateEnergy</derivedcompoundref>
+    <includes refid="computeforceclass_8hpp" local="no">computeforceclass.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kind="variable"><name>_system</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kind="variable"><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" kind="variable"><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" kind="variable"><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" kind="variable"><name>NUM_TYPES_PAIR</name></member>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" kind="function"><name>ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" kind="function"><name>~ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" kind="function"><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" kind="function"><name>compute</name></member>
+      <member refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" kind="function"><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" kind="function"><name>compute_face_energy</name></member>
+      <member refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" kind="function"><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" kind="function"><name>compute_stress</name></member>
+      <member refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" kind="function"><name>compute_atomic_stress</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" kind="function"><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" kind="function"><name>get_type</name></member>
+      <member refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" kind="function"><name>get_info</name></member>
+      <member refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" kind="function"><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" kind="function"><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" kind="function"><name>print_warning_property_name</name></member>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref> abstract class for compute different potentials, forces and torques. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="2">
+        <label>ComputeVertexBendingEnergy</label>
+        <link refid="class_compute_vertex_bending_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ComputeVertexBendingHelfrichEnergy</label>
+        <link refid="class_compute_vertex_bending_helfrich_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeVertexCauchyGreenEnergy</label>
+        <link refid="class_compute_vertex_cauchy_green_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ComputeVertexConstantAreaTriangleEnergy</label>
+        <link refid="class_compute_vertex_constant_area_triangle_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ComputeVertexDihedralEnergy</label>
+        <link refid="class_compute_vertex_dihedral_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ComputeVertexFerromagneticEnergy</label>
+        <link refid="class_compute_vertex_ferromagnetic_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ComputeVertexHarmonicEnergy</label>
+        <link refid="class_compute_vertex_harmonic_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ComputeVertexHarmonicSpinEnergy</label>
+        <link refid="class_compute_vertex_harmonic_spin_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ComputeVertexLimitEnergy</label>
+        <link refid="class_compute_vertex_limit_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ComputeVertexLineTension</label>
+        <link refid="class_compute_vertex_line_tension"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ComputeVertexSubstrateEnergy</label>
+        <link refid="class_compute_vertex_substrate_energy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="4">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="2">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="24" column="1" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="25" bodyend="116"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeForceClass</scope><name>_system</name></member>
+      <member refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute</name></member>
+      <member refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_atomic_stress</name></member>
+      <member refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_face_energy</name></member>
+      <member refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_stress</name></member>
+      <member refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeForceClass</scope><name>ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" prot="public" virt="pure-virtual"><scope>ComputeForceClass</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeForceClass</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeForceClass</scope><name>get_type</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeForceClass</scope><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeForceClass</scope><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeForceClass</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeForceClass</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeForceClass</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeForceClass</scope><name>print_warning_property_name</name></member>
+      <member refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" prot="public" virt="pure-virtual"><scope>ComputeForceClass</scope><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeForceClass</scope><name>~ComputeForceClass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

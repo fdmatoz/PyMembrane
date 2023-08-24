@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_property_faces" kind="struct" language="C++" prot="public">
+    <compoundname>PropertyFaces</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_property_faces_1a4b4b88684f852cca0a0f0cf308ff82e8" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyFaces::age</definition>
+        <argsstring></argsstring>
+        <name>age</name>
+        <qualifiedname>PropertyFaces::age</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Age. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="52" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_faces_1abf75899056e9e1cbf5addc93b38ae072" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyFaces::g_reference0_growth[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>g_reference0_growth</name>
+        <qualifiedname>PropertyFaces::g_reference0_growth</qualifiedname>
+        <briefdescription>
+<para>reference metric tensor [0] |(v2-v1)|^2 [1] (v2-v1)*(v3-v1) [3]|(v3-v1)|^2 used for growth </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="53" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_faces_1a85f9f451c8bf776d6c383be2ef88a35d" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyFaces::k11</definition>
+        <argsstring></argsstring>
+        <name>k11</name>
+        <qualifiedname>PropertyFaces::k11</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="55" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_faces_1adc54fdd8d1f306e94949621910739fe0" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyFaces::k12</definition>
+        <argsstring></argsstring>
+        <name>k12</name>
+        <qualifiedname>PropertyFaces::k12</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="56" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_faces_1ad3bdf4db6750f31ee44d18cb1fd56041" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyFaces::k22</definition>
+        <argsstring></argsstring>
+        <name>k22</name>
+        <qualifiedname>PropertyFaces::k22</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="57" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="51" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="51" bodyend="58"/>
+    <listofallmembers>
+      <member refid="struct_property_faces_1a4b4b88684f852cca0a0f0cf308ff82e8" prot="public" virt="non-virtual"><scope>PropertyFaces</scope><name>age</name></member>
+      <member refid="struct_property_faces_1abf75899056e9e1cbf5addc93b38ae072" prot="public" virt="non-virtual"><scope>PropertyFaces</scope><name>g_reference0_growth</name></member>
+      <member refid="struct_property_faces_1a85f9f451c8bf776d6c383be2ef88a35d" prot="public" virt="non-virtual"><scope>PropertyFaces</scope><name>k11</name></member>
+      <member refid="struct_property_faces_1adc54fdd8d1f306e94949621910739fe0" prot="public" virt="non-virtual"><scope>PropertyFaces</scope><name>k12</name></member>
+      <member refid="struct_property_faces_1ad3bdf4db6750f31ee44d18cb1fd56041" prot="public" virt="non-virtual"><scope>PropertyFaces</scope><name>k22</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

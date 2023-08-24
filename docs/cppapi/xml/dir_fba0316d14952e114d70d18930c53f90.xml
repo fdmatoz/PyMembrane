@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_fba0316d14952e114d70d18930c53f90" kind="dir">
+    <compoundname>pymembrane</compoundname>
+    <innerdir refid="dir_94592602f07f86cc9eb28c794e2cc567">pymembrane/cppmodule</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/"/>
+  </compounddef>
+</doxygen>

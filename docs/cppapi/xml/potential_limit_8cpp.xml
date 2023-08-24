@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="potential_limit_8cpp" kind="file" language="C++">
+    <compoundname>potentialLimit.cpp</compoundname>
+    <includes refid="potential_limit_8hpp" local="yes">potentialLimit.hpp</includes>
+    <incdepgraph>
+      <node id="23">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/potentials/potentialLimit.cpp</label>
+        <link refid="potential_limit_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../utils/fromdicttovec.hpp</label>
+        <link refid="fromdicttovec_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>fromstring.hpp</label>
+        <link refid="fromstring_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="18">
+        <label>cctype</label>
+      </node>
+      <node id="13">
+        <label>fstream</label>
+      </node>
+      <node id="28">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>iterator</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="34">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="14">
+        <label>sstream</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>tuple</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="27">
+        <label>typeinfo</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="potential_limit_8cpp_1acb9dda6c7a5eaa1c59ca12ebb0c14e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeEdgeLimitEnergy_lambda</definition>
+        <argsstring>(const real3 &amp;rij, const real &amp;lmax, const real &amp;lmin)</argsstring>
+        <name>ComputeEdgeLimitEnergy_lambda</name>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>rij</declname>
+        </param>
+        <param>
+          <type>const real &amp;</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>const real &amp;</type>
+          <declname>lmin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterate over all edges that origiante in the given vertex. If the edge is shorter than <emphasis>m_min</emphasis> or longer than <emphasis>m_max</emphasis> infinity (actually a very large number, <formula id="26">$ 10^{15} $</formula> is returned. Otherwise, this method returns zero.</para>
+<para><formula id="27">$ E_{limit} = \infty $</formula> if <formula id="28">$ r &lt; l_{min} $</formula> or <formula id="29">$ r &gt; l_{max} $</formula> and <formula id="30">$ E_{limit} = 0 $</formula> otherwise <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vertex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" line="13" column="6" bodyfile="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" bodystart="13" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="potential_limit_8cpp_1afee5d33abaabc7d6b0e71eba1c35fb35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLimitEnergy_fn</definition>
+        <argsstring>(int Numedges, HE_EdgeProp *edges, HE_VertexProp *vertices, real *_lmax, real *_lmin, const BoxType &amp;_box)</argsstring>
+        <name>ComputeVertexLimitEnergy_fn</name>
+        <param>
+          <type>int</type>
+          <declname>Numedges</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> *</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>_lmax</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>_lmin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" line="27" column="6" bodyfile="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" bodystart="27" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="potential_limit_8cpp_1a8221fe4f82d8949c26d9cbae8018ad78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeVertexLimitForce</definition>
+        <argsstring>(const real3 &amp;rij, const real &amp;lmax, const real &amp;lmin)</argsstring>
+        <name>ComputeVertexLimitForce</name>
+        <param>
+          <type>const <ref refid="structxy_type" kindref="compound">real3</ref> &amp;</type>
+          <declname>rij</declname>
+        </param>
+        <param>
+          <type>const real &amp;</type>
+          <declname>lmax</declname>
+        </param>
+        <param>
+          <type>const real &amp;</type>
+          <declname>lmin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" line="94" column="6" bodyfile="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" bodystart="94" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="potential_limit_8cpp_1aa983bbce701785a347785176c79a8095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLimitForce_fn</definition>
+        <argsstring>(int Numedges, HE_VertexProp *vertices, HE_EdgeProp *edges, real *_lmax, real *_lmin, const BoxType &amp;_box)</argsstring>
+        <name>ComputeVertexLimitForce_fn</name>
+        <param>
+          <type>int</type>
+          <declname>Numedges</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref> *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref> *</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>_lmax</declname>
+        </param>
+        <param>
+          <type>real *</type>
+          <declname>_lmin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_box_type" kindref="compound">BoxType</ref> &amp;</type>
+          <declname>_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" line="107" column="6" bodyfile="pymembrane/cppmodule/src/potentials/potentialLimit.cpp" bodystart="107" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="potential_limit_8hpp" kindref="compound">potentialLimit.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">real<sp/>ComputeEdgeLimitEnergy_lambda(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/>&amp;rij,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>real<sp/>&amp;lmax,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>real<sp/>&amp;lmin)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>dr<sp/>=<sp/>sqrt(vdot(rij,<sp/>rij));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dr<sp/>&gt;<sp/>lmax)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy<sp/>=<sp/>BIG_VERTEX_ENERGY_LIMIT;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dr<sp/>&lt;<sp/>lmin)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy<sp/>=<sp/>BIG_VERTEX_ENERGY_LIMIT;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>energy;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ComputeVertexLimitEnergy_fn(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numedges,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref><sp/>*edges,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref><sp/>*vertices,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>real<sp/>*_lmax,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>real<sp/>*_lmin,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_box_type" kindref="compound">BoxType</ref><sp/>&amp;_box)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>edge_index<sp/>=<sp/>0;<sp/>edge_index<sp/>&lt;<sp/>Numedges;<sp/>edge_index++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type<sp/>=<sp/>edges[edge_index].<ref refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>edges[edge_index].i;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r1<sp/>=<sp/>vertices[v1].<ref refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v2<sp/>=<sp/>edges[edge_index].<ref refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" kindref="member">j</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/>vertices[v2].<ref refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rij<sp/>=<sp/>pymemb::vector_subtract(r2,<sp/>r1,<sp/>_box);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edges[edge_index].<ref refid="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" kindref="member">energy</ref><sp/>+=<sp/>ComputeEdgeLimitEnergy_lambda(rij,<sp/>_lmax[type],<sp/>_lmin[type]);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_compute_vertex_limit_energy_1a4af4faa824f59cb296c242841b5dd892" kindref="member">ComputeVertexLimitEnergy::compute_energy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ComputeVertexLimitEnergy_fn(<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kindref="member">Numedges</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[0],</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[0],</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;m_lmax[0],</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;m_lmin[0],</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">real<sp/><ref refid="class_compute_vertex_limit_energy_1aa946473d4d368fac9aaaeacf8f694b64" kindref="member">ComputeVertexLimitEnergy::compute_edge_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>query_edge_index)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[query_edge_index].type;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[query_edge_index].i;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[v1].r;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v2<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[query_edge_index].j;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[v2].r;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rij<sp/>=<sp/>pymemb::vector_subtract(r2,<sp/>r1,<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ComputeEdgeLimitEnergy_lambda(rij,<sp/>m_lmax[type],<sp/>m_lmin[type]);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">real<sp/><ref refid="class_compute_vertex_limit_energy_1abc4e688de0f7f9843dc0dfd2af32635d" kindref="member">ComputeVertexLimitEnergy::compute_vertex_energy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>query_vertex_index)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>he<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[query_vertex_index]._hedge;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>first<sp/>=<sp/>he;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>edge_index<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he].edge;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[edge_index].type;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[edge_index].i;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r1<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[v1].r;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v2<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[edge_index].j;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[v2].r;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rij<sp/>=<sp/>pymemb::vector_subtract(r2,<sp/>r1,<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energy<sp/>+=<sp/>ComputeEdgeLimitEnergy_lambda(rij,<sp/>m_lmax[type],<sp/>m_lmin[type]);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MOVE<sp/>TO<sp/>THE<sp/>NEXT<sp/>edge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>he_pair<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he].pair;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>he<sp/>=<sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kindref="member">halfedges</ref>[he_pair].next;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((he<sp/>!=<sp/>first));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>energy;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">real<sp/>ComputeVertexLimitForce(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/>&amp;rij,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>real<sp/>&amp;lmax,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>real<sp/>&amp;lmin)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>dr<sp/>=<sp/>sqrt(vdot(rij,<sp/>rij));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/>fval<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dr<sp/>&gt;<sp/>lmax)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fval<sp/>=<sp/>1.0<sp/>/<sp/>dr;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dr<sp/>&lt;<sp/>lmin)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fval<sp/>=<sp/>-1.0<sp/>/<sp/>dr;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fval;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ComputeVertexLimitForce_fn(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Numedges,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref><sp/>*vertices,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref><sp/>*edges,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>real<sp/>*_lmax,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>real<sp/>*_lmin,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_box_type" kindref="compound">BoxType</ref><sp/>&amp;_box)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>edge_index<sp/>=<sp/>0;<sp/>edge_index<sp/>&lt;<sp/>Numedges;<sp/>edge_index++)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type<sp/>=<sp/>edges[edge_index].<ref refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>edges[edge_index].i;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r1<sp/>=<sp/>vertices[v1].<ref refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v2<sp/>=<sp/>edges[edge_index].<ref refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" kindref="member">j</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/>vertices[v2].<ref refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rij<sp/>=<sp/>pymemb::vector_subtract(r2,<sp/>r1,<sp/>_box);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fval<sp/>=<sp/>ComputeVertexLimitForce(rij,<sp/>_lmax[type],<sp/>_lmin[type]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v1].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.x<sp/>+=<sp/>fval<sp/>*<sp/>rij.x;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v1].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.y<sp/>+=<sp/>fval<sp/>*<sp/>rij.y;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v1].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.z<sp/>+=<sp/>fval<sp/>*<sp/>rij.z;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v2].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.x<sp/>+=<sp/>-1.0<sp/>*<sp/>fval<sp/>*<sp/>rij.x;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v2].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.y<sp/>+=<sp/>-1.0<sp/>*<sp/>fval<sp/>*<sp/>rij.y;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices[v2].<ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>.z<sp/>+=<sp/>-1.0<sp/>*<sp/>fval<sp/>*<sp/>rij.z;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_compute_vertex_limit_energy_1aabe3bdeb62cb102ac51a2c6f804ed2c7" kindref="member">ComputeVertexLimitEnergy::compute</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>ComputeVertexLimitForce_fn(<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kindref="member">Numedges</ref>,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[0],</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[0],</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;m_lmax[0],</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;m_lmin[0],</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kindref="member">_system</ref>.<ref refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/potentials/potentialLimit.cpp"/>
+  </compounddef>
+</doxygen>

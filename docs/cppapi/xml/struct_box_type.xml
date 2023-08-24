@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_box_type" kind="struct" language="C++" prot="public">
+    <compoundname>BoxType</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_box_type_1aa56a6aa74cb35f2c34983324e0c8b660" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 BoxType::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <qualifiedname>BoxType::L</qualifiedname>
+        <briefdescription>
+<para>box length Lhi-Llo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/box.hpp" line="34" column="11" bodyfile="pymembrane/cppmodule/src/box/box.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_box_type_1a4d10fdda331fe9d2cc3b9548d6c9b70a" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 BoxType::Llo</definition>
+        <argsstring></argsstring>
+        <name>Llo</name>
+        <qualifiedname>BoxType::Llo</qualifiedname>
+        <briefdescription>
+<para>low value of the of the box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/box.hpp" line="35" column="11" bodyfile="pymembrane/cppmodule/src/box/box.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_box_type_1a30077445042e7c17a1d356ed04f74744" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 BoxType::Lhi</definition>
+        <argsstring></argsstring>
+        <name>Lhi</name>
+        <qualifiedname>BoxType::Lhi</qualifiedname>
+        <briefdescription>
+<para>high value of the of the box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/box.hpp" line="36" column="11" bodyfile="pymembrane/cppmodule/src/box/box.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_box_type_1a534016d1f0cf808b4f718741f036c319" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">bool3</ref></type>
+        <definition>bool3 BoxType::periodic</definition>
+        <argsstring></argsstring>
+        <name>periodic</name>
+        <qualifiedname>BoxType::periodic</qualifiedname>
+        <briefdescription>
+<para>periodicity of the box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/box/box.hpp" line="37" column="11" bodyfile="pymembrane/cppmodule/src/box/box.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BoxType</label>
+        <link refid="struct_box_type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>L</edgelabel>
+          <edgelabel>Lhi</edgelabel>
+          <edgelabel>Llo</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>periodic</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xyType&lt; bool &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+      <node id="2">
+        <label>xyType&lt; real &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/box/box.hpp" line="32" column="1" bodyfile="pymembrane/cppmodule/src/box/box.hpp" bodystart="33" bodyend="38"/>
+    <listofallmembers>
+      <member refid="struct_box_type_1aa56a6aa74cb35f2c34983324e0c8b660" prot="public" virt="non-virtual"><scope>BoxType</scope><name>L</name></member>
+      <member refid="struct_box_type_1a30077445042e7c17a1d356ed04f74744" prot="public" virt="non-virtual"><scope>BoxType</scope><name>Lhi</name></member>
+      <member refid="struct_box_type_1a4d10fdda331fe9d2cc3b9548d6c9b70a" prot="public" virt="non-virtual"><scope>BoxType</scope><name>Llo</name></member>
+      <member refid="struct_box_type_1a534016d1f0cf808b4f718741f036c319" prot="public" virt="non-virtual"><scope>BoxType</scope><name>periodic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

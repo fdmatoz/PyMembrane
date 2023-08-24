@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="fire_8cpp" kind="file" language="C++">
+    <compoundname>fire.cpp</compoundname>
+    <includes refid="fire_8hpp" local="yes">fire.hpp</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>../constraints/constraintclass.hpp</label>
+        <link refid="constraintclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>../evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>../integrators/integratorclass.hpp</label>
+        <link refid="integratorclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>../integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/minimizer/fire.cpp</label>
+        <link refid="fire_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>minimizerclass.hpp</label>
+        <link refid="minimizerclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>../potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>../potentials/potentialBending.hpp</label>
+        <link refid="potential_bending_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../potentials/potentialBendingHelfrich.hpp</label>
+        <link refid="potential_bending_helfrich_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>../potentials/potentialCauchyGreen.hpp</label>
+        <link refid="potential_cauchy_green_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>../potentials/potentialConstantAreaTriangle.hpp</label>
+        <link refid="potential_constant_area_triangle_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>../potentials/potentialDihedralHarmonics.hpp</label>
+        <link refid="potential_dihedral_harmonics_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>../potentials/potentialHarmonic.hpp</label>
+        <link refid="potential_harmonic_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>../potentials/potentialHarmonicSloutskin.hpp</label>
+        <link refid="potential_harmonic_sloutskin_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>../potentials/potentialIsing.hpp</label>
+        <link refid="potential_ising_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>../potentials/potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>../potentials/potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>../potentials/potentialSubstrate.hpp</label>
+        <link refid="potential_substrate_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>../rng/rng.hpp</label>
+        <link refid="rng_8hpp_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../utils/fromdicttovec.hpp</label>
+        <link refid="fromdicttovec_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../utils/fromstring.hpp</label>
+        <link refid="fromstring_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="16">
+        <label>cctype</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="24">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>iomanip</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="14">
+        <label>iterator</label>
+      </node>
+      <node id="25">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="31">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="37">
+        <label>random</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="35">
+        <label>tuple</label>
+      </node>
+      <node id="34">
+        <label>type_traits</label>
+      </node>
+      <node id="23">
+        <label>typeinfo</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>@Author:<sp/>siyu</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>@Date:<sp/><sp/><sp/>2020-07-26<sp/>11:06:58</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>@Last<sp/>Modified<sp/>by:<sp/><sp/><sp/>siyu</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>@Last<sp/>Modified<sp/>time:<sp/>2020-08-11<sp/>22:55:44</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;fire.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1a23e0ab6a5d57b6d9ab009a802656c851" kindref="member">MinimizerMeshFIRE::reset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>m_converged<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>m_n_since_negative<sp/>=<sp/>m_nmin<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>m_n_since_start<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>m_alpha<sp/>=<sp/>m_alpha_start;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>m_energy_total<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>m_old_energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>m_dE<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>m_fnorm<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>m_dt<sp/>=<sp/>0.005;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>this-&gt;update_time_step_parameters();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.x<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.z<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1ae120b778f2823539458f5eab1d738ca6" kindref="member">MinimizerMeshFIRE::poststep1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NVT,<sp/>velocity<sp/>verlet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Xvec3(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].r,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].r,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_dt,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.5<sp/>*<sp/>m_dt<sp/>*<sp/>m_dt,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Xvec2(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.5<sp/>*<sp/>m_dt,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1ab14365d2fd955bab25c58143a5e08b21" kindref="member">MinimizerMeshFIRE::poststep2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Xvec2(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.5<sp/>*<sp/>m_dt,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1a67639a42242392d139388861cfbfca24" kindref="member">MinimizerMeshFIRE::poststep3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//FIRE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>P<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vnorm<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fnorm<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tnorm<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>P<sp/>+=<sp/>vdot(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>fnorm<sp/>+=<sp/>vdot(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>vnorm<sp/>+=<sp/>vdot(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>energy<sp/>+=<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].energy;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kindref="member">Numedges</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>energy<sp/>+=<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kindref="member">edges</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].energy;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1a5992b8da85bccf096c78d56c5395edfb" kindref="member">Numfaces</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>energy<sp/>+=<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1af0d1bd1f023c6e9dd3b4d16b1473a798" kindref="member">faces</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].energy;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>fnorm<sp/>=<sp/>sqrt(fnorm);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>vnorm<sp/>=<sp/>sqrt(vnorm);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>m_fnorm<sp/>=<sp/>fnorm;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>m_energy_total<sp/>=<sp/>energy;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>m_dE<sp/>=<sp/>m_energy_total<sp/>-<sp/>m_old_energy;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>energy<sp/>=<sp/>energy/(_system.Numvertices);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>((fnorm/sqrt(3.)/(_system.Numvertices)<sp/>&lt;<sp/>m_ftol<sp/>&amp;&amp;<sp/>fabs(energy-m_old_energy)<sp/>&lt;<sp/>m_etol)<sp/>&amp;&amp;<sp/>m_n_since_start<sp/>&gt;=<sp/>m_run_minsteps)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fnorm<sp/>&lt;<sp/>m_ftol<sp/>&amp;&amp;<sp/>fabs(energy<sp/>-<sp/>m_old_energy)<sp/>&lt;<sp/>m_etol<sp/>&amp;&amp;<sp/>m_n_since_start<sp/>&gt;=<sp/>m_run_minsteps)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>pybind11::print(<ref refid="class_minimizer_class_1ab0889ed7336b586efc598b82e26de354" kindref="member">m_name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>converged,<sp/>ftol:&quot;</highlight><highlight class="normal"><sp/>,<sp/>m_ftol<sp/>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m_etol:&quot;</highlight><highlight class="normal"><sp/>,<sp/>m_etol);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>m_converged<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>factor_t;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(fabs(fnorm)<sp/>&gt;<sp/>EPSILON)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>factor_t<sp/>=<sp/>m_alpha*vnorm/fnorm;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>factor_t<sp/>=<sp/>1.0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>Xvec2(<ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0<sp/>-<sp/>m_alpha,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].v,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_alpha<sp/>*<sp/>vnorm<sp/>/<sp/>fnorm,<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">].forceC);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(P<sp/>&gt;<sp/>0.0)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>m_n_since_negative++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_n_since_negative<sp/>&gt;<sp/>m_nmin)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_dt<sp/>=<sp/>std::min(m_dt,<sp/>m_dT_max);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_alpha<sp/>*=<sp/>m_falpha;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(P<sp/>&lt;=<sp/>0.0)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>m_dt<sp/>=<sp/>m_dt<sp/>*<sp/>m_fdec;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>m_alpha<sp/>=<sp/>m_alpha_start;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>m_n_since_negative<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pybind11::print(<sp/>this-&gt;name,<sp/>&quot;<sp/>zero<sp/>velocities&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pybind11::print(&quot;P:&quot;<sp/>,<sp/>P<sp/>,<sp/>&quot;<sp/>fnorm:&quot;<sp/>,<sp/>fnorm<sp/>,<sp/>&quot;<sp/>vnorm:&quot;<sp/>,<sp/>vnorm<sp/>,<sp/>&quot;<sp/>delta<sp/>energy:&quot;<sp/>,<sp/>fabs(energy<sp/>-<sp/>m_old_energy)<sp/>,<sp/>&quot;<sp/>energy/N:&quot;<sp/>,<sp/>energy<sp/>/<sp/>(_system.Numvertices)<sp/>,<sp/>&quot;alpha:&quot;<sp/>,<sp/>m_alpha);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kindref="member">Numvertices</ref>;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.x<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.<ref refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kindref="member">vertices</ref>[id].v.z<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>m_n_since_start++;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>m_old_energy<sp/>=<sp/>energy;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MinimizerMeshFIRE::minimize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>step<sp/>=<sp/>0;<sp/>step<sp/>&lt;<sp/>m_max_iter;<sp/>step++)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.reset_mesh_forces();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.compute_mesh_forces();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1ae120b778f2823539458f5eab1d738ca6" kindref="member">poststep1</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kindref="member">_system</ref>.enforce_periodic_boundary_conditions();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.reset_mesh_forces();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.compute_mesh_forces();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1ab14365d2fd955bab25c58143a5e08b21" kindref="member">poststep2</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enforce<sp/>the<sp/>constraints<sp/>before<sp/>calculate<sp/>the<sp/>energy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.enforce_mesh_constraints();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.reset_mesh_energy();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>_evolver.compute_mesh_energy();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_minimizer_mesh_f_i_r_e_1a67639a42242392d139388861cfbfca24" kindref="member">poststep3</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_converged<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//pybind11::print(&quot;<sp/>Minimizer<sp/>&quot;,<sp/>this-&gt;get_info());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/minimizer/fire.cpp"/>
+  </compounddef>
+</doxygen>

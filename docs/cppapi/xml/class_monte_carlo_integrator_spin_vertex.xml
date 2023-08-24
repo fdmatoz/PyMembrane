@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_monte_carlo_integrator_spin_vertex" kind="class" language="C++" prot="public">
+    <compoundname>MonteCarloIntegratorSpinVertex</compoundname>
+    <basecompoundref refid="class_monte_carlo_integrator" prot="public" virt="non-virtual">MonteCarloIntegrator</basecompoundref>
+    <includes refid="montercarlo__spin__vertex_8hpp" local="no">montercarlo_spin_vertex.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_monte_carlo_integrator_spin_vertex_1a3376b10faee27149ee92529cb5d47a16" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MonteCarloIntegratorSpinVertex::m_seed</definition>
+        <argsstring></argsstring>
+        <name>m_seed</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::m_seed</qualifiedname>
+        <briefdescription>
+<para>random number seed; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="80" column="16" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_spin_vertex_1a6eb28290b6ea05c42224d6b27a8b4622" prot="private" static="no" mutable="no">
+        <type>RNG_ptr</type>
+        <definition>RNG_ptr MonteCarloIntegratorSpinVertex::m_rng</definition>
+        <argsstring></argsstring>
+        <name>m_rng</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::m_rng</qualifiedname>
+        <briefdescription>
+<para>Random number generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="81" column="11" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_spin_vertex_1a8e0e0a52a6ddfa5102cfdbf63139a31e" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; bool &gt;</type>
+        <definition>pymemb::vector&lt;bool&gt; MonteCarloIntegratorSpinVertex::freezed_vertex</definition>
+        <argsstring></argsstring>
+        <name>freezed_vertex</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::freezed_vertex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="82" column="18" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1adfabcb49f3ec6194d1874ab872675cde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorSpinVertex::MonteCarloIntegratorSpinVertex</definition>
+        <argsstring>(SystemClass &amp;system, VertexCompute &amp;potentials)</argsstring>
+        <name>MonteCarloIntegratorSpinVertex</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::MonteCarloIntegratorSpinVertex</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>VertexCompute &amp;</type>
+          <declname>potentials</declname>
+        </param>
+        <briefdescription>
+<para>VertexIntegrator Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="26" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a8f29c125f60107862595e8ae3fb86c30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorSpinVertex::~MonteCarloIntegratorSpinVertex</definition>
+        <argsstring>()</argsstring>
+        <name>~MonteCarloIntegratorSpinVertex</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::~MonteCarloIntegratorSpinVertex</qualifiedname>
+        <briefdescription>
+<para>destructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="33" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a713dda1d8138f9291568fdd29f9fe90d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSpinVertex::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_default_properties</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract set parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>default value</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="35" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a7ce2dd5f3ea65fbbcf9daeeb7346e558" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSpinVertex::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="45" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="45" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a2d6274e08a87b8c9d3e951d5afc1429a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSpinVertex::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="64" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1afb57459123a2ff89515d988a0e3fecc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int MonteCarloIntegratorSpinVertex::integrate</definition>
+        <argsstring>(void) override</argsstring>
+        <name>integrate</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::integrate</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e">integrate</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract integrator function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of successful attempts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="77" column="7" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.cpp" bodystart="4" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a3deefe8007395a52014d1d35b6f03bb4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="44" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="44" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_spin_vertex_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSpinVertex::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="44" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Integrator Brownian class implements Brownian dynamics for the vertex position. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorSpinVertex</label>
+        <link refid="class_monte_carlo_integrator_spin_vertex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorSpinVertex</label>
+        <link refid="class_monte_carlo_integrator_spin_vertex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" line="22" column="1" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp" bodystart="23" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>_potentials</name></member>
+      <member refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>_system</name></member>
+      <member refid="class_monte_carlo_integrator_1a8e8e222fe336c2f56235df0035f8d5fe" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>ComputeEnergyFromEdge</name></member>
+      <member refid="class_monte_carlo_integrator_1a634e45ff52b7b8bd7a35f3828d47ea83" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>ComputeEnergyFromFace</name></member>
+      <member refid="class_monte_carlo_integrator_1a27b6c559a56e29647717d0ba2a4c6093" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>ComputeEnergyFromVertex</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a8e0e0a52a6ddfa5102cfdbf63139a31e" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>freezed_vertex</name></member>
+      <member refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>get_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1aabaa7b2836fc24403ea07ba44507d1bf" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>get_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>get_name</name></member>
+      <member refid="class_monte_carlo_integrator_1aa1c25fac86c042bf1c82d099c4d56221" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>get_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>get_type</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1afb57459123a2ff89515d988a0e3fecc6" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>integrate</name></member>
+      <member refid="class_monte_carlo_integrator_1ad8929da67aacbff438f417d7aeab410c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a6eb28290b6ea05c42224d6b27a8b4622" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>m_rng</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a3376b10faee27149ee92529cb5d47a16" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>m_seed</name></member>
+      <member refid="class_monte_carlo_integrator_1a939530773d57874ca1c96625707c4ac3" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1adfabcb49f3ec6194d1874ab872675cde" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>MonteCarloIntegratorSpinVertex</name></member>
+      <member refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>name</name></member>
+      <member refid="class_monte_carlo_integrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="class_monte_carlo_integrator_1ad92127d5579f33dc8207a7d8921c5285" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>print_warning_calling</name></member>
+      <member refid="class_monte_carlo_integrator_1a42b870221605a6f6a71636470348c119" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>print_warning_property_name</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a713dda1d8138f9291568fdd29f9fe90d" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_default_properties</name></member>
+      <member refid="class_monte_carlo_integrator_1a1f5b4442efc847425dd209988eca7cd8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1a7714495d7d5f4c00e04ca25b3761e5a8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a7ce2dd5f3ea65fbbcf9daeeb7346e558" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a2d6274e08a87b8c9d3e951d5afc1429a" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>set_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>T</name></member>
+      <member refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>type</name></member>
+      <member refid="class_monte_carlo_integrator_1a73f58c5ac0533462441070bd60008418" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>update_temperature_parameters</name></member>
+      <member refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" prot="public" virt="virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>~MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_spin_vertex_1a8f29c125f60107862595e8ae3fb86c30" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSpinVertex</scope><name>~MonteCarloIntegratorSpinVertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

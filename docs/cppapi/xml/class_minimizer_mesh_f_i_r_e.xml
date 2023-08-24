@@ -1,0 +1,677 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_minimizer_mesh_f_i_r_e" kind="class" language="C++" prot="public">
+    <compoundname>MinimizerMeshFIRE</compoundname>
+    <basecompoundref refid="class_minimizer_class" prot="public" virt="non-virtual">MinimizerClass</basecompoundref>
+    <includes refid="fire_8hpp" local="no">fire.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1ad71efcda9f34089424e1c8e008b2c333" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MinimizerMeshFIRE::m_max_iter</definition>
+        <argsstring></argsstring>
+        <name>m_max_iter</name>
+        <qualifiedname>MinimizerMeshFIRE::m_max_iter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="155" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1afba51767c116da5e0dbc03bd44991ddd" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MinimizerMeshFIRE::m_nmin</definition>
+        <argsstring></argsstring>
+        <name>m_nmin</name>
+        <qualifiedname>MinimizerMeshFIRE::m_nmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="156" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a396256a4ded932e4e0365c918fce9e20" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MinimizerMeshFIRE::m_n_since_negative</definition>
+        <argsstring></argsstring>
+        <name>m_n_since_negative</name>
+        <qualifiedname>MinimizerMeshFIRE::m_n_since_negative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="156" column="23" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a5efd1d074de3d42f263fdadc6960d75f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MinimizerMeshFIRE::m_n_since_start</definition>
+        <argsstring></argsstring>
+        <name>m_n_since_start</name>
+        <qualifiedname>MinimizerMeshFIRE::m_n_since_start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="156" column="42" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a2926ee1c9cd1af43e2fd04da400cf11d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MinimizerMeshFIRE::m_run_minsteps</definition>
+        <argsstring></argsstring>
+        <name>m_run_minsteps</name>
+        <qualifiedname>MinimizerMeshFIRE::m_run_minsteps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="156" column="58" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a90d6ba03f86625c13716351747a1d9ea" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_finc</definition>
+        <argsstring></argsstring>
+        <name>m_finc</name>
+        <qualifiedname>MinimizerMeshFIRE::m_finc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="10" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a65819ef92319b65bdec56131cc015fe8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_fdec</definition>
+        <argsstring></argsstring>
+        <name>m_fdec</name>
+        <qualifiedname>MinimizerMeshFIRE::m_fdec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="17" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a2677d0476985ea95c45a3981673842ca" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_alpha_start</definition>
+        <argsstring></argsstring>
+        <name>m_alpha_start</name>
+        <qualifiedname>MinimizerMeshFIRE::m_alpha_start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="24" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1ab9a09757cf5c8efce35d5a895bb2ec43" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_alpha</definition>
+        <argsstring></argsstring>
+        <name>m_alpha</name>
+        <qualifiedname>MinimizerMeshFIRE::m_alpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="38" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a36efd9a795be05e363d529f19acfd79c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_falpha</definition>
+        <argsstring></argsstring>
+        <name>m_falpha</name>
+        <qualifiedname>MinimizerMeshFIRE::m_falpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="46" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a61e5c36496d843dd14579ec29c4875bb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_ftol</definition>
+        <argsstring></argsstring>
+        <name>m_ftol</name>
+        <qualifiedname>MinimizerMeshFIRE::m_ftol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="55" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1ace35261dabccc0a711119e0f675dbdd7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_etol</definition>
+        <argsstring></argsstring>
+        <name>m_etol</name>
+        <qualifiedname>MinimizerMeshFIRE::m_etol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="62" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a4eab06717f59c4119ae85766c56bef94" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_energy_total</definition>
+        <argsstring></argsstring>
+        <name>m_energy_total</name>
+        <qualifiedname>MinimizerMeshFIRE::m_energy_total</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="69" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a64964d2d2983ae1c776b5a02a41a487f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_old_energy</definition>
+        <argsstring></argsstring>
+        <name>m_old_energy</name>
+        <qualifiedname>MinimizerMeshFIRE::m_old_energy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="84" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1aea3f56c8b435fd08a2fe7ea21817d468" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_dE</definition>
+        <argsstring></argsstring>
+        <name>m_dE</name>
+        <qualifiedname>MinimizerMeshFIRE::m_dE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="97" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a67caff0096a2a9eaa51177ae5228b5fe" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_fnorm</definition>
+        <argsstring></argsstring>
+        <name>m_fnorm</name>
+        <qualifiedname>MinimizerMeshFIRE::m_fnorm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="102" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a76fc91cb951de9e7e283060aab52bfd6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_dT_max</definition>
+        <argsstring></argsstring>
+        <name>m_dT_max</name>
+        <qualifiedname>MinimizerMeshFIRE::m_dT_max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="110" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1af5504f939093e00de6dd29be5043d1b6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_dT_set</definition>
+        <argsstring></argsstring>
+        <name>m_dT_set</name>
+        <qualifiedname>MinimizerMeshFIRE::m_dT_set</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="157" column="119" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a843dcfe2ae50e8fe8ce060b4d34da19e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MinimizerMeshFIRE::m_converged</definition>
+        <argsstring></argsstring>
+        <name>m_converged</name>
+        <qualifiedname>MinimizerMeshFIRE::m_converged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="158" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_mesh_f_i_r_e_1a5926d38c45e62a12ea4ea349e5cb3bbf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MinimizerMeshFIRE::m_dt</definition>
+        <argsstring></argsstring>
+        <name>m_dt</name>
+        <qualifiedname>MinimizerMeshFIRE::m_dt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="159" column="10" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1acfb1e5007957eb05a3cffdf564b7d1f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MinimizerMeshFIRE::MinimizerMeshFIRE</definition>
+        <argsstring>(SystemClass &amp;system, EvolverClass &amp;evolver)</argsstring>
+        <name>MinimizerMeshFIRE</name>
+        <qualifiedname>MinimizerMeshFIRE::MinimizerMeshFIRE</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <declname>evolver</declname>
+        </param>
+        <briefdescription>
+<para>VertexIntegrator Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="26" column="3" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a427ea2dad3e58d3f25c93ffc3d977bf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MinimizerMeshFIRE::~MinimizerMeshFIRE</definition>
+        <argsstring>()</argsstring>
+        <name>~MinimizerMeshFIRE</name>
+        <qualifiedname>MinimizerMeshFIRE::~MinimizerMeshFIRE</qualifiedname>
+        <briefdescription>
+<para>destructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="33" column="3" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a228e2c3e91eecf0a5bc68debbbc3bbac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>MinimizerMeshFIRE::set_default_properties</qualifiedname>
+        <reimplements refid="class_minimizer_class_1aa7f5d5ca1da9beb144c023d1b38191ce">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="35" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="35" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1af77faca4a35e300953cb62c3bc3d134c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::update_time_step_parameters</definition>
+        <argsstring>(void)</argsstring>
+        <name>update_time_step_parameters</name>
+        <qualifiedname>MinimizerMeshFIRE::update_time_step_parameters</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="59" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a0022e17485a6dfa5e77c1d76583cded5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerMeshFIRE::set_property</qualifiedname>
+        <reimplements refid="class_minimizer_class_1a2f7ddde6e933c4f1e2d899ee1c58a6a6">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="65" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="65" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a5c5f0b269aa859cac7ef554ef6c93946" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MinimizerMeshFIRE::is_satisfied</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_satisfied</name>
+        <qualifiedname>MinimizerMeshFIRE::is_satisfied</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="131" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a713b3fe51f323d7e1cf59f14ceeaa9c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; MinimizerMeshFIRE::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>MinimizerMeshFIRE::get_info</qualifiedname>
+        <reimplements refid="class_minimizer_class_1ada24fbfffd88025dfc96fbfca5873ca8">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="132" column="12" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="132" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a23e0ab6a5d57b6d9ab009a802656c851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>reset</name>
+        <qualifiedname>MinimizerMeshFIRE::reset</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>brief Constant times a vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="148" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.cpp" bodystart="12" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1ae120b778f2823539458f5eab1d738ca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::poststep1</definition>
+        <argsstring>(void)</argsstring>
+        <name>poststep1</name>
+        <qualifiedname>MinimizerMeshFIRE::poststep1</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>brief Constant times 1. vector</para>
+<para>brief Constant times 1. vector</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="149" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.cpp" bodystart="32" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1ab14365d2fd955bab25c58143a5e08b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::poststep2</definition>
+        <argsstring>(void)</argsstring>
+        <name>poststep2</name>
+        <qualifiedname>MinimizerMeshFIRE::poststep2</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>brief Constant times 1. vector</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="150" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.cpp" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a67639a42242392d139388861cfbfca24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::poststep3</definition>
+        <argsstring>(void)</argsstring>
+        <name>poststep3</name>
+        <qualifiedname>MinimizerMeshFIRE::poststep3</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>brief Constant times 1.0 - m_alpha vector</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="151" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.cpp" bodystart="55" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1ac22db26ba2d7eec9847f090c230c2bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MinimizerMeshFIRE::minimize</definition>
+        <argsstring>(void) override</argsstring>
+        <name>minimize</name>
+        <qualifiedname>MinimizerMeshFIRE::minimize</qualifiedname>
+        <reimplements refid="class_minimizer_class_1af9cbb79a3207e438a70388ee0ac7d467">minimize</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="152" column="8" bodyfile="pymembrane/cppmodule/src/minimizer/fire.cpp" bodystart="135" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1abab2164130b7b71ff12f28e9c88f030b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerMeshFIRE::set_property</qualifiedname>
+        <reimplements refid="class_minimizer_class_1abab2164130b7b71ff12f28e9c88f030b">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="64" column="3" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1aa86679fb2e2979ac66565d61668ade46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerMeshFIRE::set_property</qualifiedname>
+        <reimplements refid="class_minimizer_class_1aa86679fb2e2979ac66565d61668ade46">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="64" column="3" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_mesh_f_i_r_e_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerMeshFIRE::set_property</qualifiedname>
+        <reimplements refid="class_minimizer_class_1a2f7ddde6e933c4f1e2d899ee1c58a6a6">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="64" column="3" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles Fast Inertial Relaxation Engine (FIRE) algorithm for minimizing energy. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is essentially a molecular dynamics technique to seek minima allegedly far superior to the conjugate gradient minimization techniques.</para>
+<para>Implementation follows Bitzek, et al., PRL, 2006. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MinimizerClass</label>
+        <link refid="class_minimizer_class"/>
+      </node>
+      <node id="1">
+        <label>MinimizerMeshFIRE</label>
+        <link refid="class_minimizer_mesh_f_i_r_e"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="6">
+        <label>EvolverClass</label>
+        <link refid="class_evolver_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MinimizerClass</label>
+        <link refid="class_minimizer_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>_evolver</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MinimizerMeshFIRE</label>
+        <link refid="class_minimizer_mesh_f_i_r_e"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/minimizer/fire.hpp" line="22" column="1" bodyfile="pymembrane/cppmodule/src/minimizer/fire.hpp" bodystart="23" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_minimizer_class_1a356f9575676c56fbb812dfaec9f1bef5" prot="protected" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>_evolver</name></member>
+      <member refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" prot="protected" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>_system</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a713b3fe51f323d7e1cf59f14ceeaa9c3" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>get_info</name></member>
+      <member refid="class_minimizer_class_1a400fb77de7347a3d847f65e1ffdd57b2" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>get_name</name></member>
+      <member refid="class_minimizer_class_1ac1cac33f95ee3a89cdb2d8110bd08042" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>get_type</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a5c5f0b269aa859cac7ef554ef6c93946" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>is_satisfied</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ab9a09757cf5c8efce35d5a895bb2ec43" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_alpha</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a2677d0476985ea95c45a3981673842ca" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_alpha_start</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a843dcfe2ae50e8fe8ce060b4d34da19e" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_converged</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1aea3f56c8b435fd08a2fe7ea21817d468" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_dE</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a5926d38c45e62a12ea4ea349e5cb3bbf" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_dt</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a76fc91cb951de9e7e283060aab52bfd6" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_dT_max</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1af5504f939093e00de6dd29be5043d1b6" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_dT_set</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a4eab06717f59c4119ae85766c56bef94" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_energy_total</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ace35261dabccc0a711119e0f675dbdd7" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_etol</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a36efd9a795be05e363d529f19acfd79c" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_falpha</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a65819ef92319b65bdec56131cc015fe8" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_fdec</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a90d6ba03f86625c13716351747a1d9ea" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_finc</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a67caff0096a2a9eaa51177ae5228b5fe" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_fnorm</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a61e5c36496d843dd14579ec29c4875bb" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_ftol</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ad71efcda9f34089424e1c8e008b2c333" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_max_iter</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a396256a4ded932e4e0365c918fce9e20" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_n_since_negative</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a5efd1d074de3d42f263fdadc6960d75f" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_n_since_start</name></member>
+      <member refid="class_minimizer_class_1ab0889ed7336b586efc598b82e26de354" prot="protected" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_name</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1afba51767c116da5e0dbc03bd44991ddd" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_nmin</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a64964d2d2983ae1c776b5a02a41a487f" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_old_energy</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a2926ee1c9cd1af43e2fd04da400cf11d" prot="private" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_run_minsteps</name></member>
+      <member refid="class_minimizer_class_1a5bba99f95b075cd9a5cab85624ae1dad" prot="protected" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>m_type</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ac22db26ba2d7eec9847f090c230c2bc1" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>minimize</name></member>
+      <member refid="class_minimizer_class_1a86cb59c64fdab96b3536746b5151e259" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>MinimizerClass</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1acfb1e5007957eb05a3cffdf564b7d1f0" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>MinimizerMeshFIRE</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ae120b778f2823539458f5eab1d738ca6" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>poststep1</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1ab14365d2fd955bab25c58143a5e08b21" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>poststep2</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a67639a42242392d139388861cfbfca24" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>poststep3</name></member>
+      <member refid="class_minimizer_class_1a0aa06712a4eb644f2dbddc27891243a1" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>print_warning_calling</name></member>
+      <member refid="class_minimizer_class_1a13a7b0d980b839cab1bd7c0c59e6e6ac" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>print_warning_property_name</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a23e0ab6a5d57b6d9ab009a802656c851" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>reset</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a228e2c3e91eecf0a5bc68debbbc3bbac" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>set_default_properties</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a0022e17485a6dfa5e77c1d76583cded5" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>set_property</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1abab2164130b7b71ff12f28e9c88f030b" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>set_property</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1aa86679fb2e2979ac66565d61668ade46" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>set_property</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>set_property</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1af77faca4a35e300953cb62c3bc3d134c" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>update_time_step_parameters</name></member>
+      <member refid="class_minimizer_class_1a9bcd8631ad7975e528f6825722f899cb" prot="public" virt="virtual"><scope>MinimizerMeshFIRE</scope><name>~MinimizerClass</name></member>
+      <member refid="class_minimizer_mesh_f_i_r_e_1a427ea2dad3e58d3f25c93ffc3d977bf2" prot="public" virt="non-virtual"><scope>MinimizerMeshFIRE</scope><name>~MinimizerMeshFIRE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

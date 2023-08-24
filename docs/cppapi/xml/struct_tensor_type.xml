@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_tensor_type" kind="struct" language="C++" prot="public">
+    <compoundname>TensorType</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_tensor_type_1a88c2e58287244736961ff715cc4d2718" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::xx</definition>
+        <argsstring></argsstring>
+        <name>xx</name>
+        <qualifiedname>TensorType::xx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="7" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a1680dc1bd8cfc6a4591b36e53692dc7c" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::xy</definition>
+        <argsstring></argsstring>
+        <name>xy</name>
+        <qualifiedname>TensorType::xy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="10" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a00d81cddc6c5047eded72abdd5586ffb" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::xz</definition>
+        <argsstring></argsstring>
+        <name>xz</name>
+        <qualifiedname>TensorType::xz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="13" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1af4ce05508c83d8eb5690a222d7907d73" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::yx</definition>
+        <argsstring></argsstring>
+        <name>yx</name>
+        <qualifiedname>TensorType::yx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="16" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a815b4e75e7d28627f4586342702234c5" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::yy</definition>
+        <argsstring></argsstring>
+        <name>yy</name>
+        <qualifiedname>TensorType::yy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="19" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1affafded5fe76da1c91441a185d8269f5" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::yz</definition>
+        <argsstring></argsstring>
+        <name>yz</name>
+        <qualifiedname>TensorType::yz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="22" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a7eaa11fb3c963986d2030cd590fb715e" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::zx</definition>
+        <argsstring></argsstring>
+        <name>zx</name>
+        <qualifiedname>TensorType::zx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="25" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a0c4910e5f1d1645b3228b97a2723737f" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::zy</definition>
+        <argsstring></argsstring>
+        <name>zy</name>
+        <qualifiedname>TensorType::zy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="28" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tensor_type_1a26ca2a745b90647e91424ed446f1f447" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T TensorType&lt; T &gt;::zz</definition>
+        <argsstring></argsstring>
+        <name>zz</name>
+        <qualifiedname>TensorType::zz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="53" column="31" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="51" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="52" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_tensor_type_1a88c2e58287244736961ff715cc4d2718" prot="public" virt="non-virtual"><scope>TensorType</scope><name>xx</name></member>
+      <member refid="struct_tensor_type_1a1680dc1bd8cfc6a4591b36e53692dc7c" prot="public" virt="non-virtual"><scope>TensorType</scope><name>xy</name></member>
+      <member refid="struct_tensor_type_1a00d81cddc6c5047eded72abdd5586ffb" prot="public" virt="non-virtual"><scope>TensorType</scope><name>xz</name></member>
+      <member refid="struct_tensor_type_1af4ce05508c83d8eb5690a222d7907d73" prot="public" virt="non-virtual"><scope>TensorType</scope><name>yx</name></member>
+      <member refid="struct_tensor_type_1a815b4e75e7d28627f4586342702234c5" prot="public" virt="non-virtual"><scope>TensorType</scope><name>yy</name></member>
+      <member refid="struct_tensor_type_1affafded5fe76da1c91441a185d8269f5" prot="public" virt="non-virtual"><scope>TensorType</scope><name>yz</name></member>
+      <member refid="struct_tensor_type_1a7eaa11fb3c963986d2030cd590fb715e" prot="public" virt="non-virtual"><scope>TensorType</scope><name>zx</name></member>
+      <member refid="struct_tensor_type_1a0c4910e5f1d1645b3228b97a2723737f" prot="public" virt="non-virtual"><scope>TensorType</scope><name>zy</name></member>
+      <member refid="struct_tensor_type_1a26ca2a745b90647e91424ed446f1f447" prot="public" virt="non-virtual"><scope>TensorType</scope><name>zz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

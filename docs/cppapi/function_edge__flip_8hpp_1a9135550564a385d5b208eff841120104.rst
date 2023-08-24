@@ -1,0 +1,14 @@
+.. _exhale_function_edge__flip_8hpp_1a9135550564a385d5b208eff841120104:
+
+Function pymemb::EdgeFlip_lambda
+================================
+
+- Defined in :ref:`file_pymembrane_cppmodule_src_mesh_edge_flip.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pymemb::EdgeFlip_lambda(const int, const bool, HE_FaceProp *, HE_VertexProp *, HE_EdgeProp *, HE_HalfEdgeProp *, const BoxType)
+   :project: pymembrane

@@ -1,0 +1,896 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="globaltypes_8hpp" kind="file" language="C++">
+    <compoundname>globaltypes.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">math.h</includes>
+    <includedby refid="box_8hpp" local="yes">pymembrane/cppmodule/src/box/box.hpp</includedby>
+    <includedby refid="pbc_8hpp" local="yes">pymembrane/cppmodule/src/box/pbc.hpp</includedby>
+    <includedby refid="computemesh_8hpp" local="yes">pymembrane/cppmodule/src/compute/computemesh.hpp</includedby>
+    <includedby refid="constraintclass_8hpp" local="yes">pymembrane/cppmodule/src/constraints/constraintclass.hpp</includedby>
+    <includedby refid="dumper_8cpp" local="yes">pymembrane/cppmodule/src/dumper/dumper.cpp</includedby>
+    <includedby refid="dumper_8hpp" local="yes">pymembrane/cppmodule/src/dumper/dumper.hpp</includedby>
+    <includedby refid="dumper__vis_8cpp" local="yes">pymembrane/cppmodule/src/dumper/dumper_vis.cpp</includedby>
+    <includedby refid="integratorclass_8hpp" local="yes">pymembrane/cppmodule/src/integrators/integratorclass.hpp</includedby>
+    <includedby refid="montecarlointegrator_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</includedby>
+    <includedby refid="montercarlo__flip__edge_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</includedby>
+    <includedby refid="montercarlo__spin__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</includedby>
+    <includedby refid="montercarlo__swap__edge_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</includedby>
+    <includedby refid="montercarlo__swap__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</includedby>
+    <includedby refid="montercarlo__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</includedby>
+    <includedby refid="computegeometry_8hpp" local="yes">pymembrane/cppmodule/src/mesh/computegeometry.hpp</includedby>
+    <includedby refid="halfedges_8hpp" local="yes">pymembrane/cppmodule/src/mesh/halfedges.hpp</includedby>
+    <includedby refid="meshoperations_8hpp" local="yes">pymembrane/cppmodule/src/mesh/meshoperations.hpp</includedby>
+    <includedby refid="meshproperties_8hpp" local="yes">pymembrane/cppmodule/src/mesh/meshproperties.hpp</includedby>
+    <includedby refid="minimizerclass_8hpp" local="yes">pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</includedby>
+    <includedby refid="computeforceclass_8hpp" local="yes">pymembrane/cppmodule/src/potentials/computeforceclass.hpp</includedby>
+    <includedby refid="read__mesh_8hpp" local="yes">pymembrane/cppmodule/src/read_mesh.hpp</includedby>
+    <includedby refid="pybind__export__types_8hpp" local="yes">pymembrane/cppmodule/src/types/pybind_export_types.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>pymembrane/cppmodule/src/box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pymembrane/cppmodule/src/box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>pymembrane/cppmodule/src/box/pybind_export_box.hpp</label>
+        <link refid="pybind__export__box_8hpp_source"/>
+      </node>
+      <node id="40">
+        <label>pymembrane/cppmodule/src/compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</label>
+        <link refid="pybind__export__compute_8hpp_source"/>
+      </node>
+      <node id="31">
+        <label>pymembrane/cppmodule/src/constraints/constraintarea.hpp</label>
+        <link refid="constraintarea_8hpp_source"/>
+      </node>
+      <node id="32">
+        <label>pymembrane/cppmodule/src/constraints/constraintclass.hpp</label>
+        <link refid="constraintclass_8hpp_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>pymembrane/cppmodule/src/constraints/constraintvolume.hpp</label>
+        <link refid="constraintvolume_8hpp_source"/>
+      </node>
+      <node id="41">
+        <label>pymembrane/cppmodule/src/dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp</label>
+        <link refid="pybind__export__dumper_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>pymembrane/cppmodule/src/evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</label>
+        <link refid="pybind__export__evolver_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.hpp</label>
+        <link refid="integrator__brownian__vertex_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>pymembrane/cppmodule/src/integrators/integrator_verlet_vertex.hpp</label>
+        <link refid="integrator__verlet__vertex_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>pymembrane/cppmodule/src/integrators/integratorclass.hpp</label>
+        <link refid="integratorclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</label>
+        <link refid="montercarlo__flip__edge_8hpp_source"/>
+      </node>
+      <node id="13">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</label>
+        <link refid="montercarlo__spin__vertex_8hpp_source"/>
+      </node>
+      <node id="14">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</label>
+        <link refid="montercarlo__swap__edge_8hpp_source"/>
+      </node>
+      <node id="15">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</label>
+        <link refid="montercarlo__swap__vertex_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</label>
+        <link refid="montercarlo__vertex_8hpp"/>
+      </node>
+      <node id="17">
+        <label>pymembrane/cppmodule/src/mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>pymembrane/cppmodule/src/mesh/edge_flip.hpp</label>
+        <link refid="edge__flip_8hpp_source"/>
+      </node>
+      <node id="43">
+        <label>pymembrane/cppmodule/src/mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>pymembrane/cppmodule/src/mesh/meshoperations.hpp</label>
+        <link refid="meshoperations_8hpp_source"/>
+      </node>
+      <node id="44">
+        <label>pymembrane/cppmodule/src/mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>pymembrane/cppmodule/src/mesh/meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>pymembrane/cppmodule/src/mesh/pybind_export_mesh.hpp</label>
+        <link refid="pybind__export__mesh_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>pymembrane/cppmodule/src/minimizer/fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+      </node>
+      <node id="35">
+        <label>pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</label>
+        <link refid="minimizerclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>pymembrane/cppmodule/src/potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>pymembrane/cppmodule/src/potentials/potentialBending.hpp</label>
+        <link refid="potential_bending_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pymembrane/cppmodule/src/potentials/potentialBendingHelfrich.hpp</label>
+        <link refid="potential_bending_helfrich_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</label>
+        <link refid="potential_cauchy_green_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</label>
+        <link refid="potential_constant_area_triangle_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</label>
+        <link refid="potential_dihedral_harmonics_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</label>
+        <link refid="potential_harmonic_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</label>
+        <link refid="potential_harmonic_sloutskin_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>pymembrane/cppmodule/src/potentials/potentialIsing.hpp</label>
+        <link refid="potential_ising_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>pymembrane/cppmodule/src/potentials/potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</label>
+        <link refid="potential_substrate_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>pymembrane/cppmodule/src/read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>pymembrane/cppmodule/src/system/pybind_export_system.hpp</label>
+        <link refid="pybind__export__system_8hpp_source"/>
+      </node>
+      <node id="30">
+        <label>pymembrane/cppmodule/src/system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>pymembrane/cppmodule/src/types/pybind_export_types.hpp</label>
+        <link refid="pybind__export__types_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structxy_type" prot="public">xyType</innerclass>
+    <innerclass refid="struct_tensor_type" prot="public">TensorType</innerclass>
+    <innerclass refid="structforce_matrix" prot="public">forceMatrix</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="globaltypes_8hpp_1aead13ecbc45a775b5188eb6c2398bba6" prot="public" static="no">
+        <name>BIG_ENERGY_LIMIT</name>
+        <initializer>1e15</initializer>
+        <briefdescription>
+<para>Effectively acts as infinity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="31" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a7ef39629eaffde5edde41d12aee110e9" prot="public" static="no">
+        <name>defPI</name>
+        <initializer>3.141592653589793</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="32" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a3acffbd305ee72dcd4593c0d8af64a4f" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &lt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="33" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &gt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="34" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1ae8b243addbf44089525434d278724a00" prot="public" static="no">
+        <name>vset</name>
+        <param><defname>v</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (v.x = val),     \
+        (v.y = val), \
+        (v.z = val)</initializer>
+        <briefdescription>
+<para>Vector addition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="58" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a2bf259b1a89048663bd77b10aa6a940c" prot="public" static="no">
+        <name>vsum</name>
+        <param><defname>v</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>v2</defname></param>
+        <initializer>    (v.x = v1.x + v2.x),     \
+        (v.y = v1.y + v2.y), \
+        (v.z = v1.z + v2.z)</initializer>
+        <briefdescription>
+<para>Vector addition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="64" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1aea350326529792709751625bd70e1f94" prot="public" static="no">
+        <name>vsub</name>
+        <param><defname>v</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>v2</defname></param>
+        <initializer>    (v.x = v1.x - v2.x),     \
+        (v.y = v1.y - v2.y), \
+        (v.z = v1.z - v2.z)</initializer>
+        <briefdescription>
+<para>Vector subtraction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="70" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a909f1baa588275e828e8770e224502f0" prot="public" static="no">
+        <name>vdot</name>
+        <param><defname>v1</defname></param>
+        <param><defname>v2</defname></param>
+        <initializer>(v1.x * v2.x + v1.y * v2.y + v1.z * v2.z)</initializer>
+        <briefdescription>
+<para>Vector dot product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="76" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a5886e7212d7b5a4c93ce0e62e40efba7" prot="public" static="no">
+        <name>vcross</name>
+        <param><defname>v</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>v2</defname></param>
+        <initializer>    (v.x = v1.y * v2.z - v1.z * v2.y),     \
+        (v.y = v1.z * v2.x - v1.x * v2.z), \
+        (v.z = v1.x * v2.y - v1.y * v2.x)</initializer>
+        <briefdescription>
+<para>Vector cross product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="79" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1ae0530566347ede8987efd13ce67116fc" prot="public" static="no">
+        <name>aXvec</name>
+        <param><defname>a</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>    (v.x = (a)*v.x),     \
+        (v.y = (a)*v.y), \
+        (v.z = (a)*v.z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>brief Constant times a vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="85" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1aa8c9f07207827310c7f79cadf8a0c7c8" prot="public" static="no">
+        <name>Xvec1</name>
+        <param><defname>v</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>v1</defname></param>
+        <initializer>  (v.x = (a)*v1.x),     \
+      (v.y = (a)*v1.y), \
+      (v.z = (a)*v1.z) /** brief Constant times a vector **/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="90" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a6bdf714f0e556c91e8125b6c939a83c0" prot="public" static="no">
+        <name>Xvec2</name>
+        <param><defname>v</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>v2</defname></param>
+        <initializer>  (v.x = (a)*v1.x + (b)*v2.x),     \
+      (v.y = (a)*v1.y + (b)*v2.y), \
+      (v.z = (a)*v1.z + (b)*v2.z) /** brief Constant times a vector **/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="95" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a1c315a2e32da20ede999fc811bf55122" prot="public" static="no">
+        <name>Xvec3</name>
+        <param><defname>v</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>v2</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>v3</defname></param>
+        <initializer>      (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x),     \
+      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y), \
+      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z) /** brief Constant times a vector **/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="100" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globaltypes_8hpp_1a45cece0c685bd03ee79219ef02f0707c" prot="public" static="no">
+        <name>Xvec4</name>
+        <param><defname>v</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>v1</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>v2</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>v3</defname></param>
+        <param><defname>d</defname></param>
+        <param><defname>v4</defname></param>
+        <initializer>  (v.x = (a)*v1.x + (b)*v2.x + (c)*v3.x + (d)*v4.x),     \
+      (v.y = (a)*v1.y + (b)*v2.y + (c)*v3.y + (d)*v4.y), \
+      (v.z = (a)*v1.z + (b)*v2.z + (c)*v3.z + (d)*v4.z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="105" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a" prot="public" static="no">
+        <type>double</type>
+        <definition>using real =  double</definition>
+        <argsstring></argsstring>
+        <name>real</name>
+        <briefdescription>
+<para>real type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="37" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10" prot="public" static="no">
+        <type><ref refid="structxy_type" kindref="compound">xyType</ref>&lt; real &gt;</type>
+        <definition>using real3 =  xyType&lt;real&gt;</definition>
+        <argsstring></argsstring>
+        <name>real3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="46" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="globaltypes_8hpp_1af83700198ac00126d22152cf1545f0b9" prot="public" static="no">
+        <type><ref refid="structxy_type" kindref="compound">xyType</ref>&lt; int &gt;</type>
+        <definition>using inth3 =  xyType&lt;int&gt;</definition>
+        <argsstring></argsstring>
+        <name>inth3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="47" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="globaltypes_8hpp_1afe2370c07164ed241185946d72ac0eb8" prot="public" static="no">
+        <type><ref refid="structxy_type" kindref="compound">xyType</ref>&lt; bool &gt;</type>
+        <definition>using bool3 =  xyType&lt;bool&gt;</definition>
+        <argsstring></argsstring>
+        <name>bool3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="48" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb" prot="public" static="no">
+        <type><ref refid="struct_tensor_type" kindref="compound">TensorType</ref>&lt; real &gt;</type>
+        <definition>using realTensor =  TensorType&lt;real&gt;</definition>
+        <argsstring></argsstring>
+        <name>realTensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="55" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>Dr.<sp/>Daniel<sp/>Alejandro<sp/>Matoz<sp/>Fernandez<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fdamatoz@gmail.com<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>SOFTWARE.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__globaltypes_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__globaltypes_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIG_ENERGY_LIMIT<sp/>1e15<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>defPI<sp/>3.141592653589793</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(a,<sp/>b)<sp/>(((a)<sp/>&lt;<sp/>(b))<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(a,<sp/>b)<sp/>(((a)<sp/>&gt;<sp/>(b))<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">real<sp/>=<sp/>double;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="41" refid="structxy_type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxy_type" kindref="compound">xyType</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>x,<sp/>y,<sp/>z,<sp/>w;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//using<sp/>real3<sp/>=<sp/>double4;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structxy_type" kindref="compound">real3</ref><sp/>=<sp/><ref refid="structxy_type" kindref="compound">xyType&lt;real&gt;</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structxy_type" kindref="compound">inth3</ref><sp/>=<sp/><ref refid="structxy_type" kindref="compound">xyType&lt;int&gt;</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structxy_type" kindref="compound">bool3</ref><sp/>=<sp/><ref refid="structxy_type" kindref="compound">xyType&lt;bool&gt;</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="51" refid="struct_tensor_type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_tensor_type" kindref="compound">TensorType</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>xx,<sp/>xy,<sp/>xz,<sp/>yx,<sp/>yy,<sp/>yz,<sp/>zx,<sp/>zy,<sp/>zz;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="struct_tensor_type" kindref="compound">realTensor</ref><sp/>=<sp/><ref refid="struct_tensor_type" kindref="compound">TensorType&lt;real&gt;</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vset(v,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>val),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>val),<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>val)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vsum(v,<sp/>v1,<sp/>v2)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>v1.x<sp/>+<sp/>v2.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>v1.y<sp/>+<sp/>v2.y),<sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>v1.z<sp/>+<sp/>v2.z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vsub(v,<sp/>v1,<sp/>v2)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>v1.x<sp/>-<sp/>v2.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>v1.y<sp/>-<sp/>v2.y),<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>v1.z<sp/>-<sp/>v2.z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vdot(v1,<sp/>v2)<sp/>(v1.x<sp/>*<sp/>v2.x<sp/>+<sp/>v1.y<sp/>*<sp/>v2.y<sp/>+<sp/>v1.z<sp/>*<sp/>v2.z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vcross(v,<sp/>v1,<sp/>v2)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>v1.y<sp/>*<sp/>v2.z<sp/>-<sp/>v1.z<sp/>*<sp/>v2.y),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>v1.z<sp/>*<sp/>v2.x<sp/>-<sp/>v1.x<sp/>*<sp/>v2.z),<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>v1.x<sp/>*<sp/>v2.y<sp/>-<sp/>v1.y<sp/>*<sp/>v2.x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>aXvec(a,<sp/>v)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>(a)*v.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>(a)*v.y),<sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>(a)*v.z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Xvec1(v,<sp/>a,<sp/>v1)<sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/>(v.x<sp/>=<sp/>(a)*v1.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>(a)*v1.y),<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>(a)*v1.z)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Xvec2(v,<sp/>a,<sp/>v1,<sp/>b,<sp/>v2)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/>(v.x<sp/>=<sp/>(a)*v1.x<sp/>+<sp/>(b)*v2.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>(a)*v1.y<sp/>+<sp/>(b)*v2.y),<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>(a)*v1.z<sp/>+<sp/>(b)*v2.z)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Xvec3(v,<sp/>a,<sp/>v1,<sp/>b,<sp/>v2,<sp/>c,<sp/>v3)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.x<sp/>=<sp/>(a)*v1.x<sp/>+<sp/>(b)*v2.x<sp/>+<sp/>(c)*v3.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>(a)*v1.y<sp/>+<sp/>(b)*v2.y<sp/>+<sp/>(c)*v3.y),<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>(a)*v1.z<sp/>+<sp/>(b)*v2.z<sp/>+<sp/>(c)*v3.z)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Xvec4(v,<sp/>a,<sp/>v1,<sp/>b,<sp/>v2,<sp/>c,<sp/>v3,<sp/>d,<sp/>v4)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/>(v.x<sp/>=<sp/>(a)*v1.x<sp/>+<sp/>(b)*v2.x<sp/>+<sp/>(c)*v3.x<sp/>+<sp/>(d)*v4.x),<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.y<sp/>=<sp/>(a)*v1.y<sp/>+<sp/>(b)*v2.y<sp/>+<sp/>(c)*v3.y<sp/>+<sp/>(d)*v4.y),<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(v.z<sp/>=<sp/>(a)*v1.z<sp/>+<sp/>(b)*v2.z<sp/>+<sp/>(c)*v3.z<sp/>+<sp/>(d)*v4.z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="structforce_matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/>forceM11,<sp/>forceM12,<sp/>forceM13;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/><ref refid="structforce_matrix" kindref="compound">forceMatrix</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/types/globaltypes.hpp"/>
+  </compounddef>
+</doxygen>

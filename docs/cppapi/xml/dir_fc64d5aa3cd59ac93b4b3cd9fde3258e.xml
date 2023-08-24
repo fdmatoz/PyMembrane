@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_fc64d5aa3cd59ac93b4b3cd9fde3258e" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/utils</compoundname>
+    <innerfile refid="fromdicttovec_8hpp">fromdicttovec.hpp</innerfile>
+    <innerfile refid="fromstring_8hpp">fromstring.hpp</innerfile>
+    <innerfile refid="tofile_8hpp">tofile.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/utils/"/>
+  </compounddef>
+</doxygen>

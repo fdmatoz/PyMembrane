@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_monte_carlo_integrator_swap_edge" kind="class" language="C++" prot="public">
+    <compoundname>MonteCarloIntegratorSwapEdge</compoundname>
+    <basecompoundref refid="class_monte_carlo_integrator" prot="public" virt="non-virtual">MonteCarloIntegrator</basecompoundref>
+    <includes refid="montercarlo__swap__edge_8hpp" local="no">montercarlo_swap_edge.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1ae89afbf1d4963081df1cbfc6db36a2be" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorSwapEdge::m_dx</definition>
+        <argsstring></argsstring>
+        <name>m_dx</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::m_dx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="99" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1a0f55c2a506359a899d8f81a953f51890" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorSwapEdge::m_dy</definition>
+        <argsstring></argsstring>
+        <name>m_dy</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::m_dy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="99" column="15" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1a387992392282b5e6f9361950e660b8ad" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorSwapEdge::m_dz</definition>
+        <argsstring></argsstring>
+        <name>m_dz</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::m_dz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="99" column="20" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1a9d913cd8a9cdb0ffa644eb03aad96b99" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MonteCarloIntegratorSwapEdge::m_seed</definition>
+        <argsstring></argsstring>
+        <name>m_seed</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::m_seed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="100" column="16" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1ab29f62bbf4da1394e72cd9b3e2a4b489" prot="private" static="no" mutable="no">
+        <type>RNG_ptr</type>
+        <definition>RNG_ptr MonteCarloIntegratorSwapEdge::m_rng</definition>
+        <argsstring></argsstring>
+        <name>m_rng</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::m_rng</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="101" column="11" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1ad9f2465f79f583738bef48e91f7778d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MonteCarloIntegratorSwapEdge::stochastic_tunnelling</definition>
+        <argsstring></argsstring>
+        <name>stochastic_tunnelling</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::stochastic_tunnelling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="102" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1a88a10056ce84334c3b7f389426a1daef" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorSwapEdge::stochastic_gamma</definition>
+        <argsstring></argsstring>
+        <name>stochastic_gamma</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::stochastic_gamma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="103" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_swap_edge_1abacd837137db11bb435dda47da7c1923" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; bool &gt;</type>
+        <definition>pymemb::vector&lt;bool&gt; MonteCarloIntegratorSwapEdge::freezed_edge</definition>
+        <argsstring></argsstring>
+        <name>freezed_edge</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::freezed_edge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="104" column="18" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1ade6579744c653fd010aed7fd1e6e34be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorSwapEdge::MonteCarloIntegratorSwapEdge</definition>
+        <argsstring>(SystemClass &amp;system, VertexCompute &amp;potentials)</argsstring>
+        <name>MonteCarloIntegratorSwapEdge</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::MonteCarloIntegratorSwapEdge</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>VertexCompute &amp;</type>
+          <declname>potentials</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="30" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1af857b840402795dbf0909a648510e5e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorSwapEdge::~MonteCarloIntegratorSwapEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~MonteCarloIntegratorSwapEdge</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::~MonteCarloIntegratorSwapEdge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="36" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1a25fc3f36de395f140eda72e99ef11986" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSwapEdge::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_default_properties</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract set parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>default value</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="38" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="38" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1abb7101f9032ead9ba35be3e4b7d6858c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSwapEdge::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="50" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="50" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1a1f023ea160b382e1711604d38be17881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorSwapEdge::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="82" column="8" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1aafce0b15fcd226806b36af061ddafa87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int MonteCarloIntegratorSwapEdge::integrate</definition>
+        <argsstring>(void) override</argsstring>
+        <name>integrate</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::integrate</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e">integrate</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract integrator function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of successful attempts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="96" column="7" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.cpp" bodystart="3" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a3deefe8007395a52014d1d35b6f03bb4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="49" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="49" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_swap_edge_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorSwapEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="49" column="3" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles Metropolis type Monte Carlo algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In this algorithm, one Monte Carlo step is considered as attempting a swap two edges at random. One sweep consists of attempting moves on each edge in the membrane. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorSwapEdge</label>
+        <link refid="class_monte_carlo_integrator_swap_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorSwapEdge</label>
+        <link refid="class_monte_carlo_integrator_swap_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" line="27" column="1" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp" bodystart="28" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>_potentials</name></member>
+      <member refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>_system</name></member>
+      <member refid="class_monte_carlo_integrator_1a8e8e222fe336c2f56235df0035f8d5fe" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>ComputeEnergyFromEdge</name></member>
+      <member refid="class_monte_carlo_integrator_1a634e45ff52b7b8bd7a35f3828d47ea83" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>ComputeEnergyFromFace</name></member>
+      <member refid="class_monte_carlo_integrator_1a27b6c559a56e29647717d0ba2a4c6093" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>ComputeEnergyFromVertex</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1abacd837137db11bb435dda47da7c1923" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>freezed_edge</name></member>
+      <member refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>get_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1aabaa7b2836fc24403ea07ba44507d1bf" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>get_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>get_name</name></member>
+      <member refid="class_monte_carlo_integrator_1aa1c25fac86c042bf1c82d099c4d56221" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>get_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>get_type</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1aafce0b15fcd226806b36af061ddafa87" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>integrate</name></member>
+      <member refid="class_monte_carlo_integrator_1ad8929da67aacbff438f417d7aeab410c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1ae89afbf1d4963081df1cbfc6db36a2be" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>m_dx</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a0f55c2a506359a899d8f81a953f51890" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>m_dy</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a387992392282b5e6f9361950e660b8ad" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>m_dz</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1ab29f62bbf4da1394e72cd9b3e2a4b489" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>m_rng</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a9d913cd8a9cdb0ffa644eb03aad96b99" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>m_seed</name></member>
+      <member refid="class_monte_carlo_integrator_1a939530773d57874ca1c96625707c4ac3" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1ade6579744c653fd010aed7fd1e6e34be" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>MonteCarloIntegratorSwapEdge</name></member>
+      <member refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>name</name></member>
+      <member refid="class_monte_carlo_integrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="class_monte_carlo_integrator_1ad92127d5579f33dc8207a7d8921c5285" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>print_warning_calling</name></member>
+      <member refid="class_monte_carlo_integrator_1a42b870221605a6f6a71636470348c119" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>print_warning_property_name</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a25fc3f36de395f140eda72e99ef11986" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_default_properties</name></member>
+      <member refid="class_monte_carlo_integrator_1a1f5b4442efc847425dd209988eca7cd8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1a7714495d7d5f4c00e04ca25b3761e5a8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1abb7101f9032ead9ba35be3e4b7d6858c" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a1f023ea160b382e1711604d38be17881" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>set_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1a88a10056ce84334c3b7f389426a1daef" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>stochastic_gamma</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1ad9f2465f79f583738bef48e91f7778d3" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>stochastic_tunnelling</name></member>
+      <member refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>T</name></member>
+      <member refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>type</name></member>
+      <member refid="class_monte_carlo_integrator_1a73f58c5ac0533462441070bd60008418" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>update_temperature_parameters</name></member>
+      <member refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" prot="public" virt="virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>~MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_swap_edge_1af857b840402795dbf0909a648510e5e8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorSwapEdge</scope><name>~MonteCarloIntegratorSwapEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

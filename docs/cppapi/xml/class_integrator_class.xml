@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_integrator_class" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IntegratorClass</compoundname>
+    <derivedcompoundref refid="class_integrator_brownian_mesh_vertex" prot="public" virt="non-virtual">IntegratorBrownianMeshVertex</derivedcompoundref>
+    <derivedcompoundref refid="class_integrator_velocity_verlet_mesh_vertex" prot="public" virt="non-virtual">IntegratorVelocityVerletMeshVertex</derivedcompoundref>
+    <includes refid="integratorclass_8hpp" local="no">integratorclass.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_integrator_class_1a4bf9529b0960bc8cf4fef5dbe61e393a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; IntegratorClass::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>IntegratorClass::_system</qualifiedname>
+        <briefdescription>
+<para>reference to system class where the box and particles are stored </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="129" column="15" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_class_1a9f453b1f691c6ab03d8da9f5867ee9b6" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntegratorClass::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>IntegratorClass::name</qualifiedname>
+        <briefdescription>
+<para>Integrator name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="130" column="15" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_class_1a3e60885c6fc740147829d36930a39c6e" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntegratorClass::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>IntegratorClass::type</qualifiedname>
+        <briefdescription>
+<para>integrator type, active, torque, etc </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="131" column="15" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_class_1a51fe9c6c93dae5c599348cf923eba5a2" prot="protected" static="no" mutable="no">
+        <type>real</type>
+        <definition>real IntegratorClass::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <qualifiedname>IntegratorClass::T</qualifiedname>
+        <briefdescription>
+<para>Temperature of the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="132" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_class_1acd318003c4175adc4e578adc34063038" prot="protected" static="no" mutable="no">
+        <type>real</type>
+        <definition>real IntegratorClass::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <qualifiedname>IntegratorClass::dt</qualifiedname>
+        <briefdescription>
+<para>Time Step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="133" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_integrator_class_1a8d9f273a3158705295ad3a3d9107c2c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntegratorClass::IntegratorClass</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>IntegratorClass</name>
+        <qualifiedname>IntegratorClass::IntegratorClass</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_integrator_class" kindref="compound">IntegratorClass</ref> Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>potentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the loaded potentials </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the integrator parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="52" column="3" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a37c96d3eccd2791ad550921d8f5421dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual IntegratorClass::~IntegratorClass</definition>
+        <argsstring>()</argsstring>
+        <name>~IntegratorClass</name>
+        <qualifiedname>IntegratorClass::~IntegratorClass</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_integrator_class" kindref="compound">IntegratorClass</ref> Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="58" column="11" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1aab012c78f2e31344be20d41845d2e044" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::prestep</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>prestep</name>
+        <qualifiedname>IntegratorClass::prestep</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1acdc73acd32f01b4058bb75af8159e487">prestep</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1a3badb600976027f8aedf00aef6fcf5e8">prestep</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract pre step integrator function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="65" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a17301c189d27dc4b40b5baf13bfe6436" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::poststep</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>poststep</name>
+        <qualifiedname>IntegratorClass::poststep</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a05afb2c798c7411fe8a78c5e72c947b6">poststep</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1ad75edf93bb13084d6c9aae1f9de152d3">poststep</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract pre step integrator function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="70" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a85623a54c904010647913847b5cfb30b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntegratorClass::set_temperature</definition>
+        <argsstring>(const real &amp;_T)</argsstring>
+        <name>set_temperature</name>
+        <qualifiedname>IntegratorClass::set_temperature</qualifiedname>
+        <param>
+          <type>const real &amp;</type>
+          <declname>_T</declname>
+        </param>
+        <briefdescription>
+<para>set the integration temperature </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="75" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a6977fe583409c3da1876206cd3e5d923" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::update_temperature_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>update_temperature_parameters</name>
+        <qualifiedname>IntegratorClass::update_temperature_parameters</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a49a638d584cbba90674e8e0cbfb6b25d">update_temperature_parameters</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1a7d90c0c4d4555a90524618d3105b3cc7">update_temperature_parameters</reimplementedby>
+        <briefdescription>
+<para>update the parameters that depend on the temperature </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="84" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a8da98239a27db6466c4d25b970b90ea0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real IntegratorClass::get_temperature</definition>
+        <argsstring>(void) const</argsstring>
+        <name>get_temperature</name>
+        <qualifiedname>IntegratorClass::get_temperature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the temperature for the integrator object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="90" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1abcf54f5c8e94f631df699a4f6ee35add" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::set_time_step</definition>
+        <argsstring>(const real &amp;_dt)</argsstring>
+        <name>set_time_step</name>
+        <qualifiedname>IntegratorClass::set_time_step</qualifiedname>
+        <param>
+          <type>const real &amp;</type>
+          <declname>_dt</declname>
+        </param>
+        <briefdescription>
+<para>set the integration temperature </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="95" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="95" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a6e15091f8104a2423240a9076a0ebba6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::update_time_step_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>update_time_step_parameters</name>
+        <qualifiedname>IntegratorClass::update_time_step_parameters</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a035fbfa69aa067f9eaadf708b5466c1b">update_time_step_parameters</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1addbba769a88cf72da8670c79b5b1f443">update_time_step_parameters</reimplementedby>
+        <briefdescription>
+<para>update the parameters that depend on the time step </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="104" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a05ec386683b496fc9985dffe2633ddf2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real IntegratorClass::get_time_step</definition>
+        <argsstring>(void) const</argsstring>
+        <name>get_time_step</name>
+        <qualifiedname>IntegratorClass::get_time_step</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the time step for the integrator object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="109" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a1a0e8d9a534212fe2f6bda50c08e0acf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string IntegratorClass::get_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_name</name>
+        <qualifiedname>IntegratorClass::get_name</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the name object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="114" column="15" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a43aebaba805eb6e4671ad143961103d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string IntegratorClass::get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_type</name>
+        <qualifiedname>IntegratorClass::get_type</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="119" column="15" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a660acc23420e6e817fc76b39992d917f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::set_default_properties</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>IntegratorClass::set_default_properties</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a9eb39f0260cf17a6f52f5bbed5c50fa0">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1a1d8242d4d73ed83500b6407a80c51425">set_default_properties</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="121" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a37abc32e56f9d4542c23cc7d56381e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>IntegratorClass::set_property</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a37abc32e56f9d4542c23cc7d56381e86">set_property</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1a37abc32e56f9d4542c23cc7d56381e86">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="122" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a0aeef46e406861569649928ed2dcc619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>IntegratorClass::set_property</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1a0aeef46e406861569649928ed2dcc619">set_property</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1a0aeef46e406861569649928ed2dcc619">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="123" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1ace813f16352c0ffa60402be45922741f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IntegratorClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>IntegratorClass::set_property</qualifiedname>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1ace813f16352c0ffa60402be45922741f">set_property</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1ace813f16352c0ffa60402be45922741f">set_property</reimplementedby>
+        <reimplementedby refid="class_integrator_brownian_mesh_vertex_1ab9dd082f3bc12d531656cda095bc49f0">set_property</reimplementedby>
+        <reimplementedby refid="class_integrator_velocity_verlet_mesh_vertex_1af4cb4a3ab19301a7a73f43a7a2f0e095">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="124" column="16" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a6a611224991ec3772c44a1facb8e25fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntegratorClass::print_warning_calling</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_calling</name>
+        <qualifiedname>IntegratorClass::print_warning_calling</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="125" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_class_1a6da0849ae3c38476b62fcb32c809f798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntegratorClass::print_warning_property_name</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_property_name</name>
+        <qualifiedname>IntegratorClass::print_warning_property_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="126" column="8" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for is the base class for all integrators. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IntegratorBrownianMeshVertex</label>
+        <link refid="class_integrator_brownian_mesh_vertex"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IntegratorClass</label>
+        <link refid="class_integrator_class"/>
+      </node>
+      <node id="3">
+        <label>IntegratorVelocityVerletMeshVertex</label>
+        <link refid="class_integrator_velocity_verlet_mesh_vertex"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="4">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="1">
+        <label>IntegratorClass</label>
+        <link refid="class_integrator_class"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/integrators/integratorclass.hpp" line="43" column="1" bodyfile="pymembrane/cppmodule/src/integrators/integratorclass.hpp" bodystart="44" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_integrator_class_1a4bf9529b0960bc8cf4fef5dbe61e393a" prot="protected" virt="non-virtual"><scope>IntegratorClass</scope><name>_system</name></member>
+      <member refid="class_integrator_class_1acd318003c4175adc4e578adc34063038" prot="protected" virt="non-virtual"><scope>IntegratorClass</scope><name>dt</name></member>
+      <member refid="class_integrator_class_1a1a0e8d9a534212fe2f6bda50c08e0acf" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>get_name</name></member>
+      <member refid="class_integrator_class_1a8da98239a27db6466c4d25b970b90ea0" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>get_temperature</name></member>
+      <member refid="class_integrator_class_1a05ec386683b496fc9985dffe2633ddf2" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>get_time_step</name></member>
+      <member refid="class_integrator_class_1a43aebaba805eb6e4671ad143961103d6" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>get_type</name></member>
+      <member refid="class_integrator_class_1a8d9f273a3158705295ad3a3d9107c2c0" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>IntegratorClass</name></member>
+      <member refid="class_integrator_class_1a9f453b1f691c6ab03d8da9f5867ee9b6" prot="protected" virt="non-virtual"><scope>IntegratorClass</scope><name>name</name></member>
+      <member refid="class_integrator_class_1a17301c189d27dc4b40b5baf13bfe6436" prot="public" virt="pure-virtual"><scope>IntegratorClass</scope><name>poststep</name></member>
+      <member refid="class_integrator_class_1aab012c78f2e31344be20d41845d2e044" prot="public" virt="pure-virtual"><scope>IntegratorClass</scope><name>prestep</name></member>
+      <member refid="class_integrator_class_1a6a611224991ec3772c44a1facb8e25fa" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>print_warning_calling</name></member>
+      <member refid="class_integrator_class_1a6da0849ae3c38476b62fcb32c809f798" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>print_warning_property_name</name></member>
+      <member refid="class_integrator_class_1a660acc23420e6e817fc76b39992d917f" prot="public" virt="pure-virtual"><scope>IntegratorClass</scope><name>set_default_properties</name></member>
+      <member refid="class_integrator_class_1a37abc32e56f9d4542c23cc7d56381e86" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>set_property</name></member>
+      <member refid="class_integrator_class_1a0aeef46e406861569649928ed2dcc619" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>set_property</name></member>
+      <member refid="class_integrator_class_1ace813f16352c0ffa60402be45922741f" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>set_property</name></member>
+      <member refid="class_integrator_class_1a85623a54c904010647913847b5cfb30b" prot="public" virt="non-virtual"><scope>IntegratorClass</scope><name>set_temperature</name></member>
+      <member refid="class_integrator_class_1abcf54f5c8e94f631df699a4f6ee35add" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>set_time_step</name></member>
+      <member refid="class_integrator_class_1a51fe9c6c93dae5c599348cf923eba5a2" prot="protected" virt="non-virtual"><scope>IntegratorClass</scope><name>T</name></member>
+      <member refid="class_integrator_class_1a3e60885c6fc740147829d36930a39c6e" prot="protected" virt="non-virtual"><scope>IntegratorClass</scope><name>type</name></member>
+      <member refid="class_integrator_class_1a6977fe583409c3da1876206cd3e5d923" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>update_temperature_parameters</name></member>
+      <member refid="class_integrator_class_1a6e15091f8104a2423240a9076a0ebba6" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>update_time_step_parameters</name></member>
+      <member refid="class_integrator_class_1a37c96d3eccd2791ad550921d8f5421dd" prot="public" virt="virtual"><scope>IntegratorClass</scope><name>~IntegratorClass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

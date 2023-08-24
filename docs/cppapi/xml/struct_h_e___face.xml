@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_h_e___face" kind="struct" language="C++" prot="public">
+    <compoundname>HE_Face</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename <ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref></type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_e___face_1a60bada435e194a064171d9459f886ec1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>HE_Face::id</qualifiedname>
+        <briefdescription>
+<para>face id </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="81" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a7f627b1cd3d60bf8c4db81deb1d22818" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HE_Face&lt; PropertyFaces &gt;::outer</definition>
+        <argsstring></argsstring>
+        <name>outer</name>
+        <qualifiedname>HE_Face::outer</qualifiedname>
+        <briefdescription>
+<para>if true, face is a ghost outer face </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="82" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1ab49f653d506b3ecc22070adde9778df9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::nsides</definition>
+        <argsstring></argsstring>
+        <name>nsides</name>
+        <qualifiedname>HE_Face::nsides</qualifiedname>
+        <briefdescription>
+<para>number of sides face has </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="83" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1aa5f269a9a20ca810b782eaebc54732b0" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Face&lt; PropertyFaces &gt;::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <qualifiedname>HE_Face::normal</qualifiedname>
+        <briefdescription>
+<para>normal to that face </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="84" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1aeba6499e0793cef2d5c647bb70bf30f6" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Face&lt; PropertyFaces &gt;::area</definition>
+        <argsstring></argsstring>
+        <name>area</name>
+        <qualifiedname>HE_Face::area</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>area of the triangle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="85" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1af5cce48b4ee5e6f0b13c35911fd58195" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Face&lt; PropertyFaces &gt;::g_reference[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>g_reference</name>
+        <qualifiedname>HE_Face::g_reference</qualifiedname>
+        <briefdescription>
+<para>reference metric tensor [0] |(v2-v1)|^2 [1] (v2-v1)*(v3-v1) [2]|(v3-v1)|^2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="87" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a1e42fc51ad1f4765ac58ea01321b869d" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Face&lt; PropertyFaces &gt;::g_reference_inv[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>g_reference_inv</name>
+        <qualifiedname>HE_Face::g_reference_inv</qualifiedname>
+        <briefdescription>
+<para>reference inverse metric tensor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="88" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1af29889f85125a5ee2d1a9bfed962b1c1" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Face&lt; PropertyFaces &gt;::normal_reference</definition>
+        <argsstring></argsstring>
+        <name>normal_reference</name>
+        <qualifiedname>HE_Face::normal_reference</qualifiedname>
+        <briefdescription>
+<para>reference normal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="89" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1aeffc9338986519591f355f10f0c6fbc4" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Face&lt; PropertyFaces &gt;::r12_reference</definition>
+        <argsstring></argsstring>
+        <name>r12_reference</name>
+        <qualifiedname>HE_Face::r12_reference</qualifiedname>
+        <briefdescription>
+<para>r12 reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="90" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a1702dc1e4864af08ec5799f1dc6bc94b" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Face&lt; PropertyFaces &gt;::r13_reference</definition>
+        <argsstring></argsstring>
+        <name>r13_reference</name>
+        <qualifiedname>HE_Face::r13_reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>r13 reference </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="91" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a4dce6992efab4d605c7216378eff26b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::v1</definition>
+        <argsstring></argsstring>
+        <name>v1</name>
+        <qualifiedname>HE_Face::v1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="93" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a6a4389d45981e6977d4ec960669d3668" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::v2</definition>
+        <argsstring></argsstring>
+        <name>v2</name>
+        <qualifiedname>HE_Face::v2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="93" column="12" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1aba358c5350f246088a91f771875a6f16" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::v3</definition>
+        <argsstring></argsstring>
+        <name>v3</name>
+        <qualifiedname>HE_Face::v3</qualifiedname>
+        <briefdescription>
+<para>the 3 vertices that belong to that face </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="93" column="15" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a8dabcdcd65ab89fd3bf699c7e4ec967b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HE_Face&lt; PropertyFaces &gt;::boundary</definition>
+        <argsstring></argsstring>
+        <name>boundary</name>
+        <qualifiedname>HE_Face::boundary</qualifiedname>
+        <briefdescription>
+<para>if true, the face is a boundary </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="94" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a57f9a18cd7c3e5e82b880b1aac75342c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::_hedge</definition>
+        <argsstring></argsstring>
+        <name>_hedge</name>
+        <qualifiedname>HE_Face::_hedge</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: one of the half-edges bordering the face. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="96" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a03f02ae3558ec7a8f79c62a6515a05ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Face&lt; PropertyFaces &gt;::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>HE_Face::type</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="98" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a9d94b11abc873938c7cced0a757c1187" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Face&lt; PropertyFaces &gt;::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>HE_Face::energy</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face energy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="99" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___face_1a71cdf59f34a1dd7a304261eae1a3a931" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref></type>
+        <definition>PropertyFaces HE_Face&lt; PropertyFaces &gt;::_property</definition>
+        <argsstring></argsstring>
+        <name>_property</name>
+        <qualifiedname>HE_Face::_property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="101" column="19" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure that contains all the faces in the mesh, as well basic information for each one. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_property" kindref="compound">Property</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HE_Face&lt; PropertyFaces &gt;</label>
+        <link refid="struct_h_e___face"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>normal</edgelabel>
+          <edgelabel>normal_reference</edgelabel>
+          <edgelabel>r12_reference</edgelabel>
+          <edgelabel>r13_reference</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_property</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PropertyFaces</label>
+        <link refid="struct_property_faces"/>
+      </node>
+      <node id="2">
+        <label>xyType&lt; real &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="78" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="79" bodyend="102"/>
+    <listofallmembers>
+      <member refid="struct_h_e___face_1a57f9a18cd7c3e5e82b880b1aac75342c" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>_hedge</name></member>
+      <member refid="struct_h_e___face_1a71cdf59f34a1dd7a304261eae1a3a931" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>_property</name></member>
+      <member refid="struct_h_e___face_1aeba6499e0793cef2d5c647bb70bf30f6" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>area</name></member>
+      <member refid="struct_h_e___face_1a8dabcdcd65ab89fd3bf699c7e4ec967b" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>boundary</name></member>
+      <member refid="struct_h_e___face_1a9d94b11abc873938c7cced0a757c1187" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>energy</name></member>
+      <member refid="struct_h_e___face_1af5cce48b4ee5e6f0b13c35911fd58195" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>g_reference</name></member>
+      <member refid="struct_h_e___face_1a1e42fc51ad1f4765ac58ea01321b869d" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>g_reference_inv</name></member>
+      <member refid="struct_h_e___face_1a60bada435e194a064171d9459f886ec1" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>id</name></member>
+      <member refid="struct_h_e___face_1aa5f269a9a20ca810b782eaebc54732b0" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>normal</name></member>
+      <member refid="struct_h_e___face_1af29889f85125a5ee2d1a9bfed962b1c1" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>normal_reference</name></member>
+      <member refid="struct_h_e___face_1ab49f653d506b3ecc22070adde9778df9" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>nsides</name></member>
+      <member refid="struct_h_e___face_1a7f627b1cd3d60bf8c4db81deb1d22818" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>outer</name></member>
+      <member refid="struct_h_e___face_1aeffc9338986519591f355f10f0c6fbc4" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>r12_reference</name></member>
+      <member refid="struct_h_e___face_1a1702dc1e4864af08ec5799f1dc6bc94b" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>r13_reference</name></member>
+      <member refid="struct_h_e___face_1a03f02ae3558ec7a8f79c62a6515a05ca" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>type</name></member>
+      <member refid="struct_h_e___face_1a4dce6992efab4d605c7216378eff26b5" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>v1</name></member>
+      <member refid="struct_h_e___face_1a6a4389d45981e6977d4ec960669d3668" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>v2</name></member>
+      <member refid="struct_h_e___face_1aba358c5350f246088a91f771875a6f16" prot="public" virt="non-virtual"><scope>HE_Face</scope><name>v3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

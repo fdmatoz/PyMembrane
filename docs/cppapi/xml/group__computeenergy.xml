@@ -1,0 +1,2077 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group__computeenergy" kind="group">
+    <compoundname>computeenergy</compoundname>
+    <title>Compute Vertex Energy</title>
+    <innerclass refid="class_compute_force_class" prot="public">ComputeForceClass</innerclass>
+    <innerclass refid="class_compute_vertex_bending_energy" prot="public">ComputeVertexBendingEnergy</innerclass>
+    <innerclass refid="class_compute_vertex_harmonic_spin_energy" prot="public">ComputeVertexHarmonicSpinEnergy</innerclass>
+    <innerclass refid="class_compute_vertex_ferromagnetic_energy" prot="public">ComputeVertexFerromagneticEnergy</innerclass>
+    <innerclass refid="class_compute_vertex_line_tension" prot="public">ComputeVertexLineTension</innerclass>
+    <innerclass refid="class_compute_vertex_substrate_energy" prot="public">ComputeVertexSubstrateEnergy</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref> &gt;</type>
+        <definition>typedef std::unique_ptr&lt;ComputeForceClass&gt; ComputeForceClass_ptr</definition>
+        <argsstring></argsstring>
+        <name>ComputeForceClass_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="118" column="25" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41" prot="public" static="no">
+        <type>std::map&lt; std::string, ComputeForceClass_ptr &gt;</type>
+        <definition>typedef std::map&lt;std::string, ComputeForceClass_ptr&gt; VertexCompute</definition>
+        <argsstring></argsstring>
+        <name>VertexCompute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="119" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__computeenergy_1gadeb33ca9b887a1e6c491711d7d4f8217" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double BIG_VERTEX_ENERGY_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>BIG_VERTEX_ENERGY_LIMIT</name>
+        <initializer>= 1e15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="22" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; ComputeForceClass::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>ComputeForceClass::_system</qualifiedname>
+        <briefdescription>
+<para>Reference to the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="111" column="17" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ComputeForceClass::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <qualifiedname>ComputeForceClass::m_name</qualifiedname>
+        <briefdescription>
+<para>Name declared for that potential. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="112" column="17" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ComputeForceClass::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <qualifiedname>ComputeForceClass::m_type</qualifiedname>
+        <briefdescription>
+<para>Potential type, active, torque, conservative, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="113" column="17" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ComputeForceClass::NUM_TYPES_ALLOWED</definition>
+        <argsstring></argsstring>
+        <name>NUM_TYPES_ALLOWED</name>
+        <qualifiedname>ComputeForceClass::NUM_TYPES_ALLOWED</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="114" column="9" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ComputeForceClass::NUM_TYPES_PAIR</definition>
+        <argsstring></argsstring>
+        <name>NUM_TYPES_PAIR</name>
+        <qualifiedname>ComputeForceClass::NUM_TYPES_PAIR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="115" column="9" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga70a23778dfb8605b13e04da5c8654b74" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexBendingEnergy::m_kappa</definition>
+        <argsstring></argsstring>
+        <name>m_kappa</name>
+        <qualifiedname>ComputeVertexBendingEnergy::m_kappa</qualifiedname>
+        <briefdescription>
+<para>bending rigidity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="74" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga3925f7d586669b8d83caa3e5aae77f73" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexHarmonicSpinEnergy::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::k</qualifiedname>
+        <briefdescription>
+<para>spring constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="99" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga1476c574425bfec219951d57d033ea99" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexHarmonicSpinEnergy::l0</definition>
+        <argsstring></argsstring>
+        <name>l0</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::l0</qualifiedname>
+        <briefdescription>
+<para>rest length </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="100" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga94a9fe399eea2d1a2128dfddfccdb6b6" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexHarmonicSpinEnergy::J</definition>
+        <argsstring></argsstring>
+        <name>J</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::J</qualifiedname>
+        <briefdescription>
+<para>rest length </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="101" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1gaf23cc5bdf6cff6091ceb32b41e0e1234" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexHarmonicSpinEnergy::Ea</definition>
+        <argsstring></argsstring>
+        <name>Ea</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::Ea</qualifiedname>
+        <briefdescription>
+<para>rest length </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="102" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga91d7dc11c887c10769d33eaf14e2a8f9" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexFerromagneticEnergy::J</definition>
+        <argsstring></argsstring>
+        <name>J</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::J</qualifiedname>
+        <briefdescription>
+<para>maximum edge allowed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="88" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga97d30f3d0ee35dab077adb8fbd75bba2" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexFerromagneticEnergy::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::h</qualifiedname>
+        <briefdescription>
+<para>maximum edge allowed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="89" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga2aa6ca5fc2b7638683b3778ad71154d5" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexLineTension::m_gamma</definition>
+        <argsstring></argsstring>
+        <name>m_gamma</name>
+        <qualifiedname>ComputeVertexLineTension::m_gamma</qualifiedname>
+        <briefdescription>
+<para>spring constant </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="107" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga7f150d7059fc846a998e081c2ba61986" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ComputeVertexLineTension::m_flag_avg</definition>
+        <argsstring></argsstring>
+        <name>m_flag_avg</name>
+        <qualifiedname>ComputeVertexLineTension::m_flag_avg</qualifiedname>
+        <briefdescription>
+<para>if is true then use a simple algebraic betwen type is use it </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="108" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga84192041db192808b35a9f4ef1c03089" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ComputeVertexLineTension::m_flag_scale</definition>
+        <argsstring></argsstring>
+        <name>m_flag_scale</name>
+        <qualifiedname>ComputeVertexLineTension::m_flag_scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="109" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1gac97fdfabe1d1e0bf0e3fb2d6e73859dd" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexSubstrateEnergy::m_kz1</definition>
+        <argsstring></argsstring>
+        <name>m_kz1</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::m_kz1</qualifiedname>
+        <briefdescription>
+<para>maximum edge allowed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="87" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__computeenergy_1ga4abd5df9f885365fd7dcdb95dad8f8f0" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexSubstrateEnergy::m_kz2</definition>
+        <argsstring></argsstring>
+        <name>m_kz2</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::m_kz2</qualifiedname>
+        <briefdescription>
+<para>maximum edge allowed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="88" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeForceClass::ComputeForceClass</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeForceClass</name>
+        <qualifiedname>ComputeForceClass::ComputeForceClass</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_system_class" kindref="compound">SystemClass</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the system </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="31" column="5" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ComputeForceClass::~ComputeForceClass</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeForceClass</name>
+        <qualifiedname>ComputeForceClass::~ComputeForceClass</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref> Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="39" column="13" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::compute_energy</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeForceClass::compute_energy</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a4e1deff04a8aa204a7bd0d0fa5e7625c">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a33e0a508d1d9e17687cacf71276c01cb">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a95c93fdaaac524a5f02c930c3e2f4e44">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a6618d2c8e8fa860e3c10e1792cdb1ffd">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1aaae42b0f9a14c5a7f334b3e751d867da">compute_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga075e254e881479f18fb49f7fc886e3d2">compute_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gab3ddbbd095d1b89a1530c9eb4f9965a0">compute_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1a4af4faa824f59cb296c242841b5dd892">compute_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f">compute_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga55a05efdfc485daf66bf7f34eedf3052">compute_energy</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="45" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::compute</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeForceClass::compute</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1af7aa94ee3699632a9edeccc7251a3dab">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a4169e16716e470ea70fdfaeb36e9b74b">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1ae1f4f866172267bd0fe2b972924a13cd">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1ab2680d689dfbf1bc2c735d2101022fc2">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a89aec001ab0c3f21d7c572b14a7cab15">compute</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga7f9d1089ff2f8358aa4bd39f735b9541">compute</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga6e752bbee6dab1afd98919b00b87873b">compute</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1aabe3bdeb62cb102ac51a2c6f804ed2c7">compute</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga86c5cfeed047046f91afb38b0be5666d">compute</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="51" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>real</type>
+        <definition>virtual real ComputeForceClass::compute_edge_energy</definition>
+        <argsstring>(int)</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeForceClass::compute_edge_energy</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga593cd889bf088f342b307b631f19542b">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a34c89140b89fbd459ada3155add92872">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a8c4867cfedef171821d3746959083e67">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a796fe539acac48fe718f73eaa4af223c">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1af293b17776932e04d2055b242ba8096c">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a8e4fcf2ce77de4a2d2ca95a1918ac452">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gabfb155b2f52ff6c1792fe8728c6e65be">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga91c6930568c8d545b01b27b6c575e421">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1aa946473d4d368fac9aaaeacf8f694b64">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705">compute_edge_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gab3d5731b502ef5e07119788a165b2eda">compute_edge_energy</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="57" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>real</type>
+        <definition>virtual real ComputeForceClass::compute_face_energy</definition>
+        <argsstring>(int)</argsstring>
+        <name>compute_face_energy</name>
+        <qualifiedname>ComputeForceClass::compute_face_energy</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given face </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="63" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>real</type>
+        <definition>virtual real ComputeForceClass::compute_vertex_energy</definition>
+        <argsstring>(int)</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeForceClass::compute_vertex_energy</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a9a2f80444ce71f9387eff348fffbbcad">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a716f261be54695bf030a1150f0ca12d6">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a88ba0b109e51f97c9242dad06d853b58">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1ae1e13b6532aac37400e502b5b7ca9e98">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a98b78fae6d3af32e5e843103b419c920">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga339d9c04b10173bbfbac38fef838eda4">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gade51c9aab9c8d0298fcdeb85c2192700">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1abc4e688de0f7f9843dc0dfd2af32635d">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a">compute_vertex_energy</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gacee2f63ffe8fb6acbf4077bd8d29b1a1">compute_vertex_energy</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="69" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::compute_stress</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeForceClass::compute_stress</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85">compute_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a86aca9d9314d1a28f938d976aa924860">compute_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a">compute_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a9470b36748408238e5eb2c2f79b90a74">compute_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a65d696ed4e3baa821df2d3e9b8162bc7">compute_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a75cfff5ce46bd0cfc14385f3abf7b709">compute_stress</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga85ba61b0e98a981a534a25044e536f60">compute_stress</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="76" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::compute_atomic_stress</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeForceClass::compute_atomic_stress</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a451bc3fe316d4df76b3844bd9315c1b9">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a48cbcf6c17394d7dc0ba27cce4d93406">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a2d25f6f75a8977e4ad6174af82ae9058">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a5fc0322e7d0183534a9bc05a18bdbf8c">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1aeace39c2aadfc11b91e1545772ece889">compute_atomic_stress</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga8ec1a5208260dc87ee06305363497b00">compute_atomic_stress</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="83" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ComputeForceClass::get_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_name</name>
+        <qualifiedname>ComputeForceClass::get_name</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the name object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="89" column="17" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ComputeForceClass::get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_type</name>
+        <qualifiedname>ComputeForceClass::get_type</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="94" column="17" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>virtual std::map&lt; std::string, std::string &gt; ComputeForceClass::get_info</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeForceClass::get_info</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a423765625bb45f2178165c7d25790d58">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a30d9e265766a859192297c2b948bffdc">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a8b822b956556a8335d0282e73d3ea21d">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a86187957b8433eba8c2e2a641fb5d9be">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1aa4c305faf8a720879e6d913bc5017b76">get_info</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga92f6d4071a420acec82461b54e8c0e9d">get_info</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gaae6bef1b11f761cca39c5a0a34e649c6">get_info</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1af0f38d412c6016614bacd3ae7cf62eba">get_info</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119">get_info</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga0f14e273cc7bfd32f1f569796667d85b">get_info</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="99" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_default_properties</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeForceClass::set_default_properties</qualifiedname>
+        <reimplementedby refid="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1aad25f84732065454123ef2ba682c536d">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a690403d9ab89a72f807ce5fb1719c2eb">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1ac4a5271aefff11049c2af28604b7d1f6">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1ab0c8aa7d67be6e505556ad330dc4465b">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a23de4239a466835ccdd74c5c1e338358">set_default_properties</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga819a8363af60928f4c7c485562f5190c">set_default_properties</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga436ef731a4cfdb35d8d6073371edd96e">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1abf50d7f6dceed56793460b2a16873ab7">set_default_properties</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df">set_default_properties</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga494591a77b11455e1be118b56c14165f">set_default_properties</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="103" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeForceClass::set_property</qualifiedname>
+        <reimplementedby refid="class_compute_vertex_bending_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_spin_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_ferromagnetic_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_line_tension_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_substrate_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="104" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeForceClass::set_property</qualifiedname>
+        <reimplementedby refid="class_compute_vertex_bending_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_spin_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_ferromagnetic_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_line_tension_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_substrate_energy_1aed03d57ba661016fdb23695e588c96df">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1aa63b129af11ec5a674918fdab9a64645">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a06eceed67b4e0ce0583d8ef178ed381a">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a5ce7d3e92939c4aebc57f5bbfe2b84ad">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a3482980cc2892d3076e1cf56739d1dda">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1af4c7ace71fcb2e2d1814f40092b93a40">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gaa51ed6dcb1c19b88dc78eb24291ca7c1">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gad7a435c2bc06adeb70a12a33d2bf76d5">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1abfdfc9930ecf67f8ef990915597f8ca9">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1gab5f09709a86844db1269e8187ca913bc">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="105" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeForceClass::set_property</qualifiedname>
+        <reimplementedby refid="class_compute_vertex_bending_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_bending_helfrich_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_cauchy_green_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_constant_area_triangle_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_dihedral_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_harmonic_spin_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_ferromagnetic_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_limit_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_line_tension_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="class_compute_vertex_substrate_energy_1a2baad238a779102369f7813c101bfe8e">set_property</reimplementedby>
+        <reimplementedby refid="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="106" column="18" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeForceClass::print_warning_calling</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_calling</name>
+        <qualifiedname>ComputeForceClass::print_warning_calling</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="107" column="10" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeForceClass::print_warning_property_name</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_property_name</name>
+        <qualifiedname>ComputeForceClass::print_warning_property_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" line="108" column="10" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga17330f691d6f306655d5b69cbc9c4658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexBendingEnergy::ComputeVertexBendingEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexBendingEnergy</name>
+        <qualifiedname>ComputeVertexBendingEnergy::ComputeVertexBendingEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="27" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gad102657c4f944e6d3d2cff1cf680e6a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexBendingEnergy::~ComputeVertexBendingEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexBendingEnergy</name>
+        <qualifiedname>ComputeVertexBendingEnergy::~ComputeVertexBendingEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="34" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexBendingEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="36" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexBendingEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="43" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="43" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexBendingEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexBendingEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="57" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Use normals that belong to the two traingles that share a vertex and calculate bengind energy as <formula id="3">$ E_{bend} = \frac 1 2 k_b \left( \hat{n}_i- \hat{n}_j \right)^2 r $</formula>, where <formula id="4">$ k_b $</formula> is the bending rigidity, <formula id="5">$ r $</formula> is edge length, and <formula id="6">$ \hat{n}_i, \hat{n}_j $</formula> are the normal unit vectors of the triangles meeting at the edge. the method used here is the Seung and Nelson bending energy, Seung, H. S. &amp; Nelson, D. R. Defects in flexible membranes with crystalline order. Phys. Rev. A 38, 1005–1018 (1988). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the bending energy at vertex </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="66" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="67" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="379" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga593cd889bf088f342b307b631f19542b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexBendingEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>vertices</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="68" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="88" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexBendingEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>vertices</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="69" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="125" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::compute_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b">compute_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="70" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="480" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexBendingEnergy::compute_atomic_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeVertexBendingEnergy::compute_atomic_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf">compute_atomic_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="71" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.cpp" bodystart="595" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga7db01c1a8c258dda3698e3233f82e609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexHarmonicSpinEnergy::ComputeVertexHarmonicSpinEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexHarmonicSpinEnergy</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::ComputeVertexHarmonicSpinEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="30" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gac874de9bc03c7003b135a023e5b83bd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexHarmonicSpinEnergy::~ComputeVertexHarmonicSpinEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexHarmonicSpinEnergy</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::~ComputeVertexHarmonicSpinEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="37" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga819a8363af60928f4c7c485562f5190c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="39" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaa51ed6dcb1c19b88dc78eb24291ca7c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="50" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="50" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga92f6d4071a420acec82461b54e8c0e9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexHarmonicSpinEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="79" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="79" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga075e254e881479f18fb49f7fc886e3d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="91" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp" bodystart="107" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga7f9d1089ff2f8358aa4bd39f735b9541" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="92" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp" bodystart="157" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gabfb155b2f52ff6c1792fe8728c6e65be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>double ComputeVertexHarmonicSpinEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="93" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp" bodystart="49" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga339d9c04b10173bbfbac38fef838eda4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>double ComputeVertexHarmonicSpinEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="94" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.cpp" bodystart="69" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga85ba61b0e98a981a534a25044e536f60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::compute_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b">compute_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="95" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga8ec1a5208260dc87ee06305363497b00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexHarmonicSpinEnergy::compute_atomic_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeVertexHarmonicSpinEnergy::compute_atomic_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf">compute_atomic_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" line="96" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga5de90cd4ce4033816bf54e92b6c15d4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexFerromagneticEnergy::ComputeVertexFerromagneticEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexFerromagneticEnergy</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::ComputeVertexFerromagneticEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="36" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gac178317ef7d8ce23f4a8957f0d3fc476" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexFerromagneticEnergy::~ComputeVertexFerromagneticEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexFerromagneticEnergy</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::~ComputeVertexFerromagneticEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="42" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga436ef731a4cfdb35d8d6073371edd96e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexFerromagneticEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="44" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gad7a435c2bc06adeb70a12a33d2bf76d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexFerromagneticEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="53" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="53" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaae6bef1b11f761cca39c5a0a34e649c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexFerromagneticEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="72" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gab3ddbbd095d1b89a1530c9eb4f9965a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexFerromagneticEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="82" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.cpp" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga6e752bbee6dab1afd98919b00b87873b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexFerromagneticEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="83" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.cpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga91c6930568c8d545b01b27b6c575e421" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexFerromagneticEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="84" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.cpp" bodystart="51" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gade51c9aab9c8d0298fcdeb85c2192700" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexFerromagneticEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexFerromagneticEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialIsing.hpp" line="85" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialIsing.cpp" bodystart="66" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga93a0a5be3076e9a2830fbcd6a017b766" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexLineTension::ComputeVertexLineTension</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexLineTension</name>
+        <qualifiedname>ComputeVertexLineTension::ComputeVertexLineTension</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="46" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga667a3eaf7ccee0d978fb539785b89cb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexLineTension::~ComputeVertexLineTension</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexLineTension</name>
+        <qualifiedname>ComputeVertexLineTension::~ComputeVertexLineTension</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="53" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLineTension::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexLineTension::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="55" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLineTension::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexLineTension::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="64" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLineTension::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexLineTension::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="78" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="78" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexLineTension::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexLineTension::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="91" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="91" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexLineTension::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexLineTension::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="102" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexLineTension::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexLineTension::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="103" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexLineTension::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexLineTension::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="104" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.cpp" bodystart="18" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gaee8be9bda385b3884a92f58c76254d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexSubstrateEnergy::ComputeVertexSubstrateEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexSubstrateEnergy</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::ComputeVertexSubstrateEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="36" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gac79b9168a12817f5a4ea334eb3dd0a18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexSubstrateEnergy::~ComputeVertexSubstrateEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexSubstrateEnergy</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::~ComputeVertexSubstrateEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="42" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga494591a77b11455e1be118b56c14165f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexSubstrateEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="44" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gab5f09709a86844db1269e8187ca913bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexSubstrateEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="52" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="52" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga0f14e273cc7bfd32f1f569796667d85b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexSubstrateEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="71" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="71" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga55a05efdfc485daf66bf7f34eedf3052" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexSubstrateEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="81" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1ga86c5cfeed047046f91afb38b0be5666d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexSubstrateEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="82" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.cpp" bodystart="23" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gab3d5731b502ef5e07119788a165b2eda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ComputeVertexSubstrateEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="83" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__computeenergy_1gacee2f63ffe8fb6acbf4077bd8d29b1a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ComputeVertexSubstrateEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexSubstrateEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" line="84" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_compute_force_class" kindref="compound">ComputeForceClass</ref> abstracts definitions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_compute_vertex_substrate_energy" kindref="compound">ComputeVertexSubstrateEnergy</ref> definitions.</para>
+<para><ref refid="class_compute_vertex_line_tension" kindref="compound">ComputeVertexLineTension</ref> definitions.</para>
+<para><ref refid="class_compute_vertex_ferromagnetic_energy" kindref="compound">ComputeVertexFerromagneticEnergy</ref> definitions.</para>
+<para><ref refid="class_compute_vertex_harmonic_spin_energy" kindref="compound">ComputeVertexHarmonicSpinEnergy</ref> definitions.</para>
+<para><ref refid="class_compute_vertex_bending_energy" kindref="compound">ComputeVertexBendingEnergy</ref> definitions.</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

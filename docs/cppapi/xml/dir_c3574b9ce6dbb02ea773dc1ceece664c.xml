@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_c3574b9ce6dbb02ea773dc1ceece664c" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/potentials</compoundname>
+    <innerfile refid="computeforceclass_8hpp">computeforceclass.hpp</innerfile>
+    <innerfile refid="potential_bending_8cpp">potentialBending.cpp</innerfile>
+    <innerfile refid="potential_bending_8hpp">potentialBending.hpp</innerfile>
+    <innerfile refid="potential_bending_helfrich_8cpp">potentialBendingHelfrich.cpp</innerfile>
+    <innerfile refid="potential_bending_helfrich_8hpp">potentialBendingHelfrich.hpp</innerfile>
+    <innerfile refid="potential_cauchy_green_8cpp">potentialCauchyGreen.cpp</innerfile>
+    <innerfile refid="potential_cauchy_green_8hpp">potentialCauchyGreen.hpp</innerfile>
+    <innerfile refid="potential_constant_area_triangle_8cpp">potentialConstantAreaTriangle.cpp</innerfile>
+    <innerfile refid="potential_constant_area_triangle_8hpp">potentialConstantAreaTriangle.hpp</innerfile>
+    <innerfile refid="potential_dihedral_harmonics_8cpp">potentialDihedralHarmonics.cpp</innerfile>
+    <innerfile refid="potential_dihedral_harmonics_8hpp">potentialDihedralHarmonics.hpp</innerfile>
+    <innerfile refid="potential_harmonic_8cpp">potentialHarmonic.cpp</innerfile>
+    <innerfile refid="potential_harmonic_8hpp">potentialHarmonic.hpp</innerfile>
+    <innerfile refid="potential_harmonic_sloutskin_8cpp">potentialHarmonicSloutskin.cpp</innerfile>
+    <innerfile refid="potential_harmonic_sloutskin_8hpp">potentialHarmonicSloutskin.hpp</innerfile>
+    <innerfile refid="potential_ising_8cpp">potentialIsing.cpp</innerfile>
+    <innerfile refid="potential_ising_8hpp">potentialIsing.hpp</innerfile>
+    <innerfile refid="potential_limit_8cpp">potentialLimit.cpp</innerfile>
+    <innerfile refid="potential_limit_8hpp">potentialLimit.hpp</innerfile>
+    <innerfile refid="potential_line_tension_8cpp">potentialLineTension.cpp</innerfile>
+    <innerfile refid="potential_line_tension_8hpp">potentialLineTension.hpp</innerfile>
+    <innerfile refid="potential_substrate_8cpp">potentialSubstrate.cpp</innerfile>
+    <innerfile refid="potential_substrate_8hpp">potentialSubstrate.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/potentials/"/>
+  </compounddef>
+</doxygen>

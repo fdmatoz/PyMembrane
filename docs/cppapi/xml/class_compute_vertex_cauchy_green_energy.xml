@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_vertex_cauchy_green_energy" kind="class" language="C++" prot="public">
+    <compoundname>ComputeVertexCauchyGreenEnergy</compoundname>
+    <basecompoundref refid="class_compute_force_class" prot="public" virt="non-virtual">ComputeForceClass</basecompoundref>
+    <includes refid="potential_cauchy_green_8hpp" local="no">potentialCauchyGreen.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_compute_vertex_cauchy_green_energy_1af6793964feece2c7ad388a7f467da4ce" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexCauchyGreenEnergy::Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::Y</qualifiedname>
+        <briefdescription>
+<para>Young&apos;s modulus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="91" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_compute_vertex_cauchy_green_energy_1a0a44995c7d73cfd79a954c827dfee0c6" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexCauchyGreenEnergy::nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::nu</qualifiedname>
+        <briefdescription>
+<para>Poison&apos;s ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="92" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_compute_vertex_cauchy_green_energy_1aa1973f498f1d2c3dc5f69a7bd4af4aa9" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexCauchyGreenEnergy::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::h</qualifiedname>
+        <briefdescription>
+<para>Thickness of the film. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="93" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a096610a18f9f8a7dbf43f60567c3554a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexCauchyGreenEnergy::ComputeVertexCauchyGreenEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexCauchyGreenEnergy</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::ComputeVertexCauchyGreenEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="29" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a573838af9ee4064d2d40738ffb65122c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexCauchyGreenEnergy::~ComputeVertexCauchyGreenEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexCauchyGreenEnergy</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::~ComputeVertexCauchyGreenEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="36" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a690403d9ab89a72f807ce5fb1719c2eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="38" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a06eceed67b4e0ce0583d8ef178ed381a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="49" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="49" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a30d9e265766a859192297c2b948bffdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexCauchyGreenEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="72" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="72" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a33e0a508d1d9e17687cacf71276c01cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="83" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="56" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a4169e16716e470ea70fdfaeb36e9b74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="84" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="260" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a8c4867cfedef171821d3746959083e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexCauchyGreenEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="85" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="68" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a716f261be54695bf030a1150f0ca12d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexCauchyGreenEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="86" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="92" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::compute_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b">compute_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="87" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="342" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a48cbcf6c17394d7dc0ba27cce4d93406" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexCauchyGreenEnergy::compute_atomic_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::compute_atomic_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf">compute_atomic_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="88" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.cpp" bodystart="441" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="48" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="48" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_cauchy_green_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexCauchyGreenEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="48" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Compute Cauchy-Green stretching energy for a triangle Stretching energy density is calculated as. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><formula id="8">$ E=\frac{k}{2}\frac{1}{1+\nu}\left(Tr\left(C^2\right) + \frac{\nu}{1-\nu}\left(Tr C\right)^2\right)  $</formula>, where <formula id="9">$ k $</formula> is the elastic constant, <formula id="10">$ \nu $</formula> if the Poisson ratio, and <formula id="11">$ C = \frac{1}{2}\left(FQ-I\right) $</formula>, with <formula id="12">$ F $</formula> being Gram matrix for strained triangle, <formula id="13">$ Q $</formula> being the inverse of the Gram matrix for the unstretched triangle and <formula id="14">$ I $</formula> is the identity matrix. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexCauchyGreenEnergy</label>
+        <link refid="class_compute_vertex_cauchy_green_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexCauchyGreenEnergy</label>
+        <link refid="class_compute_vertex_cauchy_green_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" line="26" column="1" bodyfile="pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp" bodystart="27" bodyend="94"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>_system</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a4169e16716e470ea70fdfaeb36e9b74b" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a48cbcf6c17394d7dc0ba27cce4d93406" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_atomic_stress</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a8c4867cfedef171821d3746959083e67" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_edge_energy</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a33e0a508d1d9e17687cacf71276c01cb" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_face_energy</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_stress</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a716f261be54695bf030a1150f0ca12d6" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a096610a18f9f8a7dbf43f60567c3554a" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>ComputeVertexCauchyGreenEnergy</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a30d9e265766a859192297c2b948bffdc" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>get_type</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1aa1973f498f1d2c3dc5f69a7bd4af4aa9" prot="private" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>h</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>m_type</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a0a44995c7d73cfd79a954c827dfee0c6" prot="private" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>nu</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>print_warning_property_name</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a690403d9ab89a72f807ce5fb1719c2eb" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>set_default_properties</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a06eceed67b4e0ce0583d8ef178ed381a" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1af6793964feece2c7ad388a7f467da4ce" prot="private" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>Y</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>~ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_cauchy_green_energy_1a573838af9ee4064d2d40738ffb65122c" prot="public" virt="non-virtual"><scope>ComputeVertexCauchyGreenEnergy</scope><name>~ComputeVertexCauchyGreenEnergy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

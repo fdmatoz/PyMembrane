@@ -1,0 +1,14 @@
+.. _exhale_typedef_rng_8hpp_1a37e80b87099994243f26622c41d5a28c:
+
+Typedef RNG_ptr
+===============
+
+- Defined in :ref:`file_pymembrane_cppmodule_src_rng_rng.hpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: RNG_ptr
+   :project: pymembrane

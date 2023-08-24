@@ -1,0 +1,14 @@
+.. _exhale_function_pbc_8hpp_1a803775505669379fa6cca5064c73b1a3:
+
+Function host::enforce_periodic(real3&, inth3&, const BoxType&)
+===============================================================
+
+- Defined in :ref:`file_pymembrane_cppmodule_src_box_pbc.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: host::enforce_periodic(real3&, inth3&, const BoxType&)
+   :project: pymembrane

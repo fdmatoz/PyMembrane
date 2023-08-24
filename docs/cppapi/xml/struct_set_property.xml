@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_set_property" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>SetProperty</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class ContainerType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_set_property_1ad32029be4e340d59ad362778756aad45" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, real &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1aed40d921dd4ca493f10ede17c769a713">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1a3ec478c683055449006359d6bd005a7d">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1aecb6d76f33ae74cef5e16a779711b6ea">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, real &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="29" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, int &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1a29b593525821d8c7448d21a12dcdb966">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1a8c5ee218a61e2229c68b4b85946baf01">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1a933f125514b0828fe0faacd5a194b84d">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, int &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="30" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1a514c884332840e8d26c709dbba62de37">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1a5d655ce2bd85f93bd312227022c1b5cf">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1a26605c3792ff7baaf41d217fa79b9f64">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="31" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, std::string &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1ab3b110a69e2ca1ff226b7b4b5befc858">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1a86a9ad9447ba929ad06c6c0939efb23e">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1ab7a09df6de0ae2474b12349662216411">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="32" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1ad6bd409ac8819eee676192fc6674659d">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1a3b939defcd0a8fb31e7ef35a6777f29c">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1ae6fc5728794e698584a966f36ed7ab96">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="33" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1a396b8b990bafa3a17779708c6e637abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1a27f160456e4d530c55c04dc13d84b8e7">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1ac37ec43c46d91df742d276da833681e4">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1a1e8fa1a374b733022f34ab53357cf560">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="34" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SetProperty&lt; ContainerType &gt;::set_property</definition>
+        <argsstring>(ContainerType &amp;, std::map&lt; std::string, std::string &gt; &amp;)=0</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetProperty::set_property</qualifiedname>
+        <reimplementedby refid="struct_set_region_vertices_1a2e9b03755f634b8379f86b5d2932fe50">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_faces_1abc28620a7f58598d25166ad88b93d917">set_property</reimplementedby>
+        <reimplementedby refid="struct_set_region_edges_1aaf5b1300623e4d528bddbac5fd907cdd">set_property</reimplementedby>
+        <param>
+          <type>ContainerType &amp;</type>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="35" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="26" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="27" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_set_property_1ad32029be4e340d59ad362778756aad45" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1a396b8b990bafa3a17779708c6e637abe" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+      <member refid="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca" prot="public" virt="pure-virtual"><scope>SetProperty</scope><name>set_property</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

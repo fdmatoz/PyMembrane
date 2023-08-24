@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_constraint_area" kind="class" language="C++" prot="public">
+    <compoundname>ConstraintArea</compoundname>
+    <basecompoundref refid="class_constraint_class" prot="public" virt="non-virtual">ConstraintClass</basecompoundref>
+    <includes refid="constraintarea_8hpp" local="no">constraintarea.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_constraint_area_1a110b6a383915b3c91cb90ac8c42629ae" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; <ref refid="structxy_type" kindref="compound">real3</ref> &gt;</type>
+        <definition>pymemb::vector&lt;real3&gt; ConstraintArea::grad</definition>
+        <argsstring></argsstring>
+        <name>grad</name>
+        <qualifiedname>ConstraintArea::grad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="65" column="20" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_area_1ad57b3a34a1d13cfbd3f14661846a84fa" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; <ref refid="structxy_type" kindref="compound">real3</ref> &gt;</type>
+        <definition>pymemb::vector&lt;real3&gt; ConstraintArea::ref_grad</definition>
+        <argsstring></argsstring>
+        <name>ref_grad</name>
+        <qualifiedname>ConstraintArea::ref_grad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="66" column="20" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_constraint_area_1a8a861078ed221e3fe94046f317303fe1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstraintArea::ConstraintArea</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ConstraintArea</name>
+        <qualifiedname>ConstraintArea::ConstraintArea</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="15" column="5" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1a5a42e16fee2b4f6dca45e56ab83d160b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstraintArea::~ConstraintArea</definition>
+        <argsstring>()</argsstring>
+        <name>~ConstraintArea</name>
+        <qualifiedname>ConstraintArea::~ConstraintArea</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="21" column="5" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1aeb08d399e2c67533805c562b34590390" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintArea::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ConstraintArea::set_default_properties</qualifiedname>
+        <reimplements refid="class_constraint_class_1a1a47590bc4897a1d27ca631eb29f92de">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="23" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1afcbaaf50568867c03244a4f3d7ec47ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintArea::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ConstraintArea::set_property</qualifiedname>
+        <reimplements refid="class_constraint_class_1ac0fe35702cda5309dcdc7ff777affff9">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="30" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="30" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1a09542b8e32b01a01e5b9128aedc95e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintArea::enforce</definition>
+        <argsstring>(void) override</argsstring>
+        <name>enforce</name>
+        <qualifiedname>ConstraintArea::enforce</qualifiedname>
+        <reimplements refid="class_constraint_class_1a57dce5dae72428139314e246cbe6e3f8">enforce</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Enforce constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="60" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.cpp" bodystart="96" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1a52909ed27d9a5e240068c45b3e26563c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintArea::compute_ref_gradient</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_ref_gradient</name>
+        <qualifiedname>ConstraintArea::compute_ref_gradient</qualifiedname>
+        <reimplements refid="class_constraint_class_1a6986ddefadb73db668b8d473dd943278">compute_ref_gradient</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Compute reference gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="61" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.cpp" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_area_1a3385b8aa473bd4fd048b90eb9d1c980a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintArea::compute_gradient</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_gradient</name>
+        <qualifiedname>ConstraintArea::compute_gradient</qualifiedname>
+        <reimplements refid="class_constraint_class_1a35223eb0fbfedfdc34d5f19f9ad5b5a6">compute_gradient</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computer gradient at a point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="62" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.cpp" bodystart="4" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Area constraint class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ConstraintArea</label>
+        <link refid="class_constraint_area"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ConstraintArea</label>
+        <link refid="class_constraint_area"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/constraints/constraintarea.hpp" line="12" column="1" bodyfile="pymembrane/cppmodule/src/constraints/constraintarea.hpp" bodystart="13" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_constraint_class_1a8ca5548187b2f83284314c235a729ff6" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>_system</name></member>
+      <member refid="class_constraint_area_1a3385b8aa473bd4fd048b90eb9d1c980a" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>compute_gradient</name></member>
+      <member refid="class_constraint_class_1aeb96068041fba466acfa7236bc12b1fd" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>compute_normal</name></member>
+      <member refid="class_constraint_area_1a52909ed27d9a5e240068c45b3e26563c" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>compute_ref_gradient</name></member>
+      <member refid="class_constraint_area_1a8a861078ed221e3fe94046f317303fe1" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>ConstraintArea</name></member>
+      <member refid="class_constraint_class_1a4c11a6d7e0e8f93116e00a5f30b6370b" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>ConstraintClass</name></member>
+      <member refid="class_constraint_area_1a09542b8e32b01a01e5b9128aedc95e7f" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>enforce</name></member>
+      <member refid="class_constraint_class_1aa355737f9a8c3258e43a22960c23e0a2" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>get_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_area_1a110b6a383915b3c91cb90ac8c42629ae" prot="private" virt="non-virtual"><scope>ConstraintArea</scope><name>grad</name></member>
+      <member refid="class_constraint_class_1ac6f6a956a2d26c343446e979576bf027" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>info</name></member>
+      <member refid="class_constraint_class_1af42efcda7ad28f9bdb93ac980c09c1cd" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>is_satisfied</name></member>
+      <member refid="class_constraint_class_1a7f872869d7d89c607d947bec323a9f04" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>m_lambda</name></member>
+      <member refid="class_constraint_class_1a624e464d7db10fa44d3f0ca73fec9533" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>m_target</name></member>
+      <member refid="class_constraint_class_1abaf007d717cb31d8d5653ca9f39b1186" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>m_tol</name></member>
+      <member refid="class_constraint_class_1aa6eb6c4ae488b41ed1b37cd72dfe6848" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>m_type</name></member>
+      <member refid="class_constraint_class_1adcc6ad49efefc10bd83ce1800fa80d28" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>m_value</name></member>
+      <member refid="class_constraint_class_1aa23d14d90c76b6585a9be1c79523eca8" prot="protected" virt="non-virtual"><scope>ConstraintArea</scope><name>name</name></member>
+      <member refid="class_constraint_class_1a3ca1289ec82cfedb8416edbb4b852518" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>print_warning_calling</name></member>
+      <member refid="class_constraint_class_1ab0f9535ab79ff566de99acdf1b9ca6f3" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>print_warning_calling_err</name></member>
+      <member refid="class_constraint_class_1a7e129f7655ba756841f26cae9dd45ebd" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>print_warning_property_name</name></member>
+      <member refid="class_constraint_area_1ad57b3a34a1d13cfbd3f14661846a84fa" prot="private" virt="non-virtual"><scope>ConstraintArea</scope><name>ref_grad</name></member>
+      <member refid="class_constraint_class_1ab1997a3827a87a1aaa9735ae09089882" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>reset_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_area_1aeb08d399e2c67533805c562b34590390" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>set_default_properties</name></member>
+      <member refid="class_constraint_area_1afcbaaf50568867c03244a4f3d7ec47ad" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1aa0bb2b152fdae08ac021faed52ec5aa4" prot="public" virt="virtual" ambiguityscope="ConstraintClass::"><scope>ConstraintArea</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a6ab45128d12f3444015a74f5f221c62a" prot="public" virt="virtual" ambiguityscope="ConstraintClass::"><scope>ConstraintArea</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a1336a7155d6b82b062d50b62084d1ee5" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>set_property_common</name></member>
+      <member refid="class_constraint_class_1a24af0e5e32672cdfe5a8a2eca60a9c32" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>should_apply</name></member>
+      <member refid="class_constraint_area_1a5a42e16fee2b4f6dca45e56ab83d160b" prot="public" virt="non-virtual"><scope>ConstraintArea</scope><name>~ConstraintArea</name></member>
+      <member refid="class_constraint_class_1a51faa42b8ae92b287e7f386bee09efb6" prot="public" virt="virtual"><scope>ConstraintArea</scope><name>~ConstraintClass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

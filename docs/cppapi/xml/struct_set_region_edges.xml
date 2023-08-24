@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_set_region_edges" kind="struct" language="C++" prot="public">
+    <compoundname>SetRegionEdges</compoundname>
+    <basecompoundref refid="struct_set_property" prot="public" virt="non-virtual">SetProperty&lt; MeshType &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class MeshType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_set_region_edges_1a4e0cdd06d9f053e344af9b164188d896" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SetRegionEdges&lt; MeshType &gt;::SetRegionEdges</definition>
+        <argsstring>(MeshType &amp;_mesh)</argsstring>
+        <name>SetRegionEdges</name>
+        <qualifiedname>SetRegionEdges::SetRegionEdges</qualifiedname>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="235" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="235" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1aecb6d76f33ae74cef5e16a779711b6ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, real &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1ad32029be4e340d59ad362778756aad45">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, real &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="245" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1a933f125514b0828fe0faacd5a194b84d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, int &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, int &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="249" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="249" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1ae6fc5728794e698584a966f36ed7ab96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="261" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1a1e8fa1a374b733022f34ab53357cf560" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a396b8b990bafa3a17779708c6e637abe">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="265" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1aaf5b1300623e4d528bddbac5fd907cdd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; std::string, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="269" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1a26605c3792ff7baaf41d217fa79b9f64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="273" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="273" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_edges_1ab7a09df6de0ae2474b12349662216411" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionEdges&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionEdges::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="298" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="298" bodyend="312"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionEdges&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_edges"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionEdges&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_edges"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="233" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="234" bodyend="313"/>
+    <listofallmembers>
+      <member refid="struct_set_region_edges_1aecb6d76f33ae74cef5e16a779711b6ea" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1a933f125514b0828fe0faacd5a194b84d" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1ae6fc5728794e698584a966f36ed7ab96" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1a1e8fa1a374b733022f34ab53357cf560" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1aaf5b1300623e4d528bddbac5fd907cdd" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1a26605c3792ff7baaf41d217fa79b9f64" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1ab7a09df6de0ae2474b12349662216411" prot="public" virt="virtual"><scope>SetRegionEdges</scope><name>set_property</name></member>
+      <member refid="struct_set_region_edges_1a4e0cdd06d9f053e344af9b164188d896" prot="public" virt="non-virtual"><scope>SetRegionEdges</scope><name>SetRegionEdges</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

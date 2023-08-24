@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespaceutil" kind="namespace" language="C++">
+    <compoundname>util</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; int &gt; prop_vec, std::map&lt; int, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="14" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="14" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; double &gt; prop_vec, std::map&lt; int, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="26" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="26" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; bool &gt; prop_vec, std::map&lt; int, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; bool &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="38" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="38" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; int &gt; prop_vec, std::map&lt; std::string, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="51" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="51" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; double &gt; prop_vec, std::map&lt; std::string, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="63" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="63" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; util::from_dict_to_vector_types</definition>
+        <argsstring>(std::vector&lt; bool &gt; prop_vec, std::map&lt; std::string, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types</name>
+        <qualifiedname>util::from_dict_to_vector_types</qualifiedname>
+        <param>
+          <type>std::vector&lt; bool &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="75" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="75" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; util::from_dict_to_vector_types_pair</definition>
+        <argsstring>(std::vector&lt; int &gt; prop_vec, uint MAX_ITEM, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types_pair</name>
+        <qualifiedname>util::from_dict_to_vector_types_pair</qualifiedname>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>MAX_ITEM</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="88" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="88" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; util::from_dict_to_vector_types_pair</definition>
+        <argsstring>(std::vector&lt; double &gt; prop_vec, uint MAX_ITEM, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types_pair</name>
+        <qualifiedname>util::from_dict_to_vector_types_pair</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>MAX_ITEM</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="99" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; util::from_dict_to_vector_types_pair</definition>
+        <argsstring>(std::vector&lt; bool &gt; prop_vec, uint MAX_ITEM, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; dict_map)</argsstring>
+        <name>from_dict_to_vector_types_pair</name>
+        <qualifiedname>util::from_dict_to_vector_types_pair</qualifiedname>
+        <param>
+          <type>std::vector&lt; bool &gt;</type>
+          <declname>prop_vec</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>MAX_ITEM</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt;</type>
+          <declname>dict_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="110" column="24" bodyfile="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" bodystart="110" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a14eadb6387fd7b2834ade3621cd96e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string util::to_string_scientific</definition>
+        <argsstring>(const T a_value)</argsstring>
+        <name>to_string_scientific</name>
+        <qualifiedname>util::to_string_scientific</qualifiedname>
+        <param>
+          <type>const T</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>to_string_scientific converts any number to scientific notation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be converted to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string string scientific notation formated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="28" column="17" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1aa3bcaa5c21ec44a6c4e98c20c4da2c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string util::to_string_with_precision</definition>
+        <argsstring>(const T a_value, const int n=8)</argsstring>
+        <name>to_string_with_precision</name>
+        <qualifiedname>util::to_string_with_precision</qualifiedname>
+        <param>
+          <type>const T</type>
+          <declname>a_value</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n</declname>
+          <defval>8</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="36" column="17" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="36" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a4a377564f83e5535541f029f76b9c4de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string util::to_string</definition>
+        <argsstring>(const T a_value)</argsstring>
+        <name>to_string</name>
+        <qualifiedname>util::to_string</qualifiedname>
+        <param>
+          <type>const T</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+<para>to_string_scientific converts any number to scientific notation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be converted to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string string scientific notation formated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="53" column="17" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a817b573485fc482d609f1bd50782b795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string util::to_string_vec</definition>
+        <argsstring>(const std::vector&lt; T &gt; a_value)</argsstring>
+        <name>to_string_vec</name>
+        <qualifiedname>util::to_string_vec</qualifiedname>
+        <param>
+          <type>const std::vector&lt; T &gt;</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="61" column="17" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a16cdb2aefbafdfcdad6df9c567d9f551" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int util::from_string_int</definition>
+        <argsstring>(const std::string &amp;string_val)</argsstring>
+        <name>from_string_int</name>
+        <qualifiedname>util::from_string_int</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>string_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="69" column="16" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a432ed281dbf37b22012c2918e1be0ee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double util::from_string_double</definition>
+        <argsstring>(const std::string &amp;string_val)</argsstring>
+        <name>from_string_double</name>
+        <qualifiedname>util::from_string_double</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>string_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="74" column="19" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1a5a63bf1eb56baca7965295f731af6a55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int util::from_string_unsigned</definition>
+        <argsstring>(const std::string &amp;string_val)</argsstring>
+        <name>from_string_unsigned</name>
+        <qualifiedname>util::from_string_unsigned</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>string_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="79" column="25" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="fromstring_8hpp_1ae14bf130ba37e8322c891026b87eec9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool util::from_string_bool</definition>
+        <argsstring>(const std::string &amp;string_val)</argsstring>
+        <name>from_string_bool</name>
+        <qualifiedname>util::from_string_bool</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>string_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/fromstring.hpp" line="84" column="17" bodyfile="pymembrane/cppmodule/src/utils/fromstring.hpp" bodystart="84" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="tofile_8hpp_1ae6dbf7a97bcc3fe4ef8905a5b434041f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void util::writeToFile</definition>
+        <argsstring>(std::ofstream &amp;file, const T &amp;value)</argsstring>
+        <name>writeToFile</name>
+        <qualifiedname>util::writeToFile</qualifiedname>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/tofile.hpp" line="12" column="10" bodyfile="pymembrane/cppmodule/src/utils/tofile.hpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="tofile_8hpp_1ab2544e79eaa23d2101391ee147bb431c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void util::writeToFile</definition>
+        <argsstring>(std::ofstream &amp;file, const T &amp;value, const Args &amp;...args)</argsstring>
+        <name>writeToFile</name>
+        <qualifiedname>util::writeToFile</qualifiedname>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const Args &amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/tofile.hpp" line="19" column="10" bodyfile="pymembrane/cppmodule/src/utils/tofile.hpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="tofile_8hpp_1a38d0181e1de74c7f6fbf98be859cefc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void util::saveToFile</definition>
+        <argsstring>(const std::string &amp;filename, const Args &amp;...args)</argsstring>
+        <name>saveToFile</name>
+        <qualifiedname>util::saveToFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const Args &amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/utils/tofile.hpp" line="27" column="10" bodyfile="pymembrane/cppmodule/src/utils/tofile.hpp" bodystart="27" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/utils/fromdicttovec.hpp" line="12" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="halfedges_8hpp" kind="file" language="C++">
+    <compoundname>halfedges.hpp</compoundname>
+    <includes refid="globaltypes_8hpp" local="yes">../types/globaltypes.hpp</includes>
+    <includes refid="meshproperties_8hpp" local="yes">meshproperties.hpp</includes>
+    <includedby refid="dumper_8cpp" local="yes">pymembrane/cppmodule/src/dumper/dumper.cpp</includedby>
+    <includedby refid="dumper__vis_8cpp" local="yes">pymembrane/cppmodule/src/dumper/dumper_vis.cpp</includedby>
+    <includedby refid="meshoperators_8hpp" local="yes">pymembrane/cppmodule/src/mesh/meshoperators.hpp</includedby>
+    <includedby refid="read__mesh_8hpp" local="yes">pymembrane/cppmodule/src/read_mesh.hpp</includedby>
+    <includedby refid="systemclass_8hpp" local="yes">pymembrane/cppmodule/src/system/systemclass.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>typeinfo</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</label>
+        <link refid="pybind__export__compute_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>pymembrane/cppmodule/src/constraints/constraintarea.hpp</label>
+        <link refid="constraintarea_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>pymembrane/cppmodule/src/constraints/constraintclass.hpp</label>
+        <link refid="constraintclass_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pymembrane/cppmodule/src/constraints/constraintvolume.hpp</label>
+        <link refid="constraintvolume_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>pymembrane/cppmodule/src/evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</label>
+        <link refid="pybind__export__evolver_8hpp_source"/>
+      </node>
+      <node id="12">
+        <label>pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.hpp</label>
+        <link refid="integrator__brownian__vertex_8hpp_source"/>
+      </node>
+      <node id="13">
+        <label>pymembrane/cppmodule/src/integrators/integrator_verlet_vertex.hpp</label>
+        <link refid="integrator__verlet__vertex_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>pymembrane/cppmodule/src/integrators/integratorclass.hpp</label>
+        <link refid="integratorclass_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</label>
+        <link refid="montercarlo__flip__edge_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</label>
+        <link refid="montercarlo__spin__vertex_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</label>
+        <link refid="montercarlo__swap__edge_8hpp_source"/>
+      </node>
+      <node id="18">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</label>
+        <link refid="montercarlo__swap__vertex_8hpp_source"/>
+      </node>
+      <node id="19">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</label>
+        <link refid="montercarlo__vertex_8hpp"/>
+      </node>
+      <node id="20">
+        <label>pymembrane/cppmodule/src/mesh/edge_flip.hpp</label>
+        <link refid="edge__flip_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pymembrane/cppmodule/src/mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pymembrane/cppmodule/src/minimizer/fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+      </node>
+      <node id="21">
+        <label>pymembrane/cppmodule/src/minimizer/minimizerclass.hpp</label>
+        <link refid="minimizerclass_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pymembrane/cppmodule/src/potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pymembrane/cppmodule/src/potentials/potentialBending.hpp</label>
+        <link refid="potential_bending_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pymembrane/cppmodule/src/potentials/potentialBendingHelfrich.hpp</label>
+        <link refid="potential_bending_helfrich_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pymembrane/cppmodule/src/potentials/potentialCauchyGreen.hpp</label>
+        <link refid="potential_cauchy_green_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp</label>
+        <link refid="potential_constant_area_triangle_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp</label>
+        <link refid="potential_dihedral_harmonics_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonic.hpp</label>
+        <link refid="potential_harmonic_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pymembrane/cppmodule/src/potentials/potentialHarmonicSloutskin.hpp</label>
+        <link refid="potential_harmonic_sloutskin_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>pymembrane/cppmodule/src/potentials/potentialIsing.hpp</label>
+        <link refid="potential_ising_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>pymembrane/cppmodule/src/potentials/potentialLimit.hpp</label>
+        <link refid="potential_limit_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>pymembrane/cppmodule/src/potentials/potentialLineTension.hpp</label>
+        <link refid="potential_line_tension_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>pymembrane/cppmodule/src/potentials/potentialSubstrate.hpp</label>
+        <link refid="potential_substrate_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>pymembrane/cppmodule/src/read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>pymembrane/cppmodule/src/system/pybind_export_system.hpp</label>
+        <link refid="pybind__export__system_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>pymembrane/cppmodule/src/system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_h_e___vertex" prot="public">HE_Vertex</innerclass>
+    <innerclass refid="struct_h_e___edge" prot="public">HE_Edge</innerclass>
+    <innerclass refid="struct_h_e___face" prot="public">HE_Face</innerclass>
+    <innerclass refid="struct_h_e___half_edge" prot="public">HE_HalfEdge</innerclass>
+    <innerclass refid="structtriangle__type" prot="public">triangle_type</innerclass>
+    <innerclass refid="structvertices__type" prot="public">vertices_type</innerclass>
+      <sectiondef kind="typedef">
+      <member refid="group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf" kind="typedef"><name>HE_VertexProp</name></member>
+      <member refid="group__mesh_1ga92b6815f5e1e981bc534da3e17e51529" kind="typedef"><name>HE_EdgeProp</name></member>
+      <member refid="group__mesh_1ga040b94d03d4d83f06ede4550215fa069" kind="typedef"><name>HE_FaceProp</name></member>
+      <member refid="group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19" kind="typedef"><name>HE_HalfEdgeProp</name></member>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__HALFEDGES_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HALFEDGES_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../types/globaltypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;meshproperties.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PropertyVertices&gt;</highlight></codeline>
+<codeline lineno="18" refid="struct_h_e___vertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___vertex" kindref="compound">HE_Vertex</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kindref="member">r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="struct_h_e___vertex_1a0fb51c9a20e810c681e575eb34c42661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___vertex_1a0fb51c9a20e810c681e575eb34c42661" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="struct_h_e___vertex_1ac9641c0f9a1b7de46690f52402ec9070" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___vertex_1ac9641c0f9a1b7de46690f52402ec9070" kindref="member">boundary</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="struct_h_e___vertex_1a207bbe661bc3c8c044eeab02e1f80969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___vertex_1a207bbe661bc3c8c044eeab02e1f80969" kindref="member">coordination</ref>;<sp/></highlight></codeline>
+<codeline lineno="25" refid="struct_h_e___vertex_1a8662ff0afc7f433deec5dec4ce70f6b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">inth3</ref><sp/><ref refid="struct_h_e___vertex_1a8662ff0afc7f433deec5dec4ce70f6b1" kindref="member">cellId</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="struct_h_e___vertex_1a03f79d18a2f5b7dbf119649856362356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1a03f79d18a2f5b7dbf119649856362356" kindref="member">normal</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="struct_h_e___vertex_1aecce69c87c3dfff30c0d61cbf63a0e8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___vertex_1aecce69c87c3dfff30c0d61cbf63a0e8a" kindref="member">_hedge</ref>;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>md<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_h_e___vertex_1a6a18915ababcf3bd3eadbf43d8f94803" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___vertex_1a6a18915ababcf3bd3eadbf43d8f94803" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="struct_h_e___vertex_1a10b733266b2070ee559be35363ce4fce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1a10b733266b2070ee559be35363ce4fce" kindref="member">v</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_h_e___vertex_1aef7959f763adbf285909b06782c9d1aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1aef7959f763adbf285909b06782c9d1aa" kindref="member">accel</ref>;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kindref="member">forceC</ref>;<sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_h_e___vertex_1ab79703e77d0455d298ec1d7a0f1400cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1ab79703e77d0455d298ec1d7a0f1400cd" kindref="member">forceD</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_h_e___vertex_1a4fec1ddc583d0a0ce153a087805afa9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___vertex_1a4fec1ddc583d0a0ce153a087805afa9b" kindref="member">forceE</ref>;<sp/></highlight></codeline>
+<codeline lineno="37" refid="struct_h_e___vertex_1ac385281595fec27f35b9ebeada4c78d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___vertex_1ac385281595fec27f35b9ebeada4c78d4" kindref="member">energy</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="struct_h_e___vertex_1affc8233bb7a0b949363d3e324ee3766b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___vertex_1affc8233bb7a0b949363d3e324ee3766b" kindref="member">mass</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="struct_h_e___vertex_1a09c8bd5d7064500ec3c8b6f108a93c2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">inth3</ref><sp/><ref refid="struct_h_e___vertex_1a09c8bd5d7064500ec3c8b6f108a93c2c" kindref="member">ip</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="struct_h_e___vertex_1aa3e5878f5684add71c82c14512221950" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___vertex_1aa3e5878f5684add71c82c14512221950" kindref="member">spin</ref>;<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref><sp/>_property;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref><sp/>=<sp/><ref refid="struct_h_e___vertex" kindref="compound">HE_Vertex&lt;PropertyVertices&gt;</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PropertyEdges&gt;</highlight></codeline>
+<codeline lineno="53" refid="struct_h_e___edge" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___edge" kindref="compound">HE_Edge</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/><ref refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" kindref="member">j</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="struct_h_e___edge_1ac51fa0631b220e2deef78ca1ca3b5d86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1ac51fa0631b220e2deef78ca1ca3b5d86" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="struct_h_e___edge_1a128f8333f20d03403588f48100585c56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1a128f8333f20d03403588f48100585c56" kindref="member">boundary</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="struct_h_e___edge_1a1524f3bb94b45ff3cb7ac5873a4cf315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1a1524f3bb94b45ff3cb7ac5873a4cf315" kindref="member">face_k</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="struct_h_e___edge_1a97fef738737dc59cebb0c55d295ed3c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1a97fef738737dc59cebb0c55d295ed3c7" kindref="member">face_l</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="struct_h_e___edge_1a57178b673bc051de1144cd99d5919bb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v0,<sp/>v1,<sp/>v2,<sp/><ref refid="struct_h_e___edge_1a57178b673bc051de1144cd99d5919bb4" kindref="member">v3</ref>;<sp/></highlight></codeline>
+<codeline lineno="61" refid="struct_h_e___edge_1ae678b1bf199ab564d995b1713a3a26da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___edge_1ae678b1bf199ab564d995b1713a3a26da" kindref="member">l0</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct_h_e___edge_1abc2832d50a37f1ffaefa91e5bd8cb106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1abc2832d50a37f1ffaefa91e5bd8cb106" kindref="member">_hedge</ref>;<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>md</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" kindref="member">energy</ref>;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref><sp/>_property;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___edge" kindref="compound">HE_EdgeProp</ref><sp/>=<sp/><ref refid="struct_h_e___edge" kindref="compound">HE_Edge&lt;PropertyEdges&gt;</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PropertyFaces&gt;</highlight></codeline>
+<codeline lineno="78" refid="struct_h_e___face" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___face" kindref="compound">HE_Face</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="struct_h_e___face_1a60bada435e194a064171d9459f886ec1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1a60bada435e194a064171d9459f886ec1" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="struct_h_e___face_1a7f627b1cd3d60bf8c4db81deb1d22818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1a7f627b1cd3d60bf8c4db81deb1d22818" kindref="member">outer</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="struct_h_e___face_1ab49f653d506b3ecc22070adde9778df9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1ab49f653d506b3ecc22070adde9778df9" kindref="member">nsides</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="struct_h_e___face_1aa5f269a9a20ca810b782eaebc54732b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___face_1aa5f269a9a20ca810b782eaebc54732b0" kindref="member">normal</ref>;<sp/></highlight></codeline>
+<codeline lineno="85" refid="struct_h_e___face_1aeba6499e0793cef2d5c647bb70bf30f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___face_1aeba6499e0793cef2d5c647bb70bf30f6" kindref="member">area</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="struct_h_e___face_1af5cce48b4ee5e6f0b13c35911fd58195" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___face_1af5cce48b4ee5e6f0b13c35911fd58195" kindref="member">g_reference</ref>[3];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="struct_h_e___face_1a1e42fc51ad1f4765ac58ea01321b869d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___face_1a1e42fc51ad1f4765ac58ea01321b869d" kindref="member">g_reference_inv</ref>[3];<sp/></highlight></codeline>
+<codeline lineno="89" refid="struct_h_e___face_1af29889f85125a5ee2d1a9bfed962b1c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___face_1af29889f85125a5ee2d1a9bfed962b1c1" kindref="member">normal_reference</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="struct_h_e___face_1aeffc9338986519591f355f10f0c6fbc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___face_1aeffc9338986519591f355f10f0c6fbc4" kindref="member">r12_reference</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="struct_h_e___face_1a1702dc1e4864af08ec5799f1dc6bc94b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="struct_h_e___face_1a1702dc1e4864af08ec5799f1dc6bc94b" kindref="member">r13_reference</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="struct_h_e___face_1aba358c5350f246088a91f771875a6f16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1,<sp/>v2,<sp/><ref refid="struct_h_e___face_1aba358c5350f246088a91f771875a6f16" kindref="member">v3</ref>;<sp/></highlight></codeline>
+<codeline lineno="94" refid="struct_h_e___face_1a8dabcdcd65ab89fd3bf699c7e4ec967b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1a8dabcdcd65ab89fd3bf699c7e4ec967b" kindref="member">boundary</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="struct_h_e___face_1a57f9a18cd7c3e5e82b880b1aac75342c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1a57f9a18cd7c3e5e82b880b1aac75342c" kindref="member">_hedge</ref>;<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>md</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="struct_h_e___face_1a03f02ae3558ec7a8f79c62a6515a05ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___face_1a03f02ae3558ec7a8f79c62a6515a05ca" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="struct_h_e___face_1a9d94b11abc873938c7cced0a757c1187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="struct_h_e___face_1a9d94b11abc873938c7cced0a757c1187" kindref="member">energy</ref>;<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref><sp/>_property;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref><sp/>=<sp/><ref refid="struct_h_e___face" kindref="compound">HE_Face&lt;PropertyFaces&gt;</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PropertyEdges&gt;</highlight></codeline>
+<codeline lineno="110" refid="struct_h_e___half_edge" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdge</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="struct_h_e___half_edge_1a5af1508a08237657ca639e56fe903437" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a5af1508a08237657ca639e56fe903437" kindref="member">index</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="struct_h_e___half_edge_1a7db693b228383b8985ea7a080f34b90d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a7db693b228383b8985ea7a080f34b90d" kindref="member">vert_from</ref>;<sp/></highlight></codeline>
+<codeline lineno="115" refid="struct_h_e___half_edge_1a494604d4afa09f5d2e7d5fd61b551b62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a494604d4afa09f5d2e7d5fd61b551b62" kindref="member">vert_to</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="struct_h_e___half_edge_1a2ab618a97008d3ee47e485c984eb5fa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a2ab618a97008d3ee47e485c984eb5fa2" kindref="member">edge</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="struct_h_e___half_edge_1a1e4a6d5a4d215915e83106da85127169" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a1e4a6d5a4d215915e83106da85127169" kindref="member">face</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="struct_h_e___half_edge_1ae3b4a834e3d24ded85c36d92c4e916a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1ae3b4a834e3d24ded85c36d92c4e916a6" kindref="member">pair</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="struct_h_e___half_edge_1a7eb7613a3009c398fb175a67e696ef2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a7eb7613a3009c398fb175a67e696ef2b" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="struct_h_e___half_edge_1ac5ef709b2a46f4f38708259537b914dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1ac5ef709b2a46f4f38708259537b914dd" kindref="member">prev</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121" refid="struct_h_e___half_edge_1a9b1bae499812d45772a0eab709db65cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_h_e___half_edge_1a9b1bae499812d45772a0eab709db65cc" kindref="member">boundary</ref>;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref><sp/>_property;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdgeProp</ref><sp/>=<sp/><ref refid="struct_h_e___half_edge" kindref="compound">HE_HalfEdge&lt;PropertyEdges&gt;</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="structtriangle__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtriangle__type" kindref="compound">triangle_type</ref></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v1,<sp/>v2,<sp/>v3;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>orientation;</highlight></codeline>
+<codeline lineno="136" refid="structtriangle__type_1a21d840de1d251e00ed821c660f03db23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="structtriangle__type_1a21d840de1d251e00ed821c660f03db23" kindref="member">g_reference</ref>[3];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="structtriangle__type_1a8a85c86701038e765042ab2e42472e59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="structtriangle__type_1a8a85c86701038e765042ab2e42472e59" kindref="member">normal_reference</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="structtriangle__type_1a20e9b039927b4680e46fa3d12c558ab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structtriangle__type_1a20e9b039927b4680e46fa3d12c558ab5" kindref="member">is_reference_normal</ref>;<sp/></highlight></codeline>
+<codeline lineno="139" refid="structtriangle__type_1a342f5a7b7415e4ddf88ffc6a5f4aac30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structtriangle__type_1a342f5a7b7415e4ddf88ffc6a5f4aac30" kindref="member">is_reference_g</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="structtriangle__type_1a225f8fbd646668be41f5b5fe11205818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtriangle__type_1a225f8fbd646668be41f5b5fe11205818" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="structtriangle__type_1a6c0a86b449257756e57db8c20dfa647c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="structtriangle__type_1a6c0a86b449257756e57db8c20dfa647c" kindref="member">energy</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_faces" kindref="compound">PropertyFaces</ref><sp/>prop;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtriangle__type" kindref="compound">triangle_type</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/>rhs.id);<sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="145" refid="structvertices__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvertices__type" kindref="compound">vertices_type</ref></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/>r;</highlight></codeline>
+<codeline lineno="149" refid="structvertices__type_1a654fc93ee49f93bf8b7986942ff952bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvertices__type_1a654fc93ee49f93bf8b7986942ff952bc" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="structvertices__type_1a020248a03072684b201607601994b483" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="structvertices__type_1a020248a03072684b201607601994b483" kindref="member">forceC</ref>;<sp/></highlight></codeline>
+<codeline lineno="151" refid="structvertices__type_1aa44c1fe95a4eddc7ac5260828ea34829" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="structvertices__type_1aa44c1fe95a4eddc7ac5260828ea34829" kindref="member">forceD</ref>;<sp/></highlight></codeline>
+<codeline lineno="152" refid="structvertices__type_1a416d5362254d7c97ff82f6e90977064f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxy_type" kindref="compound">real3</ref><sp/><ref refid="structvertices__type_1a416d5362254d7c97ff82f6e90977064f" kindref="member">forceE</ref>;<sp/></highlight></codeline>
+<codeline lineno="153" refid="structvertices__type_1abb09e899eeeaffc480900aa642e8496a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="structvertices__type_1abb09e899eeeaffc480900aa642e8496a" kindref="member">energy</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="structvertices__type_1a9ef80c15df230a7493ba6098697e9df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>real<sp/><ref refid="structvertices__type_1a9ef80c15df230a7493ba6098697e9df8" kindref="member">mass</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref><sp/>prop;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvertices__type" kindref="compound">vertices_type</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/>rhs.id);<sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp"/>
+  </compounddef>
+</doxygen>

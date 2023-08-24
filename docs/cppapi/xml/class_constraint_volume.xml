@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_constraint_volume" kind="class" language="C++" prot="public">
+    <compoundname>ConstraintVolume</compoundname>
+    <basecompoundref refid="class_constraint_class" prot="public" virt="non-virtual">ConstraintClass</basecompoundref>
+    <includes refid="constraintvolume_8hpp" local="no">constraintvolume.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_constraint_volume_1acbc2975bd7ba079948a830553c31af87" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; <ref refid="structxy_type" kindref="compound">real3</ref> &gt;</type>
+        <definition>pymemb::vector&lt;real3&gt; ConstraintVolume::grad</definition>
+        <argsstring></argsstring>
+        <name>grad</name>
+        <qualifiedname>ConstraintVolume::grad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="64" column="20" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_volume_1aff64a4bc271a98a6066457b26d4466e6" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; <ref refid="structxy_type" kindref="compound">real3</ref> &gt;</type>
+        <definition>pymemb::vector&lt;real3&gt; ConstraintVolume::ref_grad</definition>
+        <argsstring></argsstring>
+        <name>ref_grad</name>
+        <qualifiedname>ConstraintVolume::ref_grad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="65" column="20" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_constraint_volume_1a7a1d21f6f415ec93ed9624b7aa61ad38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstraintVolume::ConstraintVolume</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ConstraintVolume</name>
+        <qualifiedname>ConstraintVolume::ConstraintVolume</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="15" column="5" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1a7aec7fd9a10ed462e186251fde3ccce6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstraintVolume::~ConstraintVolume</definition>
+        <argsstring>()</argsstring>
+        <name>~ConstraintVolume</name>
+        <qualifiedname>ConstraintVolume::~ConstraintVolume</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="21" column="5" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1acb83010cfde2e0cf3bd22cd4887693ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintVolume::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ConstraintVolume::set_default_properties</qualifiedname>
+        <reimplements refid="class_constraint_class_1a1a47590bc4897a1d27ca631eb29f92de">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="23" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1a3e4384745af68793a5877ba90d705432" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintVolume::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ConstraintVolume::set_property</qualifiedname>
+        <reimplements refid="class_constraint_class_1ac0fe35702cda5309dcdc7ff777affff9">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="30" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="30" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1a82b6e2556cd3ad019302b4304b91347e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintVolume::enforce</definition>
+        <argsstring>(void) override</argsstring>
+        <name>enforce</name>
+        <qualifiedname>ConstraintVolume::enforce</qualifiedname>
+        <reimplements refid="class_constraint_class_1a57dce5dae72428139314e246cbe6e3f8">enforce</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Enforce constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="59" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.cpp" bodystart="97" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1ad1ce36c4aed01c75e8010c7473c8fc93" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintVolume::compute_ref_gradient</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_ref_gradient</name>
+        <qualifiedname>ConstraintVolume::compute_ref_gradient</qualifiedname>
+        <reimplements refid="class_constraint_class_1a6986ddefadb73db668b8d473dd943278">compute_ref_gradient</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Compute reference gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="60" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.cpp" bodystart="91" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_volume_1a9d145c4167282deb489c21493d232324" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ConstraintVolume::compute_gradient</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_gradient</name>
+        <qualifiedname>ConstraintVolume::compute_gradient</qualifiedname>
+        <reimplements refid="class_constraint_class_1a35223eb0fbfedfdc34d5f19f9ad5b5a6">compute_gradient</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute volume gradient on a vertex Volume gradient <formula id="0">$ \nabla_i V = \frac 1 3 \sum_T A_T \vec n_T $</formula>, where <formula id="1">$ A_T $</formula> is area of triangle T, <formula id="2">$ \vec n_T $</formula> is the normal vector to that triangle, and the sum is carried over all triangles in the vertex star. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>get the triangle that this vertex is part of</para>
+<para>volume gradient</para>
+<para>face Normal</para>
+<para>DO SOMETHING WITH THAT FACE</para>
+<para>Remember -1 is the virtual face outside of the mesh</para>
+<para>MOVE TO THE NEXT FACE</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="61" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.cpp" bodystart="10" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Volume constraint class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+      </node>
+      <node id="1">
+        <label>ConstraintVolume</label>
+        <link refid="class_constraint_volume"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="2">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ConstraintVolume</label>
+        <link refid="class_constraint_volume"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" line="12" column="1" bodyfile="pymembrane/cppmodule/src/constraints/constraintvolume.hpp" bodystart="13" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_constraint_class_1a8ca5548187b2f83284314c235a729ff6" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>_system</name></member>
+      <member refid="class_constraint_volume_1a9d145c4167282deb489c21493d232324" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>compute_gradient</name></member>
+      <member refid="class_constraint_class_1aeb96068041fba466acfa7236bc12b1fd" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>compute_normal</name></member>
+      <member refid="class_constraint_volume_1ad1ce36c4aed01c75e8010c7473c8fc93" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>compute_ref_gradient</name></member>
+      <member refid="class_constraint_class_1a4c11a6d7e0e8f93116e00a5f30b6370b" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>ConstraintClass</name></member>
+      <member refid="class_constraint_volume_1a7a1d21f6f415ec93ed9624b7aa61ad38" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>ConstraintVolume</name></member>
+      <member refid="class_constraint_volume_1a82b6e2556cd3ad019302b4304b91347e" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>enforce</name></member>
+      <member refid="class_constraint_class_1aa355737f9a8c3258e43a22960c23e0a2" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>get_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_volume_1acbc2975bd7ba079948a830553c31af87" prot="private" virt="non-virtual"><scope>ConstraintVolume</scope><name>grad</name></member>
+      <member refid="class_constraint_class_1ac6f6a956a2d26c343446e979576bf027" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>info</name></member>
+      <member refid="class_constraint_class_1af42efcda7ad28f9bdb93ac980c09c1cd" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>is_satisfied</name></member>
+      <member refid="class_constraint_class_1a7f872869d7d89c607d947bec323a9f04" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>m_lambda</name></member>
+      <member refid="class_constraint_class_1a624e464d7db10fa44d3f0ca73fec9533" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>m_target</name></member>
+      <member refid="class_constraint_class_1abaf007d717cb31d8d5653ca9f39b1186" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>m_tol</name></member>
+      <member refid="class_constraint_class_1aa6eb6c4ae488b41ed1b37cd72dfe6848" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>m_type</name></member>
+      <member refid="class_constraint_class_1adcc6ad49efefc10bd83ce1800fa80d28" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>m_value</name></member>
+      <member refid="class_constraint_class_1aa23d14d90c76b6585a9be1c79523eca8" prot="protected" virt="non-virtual"><scope>ConstraintVolume</scope><name>name</name></member>
+      <member refid="class_constraint_class_1a3ca1289ec82cfedb8416edbb4b852518" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>print_warning_calling</name></member>
+      <member refid="class_constraint_class_1ab0f9535ab79ff566de99acdf1b9ca6f3" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>print_warning_calling_err</name></member>
+      <member refid="class_constraint_class_1a7e129f7655ba756841f26cae9dd45ebd" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>print_warning_property_name</name></member>
+      <member refid="class_constraint_volume_1aff64a4bc271a98a6066457b26d4466e6" prot="private" virt="non-virtual"><scope>ConstraintVolume</scope><name>ref_grad</name></member>
+      <member refid="class_constraint_class_1ab1997a3827a87a1aaa9735ae09089882" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>reset_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_volume_1acb83010cfde2e0cf3bd22cd4887693ef" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>set_default_properties</name></member>
+      <member refid="class_constraint_volume_1a3e4384745af68793a5877ba90d705432" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1aa0bb2b152fdae08ac021faed52ec5aa4" prot="public" virt="virtual" ambiguityscope="ConstraintClass::"><scope>ConstraintVolume</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a6ab45128d12f3444015a74f5f221c62a" prot="public" virt="virtual" ambiguityscope="ConstraintClass::"><scope>ConstraintVolume</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a1336a7155d6b82b062d50b62084d1ee5" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>set_property_common</name></member>
+      <member refid="class_constraint_class_1a24af0e5e32672cdfe5a8a2eca60a9c32" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>should_apply</name></member>
+      <member refid="class_constraint_class_1a51faa42b8ae92b287e7f386bee09efb6" prot="public" virt="virtual"><scope>ConstraintVolume</scope><name>~ConstraintClass</name></member>
+      <member refid="class_constraint_volume_1a7aec7fd9a10ed462e186251fde3ccce6" prot="public" virt="non-virtual"><scope>ConstraintVolume</scope><name>~ConstraintVolume</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

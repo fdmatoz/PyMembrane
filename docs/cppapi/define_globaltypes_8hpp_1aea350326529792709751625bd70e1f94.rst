@@ -1,0 +1,14 @@
+.. _exhale_define_globaltypes_8hpp_1aea350326529792709751625bd70e1f94:
+
+Define vsub
+===========
+
+- Defined in :ref:`file_pymembrane_cppmodule_src_types_globaltypes.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: vsub
+   :project: pymembrane

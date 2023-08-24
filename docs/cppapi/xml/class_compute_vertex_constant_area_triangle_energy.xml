@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_vertex_constant_area_triangle_energy" kind="class" language="C++" prot="public">
+    <compoundname>ComputeVertexConstantAreaTriangleEnergy</compoundname>
+    <basecompoundref refid="class_compute_force_class" prot="public" virt="non-virtual">ComputeForceClass</basecompoundref>
+    <includes refid="potential_constant_area_triangle_8hpp" local="no">potentialConstantAreaTriangle.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_compute_vertex_constant_area_triangle_energy_1a0d9e5a983d47428ac8d39ff80b9dd55e" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexConstantAreaTriangleEnergy::sigma</definition>
+        <argsstring></argsstring>
+        <name>sigma</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::sigma</qualifiedname>
+        <briefdescription>
+<para>strength </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="78" column="20" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_compute_vertex_constant_area_triangle_energy_1a8dd4cae9ae7ecdf3f1f16501a5fd538a" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexConstantAreaTriangleEnergy::target_area</definition>
+        <argsstring></argsstring>
+        <name>target_area</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::target_area</qualifiedname>
+        <briefdescription>
+<para>target equilibirum area </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="79" column="20" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1ac6bf4bf850bae808b3ed31c1f7672145" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexConstantAreaTriangleEnergy::ComputeVertexConstantAreaTriangleEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexConstantAreaTriangleEnergy</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::ComputeVertexConstantAreaTriangleEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="22" column="5" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a50fb67ab5ebd1c95fba286455eeb6b96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexConstantAreaTriangleEnergy::~ComputeVertexConstantAreaTriangleEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexConstantAreaTriangleEnergy</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::~ComputeVertexConstantAreaTriangleEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="29" column="5" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1ac4a5271aefff11049c2af28604b7d1f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="31" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a5ce7d3e92939c4aebc57f5bbfe2b84ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="40" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="40" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a8b822b956556a8335d0282e73d3ea21d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexConstantAreaTriangleEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="59" column="14" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a95c93fdaaac524a5f02c930c3e2f4e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute energy for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="70" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="35" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1ae1f4f866172267bd0fe2b972924a13cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="71" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="190" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a796fe539acac48fe718f73eaa4af223c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexConstantAreaTriangleEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="72" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="46" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a88ba0b109e51f97c9242dad06d853b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexConstantAreaTriangleEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="73" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="66" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a9470b36748408238e5eb2c2f79b90a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::compute_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b">compute_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="74" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="270" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a2d25f6f75a8977e4ad6174af82ae9058" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexConstantAreaTriangleEnergy::compute_atomic_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::compute_atomic_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf">compute_atomic_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="75" column="10" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.cpp" bodystart="367" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="39" column="5" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="39" column="5" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_constant_area_triangle_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexConstantAreaTriangleEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="39" column="5" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_compute_vertex_constant_area_triangle_energy" kindref="compound">ComputeVertexConstantAreaTriangleEnergy</ref> Compute Vertex Cauchy-Green Streaching Energy For a given triangle t compute contribution from the surface tension caused by change in the surface area. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><formula id="15">$ E = \frac{1}{2} \sigma \left(A - A_0\right)^2 $</formula></para>
+<para>where <formula id="16">$ A $</formula> is current area of the triangle, <formula id="17">$ A_0 $</formula> is the native (given) triangle area, and <formula id="18">$ \sigma $</formula> if the surface tension. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexConstantAreaTriangleEnergy</label>
+        <link refid="class_compute_vertex_constant_area_triangle_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexConstantAreaTriangleEnergy</label>
+        <link refid="class_compute_vertex_constant_area_triangle_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" line="19" column="1" bodyfile="pymembrane/cppmodule/src/potentials/potentialConstantAreaTriangle.hpp" bodystart="20" bodyend="80"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>_system</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1ae1f4f866172267bd0fe2b972924a13cd" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a2d25f6f75a8977e4ad6174af82ae9058" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_atomic_stress</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a796fe539acac48fe718f73eaa4af223c" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_edge_energy</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a95c93fdaaac524a5f02c930c3e2f4e44" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_face_energy</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a9470b36748408238e5eb2c2f79b90a74" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_stress</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a88ba0b109e51f97c9242dad06d853b58" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1ac6bf4bf850bae808b3ed31c1f7672145" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>ComputeVertexConstantAreaTriangleEnergy</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a8b822b956556a8335d0282e73d3ea21d" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>get_type</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>print_warning_property_name</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1ac4a5271aefff11049c2af28604b7d1f6" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>set_default_properties</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a5ce7d3e92939c4aebc57f5bbfe2b84ad" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a0d9e5a983d47428ac8d39ff80b9dd55e" prot="private" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>sigma</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a8dd4cae9ae7ecdf3f1f16501a5fd538a" prot="private" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>target_area</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>~ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_constant_area_triangle_energy_1a50fb67ab5ebd1c95fba286455eeb6b96" prot="public" virt="non-virtual"><scope>ComputeVertexConstantAreaTriangleEnergy</scope><name>~ComputeVertexConstantAreaTriangleEnergy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

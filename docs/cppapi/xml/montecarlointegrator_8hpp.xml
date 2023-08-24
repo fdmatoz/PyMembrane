@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="montecarlointegrator_8hpp" kind="file" language="C++">
+    <compoundname>montecarlointegrator.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="globaltypes_8hpp" local="yes">../types/globaltypes.hpp</includes>
+    <includes refid="systemclass_8hpp" local="yes">../system/systemclass.hpp</includes>
+    <includes refid="computeforceclass_8hpp" local="yes">../potentials/computeforceclass.hpp</includes>
+    <includes refid="pbc_8hpp" local="yes">../box/pbc.hpp</includes>
+    <includes local="no">pybind11/pybind11.h</includes>
+    <includedby refid="evolverclass_8cpp" local="yes">pymembrane/cppmodule/src/evolver/evolverclass.cpp</includedby>
+    <includedby refid="evolverclass_8hpp" local="yes">pymembrane/cppmodule/src/evolver/evolverclass.hpp</includedby>
+    <includedby refid="montercarlo__flip__edge_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</includedby>
+    <includedby refid="montercarlo__spin__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</includedby>
+    <includedby refid="montercarlo__swap__edge_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</includedby>
+    <includedby refid="montercarlo__swap__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</includedby>
+    <includedby refid="montercarlo__vertex_8hpp" local="yes">pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>../box/box.hpp</label>
+        <link refid="box_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../box/pbc.hpp</label>
+        <link refid="pbc_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../compute/computemesh.hpp</label>
+        <link refid="computemesh_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../dumper/dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../mesh/computegeometry.hpp</label>
+        <link refid="computegeometry_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../mesh/halfedges.hpp</label>
+        <link refid="halfedges_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../mesh/meshoperators.hpp</label>
+        <link refid="meshoperators_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>meshproperties.hpp</label>
+        <link refid="meshproperties_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../potentials/computeforceclass.hpp</label>
+        <link refid="computeforceclass_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>read_mesh.hpp</label>
+        <link refid="read__mesh_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../system/systemclass.hpp</label>
+        <link refid="systemclass_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../types/pymembvector.hpp</label>
+        <link refid="pymembvector_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../utils/fromdicttovec.hpp</label>
+        <link refid="fromdicttovec_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>fromstring.hpp</label>
+        <link refid="fromstring_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="32">
+        <label>cctype</label>
+      </node>
+      <node id="22">
+        <label>fstream</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
+      </node>
+      <node id="30">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="31">
+        <label>iterator</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="25">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="33">
+        <label>tuple</label>
+      </node>
+      <node id="28">
+        <label>type_traits</label>
+      </node>
+      <node id="16">
+        <label>typeinfo</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>pymembrane/cppmodule/src/compute/pybind_export_compute.hpp</label>
+        <link refid="pybind__export__compute_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>pymembrane/cppmodule/src/evolver/evolverclass.hpp</label>
+        <link refid="evolverclass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pymembrane/cppmodule/src/evolver/pybind_export_evolver.hpp</label>
+        <link refid="pybind__export__evolver_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp</label>
+        <link refid="montecarlointegrator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp</label>
+        <link refid="montercarlo__flip__edge_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_spin_vertex.hpp</label>
+        <link refid="montercarlo__spin__vertex_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_edge.hpp</label>
+        <link refid="montercarlo__swap__edge_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_swap_vertex.hpp</label>
+        <link refid="montercarlo__swap__vertex_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>pymembrane/cppmodule/src/integrators/montercarlo_vertex.hpp</label>
+        <link refid="montercarlo__vertex_8hpp"/>
+      </node>
+      <node id="5">
+        <label>pymembrane/cppmodule/src/minimizer/fire.hpp</label>
+        <link refid="fire_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_monte_carlo_integrator" prot="public">MonteCarloIntegrator</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="montecarlointegrator_8hpp_1a620c22e302d4d8e060e25bdf46db5c7f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="class_monte_carlo_integrator" kindref="compound">MonteCarloIntegrator</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;MonteCarloIntegrator&gt; MonteCarloIntegrator_ptr</definition>
+        <argsstring></argsstring>
+        <name>MonteCarloIntegrator_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" line="123" column="25" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__montecarlointegrator__HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__montecarlointegrator__HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../types/globaltypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../system/systemclass.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../potentials/computeforceclass.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../box/pbc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pybind11/pybind11.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">py<sp/>=<sp/>pybind11;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_monte_carlo_integrator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_monte_carlo_integrator" kindref="compound">MonteCarloIntegrator</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" kindref="member">MonteCarloIntegrator</ref>(<ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;system,<sp/>VertexCompute<sp/>&amp;potentials)<sp/>:<sp/><ref refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" kindref="member">_system</ref>(system),<sp/><ref refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kindref="member">_potentials</ref>(potentials),<sp/>integrate_every(1),<sp/>minimum_energy(0.0)<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>NUM_TYPES_ALLOWED<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37" refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" kindref="member">~MonteCarloIntegrator</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="43" refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e" kindref="member">integrate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>real<sp/>ComputeEnergyFromEdge(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;edge_index)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>edge_energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>f<sp/>:<sp/><ref refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kindref="member">_potentials</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>edge_energy<sp/>+=<sp/>f.second-&gt;compute_edge_energy(edge_index);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>edge_energy;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>real<sp/>ComputeEnergyFromVertex(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;vertex_index)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vertex_energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>f<sp/>:<sp/><ref refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kindref="member">_potentials</ref>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vertex_energy<sp/>+=<sp/>f.second-&gt;compute_vertex_energy(vertex_index);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vertex_energy;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>real<sp/>ComputeEnergyFromFace(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;vertex_index)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>face_energy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>f<sp/>:<sp/><ref refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kindref="member">_potentials</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>face_energy<sp/>+=<sp/>f.second-&gt;compute_face_energy(vertex_index);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>face_energy;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" kindref="member">set_temperature</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_T)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" kindref="member">T</ref><sp/>=<sp/>fabs(_T);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>update_temperature_parameters();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_temperature_parameters(){};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_temperature(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" kindref="member">T</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="86" refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" kindref="member">get_name</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" kindref="member">name</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="91" refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" kindref="member">get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" kindref="member">type</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="96" refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" kindref="member">get_integrate_every</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>integrate_every;<sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_integrate_every(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_integrate_every)<sp/>{<sp/>integrate_every<sp/>=<sp/>_integrate_every;<sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_minimum_energy()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>minimum_energy;<sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_minimum_energy(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_minimum_energy)<sp/>{<sp/>minimum_energy<sp/>=<sp/>_minimum_energy;<sp/>}</highlight></codeline>
+<codeline lineno="105" refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b" kindref="member">set_default_properties</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::map&lt;std::pair&lt;std::string,<sp/>std::string&gt;,<sp/>std::string&gt;&gt;<sp/>&amp;value_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;map&lt;string,<sp/>map&lt;pair&lt;string,<sp/>string&gt;,<sp/>string&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">);<sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::map&lt;std::string,<sp/>std::string&gt;&gt;<sp/>&amp;value_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;map&lt;string,<sp/>map&lt;string,<sp/>string&gt;&gt;&quot;</highlight><highlight class="normal">);<sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_property(std::map&lt;std::string,<sp/>std::string&gt;<sp/>&amp;value_map)<sp/>{<sp/>this-&gt;print_warning_calling(</highlight><highlight class="stringliteral">&quot;std::map&lt;std::string,<sp/>std::string&gt;&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_warning_calling(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message)<sp/>{<sp/>py::print(</highlight><highlight class="stringliteral">&quot;integrator<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" kindref="member">name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>cannot<sp/>be<sp/>called<sp/>with<sp/>&quot;</highlight><highlight class="normal">,<sp/>message);<sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_warning_property_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message)<sp/>{<sp/>py::print(</highlight><highlight class="stringliteral">&quot;parameter<sp/>&quot;</highlight><highlight class="normal">,<sp/>message,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>part<sp/>of<sp/>&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" kindref="member">name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" kindref="member">type</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>integrator&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113" refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_system_class" kindref="compound">SystemClass</ref><sp/>&amp;<ref refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" kindref="member">_system</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" refkind="member"><highlight class="normal"><sp/><sp/>VertexCompute<sp/>&amp;<ref refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kindref="member">_potentials</ref>;<sp/></highlight></codeline>
+<codeline lineno="115" refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" refkind="member"><highlight class="normal"><sp/><sp/>real<sp/><ref refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" kindref="member">T</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>integrate_every;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>minimum_energy;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NUM_TYPES_ALLOWED;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;MonteCarloIntegrator&gt;<sp/>MonteCarloIntegrator_ptr;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp"/>
+  </compounddef>
+</doxygen>

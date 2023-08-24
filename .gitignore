@@ -1,0 +1,106 @@
+#Edited 13-08-2023
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+.DS_Store
+*.so
+*.pyd
+*.dll
+*.sln
+*.sdf
+*.opensdf
+*.vcxproj
+*.filters
+example.dir
+Win32
+x64
+Release
+Debug
+.vs
+CTestTestfile.cmake
+Testing
+autogen
+MANIFEST
+/.ninja_*
+/*.ninja
+/docs/.build
+*.py[co]
+*.egg-info
+*~
+.*.swp
+.DS_Store
+/dist
+/build
+/cmake/
+.cache/
+sosize-*.txt
+pybind11Config*.cmake
+pybind11Targets.cmake
+#cuda
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# vscode
+.vscode/
+pymembrane/cppmodule/.vscode/
+pymembrane/cppmodule/src/.vscode/
+
+# vscode
+.history/
+
+# python
+__pycache__/
+*.pyc
+pymembrane/__pycache__/
+pymembrane/cppmodule/__pycache__/
+.ipynb_checkpoints/
+
+
+# vtk
+*.vtk
+*.vtp
+*.vtu
+
+# vscode
+pymembrane/cppmodule/build/* 
+
+# exception to the rule
+!pymembrane/cppmodule/build/.gitkeep 
+

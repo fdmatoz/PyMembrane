@@ -1,0 +1,681 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_mesh" kind="class" language="C++" prot="public">
+    <compoundname>ComputeMesh</compoundname>
+    <includes refid="computemesh_8hpp" local="no">computemesh.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Energy and Force Measures</header>
+      <description><para>Provides methods to compute various energy, force, and stress-related properties for the mesh. </para>
+</description>
+      <memberdef kind="variable" id="class_compute_mesh_1a84f7a96bcec1a8260ef91b895bee4342" prot="private" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; ComputeMesh::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>ComputeMesh::_system</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="157" column="17" bodyfile="pymembrane/cppmodule/src/compute/computemesh.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a806aab7b730a4c6febdf41f82e0d6d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, real &gt;</type>
+        <definition>std::map&lt; std::string, real &gt; ComputeMesh::compute_mesh_energy</definition>
+        <argsstring>(EvolverClass &amp;)</argsstring>
+        <name>compute_mesh_energy</name>
+        <qualifiedname>ComputeMesh::compute_mesh_energy</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <defname>evolver</defname>
+        </param>
+        <briefdescription>
+<para>Computes the total energy of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A map containing different energy components and their respective values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="89" column="14" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="520" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a258190c333df62c80ed36b135e4d1750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; <ref refid="structxy_type" kindref="compound">real3</ref> &gt;</type>
+        <definition>pymemb::vector&lt; real3 &gt; ComputeMesh::compute_vertex_forces</definition>
+        <argsstring>(EvolverClass &amp;)</argsstring>
+        <name>compute_vertex_forces</name>
+        <qualifiedname>ComputeMesh::compute_vertex_forces</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <defname>evolver</defname>
+        </param>
+        <briefdescription>
+<para>Computes forces on each vertex in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector containing force vectors for each vertex. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="96" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="543" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a4aa87d2ae583bcc334416702e55684fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_tensor_type" kindref="compound">realTensor</ref></type>
+        <definition>realTensor ComputeMesh::compute_stresses</definition>
+        <argsstring>(EvolverClass &amp;, const bool &amp;)</argsstring>
+        <name>compute_stresses</name>
+        <qualifiedname>ComputeMesh::compute_stresses</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <defname>evolver</defname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <defname>include_velocities</defname>
+        </param>
+        <briefdescription>
+<para>Computes the stress tensors for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see cpp for more detail. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Stress tensor for the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="106" column="16" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="553" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a0df02ab4be7567cdb522fb03f70bfedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_tensor_type" kindref="compound">realTensor</ref></type>
+        <definition>realTensor ComputeMesh::get_stresses</definition>
+        <argsstring>(EvolverClass &amp;, const bool &amp;)</argsstring>
+        <name>get_stresses</name>
+        <qualifiedname>ComputeMesh::get_stresses</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <defname>evolver</defname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <defname>include_velocities</defname>
+        </param>
+        <briefdescription>
+<para>Retrieves the stress tensors for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see cpp for more detail. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Stress tensor for the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="114" column="16" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="560" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a4920fdd93c23e53a94d608fa414b8fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; real &gt;</type>
+        <definition>std::vector&lt; real &gt; ComputeMesh::compute_pressure</definition>
+        <argsstring>(EvolverClass &amp;)</argsstring>
+        <name>compute_pressure</name>
+        <qualifiedname>ComputeMesh::compute_pressure</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <defname>evolver</defname>
+        </param>
+        <briefdescription>
+<para>Computes the pressure for the mesh using the provided evolver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector containing pressure values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="121" column="17" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="705" bodyend="716"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ade0cc217fb21e8435988680fe9e55bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_tensor_type" kindref="compound">realTensor</ref></type>
+        <definition>realTensor ComputeMesh::compute_kinetic_energy_tensor</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_kinetic_energy_tensor</name>
+        <qualifiedname>ComputeMesh::compute_kinetic_energy_tensor</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the kinetic energy tensor for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Kinetic energy tensor for the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="127" column="16" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="651" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ae18d3e181ec5478c8b3a2c1971aba279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::compute_kinetic_energy</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_kinetic_energy</name>
+        <qualifiedname>ComputeMesh::compute_kinetic_energy</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the total kinetic energy of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Total kinetic energy of the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="132" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="686" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a35616a0e8c429e9478a48fe4a62880f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::compute_temperature</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_temperature</name>
+        <qualifiedname>ComputeMesh::compute_temperature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the temperature based on the current state of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Temperature of the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="138" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="697" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ae933618d642610e53b40c2dbbd874b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_tensor_type" kindref="compound">realTensor</ref></type>
+        <definition>realTensor ComputeMesh::compute_stresses_virial</definition>
+        <argsstring>(EvolverClass &amp;evolver, const bool &amp;computeForAllAtoms)</argsstring>
+        <name>compute_stresses_virial</name>
+        <qualifiedname>ComputeMesh::compute_stresses_virial</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <declname>evolver</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>computeForAllAtoms</declname>
+        </param>
+        <briefdescription>
+<para>Computes the virial stresses for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object guiding the mesh&apos;s evolution. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>computeForAllAtoms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to determine whether to compute stresses for all atoms or a subset. Replace with actual flag description. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Virial stress tensor for the mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="146" column="16" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="718" bodyend="776"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a297da91a8a7c8bc7c9aa73fcb2304eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_tensor_type" kindref="compound">realTensor</ref> &gt;</type>
+        <definition>std::vector&lt; realTensor &gt; ComputeMesh::compute_stresses_atom</definition>
+        <argsstring>(EvolverClass &amp;evolver, const bool &amp;computeForAllAtoms)</argsstring>
+        <name>compute_stresses_atom</name>
+        <qualifiedname>ComputeMesh::compute_stresses_atom</qualifiedname>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <declname>evolver</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>computeForAllAtoms</declname>
+        </param>
+        <briefdescription>
+<para>Computes the stresses for each atom in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the evolver object guiding the mesh&apos;s evolution. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>computeForAllAtoms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to determine whether to compute stresses for all atoms or a subset. Replace with actual flag description. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of stress tensors, one for each atom. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="154" column="17" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="778" bodyend="802"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_compute_mesh_1ae2206d8faa6094faa4623e043d486eb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeMesh::ComputeMesh</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeMesh</name>
+        <qualifiedname>ComputeMesh::ComputeMesh</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+<para>Constructor that initializes the compute mesh with a system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>system</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the system on which the computations will be made. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="28" column="5" bodyfile="pymembrane/cppmodule/src/compute/computemesh.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a01fbf3ea41eacf6fc6d82ab50fbc53d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeMesh::compute_vertex_normals</definition>
+        <argsstring>(bool vertex_normal_angle_weight=false)</argsstring>
+        <name>compute_vertex_normals</name>
+        <qualifiedname>ComputeMesh::compute_vertex_normals</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>vertex_normal_angle_weight</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Computes the normals for each vertex in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex_normal_angle_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to determine if the vertex normal should be angle weighted. Default is false. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="34" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="164" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ab3f62e044c17f862e84f457dec6a856a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeMesh::compute_face_normals</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_face_normals</name>
+        <qualifiedname>ComputeMesh::compute_face_normals</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the normals for each face in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="37" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="197" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a3485440d5034df582d39ea26c9adac64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt; real &gt; ComputeMesh::compute_edge_lengths</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_edge_lengths</name>
+        <qualifiedname>ComputeMesh::compute_edge_lengths</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the length of each edge in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing lengths for each edge. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="43" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="223" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a1bda94178ca3a941690b30a3b77f2a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::gaussiancurvature_vertex</definition>
+        <argsstring>(const int &amp;vertex_index)</argsstring>
+        <name>gaussiancurvature_vertex</name>
+        <qualifiedname>ComputeMesh::gaussiancurvature_vertex</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>vertex_index</declname>
+        </param>
+        <briefdescription>
+<para>Computes the Gaussian curvature at the vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the Gaussian curvature for the mesh. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="46" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="235" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1abb01bf7089f605f837bf9c9833b96868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::meancurvature_vertex</definition>
+        <argsstring>(const int &amp;vertex_index)</argsstring>
+        <name>meancurvature_vertex</name>
+        <qualifiedname>ComputeMesh::meancurvature_vertex</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>vertex_index</declname>
+        </param>
+        <briefdescription>
+<para>Computes the mean curvature at the vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the mean curvature for the mesh. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; get the triangle that this vertex is part of</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="49" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="281" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a86623c755a819c22e6f36fddf8e4ff15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt; real &gt; ComputeMesh::gaussiancurvature</definition>
+        <argsstring>(void)</argsstring>
+        <name>gaussiancurvature</name>
+        <qualifiedname>ComputeMesh::gaussiancurvature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the Gaussian curvature for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="51" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="353" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a9ba8ecac3132d47fb86ff6d5268fcdd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt; real &gt; ComputeMesh::meancurvature</definition>
+        <argsstring>(void)</argsstring>
+        <name>meancurvature</name>
+        <qualifiedname>ComputeMesh::meancurvature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the mean curvature for the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="54" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="363" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a40a168583c0c169dfb8b7bd542648ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, pymemb::vector&lt; real &gt; &gt;</type>
+        <definition>std::map&lt; std::string, pymemb::vector&lt; real &gt; &gt; ComputeMesh::compute_mesh_curvature</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_mesh_curvature</name>
+        <qualifiedname>ComputeMesh::compute_mesh_curvature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="56" column="14" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="405" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ae0239b15648e49160f7a9e588a75a71d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; pymemb::vector&lt; real &gt; &gt;</type>
+        <definition>pymemb::vector&lt; pymemb::vector&lt; real &gt; &gt; ComputeMesh::compute_face_metric</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_face_metric</name>
+        <qualifiedname>ComputeMesh::compute_face_metric</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes metrics related to each face in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing metrics for each face. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="61" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="503" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1ab9f1d039272f60ef86e58d7daedde4eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::compute_mesh_volume</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_mesh_volume</name>
+        <qualifiedname>ComputeMesh::compute_mesh_volume</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the total volume of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="64" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="452" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a755b9eccf9a1c4ee1c559c8f0b9b1594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt; real &gt; ComputeMesh::compute_face_area</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_face_area</name>
+        <qualifiedname>ComputeMesh::compute_face_area</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the area of each face in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing areas for each face. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="70" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="473" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1a5be77f57818856a8c946418390a7158b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real</type>
+        <definition>real ComputeMesh::compute_mesh_area</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_mesh_area</name>
+        <qualifiedname>ComputeMesh::compute_mesh_area</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the total surface area of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="73" column="10" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="488" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_mesh_1aeecbaf8c127095e46cc6d02283595612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt; real &gt; ComputeMesh::compute_vertex_area</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_vertex_area</name>
+        <qualifiedname>ComputeMesh::compute_vertex_area</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes the area associated with each vertex in the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing areas for each vertex. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="79" column="20" bodyfile="pymembrane/cppmodule/src/compute/computemesh.cpp" bodystart="174" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class responsible for various mesh computations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class offers a variety of mesh-related calculations, ranging from vertex normals to mesh energy and stresses. It operates on a provided system of type <computeroutput><ref refid="class_system_class" kindref="compound">SystemClass</ref></computeroutput>. </para>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/compute/computemesh.hpp" line="21" column="1" bodyfile="pymembrane/cppmodule/src/compute/computemesh.hpp" bodystart="22" bodyend="158"/>
+    <listofallmembers>
+      <member refid="class_compute_mesh_1a84f7a96bcec1a8260ef91b895bee4342" prot="private" virt="non-virtual"><scope>ComputeMesh</scope><name>_system</name></member>
+      <member refid="class_compute_mesh_1a3485440d5034df582d39ea26c9adac64" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_edge_lengths</name></member>
+      <member refid="class_compute_mesh_1a755b9eccf9a1c4ee1c559c8f0b9b1594" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_face_area</name></member>
+      <member refid="class_compute_mesh_1ae0239b15648e49160f7a9e588a75a71d" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_face_metric</name></member>
+      <member refid="class_compute_mesh_1ab3f62e044c17f862e84f457dec6a856a" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_face_normals</name></member>
+      <member refid="class_compute_mesh_1ae18d3e181ec5478c8b3a2c1971aba279" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_kinetic_energy</name></member>
+      <member refid="class_compute_mesh_1ade0cc217fb21e8435988680fe9e55bfd" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_kinetic_energy_tensor</name></member>
+      <member refid="class_compute_mesh_1a5be77f57818856a8c946418390a7158b" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_mesh_area</name></member>
+      <member refid="class_compute_mesh_1a40a168583c0c169dfb8b7bd542648ae7" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_mesh_curvature</name></member>
+      <member refid="class_compute_mesh_1a806aab7b730a4c6febdf41f82e0d6d51" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_mesh_energy</name></member>
+      <member refid="class_compute_mesh_1ab9f1d039272f60ef86e58d7daedde4eb" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_mesh_volume</name></member>
+      <member refid="class_compute_mesh_1a4920fdd93c23e53a94d608fa414b8fdc" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_pressure</name></member>
+      <member refid="class_compute_mesh_1a4aa87d2ae583bcc334416702e55684fb" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_stresses</name></member>
+      <member refid="class_compute_mesh_1a297da91a8a7c8bc7c9aa73fcb2304eb3" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_stresses_atom</name></member>
+      <member refid="class_compute_mesh_1ae933618d642610e53b40c2dbbd874b12" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_stresses_virial</name></member>
+      <member refid="class_compute_mesh_1a35616a0e8c429e9478a48fe4a62880f6" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_temperature</name></member>
+      <member refid="class_compute_mesh_1aeecbaf8c127095e46cc6d02283595612" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_vertex_area</name></member>
+      <member refid="class_compute_mesh_1a258190c333df62c80ed36b135e4d1750" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_vertex_forces</name></member>
+      <member refid="class_compute_mesh_1a01fbf3ea41eacf6fc6d82ab50fbc53d5" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>compute_vertex_normals</name></member>
+      <member refid="class_compute_mesh_1ae2206d8faa6094faa4623e043d486eb2" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>ComputeMesh</name></member>
+      <member refid="class_compute_mesh_1a86623c755a819c22e6f36fddf8e4ff15" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>gaussiancurvature</name></member>
+      <member refid="class_compute_mesh_1a1bda94178ca3a941690b30a3b77f2a53" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>gaussiancurvature_vertex</name></member>
+      <member refid="class_compute_mesh_1a0df02ab4be7567cdb522fb03f70bfedc" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>get_stresses</name></member>
+      <member refid="class_compute_mesh_1a9ba8ecac3132d47fb86ff6d5268fcdd7" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>meancurvature</name></member>
+      <member refid="class_compute_mesh_1abb01bf7089f605f837bf9c9833b96868" prot="public" virt="non-virtual"><scope>ComputeMesh</scope><name>meancurvature_vertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

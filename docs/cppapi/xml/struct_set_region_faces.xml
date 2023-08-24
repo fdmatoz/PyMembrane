@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_set_region_faces" kind="struct" language="C++" prot="public">
+    <compoundname>SetRegionFaces</compoundname>
+    <basecompoundref refid="struct_set_property" prot="public" virt="non-virtual">SetProperty&lt; MeshType &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class MeshType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_set_region_faces_1a6883a4d6312c4f205f837e1dbe6d0ad2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SetRegionFaces&lt; MeshType &gt;::SetRegionFaces</definition>
+        <argsstring>(MeshType &amp;_mesh)</argsstring>
+        <name>SetRegionFaces</name>
+        <qualifiedname>SetRegionFaces::SetRegionFaces</qualifiedname>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="152" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="152" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1a3ec478c683055449006359d6bd005a7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, real &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1ad32029be4e340d59ad362778756aad45">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, real &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="161" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1a8c5ee218a61e2229c68b4b85946baf01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, int &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, int &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="165" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="165" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1a3b939defcd0a8fb31e7ef35a6777f29c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="177" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1ac37ec43c46d91df742d276da833681e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a396b8b990bafa3a17779708c6e637abe">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="181" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1abc28620a7f58598d25166ad88b93d917" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; std::string, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="185" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1a5d655ce2bd85f93bd312227022c1b5cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="189" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="189" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_faces_1a86a9ad9447ba929ad06c6c0939efb23e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionFaces&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionFaces::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="215" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="215" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionFaces&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_faces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionFaces&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_faces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="150" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="151" bodyend="230"/>
+    <listofallmembers>
+      <member refid="struct_set_region_faces_1a3ec478c683055449006359d6bd005a7d" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1a8c5ee218a61e2229c68b4b85946baf01" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1a3b939defcd0a8fb31e7ef35a6777f29c" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1ac37ec43c46d91df742d276da833681e4" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1abc28620a7f58598d25166ad88b93d917" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1a5d655ce2bd85f93bd312227022c1b5cf" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1a86a9ad9447ba929ad06c6c0939efb23e" prot="public" virt="virtual"><scope>SetRegionFaces</scope><name>set_property</name></member>
+      <member refid="struct_set_region_faces_1a6883a4d6312c4f205f837e1dbe6d0ad2" prot="public" virt="non-virtual"><scope>SetRegionFaces</scope><name>SetRegionFaces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

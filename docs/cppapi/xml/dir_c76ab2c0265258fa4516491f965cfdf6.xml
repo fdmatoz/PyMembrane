@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_c76ab2c0265258fa4516491f965cfdf6" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/integrators</compoundname>
+    <innerfile refid="integrator__brownian__vertex_8cpp">integrator_brownian_vertex.cpp</innerfile>
+    <innerfile refid="integrator__brownian__vertex_8hpp">integrator_brownian_vertex.hpp</innerfile>
+    <innerfile refid="integrator__verlet__vertex_8cpp">integrator_verlet_vertex.cpp</innerfile>
+    <innerfile refid="integrator__verlet__vertex_8hpp">integrator_verlet_vertex.hpp</innerfile>
+    <innerfile refid="integratorclass_8hpp">integratorclass.hpp</innerfile>
+    <innerfile refid="montecarlointegrator_8hpp">montecarlointegrator.hpp</innerfile>
+    <innerfile refid="montercarlo__flip__edge_8cpp">montercarlo_flip_edge.cpp</innerfile>
+    <innerfile refid="montercarlo__flip__edge_8hpp">montercarlo_flip_edge.hpp</innerfile>
+    <innerfile refid="montercarlo__spin__vertex_8cpp">montercarlo_spin_vertex.cpp</innerfile>
+    <innerfile refid="montercarlo__spin__vertex_8hpp">montercarlo_spin_vertex.hpp</innerfile>
+    <innerfile refid="montercarlo__swap__edge_8cpp">montercarlo_swap_edge.cpp</innerfile>
+    <innerfile refid="montercarlo__swap__edge_8hpp">montercarlo_swap_edge.hpp</innerfile>
+    <innerfile refid="montercarlo__swap__vertex_8cpp">montercarlo_swap_vertex.cpp</innerfile>
+    <innerfile refid="montercarlo__swap__vertex_8hpp">montercarlo_swap_vertex.hpp</innerfile>
+    <innerfile refid="montercarlo__vertex_8cpp">montercarlo_vertex.cpp</innerfile>
+    <innerfile refid="montercarlo__vertex_8hpp">montercarlo_vertex.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/integrators/"/>
+  </compounddef>
+</doxygen>

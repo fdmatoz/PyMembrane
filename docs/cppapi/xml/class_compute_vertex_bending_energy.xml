@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_vertex_bending_energy" kind="class" language="C++" prot="public">
+    <compoundname>ComputeVertexBendingEnergy</compoundname>
+    <basecompoundref refid="class_compute_force_class" prot="public" virt="non-virtual">ComputeForceClass</basecompoundref>
+    <includes refid="potential_bending_8hpp" local="no">potentialBending.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <member refid="group__computeenergy_1ga70a23778dfb8605b13e04da5c8654b74" kind="variable"><name>m_kappa</name></member>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <member refid="group__computeenergy_1ga17330f691d6f306655d5b69cbc9c4658" kind="function"><name>ComputeVertexBendingEnergy</name></member>
+      <member refid="group__computeenergy_1gad102657c4f944e6d3d2cff1cf680e6a8" kind="function"><name>~ComputeVertexBendingEnergy</name></member>
+      <member refid="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e" kind="function"><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c" kind="function"><name>get_info</name></member>
+      <member refid="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3" kind="function"><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384" kind="function"><name>compute</name></member>
+      <member refid="group__computeenergy_1ga593cd889bf088f342b307b631f19542b" kind="function"><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935" kind="function"><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85" kind="function"><name>compute_stress</name></member>
+      <member refid="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0" kind="function"><name>compute_atomic_stress</name></member>
+      <memberdef kind="function" id="class_compute_vertex_bending_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexBendingEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="42" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_bending_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexBendingEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="42" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_bending_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexBendingEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="42" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_compute_vertex_bending_energy" kindref="compound">ComputeVertexBendingEnergy</ref> Compute the Seung-Nelson Bending Energy/Force. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexBendingEnergy</label>
+        <link refid="class_compute_vertex_bending_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexBendingEnergy</label>
+        <link refid="class_compute_vertex_bending_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/potentialBending.hpp" line="24" column="1" bodyfile="pymembrane/cppmodule/src/potentials/potentialBending.hpp" bodystart="25" bodyend="75"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>_system</name></member>
+      <member refid="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute</name></member>
+      <member refid="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_atomic_stress</name></member>
+      <member refid="group__computeenergy_1ga593cd889bf088f342b307b631f19542b" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_face_energy</name></member>
+      <member refid="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_stress</name></member>
+      <member refid="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga17330f691d6f306655d5b69cbc9c4658" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>ComputeVertexBendingEnergy</name></member>
+      <member refid="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>get_type</name></member>
+      <member refid="group__computeenergy_1ga70a23778dfb8605b13e04da5c8654b74" prot="private" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>m_kappa</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>print_warning_property_name</name></member>
+      <member refid="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_bending_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_bending_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_bending_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeVertexBendingEnergy</scope><name>~ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1gad102657c4f944e6d3d2cff1cf680e6a8" prot="public" virt="non-virtual"><scope>ComputeVertexBendingEnergy</scope><name>~ComputeVertexBendingEnergy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_a7951ca7d35c5f6b2618d532ec95a90b" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/compute</compoundname>
+    <innerfile refid="computemesh_8cpp">computemesh.cpp</innerfile>
+    <innerfile refid="computemesh_8hpp">computemesh.hpp</innerfile>
+    <innerfile refid="pybind__export__compute_8hpp">pybind_export_compute.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/compute/"/>
+  </compounddef>
+</doxygen>

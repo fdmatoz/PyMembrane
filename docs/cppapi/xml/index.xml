@@ -1,0 +1,1372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="struct_box_type" kind="struct"><name>BoxType</name>
+    <member refid="struct_box_type_1aa56a6aa74cb35f2c34983324e0c8b660" kind="variable"><name>L</name></member>
+    <member refid="struct_box_type_1a4d10fdda331fe9d2cc3b9548d6c9b70a" kind="variable"><name>Llo</name></member>
+    <member refid="struct_box_type_1a30077445042e7c17a1d356ed04f74744" kind="variable"><name>Lhi</name></member>
+    <member refid="struct_box_type_1a534016d1f0cf808b4f718741f036c319" kind="variable"><name>periodic</name></member>
+  </compound>
+  <compound refid="class_compute_force_class" kind="class"><name>ComputeForceClass</name>
+    <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kind="variable"><name>_system</name></member>
+    <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kind="variable"><name>m_name</name></member>
+    <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" kind="variable"><name>m_type</name></member>
+    <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" kind="variable"><name>NUM_TYPES_ALLOWED</name></member>
+    <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" kind="variable"><name>NUM_TYPES_PAIR</name></member>
+    <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" kind="function"><name>ComputeForceClass</name></member>
+    <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" kind="function"><name>~ComputeForceClass</name></member>
+    <member refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" kind="function"><name>compute_face_energy</name></member>
+    <member refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" kind="function"><name>get_name</name></member>
+    <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" kind="function"><name>get_type</name></member>
+    <member refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" kind="function"><name>print_warning_calling</name></member>
+    <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" kind="function"><name>print_warning_property_name</name></member>
+  </compound>
+  <compound refid="class_compute_mesh" kind="class"><name>ComputeMesh</name>
+    <member refid="class_compute_mesh_1a84f7a96bcec1a8260ef91b895bee4342" kind="variable"><name>_system</name></member>
+    <member refid="class_compute_mesh_1a806aab7b730a4c6febdf41f82e0d6d51" kind="function"><name>compute_mesh_energy</name></member>
+    <member refid="class_compute_mesh_1a258190c333df62c80ed36b135e4d1750" kind="function"><name>compute_vertex_forces</name></member>
+    <member refid="class_compute_mesh_1a4aa87d2ae583bcc334416702e55684fb" kind="function"><name>compute_stresses</name></member>
+    <member refid="class_compute_mesh_1a0df02ab4be7567cdb522fb03f70bfedc" kind="function"><name>get_stresses</name></member>
+    <member refid="class_compute_mesh_1a4920fdd93c23e53a94d608fa414b8fdc" kind="function"><name>compute_pressure</name></member>
+    <member refid="class_compute_mesh_1ade0cc217fb21e8435988680fe9e55bfd" kind="function"><name>compute_kinetic_energy_tensor</name></member>
+    <member refid="class_compute_mesh_1ae18d3e181ec5478c8b3a2c1971aba279" kind="function"><name>compute_kinetic_energy</name></member>
+    <member refid="class_compute_mesh_1a35616a0e8c429e9478a48fe4a62880f6" kind="function"><name>compute_temperature</name></member>
+    <member refid="class_compute_mesh_1ae933618d642610e53b40c2dbbd874b12" kind="function"><name>compute_stresses_virial</name></member>
+    <member refid="class_compute_mesh_1a297da91a8a7c8bc7c9aa73fcb2304eb3" kind="function"><name>compute_stresses_atom</name></member>
+    <member refid="class_compute_mesh_1ae2206d8faa6094faa4623e043d486eb2" kind="function"><name>ComputeMesh</name></member>
+    <member refid="class_compute_mesh_1a01fbf3ea41eacf6fc6d82ab50fbc53d5" kind="function"><name>compute_vertex_normals</name></member>
+    <member refid="class_compute_mesh_1ab3f62e044c17f862e84f457dec6a856a" kind="function"><name>compute_face_normals</name></member>
+    <member refid="class_compute_mesh_1a3485440d5034df582d39ea26c9adac64" kind="function"><name>compute_edge_lengths</name></member>
+    <member refid="class_compute_mesh_1a1bda94178ca3a941690b30a3b77f2a53" kind="function"><name>gaussiancurvature_vertex</name></member>
+    <member refid="class_compute_mesh_1abb01bf7089f605f837bf9c9833b96868" kind="function"><name>meancurvature_vertex</name></member>
+    <member refid="class_compute_mesh_1a86623c755a819c22e6f36fddf8e4ff15" kind="function"><name>gaussiancurvature</name></member>
+    <member refid="class_compute_mesh_1a9ba8ecac3132d47fb86ff6d5268fcdd7" kind="function"><name>meancurvature</name></member>
+    <member refid="class_compute_mesh_1a40a168583c0c169dfb8b7bd542648ae7" kind="function"><name>compute_mesh_curvature</name></member>
+    <member refid="class_compute_mesh_1ae0239b15648e49160f7a9e588a75a71d" kind="function"><name>compute_face_metric</name></member>
+    <member refid="class_compute_mesh_1ab9f1d039272f60ef86e58d7daedde4eb" kind="function"><name>compute_mesh_volume</name></member>
+    <member refid="class_compute_mesh_1a755b9eccf9a1c4ee1c559c8f0b9b1594" kind="function"><name>compute_face_area</name></member>
+    <member refid="class_compute_mesh_1a5be77f57818856a8c946418390a7158b" kind="function"><name>compute_mesh_area</name></member>
+    <member refid="class_compute_mesh_1aeecbaf8c127095e46cc6d02283595612" kind="function"><name>compute_vertex_area</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_bending_energy" kind="class"><name>ComputeVertexBendingEnergy</name>
+    <member refid="group__computeenergy_1ga70a23778dfb8605b13e04da5c8654b74" kind="variable"><name>m_kappa</name></member>
+    <member refid="group__computeenergy_1ga17330f691d6f306655d5b69cbc9c4658" kind="function"><name>ComputeVertexBendingEnergy</name></member>
+    <member refid="group__computeenergy_1gad102657c4f944e6d3d2cff1cf680e6a8" kind="function"><name>~ComputeVertexBendingEnergy</name></member>
+    <member refid="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga593cd889bf088f342b307b631f19542b" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_bending_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_bending_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_bending_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_bending_helfrich_energy" kind="class"><name>ComputeVertexBendingHelfrichEnergy</name>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a58d6d5b56db59f17a62e79fd3928116e" kind="variable"><name>m_kappaH</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a5e1161e92f35527d798bb40816c394f3" kind="variable"><name>m_H0</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a78704994978ea7773ae3a98636abff92" kind="variable"><name>m_kappaG</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a41421b381e4e552d0f6d683a25ac86df" kind="function"><name>ComputeVertexBendingHelfrichEnergy</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a50cb8d5c10d8de90c8751cea2d37c68a" kind="function"><name>~ComputeVertexBendingHelfrichEnergy</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1aad25f84732065454123ef2ba682c536d" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1aa63b129af11ec5a674918fdab9a64645" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a423765625bb45f2178165c7d25790d58" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a4e1deff04a8aa204a7bd0d0fa5e7625c" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1af7aa94ee3699632a9edeccc7251a3dab" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a34c89140b89fbd459ada3155add92872" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a9a2f80444ce71f9387eff348fffbbcad" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a86aca9d9314d1a28f938d976aa924860" kind="function"><name>compute_stress</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a451bc3fe316d4df76b3844bd9315c1b9" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_bending_helfrich_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_cauchy_green_energy" kind="class"><name>ComputeVertexCauchyGreenEnergy</name>
+    <member refid="class_compute_vertex_cauchy_green_energy_1af6793964feece2c7ad388a7f467da4ce" kind="variable"><name>Y</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a0a44995c7d73cfd79a954c827dfee0c6" kind="variable"><name>nu</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1aa1973f498f1d2c3dc5f69a7bd4af4aa9" kind="variable"><name>h</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a096610a18f9f8a7dbf43f60567c3554a" kind="function"><name>ComputeVertexCauchyGreenEnergy</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a573838af9ee4064d2d40738ffb65122c" kind="function"><name>~ComputeVertexCauchyGreenEnergy</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a690403d9ab89a72f807ce5fb1719c2eb" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a06eceed67b4e0ce0583d8ef178ed381a" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a30d9e265766a859192297c2b948bffdc" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a33e0a508d1d9e17687cacf71276c01cb" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a4169e16716e470ea70fdfaeb36e9b74b" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a8c4867cfedef171821d3746959083e67" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a716f261be54695bf030a1150f0ca12d6" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a" kind="function"><name>compute_stress</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a48cbcf6c17394d7dc0ba27cce4d93406" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_cauchy_green_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_constant_area_triangle_energy" kind="class"><name>ComputeVertexConstantAreaTriangleEnergy</name>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a0d9e5a983d47428ac8d39ff80b9dd55e" kind="variable"><name>sigma</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a8dd4cae9ae7ecdf3f1f16501a5fd538a" kind="variable"><name>target_area</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1ac6bf4bf850bae808b3ed31c1f7672145" kind="function"><name>ComputeVertexConstantAreaTriangleEnergy</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a50fb67ab5ebd1c95fba286455eeb6b96" kind="function"><name>~ComputeVertexConstantAreaTriangleEnergy</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1ac4a5271aefff11049c2af28604b7d1f6" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a5ce7d3e92939c4aebc57f5bbfe2b84ad" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a8b822b956556a8335d0282e73d3ea21d" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a95c93fdaaac524a5f02c930c3e2f4e44" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1ae1f4f866172267bd0fe2b972924a13cd" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a796fe539acac48fe718f73eaa4af223c" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a88ba0b109e51f97c9242dad06d853b58" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a9470b36748408238e5eb2c2f79b90a74" kind="function"><name>compute_stress</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a2d25f6f75a8977e4ad6174af82ae9058" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_constant_area_triangle_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_dihedral_energy" kind="class"><name>ComputeVertexDihedralEnergy</name>
+    <member refid="class_compute_vertex_dihedral_energy_1a09a6826c93353096d6af343a7259f7fa" kind="variable"><name>m_kappa</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a8978965d53c247fd300f92a7193176a9" kind="variable"><name>m_theta0</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1abc8dc37a983bcb85193ef73076972f8d" kind="function"><name>ComputeVertexDihedralEnergy</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a93fe12c9e94ad67a86ed978330f1943c" kind="function"><name>~ComputeVertexDihedralEnergy</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1ab0c8aa7d67be6e505556ad330dc4465b" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a3482980cc2892d3076e1cf56739d1dda" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a86187957b8433eba8c2e2a641fb5d9be" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a6618d2c8e8fa860e3c10e1792cdb1ffd" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1ab2680d689dfbf1bc2c735d2101022fc2" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1af293b17776932e04d2055b242ba8096c" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1ae1e13b6532aac37400e502b5b7ca9e98" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a65d696ed4e3baa821df2d3e9b8162bc7" kind="function"><name>compute_stress</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a5fc0322e7d0183534a9bc05a18bdbf8c" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_dihedral_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_ferromagnetic_energy" kind="class"><name>ComputeVertexFerromagneticEnergy</name>
+    <member refid="group__computeenergy_1ga91d7dc11c887c10769d33eaf14e2a8f9" kind="variable"><name>J</name></member>
+    <member refid="group__computeenergy_1ga97d30f3d0ee35dab077adb8fbd75bba2" kind="variable"><name>h</name></member>
+    <member refid="group__computeenergy_1ga5de90cd4ce4033816bf54e92b6c15d4b" kind="function"><name>ComputeVertexFerromagneticEnergy</name></member>
+    <member refid="group__computeenergy_1gac178317ef7d8ce23f4a8957f0d3fc476" kind="function"><name>~ComputeVertexFerromagneticEnergy</name></member>
+    <member refid="group__computeenergy_1ga436ef731a4cfdb35d8d6073371edd96e" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gad7a435c2bc06adeb70a12a33d2bf76d5" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gaae6bef1b11f761cca39c5a0a34e649c6" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1gab3ddbbd095d1b89a1530c9eb4f9965a0" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga6e752bbee6dab1afd98919b00b87873b" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga91c6930568c8d545b01b27b6c575e421" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1gade51c9aab9c8d0298fcdeb85c2192700" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_ferromagnetic_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_ferromagnetic_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_ferromagnetic_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_harmonic_energy" kind="class"><name>ComputeVertexHarmonicEnergy</name>
+    <member refid="class_compute_vertex_harmonic_energy_1ae1dcf6306fb5c8896adbb3364a0c204e" kind="variable"><name>m_k</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a5fbe7176686bc0083226171b4a05ef30" kind="variable"><name>m_l0</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a819534b2c1e0ec96065d05b6594aa347" kind="function"><name>ComputeVertexHarmonicEnergy</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1abd43bdd7658db7a5902ad10d37ff65e1" kind="function"><name>~ComputeVertexHarmonicEnergy</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a23de4239a466835ccdd74c5c1e338358" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1af4c7ace71fcb2e2d1814f40092b93a40" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1aa4c305faf8a720879e6d913bc5017b76" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1aaae42b0f9a14c5a7f334b3e751d867da" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a89aec001ab0c3f21d7c572b14a7cab15" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a8e4fcf2ce77de4a2d2ca95a1918ac452" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a98b78fae6d3af32e5e843103b419c920" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a75cfff5ce46bd0cfc14385f3abf7b709" kind="function"><name>compute_stress</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1aeace39c2aadfc11b91e1545772ece889" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_harmonic_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_harmonic_spin_energy" kind="class"><name>ComputeVertexHarmonicSpinEnergy</name>
+    <member refid="group__computeenergy_1ga3925f7d586669b8d83caa3e5aae77f73" kind="variable"><name>k</name></member>
+    <member refid="group__computeenergy_1ga1476c574425bfec219951d57d033ea99" kind="variable"><name>l0</name></member>
+    <member refid="group__computeenergy_1ga94a9fe399eea2d1a2128dfddfccdb6b6" kind="variable"><name>J</name></member>
+    <member refid="group__computeenergy_1gaf23cc5bdf6cff6091ceb32b41e0e1234" kind="variable"><name>Ea</name></member>
+    <member refid="group__computeenergy_1ga7db01c1a8c258dda3698e3233f82e609" kind="function"><name>ComputeVertexHarmonicSpinEnergy</name></member>
+    <member refid="group__computeenergy_1gac874de9bc03c7003b135a023e5b83bd4" kind="function"><name>~ComputeVertexHarmonicSpinEnergy</name></member>
+    <member refid="group__computeenergy_1ga819a8363af60928f4c7c485562f5190c" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gaa51ed6dcb1c19b88dc78eb24291ca7c1" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga92f6d4071a420acec82461b54e8c0e9d" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga075e254e881479f18fb49f7fc886e3d2" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga7f9d1089ff2f8358aa4bd39f735b9541" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1gabfb155b2f52ff6c1792fe8728c6e65be" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga339d9c04b10173bbfbac38fef838eda4" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga85ba61b0e98a981a534a25044e536f60" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga8ec1a5208260dc87ee06305363497b00" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="class_compute_vertex_harmonic_spin_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_harmonic_spin_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_harmonic_spin_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_limit_energy" kind="class"><name>ComputeVertexLimitEnergy</name>
+    <member refid="class_compute_vertex_limit_energy_1a3acce1527cbc48c267fe74c9449c62a1" kind="variable"><name>m_lmax</name></member>
+    <member refid="class_compute_vertex_limit_energy_1a1b4ba40b88c454095cfa1b427d97481e" kind="variable"><name>m_lmin</name></member>
+    <member refid="class_compute_vertex_limit_energy_1a8ee228a8edb41a43acf22a2f34722871" kind="function"><name>ComputeVertexLimitEnergy</name></member>
+    <member refid="class_compute_vertex_limit_energy_1aedccb352d4de559393524b479e4b46e4" kind="function"><name>~ComputeVertexLimitEnergy</name></member>
+    <member refid="class_compute_vertex_limit_energy_1abf50d7f6dceed56793460b2a16873ab7" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_compute_vertex_limit_energy_1abfdfc9930ecf67f8ef990915597f8ca9" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_limit_energy_1af0f38d412c6016614bacd3ae7cf62eba" kind="function"><name>get_info</name></member>
+    <member refid="class_compute_vertex_limit_energy_1a4af4faa824f59cb296c242841b5dd892" kind="function"><name>compute_energy</name></member>
+    <member refid="class_compute_vertex_limit_energy_1aabe3bdeb62cb102ac51a2c6f804ed2c7" kind="function"><name>compute</name></member>
+    <member refid="class_compute_vertex_limit_energy_1aa946473d4d368fac9aaaeacf8f694b64" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="class_compute_vertex_limit_energy_1abc4e688de0f7f9843dc0dfd2af32635d" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_limit_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_limit_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_limit_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_line_tension" kind="class"><name>ComputeVertexLineTension</name>
+    <member refid="group__computeenergy_1ga2aa6ca5fc2b7638683b3778ad71154d5" kind="variable"><name>m_gamma</name></member>
+    <member refid="group__computeenergy_1ga7f150d7059fc846a998e081c2ba61986" kind="variable"><name>m_flag_avg</name></member>
+    <member refid="group__computeenergy_1ga84192041db192808b35a9f4ef1c03089" kind="variable"><name>m_flag_scale</name></member>
+    <member refid="group__computeenergy_1ga93a0a5be3076e9a2830fbcd6a017b766" kind="function"><name>ComputeVertexLineTension</name></member>
+    <member refid="group__computeenergy_1ga667a3eaf7ccee0d978fb539785b89cb7" kind="function"><name>~ComputeVertexLineTension</name></member>
+    <member refid="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_line_tension_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_line_tension_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_line_tension_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_compute_vertex_substrate_energy" kind="class"><name>ComputeVertexSubstrateEnergy</name>
+    <member refid="group__computeenergy_1gac97fdfabe1d1e0bf0e3fb2d6e73859dd" kind="variable"><name>m_kz1</name></member>
+    <member refid="group__computeenergy_1ga4abd5df9f885365fd7dcdb95dad8f8f0" kind="variable"><name>m_kz2</name></member>
+    <member refid="group__computeenergy_1gaee8be9bda385b3884a92f58c76254d7e" kind="function"><name>ComputeVertexSubstrateEnergy</name></member>
+    <member refid="group__computeenergy_1gac79b9168a12817f5a4ea334eb3dd0a18" kind="function"><name>~ComputeVertexSubstrateEnergy</name></member>
+    <member refid="group__computeenergy_1ga494591a77b11455e1be118b56c14165f" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gab5f09709a86844db1269e8187ca913bc" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga0f14e273cc7bfd32f1f569796667d85b" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga55a05efdfc485daf66bf7f34eedf3052" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga86c5cfeed047046f91afb38b0be5666d" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1gab3d5731b502ef5e07119788a165b2eda" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1gacee2f63ffe8fb6acbf4077bd8d29b1a1" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="class_compute_vertex_substrate_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_substrate_energy_1aed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="class_compute_vertex_substrate_energy_1a2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_constraint_area" kind="class"><name>ConstraintArea</name>
+    <member refid="class_constraint_area_1a110b6a383915b3c91cb90ac8c42629ae" kind="variable"><name>grad</name></member>
+    <member refid="class_constraint_area_1ad57b3a34a1d13cfbd3f14661846a84fa" kind="variable"><name>ref_grad</name></member>
+    <member refid="class_constraint_area_1a8a861078ed221e3fe94046f317303fe1" kind="function"><name>ConstraintArea</name></member>
+    <member refid="class_constraint_area_1a5a42e16fee2b4f6dca45e56ab83d160b" kind="function"><name>~ConstraintArea</name></member>
+    <member refid="class_constraint_area_1aeb08d399e2c67533805c562b34590390" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_constraint_area_1afcbaaf50568867c03244a4f3d7ec47ad" kind="function"><name>set_property</name></member>
+    <member refid="class_constraint_area_1a09542b8e32b01a01e5b9128aedc95e7f" kind="function"><name>enforce</name></member>
+    <member refid="class_constraint_area_1a52909ed27d9a5e240068c45b3e26563c" kind="function"><name>compute_ref_gradient</name></member>
+    <member refid="class_constraint_area_1a3385b8aa473bd4fd048b90eb9d1c980a" kind="function"><name>compute_gradient</name></member>
+  </compound>
+  <compound refid="class_constraint_class" kind="class"><name>ConstraintClass</name>
+    <member refid="class_constraint_class_1a8ca5548187b2f83284314c235a729ff6" kind="variable"><name>_system</name></member>
+    <member refid="class_constraint_class_1aa23d14d90c76b6585a9be1c79523eca8" kind="variable"><name>name</name></member>
+    <member refid="class_constraint_class_1abaf007d717cb31d8d5653ca9f39b1186" kind="variable"><name>m_tol</name></member>
+    <member refid="class_constraint_class_1a624e464d7db10fa44d3f0ca73fec9533" kind="variable"><name>m_target</name></member>
+    <member refid="class_constraint_class_1adcc6ad49efefc10bd83ce1800fa80d28" kind="variable"><name>m_value</name></member>
+    <member refid="class_constraint_class_1a7f872869d7d89c607d947bec323a9f04" kind="variable"><name>m_lambda</name></member>
+    <member refid="class_constraint_class_1aa6eb6c4ae488b41ed1b37cd72dfe6848" kind="variable"><name>m_type</name></member>
+    <member refid="class_constraint_class_1a4c11a6d7e0e8f93116e00a5f30b6370b" kind="function"><name>ConstraintClass</name></member>
+    <member refid="class_constraint_class_1a51faa42b8ae92b287e7f386bee09efb6" kind="function"><name>~ConstraintClass</name></member>
+    <member refid="class_constraint_class_1a57dce5dae72428139314e246cbe6e3f8" kind="function"><name>enforce</name></member>
+    <member refid="class_constraint_class_1aeb96068041fba466acfa7236bc12b1fd" kind="function"><name>compute_normal</name></member>
+    <member refid="class_constraint_class_1a35223eb0fbfedfdc34d5f19f9ad5b5a6" kind="function"><name>compute_gradient</name></member>
+    <member refid="class_constraint_class_1a6986ddefadb73db668b8d473dd943278" kind="function"><name>compute_ref_gradient</name></member>
+    <member refid="class_constraint_class_1af42efcda7ad28f9bdb93ac980c09c1cd" kind="function"><name>is_satisfied</name></member>
+    <member refid="class_constraint_class_1a24af0e5e32672cdfe5a8a2eca60a9c32" kind="function"><name>should_apply</name></member>
+    <member refid="class_constraint_class_1ac6f6a956a2d26c343446e979576bf027" kind="function"><name>info</name></member>
+    <member refid="class_constraint_class_1aa355737f9a8c3258e43a22960c23e0a2" kind="function"><name>get_LagrangeMultiplier</name></member>
+    <member refid="class_constraint_class_1ab1997a3827a87a1aaa9735ae09089882" kind="function"><name>reset_LagrangeMultiplier</name></member>
+    <member refid="class_constraint_class_1a1336a7155d6b82b062d50b62084d1ee5" kind="function"><name>set_property_common</name></member>
+    <member refid="class_constraint_class_1a1a47590bc4897a1d27ca631eb29f92de" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_constraint_class_1aa0bb2b152fdae08ac021faed52ec5aa4" kind="function"><name>set_property</name></member>
+    <member refid="class_constraint_class_1a6ab45128d12f3444015a74f5f221c62a" kind="function"><name>set_property</name></member>
+    <member refid="class_constraint_class_1ac0fe35702cda5309dcdc7ff777affff9" kind="function"><name>set_property</name></member>
+    <member refid="class_constraint_class_1ab0f9535ab79ff566de99acdf1b9ca6f3" kind="function"><name>print_warning_calling_err</name></member>
+    <member refid="class_constraint_class_1a3ca1289ec82cfedb8416edbb4b852518" kind="function"><name>print_warning_calling</name></member>
+    <member refid="class_constraint_class_1a7e129f7655ba756841f26cae9dd45ebd" kind="function"><name>print_warning_property_name</name></member>
+  </compound>
+  <compound refid="class_constraint_volume" kind="class"><name>ConstraintVolume</name>
+    <member refid="class_constraint_volume_1acbc2975bd7ba079948a830553c31af87" kind="variable"><name>grad</name></member>
+    <member refid="class_constraint_volume_1aff64a4bc271a98a6066457b26d4466e6" kind="variable"><name>ref_grad</name></member>
+    <member refid="class_constraint_volume_1a7a1d21f6f415ec93ed9624b7aa61ad38" kind="function"><name>ConstraintVolume</name></member>
+    <member refid="class_constraint_volume_1a7aec7fd9a10ed462e186251fde3ccce6" kind="function"><name>~ConstraintVolume</name></member>
+    <member refid="class_constraint_volume_1acb83010cfde2e0cf3bd22cd4887693ef" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_constraint_volume_1a3e4384745af68793a5877ba90d705432" kind="function"><name>set_property</name></member>
+    <member refid="class_constraint_volume_1a82b6e2556cd3ad019302b4304b91347e" kind="function"><name>enforce</name></member>
+    <member refid="class_constraint_volume_1ad1ce36c4aed01c75e8010c7473c8fc93" kind="function"><name>compute_ref_gradient</name></member>
+    <member refid="class_constraint_volume_1a9d145c4167282deb489c21493d232324" kind="function"><name>compute_gradient</name></member>
+  </compound>
+  <compound refid="class_dumper_class" kind="class"><name>DumperClass</name>
+    <member refid="class_dumper_class_1ae1806fe365d56e39c2ec735f14db55db" kind="variable"><name>_system</name></member>
+    <member refid="class_dumper_class_1a5ad49b27b1002ed39c0094871ddac02a" kind="variable"><name>vtkLegacy</name></member>
+    <member refid="class_dumper_class_1a79985a7e46f55101dfece905e1e4f5dc" kind="variable"><name>vertex_tensor_data_map</name></member>
+    <member refid="class_dumper_class_1a588fbdae1a5d56992e25c86d4b7e1a22" kind="variable"><name>face_tensor_data_map</name></member>
+    <member refid="class_dumper_class_1ada3694e0e6482298bd6bb01e4fffbc53" kind="variable"><name>edge_tensor_data_map</name></member>
+    <member refid="class_dumper_class_1aaad85aaae9e225fec0ecbaf97d5a978d" kind="variable"><name>vertex_data_map</name></member>
+    <member refid="class_dumper_class_1abb522c90139260590d4cef09572c3490" kind="variable"><name>face_data_map</name></member>
+    <member refid="class_dumper_class_1aa7f92d3e83af572283414f72d3d2ad2b" kind="variable"><name>edge_data_map</name></member>
+    <member refid="class_dumper_class_1aa0b00f3c5f9edbd69b50496bc9f83026" kind="function"><name>DumperClass</name></member>
+    <member refid="class_dumper_class_1ad7326148144b31476a1a16f7a17ceeea" kind="function"><name>mesh_vertices_faces</name></member>
+    <member refid="class_dumper_class_1a0578ca731372268fae9c9ee18760c65a" kind="function"><name>mesh_edge_vtk</name></member>
+    <member refid="class_dumper_class_1aa586c8c7cbe26ba9e24c52eb174c7de9" kind="function"><name>mesh_vtk</name></member>
+    <member refid="class_dumper_class_1a7e8c0772aea606d52fb3e6e79c57ea89" kind="function"><name>mesh_vtk_periodic</name></member>
+    <member refid="class_dumper_class_1adb3d8d4bd4a7b74389756e32d7982b46" kind="function"><name>mesh_ply</name></member>
+    <member refid="class_dumper_class_1a6dae61046b7a64c9b7901901dc208b00" kind="function"><name>mesh_ply_periodic</name></member>
+    <member refid="class_dumper_class_1a753e7b3f91da7c424bfe9595a51aba8f" kind="function"><name>mesh_json</name></member>
+    <member refid="class_dumper_class_1ad42599d2b5c663b5634bf06f869cbf72" kind="function"><name>mesh_txt</name></member>
+    <member refid="class_dumper_class_1a564de8513295a4ba3ad5bf35ba5e01bb" kind="function"><name>setvtkLegacyFormat</name></member>
+    <member refid="class_dumper_class_1a303f56d8a359d677e0ef45aaddde611c" kind="function"><name>user_vertex_data</name></member>
+    <member refid="class_dumper_class_1a4b541b02f4bdadcb117593f7bd3200ed" kind="function"><name>user_face_data</name></member>
+    <member refid="class_dumper_class_1a346d728804b23f4dd20d32f79221b78a" kind="function"><name>user_edge_data</name></member>
+    <member refid="class_dumper_class_1a36b423670b38c43ccf5f274bca6a4a9c" kind="function"><name>user_vertex_data</name></member>
+    <member refid="class_dumper_class_1af6cc158be0d5367dbbebd67e0246bb0a" kind="function"><name>user_face_data</name></member>
+    <member refid="class_dumper_class_1abf090ecef63163eadac67a7c507b2a60" kind="function"><name>user_edge_data</name></member>
+  </compound>
+  <compound refid="class_evolver_class" kind="class"><name>EvolverClass</name>
+    <member refid="class_evolver_class_1a132529d2477b118c31ccaabe2199c8d8" kind="variable"><name>max_iter_mesh_contraint</name></member>
+    <member refid="class_evolver_class_1a3d496b35fdd5f89f5faae41a5c3628a5" kind="variable"><name>has_vertex_forces</name></member>
+    <member refid="class_evolver_class_1aa666eed0069e2a596f492c7c31706ff0" kind="variable"><name>has_face_forces</name></member>
+    <member refid="class_evolver_class_1a5e6f5b747472ffefdce63d520a958f7e" kind="variable"><name>has_edge_forces</name></member>
+    <member refid="class_evolver_class_1a884c7b666944551023581ae816caaf5e" kind="variable"><name>_system</name></member>
+    <member refid="class_evolver_class_1a5795eba74eb0e94ed11b4c0b7c41f58c" kind="variable"><name>mesh_force_list</name></member>
+    <member refid="class_evolver_class_1a6bb2008a32905d683218c52f04da0c4d" kind="variable"><name>mesh_integrator_list</name></member>
+    <member refid="class_evolver_class_1a96416dba1d73ff7a3c85c05bd99b7fdd" kind="variable"><name>mesh_integrator_montecarlo_list</name></member>
+    <member refid="class_evolver_class_1a70c229bfd4a9670c45bd7b1809d55588" kind="variable"><name>mesh_constraints_list</name></member>
+    <member refid="class_evolver_class_1a189dbad14a1371f9722ff3222018b143" kind="variable"><name>mesh_minimizer_list</name></member>
+    <member refid="class_evolver_class_1add63a3ed76e2ce50b38daf13e7036f26" kind="function"><name>EvolverClass</name></member>
+    <member refid="class_evolver_class_1a3b513e27b144a7ee2d9f5037595cc914" kind="function"><name>~EvolverClass</name></member>
+    <member refid="class_evolver_class_1a2839ec9a92ca59dc512dc8008343bded" kind="function"><name>add_force</name></member>
+    <member refid="class_evolver_class_1a805a38acf6ed7d8b5ad9601d1a476550" kind="function"><name>delete_force</name></member>
+    <member refid="class_evolver_class_1a2388c30b884208ea3f91fe1bc27406b6" kind="function"><name>set_property</name></member>
+    <member refid="class_evolver_class_1ad2f651addf0b712237e6fd7fc40e9157" kind="function"><name>get_force_info</name></member>
+    <member refid="class_evolver_class_1a69cdac5b547fdf6436deda46fb7af9f4" kind="function"><name>get_minimizer_info</name></member>
+    <member refid="class_evolver_class_1a7c5129f216eecb8b665ac9925d29ec4b" kind="function"><name>get_integrator_info</name></member>
+    <member refid="class_evolver_class_1aea7f457f7e3b54a99e24f737c5ca735a" kind="function"><name>reset_mesh_forces</name></member>
+    <member refid="class_evolver_class_1a9afd679e3fa1b7fa4c14bcd993360184" kind="function"><name>compute_mesh_forces</name></member>
+    <member refid="class_evolver_class_1a493378e50dd678160a236814387e1fb4" kind="function"><name>reset_mesh_energy</name></member>
+    <member refid="class_evolver_class_1acc8d209c341796fc4cef4c3f2831ac8a" kind="function"><name>compute_mesh_energy</name></member>
+    <member refid="class_evolver_class_1adfbe364fab9961729a6bea7fc338284c" kind="function"><name>add_integrator</name></member>
+    <member refid="class_evolver_class_1a03d5cfecc16f41b4b1b4f13a146c80de" kind="function"><name>delete_integrator</name></member>
+    <member refid="class_evolver_class_1a76341931f517355b548beb0f8cfa9542" kind="function"><name>set_time_step</name></member>
+    <member refid="class_evolver_class_1ab13ba25ff0fd8c716d24e30ee057e3ee" kind="function"><name>set_global_temperature</name></member>
+    <member refid="class_evolver_class_1ab0d8e41d37b1a5dce2997f0a4d579d65" kind="function"><name>add_minimizer</name></member>
+    <member refid="class_evolver_class_1a631a30506b15f887cbad2709a8ba69d3" kind="function"><name>delete_minimizer</name></member>
+    <member refid="class_evolver_class_1ac11738f3dee15f54cbc4e3cc682e7e50" kind="function"><name>minimize</name></member>
+    <member refid="class_evolver_class_1af6aa1916f04d2695da477c2690f31f84" kind="function"><name>add_constraints</name></member>
+    <member refid="class_evolver_class_1a9c764e4d798aa40702aea765b851be42" kind="function"><name>enforce_mesh_constraints</name></member>
+    <member refid="class_evolver_class_1a829ca588f0cd911cb391425e1b2eacbb" kind="function"><name>delete_constraints</name></member>
+    <member refid="class_evolver_class_1a9e96753feca04af3485ff95b851c5c2f" kind="function"><name>set_max_iter_mesh_contraint</name></member>
+    <member refid="class_evolver_class_1a914ab384af975d2e3aae32cd58583a58" kind="function"><name>reset_mesh_stresses</name></member>
+    <member refid="class_evolver_class_1ac18411c962e9a3d8b4000e93e23fd83f" kind="function"><name>compute_mesh_stresses</name></member>
+    <member refid="class_evolver_class_1acf28aa4e50df20cd9145daa54a295e04" kind="function"><name>reset_mesh_atom_stresses</name></member>
+    <member refid="class_evolver_class_1a93e10ff77e35187fdc264a707e4cdf5a" kind="function"><name>compute_mesh_atom_stresses</name></member>
+    <member refid="class_evolver_class_1a347b67f9ce57dcc3046315310e6b5b47" kind="function"><name>evolve_mesh_md</name></member>
+    <member refid="class_evolver_class_1aaeec8777508e93f6157bef7699a784a0" kind="function"><name>evolve_mesh_mc</name></member>
+    <member refid="class_evolver_class_1a3f35826e325046f1020002208f985be6" kind="function"><name>evolve_mesh_prestep</name></member>
+    <member refid="class_evolver_class_1ada89a23a971ab7e33e097600af1cc84d" kind="function"><name>evolve_mesh_poststep</name></member>
+    <member refid="class_evolver_class_1a59be1b0244f5d07ddd209de1efcf3280" kind="function"><name>evolve_mesh_prestep</name></member>
+    <member refid="class_evolver_class_1a6ba26fd3579d510ab409b547f0c352fc" kind="function"><name>evolve_mesh_poststep</name></member>
+  </compound>
+  <compound refid="structforce_matrix" kind="struct"><name>forceMatrix</name>
+    <member refid="structforce_matrix_1a15b2049197b32f9c9cd08da1d8b6da2f" kind="variable"><name>forceM11</name></member>
+    <member refid="structforce_matrix_1ad3f0be6ec1e9df20f99422d6d2900607" kind="variable"><name>forceM12</name></member>
+    <member refid="structforce_matrix_1a8b28db946f910a3112798796f12feeff" kind="variable"><name>forceM13</name></member>
+  </compound>
+  <compound refid="struct_h_e___edge" kind="struct"><name>HE_Edge</name>
+    <member refid="struct_h_e___edge_1adc7e18ea8a4f4aeee5fd62eaf9dd6d00" kind="variable"><name>i</name></member>
+    <member refid="struct_h_e___edge_1acffde21f8307e9dd2849f2cb02815ec7" kind="variable"><name>j</name></member>
+    <member refid="struct_h_e___edge_1ac51fa0631b220e2deef78ca1ca3b5d86" kind="variable"><name>id</name></member>
+    <member refid="struct_h_e___edge_1a128f8333f20d03403588f48100585c56" kind="variable"><name>boundary</name></member>
+    <member refid="struct_h_e___edge_1a1524f3bb94b45ff3cb7ac5873a4cf315" kind="variable"><name>face_k</name></member>
+    <member refid="struct_h_e___edge_1a97fef738737dc59cebb0c55d295ed3c7" kind="variable"><name>face_l</name></member>
+    <member refid="struct_h_e___edge_1ab7c93926f7cbb7fa5fcf227124256a06" kind="variable"><name>v0</name></member>
+    <member refid="struct_h_e___edge_1a13ca5b0333c69fa18a0bc94487bef417" kind="variable"><name>v1</name></member>
+    <member refid="struct_h_e___edge_1a756ecd61aaf28a53233715fdb8db7cc6" kind="variable"><name>v2</name></member>
+    <member refid="struct_h_e___edge_1a57178b673bc051de1144cd99d5919bb4" kind="variable"><name>v3</name></member>
+    <member refid="struct_h_e___edge_1ae678b1bf199ab564d995b1713a3a26da" kind="variable"><name>l0</name></member>
+    <member refid="struct_h_e___edge_1abc2832d50a37f1ffaefa91e5bd8cb106" kind="variable"><name>_hedge</name></member>
+    <member refid="struct_h_e___edge_1aac8c30d759b2a67e84b2865684107f3c" kind="variable"><name>type</name></member>
+    <member refid="struct_h_e___edge_1a369c8de2daf6e0160f848266b3ae75f4" kind="variable"><name>energy</name></member>
+    <member refid="struct_h_e___edge_1a91336318b1ce53c25a96dc8d389d00a2" kind="variable"><name>_property</name></member>
+  </compound>
+  <compound refid="struct_h_e___face" kind="struct"><name>HE_Face</name>
+    <member refid="struct_h_e___face_1a60bada435e194a064171d9459f886ec1" kind="variable"><name>id</name></member>
+    <member refid="struct_h_e___face_1a7f627b1cd3d60bf8c4db81deb1d22818" kind="variable"><name>outer</name></member>
+    <member refid="struct_h_e___face_1ab49f653d506b3ecc22070adde9778df9" kind="variable"><name>nsides</name></member>
+    <member refid="struct_h_e___face_1aa5f269a9a20ca810b782eaebc54732b0" kind="variable"><name>normal</name></member>
+    <member refid="struct_h_e___face_1aeba6499e0793cef2d5c647bb70bf30f6" kind="variable"><name>area</name></member>
+    <member refid="struct_h_e___face_1af5cce48b4ee5e6f0b13c35911fd58195" kind="variable"><name>g_reference</name></member>
+    <member refid="struct_h_e___face_1a1e42fc51ad1f4765ac58ea01321b869d" kind="variable"><name>g_reference_inv</name></member>
+    <member refid="struct_h_e___face_1af29889f85125a5ee2d1a9bfed962b1c1" kind="variable"><name>normal_reference</name></member>
+    <member refid="struct_h_e___face_1aeffc9338986519591f355f10f0c6fbc4" kind="variable"><name>r12_reference</name></member>
+    <member refid="struct_h_e___face_1a1702dc1e4864af08ec5799f1dc6bc94b" kind="variable"><name>r13_reference</name></member>
+    <member refid="struct_h_e___face_1a4dce6992efab4d605c7216378eff26b5" kind="variable"><name>v1</name></member>
+    <member refid="struct_h_e___face_1a6a4389d45981e6977d4ec960669d3668" kind="variable"><name>v2</name></member>
+    <member refid="struct_h_e___face_1aba358c5350f246088a91f771875a6f16" kind="variable"><name>v3</name></member>
+    <member refid="struct_h_e___face_1a8dabcdcd65ab89fd3bf699c7e4ec967b" kind="variable"><name>boundary</name></member>
+    <member refid="struct_h_e___face_1a57f9a18cd7c3e5e82b880b1aac75342c" kind="variable"><name>_hedge</name></member>
+    <member refid="struct_h_e___face_1a03f02ae3558ec7a8f79c62a6515a05ca" kind="variable"><name>type</name></member>
+    <member refid="struct_h_e___face_1a9d94b11abc873938c7cced0a757c1187" kind="variable"><name>energy</name></member>
+    <member refid="struct_h_e___face_1a71cdf59f34a1dd7a304261eae1a3a931" kind="variable"><name>_property</name></member>
+  </compound>
+  <compound refid="struct_h_e___half_edge" kind="struct"><name>HE_HalfEdge</name>
+    <member refid="struct_h_e___half_edge_1a5af1508a08237657ca639e56fe903437" kind="variable"><name>index</name></member>
+    <member refid="struct_h_e___half_edge_1a7db693b228383b8985ea7a080f34b90d" kind="variable"><name>vert_from</name></member>
+    <member refid="struct_h_e___half_edge_1a494604d4afa09f5d2e7d5fd61b551b62" kind="variable"><name>vert_to</name></member>
+    <member refid="struct_h_e___half_edge_1a2ab618a97008d3ee47e485c984eb5fa2" kind="variable"><name>edge</name></member>
+    <member refid="struct_h_e___half_edge_1a1e4a6d5a4d215915e83106da85127169" kind="variable"><name>face</name></member>
+    <member refid="struct_h_e___half_edge_1ae3b4a834e3d24ded85c36d92c4e916a6" kind="variable"><name>pair</name></member>
+    <member refid="struct_h_e___half_edge_1a7eb7613a3009c398fb175a67e696ef2b" kind="variable"><name>next</name></member>
+    <member refid="struct_h_e___half_edge_1ac5ef709b2a46f4f38708259537b914dd" kind="variable"><name>prev</name></member>
+    <member refid="struct_h_e___half_edge_1a9b1bae499812d45772a0eab709db65cc" kind="variable"><name>boundary</name></member>
+    <member refid="struct_h_e___half_edge_1ae89687a6e556f31ce4f4a7855ebd4485" kind="variable"><name>_property</name></member>
+  </compound>
+  <compound refid="struct_h_e___vertex" kind="struct"><name>HE_Vertex</name>
+    <member refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" kind="variable"><name>r</name></member>
+    <member refid="struct_h_e___vertex_1a0fb51c9a20e810c681e575eb34c42661" kind="variable"><name>id</name></member>
+    <member refid="struct_h_e___vertex_1ac9641c0f9a1b7de46690f52402ec9070" kind="variable"><name>boundary</name></member>
+    <member refid="struct_h_e___vertex_1a207bbe661bc3c8c044eeab02e1f80969" kind="variable"><name>coordination</name></member>
+    <member refid="struct_h_e___vertex_1a8662ff0afc7f433deec5dec4ce70f6b1" kind="variable"><name>cellId</name></member>
+    <member refid="struct_h_e___vertex_1a03f79d18a2f5b7dbf119649856362356" kind="variable"><name>normal</name></member>
+    <member refid="struct_h_e___vertex_1aecce69c87c3dfff30c0d61cbf63a0e8a" kind="variable"><name>_hedge</name></member>
+    <member refid="struct_h_e___vertex_1a6a18915ababcf3bd3eadbf43d8f94803" kind="variable"><name>type</name></member>
+    <member refid="struct_h_e___vertex_1a10b733266b2070ee559be35363ce4fce" kind="variable"><name>v</name></member>
+    <member refid="struct_h_e___vertex_1aef7959f763adbf285909b06782c9d1aa" kind="variable"><name>accel</name></member>
+    <member refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" kind="variable"><name>forceC</name></member>
+    <member refid="struct_h_e___vertex_1ab79703e77d0455d298ec1d7a0f1400cd" kind="variable"><name>forceD</name></member>
+    <member refid="struct_h_e___vertex_1a4fec1ddc583d0a0ce153a087805afa9b" kind="variable"><name>forceE</name></member>
+    <member refid="struct_h_e___vertex_1ac385281595fec27f35b9ebeada4c78d4" kind="variable"><name>energy</name></member>
+    <member refid="struct_h_e___vertex_1affc8233bb7a0b949363d3e324ee3766b" kind="variable"><name>mass</name></member>
+    <member refid="struct_h_e___vertex_1a09c8bd5d7064500ec3c8b6f108a93c2c" kind="variable"><name>ip</name></member>
+    <member refid="struct_h_e___vertex_1aa3e5878f5684add71c82c14512221950" kind="variable"><name>spin</name></member>
+    <member refid="struct_h_e___vertex_1a7974f1ef6990fec57f052b8ee7fb3e96" kind="variable"><name>_property</name></member>
+  </compound>
+  <compound refid="class_integrator_brownian_mesh_vertex" kind="class"><name>IntegratorBrownianMeshVertex</name>
+    <member refid="class_integrator_brownian_mesh_vertex_1a06ee141f40b243878090dc62d4da3bc7" kind="variable"><name>m_gamma</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1add66d6c3dd50555046542906c1edcadd" kind="variable"><name>m_mu</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a23a63e26a62c52ee6b9fce593f9e1b7d" kind="variable"><name>m_B</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a6b078dd7286890417d6298e0d6e1fcc9" kind="variable"><name>m_sqrt_dt</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1ad082bb6bcd689e2faacd0567ccfab610" kind="variable"><name>m_seed</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1abf58c676310b8e925a49e5c182a69894" kind="variable"><name>m_rng</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a11bd08f6e599ba22e9fbbf8fac4d9b9e" kind="function"><name>IntegratorBrownianMeshVertex</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1af6541d0a36a4f963938ca9efe18d1464" kind="function"><name>~IntegratorBrownianMeshVertex</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a9eb39f0260cf17a6f52f5bbed5c50fa0" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a49a638d584cbba90674e8e0cbfb6b25d" kind="function"><name>update_temperature_parameters</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a035fbfa69aa067f9eaadf708b5466c1b" kind="function"><name>update_time_step_parameters</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1ab9dd082f3bc12d531656cda095bc49f0" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1acdc73acd32f01b4058bb75af8159e487" kind="function"><name>prestep</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a05afb2c798c7411fe8a78c5e72c947b6" kind="function"><name>poststep</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a37abc32e56f9d4542c23cc7d56381e86" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1a0aeef46e406861569649928ed2dcc619" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_brownian_mesh_vertex_1ace813f16352c0ffa60402be45922741f" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_integrator_class" kind="class"><name>IntegratorClass</name>
+    <member refid="class_integrator_class_1a4bf9529b0960bc8cf4fef5dbe61e393a" kind="variable"><name>_system</name></member>
+    <member refid="class_integrator_class_1a9f453b1f691c6ab03d8da9f5867ee9b6" kind="variable"><name>name</name></member>
+    <member refid="class_integrator_class_1a3e60885c6fc740147829d36930a39c6e" kind="variable"><name>type</name></member>
+    <member refid="class_integrator_class_1a51fe9c6c93dae5c599348cf923eba5a2" kind="variable"><name>T</name></member>
+    <member refid="class_integrator_class_1acd318003c4175adc4e578adc34063038" kind="variable"><name>dt</name></member>
+    <member refid="class_integrator_class_1a8d9f273a3158705295ad3a3d9107c2c0" kind="function"><name>IntegratorClass</name></member>
+    <member refid="class_integrator_class_1a37c96d3eccd2791ad550921d8f5421dd" kind="function"><name>~IntegratorClass</name></member>
+    <member refid="class_integrator_class_1aab012c78f2e31344be20d41845d2e044" kind="function"><name>prestep</name></member>
+    <member refid="class_integrator_class_1a17301c189d27dc4b40b5baf13bfe6436" kind="function"><name>poststep</name></member>
+    <member refid="class_integrator_class_1a85623a54c904010647913847b5cfb30b" kind="function"><name>set_temperature</name></member>
+    <member refid="class_integrator_class_1a6977fe583409c3da1876206cd3e5d923" kind="function"><name>update_temperature_parameters</name></member>
+    <member refid="class_integrator_class_1a8da98239a27db6466c4d25b970b90ea0" kind="function"><name>get_temperature</name></member>
+    <member refid="class_integrator_class_1abcf54f5c8e94f631df699a4f6ee35add" kind="function"><name>set_time_step</name></member>
+    <member refid="class_integrator_class_1a6e15091f8104a2423240a9076a0ebba6" kind="function"><name>update_time_step_parameters</name></member>
+    <member refid="class_integrator_class_1a05ec386683b496fc9985dffe2633ddf2" kind="function"><name>get_time_step</name></member>
+    <member refid="class_integrator_class_1a1a0e8d9a534212fe2f6bda50c08e0acf" kind="function"><name>get_name</name></member>
+    <member refid="class_integrator_class_1a43aebaba805eb6e4671ad143961103d6" kind="function"><name>get_type</name></member>
+    <member refid="class_integrator_class_1a660acc23420e6e817fc76b39992d917f" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_integrator_class_1a37abc32e56f9d4542c23cc7d56381e86" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_class_1a0aeef46e406861569649928ed2dcc619" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_class_1ace813f16352c0ffa60402be45922741f" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_class_1a6a611224991ec3772c44a1facb8e25fa" kind="function"><name>print_warning_calling</name></member>
+    <member refid="class_integrator_class_1a6da0849ae3c38476b62fcb32c809f798" kind="function"><name>print_warning_property_name</name></member>
+  </compound>
+  <compound refid="class_integrator_velocity_verlet_mesh_vertex" kind="class"><name>IntegratorVelocityVerletMeshVertex</name>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a8a6ca97170746bc6281dfcbdfa521726" kind="variable"><name>m_limit_val</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a95eb8d10f3b8f75fd2e225cd0169b7c7" kind="variable"><name>m_has_limit</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a3085279a5334958d0f1818396cbab5cf" kind="function"><name>IntegratorVelocityVerletMeshVertex</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1ab1b1b292de46d48028db05d509945485" kind="function"><name>~IntegratorVelocityVerletMeshVertex</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a1d8242d4d73ed83500b6407a80c51425" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a7d90c0c4d4555a90524618d3105b3cc7" kind="function"><name>update_temperature_parameters</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1addbba769a88cf72da8670c79b5b1f443" kind="function"><name>update_time_step_parameters</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1af4cb4a3ab19301a7a73f43a7a2f0e095" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a3badb600976027f8aedf00aef6fcf5e8" kind="function"><name>prestep</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1ad75edf93bb13084d6c9aae1f9de152d3" kind="function"><name>poststep</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a37abc32e56f9d4542c23cc7d56381e86" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1a0aeef46e406861569649928ed2dcc619" kind="function"><name>set_property</name></member>
+    <member refid="class_integrator_velocity_verlet_mesh_vertex_1ace813f16352c0ffa60402be45922741f" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_mesh_operations" kind="class"><name>MeshOperations</name>
+    <member refid="class_mesh_operations_1a426d5604eb950b791aff8c921bb73b24" kind="variable"><name>_system</name></member>
+    <member refid="class_mesh_operations_1a3bf8fbfa8df05976c5df4d242900553d" kind="function"><name>MeshOperations</name></member>
+    <member refid="class_mesh_operations_1a0470d0bc9932a0341665b1ec85fd60e5" kind="function"><name>~MeshOperations</name></member>
+    <member refid="class_mesh_operations_1a52d868a356d5a7a13fa95fc31d1f188a" kind="function"><name>check_if_edge_can_flip</name></member>
+    <member refid="class_mesh_operations_1a05b32f7f076c4e4ec9c3b8195b60060b" kind="function"><name>edge_flip</name></member>
+    <member refid="class_mesh_operations_1a37b9f05448705ad429f69adb16e12080" kind="function"><name>equiangulation</name></member>
+  </compound>
+  <compound refid="class_minimizer_class" kind="class"><name>MinimizerClass</name>
+    <member refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" kind="variable"><name>_system</name></member>
+    <member refid="class_minimizer_class_1a356f9575676c56fbb812dfaec9f1bef5" kind="variable"><name>_evolver</name></member>
+    <member refid="class_minimizer_class_1ab0889ed7336b586efc598b82e26de354" kind="variable"><name>m_name</name></member>
+    <member refid="class_minimizer_class_1a5bba99f95b075cd9a5cab85624ae1dad" kind="variable"><name>m_type</name></member>
+    <member refid="class_minimizer_class_1a86cb59c64fdab96b3536746b5151e259" kind="function"><name>MinimizerClass</name></member>
+    <member refid="class_minimizer_class_1a9bcd8631ad7975e528f6825722f899cb" kind="function"><name>~MinimizerClass</name></member>
+    <member refid="class_minimizer_class_1af9cbb79a3207e438a70388ee0ac7d467" kind="function"><name>minimize</name></member>
+    <member refid="class_minimizer_class_1a400fb77de7347a3d847f65e1ffdd57b2" kind="function"><name>get_name</name></member>
+    <member refid="class_minimizer_class_1ac1cac33f95ee3a89cdb2d8110bd08042" kind="function"><name>get_type</name></member>
+    <member refid="class_minimizer_class_1ada24fbfffd88025dfc96fbfca5873ca8" kind="function"><name>get_info</name></member>
+    <member refid="class_minimizer_class_1aa7f5d5ca1da9beb144c023d1b38191ce" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_minimizer_class_1abab2164130b7b71ff12f28e9c88f030b" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_class_1aa86679fb2e2979ac66565d61668ade46" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_class_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_class_1a0aa06712a4eb644f2dbddc27891243a1" kind="function"><name>print_warning_calling</name></member>
+    <member refid="class_minimizer_class_1a13a7b0d980b839cab1bd7c0c59e6e6ac" kind="function"><name>print_warning_property_name</name></member>
+  </compound>
+  <compound refid="class_minimizer_mesh_f_i_r_e" kind="class"><name>MinimizerMeshFIRE</name>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ad71efcda9f34089424e1c8e008b2c333" kind="variable"><name>m_max_iter</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1afba51767c116da5e0dbc03bd44991ddd" kind="variable"><name>m_nmin</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a396256a4ded932e4e0365c918fce9e20" kind="variable"><name>m_n_since_negative</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a5efd1d074de3d42f263fdadc6960d75f" kind="variable"><name>m_n_since_start</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a2926ee1c9cd1af43e2fd04da400cf11d" kind="variable"><name>m_run_minsteps</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a90d6ba03f86625c13716351747a1d9ea" kind="variable"><name>m_finc</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a65819ef92319b65bdec56131cc015fe8" kind="variable"><name>m_fdec</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a2677d0476985ea95c45a3981673842ca" kind="variable"><name>m_alpha_start</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ab9a09757cf5c8efce35d5a895bb2ec43" kind="variable"><name>m_alpha</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a36efd9a795be05e363d529f19acfd79c" kind="variable"><name>m_falpha</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a61e5c36496d843dd14579ec29c4875bb" kind="variable"><name>m_ftol</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ace35261dabccc0a711119e0f675dbdd7" kind="variable"><name>m_etol</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a4eab06717f59c4119ae85766c56bef94" kind="variable"><name>m_energy_total</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a64964d2d2983ae1c776b5a02a41a487f" kind="variable"><name>m_old_energy</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1aea3f56c8b435fd08a2fe7ea21817d468" kind="variable"><name>m_dE</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a67caff0096a2a9eaa51177ae5228b5fe" kind="variable"><name>m_fnorm</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a76fc91cb951de9e7e283060aab52bfd6" kind="variable"><name>m_dT_max</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1af5504f939093e00de6dd29be5043d1b6" kind="variable"><name>m_dT_set</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a843dcfe2ae50e8fe8ce060b4d34da19e" kind="variable"><name>m_converged</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a5926d38c45e62a12ea4ea349e5cb3bbf" kind="variable"><name>m_dt</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1acfb1e5007957eb05a3cffdf564b7d1f0" kind="function"><name>MinimizerMeshFIRE</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a427ea2dad3e58d3f25c93ffc3d977bf2" kind="function"><name>~MinimizerMeshFIRE</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a228e2c3e91eecf0a5bc68debbbc3bbac" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1af77faca4a35e300953cb62c3bc3d134c" kind="function"><name>update_time_step_parameters</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a0022e17485a6dfa5e77c1d76583cded5" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a5c5f0b269aa859cac7ef554ef6c93946" kind="function"><name>is_satisfied</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a713b3fe51f323d7e1cf59f14ceeaa9c3" kind="function"><name>get_info</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a23e0ab6a5d57b6d9ab009a802656c851" kind="function"><name>reset</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ae120b778f2823539458f5eab1d738ca6" kind="function"><name>poststep1</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ab14365d2fd955bab25c58143a5e08b21" kind="function"><name>poststep2</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a67639a42242392d139388861cfbfca24" kind="function"><name>poststep3</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1ac22db26ba2d7eec9847f090c230c2bc1" kind="function"><name>minimize</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1abab2164130b7b71ff12f28e9c88f030b" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1aa86679fb2e2979ac66565d61668ade46" kind="function"><name>set_property</name></member>
+    <member refid="class_minimizer_mesh_f_i_r_e_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator" kind="class"><name>MonteCarloIntegrator</name>
+    <member refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" kind="variable"><name>_system</name></member>
+    <member refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" kind="variable"><name>_potentials</name></member>
+    <member refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" kind="variable"><name>name</name></member>
+    <member refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" kind="variable"><name>type</name></member>
+    <member refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" kind="variable"><name>T</name></member>
+    <member refid="class_monte_carlo_integrator_1ad8929da67aacbff438f417d7aeab410c" kind="variable"><name>integrate_every</name></member>
+    <member refid="class_monte_carlo_integrator_1a939530773d57874ca1c96625707c4ac3" kind="variable"><name>minimum_energy</name></member>
+    <member refid="class_monte_carlo_integrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc" kind="variable"><name>NUM_TYPES_ALLOWED</name></member>
+    <member refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" kind="function"><name>MonteCarloIntegrator</name></member>
+    <member refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" kind="function"><name>~MonteCarloIntegrator</name></member>
+    <member refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_1a8e8e222fe336c2f56235df0035f8d5fe" kind="function"><name>ComputeEnergyFromEdge</name></member>
+    <member refid="class_monte_carlo_integrator_1a27b6c559a56e29647717d0ba2a4c6093" kind="function"><name>ComputeEnergyFromVertex</name></member>
+    <member refid="class_monte_carlo_integrator_1a634e45ff52b7b8bd7a35f3828d47ea83" kind="function"><name>ComputeEnergyFromFace</name></member>
+    <member refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" kind="function"><name>set_temperature</name></member>
+    <member refid="class_monte_carlo_integrator_1a73f58c5ac0533462441070bd60008418" kind="function"><name>update_temperature_parameters</name></member>
+    <member refid="class_monte_carlo_integrator_1aa1c25fac86c042bf1c82d099c4d56221" kind="function"><name>get_temperature</name></member>
+    <member refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" kind="function"><name>get_name</name></member>
+    <member refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" kind="function"><name>get_type</name></member>
+    <member refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" kind="function"><name>get_integrate_every</name></member>
+    <member refid="class_monte_carlo_integrator_1a1f5b4442efc847425dd209988eca7cd8" kind="function"><name>set_integrate_every</name></member>
+    <member refid="class_monte_carlo_integrator_1aabaa7b2836fc24403ea07ba44507d1bf" kind="function"><name>get_minimum_energy</name></member>
+    <member refid="class_monte_carlo_integrator_1a7714495d7d5f4c00e04ca25b3761e5a8" kind="function"><name>set_minimum_energy</name></member>
+    <member refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_1ad92127d5579f33dc8207a7d8921c5285" kind="function"><name>print_warning_calling</name></member>
+    <member refid="class_monte_carlo_integrator_1a42b870221605a6f6a71636470348c119" kind="function"><name>print_warning_property_name</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator_flip_edge" kind="class"><name>MonteCarloIntegratorFlipEdge</name>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a257702c630a4be26a64e3b3d7fe441e3" kind="variable"><name>m_dx</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a9b960227b1f8a8e232afef8fda40f865" kind="variable"><name>m_dy</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1ade4c96a607aa854ff549b0d77b2fa15b" kind="variable"><name>m_dz</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a85be9969c9ff0a1f43454d68fc6b2e84" kind="variable"><name>m_seed</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a8fb3f8c3d86d2aceeccb96784feeaec1" kind="variable"><name>m_rng</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a9cc78a07d97e27aa7fc45912286207b3" kind="variable"><name>freezed_edge</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a099547f1ab1ee91c519bfe568a42ecaf" kind="function"><name>MonteCarloIntegratorFlipEdge</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a0e90f504648f409965c3317267419db1" kind="function"><name>~MonteCarloIntegratorFlipEdge</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a5b65c504caccdd6ac4cadf32a42bc0db" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a7226570ad5db4794bd5862d60e4d6b27" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a61a6a09b2550d7d085c672ee056611be" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a93cd9b437f00b5c1e421ccffaf3aa5f3" kind="function"><name>edge_flip</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1aecf4e0e7ee9be45612ca9c4110cdc86d" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_flip_edge_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator_spin_vertex" kind="class"><name>MonteCarloIntegratorSpinVertex</name>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a3376b10faee27149ee92529cb5d47a16" kind="variable"><name>m_seed</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a6eb28290b6ea05c42224d6b27a8b4622" kind="variable"><name>m_rng</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a8e0e0a52a6ddfa5102cfdbf63139a31e" kind="variable"><name>freezed_vertex</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1adfabcb49f3ec6194d1874ab872675cde" kind="function"><name>MonteCarloIntegratorSpinVertex</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a8f29c125f60107862595e8ae3fb86c30" kind="function"><name>~MonteCarloIntegratorSpinVertex</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a713dda1d8138f9291568fdd29f9fe90d" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a7ce2dd5f3ea65fbbcf9daeeb7346e558" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a2d6274e08a87b8c9d3e951d5afc1429a" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1afb57459123a2ff89515d988a0e3fecc6" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_spin_vertex_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator_swap_edge" kind="class"><name>MonteCarloIntegratorSwapEdge</name>
+    <member refid="class_monte_carlo_integrator_swap_edge_1ae89afbf1d4963081df1cbfc6db36a2be" kind="variable"><name>m_dx</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a0f55c2a506359a899d8f81a953f51890" kind="variable"><name>m_dy</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a387992392282b5e6f9361950e660b8ad" kind="variable"><name>m_dz</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a9d913cd8a9cdb0ffa644eb03aad96b99" kind="variable"><name>m_seed</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1ab29f62bbf4da1394e72cd9b3e2a4b489" kind="variable"><name>m_rng</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1ad9f2465f79f583738bef48e91f7778d3" kind="variable"><name>stochastic_tunnelling</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a88a10056ce84334c3b7f389426a1daef" kind="variable"><name>stochastic_gamma</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1abacd837137db11bb435dda47da7c1923" kind="variable"><name>freezed_edge</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1ade6579744c653fd010aed7fd1e6e34be" kind="function"><name>MonteCarloIntegratorSwapEdge</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1af857b840402795dbf0909a648510e5e8" kind="function"><name>~MonteCarloIntegratorSwapEdge</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a25fc3f36de395f140eda72e99ef11986" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1abb7101f9032ead9ba35be3e4b7d6858c" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a1f023ea160b382e1711604d38be17881" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1aafce0b15fcd226806b36af061ddafa87" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_edge_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator_swap_vertex" kind="class"><name>MonteCarloIntegratorSwapVertex</name>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1aeb96add18d9046b885fdac814da09ae6" kind="variable"><name>m_dx</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a7a3ba85f8f08dd8d5c53b847f01614f3" kind="variable"><name>m_dy</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a9945dd53d47b0711ef1bb9e66770fa97" kind="variable"><name>m_dz</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a4080997714791c35e4992f56017391c5" kind="variable"><name>m_seed</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1afc2c4fe5a91e2644a3cbc35b5377fc63" kind="variable"><name>m_rng</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a2407afeecfdf58a4b1e7875d6a8d00f9" kind="variable"><name>stochastic_tunnelling</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1ae36cf53eeb34679cdaeba2f10fa860e3" kind="variable"><name>stochastic_gamma</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1ae89becd9459e97b8cbb9cb371f2e6755" kind="variable"><name>freezed_vertex</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1aab11da842ca7adf7fa91f0ab695628f0" kind="function"><name>MonteCarloIntegratorSwapVertex</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a1850dcfcf53cc8a0bbe86b4e7ebfd702" kind="function"><name>~MonteCarloIntegratorSwapVertex</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1ac694d984224b81fbf61d2ce675d335ff" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a2ccd38e38be8c6fc7286b9f79dcd1172" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a1cbcba780afad603be37529718b19e02" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a14ef7e964d2a38560ba9dc889d4dce39" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_swap_vertex_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_monte_carlo_integrator_vertex" kind="class"><name>MonteCarloIntegratorVertex</name>
+    <member refid="class_monte_carlo_integrator_vertex_1a3573f3ee4092a8ab186932833b16abd0" kind="variable"><name>m_dx</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a74a3b8bb41871f071979c766bbe6c940" kind="variable"><name>m_dy</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a432231c9d00e875e460776b0c30e0004" kind="variable"><name>m_dz</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a9e30d382b654f5da4c9e5070efac31ae" kind="variable"><name>m_seed</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a3cc1fc155f656cdf2a43a72c5a307512" kind="variable"><name>m_rng</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a3536102b73ad6403698b97817b59c0e4" kind="variable"><name>m_spherical_move</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a00bbf4108f6ff059bfd1e8f50626d5c4" kind="variable"><name>m_freezed_vertex</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a93a36ec65f2b30d9e492d4cd8cb7513c" kind="function"><name>MonteCarloIntegratorVertex</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1afc654505bae297fc8ae2dfac669e00d4" kind="function"><name>~MonteCarloIntegratorVertex</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1ad5abf7d9acab33fe2c11878f4802fc6d" kind="function"><name>set_default_properties</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a5f29844c3a609637ba8a6d0e44ae0337" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a6a04bf9d1fe442db76bc5033bdb39a2b" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a970d49031607da9c4a42e325750d60e7" kind="function"><name>integrate</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a3deefe8007395a52014d1d35b6f03bb4" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1af4e86d41bd9db68e3c52ee4e319fad20" kind="function"><name>set_property</name></member>
+    <member refid="class_monte_carlo_integrator_vertex_1a5c08c32cb317d6fd94b653b8608d0714" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="struct_property" kind="struct"><name>Property</name>
+  </compound>
+  <compound refid="struct_property_edges" kind="struct"><name>PropertyEdges</name>
+    <member refid="struct_property_edges_1a626cf71c1a1d16c3812efc8489ce4caa" kind="variable"><name>age</name></member>
+    <member refid="struct_property_edges_1ab85817d46495f16658011cf2ad03c476" kind="variable"><name>cot_alpha</name></member>
+    <member refid="struct_property_edges_1a8c139a4c3f51ea0a5a552b3872dba257" kind="variable"><name>cot_beta</name></member>
+  </compound>
+  <compound refid="struct_property_faces" kind="struct"><name>PropertyFaces</name>
+    <member refid="struct_property_faces_1a4b4b88684f852cca0a0f0cf308ff82e8" kind="variable"><name>age</name></member>
+    <member refid="struct_property_faces_1abf75899056e9e1cbf5addc93b38ae072" kind="variable"><name>g_reference0_growth</name></member>
+    <member refid="struct_property_faces_1a85f9f451c8bf776d6c383be2ef88a35d" kind="variable"><name>k11</name></member>
+    <member refid="struct_property_faces_1adc54fdd8d1f306e94949621910739fe0" kind="variable"><name>k12</name></member>
+    <member refid="struct_property_faces_1ad3bdf4db6750f31ee44d18cb1fd56041" kind="variable"><name>k22</name></member>
+  </compound>
+  <compound refid="struct_property_vertices" kind="struct"><name>PropertyVertices</name>
+    <member refid="struct_property_vertices_1a6f283f00c3fc18c9d8cc3b91979a1ff9" kind="variable"><name>v</name></member>
+    <member refid="struct_property_vertices_1a1d1c5273259494464d88ccfb9a6b56f7" kind="variable"><name>age</name></member>
+    <member refid="struct_property_vertices_1a0cb47fafe1ed0b829f5f6cf26f9ee5a8" kind="variable"><name>delaminated</name></member>
+    <member refid="struct_property_vertices_1a1faf9bc32d59f2353ebd8839fb2f29e7" kind="variable"><name>radius</name></member>
+  </compound>
+  <compound refid="class_read_mesh" kind="class"><name>ReadMesh</name>
+    <member refid="class_read_mesh_1a437c87d52b730a310bfbe2ac86be753b" kind="variable"><name>hep_map</name></member>
+    <member refid="class_read_mesh_1afc30da692324721d8a82f6c90f92ba0d" kind="variable"><name>faces</name></member>
+    <member refid="class_read_mesh_1afb3e4843e04134e0845185fee338136a" kind="variable"><name>vertices</name></member>
+    <member refid="class_read_mesh_1ad483bb1ae2c2ea9c9475b041546054bb" kind="variable"><name>edges</name></member>
+    <member refid="class_read_mesh_1ac29b70913d8fbbb93dbcf0e5b928a0b5" kind="variable"><name>halfedges</name></member>
+    <member refid="class_read_mesh_1a3742ec08bc608a7b57e825ba599f474a" kind="variable"><name>Numvertices</name></member>
+    <member refid="class_read_mesh_1abade0d457cdfe496622235eda7b90968" kind="variable"><name>Numedges</name></member>
+    <member refid="class_read_mesh_1aa459a5a128d4fd39073a5e9be557fef8" kind="variable"><name>Numfaces</name></member>
+    <member refid="class_read_mesh_1a42b31523d2b946c54378752b9c7dc483" kind="variable"><name>Numhalfedges</name></member>
+    <member refid="class_read_mesh_1afc14ab8cf95e5916fee1e477f96d97d5" kind="variable"><name>close_surface</name></member>
+    <member refid="class_read_mesh_1af75c7bbd8ccc4053e4d465a93de319ea" kind="function"><name>ReadMesh</name></member>
+    <member refid="class_read_mesh_1a4615dd6d5f9a7a35cee7a00218ef3f31" kind="function"><name>ReadMesh</name></member>
+    <member refid="class_read_mesh_1a1a19ec24771515eee42378e57f81a8d3" kind="function"><name>ReadMesh</name></member>
+    <member refid="class_read_mesh_1a0a63e2750dca7124c78c5c697182ef86" kind="function"><name>ReadMesh</name></member>
+    <member refid="class_read_mesh_1af2c32a75f5aaa7c5b2531d6930ea611d" kind="function"><name>clear</name></member>
+    <member refid="class_read_mesh_1a25453630aefa536d5a357431f5efc032" kind="function"><name>~ReadMesh</name></member>
+    <member refid="class_read_mesh_1a0e2a1329fb3927bfaf8b2ac7155e2959" kind="function"><name>get_halfedges</name></member>
+    <member refid="class_read_mesh_1a01a85275711b23494dc042c7d8f11bf8" kind="function"><name>get_vertices</name></member>
+    <member refid="class_read_mesh_1ae6b3728a734a3d42dfdad56d37d985ce" kind="function"><name>get_edges</name></member>
+    <member refid="class_read_mesh_1a3eb1abde43b83be0929d47bd39ba4175" kind="function"><name>get_faces</name></member>
+    <member refid="class_read_mesh_1a6846e9a11e684dde971df9689427db12" kind="function"><name>getNumvertices</name></member>
+    <member refid="class_read_mesh_1ac3a89a2da15c60dfb71dd3b12b5bf40b" kind="function"><name>getNumedges</name></member>
+    <member refid="class_read_mesh_1a8b434b6cbec5cef83b431418b0319a6e" kind="function"><name>getNumfaces</name></member>
+    <member refid="class_read_mesh_1ac7b809a838e8352bdfce7b83d2cfffb9" kind="function"><name>getNumhalfedges</name></member>
+    <member refid="class_read_mesh_1a9d6cfc5e0430d34df396f6e38bcd8f2d" kind="function"><name>is_close_surface</name></member>
+    <member refid="class_read_mesh_1acce5a0fc1b72b5708e6f88e657666b42" kind="function"><name>__add_vertex</name></member>
+    <member refid="class_read_mesh_1a8ff3fab09bfaec80fb957fdcbfa15ce5" kind="function"><name>__add_face</name></member>
+    <member refid="class_read_mesh_1a27a0b930d120e24408ae23884ddd03af" kind="function"><name>__add_edge</name></member>
+    <member refid="class_read_mesh_1a138d193c2db98bfc72b9ab7beb7acb37" kind="function"><name>__build_boundary</name></member>
+    <member refid="class_read_mesh_1a86d94d74d21bcb671e87850a665a843d" kind="function"><name>__build_edges</name></member>
+    <member refid="class_read_mesh_1a875ad7e831e4a289e841b228a626c744" kind="function"><name>__build_mesh</name></member>
+    <member refid="class_read_mesh_1ab1287e46d7f42a42ce725332e4bfeae6" kind="function"><name>__json_mesh</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reduce__tensor" kind="struct"><name>pymemb::reduce_tensor</name>
+    <member refid="structpymemb_1_1reduce__tensor_1aa467c5fd0cda4e3f7f14e47678af9d0f" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__edge__energy" kind="struct"><name>pymemb::reset_edge_energy</name>
+    <member refid="structpymemb_1_1reset__edge__energy_1a230a246ade40611931a7e6e4d8c8db2e" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__face__energy" kind="struct"><name>pymemb::reset_face_energy</name>
+    <member refid="structpymemb_1_1reset__face__energy_1aaf20898c2c23b8a8a77ada6a76d58935" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__tensor" kind="struct"><name>pymemb::reset_tensor</name>
+    <member refid="structpymemb_1_1reset__tensor_1a001ca8e02f4777aa8b5fdf50c5d28e76" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__vertex__acceleration" kind="struct"><name>pymemb::reset_vertex_acceleration</name>
+    <member refid="structpymemb_1_1reset__vertex__acceleration_1adb2cd1f834f8fc73d7e7a1434c5495b2" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__vertex__energy" kind="struct"><name>pymemb::reset_vertex_energy</name>
+    <member refid="structpymemb_1_1reset__vertex__energy_1a3aeac5557500255d05a25a2c9895e156" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__vertex__external__forces" kind="struct"><name>pymemb::reset_vertex_external_forces</name>
+    <member refid="structpymemb_1_1reset__vertex__external__forces_1a6f07fb051a246d769e06ef8b5155df62" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__vertex__forces" kind="struct"><name>pymemb::reset_vertex_forces</name>
+    <member refid="structpymemb_1_1reset__vertex__forces_1a57fb5355727eaf4f02a0167b87bbab15" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpymemb_1_1reset__vertex__velocities" kind="struct"><name>pymemb::reset_vertex_velocities</name>
+    <member refid="structpymemb_1_1reset__vertex__velocities_1ad77d91cfbd9f3e6c7920b3f5539aa05b" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="class_r_n_g" kind="class"><name>RNG</name>
+    <member refid="class_r_n_g_1a7eeef2d770422a98175b3d68419ac265" kind="variable"><name>m_generator</name></member>
+    <member refid="class_r_n_g_1a76e3b1974940768d454f66837e9447c2" kind="variable"><name>m_uniform_distribution</name></member>
+    <member refid="class_r_n_g_1ac575fe4d3e25b5608ae659b44cf9e218" kind="variable"><name>m_normal_distribution</name></member>
+    <member refid="class_r_n_g_1ad1a0404ddd79895cfc05432f06c9c385" kind="function"><name>RNG</name></member>
+    <member refid="class_r_n_g_1abe0c541fcfa0b12ef7446eccb166d510" kind="function"><name>~RNG</name></member>
+    <member refid="class_r_n_g_1a885efeb42c22a8984ef3db5e6652bc07" kind="function"><name>drnd</name></member>
+    <member refid="class_r_n_g_1a5bdd14bbfd6464446574ba90abd28367" kind="function"><name>gauss_rng</name></member>
+    <member refid="class_r_n_g_1aa16f8eef91acf82bb5fa1e0d8f23131b" kind="function"><name>lrnd</name></member>
+  </compound>
+  <compound refid="struct_set_property" kind="struct"><name>SetProperty</name>
+    <member refid="struct_set_property_1ad32029be4e340d59ad362778756aad45" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1a396b8b990bafa3a17779708c6e637abe" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="struct_set_region_edges" kind="struct"><name>SetRegionEdges</name>
+    <member refid="struct_set_region_edges_1a4e0cdd06d9f053e344af9b164188d896" kind="function"><name>SetRegionEdges</name></member>
+    <member refid="struct_set_region_edges_1aecb6d76f33ae74cef5e16a779711b6ea" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1a933f125514b0828fe0faacd5a194b84d" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1ae6fc5728794e698584a966f36ed7ab96" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1a1e8fa1a374b733022f34ab53357cf560" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1aaf5b1300623e4d528bddbac5fd907cdd" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1a26605c3792ff7baaf41d217fa79b9f64" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_edges_1ab7a09df6de0ae2474b12349662216411" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="struct_set_region_faces" kind="struct"><name>SetRegionFaces</name>
+    <member refid="struct_set_region_faces_1a6883a4d6312c4f205f837e1dbe6d0ad2" kind="function"><name>SetRegionFaces</name></member>
+    <member refid="struct_set_region_faces_1a3ec478c683055449006359d6bd005a7d" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1a8c5ee218a61e2229c68b4b85946baf01" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1a3b939defcd0a8fb31e7ef35a6777f29c" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1ac37ec43c46d91df742d276da833681e4" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1abc28620a7f58598d25166ad88b93d917" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1a5d655ce2bd85f93bd312227022c1b5cf" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_faces_1a86a9ad9447ba929ad06c6c0939efb23e" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="struct_set_region_vertices" kind="struct"><name>SetRegionVertices</name>
+    <member refid="struct_set_region_vertices_1aa3ba389b6c91a0a71936d30d350ece85" kind="function"><name>SetRegionVertices</name></member>
+    <member refid="struct_set_region_vertices_1aed40d921dd4ca493f10ede17c769a713" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1a29b593525821d8c7448d21a12dcdb966" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1ad6bd409ac8819eee676192fc6674659d" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1a27f160456e4d530c55c04dc13d84b8e7" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1a2e9b03755f634b8379f86b5d2932fe50" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1a514c884332840e8d26c709dbba62de37" kind="function"><name>set_property</name></member>
+    <member refid="struct_set_region_vertices_1ab3b110a69e2ca1ff226b7b4b5befc858" kind="function"><name>set_property</name></member>
+  </compound>
+  <compound refid="class_system_class" kind="class"><name>SystemClass</name>
+    <member refid="class_system_class_1af0d1bd1f023c6e9dd3b4d16b1473a798" kind="variable"><name>faces</name></member>
+    <member refid="class_system_class_1ab34bf6a895ac556fd12912c5ee931182" kind="variable"><name>vertices</name></member>
+    <member refid="class_system_class_1a57dafa639f8baed178c2f63b4a8080b2" kind="variable"><name>halfedges</name></member>
+    <member refid="class_system_class_1abef9d6c5f13737062370aae9de25a2f6" kind="variable"><name>edges</name></member>
+    <member refid="class_system_class_1a14be5dab1592f492b75175d3a3255af4" kind="variable"><name>stress_group_faces</name></member>
+    <member refid="class_system_class_1aafebf4d9584872d39eee0aa295803d78" kind="variable"><name>stress_group_vertices</name></member>
+    <member refid="class_system_class_1a551da82c616f85970cda9ad04107f5d1" kind="variable"><name>stress_group_edges</name></member>
+    <member refid="class_system_class_1a89b83c0580c3fb3d8b20c793dd44523a" kind="variable"><name>stress_virial_atom</name></member>
+    <member refid="class_system_class_1a3f325f3e78fcce50ef14d624df63136d" kind="variable"><name>stress_kinetic_atom</name></member>
+    <member refid="class_system_class_1ae8b9e1e88674ad526fe99561ff8cdb33" kind="variable"><name>Numvertices</name></member>
+    <member refid="class_system_class_1adc8021ba7d4fc7ae4e1c644c65eaef66" kind="variable"><name>Numedges</name></member>
+    <member refid="class_system_class_1a5992b8da85bccf096c78d56c5395edfb" kind="variable"><name>Numfaces</name></member>
+    <member refid="class_system_class_1abb70633e54a765af41b23b8f772e3573" kind="variable"><name>Numhalfedges</name></member>
+    <member refid="class_system_class_1a1530a09cdc13807434a09aa8035aabd8" kind="variable"><name>close_surface</name></member>
+    <member refid="class_system_class_1a0a54c71661aee6717c2221b415a82c66" kind="variable"><name>copy_in_host</name></member>
+    <member refid="class_system_class_1a2464f2b69ebe8d3b45dedc6205efa866" kind="variable"><name>compute_mesh</name></member>
+    <member refid="class_system_class_1a957a6cb550eb92108bd386c6ce7ac2fb" kind="variable"><name>dumper</name></member>
+    <member refid="class_system_class_1af0cd8d150ae5dd03e4c8a597be5ea397" kind="variable"><name>_box</name></member>
+    <member refid="class_system_class_1ac8a9c3545ea8749f149a49219d5f7c20" kind="function"><name>SystemClass</name></member>
+    <member refid="class_system_class_1a96e4439f2e4c4c6eb8223686fe1ad71d" kind="function"><name>SystemClass</name></member>
+    <member refid="class_system_class_1aa0c6aed1875b97d8260ad264a9d95e60" kind="function"><name>~SystemClass</name></member>
+    <member refid="class_system_class_1a0ec3fca4ccdee785cf80054048bd14bf" kind="function"><name>get_mesh_info</name></member>
+    <member refid="class_system_class_1ad338ef8f205b22bab2e1c3aaacd0b7c7" kind="function"><name>get_box</name></member>
+    <member refid="class_system_class_1aff02cbb0ec87a74c7fc8b8ede9254a76" kind="function"><name>set_box</name></member>
+    <member refid="class_system_class_1a7884847b7738f43d710c2db689d31e3e" kind="function"><name>set_box_length</name></member>
+    <member refid="class_system_class_1ae27751653382fb03640e2557c1935217" kind="function"><name>minImage</name></member>
+    <member refid="class_system_class_1a32af4be66adc3decad939f340db1d90c" kind="function"><name>need_wrapping</name></member>
+    <member refid="class_system_class_1a8b7af5dbcd775efb14df9dd513135bfd" kind="function"><name>enforce_periodic_boundary_conditions</name></member>
+    <member refid="class_system_class_1a72717f6856d02d08c744ff6e2bdcd98d" kind="function"><name>read_mesh_from_files</name></member>
+    <member refid="class_system_class_1a49b2d8feab87b7e531b8e6ae11ac8563" kind="function"><name>read_mesh_from_json</name></member>
+    <member refid="class_system_class_1a5d08492e1783a7f0ed81482a79ed6708" kind="function"><name>get_halfedges</name></member>
+    <member refid="class_system_class_1a358f577e5c199c3b03621949d320426b" kind="function"><name>get_vertices</name></member>
+    <member refid="class_system_class_1af870897ec067425a7eb72d63c3303ce7" kind="function"><name>get_edges</name></member>
+    <member refid="class_system_class_1ad956189f4da76e1bf90efbd98c33c034" kind="function"><name>get_faces</name></member>
+    <member refid="class_system_class_1a757bdd9f24ef3d094454cf48fc6187d9" kind="function"><name>set_halfedges</name></member>
+    <member refid="class_system_class_1a83179b885c7c1ba96220e9b50ccf651d" kind="function"><name>set_vertices</name></member>
+    <member refid="class_system_class_1ae1a320d84eec87faca57b66c36fe09d9" kind="function"><name>set_edges</name></member>
+    <member refid="class_system_class_1abdede13d455a711552a95893c0ff6bfd" kind="function"><name>set_faces</name></member>
+    <member refid="class_system_class_1a50be3977030f307ad77e38cf80991693" kind="function"><name>set</name></member>
+    <member refid="class_system_class_1a97182e17991c370f77c0f5c2f0209453" kind="function"><name>get_edge_neighbours_host</name></member>
+    <member refid="class_system_class_1ad4691631188fa37bb9b03a95e40af235" kind="function"><name>get_compute_mesh</name></member>
+    <member refid="class_system_class_1ac3594303b145f64e2eed1ded99329b84" kind="function"><name>get_dumper</name></member>
+    <member refid="class_system_class_1abdb8c170deb5133b71aa5f0ff3245a59" kind="function"><name>init_stresses</name></member>
+    <member refid="class_system_class_1a8618528642290b846ec1de06b53f1484" kind="function"><name>get_stress_vertices</name></member>
+    <member refid="class_system_class_1a8252fff3b742b7c32d584049ee84d509" kind="function"><name>get_stress_edges</name></member>
+    <member refid="class_system_class_1a413e6466d0314f049cdd6dd0dc1b513c" kind="function"><name>get_stress_faces</name></member>
+    <member refid="class_system_class_1ad61924c4d9085d350ce8eb193876958d" kind="function"><name>get_stress_virial</name></member>
+    <member refid="class_system_class_1a58de20ca307a29c2789976a4b5868f80" kind="function"><name>get_stress_kinetic</name></member>
+  </compound>
+  <compound refid="struct_tensor_type" kind="struct"><name>TensorType</name>
+    <member refid="struct_tensor_type_1a88c2e58287244736961ff715cc4d2718" kind="variable"><name>xx</name></member>
+    <member refid="struct_tensor_type_1a1680dc1bd8cfc6a4591b36e53692dc7c" kind="variable"><name>xy</name></member>
+    <member refid="struct_tensor_type_1a00d81cddc6c5047eded72abdd5586ffb" kind="variable"><name>xz</name></member>
+    <member refid="struct_tensor_type_1af4ce05508c83d8eb5690a222d7907d73" kind="variable"><name>yx</name></member>
+    <member refid="struct_tensor_type_1a815b4e75e7d28627f4586342702234c5" kind="variable"><name>yy</name></member>
+    <member refid="struct_tensor_type_1affafded5fe76da1c91441a185d8269f5" kind="variable"><name>yz</name></member>
+    <member refid="struct_tensor_type_1a7eaa11fb3c963986d2030cd590fb715e" kind="variable"><name>zx</name></member>
+    <member refid="struct_tensor_type_1a0c4910e5f1d1645b3228b97a2723737f" kind="variable"><name>zy</name></member>
+    <member refid="struct_tensor_type_1a26ca2a745b90647e91424ed446f1f447" kind="variable"><name>zz</name></member>
+  </compound>
+  <compound refid="structtriangle" kind="struct"><name>triangle</name>
+  </compound>
+  <compound refid="structtriangle__type" kind="struct"><name>triangle_type</name>
+    <member refid="structtriangle__type_1a19171767ddfd70fd72251aafdc87e134" kind="variable"><name>id</name></member>
+    <member refid="structtriangle__type_1adac6af28ae3c7692793a0d43f4a5d1b3" kind="variable"><name>v1</name></member>
+    <member refid="structtriangle__type_1aba9682840045f6b304ba39e52344dc44" kind="variable"><name>v2</name></member>
+    <member refid="structtriangle__type_1a9dcd3819568221dc66312ef13804b976" kind="variable"><name>v3</name></member>
+    <member refid="structtriangle__type_1a1a45ceddb04329cd2e382fdca7b49caf" kind="variable"><name>orientation</name></member>
+    <member refid="structtriangle__type_1a21d840de1d251e00ed821c660f03db23" kind="variable"><name>g_reference</name></member>
+    <member refid="structtriangle__type_1a8a85c86701038e765042ab2e42472e59" kind="variable"><name>normal_reference</name></member>
+    <member refid="structtriangle__type_1a20e9b039927b4680e46fa3d12c558ab5" kind="variable"><name>is_reference_normal</name></member>
+    <member refid="structtriangle__type_1a342f5a7b7415e4ddf88ffc6a5f4aac30" kind="variable"><name>is_reference_g</name></member>
+    <member refid="structtriangle__type_1a225f8fbd646668be41f5b5fe11205818" kind="variable"><name>type</name></member>
+    <member refid="structtriangle__type_1a6c0a86b449257756e57db8c20dfa647c" kind="variable"><name>energy</name></member>
+    <member refid="structtriangle__type_1ac93377896ad9cde40097fbb764872b95" kind="variable"><name>prop</name></member>
+    <member refid="structtriangle__type_1a029b9faf314b5ab2727d87f5ddfc3ed2" kind="function"><name>operator&lt;</name></member>
+  </compound>
+  <compound refid="structvertices__type" kind="struct"><name>vertices_type</name>
+    <member refid="structvertices__type_1a8a6c89ba0adb0ab264e994d36fc8ca6a" kind="variable"><name>id</name></member>
+    <member refid="structvertices__type_1a570f297cbbb16bedeb8bbf74c2325350" kind="variable"><name>r</name></member>
+    <member refid="structvertices__type_1a654fc93ee49f93bf8b7986942ff952bc" kind="variable"><name>type</name></member>
+    <member refid="structvertices__type_1a020248a03072684b201607601994b483" kind="variable"><name>forceC</name></member>
+    <member refid="structvertices__type_1aa44c1fe95a4eddc7ac5260828ea34829" kind="variable"><name>forceD</name></member>
+    <member refid="structvertices__type_1a416d5362254d7c97ff82f6e90977064f" kind="variable"><name>forceE</name></member>
+    <member refid="structvertices__type_1abb09e899eeeaffc480900aa642e8496a" kind="variable"><name>energy</name></member>
+    <member refid="structvertices__type_1a9ef80c15df230a7493ba6098697e9df8" kind="variable"><name>mass</name></member>
+    <member refid="structvertices__type_1a8b781006a6a823e337ccaf4ddb942f84" kind="variable"><name>prop</name></member>
+    <member refid="structvertices__type_1af172699aa7c8dd590d281259a178aba0" kind="function"><name>operator&lt;</name></member>
+  </compound>
+  <compound refid="structxy_type" kind="struct"><name>xyType</name>
+    <member refid="structxy_type_1adbed38ff03fcbc461f66083a1b7ec60a" kind="variable"><name>x</name></member>
+    <member refid="structxy_type_1abdc96dba90a6ed51a03c73cf0de5d38a" kind="variable"><name>y</name></member>
+    <member refid="structxy_type_1a8281316c45a01439c7bd2d6903d8d45d" kind="variable"><name>z</name></member>
+    <member refid="structxy_type_1ad6d645741c6d906b29a98c49cb25fed2" kind="variable"><name>w</name></member>
+  </compound>
+  <compound refid="namespacepymemb" kind="namespace"><name>pymemb</name>
+    <member refid="pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67" kind="typedef"><name>vector</name></member>
+    <member refid="pbc_8hpp_1a597a6c2a723fcdd5a1dacc3626c8e15f" kind="function"><name>minimum_image</name></member>
+    <member refid="pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b" kind="function"><name>enforce_periodic</name></member>
+    <member refid="pbc_8hpp_1ad38535063c05017603e91eaee14c6f57" kind="function"><name>enforce_periodic</name></member>
+    <member refid="computegeometry_8hpp_1a0e484fe8d885ee2bd74dc95569f68198" kind="function"><name>unit_vector</name></member>
+    <member refid="computegeometry_8hpp_1ab8b502b5fd2c97b54c1dda3594147362" kind="function"><name>vector_cross</name></member>
+    <member refid="computegeometry_8hpp_1a284300b645a991ff409532781d374f4b" kind="function"><name>vector_sum</name></member>
+    <member refid="computegeometry_8hpp_1ae323aff34acd8098c5d30f5bf5efb9fa" kind="function"><name>vector_subtract</name></member>
+    <member refid="computegeometry_8hpp_1a00eee6717b533db780f1d78cd29a1aeb" kind="function"><name>vector_subtract</name></member>
+    <member refid="computegeometry_8hpp_1aa1e2de1f7423bf20c203754168605963" kind="function"><name>compute_form_factor_triangle</name></member>
+    <member refid="computegeometry_8hpp_1a079b181dd8d2a8ae2df15852763525d7" kind="function"><name>compute_form_factor_triangle</name></member>
+    <member refid="computegeometry_8hpp_1a3631be2a35e816d16eea2707497b3a6d" kind="function"><name>compute_normal_triangle</name></member>
+    <member refid="computegeometry_8hpp_1a0512deaac09c6a4b100259689f2c761c" kind="function"><name>compute_normal_triangle</name></member>
+    <member refid="computegeometry_8hpp_1a1ed85412113fda9c339e5180d2984783" kind="function"><name>compute_normal_triangle_unit</name></member>
+    <member refid="computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d" kind="function"><name>compute_normal_triangle_unit</name></member>
+    <member refid="computegeometry_8hpp_1a0aac5bd062ed76cafdaad63e3b13794f" kind="function"><name>compute_area_triangle_from_vertex</name></member>
+    <member refid="computegeometry_8hpp_1a37e0e152109784019fe6816ba03404cc" kind="function"><name>compute_area_triangle_from_vertex</name></member>
+    <member refid="computegeometry_8hpp_1ad3c5d3226766dae0532f61b611059e9c" kind="function"><name>compute_area_triangle_from_metric</name></member>
+    <member refid="computegeometry_8hpp_1ae45403bd18a1ec3512afde3bc2791cf3" kind="function"><name>compute_angle_vertex</name></member>
+    <member refid="computegeometry_8hpp_1a5ad813413260cd138a3c9df1ed7967cc" kind="function"><name>compute_angle_vertex</name></member>
+    <member refid="computegeometry_8hpp_1ae1cf95c8fbad1ebc411442516c137a64" kind="function"><name>is_equiangular</name></member>
+    <member refid="computegeometry_8hpp_1ab9ea6ec2ef6f0b069cba8c1a7d2c58b7" kind="function"><name>arrange_vertices_by_smallest</name></member>
+    <member refid="computegeometry_8hpp_1a1bd0c5664831afcd5fda856f9603af84" kind="function"><name>compute_matrix_F</name></member>
+    <member refid="computegeometry_8hpp_1aed421c26c21a7ec4a0bbcaa3e903a07a" kind="function"><name>cmassT</name></member>
+    <member refid="computegeometry_8hpp_1ad07da6cfe525b88763fb1263cb4eb142" kind="function"><name>RefMatrixFromCartesian</name></member>
+    <member refid="computegeometry_8hpp_1a2508744cc72f6b4c2416148bf2d92397" kind="function"><name>RefMatrixFromCylindrical</name></member>
+    <member refid="computegeometry_8hpp_1a9e80a65c8f995da594b290b1632bf10f" kind="function"><name>need_wrapping</name></member>
+    <member refid="edge__flip_8hpp_1af47d81965cf9d3b7f6efcdc91ec87eee" kind="function"><name>CheckEdgeFlip_lambda</name></member>
+    <member refid="edge__flip_8hpp_1a9135550564a385d5b208eff841120104" kind="function"><name>EdgeFlip_lambda</name></member>
+    <member refid="pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="namespaceutil" kind="namespace"><name>util</name>
+    <member refid="fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab" kind="function"><name>from_dict_to_vector_types</name></member>
+    <member refid="fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6" kind="function"><name>from_dict_to_vector_types_pair</name></member>
+    <member refid="fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472" kind="function"><name>from_dict_to_vector_types_pair</name></member>
+    <member refid="fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3" kind="function"><name>from_dict_to_vector_types_pair</name></member>
+    <member refid="fromstring_8hpp_1a14eadb6387fd7b2834ade3621cd96e0f" kind="function"><name>to_string_scientific</name></member>
+    <member refid="fromstring_8hpp_1aa3bcaa5c21ec44a6c4e98c20c4da2c7a" kind="function"><name>to_string_with_precision</name></member>
+    <member refid="fromstring_8hpp_1a4a377564f83e5535541f029f76b9c4de" kind="function"><name>to_string</name></member>
+    <member refid="fromstring_8hpp_1a817b573485fc482d609f1bd50782b795" kind="function"><name>to_string_vec</name></member>
+    <member refid="fromstring_8hpp_1a16cdb2aefbafdfcdad6df9c567d9f551" kind="function"><name>from_string_int</name></member>
+    <member refid="fromstring_8hpp_1a432ed281dbf37b22012c2918e1be0ee1" kind="function"><name>from_string_double</name></member>
+    <member refid="fromstring_8hpp_1a5a63bf1eb56baca7965295f731af6a55" kind="function"><name>from_string_unsigned</name></member>
+    <member refid="fromstring_8hpp_1ae14bf130ba37e8322c891026b87eec9b" kind="function"><name>from_string_bool</name></member>
+    <member refid="tofile_8hpp_1ae6dbf7a97bcc3fe4ef8905a5b434041f" kind="function"><name>writeToFile</name></member>
+    <member refid="tofile_8hpp_1ab2544e79eaa23d2101391ee147bb431c" kind="function"><name>writeToFile</name></member>
+    <member refid="tofile_8hpp_1a38d0181e1de74c7f6fbf98be859cefc8" kind="function"><name>saveToFile</name></member>
+  </compound>
+  <compound refid="box_8hpp" kind="file"><name>box.hpp</name>
+  </compound>
+  <compound refid="pbc_8hpp" kind="file"><name>pbc.hpp</name>
+  </compound>
+  <compound refid="pybind__export__box_8hpp" kind="file"><name>pybind_export_box.hpp</name>
+    <member refid="pybind__export__box_8hpp_1a817a03bbe921ee0d08ecfe738d9dcca1" kind="function"><name>export_BoxType</name></member>
+  </compound>
+  <compound refid="computemesh_8cpp" kind="file"><name>computemesh.cpp</name>
+    <member refid="computemesh_8cpp_1af5d0d664f140da3d2c42a0a998207088" kind="function"><name>compute_edge_cotangents_fn</name></member>
+    <member refid="computemesh_8cpp_1aefe04d7fef08fe1a6e27b7170a69fde3" kind="function"><name>compute_face_normals_fn</name></member>
+    <member refid="computemesh_8cpp_1a54c00678a4ae0e2f0a595d53d1de9fbd" kind="function"><name>compute_edge_length_fn</name></member>
+  </compound>
+  <compound refid="computemesh_8hpp" kind="file"><name>computemesh.hpp</name>
+  </compound>
+  <compound refid="pybind__export__compute_8hpp" kind="file"><name>pybind_export_compute.hpp</name>
+    <member refid="pybind__export__compute_8hpp_1affa5adc811da8b6faf761829f85a7f22" kind="function"><name>export_ComputeMesh</name></member>
+  </compound>
+  <compound refid="constraintarea_8cpp" kind="file"><name>constraintarea.cpp</name>
+  </compound>
+  <compound refid="constraintarea_8hpp" kind="file"><name>constraintarea.hpp</name>
+  </compound>
+  <compound refid="constraintclass_8hpp" kind="file"><name>constraintclass.hpp</name>
+    <member refid="constraintclass_8hpp_1ae2d778d2a3b3b1445313fad4af9aa2d1" kind="typedef"><name>ConstraintClass_ptr</name></member>
+  </compound>
+  <compound refid="constraintvolume_8cpp" kind="file"><name>constraintvolume.cpp</name>
+  </compound>
+  <compound refid="constraintvolume_8hpp" kind="file"><name>constraintvolume.hpp</name>
+  </compound>
+  <compound refid="dumper_8cpp" kind="file"><name>dumper.cpp</name>
+  </compound>
+  <compound refid="dumper_8hpp" kind="file"><name>dumper.hpp</name>
+  </compound>
+  <compound refid="dumper__vis_8cpp" kind="file"><name>dumper_vis.cpp</name>
+  </compound>
+  <compound refid="pybind__export__dumper_8hpp" kind="file"><name>pybind_export_dumper.hpp</name>
+    <member refid="pybind__export__dumper_8hpp_1ae32e662a9ba7fbee97ec04e9c41de6d3" kind="function"><name>export_DumperClass</name></member>
+  </compound>
+  <compound refid="evolverclass_8cpp" kind="file"><name>evolverclass.cpp</name>
+  </compound>
+  <compound refid="evolverclass_8hpp" kind="file"><name>evolverclass.hpp</name>
+  </compound>
+  <compound refid="pybind__export__evolver_8hpp" kind="file"><name>pybind_export_evolver.hpp</name>
+    <member refid="pybind__export__evolver_8hpp_1af24e201041638cef32fc118f80ac8400" kind="function"><name>export_EvolverClass</name></member>
+  </compound>
+  <compound refid="integrator__brownian__vertex_8cpp" kind="file"><name>integrator_brownian_vertex.cpp</name>
+  </compound>
+  <compound refid="integrator__brownian__vertex_8hpp" kind="file"><name>integrator_brownian_vertex.hpp</name>
+  </compound>
+  <compound refid="integrator__verlet__vertex_8cpp" kind="file"><name>integrator_verlet_vertex.cpp</name>
+  </compound>
+  <compound refid="integrator__verlet__vertex_8hpp" kind="file"><name>integrator_verlet_vertex.hpp</name>
+  </compound>
+  <compound refid="integratorclass_8hpp" kind="file"><name>integratorclass.hpp</name>
+    <member refid="integratorclass_8hpp_1ad19ee330adba0de839fae1e8a99bd1b8" kind="typedef"><name>IntegratorClass_ptr</name></member>
+  </compound>
+  <compound refid="montecarlointegrator_8hpp" kind="file"><name>montecarlointegrator.hpp</name>
+    <member refid="montecarlointegrator_8hpp_1a620c22e302d4d8e060e25bdf46db5c7f" kind="typedef"><name>MonteCarloIntegrator_ptr</name></member>
+  </compound>
+  <compound refid="montercarlo__flip__edge_8cpp" kind="file"><name>montercarlo_flip_edge.cpp</name>
+  </compound>
+  <compound refid="montercarlo__flip__edge_8hpp" kind="file"><name>montercarlo_flip_edge.hpp</name>
+    <member refid="montercarlo__flip__edge_8hpp_1af8ca7fd184249199255de74f55e17ac1" kind="typedef"><name>MonteCarloIntegratorFlipEdge_ptr</name></member>
+  </compound>
+  <compound refid="montercarlo__spin__vertex_8cpp" kind="file"><name>montercarlo_spin_vertex.cpp</name>
+  </compound>
+  <compound refid="montercarlo__spin__vertex_8hpp" kind="file"><name>montercarlo_spin_vertex.hpp</name>
+    <member refid="montercarlo__spin__vertex_8hpp_1a646fdd4e495a91fbd845fa066b6c5b97" kind="typedef"><name>MonteCarloIntegratorSpinVertex_ptr</name></member>
+  </compound>
+  <compound refid="montercarlo__swap__edge_8cpp" kind="file"><name>montercarlo_swap_edge.cpp</name>
+  </compound>
+  <compound refid="montercarlo__swap__edge_8hpp" kind="file"><name>montercarlo_swap_edge.hpp</name>
+    <member refid="montercarlo__swap__edge_8hpp_1a47e7d522f2502680301fd1adabb53f59" kind="typedef"><name>MonteCarloIntegratorSwapEdge_ptr</name></member>
+  </compound>
+  <compound refid="montercarlo__swap__vertex_8cpp" kind="file"><name>montercarlo_swap_vertex.cpp</name>
+  </compound>
+  <compound refid="montercarlo__swap__vertex_8hpp" kind="file"><name>montercarlo_swap_vertex.hpp</name>
+    <member refid="montercarlo__swap__vertex_8hpp_1a30b1b0fa286371df74b61bdaf9559209" kind="typedef"><name>MonteCarloIntegratorSwapVertex_ptr</name></member>
+  </compound>
+  <compound refid="montercarlo__vertex_8cpp" kind="file"><name>montercarlo_vertex.cpp</name>
+  </compound>
+  <compound refid="montercarlo__vertex_8hpp" kind="file"><name>montercarlo_vertex.hpp</name>
+    <member refid="montercarlo__vertex_8hpp_1af85647aea7295fb64a221dc487c27a0c" kind="typedef"><name>MonteCarloIntegratorVertex_ptr</name></member>
+  </compound>
+  <compound refid="computegeometry_8hpp" kind="file"><name>computegeometry.hpp</name>
+  </compound>
+  <compound refid="edge__flip_8hpp" kind="file"><name>edge_flip.hpp</name>
+  </compound>
+  <compound refid="halfedges_8hpp" kind="file"><name>halfedges.hpp</name>
+    <member refid="group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf" kind="typedef"><name>HE_VertexProp</name></member>
+    <member refid="group__mesh_1ga92b6815f5e1e981bc534da3e17e51529" kind="typedef"><name>HE_EdgeProp</name></member>
+    <member refid="group__mesh_1ga040b94d03d4d83f06ede4550215fa069" kind="typedef"><name>HE_FaceProp</name></member>
+    <member refid="group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19" kind="typedef"><name>HE_HalfEdgeProp</name></member>
+  </compound>
+  <compound refid="meshoperations_8cpp" kind="file"><name>meshoperations.cpp</name>
+  </compound>
+  <compound refid="meshoperations_8hpp" kind="file"><name>meshoperations.hpp</name>
+  </compound>
+  <compound refid="meshoperators_8hpp" kind="file"><name>meshoperators.hpp</name>
+  </compound>
+  <compound refid="meshproperties_8hpp" kind="file"><name>meshproperties.hpp</name>
+  </compound>
+  <compound refid="pybind__export__mesh_8hpp" kind="file"><name>pybind_export_mesh.hpp</name>
+    <member refid="pybind__export__mesh_8hpp_1a16a936b4e74f859a90296c5cdf8d2d5a" kind="function"><name>export_PropertyFaces</name></member>
+    <member refid="pybind__export__mesh_8hpp_1adce8e5d7405cc1fb90e8629a21b75907" kind="function"><name>export_PropertyFaces_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1abdcb0a55474d44b1eba8b9d662ff6111" kind="function"><name>export_PropertyVertices</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a2b441ba7cbbe435bf1552547e303d7cf" kind="function"><name>export_PropertyVertices_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1aedffeaea84c64b8cf98620432fa4657a" kind="function"><name>export_PropertyEdges</name></member>
+    <member refid="pybind__export__mesh_8hpp_1af8936f0fdf98a34e6a85812d6429398e" kind="function"><name>export_PropertyEdges_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1ab37e0f79b2539813523a9c73af5c34b7" kind="function"><name>export_HE_Vertex</name></member>
+    <member refid="pybind__export__mesh_8hpp_1aee6208134c2277bc1f44ba8fea41c810" kind="function"><name>export_HE_Vertex_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a5cb9cb5910a8e6da45401f7c5991edba" kind="function"><name>export_HE_Edge</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a983654e7ec77041a65cc5424e9c15011" kind="function"><name>export_HE_Edge_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a69468b1e5300b7280ae83c003fa6070b" kind="function"><name>export_HE_Face</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a13b9f28ea1e843d4f940aee97aa1ead1" kind="function"><name>export_HE_Face_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1ae7bd130140bb5aedcd29b432c953c2b7" kind="function"><name>export_HE_HalfEdge</name></member>
+    <member refid="pybind__export__mesh_8hpp_1a0e73ba9052c737fdb60eccb5e29c6fe3" kind="function"><name>export_HE_HalfEdge_Vector</name></member>
+    <member refid="pybind__export__mesh_8hpp_1ad9515d04f14437abbc1b3e5afdccd523" kind="function"><name>export_ReadMesh</name></member>
+  </compound>
+  <compound refid="fire_8cpp" kind="file"><name>fire.cpp</name>
+  </compound>
+  <compound refid="fire_8hpp" kind="file"><name>fire.hpp</name>
+  </compound>
+  <compound refid="minimizerclass_8hpp" kind="file"><name>minimizerclass.hpp</name>
+    <member refid="minimizerclass_8hpp_1ab8063756914324ad8dbca25eafc43a10" kind="typedef"><name>MinimizerClass_ptr</name></member>
+  </compound>
+  <compound refid="computeforceclass_8hpp" kind="file"><name>computeforceclass.hpp</name>
+    <member refid="group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7" kind="typedef"><name>ComputeForceClass_ptr</name></member>
+    <member refid="group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41" kind="typedef"><name>VertexCompute</name></member>
+    <member refid="group__computeenergy_1gadeb33ca9b887a1e6c491711d7d4f8217" kind="variable"><name>BIG_VERTEX_ENERGY_LIMIT</name></member>
+  </compound>
+  <compound refid="potential_bending_8cpp" kind="file"><name>potentialBending.cpp</name>
+    <member refid="potential_bending_8cpp_1ae740a1ef02c305729a525dae05f7c3d2" kind="function"><name>ComputeVertexBendingEnergy_lambda</name></member>
+    <member refid="potential_bending_8cpp_1a777975f3c5f225d80a5e9b79ce295462" kind="function"><name>ComputeVertexBendingEnergy_fn</name></member>
+    <member refid="potential_bending_8cpp_1a882a6f2a85de3c439f89c3761e961e60" kind="function"><name>ComputeVertexBendingForce_lambda</name></member>
+    <member refid="potential_bending_8cpp_1ae866c9c58aa4e81bdc11e06b394cb3c0" kind="function"><name>scale_BendingForceMatrix_lambda</name></member>
+    <member refid="potential_bending_8cpp_1af4ed99c9514c9bb50e4d08a6045b416f" kind="function"><name>ComputeVertexBendingForce_fn</name></member>
+    <member refid="potential_bending_8cpp_1ad3b04c134eb5e2e9da4f2b22fa8ae000" kind="function"><name>ComputeVertexBendingStress_fn</name></member>
+    <member refid="potential_bending_8cpp_1a5ba2bfaa56c8d416bee5c9500942c7b0" kind="function"><name>ComputeVertexBendingStressAtom_fn</name></member>
+  </compound>
+  <compound refid="potential_bending_8hpp" kind="file"><name>potentialBending.hpp</name>
+  </compound>
+  <compound refid="potential_bending_helfrich_8cpp" kind="file"><name>potentialBendingHelfrich.cpp</name>
+    <member refid="potential_bending_helfrich_8cpp_1a4e78e51731e37dd0c35779bd68eac771" kind="function"><name>update_face</name></member>
+    <member refid="potential_bending_helfrich_8cpp_1a5c766ce4db9aa21fcf1f858086551dec" kind="function"><name>compute_mean_curvature_operature</name></member>
+    <member refid="potential_bending_helfrich_8cpp_1a7de05d68dacd87d8e0731388f2cc0c59" kind="function"><name>ComputeVertexBendingHelfrichEnergyComputeForce_lambda</name></member>
+    <member refid="potential_bending_helfrich_8cpp_1a36eeb2f3e847353b4ea44ba31b149c53" kind="function"><name>compute_vertex_energy_fn</name></member>
+  </compound>
+  <compound refid="potential_bending_helfrich_8hpp" kind="file"><name>potentialBendingHelfrich.hpp</name>
+  </compound>
+  <compound refid="potential_cauchy_green_8cpp" kind="file"><name>potentialCauchyGreen.cpp</name>
+    <member refid="potential_cauchy_green_8cpp_1a50b6442a007cf8ecd5da403db8824f08" kind="function"><name>ComputeVertexCauchyGreenEnergy_lambda</name></member>
+    <member refid="potential_cauchy_green_8cpp_1a69a5fa5a45cebe61ba073011ecb1a2b1" kind="function"><name>ComputeVertexCauchyGreenEnergy_fn</name></member>
+    <member refid="potential_cauchy_green_8cpp_1a20aa4a6d0822d82668bce73bb06422aa" kind="function"><name>ComputeVertexCauchyGreenForce_lambda</name></member>
+    <member refid="potential_cauchy_green_8cpp_1a5fd37f297525145889dbe2374c829de9" kind="function"><name>ComputeVertexCauchyGreenForce_fn</name></member>
+    <member refid="potential_cauchy_green_8cpp_1af97018f292625ab3fd4981b5bbe81607" kind="function"><name>ComputeVertexCauchyGreenStress_fn</name></member>
+    <member refid="potential_cauchy_green_8cpp_1a7089a5e39d381055d27edec213a18055" kind="function"><name>ComputeVertexCauchyGreenStressAtom_fn</name></member>
+  </compound>
+  <compound refid="potential_cauchy_green_8hpp" kind="file"><name>potentialCauchyGreen.hpp</name>
+  </compound>
+  <compound refid="potential_constant_area_triangle_8cpp" kind="file"><name>potentialConstantAreaTriangle.cpp</name>
+    <member refid="potential_constant_area_triangle_8cpp_1ae0ef0681bfb08ee709f126f0bbbfb2d6" kind="function"><name>ComputeVertexConstantAreaTriangleEnergy_lambda</name></member>
+    <member refid="potential_constant_area_triangle_8cpp_1aee4265a6f2eecd852cb63d530eee2d41" kind="function"><name>ComputeVertexConstantAreaTriangleEnergy_fn</name></member>
+    <member refid="potential_constant_area_triangle_8cpp_1ad316c5e1bf7497a84d89d72e4c3889e5" kind="function"><name>ComputeVertexConstantAreaTriangleForce_lambda</name></member>
+    <member refid="potential_constant_area_triangle_8cpp_1a920113738a2d1134ba2a77ca9fa0b617" kind="function"><name>ComputeVertexConstantAreaTriangleForce_fn</name></member>
+    <member refid="potential_constant_area_triangle_8cpp_1a3c16ef169ed8a283b338b5fe5a6720b8" kind="function"><name>ComputeVertexConstantAreaTriangleEnergyStress_fn</name></member>
+    <member refid="potential_constant_area_triangle_8cpp_1aff10d98f1ce7caf913c54ae8bb379383" kind="function"><name>ComputeVertexConstantAreaTriangleEnergyStressAtom_fn</name></member>
+  </compound>
+  <compound refid="potential_constant_area_triangle_8hpp" kind="file"><name>potentialConstantAreaTriangle.hpp</name>
+  </compound>
+  <compound refid="potential_dihedral_harmonics_8cpp" kind="file"><name>potentialDihedralHarmonics.cpp</name>
+    <member refid="potential_dihedral_harmonics_8cpp_1a815d284163fbb5f7bff92d780491db8d" kind="function"><name>ComputeVertexDihedralEnergy_lambda</name></member>
+    <member refid="potential_dihedral_harmonics_8cpp_1ab4ff2d80869eb8d187efda923f835730" kind="function"><name>ComputeVertexDihedralEnergy_fn</name></member>
+    <member refid="potential_dihedral_harmonics_8cpp_1a8d4975f39c5785153967389632611bc6" kind="function"><name>ComputeVertexBendingForce_fn</name></member>
+    <member refid="potential_dihedral_harmonics_8cpp_1ac3839aae8956af2174043664e3eaeb91" kind="function"><name>ComputeVertexBendingStress_fn</name></member>
+    <member refid="potential_dihedral_harmonics_8cpp_1a6ed936df0be3ee77af0d4459f0b0eb81" kind="function"><name>ComputeVertexBendingStressAtom_fn</name></member>
+  </compound>
+  <compound refid="potential_dihedral_harmonics_8hpp" kind="file"><name>potentialDihedralHarmonics.hpp</name>
+  </compound>
+  <compound refid="potential_harmonic_8cpp" kind="file"><name>potentialHarmonic.cpp</name>
+    <member refid="potential_harmonic_8cpp_1af0374e7b88a700a74f8379dcc6a6ba5d" kind="function"><name>ComputeEdgeHarmonicEnergy</name></member>
+    <member refid="potential_harmonic_8cpp_1a2a4d20544e2b7799918657095cd74f02" kind="function"><name>ComputeVertexHarmonicEnergy_fn</name></member>
+    <member refid="potential_harmonic_8cpp_1ae10cf27b6dd83058a3fe26ad3b428d02" kind="function"><name>ComputeVertexHarmonicForce</name></member>
+    <member refid="potential_harmonic_8cpp_1a89547e3725e13cbe9fc0086bb50e64a8" kind="function"><name>ComputeVertexHarmonicForce_fn</name></member>
+    <member refid="potential_harmonic_8cpp_1a0759b3abf8e9fbb5c86d70524eb45e45" kind="function"><name>ComputeVertexHarmonicStress_fn</name></member>
+    <member refid="potential_harmonic_8cpp_1a82ce71f69d93e4972765fd0c2b29217a" kind="function"><name>ComputeVertexHarmonicStressAtom_fn</name></member>
+  </compound>
+  <compound refid="potential_harmonic_8hpp" kind="file"><name>potentialHarmonic.hpp</name>
+  </compound>
+  <compound refid="potential_harmonic_sloutskin_8cpp" kind="file"><name>potentialHarmonicSloutskin.cpp</name>
+    <member refid="potential_harmonic_sloutskin_8cpp_1a3e4f134cf39cfb67a8e9af18a29f5e6d" kind="function"><name>ComputeEdgeHarmonicSpinEnergy</name></member>
+    <member refid="potential_harmonic_sloutskin_8cpp_1ad2d8943f5974a707890be895e46492dc" kind="function"><name>ComputeEdgeHarmonicSpinEnergy_ferro</name></member>
+    <member refid="potential_harmonic_sloutskin_8cpp_1a05da0fd1acf8326ff722bc97abdd723b" kind="function"><name>ComputeVertexHarmonicSpinEnergy_fn</name></member>
+    <member refid="potential_harmonic_sloutskin_8cpp_1a78cd6fc951e33249abb8ece30c566ab8" kind="function"><name>ComputeVertexHarmonicSpinForce</name></member>
+    <member refid="potential_harmonic_sloutskin_8cpp_1aa262763e13d71b32cf231cb32bbbf1be" kind="function"><name>ComputeVertexHarmonicSpinForce_fn</name></member>
+  </compound>
+  <compound refid="potential_harmonic_sloutskin_8hpp" kind="file"><name>potentialHarmonicSloutskin.hpp</name>
+  </compound>
+  <compound refid="potential_ising_8cpp" kind="file"><name>potentialIsing.cpp</name>
+    <member refid="potential_ising_8cpp_1a493afff4046a6f21fee3a80329c6bbf5" kind="function"><name>ComputeEdgeFerroEnergy_lambda</name></member>
+    <member refid="potential_ising_8cpp_1acd24c844c4863907525c396a51730314" kind="function"><name>ComputeVertexFerroEnergy_fn</name></member>
+  </compound>
+  <compound refid="potential_ising_8hpp" kind="file"><name>potentialIsing.hpp</name>
+  </compound>
+  <compound refid="potential_limit_8cpp" kind="file"><name>potentialLimit.cpp</name>
+    <member refid="potential_limit_8cpp_1acb9dda6c7a5eaa1c59ca12ebb0c14e15" kind="function"><name>ComputeEdgeLimitEnergy_lambda</name></member>
+    <member refid="potential_limit_8cpp_1afee5d33abaabc7d6b0e71eba1c35fb35" kind="function"><name>ComputeVertexLimitEnergy_fn</name></member>
+    <member refid="potential_limit_8cpp_1a8221fe4f82d8949c26d9cbae8018ad78" kind="function"><name>ComputeVertexLimitForce</name></member>
+    <member refid="potential_limit_8cpp_1aa983bbce701785a347785176c79a8095" kind="function"><name>ComputeVertexLimitForce_fn</name></member>
+  </compound>
+  <compound refid="potential_limit_8hpp" kind="file"><name>potentialLimit.hpp</name>
+  </compound>
+  <compound refid="potential_line_tension_8cpp" kind="file"><name>potentialLineTension.cpp</name>
+  </compound>
+  <compound refid="potential_line_tension_8hpp" kind="file"><name>potentialLineTension.hpp</name>
+  </compound>
+  <compound refid="potential_substrate_8cpp" kind="file"><name>potentialSubstrate.cpp</name>
+    <member refid="potential_substrate_8cpp_1af0b26c811fe7429c3f555e5e5fc5022a" kind="function"><name>ComputeVertexLimitForce_fn</name></member>
+  </compound>
+  <compound refid="potential_substrate_8hpp" kind="file"><name>potentialSubstrate.hpp</name>
+  </compound>
+  <compound refid="pybindexport_8cpp" kind="file"><name>pybindexport.cpp</name>
+    <member refid="pybindexport_8cpp_1a0ed602ce2acf21623ad19a6f5b79c142" kind="function"><name>getCurrentDate</name></member>
+    <member refid="pybindexport_8cpp_1aa8df9d1ad85716750477df3b95d1473c" kind="function"><name>getOperatingSystem</name></member>
+    <member refid="pybindexport_8cpp_1a488edafdcfb5230ce6c7878790b80146" kind="function"><name>PYBIND11_MODULE</name></member>
+  </compound>
+  <compound refid="read__mesh_8cpp" kind="file"><name>read_mesh.cpp</name>
+  </compound>
+  <compound refid="read__mesh_8hpp" kind="file"><name>read_mesh.hpp</name>
+  </compound>
+  <compound refid="rng_8hpp" kind="file"><name>rng.hpp</name>
+    <member refid="rng_8hpp_1a37e80b87099994243f26622c41d5a28c" kind="typedef"><name>RNG_ptr</name></member>
+  </compound>
+  <compound refid="pybind__export__system_8hpp" kind="file"><name>pybind_export_system.hpp</name>
+    <member refid="pybind__export__system_8hpp_1a03fd25db433de7b594dbb81ec30a20c4" kind="function"><name>export_SystemClass</name></member>
+  </compound>
+  <compound refid="systemclass_8hpp" kind="file"><name>systemclass.hpp</name>
+  </compound>
+  <compound refid="systemclassbox_8cpp" kind="file"><name>systemclassbox.cpp</name>
+  </compound>
+  <compound refid="globaltypes_8hpp" kind="file"><name>globaltypes.hpp</name>
+    <member refid="globaltypes_8hpp_1aead13ecbc45a775b5188eb6c2398bba6" kind="define"><name>BIG_ENERGY_LIMIT</name></member>
+    <member refid="globaltypes_8hpp_1a7ef39629eaffde5edde41d12aee110e9" kind="define"><name>defPI</name></member>
+    <member refid="globaltypes_8hpp_1a3acffbd305ee72dcd4593c0d8af64a4f" kind="define"><name>MIN</name></member>
+    <member refid="globaltypes_8hpp_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" kind="define"><name>MAX</name></member>
+    <member refid="globaltypes_8hpp_1ae8b243addbf44089525434d278724a00" kind="define"><name>vset</name></member>
+    <member refid="globaltypes_8hpp_1a2bf259b1a89048663bd77b10aa6a940c" kind="define"><name>vsum</name></member>
+    <member refid="globaltypes_8hpp_1aea350326529792709751625bd70e1f94" kind="define"><name>vsub</name></member>
+    <member refid="globaltypes_8hpp_1a909f1baa588275e828e8770e224502f0" kind="define"><name>vdot</name></member>
+    <member refid="globaltypes_8hpp_1a5886e7212d7b5a4c93ce0e62e40efba7" kind="define"><name>vcross</name></member>
+    <member refid="globaltypes_8hpp_1ae0530566347ede8987efd13ce67116fc" kind="define"><name>aXvec</name></member>
+    <member refid="globaltypes_8hpp_1aa8c9f07207827310c7f79cadf8a0c7c8" kind="define"><name>Xvec1</name></member>
+    <member refid="globaltypes_8hpp_1a6bdf714f0e556c91e8125b6c939a83c0" kind="define"><name>Xvec2</name></member>
+    <member refid="globaltypes_8hpp_1a1c315a2e32da20ede999fc811bf55122" kind="define"><name>Xvec3</name></member>
+    <member refid="globaltypes_8hpp_1a45cece0c685bd03ee79219ef02f0707c" kind="define"><name>Xvec4</name></member>
+    <member refid="globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a" kind="typedef"><name>real</name></member>
+    <member refid="globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10" kind="typedef"><name>real3</name></member>
+    <member refid="globaltypes_8hpp_1af83700198ac00126d22152cf1545f0b9" kind="typedef"><name>inth3</name></member>
+    <member refid="globaltypes_8hpp_1afe2370c07164ed241185946d72ac0eb8" kind="typedef"><name>bool3</name></member>
+    <member refid="globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb" kind="typedef"><name>realTensor</name></member>
+  </compound>
+  <compound refid="pybind__export__types_8hpp" kind="file"><name>pybind_export_types.hpp</name>
+    <member refid="pybind__export__types_8hpp_1a7eacbab12e141257583755593e199a5a" kind="function"><name>export_real3</name></member>
+    <member refid="pybind__export__types_8hpp_1a705e8b71d2039d2758caada5eace9cf8" kind="function"><name>export_inth3</name></member>
+    <member refid="pybind__export__types_8hpp_1a166b833c44254ed7025ddf3a0f32d9de" kind="function"><name>export_bool3</name></member>
+    <member refid="pybind__export__types_8hpp_1adadc70a87304a688e81e0a40e1bccd9c" kind="function"><name>export_realTensor</name></member>
+  </compound>
+  <compound refid="pymembvector_8hpp" kind="file"><name>pymembvector.hpp</name>
+  </compound>
+  <compound refid="fromdicttovec_8hpp" kind="file"><name>fromdicttovec.hpp</name>
+  </compound>
+  <compound refid="fromstring_8hpp" kind="file"><name>fromstring.hpp</name>
+  </compound>
+  <compound refid="tofile_8hpp" kind="file"><name>tofile.hpp</name>
+  </compound>
+  <compound refid="group__computeenergy" kind="group"><name>computeenergy</name>
+    <member refid="group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7" kind="typedef"><name>ComputeForceClass_ptr</name></member>
+    <member refid="group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41" kind="typedef"><name>VertexCompute</name></member>
+    <member refid="group__computeenergy_1gadeb33ca9b887a1e6c491711d7d4f8217" kind="variable"><name>BIG_VERTEX_ENERGY_LIMIT</name></member>
+    <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" kind="variable"><name>_system</name></member>
+    <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" kind="variable"><name>m_name</name></member>
+    <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" kind="variable"><name>m_type</name></member>
+    <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" kind="variable"><name>NUM_TYPES_ALLOWED</name></member>
+    <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" kind="variable"><name>NUM_TYPES_PAIR</name></member>
+    <member refid="group__computeenergy_1ga70a23778dfb8605b13e04da5c8654b74" kind="variable"><name>m_kappa</name></member>
+    <member refid="group__computeenergy_1ga3925f7d586669b8d83caa3e5aae77f73" kind="variable"><name>k</name></member>
+    <member refid="group__computeenergy_1ga1476c574425bfec219951d57d033ea99" kind="variable"><name>l0</name></member>
+    <member refid="group__computeenergy_1ga94a9fe399eea2d1a2128dfddfccdb6b6" kind="variable"><name>J</name></member>
+    <member refid="group__computeenergy_1gaf23cc5bdf6cff6091ceb32b41e0e1234" kind="variable"><name>Ea</name></member>
+    <member refid="group__computeenergy_1ga91d7dc11c887c10769d33eaf14e2a8f9" kind="variable"><name>J</name></member>
+    <member refid="group__computeenergy_1ga97d30f3d0ee35dab077adb8fbd75bba2" kind="variable"><name>h</name></member>
+    <member refid="group__computeenergy_1ga2aa6ca5fc2b7638683b3778ad71154d5" kind="variable"><name>m_gamma</name></member>
+    <member refid="group__computeenergy_1ga7f150d7059fc846a998e081c2ba61986" kind="variable"><name>m_flag_avg</name></member>
+    <member refid="group__computeenergy_1ga84192041db192808b35a9f4ef1c03089" kind="variable"><name>m_flag_scale</name></member>
+    <member refid="group__computeenergy_1gac97fdfabe1d1e0bf0e3fb2d6e73859dd" kind="variable"><name>m_kz1</name></member>
+    <member refid="group__computeenergy_1ga4abd5df9f885365fd7dcdb95dad8f8f0" kind="variable"><name>m_kz2</name></member>
+    <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" kind="function"><name>ComputeForceClass</name></member>
+    <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" kind="function"><name>~ComputeForceClass</name></member>
+    <member refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" kind="function"><name>compute_face_energy</name></member>
+    <member refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" kind="function"><name>get_name</name></member>
+    <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" kind="function"><name>get_type</name></member>
+    <member refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" kind="function"><name>print_warning_calling</name></member>
+    <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" kind="function"><name>print_warning_property_name</name></member>
+    <member refid="group__computeenergy_1ga17330f691d6f306655d5b69cbc9c4658" kind="function"><name>ComputeVertexBendingEnergy</name></member>
+    <member refid="group__computeenergy_1gad102657c4f944e6d3d2cff1cf680e6a8" kind="function"><name>~ComputeVertexBendingEnergy</name></member>
+    <member refid="group__computeenergy_1ga1cc7b58ddab3ec2fa63c1eb07082c63e" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gab4c3e1694bd72370ca44202e2b695b91" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga05978c4164b3f092e10bd6151d525e2c" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga4b52598663bedf91030188eb9d1987d3" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1gae828b3cd2fc3e3f69e29b8126a36e384" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga593cd889bf088f342b307b631f19542b" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga54d787d6238d61c98103dd2247b6f935" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga086ce606b3c06f97caf2481f185d4c85" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga88a426575339aea7e5e9734ff1e311a0" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="group__computeenergy_1ga7db01c1a8c258dda3698e3233f82e609" kind="function"><name>ComputeVertexHarmonicSpinEnergy</name></member>
+    <member refid="group__computeenergy_1gac874de9bc03c7003b135a023e5b83bd4" kind="function"><name>~ComputeVertexHarmonicSpinEnergy</name></member>
+    <member refid="group__computeenergy_1ga819a8363af60928f4c7c485562f5190c" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gaa51ed6dcb1c19b88dc78eb24291ca7c1" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga92f6d4071a420acec82461b54e8c0e9d" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga075e254e881479f18fb49f7fc886e3d2" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga7f9d1089ff2f8358aa4bd39f735b9541" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1gabfb155b2f52ff6c1792fe8728c6e65be" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga339d9c04b10173bbfbac38fef838eda4" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga85ba61b0e98a981a534a25044e536f60" kind="function"><name>compute_stress</name></member>
+    <member refid="group__computeenergy_1ga8ec1a5208260dc87ee06305363497b00" kind="function"><name>compute_atomic_stress</name></member>
+    <member refid="group__computeenergy_1ga5de90cd4ce4033816bf54e92b6c15d4b" kind="function"><name>ComputeVertexFerromagneticEnergy</name></member>
+    <member refid="group__computeenergy_1gac178317ef7d8ce23f4a8957f0d3fc476" kind="function"><name>~ComputeVertexFerromagneticEnergy</name></member>
+    <member refid="group__computeenergy_1ga436ef731a4cfdb35d8d6073371edd96e" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gad7a435c2bc06adeb70a12a33d2bf76d5" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gaae6bef1b11f761cca39c5a0a34e649c6" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1gab3ddbbd095d1b89a1530c9eb4f9965a0" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga6e752bbee6dab1afd98919b00b87873b" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1ga91c6930568c8d545b01b27b6c575e421" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1gade51c9aab9c8d0298fcdeb85c2192700" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1ga93a0a5be3076e9a2830fbcd6a017b766" kind="function"><name>ComputeVertexLineTension</name></member>
+    <member refid="group__computeenergy_1ga667a3eaf7ccee0d978fb539785b89cb7" kind="function"><name>~ComputeVertexLineTension</name></member>
+    <member refid="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kind="function"><name>compute_vertex_energy</name></member>
+    <member refid="group__computeenergy_1gaee8be9bda385b3884a92f58c76254d7e" kind="function"><name>ComputeVertexSubstrateEnergy</name></member>
+    <member refid="group__computeenergy_1gac79b9168a12817f5a4ea334eb3dd0a18" kind="function"><name>~ComputeVertexSubstrateEnergy</name></member>
+    <member refid="group__computeenergy_1ga494591a77b11455e1be118b56c14165f" kind="function"><name>set_default_properties</name></member>
+    <member refid="group__computeenergy_1gab5f09709a86844db1269e8187ca913bc" kind="function"><name>set_property</name></member>
+    <member refid="group__computeenergy_1ga0f14e273cc7bfd32f1f569796667d85b" kind="function"><name>get_info</name></member>
+    <member refid="group__computeenergy_1ga55a05efdfc485daf66bf7f34eedf3052" kind="function"><name>compute_energy</name></member>
+    <member refid="group__computeenergy_1ga86c5cfeed047046f91afb38b0be5666d" kind="function"><name>compute</name></member>
+    <member refid="group__computeenergy_1gab3d5731b502ef5e07119788a165b2eda" kind="function"><name>compute_edge_energy</name></member>
+    <member refid="group__computeenergy_1gacee2f63ffe8fb6acbf4077bd8d29b1a1" kind="function"><name>compute_vertex_energy</name></member>
+  </compound>
+  <compound refid="group__mesh" kind="group"><name>mesh</name>
+    <member refid="group__mesh_1gaa2d45e9c1ce35e9a41208eb5a90260cf" kind="typedef"><name>HE_VertexProp</name></member>
+    <member refid="group__mesh_1ga92b6815f5e1e981bc534da3e17e51529" kind="typedef"><name>HE_EdgeProp</name></member>
+    <member refid="group__mesh_1ga040b94d03d4d83f06ede4550215fa069" kind="typedef"><name>HE_FaceProp</name></member>
+    <member refid="group__mesh_1ga7fb0ccc50ea97aa204a572e117583e19" kind="typedef"><name>HE_HalfEdgeProp</name></member>
+  </compound>
+  <compound refid="dir_8ac53989e95bc2e6cc55568cad9516ec" kind="dir"><name>pymembrane/cppmodule/src/box</name>
+  </compound>
+  <compound refid="dir_a7951ca7d35c5f6b2618d532ec95a90b" kind="dir"><name>pymembrane/cppmodule/src/compute</name>
+  </compound>
+  <compound refid="dir_d1da068ac51be214e561545fbbe2e495" kind="dir"><name>pymembrane/cppmodule/src/constraints</name>
+  </compound>
+  <compound refid="dir_94592602f07f86cc9eb28c794e2cc567" kind="dir"><name>pymembrane/cppmodule</name>
+  </compound>
+  <compound refid="dir_6e27a0a734d445e486d6e70b2245df81" kind="dir"><name>pymembrane/cppmodule/src/dumper</name>
+  </compound>
+  <compound refid="dir_d7177609943b05444211af7b5d02e9e5" kind="dir"><name>pymembrane/cppmodule/src/evolver</name>
+  </compound>
+  <compound refid="dir_c76ab2c0265258fa4516491f965cfdf6" kind="dir"><name>pymembrane/cppmodule/src/integrators</name>
+  </compound>
+  <compound refid="dir_364ecfde561c3936f0a04dd7c2f8516f" kind="dir"><name>pymembrane/cppmodule/src/mesh</name>
+  </compound>
+  <compound refid="dir_324a942a4e28dddbd9354eff98d96874" kind="dir"><name>pymembrane/cppmodule/src/minimizer</name>
+  </compound>
+  <compound refid="dir_c3574b9ce6dbb02ea773dc1ceece664c" kind="dir"><name>pymembrane/cppmodule/src/potentials</name>
+  </compound>
+  <compound refid="dir_fba0316d14952e114d70d18930c53f90" kind="dir"><name>pymembrane</name>
+  </compound>
+  <compound refid="dir_c3d72ee87032736613bf79ff28935fa9" kind="dir"><name>pymembrane/cppmodule/src/rng</name>
+  </compound>
+  <compound refid="dir_cb138296fd6de2ebaef98ce2e6eb4290" kind="dir"><name>pymembrane/cppmodule/src</name>
+  </compound>
+  <compound refid="dir_1f20746e1abe2c484fa0d54fd0df0dca" kind="dir"><name>pymembrane/cppmodule/src/system</name>
+  </compound>
+  <compound refid="dir_b9a03d00605cae440e149fd8e6dbb7c4" kind="dir"><name>pymembrane/cppmodule/src/types</name>
+  </compound>
+  <compound refid="dir_fc64d5aa3cd59ac93b4b3cd9fde3258e" kind="dir"><name>pymembrane/cppmodule/src/utils</name>
+  </compound>
+</doxygenindex>

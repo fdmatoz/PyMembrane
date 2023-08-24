@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_vertex_line_tension" kind="class" language="C++" prot="public">
+    <compoundname>ComputeVertexLineTension</compoundname>
+    <basecompoundref refid="class_compute_force_class" prot="public" virt="non-virtual">ComputeForceClass</basecompoundref>
+    <includes refid="potential_line_tension_8hpp" local="no">potentialLineTension.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <member refid="group__computeenergy_1ga2aa6ca5fc2b7638683b3778ad71154d5" kind="variable"><name>m_gamma</name></member>
+      <member refid="group__computeenergy_1ga7f150d7059fc846a998e081c2ba61986" kind="variable"><name>m_flag_avg</name></member>
+      <member refid="group__computeenergy_1ga84192041db192808b35a9f4ef1c03089" kind="variable"><name>m_flag_scale</name></member>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <member refid="group__computeenergy_1ga93a0a5be3076e9a2830fbcd6a017b766" kind="function"><name>ComputeVertexLineTension</name></member>
+      <member refid="group__computeenergy_1ga667a3eaf7ccee0d978fb539785b89cb7" kind="function"><name>~ComputeVertexLineTension</name></member>
+      <member refid="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df" kind="function"><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5" kind="function"><name>set_property</name></member>
+      <member refid="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119" kind="function"><name>get_info</name></member>
+      <member refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" kind="function"><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" kind="function"><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" kind="function"><name>compute_vertex_energy</name></member>
+      <memberdef kind="function" id="class_compute_vertex_line_tension_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexLineTension::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="63" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_line_tension_1aed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexLineTension::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="63" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_line_tension_1a2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexLineTension::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="63" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements the line tension contribution to the edge energy. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the most basic form of the line tension energy. The line tension energy ( E ) associated with a vertex is given by:  <formula id="31">\[
+E = \sum_{\text{neighboring edges}} \gamma_{\text{type}} \times s
+\]</formula></para>
+<para>Where:<itemizedlist>
+<listitem><para>(\gamma_{\text{type}}) is determined by:<itemizedlist>
+<listitem><para>Averaging the (\gamma) values of the two vertices forming the edge if \texttt{flag_avg} is true: <formula id="32">\[ \gamma_{\text{type}} = 0.5 \times (\gamma[\text{type\_0}] + \gamma[\text{type\_1}]) \]</formula></para>
+</listitem><listitem><para>Taking the (\gamma) value of the query vertex if \texttt{flag_avg} is false: (\gamma_{\text{type}} = \gamma[\text{type_0}])</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(s) is either:<itemizedlist>
+<listitem><para>The Euclidean distance between the two vertices if \texttt{flag_scale} is true: <formula id="33">\[ s = ||\textbf{r}_{\text{query\_vertex}} - \textbf{r}_{\text{neighboring\_vertex}}|| \]</formula></para>
+</listitem><listitem><para>1.0 if \texttt{flag_scale} is false. </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexLineTension</label>
+        <link refid="class_compute_vertex_line_tension"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexLineTension</label>
+        <link refid="class_compute_vertex_line_tension"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" line="43" column="1" bodyfile="pymembrane/cppmodule/src/potentials/potentialLineTension.hpp" bodystart="44" bodyend="110"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>_system</name></member>
+      <member refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute</name></member>
+      <member refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_atomic_stress</name></member>
+      <member refid="group__computeenergy_1gaf19b8b3b4844fd99f029b489eba0e705" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_edge_energy</name></member>
+      <member refid="group__computeenergy_1ga9c6b942ea05032cc6a6f1d09c41a9a9f" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_face_energy</name></member>
+      <member refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_stress</name></member>
+      <member refid="group__computeenergy_1ga5019358d4022ed4a65883444d77e927a" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga93a0a5be3076e9a2830fbcd6a017b766" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>ComputeVertexLineTension</name></member>
+      <member refid="group__computeenergy_1gab6ec45511704f6812c48f8a19aa94119" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>get_type</name></member>
+      <member refid="group__computeenergy_1ga7f150d7059fc846a998e081c2ba61986" prot="private" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>m_flag_avg</name></member>
+      <member refid="group__computeenergy_1ga84192041db192808b35a9f4ef1c03089" prot="private" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>m_flag_scale</name></member>
+      <member refid="group__computeenergy_1ga2aa6ca5fc2b7638683b3778ad71154d5" prot="private" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>m_gamma</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>m_name</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>print_warning_property_name</name></member>
+      <member refid="group__computeenergy_1gaf4a61cda80b7c973e8e94ec55e6664df" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_default_properties</name></member>
+      <member refid="group__computeenergy_1gada3f566d17e67b9034c22fbc22c94498" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga1713e0590059bb3b6ea38635af3fecb5" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_line_tension_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_line_tension_1aed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_line_tension_1a2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeVertexLineTension</scope><name>~ComputeForceClass</name></member>
+      <member refid="group__computeenergy_1ga667a3eaf7ccee0d978fb539785b89cb7" prot="public" virt="non-virtual"><scope>ComputeVertexLineTension</scope><name>~ComputeVertexLineTension</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

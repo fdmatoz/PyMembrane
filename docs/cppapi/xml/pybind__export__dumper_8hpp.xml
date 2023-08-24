@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="pybind__export__dumper_8hpp" kind="file" language="C++">
+    <compoundname>pybind_export_dumper.hpp</compoundname>
+    <includes refid="dumper_8hpp" local="yes">dumper.hpp</includes>
+    <includedby refid="pybindexport_8cpp" local="yes">pymembrane/cppmodule/src/pybindexport.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>dumper.hpp</label>
+        <link refid="dumper_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp</label>
+        <link refid="pybind__export__dumper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../types/globaltypes.hpp</label>
+        <link refid="globaltypes_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pybind__export__dumper_8hpp_1ae32e662a9ba7fbee97ec04e9c41de6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void export_DumperClass</definition>
+        <argsstring>(py::module &amp;m)</argsstring>
+        <name>export_DumperClass</name>
+        <param>
+          <type>py::module &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp" line="6" column="6" bodyfile="pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp" bodystart="6" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__pybind_export_dumper_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pybind_export_dumper_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dumper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>export_DumperClass(py::module<sp/>&amp;m)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;DumperClass&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;Dumper&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;SystemClass<sp/>&amp;&gt;())</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;vtk&quot;</highlight><highlight class="normal">,<sp/>&amp;DumperClass::mesh_vtk,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">),<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;periodic&quot;</highlight><highlight class="normal">)=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>the<sp/>mesh<sp/>(vertices<sp/>and<sp/>faces)<sp/>in<sp/>vtk<sp/>format&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;edge_vtk&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_dumper_class_1a0578ca731372268fae9c9ee18760c65a" kindref="member">DumperClass::mesh_edge_vtk</ref>,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>the<sp/>mesh<sp/>(edges)<sp/>in<sp/>vtk<sp/>format&quot;</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;json&quot;</highlight><highlight class="normal">,<sp/>&amp;DumperClass::mesh_json,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>the<sp/>mesh<sp/>(vertices<sp/>and<sp/>faces)<sp/>in<sp/>json<sp/>format&quot;</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">),<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;faces&quot;</highlight><highlight class="normal">)=</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;vertices&quot;</highlight><highlight class="normal">)=</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;ply&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_dumper_class_1adb3d8d4bd4a7b74389756e32d7982b46" kindref="member">DumperClass::mesh_ply</ref>,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>the<sp/>mesh<sp/>(vertices<sp/>and<sp/>faces)<sp/>in<sp/>ply<sp/>format&quot;</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;txt&quot;</highlight><highlight class="normal">,<sp/>&amp;DumperClass::mesh_txt,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>the<sp/>mesh<sp/>(vertices<sp/>and<sp/>faces)<sp/>in<sp/>text<sp/>format&quot;</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">),<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;faces&quot;</highlight><highlight class="normal">)=</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>py::arg(</highlight><highlight class="stringliteral">&quot;vertices&quot;</highlight><highlight class="normal">)=</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;setvtkLegacyFormat&quot;</highlight><highlight class="normal">,<sp/>&amp;DumperClass::setvtkLegacyFormat,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>the<sp/>vtk<sp/>legacy<sp/>format<sp/>flag&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_vertex&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;real&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_vertex_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>vertices&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_vertex&quot;</highlight><highlight class="normal">,<sp/>(void<sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;<ref refid="struct_tensor_type" kindref="compound">realTensor</ref>&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_vertex_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>vertices&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_face&quot;</highlight><highlight class="normal">,<sp/>(void<sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;real&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_face_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>faces&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_face&quot;</highlight><highlight class="normal">,<sp/>(void<sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;<ref refid="struct_tensor_type" kindref="compound">realTensor</ref>&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_face_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>faces&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_edge&quot;</highlight><highlight class="normal">,<sp/>(void<sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;real&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_edge_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>edges&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;user_data_edge&quot;</highlight><highlight class="normal">,<sp/>(void<sp/>(<ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::*)(const<sp/>std::string&amp;,<sp/>std::vector&lt;<ref refid="struct_tensor_type" kindref="compound">realTensor</ref>&gt;&amp;))<sp/>&amp;<sp/><ref refid="class_dumper_class" kindref="compound">DumperClass</ref>::user_edge_data,<sp/></highlight><highlight class="stringliteral">&quot;dump<sp/>user<sp/>data<sp/>on<sp/>edges&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pymembrane/cppmodule/src/dumper/pybind_export_dumper.hpp"/>
+  </compounddef>
+</doxygen>

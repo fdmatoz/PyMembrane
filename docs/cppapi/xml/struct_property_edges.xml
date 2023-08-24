@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_property_edges" kind="struct" language="C++" prot="public">
+    <compoundname>PropertyEdges</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_property_edges_1a626cf71c1a1d16c3812efc8489ce4caa" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyEdges::age</definition>
+        <argsstring></argsstring>
+        <name>age</name>
+        <qualifiedname>PropertyEdges::age</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Age. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="68" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_edges_1ab85817d46495f16658011cf2ad03c476" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyEdges::cot_alpha</definition>
+        <argsstring></argsstring>
+        <name>cot_alpha</name>
+        <qualifiedname>PropertyEdges::cot_alpha</qualifiedname>
+        <briefdescription>
+<para>opposite cotangent angle of \vec{r0}-\vec{r1} and \vec{r2}-\vec{r1} </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="69" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_property_edges_1a8c139a4c3f51ea0a5a552b3872dba257" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real PropertyEdges::cot_beta</definition>
+        <argsstring></argsstring>
+        <name>cot_beta</name>
+        <qualifiedname>PropertyEdges::cot_beta</qualifiedname>
+        <briefdescription>
+<para>opposite cotangent angle of \vec{r0}-\vec{r3} and \vec{r2}-\vec{r3} </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="70" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="67" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="67" bodyend="71"/>
+    <listofallmembers>
+      <member refid="struct_property_edges_1a626cf71c1a1d16c3812efc8489ce4caa" prot="public" virt="non-virtual"><scope>PropertyEdges</scope><name>age</name></member>
+      <member refid="struct_property_edges_1ab85817d46495f16658011cf2ad03c476" prot="public" virt="non-virtual"><scope>PropertyEdges</scope><name>cot_alpha</name></member>
+      <member refid="struct_property_edges_1a8c139a4c3f51ea0a5a552b3872dba257" prot="public" virt="non-virtual"><scope>PropertyEdges</scope><name>cot_beta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

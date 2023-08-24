@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structtriangle" kind="struct" language="C++" prot="public">
+    <compoundname>triangle</compoundname>
+    <includes refid="halfedges_8hpp" local="no">halfedges.hpp</includes>
+    <briefdescription>
+<para>triangle typedef </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="128" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

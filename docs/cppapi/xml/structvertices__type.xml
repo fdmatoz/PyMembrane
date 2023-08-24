@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structvertices__type" kind="struct" language="C++" prot="public">
+    <compoundname>vertices_type</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvertices__type_1a8a6c89ba0adb0ab264e994d36fc8ca6a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vertices_type::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>vertices_type::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="147" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a570f297cbbb16bedeb8bbf74c2325350" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 vertices_type::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>vertices_type::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="148" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a654fc93ee49f93bf8b7986942ff952bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vertices_type::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>vertices_type::type</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="149" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a020248a03072684b201607601994b483" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 vertices_type::forceC</definition>
+        <argsstring></argsstring>
+        <name>forceC</name>
+        <qualifiedname>vertices_type::forceC</qualifiedname>
+        <briefdescription>
+<para>Vertex conservative force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="150" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1aa44c1fe95a4eddc7ac5260828ea34829" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 vertices_type::forceD</definition>
+        <argsstring></argsstring>
+        <name>forceD</name>
+        <qualifiedname>vertices_type::forceD</qualifiedname>
+        <briefdescription>
+<para>Vertex dissipative force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="151" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a416d5362254d7c97ff82f6e90977064f" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 vertices_type::forceE</definition>
+        <argsstring></argsstring>
+        <name>forceE</name>
+        <qualifiedname>vertices_type::forceE</qualifiedname>
+        <briefdescription>
+<para>Vertex External force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="152" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1abb09e899eeeaffc480900aa642e8496a" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real vertices_type::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>vertices_type::energy</qualifiedname>
+        <briefdescription>
+<para>Vertex energy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="153" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a9ef80c15df230a7493ba6098697e9df8" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real vertices_type::mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <qualifiedname>vertices_type::mass</qualifiedname>
+        <briefdescription>
+<para>Vertex mass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="154" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertices__type_1a8b781006a6a823e337ccaf4ddb942f84" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref></type>
+        <definition>PropertyVertices vertices_type::prop</definition>
+        <argsstring></argsstring>
+        <name>prop</name>
+        <qualifiedname>vertices_type::prop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="155" column="22" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structvertices__type_1af172699aa7c8dd590d281259a178aba0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vertices_type::operator&lt;</definition>
+        <argsstring>(const vertices_type &amp;rhs) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>vertices_type::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structvertices__type" kindref="compound">vertices_type</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="156" column="5" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="156" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>PropertyVertices</label>
+        <link refid="struct_property_vertices"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vertices_type</label>
+        <link refid="structvertices__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>forceC</edgelabel>
+          <edgelabel>forceD</edgelabel>
+          <edgelabel>forceE</edgelabel>
+          <edgelabel>r</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>prop</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xyType&lt; real &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="145" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="146" bodyend="157"/>
+    <listofallmembers>
+      <member refid="structvertices__type_1abb09e899eeeaffc480900aa642e8496a" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>energy</name></member>
+      <member refid="structvertices__type_1a020248a03072684b201607601994b483" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>forceC</name></member>
+      <member refid="structvertices__type_1aa44c1fe95a4eddc7ac5260828ea34829" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>forceD</name></member>
+      <member refid="structvertices__type_1a416d5362254d7c97ff82f6e90977064f" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>forceE</name></member>
+      <member refid="structvertices__type_1a8a6c89ba0adb0ab264e994d36fc8ca6a" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>id</name></member>
+      <member refid="structvertices__type_1a9ef80c15df230a7493ba6098697e9df8" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>mass</name></member>
+      <member refid="structvertices__type_1af172699aa7c8dd590d281259a178aba0" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>operator&lt;</name></member>
+      <member refid="structvertices__type_1a8b781006a6a823e337ccaf4ddb942f84" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>prop</name></member>
+      <member refid="structvertices__type_1a570f297cbbb16bedeb8bbf74c2325350" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>r</name></member>
+      <member refid="structvertices__type_1a654fc93ee49f93bf8b7986942ff952bc" prot="public" virt="non-virtual"><scope>vertices_type</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

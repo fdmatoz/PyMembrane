@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_h_e___half_edge" kind="struct" language="C++" prot="public">
+    <compoundname>HE_HalfEdge</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename <ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref></type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a5af1508a08237657ca639e56fe903437" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>HE_HalfEdge::index</qualifiedname>
+        <briefdescription>
+<para>Index, used for half-edge sorting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="113" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a7db693b228383b8985ea7a080f34b90d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::vert_from</definition>
+        <argsstring></argsstring>
+        <name>vert_from</name>
+        <qualifiedname>HE_HalfEdge::vert_from</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: vertex at the beginning of the half-edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="114" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a494604d4afa09f5d2e7d5fd61b551b62" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::vert_to</definition>
+        <argsstring></argsstring>
+        <name>vert_to</name>
+        <qualifiedname>HE_HalfEdge::vert_to</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: vertex at the end of the half-edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="115" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a2ab618a97008d3ee47e485c984eb5fa2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::edge</definition>
+        <argsstring></argsstring>
+        <name>edge</name>
+        <qualifiedname>HE_HalfEdge::edge</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: edge this he is part of. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="116" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a1e4a6d5a4d215915e83106da85127169" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::face</definition>
+        <argsstring></argsstring>
+        <name>face</name>
+        <qualifiedname>HE_HalfEdge::face</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: face the half-edge borders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="117" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1ae3b4a834e3d24ded85c36d92c4e916a6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::pair</definition>
+        <argsstring></argsstring>
+        <name>pair</name>
+        <qualifiedname>HE_HalfEdge::pair</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: oppositely oriented adjacent half-edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="118" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a7eb7613a3009c398fb175a67e696ef2b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>HE_HalfEdge::next</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: next half-edge around the face. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="119" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1ac5ef709b2a46f4f38708259537b914dd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_HalfEdge&lt; PropertyEdges &gt;::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <qualifiedname>HE_HalfEdge::prev</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: previous half-edge around the face. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="120" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1a9b1bae499812d45772a0eab709db65cc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HE_HalfEdge&lt; PropertyEdges &gt;::boundary</definition>
+        <argsstring></argsstring>
+        <name>boundary</name>
+        <qualifiedname>HE_HalfEdge::boundary</qualifiedname>
+        <briefdescription>
+<para>if true, the halfedge is a boundary </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="121" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___half_edge_1ae89687a6e556f31ce4f4a7855ebd4485" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_edges" kindref="compound">PropertyEdges</ref></type>
+        <definition>PropertyEdges HE_HalfEdge&lt; PropertyEdges &gt;::_property</definition>
+        <argsstring></argsstring>
+        <name>_property</name>
+        <qualifiedname>HE_HalfEdge::_property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="123" column="19" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure that contains all the handles for the double linked-list. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_property" kindref="compound">Property</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HE_HalfEdge&lt; PropertyEdges &gt;</label>
+        <link refid="struct_h_e___half_edge"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_property</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PropertyEdges</label>
+        <link refid="struct_property_edges"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="110" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="111" bodyend="124"/>
+    <listofallmembers>
+      <member refid="struct_h_e___half_edge_1ae89687a6e556f31ce4f4a7855ebd4485" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>_property</name></member>
+      <member refid="struct_h_e___half_edge_1a9b1bae499812d45772a0eab709db65cc" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>boundary</name></member>
+      <member refid="struct_h_e___half_edge_1a2ab618a97008d3ee47e485c984eb5fa2" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>edge</name></member>
+      <member refid="struct_h_e___half_edge_1a1e4a6d5a4d215915e83106da85127169" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>face</name></member>
+      <member refid="struct_h_e___half_edge_1a5af1508a08237657ca639e56fe903437" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>index</name></member>
+      <member refid="struct_h_e___half_edge_1a7eb7613a3009c398fb175a67e696ef2b" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>next</name></member>
+      <member refid="struct_h_e___half_edge_1ae3b4a834e3d24ded85c36d92c4e916a6" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>pair</name></member>
+      <member refid="struct_h_e___half_edge_1ac5ef709b2a46f4f38708259537b914dd" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>prev</name></member>
+      <member refid="struct_h_e___half_edge_1a7db693b228383b8985ea7a080f34b90d" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>vert_from</name></member>
+      <member refid="struct_h_e___half_edge_1a494604d4afa09f5d2e7d5fd61b551b62" prot="public" virt="non-virtual"><scope>HE_HalfEdge</scope><name>vert_to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

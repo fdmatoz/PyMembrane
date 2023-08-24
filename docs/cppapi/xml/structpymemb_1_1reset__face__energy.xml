@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structpymemb_1_1reset__face__energy" kind="struct" language="C++" prot="public">
+    <compoundname>pymemb::reset_face_energy</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpymemb_1_1reset__face__energy_1aaf20898c2c23b8a8a77ada6a76d58935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref></type>
+        <definition>HE_FaceProp pymemb::reset_face_energy::operator()</definition>
+        <argsstring>(HE_FaceProp face)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>pymemb::reset_face_energy::operator()</qualifiedname>
+        <param>
+          <type><ref refid="struct_h_e___face" kindref="compound">HE_FaceProp</ref></type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="83" column="21" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="83" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="80" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="81" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structpymemb_1_1reset__face__energy_1aaf20898c2c23b8a8a77ada6a76d58935" prot="public" virt="non-virtual"><scope>pymemb::reset_face_energy</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

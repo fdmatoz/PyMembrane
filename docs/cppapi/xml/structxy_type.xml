@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structxy_type" kind="struct" language="C++" prot="public">
+    <compoundname>xyType</compoundname>
+    <includes refid="globaltypes_8hpp" local="no">globaltypes.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxy_type_1adbed38ff03fcbc461f66083a1b7ec60a" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T xyType&lt; T &gt;::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>xyType::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="43" column="7" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxy_type_1abdc96dba90a6ed51a03c73cf0de5d38a" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T xyType&lt; T &gt;::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>xyType::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="43" column="9" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxy_type_1a8281316c45a01439c7bd2d6903d8d45d" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T xyType&lt; T &gt;::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>xyType::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="43" column="11" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxy_type_1ad6d645741c6d906b29a98c49cb25fed2" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T xyType&lt; T &gt;::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>xyType::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="43" column="13" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>2D xy type </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/types/globaltypes.hpp" line="41" column="1" bodyfile="pymembrane/cppmodule/src/types/globaltypes.hpp" bodystart="42" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structxy_type_1ad6d645741c6d906b29a98c49cb25fed2" prot="public" virt="non-virtual"><scope>xyType</scope><name>w</name></member>
+      <member refid="structxy_type_1adbed38ff03fcbc461f66083a1b7ec60a" prot="public" virt="non-virtual"><scope>xyType</scope><name>x</name></member>
+      <member refid="structxy_type_1abdc96dba90a6ed51a03c73cf0de5d38a" prot="public" virt="non-virtual"><scope>xyType</scope><name>y</name></member>
+      <member refid="structxy_type_1a8281316c45a01439c7bd2d6903d8d45d" prot="public" virt="non-virtual"><scope>xyType</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

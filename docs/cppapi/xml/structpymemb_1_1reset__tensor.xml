@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structpymemb_1_1reset__tensor" kind="struct" language="C++" prot="public">
+    <compoundname>pymemb::reset_tensor</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpymemb_1_1reset__tensor_1a001ca8e02f4777aa8b5fdf50c5d28e76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T pymemb::reset_tensor&lt; T &gt;::operator()</definition>
+        <argsstring>(const T &amp;tt)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>pymemb::reset_tensor::operator()</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>tt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="106" column="11" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="106" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="104" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="105" bodyend="120"/>
+    <listofallmembers>
+      <member refid="structpymemb_1_1reset__tensor_1a001ca8e02f4777aa8b5fdf50c5d28e76" prot="public" virt="non-virtual"><scope>pymemb::reset_tensor</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

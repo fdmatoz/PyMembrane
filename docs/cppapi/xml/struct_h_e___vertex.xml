@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_h_e___vertex" kind="struct" language="C++" prot="public">
+    <compoundname>HE_Vertex</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename <ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref></type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>HE_Vertex::r</qualifiedname>
+        <briefdescription>
+<para>position of the vertex in a 3D space </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="21" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a0fb51c9a20e810c681e575eb34c42661" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Vertex&lt; PropertyVertices &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>HE_Vertex::id</qualifiedname>
+        <briefdescription>
+<para>unique id </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="22" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1ac9641c0f9a1b7de46690f52402ec9070" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HE_Vertex&lt; PropertyVertices &gt;::boundary</definition>
+        <argsstring></argsstring>
+        <name>boundary</name>
+        <qualifiedname>HE_Vertex::boundary</qualifiedname>
+        <briefdescription>
+<para>if true, vertex is on boundary </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="23" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a207bbe661bc3c8c044eeab02e1f80969" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Vertex&lt; PropertyVertices &gt;::coordination</definition>
+        <argsstring></argsstring>
+        <name>coordination</name>
+        <qualifiedname>HE_Vertex::coordination</qualifiedname>
+        <briefdescription>
+<para>number of neighbours this vertex has </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="24" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a8662ff0afc7f433deec5dec4ce70f6b1" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">inth3</ref></type>
+        <definition>inth3 HE_Vertex&lt; PropertyVertices &gt;::cellId</definition>
+        <argsstring></argsstring>
+        <name>cellId</name>
+        <qualifiedname>HE_Vertex::cellId</qualifiedname>
+        <briefdescription>
+<para>cellId that belongs for neighbours list </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="25" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a03f79d18a2f5b7dbf119649856362356" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <qualifiedname>HE_Vertex::normal</qualifiedname>
+        <briefdescription>
+<para>vertex normal is the weighted sum of the face normals that belongs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="26" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1aecce69c87c3dfff30c0d61cbf63a0e8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Vertex&lt; PropertyVertices &gt;::_hedge</definition>
+        <argsstring></argsstring>
+        <name>_hedge</name>
+        <qualifiedname>HE_Vertex::_hedge</qualifiedname>
+        <briefdescription>
+<para>HANDLE INDEX OF: one of the half-edges emanating from the vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="28" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a6a18915ababcf3bd3eadbf43d8f94803" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HE_Vertex&lt; PropertyVertices &gt;::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>HE_Vertex::type</qualifiedname>
+        <briefdescription>
+<para>Vertex/Edge/Face Type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="30" column="9" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a10b733266b2070ee559be35363ce4fce" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <qualifiedname>HE_Vertex::v</qualifiedname>
+        <briefdescription>
+<para>Velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="31" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1aef7959f763adbf285909b06782c9d1aa" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::accel</definition>
+        <argsstring></argsstring>
+        <name>accel</name>
+        <qualifiedname>HE_Vertex::accel</qualifiedname>
+        <briefdescription>
+<para>Vertex acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="32" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::forceC</definition>
+        <argsstring></argsstring>
+        <name>forceC</name>
+        <qualifiedname>HE_Vertex::forceC</qualifiedname>
+        <briefdescription>
+<para>Vertex conservative force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="34" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1ab79703e77d0455d298ec1d7a0f1400cd" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::forceD</definition>
+        <argsstring></argsstring>
+        <name>forceD</name>
+        <qualifiedname>HE_Vertex::forceD</qualifiedname>
+        <briefdescription>
+<para>Vertex dissipative force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="35" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a4fec1ddc583d0a0ce153a087805afa9b" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">real3</ref></type>
+        <definition>real3 HE_Vertex&lt; PropertyVertices &gt;::forceE</definition>
+        <argsstring></argsstring>
+        <name>forceE</name>
+        <qualifiedname>HE_Vertex::forceE</qualifiedname>
+        <briefdescription>
+<para>Vertex External force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="36" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1ac385281595fec27f35b9ebeada4c78d4" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Vertex&lt; PropertyVertices &gt;::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>HE_Vertex::energy</qualifiedname>
+        <briefdescription>
+<para>Vertex energy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="37" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1affc8233bb7a0b949363d3e324ee3766b" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Vertex&lt; PropertyVertices &gt;::mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <qualifiedname>HE_Vertex::mass</qualifiedname>
+        <briefdescription>
+<para>Vertex mass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="38" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a09c8bd5d7064500ec3c8b6f108a93c2c" prot="public" static="no" mutable="no">
+        <type><ref refid="structxy_type" kindref="compound">inth3</ref></type>
+        <definition>inth3 HE_Vertex&lt; PropertyVertices &gt;::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <qualifiedname>HE_Vertex::ip</qualifiedname>
+        <briefdescription>
+<para>Periodic box image flags (to enable unwrapping of particle coordinates) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="39" column="11" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1aa3e5878f5684add71c82c14512221950" prot="public" static="no" mutable="no">
+        <type>real</type>
+        <definition>real HE_Vertex&lt; PropertyVertices &gt;::spin</definition>
+        <argsstring></argsstring>
+        <name>spin</name>
+        <qualifiedname>HE_Vertex::spin</qualifiedname>
+        <briefdescription>
+<para>ferromagnetic spin +1.0, -1.0 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="41" column="10" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_e___vertex_1a7974f1ef6990fec57f052b8ee7fb3e96" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_property_vertices" kindref="compound">PropertyVertices</ref></type>
+        <definition>PropertyVertices HE_Vertex&lt; PropertyVertices &gt;::_property</definition>
+        <argsstring></argsstring>
+        <name>_property</name>
+        <qualifiedname>HE_Vertex::_property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="42" column="22" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure that contains all the vertex in the mesh, as well basic information for each one. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="struct_property" kindref="compound">Property</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HE_Vertex&lt; PropertyVertices &gt;</label>
+        <link refid="struct_h_e___vertex"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>accel</edgelabel>
+          <edgelabel>forceC</edgelabel>
+          <edgelabel>forceD</edgelabel>
+          <edgelabel>forceE</edgelabel>
+          <edgelabel>normal</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>cellId</edgelabel>
+          <edgelabel>ip</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_property</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PropertyVertices</label>
+        <link refid="struct_property_vertices"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xyType&lt; int &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+      <node id="2">
+        <label>xyType&lt; real &gt;</label>
+        <link refid="structxy_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/halfedges.hpp" line="18" column="1" bodyfile="pymembrane/cppmodule/src/mesh/halfedges.hpp" bodystart="19" bodyend="43"/>
+    <listofallmembers>
+      <member refid="struct_h_e___vertex_1aecce69c87c3dfff30c0d61cbf63a0e8a" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>_hedge</name></member>
+      <member refid="struct_h_e___vertex_1a7974f1ef6990fec57f052b8ee7fb3e96" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>_property</name></member>
+      <member refid="struct_h_e___vertex_1aef7959f763adbf285909b06782c9d1aa" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>accel</name></member>
+      <member refid="struct_h_e___vertex_1ac9641c0f9a1b7de46690f52402ec9070" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>boundary</name></member>
+      <member refid="struct_h_e___vertex_1a8662ff0afc7f433deec5dec4ce70f6b1" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>cellId</name></member>
+      <member refid="struct_h_e___vertex_1a207bbe661bc3c8c044eeab02e1f80969" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>coordination</name></member>
+      <member refid="struct_h_e___vertex_1ac385281595fec27f35b9ebeada4c78d4" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>energy</name></member>
+      <member refid="struct_h_e___vertex_1a936e974f57605c5596f1b271d42fca69" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>forceC</name></member>
+      <member refid="struct_h_e___vertex_1ab79703e77d0455d298ec1d7a0f1400cd" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>forceD</name></member>
+      <member refid="struct_h_e___vertex_1a4fec1ddc583d0a0ce153a087805afa9b" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>forceE</name></member>
+      <member refid="struct_h_e___vertex_1a0fb51c9a20e810c681e575eb34c42661" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>id</name></member>
+      <member refid="struct_h_e___vertex_1a09c8bd5d7064500ec3c8b6f108a93c2c" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>ip</name></member>
+      <member refid="struct_h_e___vertex_1affc8233bb7a0b949363d3e324ee3766b" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>mass</name></member>
+      <member refid="struct_h_e___vertex_1a03f79d18a2f5b7dbf119649856362356" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>normal</name></member>
+      <member refid="struct_h_e___vertex_1adf4064670654eaaae383250bb2670881" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>r</name></member>
+      <member refid="struct_h_e___vertex_1aa3e5878f5684add71c82c14512221950" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>spin</name></member>
+      <member refid="struct_h_e___vertex_1a6a18915ababcf3bd3eadbf43d8f94803" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>type</name></member>
+      <member refid="struct_h_e___vertex_1a10b733266b2070ee559be35363ce4fce" prot="public" virt="non-virtual"><scope>HE_Vertex</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

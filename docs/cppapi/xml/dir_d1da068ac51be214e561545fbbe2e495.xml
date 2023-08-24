@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_d1da068ac51be214e561545fbbe2e495" kind="dir">
+    <compoundname>pymembrane/cppmodule/src/constraints</compoundname>
+    <innerfile refid="constraintarea_8cpp">constraintarea.cpp</innerfile>
+    <innerfile refid="constraintarea_8hpp">constraintarea.hpp</innerfile>
+    <innerfile refid="constraintclass_8hpp">constraintclass.hpp</innerfile>
+    <innerfile refid="constraintvolume_8cpp">constraintvolume.cpp</innerfile>
+    <innerfile refid="constraintvolume_8hpp">constraintvolume.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/constraints/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_constraint_class" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ConstraintClass</compoundname>
+    <derivedcompoundref refid="class_constraint_area" prot="public" virt="non-virtual">ConstraintArea</derivedcompoundref>
+    <derivedcompoundref refid="class_constraint_volume" prot="public" virt="non-virtual">ConstraintVolume</derivedcompoundref>
+    <includes refid="constraintclass_8hpp" local="no">constraintclass.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_constraint_class_1a8ca5548187b2f83284314c235a729ff6" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; ConstraintClass::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>ConstraintClass::_system</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="112" column="15" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1aa23d14d90c76b6585a9be1c79523eca8" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConstraintClass::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>ConstraintClass::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="113" column="15" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1abaf007d717cb31d8d5653ca9f39b1186" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ConstraintClass::m_tol</definition>
+        <argsstring></argsstring>
+        <name>m_tol</name>
+        <qualifiedname>ConstraintClass::m_tol</qualifiedname>
+        <briefdescription>
+<para>Tolerance for the constraint to be satisfied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="114" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1a624e464d7db10fa44d3f0ca73fec9533" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ConstraintClass::m_target</definition>
+        <argsstring></argsstring>
+        <name>m_target</name>
+        <qualifiedname>ConstraintClass::m_target</qualifiedname>
+        <briefdescription>
+<para>Targeted value for the constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="115" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1adcc6ad49efefc10bd83ce1800fa80d28" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ConstraintClass::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <qualifiedname>ConstraintClass::m_value</qualifiedname>
+        <briefdescription>
+<para>Current value of the constrained quantity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="116" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1a7f872869d7d89c607d947bec323a9f04" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ConstraintClass::m_lambda</definition>
+        <argsstring></argsstring>
+        <name>m_lambda</name>
+        <qualifiedname>ConstraintClass::m_lambda</qualifiedname>
+        <briefdescription>
+<para>Lagrange multiplier for a given constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="117" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_constraint_class_1aa6eb6c4ae488b41ed1b37cd72dfe6848" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConstraintClass::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <qualifiedname>ConstraintClass::m_type</qualifiedname>
+        <briefdescription>
+<para>Constraint type (i.e. equality or inequality) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="118" column="15" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_constraint_class_1a4c11a6d7e0e8f93116e00a5f30b6370b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConstraintClass::ConstraintClass</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ConstraintClass</name>
+        <qualifiedname>ConstraintClass::ConstraintClass</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="19" column="3" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a51faa42b8ae92b287e7f386bee09efb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ConstraintClass::~ConstraintClass</definition>
+        <argsstring>()</argsstring>
+        <name>~ConstraintClass</name>
+        <qualifiedname>ConstraintClass::~ConstraintClass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="26" column="11" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a57dce5dae72428139314e246cbe6e3f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::enforce</definition>
+        <argsstring>(void)</argsstring>
+        <name>enforce</name>
+        <qualifiedname>ConstraintClass::enforce</qualifiedname>
+        <reimplementedby refid="class_constraint_area_1a09542b8e32b01a01e5b9128aedc95e7f">enforce</reimplementedby>
+        <reimplementedby refid="class_constraint_volume_1a82b6e2556cd3ad019302b4304b91347e">enforce</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Enforce constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="29" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1aeb96068041fba466acfa7236bc12b1fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::compute_normal</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_normal</name>
+        <qualifiedname>ConstraintClass::compute_normal</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computes normal to the surface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="32" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a35223eb0fbfedfdc34d5f19f9ad5b5a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::compute_gradient</definition>
+        <argsstring>(void)</argsstring>
+        <name>compute_gradient</name>
+        <qualifiedname>ConstraintClass::compute_gradient</qualifiedname>
+        <reimplementedby refid="class_constraint_area_1a3385b8aa473bd4fd048b90eb9d1c980a">compute_gradient</reimplementedby>
+        <reimplementedby refid="class_constraint_volume_1a9d145c4167282deb489c21493d232324">compute_gradient</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Computer gradient at a point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="35" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a6986ddefadb73db668b8d473dd943278" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::compute_ref_gradient</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>compute_ref_gradient</name>
+        <qualifiedname>ConstraintClass::compute_ref_gradient</qualifiedname>
+        <reimplementedby refid="class_constraint_area_1a52909ed27d9a5e240068c45b3e26563c">compute_ref_gradient</reimplementedby>
+        <reimplementedby refid="class_constraint_volume_1ad1ce36c4aed01c75e8010c7473c8fc93">compute_ref_gradient</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Compute reference gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="38" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1af42efcda7ad28f9bdb93ac980c09c1cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstraintClass::is_satisfied</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_satisfied</name>
+        <qualifiedname>ConstraintClass::is_satisfied</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return true if the constraint has been satisfied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="41" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a24af0e5e32672cdfe5a8a2eca60a9c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstraintClass::should_apply</definition>
+        <argsstring>()</argsstring>
+        <name>should_apply</name>
+        <qualifiedname>ConstraintClass::should_apply</qualifiedname>
+        <briefdescription>
+<para>Return true if constraint needs to be applied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="44" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1ac6f6a956a2d26c343446e979576bf027" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ConstraintClass::info</definition>
+        <argsstring>(void)</argsstring>
+        <name>info</name>
+        <qualifiedname>ConstraintClass::info</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute the value of the constraint, return the difference and the information </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="57" column="12" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1aa355737f9a8c3258e43a22960c23e0a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ConstraintClass::get_LagrangeMultiplier</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_LagrangeMultiplier</name>
+        <qualifiedname>ConstraintClass::get_LagrangeMultiplier</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the Lagrange multiplier for a given constraint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="72" column="10" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1ab1997a3827a87a1aaa9735ae09089882" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstraintClass::reset_LagrangeMultiplier</definition>
+        <argsstring>(void)</argsstring>
+        <name>reset_LagrangeMultiplier</name>
+        <qualifiedname>ConstraintClass::reset_LagrangeMultiplier</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="73" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a1336a7155d6b82b062d50b62084d1ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstraintClass::set_property_common</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property_common</name>
+        <qualifiedname>ConstraintClass::set_property_common</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="75" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="75" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a1a47590bc4897a1d27ca631eb29f92de" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::set_default_properties</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ConstraintClass::set_default_properties</qualifiedname>
+        <reimplementedby refid="class_constraint_area_1aeb08d399e2c67533805c562b34590390">set_default_properties</reimplementedby>
+        <reimplementedby refid="class_constraint_volume_1acb83010cfde2e0cf3bd22cd4887693ef">set_default_properties</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="103" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1aa0bb2b152fdae08ac021faed52ec5aa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ConstraintClass::set_property</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="104" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a6ab45128d12f3444015a74f5f221c62a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ConstraintClass::set_property</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="105" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1ac0fe35702cda5309dcdc7ff777affff9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConstraintClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ConstraintClass::set_property</qualifiedname>
+        <reimplementedby refid="class_constraint_area_1afcbaaf50568867c03244a4f3d7ec47ad">set_property</reimplementedby>
+        <reimplementedby refid="class_constraint_volume_1a3e4384745af68793a5877ba90d705432">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="106" column="16" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1ab0f9535ab79ff566de99acdf1b9ca6f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstraintClass::print_warning_calling_err</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_calling_err</name>
+        <qualifiedname>ConstraintClass::print_warning_calling_err</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="107" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a3ca1289ec82cfedb8416edbb4b852518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstraintClass::print_warning_calling</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_calling</name>
+        <qualifiedname>ConstraintClass::print_warning_calling</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="108" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_constraint_class_1a7e129f7655ba756841f26cae9dd45ebd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstraintClass::print_warning_property_name</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_property_name</name>
+        <qualifiedname>ConstraintClass::print_warning_property_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="109" column="8" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for a generic constraint <simplesect kind="note"><para>This is a constraint such as fixed volume, or bond lengths. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ConstraintArea</label>
+        <link refid="class_constraint_area"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+      </node>
+      <node id="3">
+        <label>ConstraintVolume</label>
+        <link refid="class_constraint_volume"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ConstraintClass</label>
+        <link refid="class_constraint_class"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="2">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/constraints/constraintclass.hpp" line="16" column="1" bodyfile="pymembrane/cppmodule/src/constraints/constraintclass.hpp" bodystart="17" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_constraint_class_1a8ca5548187b2f83284314c235a729ff6" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>_system</name></member>
+      <member refid="class_constraint_class_1a35223eb0fbfedfdc34d5f19f9ad5b5a6" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>compute_gradient</name></member>
+      <member refid="class_constraint_class_1aeb96068041fba466acfa7236bc12b1fd" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>compute_normal</name></member>
+      <member refid="class_constraint_class_1a6986ddefadb73db668b8d473dd943278" prot="public" virt="pure-virtual"><scope>ConstraintClass</scope><name>compute_ref_gradient</name></member>
+      <member refid="class_constraint_class_1a4c11a6d7e0e8f93116e00a5f30b6370b" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>ConstraintClass</name></member>
+      <member refid="class_constraint_class_1a57dce5dae72428139314e246cbe6e3f8" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>enforce</name></member>
+      <member refid="class_constraint_class_1aa355737f9a8c3258e43a22960c23e0a2" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>get_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_class_1ac6f6a956a2d26c343446e979576bf027" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>info</name></member>
+      <member refid="class_constraint_class_1af42efcda7ad28f9bdb93ac980c09c1cd" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>is_satisfied</name></member>
+      <member refid="class_constraint_class_1a7f872869d7d89c607d947bec323a9f04" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>m_lambda</name></member>
+      <member refid="class_constraint_class_1a624e464d7db10fa44d3f0ca73fec9533" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>m_target</name></member>
+      <member refid="class_constraint_class_1abaf007d717cb31d8d5653ca9f39b1186" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>m_tol</name></member>
+      <member refid="class_constraint_class_1aa6eb6c4ae488b41ed1b37cd72dfe6848" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>m_type</name></member>
+      <member refid="class_constraint_class_1adcc6ad49efefc10bd83ce1800fa80d28" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>m_value</name></member>
+      <member refid="class_constraint_class_1aa23d14d90c76b6585a9be1c79523eca8" prot="protected" virt="non-virtual"><scope>ConstraintClass</scope><name>name</name></member>
+      <member refid="class_constraint_class_1a3ca1289ec82cfedb8416edbb4b852518" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>print_warning_calling</name></member>
+      <member refid="class_constraint_class_1ab0f9535ab79ff566de99acdf1b9ca6f3" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>print_warning_calling_err</name></member>
+      <member refid="class_constraint_class_1a7e129f7655ba756841f26cae9dd45ebd" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>print_warning_property_name</name></member>
+      <member refid="class_constraint_class_1ab1997a3827a87a1aaa9735ae09089882" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>reset_LagrangeMultiplier</name></member>
+      <member refid="class_constraint_class_1a1a47590bc4897a1d27ca631eb29f92de" prot="public" virt="pure-virtual"><scope>ConstraintClass</scope><name>set_default_properties</name></member>
+      <member refid="class_constraint_class_1aa0bb2b152fdae08ac021faed52ec5aa4" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a6ab45128d12f3444015a74f5f221c62a" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1ac0fe35702cda5309dcdc7ff777affff9" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>set_property</name></member>
+      <member refid="class_constraint_class_1a1336a7155d6b82b062d50b62084d1ee5" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>set_property_common</name></member>
+      <member refid="class_constraint_class_1a24af0e5e32672cdfe5a8a2eca60a9c32" prot="public" virt="non-virtual"><scope>ConstraintClass</scope><name>should_apply</name></member>
+      <member refid="class_constraint_class_1a51faa42b8ae92b287e7f386bee09efb6" prot="public" virt="virtual"><scope>ConstraintClass</scope><name>~ConstraintClass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

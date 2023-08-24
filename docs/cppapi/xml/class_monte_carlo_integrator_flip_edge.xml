@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_monte_carlo_integrator_flip_edge" kind="class" language="C++" prot="public">
+    <compoundname>MonteCarloIntegratorFlipEdge</compoundname>
+    <basecompoundref refid="class_monte_carlo_integrator" prot="public" virt="non-virtual">MonteCarloIntegrator</basecompoundref>
+    <includes refid="montercarlo__flip__edge_8hpp" local="no">montercarlo_flip_edge.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1a257702c630a4be26a64e3b3d7fe441e3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorFlipEdge::m_dx</definition>
+        <argsstring></argsstring>
+        <name>m_dx</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::m_dx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="88" column="12" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1a9b960227b1f8a8e232afef8fda40f865" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorFlipEdge::m_dy</definition>
+        <argsstring></argsstring>
+        <name>m_dy</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::m_dy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="88" column="17" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1ade4c96a607aa854ff549b0d77b2fa15b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MonteCarloIntegratorFlipEdge::m_dz</definition>
+        <argsstring></argsstring>
+        <name>m_dz</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::m_dz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="88" column="22" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1a85be9969c9ff0a1f43454d68fc6b2e84" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MonteCarloIntegratorFlipEdge::m_seed</definition>
+        <argsstring></argsstring>
+        <name>m_seed</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::m_seed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="89" column="18" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1a8fb3f8c3d86d2aceeccb96784feeaec1" prot="private" static="no" mutable="no">
+        <type>RNG_ptr</type>
+        <definition>RNG_ptr MonteCarloIntegratorFlipEdge::m_rng</definition>
+        <argsstring></argsstring>
+        <name>m_rng</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::m_rng</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="90" column="13" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_monte_carlo_integrator_flip_edge_1a9cc78a07d97e27aa7fc45912286207b3" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; bool &gt;</type>
+        <definition>pymemb::vector&lt;bool&gt; MonteCarloIntegratorFlipEdge::freezed_edge</definition>
+        <argsstring></argsstring>
+        <name>freezed_edge</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::freezed_edge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="91" column="20" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a099547f1ab1ee91c519bfe568a42ecaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorFlipEdge::MonteCarloIntegratorFlipEdge</definition>
+        <argsstring>(SystemClass &amp;system, VertexCompute &amp;potentials)</argsstring>
+        <name>MonteCarloIntegratorFlipEdge</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::MonteCarloIntegratorFlipEdge</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>VertexCompute &amp;</type>
+          <declname>potentials</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="30" column="5" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a0e90f504648f409965c3317267419db1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloIntegratorFlipEdge::~MonteCarloIntegratorFlipEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~MonteCarloIntegratorFlipEdge</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::~MonteCarloIntegratorFlipEdge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="36" column="5" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a5b65c504caccdd6ac4cadf32a42bc0db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorFlipEdge::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_default_properties</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a1086d8878f28b79faa6619d56315497b">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract set parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>default value</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="37" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a7226570ad5db4794bd5862d60e4d6b27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorFlipEdge::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="47" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="47" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a61a6a09b2550d7d085c672ee056611be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MonteCarloIntegratorFlipEdge::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="70" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="70" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a93cd9b437f00b5c1e421ccffaf3aa5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MonteCarloIntegratorFlipEdge::edge_flip</definition>
+        <argsstring>(int, bool)</argsstring>
+        <name>edge_flip</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::edge_flip</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>flip_edge_index</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <defname>flip_face_up</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="84" column="10" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.cpp" bodystart="4" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1aecf4e0e7ee9be45612ca9c4110cdc86d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int MonteCarloIntegratorFlipEdge::integrate</definition>
+        <argsstring>(void) override</argsstring>
+        <name>integrate</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::integrate</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1afb43aa9b17a03ff566a96f839cea0a5e">integrate</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>abstract integrator function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of successful attempts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="85" column="9" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.cpp" bodystart="16" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a3deefe8007395a52014d1d35b6f03bb4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="46" column="5" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1af4e86d41bd9db68e3c52ee4e319fad20">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="46" column="5" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_monte_carlo_integrator_flip_edge_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MonteCarloIntegrator::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MonteCarloIntegratorFlipEdge::set_property</qualifiedname>
+        <reimplements refid="class_monte_carlo_integrator_1a5c08c32cb317d6fd94b653b8608d0714">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="46" column="5" bodyfile="pymembrane/cppmodule/src/integrators/montecarlointegrator.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles Metropolis type Monte Carlo algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In this algorithm, one Monte Carlo step is considered as attempting flip an edge. One sweep consists of attempting moves on each edge in the membrane. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorFlipEdge</label>
+        <link refid="class_monte_carlo_integrator_flip_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="2">
+        <label>MonteCarloIntegrator</label>
+        <link refid="class_monte_carlo_integrator"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MonteCarloIntegratorFlipEdge</label>
+        <link refid="class_monte_carlo_integrator_flip_edge"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" line="27" column="1" bodyfile="pymembrane/cppmodule/src/integrators/montercarlo_flip_edge.hpp" bodystart="28" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_monte_carlo_integrator_1a1a69de6679e2c93b8977564da73c63ac" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>_potentials</name></member>
+      <member refid="class_monte_carlo_integrator_1ac91ef365e1aa11f35ce3406b0aa90d8d" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>_system</name></member>
+      <member refid="class_monte_carlo_integrator_1a8e8e222fe336c2f56235df0035f8d5fe" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>ComputeEnergyFromEdge</name></member>
+      <member refid="class_monte_carlo_integrator_1a634e45ff52b7b8bd7a35f3828d47ea83" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>ComputeEnergyFromFace</name></member>
+      <member refid="class_monte_carlo_integrator_1a27b6c559a56e29647717d0ba2a4c6093" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>ComputeEnergyFromVertex</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a93cd9b437f00b5c1e421ccffaf3aa5f3" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>edge_flip</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a9cc78a07d97e27aa7fc45912286207b3" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>freezed_edge</name></member>
+      <member refid="class_monte_carlo_integrator_1a11a74734b467fa6459de53d96ac2bf1a" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>get_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1aabaa7b2836fc24403ea07ba44507d1bf" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>get_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1ad9032352c0ddda079d39209683bac703" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>get_name</name></member>
+      <member refid="class_monte_carlo_integrator_1aa1c25fac86c042bf1c82d099c4d56221" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>get_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_1a06fa7b710274416371d6fdef4a59ee86" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>get_type</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1aecf4e0e7ee9be45612ca9c4110cdc86d" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>integrate</name></member>
+      <member refid="class_monte_carlo_integrator_1ad8929da67aacbff438f417d7aeab410c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a257702c630a4be26a64e3b3d7fe441e3" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>m_dx</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a9b960227b1f8a8e232afef8fda40f865" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>m_dy</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1ade4c96a607aa854ff549b0d77b2fa15b" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>m_dz</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a8fb3f8c3d86d2aceeccb96784feeaec1" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>m_rng</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a85be9969c9ff0a1f43454d68fc6b2e84" prot="private" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>m_seed</name></member>
+      <member refid="class_monte_carlo_integrator_1a939530773d57874ca1c96625707c4ac3" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a099547f1ab1ee91c519bfe568a42ecaf" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>MonteCarloIntegratorFlipEdge</name></member>
+      <member refid="class_monte_carlo_integrator_1a1d0a61b8ab01fea0175526ca0b242e81" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>name</name></member>
+      <member refid="class_monte_carlo_integrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="class_monte_carlo_integrator_1ad92127d5579f33dc8207a7d8921c5285" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>print_warning_calling</name></member>
+      <member refid="class_monte_carlo_integrator_1a42b870221605a6f6a71636470348c119" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>print_warning_property_name</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a5b65c504caccdd6ac4cadf32a42bc0db" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_default_properties</name></member>
+      <member refid="class_monte_carlo_integrator_1a1f5b4442efc847425dd209988eca7cd8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_integrate_every</name></member>
+      <member refid="class_monte_carlo_integrator_1a7714495d7d5f4c00e04ca25b3761e5a8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_minimum_energy</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a7226570ad5db4794bd5862d60e4d6b27" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a61a6a09b2550d7d085c672ee056611be" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a3deefe8007395a52014d1d35b6f03bb4" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1af4e86d41bd9db68e3c52ee4e319fad20" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a5c08c32cb317d6fd94b653b8608d0714" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_property</name></member>
+      <member refid="class_monte_carlo_integrator_1a4fd4ae140da18e757e8e2929ac900ce8" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>set_temperature</name></member>
+      <member refid="class_monte_carlo_integrator_1ae84d836d09430f6b2da30fde1e02cc4c" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>T</name></member>
+      <member refid="class_monte_carlo_integrator_1a8c7d9509b49338e11c8397618a642942" prot="protected" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>type</name></member>
+      <member refid="class_monte_carlo_integrator_1a73f58c5ac0533462441070bd60008418" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>update_temperature_parameters</name></member>
+      <member refid="class_monte_carlo_integrator_1a3044b904ec421204b68ef44c949e34a2" prot="public" virt="virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>~MonteCarloIntegrator</name></member>
+      <member refid="class_monte_carlo_integrator_flip_edge_1a0e90f504648f409965c3317267419db1" prot="public" virt="non-virtual"><scope>MonteCarloIntegratorFlipEdge</scope><name>~MonteCarloIntegratorFlipEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

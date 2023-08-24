@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_r_n_g" kind="class" language="C++" prot="public">
+    <compoundname>RNG</compoundname>
+    <includes refid="rng_8hpp" local="no">rng.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_r_n_g_1a7eeef2d770422a98175b3d68419ac265" prot="private" static="no" mutable="no">
+        <type>std::mt19937_64</type>
+        <definition>std::mt19937_64 RNG::m_generator</definition>
+        <argsstring></argsstring>
+        <name>m_generator</name>
+        <qualifiedname>RNG::m_generator</qualifiedname>
+        <briefdescription>
+<para>Mersenne Twister engine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="70" column="19" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_n_g_1a76e3b1974940768d454f66837e9447c2" prot="private" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; real &gt;</type>
+        <definition>std::uniform_real_distribution&lt;real&gt; RNG::m_uniform_distribution</definition>
+        <argsstring></argsstring>
+        <name>m_uniform_distribution</name>
+        <qualifiedname>RNG::m_uniform_distribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="71" column="34" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_n_g_1ac575fe4d3e25b5608ae659b44cf9e218" prot="private" static="no" mutable="no">
+        <type>std::normal_distribution&lt; real &gt;</type>
+        <definition>std::normal_distribution&lt;real&gt; RNG::m_normal_distribution</definition>
+        <argsstring></argsstring>
+        <name>m_normal_distribution</name>
+        <qualifiedname>RNG::m_normal_distribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="72" column="28" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_r_n_g_1ad1a0404ddd79895cfc05432f06c9c385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RNG::RNG</definition>
+        <argsstring>(unsigned int seed)</argsstring>
+        <name>RNG</name>
+        <qualifiedname>RNG::RNG</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Constructor (initialize random number generator) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="41" column="3" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_n_g_1abe0c541fcfa0b12ef7446eccb166d510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RNG::~RNG</definition>
+        <argsstring>()</argsstring>
+        <name>~RNG</name>
+        <qualifiedname>RNG::~RNG</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="44" column="3" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_n_g_1a885efeb42c22a8984ef3db5e6652bc07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real RNG::drnd</definition>
+        <argsstring>()</argsstring>
+        <name>drnd</name>
+        <qualifiedname>RNG::drnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a random number between 0 and 1 drawn from an uniform distribution <simplesect kind="return"><para>random number between 0 and 1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="48" column="8" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_n_g_1a5bdd14bbfd6464446574ba90abd28367" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>real</type>
+        <definition>real RNG::gauss_rng</definition>
+        <argsstring>(real sigma=1.0, real mu=0.0)</argsstring>
+        <name>gauss_rng</name>
+        <qualifiedname>RNG::gauss_rng</qualifiedname>
+        <param>
+          <type>real</type>
+          <declname>sigma</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>real</type>
+          <declname>mu</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a random number from a Gaussian distribution with a given standard deviation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sigma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>standard deviation <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="55" column="8" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_n_g_1aa16f8eef91acf82bb5fa1e0d8f23131b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RNG::lrnd</definition>
+        <argsstring>(int N)</argsstring>
+        <name>lrnd</name>
+        <qualifiedname>RNG::lrnd</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an integer random number between 0 and N drawn from an uniform distribution <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper bound for the interval </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer random number between 0 and N </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="63" column="7" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class handles random numbers in the system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/rng/rng.hpp" line="36" column="1" bodyfile="pymembrane/cppmodule/src/rng/rng.hpp" bodystart="37" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_r_n_g_1a885efeb42c22a8984ef3db5e6652bc07" prot="public" virt="non-virtual"><scope>RNG</scope><name>drnd</name></member>
+      <member refid="class_r_n_g_1a5bdd14bbfd6464446574ba90abd28367" prot="public" virt="non-virtual"><scope>RNG</scope><name>gauss_rng</name></member>
+      <member refid="class_r_n_g_1aa16f8eef91acf82bb5fa1e0d8f23131b" prot="public" virt="non-virtual"><scope>RNG</scope><name>lrnd</name></member>
+      <member refid="class_r_n_g_1a7eeef2d770422a98175b3d68419ac265" prot="private" virt="non-virtual"><scope>RNG</scope><name>m_generator</name></member>
+      <member refid="class_r_n_g_1ac575fe4d3e25b5608ae659b44cf9e218" prot="private" virt="non-virtual"><scope>RNG</scope><name>m_normal_distribution</name></member>
+      <member refid="class_r_n_g_1a76e3b1974940768d454f66837e9447c2" prot="private" virt="non-virtual"><scope>RNG</scope><name>m_uniform_distribution</name></member>
+      <member refid="class_r_n_g_1ad1a0404ddd79895cfc05432f06c9c385" prot="public" virt="non-virtual"><scope>RNG</scope><name>RNG</name></member>
+      <member refid="class_r_n_g_1abe0c541fcfa0b12ef7446eccb166d510" prot="public" virt="non-virtual"><scope>RNG</scope><name>~RNG</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

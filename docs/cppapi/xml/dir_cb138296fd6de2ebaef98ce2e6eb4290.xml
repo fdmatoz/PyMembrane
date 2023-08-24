@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_cb138296fd6de2ebaef98ce2e6eb4290" kind="dir">
+    <compoundname>pymembrane/cppmodule/src</compoundname>
+    <innerdir refid="dir_8ac53989e95bc2e6cc55568cad9516ec">pymembrane/cppmodule/src/box</innerdir>
+    <innerdir refid="dir_a7951ca7d35c5f6b2618d532ec95a90b">pymembrane/cppmodule/src/compute</innerdir>
+    <innerdir refid="dir_d1da068ac51be214e561545fbbe2e495">pymembrane/cppmodule/src/constraints</innerdir>
+    <innerdir refid="dir_6e27a0a734d445e486d6e70b2245df81">pymembrane/cppmodule/src/dumper</innerdir>
+    <innerdir refid="dir_d7177609943b05444211af7b5d02e9e5">pymembrane/cppmodule/src/evolver</innerdir>
+    <innerdir refid="dir_c76ab2c0265258fa4516491f965cfdf6">pymembrane/cppmodule/src/integrators</innerdir>
+    <innerdir refid="dir_364ecfde561c3936f0a04dd7c2f8516f">pymembrane/cppmodule/src/mesh</innerdir>
+    <innerdir refid="dir_324a942a4e28dddbd9354eff98d96874">pymembrane/cppmodule/src/minimizer</innerdir>
+    <innerdir refid="dir_c3574b9ce6dbb02ea773dc1ceece664c">pymembrane/cppmodule/src/potentials</innerdir>
+    <innerdir refid="dir_c3d72ee87032736613bf79ff28935fa9">pymembrane/cppmodule/src/rng</innerdir>
+    <innerdir refid="dir_1f20746e1abe2c484fa0d54fd0df0dca">pymembrane/cppmodule/src/system</innerdir>
+    <innerdir refid="dir_b9a03d00605cae440e149fd8e6dbb7c4">pymembrane/cppmodule/src/types</innerdir>
+    <innerdir refid="dir_fc64d5aa3cd59ac93b4b3cd9fde3258e">pymembrane/cppmodule/src/utils</innerdir>
+    <innerfile refid="pybindexport_8cpp">pybindexport.cpp</innerfile>
+    <innerfile refid="read__mesh_8cpp">read_mesh.cpp</innerfile>
+    <innerfile refid="read__mesh_8hpp">read_mesh.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/"/>
+  </compounddef>
+</doxygen>

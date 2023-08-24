@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_compute_vertex_dihedral_energy" kind="class" language="C++" prot="public">
+    <compoundname>ComputeVertexDihedralEnergy</compoundname>
+    <basecompoundref refid="class_compute_force_class" prot="public" virt="non-virtual">ComputeForceClass</basecompoundref>
+    <includes refid="potential_dihedral_harmonics_8hpp" local="no">potentialDihedralHarmonics.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_compute_vertex_dihedral_energy_1a09a6826c93353096d6af343a7259f7fa" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexDihedralEnergy::m_kappa</definition>
+        <argsstring></argsstring>
+        <name>m_kappa</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::m_kappa</qualifiedname>
+        <briefdescription>
+<para>bending rigidity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="71" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_compute_vertex_dihedral_energy_1a8978965d53c247fd300f92a7193176a9" prot="private" static="no" mutable="no">
+        <type>pymemb::vector&lt; real &gt;</type>
+        <definition>pymemb::vector&lt;real&gt; ComputeVertexDihedralEnergy::m_theta0</definition>
+        <argsstring></argsstring>
+        <name>m_theta0</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::m_theta0</qualifiedname>
+        <briefdescription>
+<para>preferred dihedral angle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="72" column="18" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1abc8dc37a983bcb85193ef73076972f8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexDihedralEnergy::ComputeVertexDihedralEnergy</definition>
+        <argsstring>(SystemClass &amp;system)</argsstring>
+        <name>ComputeVertexDihedralEnergy</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::ComputeVertexDihedralEnergy</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; potential name</para>
+<para>&lt; potential type</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="17" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="17" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a93fe12c9e94ad67a86ed978330f1943c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ComputeVertexDihedralEnergy::~ComputeVertexDihedralEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputeVertexDihedralEnergy</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::~ComputeVertexDihedralEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="24" column="3" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1ab0c8aa7d67be6e505556ad330dc4465b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::set_default_properties</definition>
+        <argsstring>(void) override</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::set_default_properties</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb">set_default_properties</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="26" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a3482980cc2892d3076e1cf56739d1dda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map) override</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="35" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="35" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a86187957b8433eba8c2e2a641fb5d9be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; ComputeVertexDihedralEnergy::get_info</definition>
+        <argsstring>(void) override</argsstring>
+        <name>get_info</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::get_info</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga58a0bb4bb69e32e705e33ee976b1a1a3">get_info</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="54" column="12" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="54" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a6618d2c8e8fa860e3c10e1792cdb1ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::compute_energy</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_energy</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3">compute_energy</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>calculate bengind energy use dihedral harmonics as <formula id="19">$ E_{bend} = \frac 1 2 k_b (1 - \cos(\theta - \theta_0)) $</formula>, where <formula id="4">$ k_b $</formula> is the bending rigidity, <formula id="20">$ \theta $</formula> and <formula id="21">$ \theta_0 $</formula> are the angle and preferred dihedral angle of the triangles meeting at the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the bending energy at vertex </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="64" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="93" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1ab2680d689dfbf1bc2c735d2101022fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::compute</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33">compute</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="65" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="262" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1af293b17776932e04d2055b242ba8096c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexDihedralEnergy::compute_edge_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_edge_energy</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute_edge_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4">compute_edge_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a given edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>vertices</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="66" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="105" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1ae1e13b6532aac37400e502b5b7ca9e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>real</type>
+        <definition>real ComputeVertexDihedralEnergy::compute_vertex_energy</definition>
+        <argsstring>(int) override</argsstring>
+        <name>compute_vertex_energy</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute_vertex_energy</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27">compute_vertex_energy</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>compute the energy in a vertex edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>real </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>vertices</para>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="67" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="133" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a65d696ed4e3baa821df2d3e9b8162bc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::compute_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_stress</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b">compute_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="68" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="384" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a5fc0322e7d0183534a9bc05a18bdbf8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ComputeVertexDihedralEnergy::compute_atomic_stress</definition>
+        <argsstring>(void) override</argsstring>
+        <name>compute_atomic_stress</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::compute_atomic_stress</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf">compute_atomic_stress</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>compute force for the actual configuration </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="69" column="8" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.cpp" bodystart="526" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga8f58a440a3eaf0ce86b9eb041f04e8b4">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="34" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1gaed03d57ba661016fdb23695e588c96df">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="34" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_compute_vertex_dihedral_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ComputeForceClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;region_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>ComputeVertexDihedralEnergy::set_property</qualifiedname>
+        <reimplements refid="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e">set_property</reimplements>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="34" column="3" bodyfile="pymembrane/cppmodule/src/potentials/computeforceclass.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_compute_vertex_dihedral_energy" kindref="compound">ComputeVertexDihedralEnergy</ref> Compute the Dihedral Harmonics Energy/Force. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexDihedralEnergy</label>
+        <link refid="class_compute_vertex_dihedral_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComputeForceClass</label>
+        <link refid="class_compute_force_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="1">
+        <label>ComputeVertexDihedralEnergy</label>
+        <link refid="class_compute_vertex_dihedral_energy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="3">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" line="14" column="1" bodyfile="pymembrane/cppmodule/src/potentials/potentialDihedralHarmonics.hpp" bodystart="15" bodyend="73"/>
+    <listofallmembers>
+      <member refid="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f" prot="protected" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>_system</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1ab2680d689dfbf1bc2c735d2101022fc2" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a5fc0322e7d0183534a9bc05a18bdbf8c" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_atomic_stress</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1af293b17776932e04d2055b242ba8096c" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_edge_energy</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a6618d2c8e8fa860e3c10e1792cdb1ffd" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_energy</name></member>
+      <member refid="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_face_energy</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a65d696ed4e3baa821df2d3e9b8162bc7" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_stress</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1ae1e13b6532aac37400e502b5b7ca9e98" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>compute_vertex_energy</name></member>
+      <member refid="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1abc8dc37a983bcb85193ef73076972f8d" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>ComputeVertexDihedralEnergy</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a86187957b8433eba8c2e2a641fb5d9be" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>get_info</name></member>
+      <member refid="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>get_name</name></member>
+      <member refid="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>get_type</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a09a6826c93353096d6af343a7259f7fa" prot="private" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>m_kappa</name></member>
+      <member refid="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81" prot="protected" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>m_name</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a8978965d53c247fd300f92a7193176a9" prot="private" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>m_theta0</name></member>
+      <member refid="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b" prot="protected" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>m_type</name></member>
+      <member refid="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e" prot="protected" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>NUM_TYPES_ALLOWED</name></member>
+      <member refid="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa" prot="protected" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>NUM_TYPES_PAIR</name></member>
+      <member refid="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>print_warning_calling</name></member>
+      <member refid="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>print_warning_property_name</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1ab0c8aa7d67be6e505556ad330dc4465b" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>set_default_properties</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a3482980cc2892d3076e1cf56739d1dda" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a8f58a440a3eaf0ce86b9eb041f04e8b4" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1aed03d57ba661016fdb23695e588c96df" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>set_property</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a2baad238a779102369f7813c101bfe8e" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>set_property</name></member>
+      <member refid="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade" prot="public" virt="virtual"><scope>ComputeVertexDihedralEnergy</scope><name>~ComputeForceClass</name></member>
+      <member refid="class_compute_vertex_dihedral_energy_1a93fe12c9e94ad67a86ed978330f1943c" prot="public" virt="non-virtual"><scope>ComputeVertexDihedralEnergy</scope><name>~ComputeVertexDihedralEnergy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

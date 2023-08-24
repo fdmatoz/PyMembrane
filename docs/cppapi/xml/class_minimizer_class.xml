@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_minimizer_class" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MinimizerClass</compoundname>
+    <derivedcompoundref refid="class_minimizer_mesh_f_i_r_e" prot="public" virt="non-virtual">MinimizerMeshFIRE</derivedcompoundref>
+    <includes refid="minimizerclass_8hpp" local="no">minimizerclass.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+        <definition>SystemClass&amp; MinimizerClass::_system</definition>
+        <argsstring></argsstring>
+        <name>_system</name>
+        <qualifiedname>MinimizerClass::_system</qualifiedname>
+        <briefdescription>
+<para>reference to system class where the box and particles are stored </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="83" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_class_1a356f9575676c56fbb812dfaec9f1bef5" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+        <definition>EvolverClass&amp; MinimizerClass::_evolver</definition>
+        <argsstring></argsstring>
+        <name>_evolver</name>
+        <qualifiedname>MinimizerClass::_evolver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="84" column="17" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_class_1ab0889ed7336b586efc598b82e26de354" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MinimizerClass::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <qualifiedname>MinimizerClass::m_name</qualifiedname>
+        <briefdescription>
+<para>Integrator name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="85" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_minimizer_class_1a5bba99f95b075cd9a5cab85624ae1dad" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MinimizerClass::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <qualifiedname>MinimizerClass::m_type</qualifiedname>
+        <briefdescription>
+<para>integrator type, active, torque, etc </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="86" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_minimizer_class_1a86cb59c64fdab96b3536746b5151e259" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MinimizerClass::MinimizerClass</definition>
+        <argsstring>(SystemClass &amp;system, EvolverClass &amp;evolver)</argsstring>
+        <name>MinimizerClass</name>
+        <qualifiedname>MinimizerClass::MinimizerClass</qualifiedname>
+        <param>
+          <type><ref refid="class_system_class" kindref="compound">SystemClass</ref> &amp;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type><ref refid="class_evolver_class" kindref="compound">EvolverClass</ref> &amp;</type>
+          <declname>evolver</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_minimizer_class" kindref="compound">MinimizerClass</ref> Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>potentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the loaded potentials </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the integrator parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="52" column="4" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1a9bcd8631ad7975e528f6825722f899cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual MinimizerClass::~MinimizerClass</definition>
+        <argsstring>()</argsstring>
+        <name>~MinimizerClass</name>
+        <qualifiedname>MinimizerClass::~MinimizerClass</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_minimizer_class" kindref="compound">MinimizerClass</ref> Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="58" column="12" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1af9cbb79a3207e438a70388ee0ac7d467" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::minimize</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>minimize</name>
+        <qualifiedname>MinimizerClass::minimize</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1ac22db26ba2d7eec9847f090c230c2bc1">minimize</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="61" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1a400fb77de7347a3d847f65e1ffdd57b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MinimizerClass::get_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_name</name>
+        <qualifiedname>MinimizerClass::get_name</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the name object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="66" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1ac1cac33f95ee3a89cdb2d8110bd08042" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MinimizerClass::get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_type</name>
+        <qualifiedname>MinimizerClass::get_type</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the type object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="71" column="16" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1ada24fbfffd88025dfc96fbfca5873ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>virtual std::map&lt; std::string, std::string &gt; MinimizerClass::get_info</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_info</name>
+        <qualifiedname>MinimizerClass::get_info</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1a713b3fe51f323d7e1cf59f14ceeaa9c3">get_info</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="73" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1aa7f5d5ca1da9beb144c023d1b38191ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_default_properties</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>set_default_properties</name>
+        <qualifiedname>MinimizerClass::set_default_properties</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1a228e2c3e91eecf0a5bc68debbbc3bbac">set_default_properties</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="75" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1abab2164130b7b71ff12f28e9c88f030b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerClass::set_property</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1abab2164130b7b71ff12f28e9c88f030b">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::pair&lt; std::string, std::string &gt;, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="76" column="17" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1aa86679fb2e2979ac66565d61668ade46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerClass::set_property</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1aa86679fb2e2979ac66565d61668ade46">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="77" column="17" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MinimizerClass::set_property</definition>
+        <argsstring>(std::map&lt; std::string, std::string &gt; &amp;value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>MinimizerClass::set_property</qualifiedname>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1a2f7ddde6e933c4f1e2d899ee1c58a6a6">set_property</reimplementedby>
+        <reimplementedby refid="class_minimizer_mesh_f_i_r_e_1a0022e17485a6dfa5e77c1d76583cded5">set_property</reimplementedby>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="78" column="17" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1a0aa06712a4eb644f2dbddc27891243a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerClass::print_warning_calling</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_calling</name>
+        <qualifiedname>MinimizerClass::print_warning_calling</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="79" column="9" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_minimizer_class_1a13a7b0d980b839cab1bd7c0c59e6e6ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MinimizerClass::print_warning_property_name</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>print_warning_property_name</name>
+        <qualifiedname>MinimizerClass::print_warning_property_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="80" column="9" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for adding minimizers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MinimizerClass</label>
+        <link refid="class_minimizer_class"/>
+      </node>
+      <node id="2">
+        <label>MinimizerMeshFIRE</label>
+        <link refid="class_minimizer_mesh_f_i_r_e"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ComputeMesh</label>
+        <link refid="class_compute_mesh"/>
+      </node>
+      <node id="4">
+        <label>DumperClass</label>
+        <link refid="class_dumper_class"/>
+      </node>
+      <node id="5">
+        <label>EvolverClass</label>
+        <link refid="class_evolver_class"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MinimizerClass</label>
+        <link refid="class_minimizer_class"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_system</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_evolver</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SystemClass</label>
+        <link refid="class_system_class"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>compute_mesh</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dumper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" line="43" column="1" bodyfile="pymembrane/cppmodule/src/minimizer/minimizerclass.hpp" bodystart="44" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_minimizer_class_1a356f9575676c56fbb812dfaec9f1bef5" prot="protected" virt="non-virtual"><scope>MinimizerClass</scope><name>_evolver</name></member>
+      <member refid="class_minimizer_class_1a3e798feb80972592eae1749590105ff3" prot="protected" virt="non-virtual"><scope>MinimizerClass</scope><name>_system</name></member>
+      <member refid="class_minimizer_class_1ada24fbfffd88025dfc96fbfca5873ca8" prot="public" virt="pure-virtual"><scope>MinimizerClass</scope><name>get_info</name></member>
+      <member refid="class_minimizer_class_1a400fb77de7347a3d847f65e1ffdd57b2" prot="public" virt="non-virtual"><scope>MinimizerClass</scope><name>get_name</name></member>
+      <member refid="class_minimizer_class_1ac1cac33f95ee3a89cdb2d8110bd08042" prot="public" virt="non-virtual"><scope>MinimizerClass</scope><name>get_type</name></member>
+      <member refid="class_minimizer_class_1ab0889ed7336b586efc598b82e26de354" prot="protected" virt="non-virtual"><scope>MinimizerClass</scope><name>m_name</name></member>
+      <member refid="class_minimizer_class_1a5bba99f95b075cd9a5cab85624ae1dad" prot="protected" virt="non-virtual"><scope>MinimizerClass</scope><name>m_type</name></member>
+      <member refid="class_minimizer_class_1af9cbb79a3207e438a70388ee0ac7d467" prot="public" virt="pure-virtual"><scope>MinimizerClass</scope><name>minimize</name></member>
+      <member refid="class_minimizer_class_1a86cb59c64fdab96b3536746b5151e259" prot="public" virt="non-virtual"><scope>MinimizerClass</scope><name>MinimizerClass</name></member>
+      <member refid="class_minimizer_class_1a0aa06712a4eb644f2dbddc27891243a1" prot="public" virt="non-virtual"><scope>MinimizerClass</scope><name>print_warning_calling</name></member>
+      <member refid="class_minimizer_class_1a13a7b0d980b839cab1bd7c0c59e6e6ac" prot="public" virt="non-virtual"><scope>MinimizerClass</scope><name>print_warning_property_name</name></member>
+      <member refid="class_minimizer_class_1aa7f5d5ca1da9beb144c023d1b38191ce" prot="public" virt="pure-virtual"><scope>MinimizerClass</scope><name>set_default_properties</name></member>
+      <member refid="class_minimizer_class_1abab2164130b7b71ff12f28e9c88f030b" prot="public" virt="virtual"><scope>MinimizerClass</scope><name>set_property</name></member>
+      <member refid="class_minimizer_class_1aa86679fb2e2979ac66565d61668ade46" prot="public" virt="virtual"><scope>MinimizerClass</scope><name>set_property</name></member>
+      <member refid="class_minimizer_class_1a2f7ddde6e933c4f1e2d899ee1c58a6a6" prot="public" virt="virtual"><scope>MinimizerClass</scope><name>set_property</name></member>
+      <member refid="class_minimizer_class_1a9bcd8631ad7975e528f6825722f899cb" prot="public" virt="virtual"><scope>MinimizerClass</scope><name>~MinimizerClass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

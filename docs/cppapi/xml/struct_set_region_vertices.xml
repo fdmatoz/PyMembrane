@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_set_region_vertices" kind="struct" language="C++" prot="public">
+    <compoundname>SetRegionVertices</compoundname>
+    <basecompoundref refid="struct_set_property" prot="public" virt="non-virtual">SetProperty&lt; MeshType &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class MeshType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_set_region_vertices_1aa3ba389b6c91a0a71936d30d350ece85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SetRegionVertices&lt; MeshType &gt;::SetRegionVertices</definition>
+        <argsstring>(MeshType &amp;_mesh)</argsstring>
+        <name>SetRegionVertices</name>
+        <qualifiedname>SetRegionVertices::SetRegionVertices</qualifiedname>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="76" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="76" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1aed40d921dd4ca493f10ede17c769a713" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, real &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1ad32029be4e340d59ad362778756aad45">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, real &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="85" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1a29b593525821d8c7448d21a12dcdb966" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, int &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4a7148b2247c7a29d591c633b7dc7949">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, int &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="89" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="89" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1ad6bd409ac8819eee676192fc6674659d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1aefe8d2ba4eb8174c49e687b5d191d609">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; real(real, real, real)&gt; &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="101" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1a27f160456e4d530c55c04dc13d84b8e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a396b8b990bafa3a17779708c6e637abe">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; real &gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="105" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1a2e9b03755f634b8379f86b5d2932fe50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; std::string, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a4d33b864078667ca1f6808e30ae885ca">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="109" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1a514c884332840e8d26c709dbba62de37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a2067de1de79e89e17ebbb99a4b282fc6">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::function&lt; bool(real, real, real)&gt; &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="113" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="113" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_set_region_vertices_1ab3b110a69e2ca1ff226b7b4b5befc858" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SetRegionVertices&lt; MeshType &gt;::set_property</definition>
+        <argsstring>(MeshType &amp;_mesh, std::map&lt; int, std::string &gt; &amp;region_value_map)</argsstring>
+        <name>set_property</name>
+        <qualifiedname>SetRegionVertices::set_property</qualifiedname>
+        <reimplements refid="struct_set_property_1a308b7c8a1cab418958bc8f61edb04703">set_property</reimplements>
+        <param>
+          <type>MeshType &amp;</type>
+          <declname>_mesh</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::string &gt; &amp;</type>
+          <declname>region_value_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="132" column="10" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="132" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionVertices&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_vertices"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SetProperty&lt; MeshType &gt;</label>
+        <link refid="struct_set_property"/>
+      </node>
+      <node id="1">
+        <label>SetRegionVertices&lt; MeshType &gt;</label>
+        <link refid="struct_set_region_vertices"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pymembrane/cppmodule/src/mesh/meshproperties.hpp" line="74" column="1" bodyfile="pymembrane/cppmodule/src/mesh/meshproperties.hpp" bodystart="75" bodyend="147"/>
+    <listofallmembers>
+      <member refid="struct_set_region_vertices_1aed40d921dd4ca493f10ede17c769a713" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1a29b593525821d8c7448d21a12dcdb966" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1ad6bd409ac8819eee676192fc6674659d" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1a27f160456e4d530c55c04dc13d84b8e7" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1a2e9b03755f634b8379f86b5d2932fe50" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1a514c884332840e8d26c709dbba62de37" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1ab3b110a69e2ca1ff226b7b4b5befc858" prot="public" virt="virtual"><scope>SetRegionVertices</scope><name>set_property</name></member>
+      <member refid="struct_set_region_vertices_1aa3ba389b6c91a0a71936d30d350ece85" prot="public" virt="non-virtual"><scope>SetRegionVertices</scope><name>SetRegionVertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

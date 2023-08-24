@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structpymemb_1_1reset__vertex__velocities" kind="struct" language="C++" prot="public">
+    <compoundname>pymemb::reset_vertex_velocities</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpymemb_1_1reset__vertex__velocities_1ad77d91cfbd9f3e6c7920b3f5539aa05b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref></type>
+        <definition>HE_VertexProp pymemb::reset_vertex_velocities::operator()</definition>
+        <argsstring>(HE_VertexProp vertex)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>pymemb::reset_vertex_velocities::operator()</qualifiedname>
+        <param>
+          <type><ref refid="struct_h_e___vertex" kindref="compound">HE_VertexProp</ref></type>
+          <declname>vertex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="40" column="23" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="40" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pymembrane/cppmodule/src/mesh/meshoperators.hpp" line="38" column="5" bodyfile="pymembrane/cppmodule/src/mesh/meshoperators.hpp" bodystart="39" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structpymemb_1_1reset__vertex__velocities_1ad77d91cfbd9f3e6c7920b3f5539aa05b" prot="public" virt="non-virtual"><scope>pymemb::reset_vertex_velocities</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
