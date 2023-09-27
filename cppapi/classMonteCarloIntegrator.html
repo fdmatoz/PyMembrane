@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html data-theme="light">
+<html lang="en" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class MonteCarloIntegrator &#8212; PyMembrane  documentation</title>
   
@@ -19,40 +18,40 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/classMonteCarloIntegrator';</script>
-    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class MonteCarloIntegratorFlipEdge" href="classMonteCarloIntegratorFlipEdge.html" />
     <link rel="prev" title="Class MinimizerMeshFIRE" href="classMinimizerMeshFIRE.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -61,6 +60,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -101,7 +109,8 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -121,7 +130,6 @@
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -170,27 +178,27 @@
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -202,23 +210,25 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -229,18 +239,20 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -303,27 +315,27 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -337,10 +349,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -373,8 +385,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
@@ -384,7 +396,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class MonteCarloIntegrator</li>
+    <li class="breadcrumb-item active" aria-current="page">Class...</li>
   </ul>
 </nav>
 </div>
@@ -402,14 +414,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="class-montecarlointegrator">
-<span id="exhale-class-classmontecarlointegrator"></span><h1>Class MonteCarloIntegrator<a class="headerlink" href="#class-montecarlointegrator" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classmontecarlointegrator"></span><h1>Class MonteCarloIntegrator<a class="headerlink" href="#class-montecarlointegrator" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_montecarlointegrator.hpp.html#file-pymembrane-cppmodule-src-integrators-montecarlointegrator-hpp"><span class="std std-ref">File montecarlointegrator.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="derived-types">
-<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">#</a></h3>
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">MonteCarloIntegratorFlipEdge</span></code> (<a class="reference internal" href="classMonteCarloIntegratorFlipEdge.html#exhale-class-classmontecarlointegratorflipedge"><span class="std std-ref">Class MonteCarloIntegratorFlipEdge</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">MonteCarloIntegratorSwapEdge</span></code> (<a class="reference internal" href="classMonteCarloIntegratorSwapEdge.html#exhale-class-classmontecarlointegratorswapedge"><span class="std std-ref">Class MonteCarloIntegratorSwapEdge</span></a>)</p></li>
@@ -419,20 +431,20 @@ document.write(`
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv420MonteCarloIntegrator">
-<span id="_CPPv320MonteCarloIntegrator"></span><span id="_CPPv220MonteCarloIntegrator"></span><span id="MonteCarloIntegrator"></span><span class="target" id="classMonteCarloIntegrator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegrator</span></span></span><a class="headerlink" href="#_CPPv420MonteCarloIntegrator" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv320MonteCarloIntegrator"></span><span id="_CPPv220MonteCarloIntegrator"></span><span id="MonteCarloIntegrator"></span><span class="target" id="classMonteCarloIntegrator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegrator</span></span></span><a class="headerlink" href="#_CPPv420MonteCarloIntegrator" title="Link to this definition">#</a><br /></dt>
 <dd><p>Abstract class for that handles Metropolis type Monte Carlo algorithms. </p>
 <p>Subclassed by <a class="reference internal" href="class_monte_carlo_integrator_flip_edge.html#classMonteCarloIntegratorFlipEdge"><span class="std std-ref">MonteCarloIntegratorFlipEdge</span></a>, <a class="reference internal" href="class_monte_carlo_integrator_swap_edge.html#classMonteCarloIntegratorSwapEdge"><span class="std std-ref">MonteCarloIntegratorSwapEdge</span></a>, <a class="reference internal" href="class_monte_carlo_integrator_swap_vertex.html#classMonteCarloIntegratorSwapVertex"><span class="std std-ref">MonteCarloIntegratorSwapVertex</span></a>, <a class="reference internal" href="class_monte_carlo_integrator_vertex.html#classMonteCarloIntegratorVertex"><span class="std std-ref">MonteCarloIntegratorVertex</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute">
-<span id="_CPPv3N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute"></span><span id="_CPPv2N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute"></span><span id="MonteCarloIntegrator::MonteCarloIntegrator__SystemClassR.VertexComputeR"></span><span class="target" id="classMonteCarloIntegrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span>, <a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#_CPPv413VertexCompute" title="VertexCompute"><span class="n"><span class="pre">VertexCompute</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">potentials</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute"></span><span id="_CPPv2N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute"></span><span id="MonteCarloIntegrator::MonteCarloIntegrator__SystemClassR.VertexComputeR"></span><span class="target" id="classMonteCarloIntegrator_1acb4b7c68a1aa3ed4b22ac1b6eecfa21b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span>, <a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#_CPPv413VertexCompute" title="VertexCompute"><span class="n"><span class="pre">VertexCompute</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">potentials</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute" title="Link to this definition">#</a><br /></dt>
 <dd><p><a class="reference internal" href="class_monte_carlo_integrator.html#classMonteCarloIntegrator"><span class="std std-ref">MonteCarloIntegrator</span></a> Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sys</strong> – pointer to the system </p></li>
 <li><p><strong>potentials</strong> – pointer to the loaded potentials </p></li>
@@ -444,19 +456,19 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegratorD0Ev">
-<span id="_CPPv3N20MonteCarloIntegratorD0Ev"></span><span id="_CPPv2N20MonteCarloIntegratorD0Ev"></span><span id="MonteCarloIntegrator::~MonteCarloIntegrator"></span><span class="target" id="classMonteCarloIntegrator_1a3044b904ec421204b68ef44c949e34a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~MonteCarloIntegrator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegratorD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegratorD0Ev"></span><span id="_CPPv2N20MonteCarloIntegratorD0Ev"></span><span id="MonteCarloIntegrator::~MonteCarloIntegrator"></span><span class="target" id="classMonteCarloIntegrator_1a3044b904ec421204b68ef44c949e34a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~MonteCarloIntegrator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegratorD0Ev" title="Link to this definition">#</a><br /></dt>
 <dd><p><a class="reference internal" href="class_monte_carlo_integrator.html#classMonteCarloIntegrator"><span class="std std-ref">MonteCarloIntegrator</span></a> Destructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator9integrateEv">
-<span id="_CPPv3N20MonteCarloIntegrator9integrateEv"></span><span id="_CPPv2N20MonteCarloIntegrator9integrateEv"></span><span id="MonteCarloIntegrator::integrate__void"></span><span class="target" id="classMonteCarloIntegrator_1afb43aa9b17a03ff566a96f839cea0a5e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integrate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator9integrateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator9integrateEv"></span><span id="_CPPv2N20MonteCarloIntegrator9integrateEv"></span><span id="MonteCarloIntegrator::integrate__void"></span><span class="target" id="classMonteCarloIntegrator_1afb43aa9b17a03ff566a96f839cea0a5e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integrate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator9integrateEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>abstract integrator function </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>number of successful attempts </p>
 </dd>
 </dl>
@@ -464,25 +476,25 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi">
-<span id="_CPPv3N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi"></span><span id="_CPPv2N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromEdge__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a8e8e222fe336c2f56235df0035f8d5fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromEdge</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">edge_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi"></span><span id="_CPPv2N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromEdge__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a8e8e222fe336c2f56235df0035f8d5fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromEdge</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">edge_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi">
-<span id="_CPPv3N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi"></span><span id="_CPPv2N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromVertex__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a27b6c559a56e29647717d0ba2a4c6093"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromVertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi"></span><span id="_CPPv2N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromVertex__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a27b6c559a56e29647717d0ba2a4c6093"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromVertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi">
-<span id="_CPPv3N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi"></span><span id="_CPPv2N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromFace__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a634e45ff52b7b8bd7a35f3828d47ea83"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromFace</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi"></span><span id="_CPPv2N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi"></span><span id="MonteCarloIntegrator::ComputeEnergyFromFace__iCR"></span><span class="target" id="classMonteCarloIntegrator_1a634e45ff52b7b8bd7a35f3828d47ea83"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeEnergyFromFace</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator15set_temperatureEd">
-<span id="_CPPv3N20MonteCarloIntegrator15set_temperatureEd"></span><span id="_CPPv2N20MonteCarloIntegrator15set_temperatureEd"></span><span id="MonteCarloIntegrator::set_temperature__double"></span><span class="target" id="classMonteCarloIntegrator_1a4fd4ae140da18e757e8e2929ac900ce8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_T</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator15set_temperatureEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator15set_temperatureEd"></span><span id="_CPPv2N20MonteCarloIntegrator15set_temperatureEd"></span><span id="MonteCarloIntegrator::set_temperature__double"></span><span class="target" id="classMonteCarloIntegrator_1a4fd4ae140da18e757e8e2929ac900ce8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_T</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator15set_temperatureEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>set the integration temperature </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – </p>
 </dd>
 </dl>
@@ -490,20 +502,20 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv">
-<span id="_CPPv3N20MonteCarloIntegrator29update_temperature_parametersEv"></span><span id="_CPPv2N20MonteCarloIntegrator29update_temperature_parametersEv"></span><span id="MonteCarloIntegrator::update_temperature_parameters"></span><span class="target" id="classMonteCarloIntegrator_1a73f58c5ac0533462441070bd60008418"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_temperature_parameters</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator29update_temperature_parametersEv"></span><span id="_CPPv2N20MonteCarloIntegrator29update_temperature_parametersEv"></span><span id="MonteCarloIntegrator::update_temperature_parameters"></span><span class="target" id="classMonteCarloIntegrator_1a73f58c5ac0533462441070bd60008418"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_temperature_parameters</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK20MonteCarloIntegrator15get_temperatureEv">
-<span id="_CPPv3NK20MonteCarloIntegrator15get_temperatureEv"></span><span id="_CPPv2NK20MonteCarloIntegrator15get_temperatureEv"></span><span id="MonteCarloIntegrator::get_temperature__voidC"></span><span class="target" id="classMonteCarloIntegrator_1aa1c25fac86c042bf1c82d099c4d56221"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator15get_temperatureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK20MonteCarloIntegrator15get_temperatureEv"></span><span id="_CPPv2NK20MonteCarloIntegrator15get_temperatureEv"></span><span id="MonteCarloIntegrator::get_temperature__voidC"></span><span class="target" id="classMonteCarloIntegrator_1aa1c25fac86c042bf1c82d099c4d56221"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator15get_temperatureEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator8get_nameEv">
-<span id="_CPPv3N20MonteCarloIntegrator8get_nameEv"></span><span id="_CPPv2N20MonteCarloIntegrator8get_nameEv"></span><span id="MonteCarloIntegrator::get_name__void"></span><span class="target" id="classMonteCarloIntegrator_1ad9032352c0ddda079d39209683bac703"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_name</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator8get_nameEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator8get_nameEv"></span><span id="_CPPv2N20MonteCarloIntegrator8get_nameEv"></span><span id="MonteCarloIntegrator::get_name__void"></span><span class="target" id="classMonteCarloIntegrator_1ad9032352c0ddda079d39209683bac703"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_name</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator8get_nameEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the name object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>std::string </p>
 </dd>
 </dl>
@@ -511,10 +523,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator8get_typeEv">
-<span id="_CPPv3N20MonteCarloIntegrator8get_typeEv"></span><span id="_CPPv2N20MonteCarloIntegrator8get_typeEv"></span><span id="MonteCarloIntegrator::get_type__void"></span><span class="target" id="classMonteCarloIntegrator_1a06fa7b710274416371d6fdef4a59ee86"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_type</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator8get_typeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator8get_typeEv"></span><span id="_CPPv2N20MonteCarloIntegrator8get_typeEv"></span><span id="MonteCarloIntegrator::get_type__void"></span><span class="target" id="classMonteCarloIntegrator_1a06fa7b710274416371d6fdef4a59ee86"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_type</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator8get_typeEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the type object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>std::string </p>
 </dd>
 </dl>
@@ -522,10 +534,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv">
-<span id="_CPPv3NK20MonteCarloIntegrator19get_integrate_everyEv"></span><span id="_CPPv2NK20MonteCarloIntegrator19get_integrate_everyEv"></span><span id="MonteCarloIntegrator::get_integrate_everyC"></span><span class="target" id="classMonteCarloIntegrator_1a11a74734b467fa6459de53d96ac2bf1a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_integrate_every</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK20MonteCarloIntegrator19get_integrate_everyEv"></span><span id="_CPPv2NK20MonteCarloIntegrator19get_integrate_everyEv"></span><span id="MonteCarloIntegrator::get_integrate_everyC"></span><span class="target" id="classMonteCarloIntegrator_1a11a74734b467fa6459de53d96ac2bf1a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_integrate_every</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get name </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – </p>
 </dd>
 </dl>
@@ -533,25 +545,25 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator19set_integrate_everyEi">
-<span id="_CPPv3N20MonteCarloIntegrator19set_integrate_everyEi"></span><span id="_CPPv2N20MonteCarloIntegrator19set_integrate_everyEi"></span><span id="MonteCarloIntegrator::set_integrate_every__i"></span><span class="target" id="classMonteCarloIntegrator_1a1f5b4442efc847425dd209988eca7cd8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_integrate_every</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_integrate_every</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator19set_integrate_everyEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator19set_integrate_everyEi"></span><span id="_CPPv2N20MonteCarloIntegrator19set_integrate_everyEi"></span><span id="MonteCarloIntegrator::set_integrate_every__i"></span><span class="target" id="classMonteCarloIntegrator_1a1f5b4442efc847425dd209988eca7cd8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_integrate_every</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_integrate_every</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator19set_integrate_everyEi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv">
-<span id="_CPPv3NK20MonteCarloIntegrator18get_minimum_energyEv"></span><span id="_CPPv2NK20MonteCarloIntegrator18get_minimum_energyEv"></span><span id="MonteCarloIntegrator::get_minimum_energyC"></span><span class="target" id="classMonteCarloIntegrator_1aabaa7b2836fc24403ea07ba44507d1bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_minimum_energy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK20MonteCarloIntegrator18get_minimum_energyEv"></span><span id="_CPPv2NK20MonteCarloIntegrator18get_minimum_energyEv"></span><span id="MonteCarloIntegrator::get_minimum_energyC"></span><span class="target" id="classMonteCarloIntegrator_1aabaa7b2836fc24403ea07ba44507d1bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_minimum_energy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator18set_minimum_energyEd">
-<span id="_CPPv3N20MonteCarloIntegrator18set_minimum_energyEd"></span><span id="_CPPv2N20MonteCarloIntegrator18set_minimum_energyEd"></span><span id="MonteCarloIntegrator::set_minimum_energy__double"></span><span class="target" id="classMonteCarloIntegrator_1a7714495d7d5f4c00e04ca25b3761e5a8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_minimum_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_minimum_energy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator18set_minimum_energyEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator18set_minimum_energyEd"></span><span id="_CPPv2N20MonteCarloIntegrator18set_minimum_energyEd"></span><span id="MonteCarloIntegrator::set_minimum_energy__double"></span><span class="target" id="classMonteCarloIntegrator_1a7714495d7d5f4c00e04ca25b3761e5a8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_minimum_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_minimum_energy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator18set_minimum_energyEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator22set_default_propertiesEv">
-<span id="_CPPv3N20MonteCarloIntegrator22set_default_propertiesEv"></span><span id="_CPPv2N20MonteCarloIntegrator22set_default_propertiesEv"></span><span id="MonteCarloIntegrator::set_default_properties__void"></span><span class="target" id="classMonteCarloIntegrator_1a1086d8878f28b79faa6619d56315497b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator22set_default_propertiesEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator22set_default_propertiesEv"></span><span id="_CPPv2N20MonteCarloIntegrator22set_default_propertiesEv"></span><span id="MonteCarloIntegrator::set_default_properties__void"></span><span class="target" id="classMonteCarloIntegrator_1a1086d8878f28b79faa6619d56315497b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator22set_default_propertiesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>abstract set parameters </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
 </dl>
@@ -559,27 +571,27 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classMonteCarloIntegrator_1ac7ffd994ca877634add15961840b992d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classMonteCarloIntegrator_1ac7ffd994ca877634add15961840b992d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classMonteCarloIntegrator_1aa44c8bd18c1af1d92022ff3cc46f2599"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classMonteCarloIntegrator_1aa44c8bd18c1af1d92022ff3cc46f2599"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.ss:R"></span><span class="target" id="classMonteCarloIntegrator_1a5c08c32cb317d6fd94b653b8608d0714"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="MonteCarloIntegrator::set_property__std::map:ss.ss:R"></span><span class="target" id="classMonteCarloIntegrator_1a5c08c32cb317d6fd94b653b8608d0714"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE">
-<span id="_CPPv3N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE"></span><span id="_CPPv2N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE"></span><span id="MonteCarloIntegrator::print_warning_calling__ssCR"></span><span class="target" id="classMonteCarloIntegrator_1ad92127d5579f33dc8207a7d8921c5285"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_calling</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE"></span><span id="_CPPv2N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE"></span><span id="MonteCarloIntegrator::print_warning_calling__ssCR"></span><span class="target" id="classMonteCarloIntegrator_1ad92127d5579f33dc8207a7d8921c5285"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_calling</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE">
-<span id="_CPPv3N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE"></span><span id="_CPPv2N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE"></span><span id="MonteCarloIntegrator::print_warning_property_name__ssCR"></span><span class="target" id="classMonteCarloIntegrator_1a42b870221605a6f6a71636470348c119"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_property_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE"></span><span id="_CPPv2N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE"></span><span id="MonteCarloIntegrator::print_warning_property_name__ssCR"></span><span class="target" id="classMonteCarloIntegrator_1a42b870221605a6f6a71636470348c119"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_property_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -587,47 +599,47 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator7_systemE">
-<span id="_CPPv3N20MonteCarloIntegrator7_systemE"></span><span id="_CPPv2N20MonteCarloIntegrator7_systemE"></span><span id="MonteCarloIntegrator::_system__SystemClassR"></span><span class="target" id="classMonteCarloIntegrator_1ac91ef365e1aa11f35ce3406b0aa90d8d"></span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_system</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator7_systemE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator7_systemE"></span><span id="_CPPv2N20MonteCarloIntegrator7_systemE"></span><span id="MonteCarloIntegrator::_system__SystemClassR"></span><span class="target" id="classMonteCarloIntegrator_1ac91ef365e1aa11f35ce3406b0aa90d8d"></span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_system</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator7_systemE" title="Link to this definition">#</a><br /></dt>
 <dd><p>reference to system class where the box and particles are stored </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator11_potentialsE">
-<span id="_CPPv3N20MonteCarloIntegrator11_potentialsE"></span><span id="_CPPv2N20MonteCarloIntegrator11_potentialsE"></span><span id="MonteCarloIntegrator::_potentials__VertexComputeR"></span><span class="target" id="classMonteCarloIntegrator_1a1a69de6679e2c93b8977564da73c63ac"></span><a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#_CPPv413VertexCompute" title="VertexCompute"><span class="n"><span class="pre">VertexCompute</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_potentials</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator11_potentialsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator11_potentialsE"></span><span id="_CPPv2N20MonteCarloIntegrator11_potentialsE"></span><span id="MonteCarloIntegrator::_potentials__VertexComputeR"></span><span class="target" id="classMonteCarloIntegrator_1a1a69de6679e2c93b8977564da73c63ac"></span><a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#_CPPv413VertexCompute" title="VertexCompute"><span class="n"><span class="pre">VertexCompute</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_potentials</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator11_potentialsE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Compute potential pointer. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator4nameE">
-<span id="_CPPv3N20MonteCarloIntegrator4nameE"></span><span id="_CPPv2N20MonteCarloIntegrator4nameE"></span><span id="MonteCarloIntegrator::name__ss"></span><span class="target" id="classMonteCarloIntegrator_1a1d0a61b8ab01fea0175526ca0b242e81"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator4nameE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator4nameE"></span><span id="_CPPv2N20MonteCarloIntegrator4nameE"></span><span id="MonteCarloIntegrator::name__ss"></span><span class="target" id="classMonteCarloIntegrator_1a1d0a61b8ab01fea0175526ca0b242e81"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator4nameE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Integrator name. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator4typeE">
-<span id="_CPPv3N20MonteCarloIntegrator4typeE"></span><span id="_CPPv2N20MonteCarloIntegrator4typeE"></span><span id="MonteCarloIntegrator::type__ss"></span><span class="target" id="classMonteCarloIntegrator_1a8c7d9509b49338e11c8397618a642942"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator4typeE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator4typeE"></span><span id="_CPPv2N20MonteCarloIntegrator4typeE"></span><span id="MonteCarloIntegrator::type__ss"></span><span class="target" id="classMonteCarloIntegrator_1a8c7d9509b49338e11c8397618a642942"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator4typeE" title="Link to this definition">#</a><br /></dt>
 <dd><p>integrator type, active, torque, etc </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator1TE">
-<span id="_CPPv3N20MonteCarloIntegrator1TE"></span><span id="_CPPv2N20MonteCarloIntegrator1TE"></span><span id="MonteCarloIntegrator::T__real"></span><span class="target" id="classMonteCarloIntegrator_1ae84d836d09430f6b2da30fde1e02cc4c"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator1TE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator1TE"></span><span id="_CPPv2N20MonteCarloIntegrator1TE"></span><span id="MonteCarloIntegrator::T__real"></span><span class="target" id="classMonteCarloIntegrator_1ae84d836d09430f6b2da30fde1e02cc4c"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator1TE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Temperature of the system. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator15integrate_everyE">
-<span id="_CPPv3N20MonteCarloIntegrator15integrate_everyE"></span><span id="_CPPv2N20MonteCarloIntegrator15integrate_everyE"></span><span id="MonteCarloIntegrator::integrate_every__i"></span><span class="target" id="classMonteCarloIntegrator_1ad8929da67aacbff438f417d7aeab410c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integrate_every</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator15integrate_everyE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator15integrate_everyE"></span><span id="_CPPv2N20MonteCarloIntegrator15integrate_everyE"></span><span id="MonteCarloIntegrator::integrate_every__i"></span><span class="target" id="classMonteCarloIntegrator_1ad8929da67aacbff438f417d7aeab410c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integrate_every</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator15integrate_everyE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator14minimum_energyE">
-<span id="_CPPv3N20MonteCarloIntegrator14minimum_energyE"></span><span id="_CPPv2N20MonteCarloIntegrator14minimum_energyE"></span><span id="MonteCarloIntegrator::minimum_energy__double"></span><span class="target" id="classMonteCarloIntegrator_1a939530773d57874ca1c96625707c4ac3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">minimum_energy</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator14minimum_energyE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator14minimum_energyE"></span><span id="_CPPv2N20MonteCarloIntegrator14minimum_energyE"></span><span id="MonteCarloIntegrator::minimum_energy__double"></span><span class="target" id="classMonteCarloIntegrator_1a939530773d57874ca1c96625707c4ac3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">minimum_energy</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator14minimum_energyE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE">
-<span id="_CPPv3N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE"></span><span id="_CPPv2N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE"></span><span id="MonteCarloIntegrator::NUM_TYPES_ALLOWED__i"></span><span class="target" id="classMonteCarloIntegrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NUM_TYPES_ALLOWED</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE"></span><span id="_CPPv2N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE"></span><span id="MonteCarloIntegrator::NUM_TYPES_ALLOWED__i"></span><span class="target" id="classMonteCarloIntegrator_1ac2ef6dbb52fe5e17d3254a47bd7793bc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NUM_TYPES_ALLOWED</span></span></span><a class="headerlink" href="#_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -641,11 +653,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="classMinimizerMeshFIRE.html"
@@ -665,10 +676,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -687,7 +695,41 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derived-types">Derived Types</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv420MonteCarloIntegrator"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::MonteCarloIntegrator()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegratorD0Ev"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::~MonteCarloIntegrator()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator9integrateEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::integrate()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromEdgeERKi"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::ComputeEnergyFromEdge()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::ComputeEnergyFromVertex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator21ComputeEnergyFromFaceERKi"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::ComputeEnergyFromFace()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator15set_temperatureEd"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_temperature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::update_temperature_parameters()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK20MonteCarloIntegrator15get_temperatureEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::get_temperature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator8get_nameEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::get_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator8get_typeEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::get_type()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::get_integrate_every()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator19set_integrate_everyEi"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_integrate_every()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::get_minimum_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator18set_minimum_energyEd"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_minimum_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator22set_default_propertiesEv"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_default_properties()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::set_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator21print_warning_callingERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::print_warning_calling()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator27print_warning_property_nameERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::print_warning_property_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator7_systemE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::_system</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator11_potentialsE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::_potentials</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator4nameE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::name</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator4typeE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::type</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator1TE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::T</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator15integrate_everyE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::integrate_every</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator14minimum_energyE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::minimum_energy</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegrator::NUM_TYPES_ALLOWED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -704,8 +746,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -723,7 +765,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
@@ -731,10 +773,11 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

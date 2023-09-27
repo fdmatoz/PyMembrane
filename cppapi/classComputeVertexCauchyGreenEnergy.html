@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html data-theme="light">
+<html lang="en" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class ComputeVertexCauchyGreenEnergy &#8212; PyMembrane  documentation</title>
   
@@ -19,41 +18,41 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/classComputeVertexCauchyGreenEnergy';</script>
-    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class ComputeVertexConstantAreaTriangleEnergy" href="classComputeVertexConstantAreaTriangleEnergy.html" />
     <link rel="prev" title="Class ComputeVertexBendingHelfrichEnergy" href="classComputeVertexBendingHelfrichEnergy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -62,6 +61,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -102,7 +110,8 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -122,7 +131,6 @@
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -171,27 +179,27 @@
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -203,23 +211,25 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -230,18 +240,20 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -304,27 +316,27 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -338,10 +350,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -374,8 +386,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
@@ -385,7 +397,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class ComputeVertexCauchyGreenEnergy</li>
+    <li class="breadcrumb-item active" aria-current="page">Class...</li>
   </ul>
 </nav>
 </div>
@@ -403,55 +415,55 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="class-computevertexcauchygreenenergy">
-<span id="exhale-class-classcomputevertexcauchygreenenergy"></span><h1>Class ComputeVertexCauchyGreenEnergy<a class="headerlink" href="#class-computevertexcauchygreenenergy" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classcomputevertexcauchygreenenergy"></span><h1>Class ComputeVertexCauchyGreenEnergy<a class="headerlink" href="#class-computevertexcauchygreenenergy" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_pymembrane_cppmodule_src_potentials_potentialCauchyGreen.hpp.html#file-pymembrane-cppmodule-src-potentials-potentialcauchygreen-hpp"><span class="std std-ref">File potentialCauchyGreen.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeForceClass</span></code> (<a class="reference internal" href="classComputeForceClass.html#exhale-class-classcomputeforceclass"><span class="std std-ref">Class ComputeForceClass</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv430ComputeVertexCauchyGreenEnergy">
-<span id="_CPPv330ComputeVertexCauchyGreenEnergy"></span><span id="_CPPv230ComputeVertexCauchyGreenEnergy"></span><span id="ComputeVertexCauchyGreenEnergy"></span><span class="target" id="classComputeVertexCauchyGreenEnergy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexCauchyGreenEnergy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classComputeForceClass.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><a class="headerlink" href="#_CPPv430ComputeVertexCauchyGreenEnergy" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv330ComputeVertexCauchyGreenEnergy"></span><span id="_CPPv230ComputeVertexCauchyGreenEnergy"></span><span id="ComputeVertexCauchyGreenEnergy"></span><span class="target" id="classComputeVertexCauchyGreenEnergy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexCauchyGreenEnergy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classComputeForceClass.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><a class="headerlink" href="#_CPPv430ComputeVertexCauchyGreenEnergy" title="Link to this definition">#</a><br /></dt>
 <dd><p>Compute Cauchy-Green stretching energy for a triangle Stretching energy density is calculated as. </p>
 <p><span class="math notranslate nohighlight">\( E=\frac{k}{2}\frac{1}{1+\nu}\left(Tr\left(C^2\right) + \frac{\nu}{1-\nu}\left(Tr C\right)^2\right) \)</span>, where <span class="math notranslate nohighlight">\( k \)</span> is the elastic constant, <span class="math notranslate nohighlight">\( \nu \)</span> if the Poisson ratio, and <span class="math notranslate nohighlight">\( C = \frac{1}{2}\left(FQ-I\right) \)</span>, with <span class="math notranslate nohighlight">\( F \)</span> being Gram matrix for strained triangle, <span class="math notranslate nohighlight">\( Q \)</span> being the inverse of the Gram matrix for the unstretched triangle and <span class="math notranslate nohighlight">\( I \)</span> is the identity matrix. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass"></span><span id="ComputeVertexCauchyGreenEnergy::ComputeVertexCauchyGreenEnergy__SystemClassR"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a096610a18f9f8a7dbf43f60567c3554a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexCauchyGreenEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass"></span><span id="ComputeVertexCauchyGreenEnergy::ComputeVertexCauchyGreenEnergy__SystemClassR"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a096610a18f9f8a7dbf43f60567c3554a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexCauchyGreenEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergyD0Ev">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergyD0Ev"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergyD0Ev"></span><span id="ComputeVertexCauchyGreenEnergy::~ComputeVertexCauchyGreenEnergy"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a573838af9ee4064d2d40738ffb65122c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ComputeVertexCauchyGreenEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergyD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergyD0Ev"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergyD0Ev"></span><span id="ComputeVertexCauchyGreenEnergy::~ComputeVertexCauchyGreenEnergy"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a573838af9ee4064d2d40738ffb65122c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ComputeVertexCauchyGreenEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergyD0Ev" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv"></span><span id="ComputeVertexCauchyGreenEnergy::set_default_properties__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a690403d9ab89a72f807ce5fb1719c2eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv"></span><span id="ComputeVertexCauchyGreenEnergy::set_default_properties__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a690403d9ab89a72f807ce5fb1719c2eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Set property. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ac302cadfa597f2a0c21b030ede74a126"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ac302cadfa597f2a0c21b030ede74a126"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy8get_infoEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy8get_infoEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy8get_infoEv"></span><span id="ComputeVertexCauchyGreenEnergy::get_info__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ae9c21b6684b17fffacef20366a809db9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy8get_infoEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy8get_infoEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy8get_infoEv"></span><span id="ComputeVertexCauchyGreenEnergy::get_info__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ae9c21b6684b17fffacef20366a809db9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy8get_infoEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the type object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>std::string </p>
 </dd>
 </dl>
@@ -459,13 +471,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_energyEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy14compute_energyEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy14compute_energyEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_energy__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a33e0a508d1d9e17687cacf71276c01cb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_energyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy14compute_energyEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy14compute_energyEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_energy__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a33e0a508d1d9e17687cacf71276c01cb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_energyEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute energy for the actual configuration </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>void </p>
 </dd>
 </dl>
@@ -473,13 +485,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy7computeEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy7computeEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy7computeEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a4169e16716e470ea70fdfaeb36e9b74b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy7computeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy7computeEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy7computeEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a4169e16716e470ea70fdfaeb36e9b74b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy7computeEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute force for the actual configuration </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>void </p>
 </dd>
 </dl>
@@ -487,13 +499,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi"></span><span id="ComputeVertexCauchyGreenEnergy::compute_edge_energy__i"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a8c4867cfedef171821d3746959083e67"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi"></span><span id="ComputeVertexCauchyGreenEnergy::compute_edge_energy__i"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a8c4867cfedef171821d3746959083e67"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute the energy in a given edge </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>edge</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>real </p>
 </dd>
 </dl>
@@ -501,13 +513,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexCauchyGreenEnergy::compute_vertex_energy__i"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a716f261be54695bf030a1150f0ca12d6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexCauchyGreenEnergy::compute_vertex_energy__i"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a716f261be54695bf030a1150f0ca12d6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute the energy in a vertex edge </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>face</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>real </p>
 </dd>
 </dl>
@@ -515,13 +527,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_stressEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy14compute_stressEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy14compute_stressEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_stress__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_stressEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy14compute_stressEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy14compute_stressEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_stress__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1ab34a3bcdb2dfa451af90c1c6c95e7b8a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_stressEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute force for the actual configuration </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>void </p>
 </dd>
 </dl>
@@ -529,13 +541,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_atomic_stress__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a48cbcf6c17394d7dc0ba27cce4d93406"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_atomic_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv"></span><span id="ComputeVertexCauchyGreenEnergy::compute_atomic_stress__void"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a48cbcf6c17394d7dc0ba27cce4d93406"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_atomic_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>compute force for the actual configuration </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>void</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>void </p>
 </dd>
 </dl>
@@ -543,7 +555,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a2a3d0a2d91098d3eef0c5c0b5edab0dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a2a3d0a2d91098d3eef0c5c0b5edab0dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -553,7 +565,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.ss:R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexCauchyGreenEnergy::set_property__std::map:ss.ss:R"></span><span class="target" id="classComputeVertexCauchyGreenEnergy_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -567,11 +579,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="classComputeVertexBendingHelfrichEnergy.html"
@@ -591,10 +602,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -613,7 +621,25 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv430ComputeVertexCauchyGreenEnergy"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy30ComputeVertexCauchyGreenEnergyER11SystemClass"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::ComputeVertexCauchyGreenEnergy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergyD0Ev"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::~ComputeVertexCauchyGreenEnergy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy22set_default_propertiesEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::set_default_properties()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::set_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy8get_infoEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::get_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_energyEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy7computeEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy19compute_edge_energyEi"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute_edge_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_vertex_energyEi"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute_vertex_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy14compute_stressEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute_stress()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy21compute_atomic_stressEv"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::compute_atomic_stress()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::set_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N30ComputeVertexCauchyGreenEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">ComputeVertexCauchyGreenEnergy::set_property()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -630,8 +656,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -649,7 +675,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
@@ -657,10 +683,11 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

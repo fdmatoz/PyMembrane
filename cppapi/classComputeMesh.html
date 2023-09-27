@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html data-theme="light">
+<html lang="en" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class ComputeMesh &#8212; PyMembrane  documentation</title>
   
@@ -19,40 +18,40 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/classComputeMesh';</script>
-    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class ComputeVertexBendingEnergy" href="classComputeVertexBendingEnergy.html" />
     <link rel="prev" title="Class ComputeForceClass" href="classComputeForceClass.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -61,6 +60,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -101,7 +109,8 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -121,7 +130,6 @@
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -170,27 +178,27 @@
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -202,23 +210,25 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -229,18 +239,20 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -303,27 +315,27 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -337,10 +349,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -373,8 +385,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
@@ -402,15 +414,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="class-computemesh">
-<span id="exhale-class-classcomputemesh"></span><h1>Class ComputeMesh<a class="headerlink" href="#class-computemesh" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classcomputemesh"></span><h1>Class ComputeMesh<a class="headerlink" href="#class-computemesh" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_pymembrane_cppmodule_src_compute_computemesh.hpp.html#file-pymembrane-cppmodule-src-compute-computemesh-hpp"><span class="std std-ref">File computemesh.hpp</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv411ComputeMesh">
-<span id="_CPPv311ComputeMesh"></span><span id="_CPPv211ComputeMesh"></span><span id="ComputeMesh"></span><span class="target" id="classComputeMesh"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeMesh</span></span></span><a class="headerlink" href="#_CPPv411ComputeMesh" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv311ComputeMesh"></span><span id="_CPPv211ComputeMesh"></span><span id="ComputeMesh"></span><span class="target" id="classComputeMesh"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeMesh</span></span></span><a class="headerlink" href="#_CPPv411ComputeMesh" title="Link to this definition">#</a><br /></dt>
 <dd><p>Class responsible for various mesh computations. </p>
 <p>This class offers a variety of mesh-related calculations, ranging from vertex normals to mesh energy and stresses. It operates on a provided system of type <code class="docutils literal notranslate"><a class="reference internal" href="class_system_class.html#classSystemClass"><span class="std std-ref"><span class="pre">SystemClass</span></span></a></code>. </p>
 <div class="breathe-sectiondef docutils container">
@@ -418,13 +430,13 @@ document.write(`
 <p>Provides methods to compute various energy, force, and stress-related properties for the mesh. </p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh19compute_mesh_energyER12EvolverClass">
-<span id="_CPPv3N11ComputeMesh19compute_mesh_energyER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh19compute_mesh_energyER12EvolverClass"></span><span id="ComputeMesh::compute_mesh_energy__EvolverClassR"></span><span class="target" id="classComputeMesh_1a806aab7b730a4c6febdf41f82e0d6d51"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_energy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_mesh_energyER12EvolverClass" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh19compute_mesh_energyER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh19compute_mesh_energyER12EvolverClass"></span><span id="ComputeMesh::compute_mesh_energy__EvolverClassR"></span><span class="target" id="classComputeMesh_1a806aab7b730a4c6febdf41f82e0d6d51"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_energy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_mesh_energyER12EvolverClass" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the total energy of the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>evolver</strong> – Reference to the evolver object. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A map containing different energy components and their respective values. </p>
 </dd>
 </dl>
@@ -432,13 +444,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh21compute_vertex_forcesER12EvolverClass">
-<span id="_CPPv3N11ComputeMesh21compute_vertex_forcesER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh21compute_vertex_forcesER12EvolverClass"></span><span id="ComputeMesh::compute_vertex_forces__EvolverClassR"></span><span class="target" id="classComputeMesh_1a258190c333df62c80ed36b135e4d1750"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10.html#_CPPv45real3" title="real3"><span class="n"><span class="pre">real3</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_forces</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh21compute_vertex_forcesER12EvolverClass" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh21compute_vertex_forcesER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh21compute_vertex_forcesER12EvolverClass"></span><span id="ComputeMesh::compute_vertex_forces__EvolverClassR"></span><span class="target" id="classComputeMesh_1a258190c333df62c80ed36b135e4d1750"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1a9d41c556c6bf0f553d1de4c6aa227d10.html#_CPPv45real3" title="real3"><span class="n"><span class="pre">real3</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_forces</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh21compute_vertex_forcesER12EvolverClass" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes forces on each vertex in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>evolver</strong> – Reference to the evolver object. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A vector containing force vectors for each vertex. </p>
 </dd>
 </dl>
@@ -446,16 +458,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh16compute_stressesER12EvolverClassRKb">
-<span id="_CPPv3N11ComputeMesh16compute_stressesER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh16compute_stressesER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a4aa87d2ae583bcc334416702e55684fb"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh16compute_stressesER12EvolverClassRKb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh16compute_stressesER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh16compute_stressesER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a4aa87d2ae583bcc334416702e55684fb"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh16compute_stressesER12EvolverClassRKb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the stress tensors for the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>evolver</strong> – Reference to the evolver object. </p></li>
 <li><p><strong>flag</strong> – see cpp for more detail. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Stress tensor for the mesh. </p>
 </dd>
 </dl>
@@ -463,16 +475,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh12get_stressesER12EvolverClassRKb">
-<span id="_CPPv3N11ComputeMesh12get_stressesER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh12get_stressesER12EvolverClassRKb"></span><span id="ComputeMesh::get_stresses__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a0df02ab4be7567cdb522fb03f70bfedc"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stresses</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh12get_stressesER12EvolverClassRKb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh12get_stressesER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh12get_stressesER12EvolverClassRKb"></span><span id="ComputeMesh::get_stresses__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a0df02ab4be7567cdb522fb03f70bfedc"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stresses</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh12get_stressesER12EvolverClassRKb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Retrieves the stress tensors for the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>evolver</strong> – Reference to the evolver object. </p></li>
 <li><p><strong>flag</strong> – see cpp for more detail. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Stress tensor for the mesh. </p>
 </dd>
 </dl>
@@ -480,13 +492,13 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh16compute_pressureER12EvolverClass">
-<span id="_CPPv3N11ComputeMesh16compute_pressureER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh16compute_pressureER12EvolverClass"></span><span id="ComputeMesh::compute_pressure__EvolverClassR"></span><span class="target" id="classComputeMesh_1a4920fdd93c23e53a94d608fa414b8fdc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_pressure</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh16compute_pressureER12EvolverClass" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh16compute_pressureER12EvolverClass"></span><span id="_CPPv2N11ComputeMesh16compute_pressureER12EvolverClass"></span><span id="ComputeMesh::compute_pressure__EvolverClassR"></span><span class="target" id="classComputeMesh_1a4920fdd93c23e53a94d608fa414b8fdc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_pressure</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh16compute_pressureER12EvolverClass" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the pressure for the mesh using the provided evolver. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>evolver</strong> – Reference to the evolver object. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Vector containing pressure values. </p>
 </dd>
 </dl>
@@ -494,10 +506,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh29compute_kinetic_energy_tensorEv">
-<span id="_CPPv3N11ComputeMesh29compute_kinetic_energy_tensorEv"></span><span id="_CPPv2N11ComputeMesh29compute_kinetic_energy_tensorEv"></span><span id="ComputeMesh::compute_kinetic_energy_tensor__void"></span><span class="target" id="classComputeMesh_1ade0cc217fb21e8435988680fe9e55bfd"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_kinetic_energy_tensor</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh29compute_kinetic_energy_tensorEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh29compute_kinetic_energy_tensorEv"></span><span id="_CPPv2N11ComputeMesh29compute_kinetic_energy_tensorEv"></span><span id="ComputeMesh::compute_kinetic_energy_tensor__void"></span><span class="target" id="classComputeMesh_1ade0cc217fb21e8435988680fe9e55bfd"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_kinetic_energy_tensor</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh29compute_kinetic_energy_tensorEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the kinetic energy tensor for the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Kinetic energy tensor for the mesh. </p>
 </dd>
 </dl>
@@ -505,10 +517,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh22compute_kinetic_energyEv">
-<span id="_CPPv3N11ComputeMesh22compute_kinetic_energyEv"></span><span id="_CPPv2N11ComputeMesh22compute_kinetic_energyEv"></span><span id="ComputeMesh::compute_kinetic_energy__void"></span><span class="target" id="classComputeMesh_1ae18d3e181ec5478c8b3a2c1971aba279"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_kinetic_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_kinetic_energyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh22compute_kinetic_energyEv"></span><span id="_CPPv2N11ComputeMesh22compute_kinetic_energyEv"></span><span id="ComputeMesh::compute_kinetic_energy__void"></span><span class="target" id="classComputeMesh_1ae18d3e181ec5478c8b3a2c1971aba279"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_kinetic_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_kinetic_energyEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the total kinetic energy of the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Total kinetic energy of the mesh. </p>
 </dd>
 </dl>
@@ -516,10 +528,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh19compute_temperatureEv">
-<span id="_CPPv3N11ComputeMesh19compute_temperatureEv"></span><span id="_CPPv2N11ComputeMesh19compute_temperatureEv"></span><span id="ComputeMesh::compute_temperature__void"></span><span class="target" id="classComputeMesh_1a35616a0e8c429e9478a48fe4a62880f6"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_temperatureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh19compute_temperatureEv"></span><span id="_CPPv2N11ComputeMesh19compute_temperatureEv"></span><span id="ComputeMesh::compute_temperature__void"></span><span class="target" id="classComputeMesh_1a35616a0e8c429e9478a48fe4a62880f6"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_temperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_temperatureEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the temperature based on the current state of the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Temperature of the mesh. </p>
 </dd>
 </dl>
@@ -527,16 +539,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb">
-<span id="_CPPv3N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses_virial__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1ae933618d642610e53b40c2dbbd874b12"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses_virial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">evolver</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">computeForAllAtoms</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses_virial__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1ae933618d642610e53b40c2dbbd874b12"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses_virial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">evolver</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">computeForAllAtoms</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the virial stresses for the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>evolver</strong> – Reference to the evolver object guiding the mesh’s evolution. </p></li>
 <li><p><strong>computeForAllAtoms</strong> – Flag to determine whether to compute stresses for all atoms or a subset. Replace with actual flag description. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Virial stress tensor for the mesh. </p>
 </dd>
 </dl>
@@ -544,16 +556,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb">
-<span id="_CPPv3N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses_atom__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a297da91a8a7c8bc7c9aa73fcb2304eb3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses_atom</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">evolver</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">computeForAllAtoms</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb"></span><span id="_CPPv2N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb"></span><span id="ComputeMesh::compute_stresses_atom__EvolverClassR.bCR"></span><span class="target" id="classComputeMesh_1a297da91a8a7c8bc7c9aa73fcb2304eb3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stresses_atom</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classEvolverClass.html#_CPPv412EvolverClass" title="EvolverClass"><span class="n"><span class="pre">EvolverClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">evolver</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">computeForAllAtoms</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the stresses for each atom in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>evolver</strong> – Reference to the evolver object guiding the mesh’s evolution. </p></li>
 <li><p><strong>computeForAllAtoms</strong> – Flag to determine whether to compute stresses for all atoms or a subset. Replace with actual flag description. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Vector of stress tensors, one for each atom. </p>
 </dd>
 </dl>
@@ -564,10 +576,10 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh11ComputeMeshER11SystemClass">
-<span id="_CPPv3N11ComputeMesh11ComputeMeshER11SystemClass"></span><span id="_CPPv2N11ComputeMesh11ComputeMeshER11SystemClass"></span><span id="ComputeMesh::ComputeMesh__SystemClassR"></span><span class="target" id="classComputeMesh_1ae2206d8faa6094faa4623e043d486eb2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeMesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh11ComputeMeshER11SystemClass" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh11ComputeMeshER11SystemClass"></span><span id="_CPPv2N11ComputeMesh11ComputeMeshER11SystemClass"></span><span id="ComputeMesh::ComputeMesh__SystemClassR"></span><span class="target" id="classComputeMesh_1ae2206d8faa6094faa4623e043d486eb2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeMesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh11ComputeMeshER11SystemClass" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructor that initializes the compute mesh with a system. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>system</strong> – Reference to the system on which the computations will be made. </p>
 </dd>
 </dl>
@@ -575,10 +587,10 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh22compute_vertex_normalsEb">
-<span id="_CPPv3N11ComputeMesh22compute_vertex_normalsEb"></span><span id="_CPPv2N11ComputeMesh22compute_vertex_normalsEb"></span><span id="ComputeMesh::compute_vertex_normals__b"></span><span class="target" id="classComputeMesh_1a01fbf3ea41eacf6fc6d82ab50fbc53d5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_normals</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vertex_normal_angle_weight</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_vertex_normalsEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh22compute_vertex_normalsEb"></span><span id="_CPPv2N11ComputeMesh22compute_vertex_normalsEb"></span><span id="ComputeMesh::compute_vertex_normals__b"></span><span class="target" id="classComputeMesh_1a01fbf3ea41eacf6fc6d82ab50fbc53d5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_normals</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vertex_normal_angle_weight</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_vertex_normalsEb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the normals for each vertex in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vertex_normal_angle_weight</strong> – Flag to determine if the vertex normal should be angle weighted. Default is false. </p>
 </dd>
 </dl>
@@ -586,16 +598,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh20compute_face_normalsEv">
-<span id="_CPPv3N11ComputeMesh20compute_face_normalsEv"></span><span id="_CPPv2N11ComputeMesh20compute_face_normalsEv"></span><span id="ComputeMesh::compute_face_normals__void"></span><span class="target" id="classComputeMesh_1ab3f62e044c17f862e84f457dec6a856a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_normals</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20compute_face_normalsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh20compute_face_normalsEv"></span><span id="_CPPv2N11ComputeMesh20compute_face_normalsEv"></span><span id="ComputeMesh::compute_face_normals__void"></span><span class="target" id="classComputeMesh_1ab3f62e044c17f862e84f457dec6a856a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_normals</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20compute_face_normalsEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the normals for each face in the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh20compute_edge_lengthsEv">
-<span id="_CPPv3N11ComputeMesh20compute_edge_lengthsEv"></span><span id="_CPPv2N11ComputeMesh20compute_edge_lengthsEv"></span><span id="ComputeMesh::compute_edge_lengths__void"></span><span class="target" id="classComputeMesh_1a3485440d5034df582d39ea26c9adac64"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_lengths</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20compute_edge_lengthsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh20compute_edge_lengthsEv"></span><span id="_CPPv2N11ComputeMesh20compute_edge_lengthsEv"></span><span id="ComputeMesh::compute_edge_lengths__void"></span><span class="target" id="classComputeMesh_1a3485440d5034df582d39ea26c9adac64"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_lengths</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20compute_edge_lengthsEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the length of each edge in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector containing lengths for each edge. </p>
 </dd>
 </dl>
@@ -603,41 +615,41 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh24gaussiancurvature_vertexERKi">
-<span id="_CPPv3N11ComputeMesh24gaussiancurvature_vertexERKi"></span><span id="_CPPv2N11ComputeMesh24gaussiancurvature_vertexERKi"></span><span id="ComputeMesh::gaussiancurvature_vertex__iCR"></span><span class="target" id="classComputeMesh_1a1bda94178ca3a941690b30a3b77f2a53"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gaussiancurvature_vertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh24gaussiancurvature_vertexERKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh24gaussiancurvature_vertexERKi"></span><span id="_CPPv2N11ComputeMesh24gaussiancurvature_vertexERKi"></span><span id="ComputeMesh::gaussiancurvature_vertex__iCR"></span><span class="target" id="classComputeMesh_1a1bda94178ca3a941690b30a3b77f2a53"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gaussiancurvature_vertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh24gaussiancurvature_vertexERKi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the Gaussian curvature at the vertex. </p>
 <p>Computes the Gaussian curvature for the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh20meancurvature_vertexERKi">
-<span id="_CPPv3N11ComputeMesh20meancurvature_vertexERKi"></span><span id="_CPPv2N11ComputeMesh20meancurvature_vertexERKi"></span><span id="ComputeMesh::meancurvature_vertex__iCR"></span><span class="target" id="classComputeMesh_1abb01bf7089f605f837bf9c9833b96868"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meancurvature_vertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20meancurvature_vertexERKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh20meancurvature_vertexERKi"></span><span id="_CPPv2N11ComputeMesh20meancurvature_vertexERKi"></span><span id="ComputeMesh::meancurvature_vertex__iCR"></span><span class="target" id="classComputeMesh_1abb01bf7089f605f837bf9c9833b96868"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meancurvature_vertex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vertex_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh20meancurvature_vertexERKi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the mean curvature at the vertex. </p>
 <p>Computes the mean curvature for the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh17gaussiancurvatureEv">
-<span id="_CPPv3N11ComputeMesh17gaussiancurvatureEv"></span><span id="_CPPv2N11ComputeMesh17gaussiancurvatureEv"></span><span id="ComputeMesh::gaussiancurvature__void"></span><span class="target" id="classComputeMesh_1a86623c755a819c22e6f36fddf8e4ff15"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gaussiancurvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17gaussiancurvatureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh17gaussiancurvatureEv"></span><span id="_CPPv2N11ComputeMesh17gaussiancurvatureEv"></span><span id="ComputeMesh::gaussiancurvature__void"></span><span class="target" id="classComputeMesh_1a86623c755a819c22e6f36fddf8e4ff15"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gaussiancurvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17gaussiancurvatureEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the Gaussian curvature for the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh13meancurvatureEv">
-<span id="_CPPv3N11ComputeMesh13meancurvatureEv"></span><span id="_CPPv2N11ComputeMesh13meancurvatureEv"></span><span id="ComputeMesh::meancurvature__void"></span><span class="target" id="classComputeMesh_1a9ba8ecac3132d47fb86ff6d5268fcdd7"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meancurvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh13meancurvatureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh13meancurvatureEv"></span><span id="_CPPv2N11ComputeMesh13meancurvatureEv"></span><span id="ComputeMesh::meancurvature__void"></span><span class="target" id="classComputeMesh_1a9ba8ecac3132d47fb86ff6d5268fcdd7"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meancurvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh13meancurvatureEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the mean curvature for the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh22compute_mesh_curvatureEv">
-<span id="_CPPv3N11ComputeMesh22compute_mesh_curvatureEv"></span><span id="_CPPv2N11ComputeMesh22compute_mesh_curvatureEv"></span><span id="ComputeMesh::compute_mesh_curvature__void"></span><span class="target" id="classComputeMesh_1a40a168583c0c169dfb8b7bd542648ae7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_curvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_mesh_curvatureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh22compute_mesh_curvatureEv"></span><span id="_CPPv2N11ComputeMesh22compute_mesh_curvatureEv"></span><span id="ComputeMesh::compute_mesh_curvature__void"></span><span class="target" id="classComputeMesh_1a40a168583c0c169dfb8b7bd542648ae7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_curvature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh22compute_mesh_curvatureEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh19compute_face_metricEv">
-<span id="_CPPv3N11ComputeMesh19compute_face_metricEv"></span><span id="_CPPv2N11ComputeMesh19compute_face_metricEv"></span><span id="ComputeMesh::compute_face_metric__void"></span><span class="target" id="classComputeMesh_1ae0239b15648e49160f7a9e588a75a71d"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_metric</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_face_metricEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh19compute_face_metricEv"></span><span id="_CPPv2N11ComputeMesh19compute_face_metricEv"></span><span id="ComputeMesh::compute_face_metric__void"></span><span class="target" id="classComputeMesh_1ae0239b15648e49160f7a9e588a75a71d"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_metric</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_face_metricEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes metrics related to each face in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector containing metrics for each face. </p>
 </dd>
 </dl>
@@ -645,16 +657,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh19compute_mesh_volumeEv">
-<span id="_CPPv3N11ComputeMesh19compute_mesh_volumeEv"></span><span id="_CPPv2N11ComputeMesh19compute_mesh_volumeEv"></span><span id="ComputeMesh::compute_mesh_volume__void"></span><span class="target" id="classComputeMesh_1ab9f1d039272f60ef86e58d7daedde4eb"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_volume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_mesh_volumeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh19compute_mesh_volumeEv"></span><span id="_CPPv2N11ComputeMesh19compute_mesh_volumeEv"></span><span id="ComputeMesh::compute_mesh_volume__void"></span><span class="target" id="classComputeMesh_1ab9f1d039272f60ef86e58d7daedde4eb"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_volume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_mesh_volumeEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the total volume of the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh17compute_face_areaEv">
-<span id="_CPPv3N11ComputeMesh17compute_face_areaEv"></span><span id="_CPPv2N11ComputeMesh17compute_face_areaEv"></span><span id="ComputeMesh::compute_face_area__void"></span><span class="target" id="classComputeMesh_1a755b9eccf9a1c4ee1c559c8f0b9b1594"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17compute_face_areaEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh17compute_face_areaEv"></span><span id="_CPPv2N11ComputeMesh17compute_face_areaEv"></span><span id="ComputeMesh::compute_face_area__void"></span><span class="target" id="classComputeMesh_1a755b9eccf9a1c4ee1c559c8f0b9b1594"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17compute_face_areaEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the area of each face in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector containing areas for each face. </p>
 </dd>
 </dl>
@@ -662,16 +674,16 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh17compute_mesh_areaEv">
-<span id="_CPPv3N11ComputeMesh17compute_mesh_areaEv"></span><span id="_CPPv2N11ComputeMesh17compute_mesh_areaEv"></span><span id="ComputeMesh::compute_mesh_area__void"></span><span class="target" id="classComputeMesh_1a5be77f57818856a8c946418390a7158b"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17compute_mesh_areaEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh17compute_mesh_areaEv"></span><span id="_CPPv2N11ComputeMesh17compute_mesh_areaEv"></span><span id="ComputeMesh::compute_mesh_area__void"></span><span class="target" id="classComputeMesh_1a5be77f57818856a8c946418390a7158b"></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_mesh_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh17compute_mesh_areaEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the total surface area of the mesh. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11ComputeMesh19compute_vertex_areaEv">
-<span id="_CPPv3N11ComputeMesh19compute_vertex_areaEv"></span><span id="_CPPv2N11ComputeMesh19compute_vertex_areaEv"></span><span id="ComputeMesh::compute_vertex_area__void"></span><span class="target" id="classComputeMesh_1aeecbaf8c127095e46cc6d02283595612"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_vertex_areaEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N11ComputeMesh19compute_vertex_areaEv"></span><span id="_CPPv2N11ComputeMesh19compute_vertex_areaEv"></span><span id="ComputeMesh::compute_vertex_area__void"></span><span class="target" id="classComputeMesh_1aeecbaf8c127095e46cc6d02283595612"></span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_area</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ComputeMesh19compute_vertex_areaEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Computes the area associated with each vertex in the mesh. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector containing areas for each vertex. </p>
 </dd>
 </dl>
@@ -688,11 +700,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="classComputeForceClass.html"
@@ -712,10 +723,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -730,7 +738,36 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411ComputeMesh"><code class="docutils literal notranslate"><span class="pre">ComputeMesh</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh19compute_mesh_energyER12EvolverClass"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_mesh_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh21compute_vertex_forcesER12EvolverClass"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_vertex_forces()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh16compute_stressesER12EvolverClassRKb"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_stresses()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh12get_stressesER12EvolverClassRKb"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::get_stresses()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh16compute_pressureER12EvolverClass"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_pressure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh29compute_kinetic_energy_tensorEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_kinetic_energy_tensor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh22compute_kinetic_energyEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_kinetic_energy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh19compute_temperatureEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_temperature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh23compute_stresses_virialER12EvolverClassRKb"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_stresses_virial()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh21compute_stresses_atomER12EvolverClassRKb"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_stresses_atom()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh11ComputeMeshER11SystemClass"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::ComputeMesh()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh22compute_vertex_normalsEb"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_vertex_normals()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh20compute_face_normalsEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_face_normals()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh20compute_edge_lengthsEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_edge_lengths()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh24gaussiancurvature_vertexERKi"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::gaussiancurvature_vertex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh20meancurvature_vertexERKi"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::meancurvature_vertex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh17gaussiancurvatureEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::gaussiancurvature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh13meancurvatureEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::meancurvature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh22compute_mesh_curvatureEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_mesh_curvature()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh19compute_face_metricEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_face_metric()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh19compute_mesh_volumeEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_mesh_volume()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh17compute_face_areaEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_face_area()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh17compute_mesh_areaEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_mesh_area()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11ComputeMesh19compute_vertex_areaEv"><code class="docutils literal notranslate"><span class="pre">ComputeMesh::compute_vertex_area()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -747,8 +784,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -766,7 +803,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
@@ -774,10 +811,11 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html data-theme="light">
+<html lang="en" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>+1 Disclination Buckling: A PyMembrane Tutorial &#8212; PyMembrane  documentation</title>
   
@@ -19,41 +18,41 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/disclination';</script>
-    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Caspar-Klug Thin Shells Buckling" href="shell_buckling.html" />
     <link rel="prev" title="PyMembrane Examples" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -62,6 +61,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -102,7 +110,8 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -122,7 +131,6 @@
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -171,27 +179,27 @@
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -203,23 +211,25 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -230,18 +240,20 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -304,27 +316,27 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/references.html">
+                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
                         References
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="quickstart.html">
+                      <a class="nav-link dropdown-item nav-internal" href="quickstart.html">
                         Quick Start and Examples
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -338,10 +350,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
@@ -392,8 +404,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
@@ -406,7 +418,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="examples.html" class="nav-link">PyMembrane Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">+1 Disclination Buckling: A PyMembrane Tutorial</li>
+    <li class="breadcrumb-item active" aria-current="page">+1...</li>
   </ul>
 </nav>
 </div>
@@ -424,24 +436,24 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="disclination-buckling-a-pymembrane-tutorial">
-<h1>+1 Disclination Buckling: A PyMembrane Tutorial<a class="headerlink" href="#disclination-buckling-a-pymembrane-tutorial" title="Permalink to this headline">#</a></h1>
+<h1>+1 Disclination Buckling: A PyMembrane Tutorial<a class="headerlink" href="#disclination-buckling-a-pymembrane-tutorial" title="Link to this heading">#</a></h1>
 <figure class="align-center" id="id1">
 <img alt="initial mesh" src="../_images/disclination.png" />
 <figcaption>
-<p><span class="caption-text">Figure: Snapshots of a Monte Carlo simulation of an open +1 disclination that shows buckling into a conical shape. (Left) the initial flat configuration; (Right) the relaxed buckled configuration. The colour bar represents the local mean curvature of the mesh.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Figure: Snapshots of a Monte Carlo simulation of an open +1 disclination that shows buckling into a conical shape. (Left) the initial flat configuration; (Right) the relaxed buckled configuration. The colour bar represents the local mean curvature of the mesh.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>We start with the well-known problem in thin-sheet mechanics that studies out-of-plane buckling of a +1 disclination~cite{Seung88}. This is a common phenomenon observed in mechanics and can be used to create interesting structures like cone-shaped party hats.</p>
 </section>
 <section id="the-problem">
-<h2>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">#</a></h2>
+<h2>The Problem<a class="headerlink" href="#the-problem" title="Link to this heading">#</a></h2>
 <p>For simplicity, we discuss the underlying physics using the discrete version of the problem. Let’s assume we have a hexagonal flat patch tiled by equilateral triangles. The hexagon is made of six equilateral triangular wedges. If we remove one wedge (i.e., a section of angle <span class="math notranslate nohighlight">\(\pi/3\equiv2\pi/6\)</span>) and glue together the two free edges, the resulting plate will be a pentagon, with the vertex in the center having five nearest neighbors. This is a +1 disclination.</p>
-<p>The elastic energy can be reduced if the patch is allowed to buckle out of the plane. This introduces some bending penalty but reduces the stretching energy. One can show that the buckling transition happens if the F&quot;oppl-von K'arm'an number <span class="math notranslate nohighlight">\(YR^2/\kappa\ge154\)</span> is Young’s modulus, <span class="math notranslate nohighlight">\(R\)</span> is the patch radius, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the bending rigidity.</p>
+<p>The elastic energy can be reduced if the patch is allowed to buckle out of the plane. This introduces some bending penalty but reduces the stretching energy. One can show that the buckling transition happens if the F&quot;oppl-von K'arm'an number <span class="math notranslate nohighlight">\(YR^2/\kappa\ge154`~\cite{Nelson87, Seung88}, where :math:`Y\)</span> is Young’s modulus, <span class="math notranslate nohighlight">\(R\)</span> is the patch radius, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the bending rigidity.</p>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section.</p>
@@ -454,7 +466,7 @@ document.write(`
 </ul>
 </section>
 <section id="running-the-code">
-<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">#</a></h2>
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Save the provided code as <a class="reference download internal" download="" href="../_downloads/00d7a7cfa87357f66b161a82f7a58a53/disclination.py"><code class="xref download docutils literal notranslate"><span class="pre">disclination.py</span></code></a></p></li>
 <li><p>Download or create your vertex and face input files, such as <a class="reference download internal" download="" href="../_downloads/78a5b86918e8225e37bafeca86ce6089/InputFiles.zip"><code class="xref download docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Files</span></code></a>.</p></li>
@@ -466,7 +478,7 @@ document.write(`
 </ol>
 </section>
 <section id="pymembrane-implementation">
-<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Permalink to this headline">#</a></h2>
+<h2>PyMembrane Implementation<a class="headerlink" href="#pymembrane-implementation" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pymembrane</span> <span class="k">as</span> <span class="nn">mb</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
@@ -586,7 +598,7 @@ document.write(`
 </div>
 </section>
 <section id="explanation">
-<h2>Explanation<a class="headerlink" href="#explanation" title="Permalink to this headline">#</a></h2>
+<h2>Explanation<a class="headerlink" href="#explanation" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Initialization</strong>: We start by importing necessary modules and parsing user arguments for snapshots, run steps, and pentagon size.</p></li>
 <li><p><strong>System Creation</strong>: A simulation box and system instance are created and verified.</p></li>
@@ -597,11 +609,11 @@ document.write(`
 </ol>
 </section>
 <section id="result-and-interpretation">
-<h2>Result and Interpretation<a class="headerlink" href="#result-and-interpretation" title="Permalink to this headline">#</a></h2>
+<h2>Result and Interpretation<a class="headerlink" href="#result-and-interpretation" title="Link to this heading">#</a></h2>
 <p>This tutorial demonstrates how PyMembrane can be used to model a +1 planar disclination and understand its buckling transition. By following the simple workflow detailed in this tutorial, one can easily extend the simulation to other complex systems.</p>
 </section>
 <section id="attached-files">
-<h2>Attached Files<a class="headerlink" href="#attached-files" title="Permalink to this headline">#</a></h2>
+<h2>Attached Files<a class="headerlink" href="#attached-files" title="Link to this heading">#</a></h2>
 <p>Monte Carlo Python script: <a class="reference download internal" download="" href="../_downloads/00d7a7cfa87357f66b161a82f7a58a53/disclination.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Script</span></code></a></p>
 <p>Input files: <a class="reference download internal" download="" href="../_downloads/78a5b86918e8225e37bafeca86ce6089/InputFiles.zip"><code class="xref download docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Files</span></code></a></p>
 <p>Other two additional scripts for Brownian and Velocity Verlet integrators are also provided:</p>
@@ -609,18 +621,20 @@ document.write(`
 <p><a class="reference download internal" download="" href="../_downloads/a7a2a577f3bcba6fbcd7bbe7d43b58b1/disclination.py"><code class="xref download docutils literal notranslate"><span class="pre">Velocity</span> <span class="pre">Verlet</span> <span class="pre">Python</span> <span class="pre">script</span></code></a></p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<dl class="citation">
-<dt class="label" id="seung88"><span class="brackets">Seung88</span></dt>
-<dd><p>Seung, H. S., &amp; Nelson, D. R. (1988). Microstructure of two-dimensional disclinations. Physical Review A, 38(2), 1005.</p>
-</dd>
-<dt class="label" id="nelson87"><span class="brackets">Nelson87</span></dt>
-<dd><p>Nelson, D. R. (1987). Order, frustration, and defects in liquids and glasses. Physical Review B, 36(10), 5788.</p>
-</dd>
-</dl>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="seung88" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Seung88<span class="fn-bracket">]</span></span>
+<p>Seung, H. S., &amp; Nelson, D. R. (1988). Microstructure of two-dimensional disclinations. Physical Review A, 38(2), 1005.</p>
+</div>
+<div class="citation" id="nelson87" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nelson87<span class="fn-bracket">]</span></span>
+<p>Nelson, D. R. (1987). Order, frustration, and defects in liquids and glasses. Physical Review B, 36(10), 5788.</p>
+</div>
+</div>
 </section>
 <section id="note">
-<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">#</a></h2>
+<h2>Note<a class="headerlink" href="#note" title="Link to this heading">#</a></h2>
 <p>Please refer to the PyMembrane documentation for more specific details about classes and methods used in this tutorial. Feel free to modify parameters and observe how they influence the results.</p>
 </section>
 </section>
@@ -630,11 +644,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="examples.html"
@@ -654,10 +667,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -698,8 +708,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -717,7 +727,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
@@ -725,10 +735,11 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>
