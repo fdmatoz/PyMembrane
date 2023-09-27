@@ -34,8 +34,9 @@ class InstallLocalPackage(install):
         print()
         install.run(self)
         #subprocess.call("cd pymembrane/cppmodule/build && cmake .. && make -j2 && cp cppmodule.* ../", shell=True)
-        subprocess.call("cd pymembrane/cppmodule/build && cmake -DCMAKE_INSTALL_PREFIX={:s}/pymembrane/cppmodule .. && make -j{:d} && make install".format(site.getsitepackages()[0], multiprocessing.cpu_count()//2 - 1), shell=True)
-
+        #subprocess.call("cd pymembrane/cppmodule/build && cmake -DCMAKE_INSTALL_PREFIX={:s}/pymembrane/cppmodule .. && make -j{:d} && make install".format(site.getsitepackages()[0], multiprocessing.cpu_count()//2 - 1), shell=True)
+        cpu_cores = max(1, multiprocessing.cpu_count() // 2)
+        subprocess.call("cd pymembrane/cppmodule/build && cmake -DCMAKE_INSTALL_PREFIX={:s}/pymembrane/cppmodule .. && make -j{:d} && make install".format(site.getsitepackages()[0], cpu_cores), shell=True)
 with open("README.md", "r") as fh:
     long_description = fh.read()
     #print(long_description)
