@@ -86,7 +86,8 @@ void export_HE_Vertex(py::module &m)
         .def_readwrite("mass", &HE_VertexProp::mass, "mass")
         .def_readwrite("type", &HE_VertexProp::type, "type")
         .def_readonly("energy", &HE_VertexProp::energy, "Conservative Energy")
-        .def_readwrite("property", &HE_VertexProp::_property, "Properties");
+        .def_readwrite("property", &HE_VertexProp::_property, "Properties")
+        .def_readwrite("spin", &HE_VertexProp::spin, "Spin Value");
 }
 
 void export_HE_Vertex_Vector(py::module &m)

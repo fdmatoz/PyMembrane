@@ -5,9 +5,8 @@
  * \brief Declaration of IntegratorBrownianVertex class
  */
 
-#ifndef __montercarlo_swap_vertex_HPP__
-#define __montercarlo_swap_vertex_HPP__
-
+#ifndef __montercarlo_spin_vertex_HPP__
+#define __montercarlo_spin_vertex_HPP__
 
 
 #include <iostream>
@@ -16,35 +15,32 @@
 #include "../types/globaltypes.hpp"
 #include "../utils/fromstring.hpp"
 #include "../system/systemclass.hpp"
-
 /**
- *  @class MonteCarloIntegratorVertex
- *  @brief Handles Metropolis type Monte Carlo algorithm.
- * 
- *  In this algorithm, one Monte Carlo step is considered as attempting a swap two vertices at random.
- *  One sweep consists of attempting moves on each vertex in the membrane.
+ * @class MonteCarloIntegratorSpinVertex
+ * @brief Integrator Brownian class implements Brownian dynamics for the vertex position. 
  */
-class MonteCarloIntegratorSwapVertex : public MonteCarloIntegrator
+class MonteCarloIntegratorSpinVertex : public MonteCarloIntegrator
 {
 public:
-  MonteCarloIntegratorSwapVertex(SystemClass &system, VertexCompute &potentials) : MonteCarloIntegrator(system, potentials)
+  /** @brief VertexIntegrator Constructor */
+  MonteCarloIntegratorSpinVertex(SystemClass &system, VertexCompute &potentials) : MonteCarloIntegrator(system, potentials)
   {
-    m_name = "vertex swap";
     m_type = "monte carlo";
+    m_name = "vertex move";
     this->set_default_properties();
   }
-  ~MonteCarloIntegratorSwapVertex() {}
+  /** @brief destructor */
+  ~MonteCarloIntegratorSpinVertex() {}
 
   void set_default_properties(void) override
-  {
+  { 
     pymemb::vector<bool> _freezed_vertex(NUM_TYPES_ALLOWED, false);
     freezed_vertex = _freezed_vertex;
     this->set_temperature(0.0);
     m_seed = 123456; ///default value
     m_rng = std::make_unique<RNG>(m_seed);
-    stochastic_tunnelling = false;
-    stochastic_gamma = 0.0;
   }
+
   using MonteCarloIntegrator::set_property;
   void set_property(std::map<std::string, std::string> &value_map) override
   {
@@ -55,26 +51,13 @@ public:
         this->set_temperature(util::from_string_double(item.second));
         this->update_temperature_parameters();
       }
-      else if (item.first.compare("gamma") == 0)
-      {
-        stochastic_tunnelling = true;
-        stochastic_gamma = util::from_string_double(item.second);
-      }
       else if (item.first.compare("seed") == 0)
       {
         m_seed = uint(util::from_string_int(item.second));
         m_rng = std::make_unique<RNG>(m_seed);
       }
-      else if (item.first.compare("every step") == 0)
-      {
-        this->set_integrate_every(util::from_string_int(item.second));
-      }
-      else if (item.first.compare("stochastic_tunnelling") == 0)
-      {
-        stochastic_tunnelling = util::from_string_bool(item.second);
-      }
       else
-        print_warning_property_name(item.first);
+        this->print_warning_property_name(item.first);
     }
   }
 
@@ -97,20 +80,18 @@ public:
     value["name"] = m_name;
     value["type"] = m_type;
     value["T"] = util::to_string(this->get_temperature());
-    value["integrate_every"] = util::to_string(this->integrate_every);
     return value;
   }
+
   int integrate(void) override;
 
 private:
   unsigned int m_seed; //!< random number seed;
   RNG_ptr m_rng;       //!< Random number generator
-  bool stochastic_tunnelling;
-  double stochastic_gamma;
   pymemb::vector<bool> freezed_vertex;
 };
 
-typedef std::shared_ptr<MonteCarloIntegratorSwapVertex> MonteCarloIntegratorSwapVertex_ptr;
+typedef std::shared_ptr<MonteCarloIntegratorSpinVertex> MonteCarloIntegratorSpinVertex_ptr;
 
 #endif
 

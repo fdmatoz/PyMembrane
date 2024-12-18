@@ -83,12 +83,16 @@ public:
      * @brief Get the name object
      * @return std::string 
      */
-  std::string get_name(void) { return name; }
+  std::string get_name(void) { return m_name; }
   /**
      * @brief Get the type object
      * @return std::string 
      */
-  std::string get_type(void) { return type; }
+  std::string get_type(void) { return m_type; }
+
+
+  virtual std::map<std::string, std::string> get_info(void) = 0;
+
   /**
      * @brief get name
      * @param temperature
@@ -106,14 +110,14 @@ public:
   virtual void set_property(std::map<std::string, std::map<std::pair<std::string, std::string>, std::string>> &value_map) { this->print_warning_calling("map<string, map<pair<string, string>, string>> "); };
   virtual void set_property(std::map<std::string, std::map<std::string, std::string>> &value_map) { this->print_warning_calling("map<string, map<string, string>>"); };
   virtual void set_property(std::map<std::string, std::string> &value_map) { this->print_warning_calling("std::map<std::string, std::string>"); }
-  void print_warning_calling(const std::string &message) { py::print("integrator ", name, " cannot be called with ", message); }
-  void print_warning_property_name(const std::string &message) { py::print("parameter ", message, " is not part of ", name, "-", type, " integrator"); }
+  void print_warning_calling(const std::string &message) { py::print("integrator ", m_name, " cannot be called with ", message); }
+  void print_warning_property_name(const std::string &message) { py::print("parameter ", message, " is not part of ", m_name, "-", m_type, " integrator"); }
 
 protected:
   SystemClass &_system;       //!< reference to system class where the box and particles are stored
   VertexCompute &_potentials; //!< Compute potential pointer
-  std::string name;           //!< Integrator name
-  std::string type;           //!< integrator type, active, torque, etc
+  std::string m_name;           //!< Integrator name
+  std::string m_type;           //!< integrator type, active, torque, etc
   real T;                     //!< Temperature of the system
   int integrate_every;
   double minimum_energy;    

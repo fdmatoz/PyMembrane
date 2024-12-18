@@ -12,6 +12,7 @@
 #include "../integrators/montercarlo_swap_vertex.hpp"
 #include "../integrators/montercarlo_swap_edge.hpp"
 #include "../integrators/montercarlo_flip_edge.hpp"
+#include "../integrators/montercarlo_spin_vertex.hpp"
 
 // here we include all the Minimizers
 #include "../minimizer/fire.hpp"
@@ -103,6 +104,11 @@ void EvolverClass::add_integrator(const std::string &name, std::map<std::string,
     else if (name.compare("Mesh>MonteCarlo>edge>flip") == 0)
     {
         mesh_integrator_montecarlo_list[name] = std::make_shared<MonteCarloIntegratorFlipEdge>(_system, mesh_force_list);
+        mesh_integrator_montecarlo_list[name]->set_property(parameters);
+    }
+    else if (name.compare("Mesh>MonteCarlo>vertex>spin") == 0)
+    {
+        mesh_integrator_montecarlo_list[name] = std::make_shared<MonteCarloIntegratorSpinVertex>(_system, mesh_force_list);
         mesh_integrator_montecarlo_list[name]->set_property(parameters);
     }
     else

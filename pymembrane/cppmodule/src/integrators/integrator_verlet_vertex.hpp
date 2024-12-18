@@ -30,8 +30,8 @@
 
 /**
  * @class IntegratorVelocityVerletMeshVertex
- * @brief Integrator IntegratorVelocityVerletMeshVertex class implements 
- * the Velocity Verlet dynamics for the vertices position. 
+ * @brief Integrator IntegratorVelocityVerletMeshVertex class implements
+ * the Velocity Verlet dynamics for the vertices position.
  */
 class IntegratorVelocityVerletMeshVertex : public IntegratorClass
 {
@@ -39,8 +39,8 @@ public:
     /** @brief VertexIntegrator Constructor */
     IntegratorVelocityVerletMeshVertex(SystemClass &system) : IntegratorClass(system)
     {
-        name = "brownian";
-        type = "vertex";
+        m_name = "brownian";
+        m_type = "vertex";
         this->set_default_properties();
     }
     /** @brief destructor */
@@ -84,15 +84,25 @@ public:
                 print_warning_property_name(item.first);
         }
     }
-
+    std::map<std::string, std::string> get_info(void) override
+    {
+        std::map<std::string, std::string> value;
+        value["name"] = m_name;
+        value["type"] = m_type;
+        value["T"] = util::to_string(this->get_temperature());
+        value["dt"] = util::to_string(this->get_time_step());
+        value["m_has_limit"] = util::to_string(this->m_has_limit);
+        value["m_limit_val"] = util::to_string(this->m_limit_val);
+        return value;
+    }
     /**  @brief Propagate system for a time step */
     void prestep(void) override;
 
     void poststep(void) override;
 
 private:
-    real m_limit_val;    //!< Maximum vertex mobility (1/gamma)
-    bool m_has_limit;    //!< set the limit on/off
+    real m_limit_val; //!< Maximum vertex mobility (1/gamma)
+    bool m_has_limit; //!< set the limit on/off
 };
 
 #endif

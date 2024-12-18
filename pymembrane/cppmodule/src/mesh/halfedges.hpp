@@ -37,6 +37,7 @@ struct HE_Vertex
     real energy;  //!< Vertex energy
     real mass;    //!< Vertex mass
     inth3 ip;     //!< Periodic box image flags (to enable unwrapping of particle coordinates)
+    real spin; //!< ferromagnetic spin +1.0, -1.0
     PropertyVertices _property;
 };
 using HE_VertexProp = HE_Vertex<PropertyVertices>;
