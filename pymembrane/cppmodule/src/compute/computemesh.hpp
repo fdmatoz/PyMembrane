@@ -72,6 +72,9 @@ public:
     /// Computes the total surface area of the mesh.
     real compute_mesh_area(void);
 
+    /// Computes the surface area for a given type of vertex
+    real compute_area_typed(int type=1);
+
     /**
      * @brief Computes the area associated with each vertex in the mesh.
      * @return A vector containing areas for each vertex.

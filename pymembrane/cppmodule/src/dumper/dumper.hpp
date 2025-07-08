@@ -30,6 +30,7 @@ public:
     }
     void mesh_vtk_periodic(const std::string &file_name);
     void mesh_ply(const std::string &file_name);
+    void mesh_inp(const std::string &file_name);
     void mesh_ply_periodic(const std::string &file_name){}
     
     void mesh_json(const std::string &file_name, const bool &ffaces, const bool &fvertices);

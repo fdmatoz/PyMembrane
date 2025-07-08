@@ -32,6 +32,7 @@
 namespace py = pybind11;
 
 #include "../system/systemclass.hpp"
+#include "../mesh/meshoperations.hpp"
 #include "../potentials/computeforceclass.hpp"
 #include "../integrators/integratorclass.hpp"
 #include "../integrators/montecarlointegrator.hpp"
@@ -51,6 +52,9 @@ namespace py = pybind11;
 #include "../potentials/potentialSubstrate.hpp"
 #include "../potentials/potentialIsing.hpp"
 #include "../potentials/potentialHarmonicDye.hpp"
+#include "../potentials/potentialSurfaceTension.hpp"
+#include "../potentials/potentialSubstrateCylinder.hpp"
+
 
 class EvolverClass
 {
@@ -116,6 +120,16 @@ public:
         else if (name.compare("Mesh>HarmonicDye") == 0)
         {
             mesh_force_list[name] = std::make_unique<ComputeVertexHarmonicSpinEnergy>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>SurfaceTension") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexSurfaceTension>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>SubstrateCylinder") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexSubstrateCylinderEnergy>(_system);
             mesh_force_list[name]->set_property(parameters);
         }
         else

@@ -36,6 +36,9 @@ void export_ComputeMesh(py::module &m)
         .def("area", &ComputeMesh::compute_mesh_area, R"pbdoc(
             Compute the mesh area.
             )pbdoc")
+        .def("area_typed", &ComputeMesh::compute_area_typed, py::arg("type"), R"pbdoc(
+                Compute the mesh area for a given type.
+                )pbdoc")
         .def("face_metric", &ComputeMesh::compute_face_metric, R"pbdoc(
             Compute the face metric.
             )pbdoc")

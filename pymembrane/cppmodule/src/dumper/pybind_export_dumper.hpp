@@ -12,6 +12,7 @@ void export_DumperClass(py::module &m)
         .def("json", &DumperClass::mesh_json, "dump the mesh (vertices and faces) in json format", py::arg("filename"), py::arg("faces")=true, py::arg("vertices")=true)
         .def("ply", &DumperClass::mesh_ply, "dump the mesh (vertices and faces) in ply format", py::arg("filename"))
         .def("txt", &DumperClass::mesh_txt, "dump the mesh (vertices and faces) in text format", py::arg("filename"), py::arg("faces")=true, py::arg("vertices")=true)
+        .def("inp", &DumperClass::mesh_inp, "dump the mesh (vertices and faces) in inp format", py::arg("filename"))
         .def("setvtkLegacyFormat", &DumperClass::setvtkLegacyFormat, "set the vtk legacy format flag")
         
         .def("user_data_vertex", (void (DumperClass::*)(const std::string&, std::vector<real>&)) & DumperClass::user_vertex_data, "dump user data on vertices")

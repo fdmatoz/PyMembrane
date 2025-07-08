@@ -54,3 +54,33 @@ void DumperClass::mesh_txt(const std::string &file_name, const bool &ffaces, con
         }
     }
 }
+
+
+void DumperClass::mesh_inp(const std::string &file_name)
+{
+
+    auto vertices = _system.get_vertices();
+    auto faces = _system.get_faces();
+
+    int Numvertices = vertices.size();
+    int Numfaces = faces.size();
+    std::ofstream vFile(file_name + "_vertices.inp", std::ios::out);
+    if(vFile.is_open())
+    {
+        for(int i=0; i<Numvertices; i++) {
+            vFile << vertices[i].id << " " << vertices[i].r.x << " "
+            << vertices[i].r.y << " " << vertices[i].r.z << " "
+            << vertices[i].type << std::endl;
+        }
+    }
+
+    std::ofstream fFile(file_name + "_faces.inp", std::ios::out);
+    if(fFile.is_open())
+    {
+        for(int i=0; i<Numfaces; i++) {
+            fFile << faces[i].id << " " << faces[i].v1 << " "
+            << faces[i].v2 << " " << faces[i].v3 << " "
+            << 1 << " " << faces[i].type << std::endl;
+        }
+    }
+}

@@ -12,6 +12,9 @@ namespace pymemb
     real3 unit_vector(const real3 &v)
     {
         real norm = sqrt(vdot(v,v));
+        if (norm == 0)
+            return v;
+        
         real3 v_unit = v;
         v_unit.x/=norm;
         v_unit.y/=norm;
@@ -19,6 +22,12 @@ namespace pymemb
         return(v_unit);
     }
   
+    inline
+    real vector_dot(const real3 &v1, const real3 &v2)
+    {
+        return vdot(v1, v2);
+    }
+
     inline 
     real3 vector_cross(const real3 &v1, const real3 &v2)
     {
@@ -51,6 +60,18 @@ namespace pymemb
     real3 vector_subtract(const real3 &v1, const real3 &v2, const BoxType &box)
     {
         return (pymemb::minimum_image(v2, v1, box));
+    }
+
+    inline
+    real vector_squared_length(const real3 &v)
+    {
+        return v.x*v.x + v.y*v.y + v.z*v.z;
+    }
+
+    inline
+    real vector_length(const real3 &v)
+    {
+        return sqrt(vector_squared_length(v));
     }
 
     inline 
@@ -143,7 +164,7 @@ namespace pymemb
         real3 v12, v13;
         vsub(v12, r2, r1);
         vsub(v13, r3, r1);
-        real angle = acos(vdot(v12, v13) / sqrt(vdot(v12, v12) * vdot(v13, v13)));
+        real angle = acos(vdot(v12, v13) / (sqrt(vdot(v12, v12)) * sqrt(vdot(v13, v13))));
         return angle;
     }
 
@@ -280,5 +301,8 @@ namespace pymemb
         }
         return _need_wrapping;
     }
-} 
+
+}
+
+
 #endif

@@ -195,6 +195,11 @@ file(GLOB compute_HDRS ${INCLUDE_DIRS}/compute/*.hpp)
 file(GLOB compute_SRCS ${INCLUDE_DIRS}/compute/*.cpp)
 list(APPEND INCLUDE_DIRS_HDRS ${compute_HDRS})
 list(APPEND INCLUDE_DIRS_SRCS ${compute_SRCS})
+## mesh ##
+file(GLOB mesh_HDRS ${INCLUDE_DIRS}/mesh/*.hpp)
+file(GLOB mesh_SRCS ${INCLUDE_DIRS}/mesh/*.cpp)
+list(APPEND INCLUDE_DIRS_HDRS ${mesh_HDRS})
+list(APPEND INCLUDE_DIRS_SRCS ${mesh_SRCS})
 ## potentials ##
 file(GLOB potentials_HDRS ${INCLUDE_DIRS}/potentials/*.hpp)
 file(GLOB potentials_SRCS ${INCLUDE_DIRS}/potentials/*.cpp)

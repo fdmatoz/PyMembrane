@@ -166,8 +166,11 @@ void EvolverClass::set_global_temperature(const std::string &value)
 }
 void EvolverClass::evolve_mesh_md(const int &mdsteps)
 {
+    MeshOperations mesh_op(_system);
+
     for (auto step = 0; step < mdsteps; step++)
-    {
+    {   
+        //std::cout << step << "/" << mdsteps << std::endl;
         // Perform the preintegration step, i.e., step before forces and torques are computed
         this->evolve_mesh_prestep();
 
@@ -179,6 +182,10 @@ void EvolverClass::evolve_mesh_md(const int &mdsteps)
 
         // Perform the second step of integration
         this->evolve_mesh_poststep();
+
+        enforce_mesh_constraints();
+        mesh_op.adapt_mesh();
+        mesh_op.refine_mesh_edge_flip();
     }
 }
 
