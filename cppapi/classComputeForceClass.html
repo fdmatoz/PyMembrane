@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/classComputeForceClass';</script>
@@ -52,6 +55,7 @@
     <link rel="prev" title="Template Struct xyType" href="structxyType.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0" />
   </head>
   
   
@@ -59,32 +63,16 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -92,7 +80,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -100,19 +87,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -120,11 +115,12 @@
   
   
   
+  
     
     
     
-    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="PyMembrane  documentation - Home"/>
+    <img src="../_static/logo-light.svg" class="logo__image only-dark pst-js-only" alt="PyMembrane  documentation - Home"/>
   
   
 </a></div>
@@ -135,68 +131,65 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
                 </ul>
             </li>
             
@@ -210,28 +203,22 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
     </div>
     
@@ -239,31 +226,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -272,73 +260,63 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -347,45 +325,54 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
       </div>
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -396,7 +383,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class ComputeForceClass</span></li>
   </ul>
 </nav>
 </div>
@@ -411,7 +398,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-computeforceclass">
 <span id="exhale-class-classcomputeforceclass"></span><h1>Class ComputeForceClass<a class="headerlink" href="#class-computeforceclass" title="Link to this heading">#</a></h1>
@@ -428,10 +415,14 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexCauchyGreenEnergy</span></code> (<a class="reference internal" href="classComputeVertexCauchyGreenEnergy.html#exhale-class-classcomputevertexcauchygreenenergy"><span class="std std-ref">Class ComputeVertexCauchyGreenEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexConstantAreaTriangleEnergy</span></code> (<a class="reference internal" href="classComputeVertexConstantAreaTriangleEnergy.html#exhale-class-classcomputevertexconstantareatriangleenergy"><span class="std std-ref">Class ComputeVertexConstantAreaTriangleEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexDihedralEnergy</span></code> (<a class="reference internal" href="classComputeVertexDihedralEnergy.html#exhale-class-classcomputevertexdihedralenergy"><span class="std std-ref">Class ComputeVertexDihedralEnergy</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexFerromagneticEnergy</span></code> (<a class="reference internal" href="classComputeVertexFerromagneticEnergy.html#exhale-class-classcomputevertexferromagneticenergy"><span class="std std-ref">Class ComputeVertexFerromagneticEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexHarmonicEnergy</span></code> (<a class="reference internal" href="classComputeVertexHarmonicEnergy.html#exhale-class-classcomputevertexharmonicenergy"><span class="std std-ref">Class ComputeVertexHarmonicEnergy</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexHarmonicSpinEnergy</span></code> (<a class="reference internal" href="classComputeVertexHarmonicSpinEnergy.html#exhale-class-classcomputevertexharmonicspinenergy"><span class="std std-ref">Class ComputeVertexHarmonicSpinEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexLimitEnergy</span></code> (<a class="reference internal" href="classComputeVertexLimitEnergy.html#exhale-class-classcomputevertexlimitenergy"><span class="std std-ref">Class ComputeVertexLimitEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexLineTension</span></code> (<a class="reference internal" href="classComputeVertexLineTension.html#exhale-class-classcomputevertexlinetension"><span class="std std-ref">Class ComputeVertexLineTension</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexSubstrateCylinderEnergy</span></code> (<a class="reference internal" href="classComputeVertexSubstrateCylinderEnergy.html#exhale-class-classcomputevertexsubstratecylinderenergy"><span class="std std-ref">Class ComputeVertexSubstrateCylinderEnergy</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexSubstrateEnergy</span></code> (<a class="reference internal" href="classComputeVertexSubstrateEnergy.html#exhale-class-classcomputevertexsubstrateenergy"><span class="std std-ref">Class ComputeVertexSubstrateEnergy</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">ComputeVertexSurfaceTension</span></code> (<a class="reference internal" href="classComputeVertexSurfaceTension.html#exhale-class-classcomputevertexsurfacetension"><span class="std std-ref">Class ComputeVertexSurfaceTension</span></a>)</p></li>
 </ul>
 </section>
 </section>
@@ -441,220 +432,7 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv417ComputeForceClass">
 <span id="_CPPv317ComputeForceClass"></span><span id="_CPPv217ComputeForceClass"></span><span id="ComputeForceClass"></span><span class="target" id="classComputeForceClass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeForceClass</span></span></span><a class="headerlink" href="#_CPPv417ComputeForceClass" title="Link to this definition">#</a><br /></dt>
 <dd><p><a class="reference internal" href="class_compute_force_class.html#classComputeForceClass"><span class="std std-ref">ComputeForceClass</span></a> abstract class for compute different potentials, forces and torques. </p>
-<p>Subclassed by <a class="reference internal" href="class_compute_vertex_bending_energy.html#classComputeVertexBendingEnergy"><span class="std std-ref">ComputeVertexBendingEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_bending_helfrich_energy.html#classComputeVertexBendingHelfrichEnergy"><span class="std std-ref">ComputeVertexBendingHelfrichEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html#classComputeVertexCauchyGreenEnergy"><span class="std std-ref">ComputeVertexCauchyGreenEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html#classComputeVertexConstantAreaTriangleEnergy"><span class="std std-ref">ComputeVertexConstantAreaTriangleEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_dihedral_energy.html#classComputeVertexDihedralEnergy"><span class="std std-ref">ComputeVertexDihedralEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_harmonic_energy.html#classComputeVertexHarmonicEnergy"><span class="std std-ref">ComputeVertexHarmonicEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_limit_energy.html#classComputeVertexLimitEnergy"><span class="std std-ref">ComputeVertexLimitEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_line_tension.html#classComputeVertexLineTension"><span class="std std-ref">ComputeVertexLineTension</span></a>, <a class="reference internal" href="class_compute_vertex_substrate_energy.html#classComputeVertexSubstrateEnergy"><span class="std std-ref">ComputeVertexSubstrateEnergy</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass17ComputeForceClassER11SystemClass">
-<span id="_CPPv3N17ComputeForceClass17ComputeForceClassER11SystemClass"></span><span id="_CPPv2N17ComputeForceClass17ComputeForceClassER11SystemClass"></span><span id="ComputeForceClass::ComputeForceClass__SystemClassR"></span><span class="target" id="group__computeenergy_1gaf97cbd35283669823a16e0b4dcd32968"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeForceClass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass17ComputeForceClassER11SystemClass" title="Link to this definition">#</a><br /></dt>
-<dd><p><a class="reference internal" href="class_compute_force_class.html#classComputeForceClass"><span class="std std-ref">ComputeForceClass</span></a> constructor. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>SystemClass</strong> – reference to the system </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClassD0Ev">
-<span id="_CPPv3N17ComputeForceClassD0Ev"></span><span id="_CPPv2N17ComputeForceClassD0Ev"></span><span id="ComputeForceClass::~ComputeForceClass"></span><span class="target" id="group__computeenergy_1ga2851881fb1a9f8e03fc7530b38db5ade"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ComputeForceClass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClassD0Ev" title="Link to this definition">#</a><br /></dt>
-<dd><p><a class="reference internal" href="class_compute_force_class.html#classComputeForceClass"><span class="std std-ref">ComputeForceClass</span></a> Destructor. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass14compute_energyEv">
-<span id="_CPPv3N17ComputeForceClass14compute_energyEv"></span><span id="_CPPv2N17ComputeForceClass14compute_energyEv"></span><span id="ComputeForceClass::compute_energy__void"></span><span class="target" id="group__computeenergy_1ga2272ad88712abc721d0c9e885a297dc3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass14compute_energyEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute energy for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass7computeEv">
-<span id="_CPPv3N17ComputeForceClass7computeEv"></span><span id="_CPPv2N17ComputeForceClass7computeEv"></span><span id="ComputeForceClass::compute__void"></span><span class="target" id="group__computeenergy_1ga321c411b385f2c7543cdc2f1c5d9bc33"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass7computeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass19compute_edge_energyEi">
-<span id="_CPPv3N17ComputeForceClass19compute_edge_energyEi"></span><span id="_CPPv2N17ComputeForceClass19compute_edge_energyEi"></span><span id="ComputeForceClass::compute_edge_energy__i"></span><span class="target" id="group__computeenergy_1ga8bbee5e840659a251c742e4cafced2a4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass19compute_edge_energyEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute the energy in a given edge </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>edge</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>real </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass19compute_face_energyEi">
-<span id="_CPPv3N17ComputeForceClass19compute_face_energyEi"></span><span id="_CPPv2N17ComputeForceClass19compute_face_energyEi"></span><span id="ComputeForceClass::compute_face_energy__i"></span><span class="target" id="group__computeenergy_1ga23edc1b54acde33340b26a6803ab1b11"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_face_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass19compute_face_energyEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute the energy in a given face </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>face</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>real </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass21compute_vertex_energyEi">
-<span id="_CPPv3N17ComputeForceClass21compute_vertex_energyEi"></span><span id="_CPPv2N17ComputeForceClass21compute_vertex_energyEi"></span><span id="ComputeForceClass::compute_vertex_energy__i"></span><span class="target" id="group__computeenergy_1ga08e7dbfcd647288919d633ea47243a27"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass21compute_vertex_energyEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute the energy in a vertex edge </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>face</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>real </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass14compute_stressEv">
-<span id="_CPPv3N17ComputeForceClass14compute_stressEv"></span><span id="_CPPv2N17ComputeForceClass14compute_stressEv"></span><span id="ComputeForceClass::compute_stress__void"></span><span class="target" id="group__computeenergy_1ga64d22bda8431572210c39e3e1e875c8b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass14compute_stressEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass21compute_atomic_stressEv">
-<span id="_CPPv3N17ComputeForceClass21compute_atomic_stressEv"></span><span id="_CPPv2N17ComputeForceClass21compute_atomic_stressEv"></span><span id="ComputeForceClass::compute_atomic_stress__void"></span><span class="target" id="group__computeenergy_1ga34cf9345d68255904b5330becdecbdaf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_atomic_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass21compute_atomic_stressEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass8get_nameEv">
-<span id="_CPPv3N17ComputeForceClass8get_nameEv"></span><span id="_CPPv2N17ComputeForceClass8get_nameEv"></span><span id="ComputeForceClass::get_name__void"></span><span class="target" id="group__computeenergy_1gaa43e6acd29b6c9f08d697f75a9511a7a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_name</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass8get_nameEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the name object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::string </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass8get_typeEv">
-<span id="_CPPv3N17ComputeForceClass8get_typeEv"></span><span id="_CPPv2N17ComputeForceClass8get_typeEv"></span><span id="ComputeForceClass::get_type__void"></span><span class="target" id="group__computeenergy_1ga861f1f41d248b6be0b36041b616799d6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_type</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass8get_typeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the type object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::string </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass8get_infoEv">
-<span id="_CPPv3N17ComputeForceClass8get_infoEv"></span><span id="_CPPv2N17ComputeForceClass8get_infoEv"></span><span id="ComputeForceClass::get_info__void"></span><span class="target" id="group__computeenergy_1ga0a3767f8f727a4552debeba9907429ec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass8get_infoEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the type object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::string </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass22set_default_propertiesEv">
-<span id="_CPPv3N17ComputeForceClass22set_default_propertiesEv"></span><span id="_CPPv2N17ComputeForceClass22set_default_propertiesEv"></span><span id="ComputeForceClass::set_default_properties__void"></span><span class="target" id="group__computeenergy_1ga0396c90166fc2197ebf24f1a8fbb11fb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass22set_default_propertiesEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set property. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeForceClass::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="group__computeenergy_1ga2a3d0a2d91098d3eef0c5c0b5edab0dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeForceClass::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="group__computeenergy_1ga490ec911ebfb57c97aa76d22074a666c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeForceClass::set_property__std::map:ss.ss:R"></span><span class="target" id="group__computeenergy_1ga2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass21print_warning_callingERKNSt6stringE">
-<span id="_CPPv3N17ComputeForceClass21print_warning_callingERKNSt6stringE"></span><span id="_CPPv2N17ComputeForceClass21print_warning_callingERKNSt6stringE"></span><span id="ComputeForceClass::print_warning_calling__ssCR"></span><span class="target" id="group__computeenergy_1gac73c9289ff58b1a567f40404c73b5493"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_calling</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass21print_warning_callingERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass27print_warning_property_nameERKNSt6stringE">
-<span id="_CPPv3N17ComputeForceClass27print_warning_property_nameERKNSt6stringE"></span><span id="_CPPv2N17ComputeForceClass27print_warning_property_nameERKNSt6stringE"></span><span id="ComputeForceClass::print_warning_property_name__ssCR"></span><span class="target" id="group__computeenergy_1ga7939d88d72577fafd8bba80f028a6090"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_warning_property_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ComputeForceClass27print_warning_property_nameERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass7_systemE">
-<span id="_CPPv3N17ComputeForceClass7_systemE"></span><span id="_CPPv2N17ComputeForceClass7_systemE"></span><span id="ComputeForceClass::_system__SystemClassR"></span><span class="target" id="group__computeenergy_1ga1e578bf5ff731135d0b2ddecfbc8d08f"></span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">_system</span></span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass7_systemE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Reference to the system. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass6m_nameE">
-<span id="_CPPv3N17ComputeForceClass6m_nameE"></span><span id="_CPPv2N17ComputeForceClass6m_nameE"></span><span id="ComputeForceClass::m_name__ss"></span><span class="target" id="group__computeenergy_1ga8ec4ed9cf79bed6444c1621eef8efa81"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_name</span></span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass6m_nameE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Name declared for that potential. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass6m_typeE">
-<span id="_CPPv3N17ComputeForceClass6m_typeE"></span><span id="_CPPv2N17ComputeForceClass6m_typeE"></span><span id="ComputeForceClass::m_type__ss"></span><span class="target" id="group__computeenergy_1gadb5d84db13570b5bc582f012f669839b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_type</span></span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass6m_typeE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Potential type, active, torque, conservative, etc. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass17NUM_TYPES_ALLOWEDE">
-<span id="_CPPv3N17ComputeForceClass17NUM_TYPES_ALLOWEDE"></span><span id="_CPPv2N17ComputeForceClass17NUM_TYPES_ALLOWEDE"></span><span id="ComputeForceClass::NUM_TYPES_ALLOWED__i"></span><span class="target" id="group__computeenergy_1ga202b54b76328711b6c432e151bb6c88e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NUM_TYPES_ALLOWED</span></span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass17NUM_TYPES_ALLOWEDE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17ComputeForceClass14NUM_TYPES_PAIRE">
-<span id="_CPPv3N17ComputeForceClass14NUM_TYPES_PAIRE"></span><span id="_CPPv2N17ComputeForceClass14NUM_TYPES_PAIRE"></span><span id="ComputeForceClass::NUM_TYPES_PAIR__i"></span><span class="target" id="group__computeenergy_1gaddb0efd4a25e91ecc3cd438f1629a6aa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NUM_TYPES_PAIR</span></span></span><a class="headerlink" href="#_CPPv4N17ComputeForceClass14NUM_TYPES_PAIRE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-</div>
+<p>Subclassed by <a class="reference internal" href="class_compute_vertex_bending_energy.html#classComputeVertexBendingEnergy"><span class="std std-ref">ComputeVertexBendingEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_bending_helfrich_energy.html#classComputeVertexBendingHelfrichEnergy"><span class="std std-ref">ComputeVertexBendingHelfrichEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_cauchy_green_energy.html#classComputeVertexCauchyGreenEnergy"><span class="std std-ref">ComputeVertexCauchyGreenEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_constant_area_triangle_energy.html#classComputeVertexConstantAreaTriangleEnergy"><span class="std std-ref">ComputeVertexConstantAreaTriangleEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_dihedral_energy.html#classComputeVertexDihedralEnergy"><span class="std std-ref">ComputeVertexDihedralEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_ferromagnetic_energy.html#classComputeVertexFerromagneticEnergy"><span class="std std-ref">ComputeVertexFerromagneticEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_harmonic_energy.html#classComputeVertexHarmonicEnergy"><span class="std std-ref">ComputeVertexHarmonicEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_harmonic_spin_energy.html#classComputeVertexHarmonicSpinEnergy"><span class="std std-ref">ComputeVertexHarmonicSpinEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_limit_energy.html#classComputeVertexLimitEnergy"><span class="std std-ref">ComputeVertexLimitEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_line_tension.html#classComputeVertexLineTension"><span class="std std-ref">ComputeVertexLineTension</span></a>, <a class="reference internal" href="classComputeVertexSubstrateCylinderEnergy.html#classComputeVertexSubstrateCylinderEnergy"><span class="std std-ref">ComputeVertexSubstrateCylinderEnergy</span></a>, <a class="reference internal" href="class_compute_vertex_substrate_energy.html#classComputeVertexSubstrateEnergy"><span class="std std-ref">ComputeVertexSubstrateEnergy</span></a>, <a class="reference internal" href="classComputeVertexSurfaceTension.html#classComputeVertexSurfaceTension"><span class="std std-ref">ComputeVertexSurfaceTension</span></a></p>
 </dd></dl>
 
 </section>
@@ -667,8 +445,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="structxyType.html"
@@ -695,45 +473,24 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derived-types">Derived Types</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv417ComputeForceClass"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass17ComputeForceClassER11SystemClass"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::ComputeForceClass()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClassD0Ev"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::~ComputeForceClass()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass14compute_energyEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass7computeEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass19compute_edge_energyEi"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_edge_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass19compute_face_energyEi"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_face_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass21compute_vertex_energyEi"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_vertex_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass14compute_stressEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_stress()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass21compute_atomic_stressEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::compute_atomic_stress()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass8get_nameEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::get_name()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass8get_typeEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::get_type()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass8get_infoEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::get_info()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass22set_default_propertiesEv"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::set_default_properties()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass21print_warning_callingERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::print_warning_calling()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass27print_warning_property_nameERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::print_warning_property_name()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass7_systemE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::_system</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass6m_nameE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::m_name</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass6m_typeE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::m_type</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass17NUM_TYPES_ALLOWEDE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::NUM_TYPES_ALLOWED</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N17ComputeForceClass14NUM_TYPES_PAIRE"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass::NUM_TYPES_PAIR</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv417ComputeForceClass"><code class="docutils literal notranslate"><span class="pre">ComputeForceClass</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -752,8 +509,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -761,17 +518,19 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
-      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
     <br/>
   </p>
 </div>
@@ -782,8 +541,10 @@ document.write(`
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

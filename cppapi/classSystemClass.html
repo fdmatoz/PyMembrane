@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=3b5cce75"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/classSystemClass';</script>
@@ -52,6 +55,7 @@
     <link rel="prev" title="Class RNG" href="classRNG.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0" />
   </head>
   
   
@@ -59,32 +63,16 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -92,7 +80,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -100,19 +87,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -120,11 +115,12 @@
   
   
   
+  
     
     
     
-    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="PyMembrane  documentation - Home"/>
+    <img src="../_static/logo-light.svg" class="logo__image only-dark pst-js-only" alt="PyMembrane  documentation - Home"/>
   
   
 </a></div>
@@ -135,68 +131,65 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
                 </ul>
             </li>
             
@@ -210,28 +203,22 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
     </div>
     
@@ -239,31 +226,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -272,73 +260,63 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -347,45 +325,54 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
       </div>
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -396,7 +383,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="cppapi.html" class="nav-link">C++ API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class SystemClass</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class SystemClass</span></li>
   </ul>
 </nav>
 </div>
@@ -411,7 +398,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-systemclass">
 <span id="exhale-class-classsystemclass"></span><h1>Class SystemClass<a class="headerlink" href="#class-systemclass" title="Link to this heading">#</a></h1>
@@ -516,7 +503,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass13get_halfedgesEv">
-<span id="_CPPv3N11SystemClass13get_halfedgesEv"></span><span id="_CPPv2N11SystemClass13get_halfedgesEv"></span><span id="SystemClass::get_halfedges__void"></span><span class="target" id="classSystemClass_1ae0676746f5c5a3e9687582a686dd708e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_halfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass13get_halfedgesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass13get_halfedgesEv"></span><span id="_CPPv2N11SystemClass13get_halfedgesEv"></span><span id="SystemClass::get_halfedges__void"></span><span class="target" id="classSystemClass_1a5d08492e1783a7f0ed81482a79ed6708"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_halfedges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass13get_halfedgesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the halfedges loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -530,7 +517,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass12get_verticesEv">
-<span id="_CPPv3N11SystemClass12get_verticesEv"></span><span id="_CPPv2N11SystemClass12get_verticesEv"></span><span id="SystemClass::get_vertices__void"></span><span class="target" id="classSystemClass_1af2155f4d1a7adfd60cdb2f15d5b59173"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass12get_verticesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass12get_verticesEv"></span><span id="_CPPv2N11SystemClass12get_verticesEv"></span><span id="SystemClass::get_vertices__void"></span><span class="target" id="classSystemClass_1a358f577e5c199c3b03621949d320426b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass12get_verticesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the vertices loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -544,7 +531,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass9get_edgesEv">
-<span id="_CPPv3N11SystemClass9get_edgesEv"></span><span id="_CPPv2N11SystemClass9get_edgesEv"></span><span id="SystemClass::get_edges__void"></span><span class="target" id="classSystemClass_1a4264a7f4b57ebe435db4167b6e3a7534"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9get_edgesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass9get_edgesEv"></span><span id="_CPPv2N11SystemClass9get_edgesEv"></span><span id="SystemClass::get_edges__void"></span><span class="target" id="classSystemClass_1af870897ec067425a7eb72d63c3303ce7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9get_edgesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the edges loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -558,7 +545,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass9get_facesEv">
-<span id="_CPPv3N11SystemClass9get_facesEv"></span><span id="_CPPv2N11SystemClass9get_facesEv"></span><span id="SystemClass::get_faces__void"></span><span class="target" id="classSystemClass_1a9bb52b947ed73e0e1a08e68bf86937dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9get_facesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass9get_facesEv"></span><span id="_CPPv2N11SystemClass9get_facesEv"></span><span id="SystemClass::get_faces__void"></span><span class="target" id="classSystemClass_1ad956189f4da76e1bf90efbd98c33c034"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9get_facesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the faces loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -572,7 +559,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE">
-<span id="_CPPv3N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set_halfedges__pymemb::vector:HE_HalfEdge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1a91bcee6b653297b43d21b554cdd65f7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_halfedges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_halfedges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set_halfedges__pymemb::vector:HE_HalfEdge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1a757bdd9f24ef3d094454cf48fc6187d9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_halfedges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_halfedges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
 <dd><p>set the halfedges loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -586,7 +573,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE">
-<span id="_CPPv3N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"></span><span id="_CPPv2N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"></span><span id="SystemClass::set_vertices__pymemb::vector:HE_Vertex:PropertyVertices::R"></span><span class="target" id="classSystemClass_1a3fea2da8ea4647a8d507b39cdfd63683"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_vertices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_vertices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"></span><span id="_CPPv2N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"></span><span id="SystemClass::set_vertices__pymemb::vector:HE_Vertex:PropertyVertices::R"></span><span class="target" id="classSystemClass_1a83179b885c7c1ba96220e9b50ccf651d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_vertices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_vertices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the vertices loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -600,7 +587,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE">
-<span id="_CPPv3N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set_edges__pymemb::vector:HE_Edge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1a78305a0b065f1e91121d9ce50339ae3d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_edges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_edges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set_edges__pymemb::vector:HE_Edge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1ae1a320d84eec87faca57b66c36fe09d9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_edges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_edges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the edges loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -614,7 +601,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE">
-<span id="_CPPv3N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"></span><span id="_CPPv2N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"></span><span id="SystemClass::set_faces__pymemb::vector:HE_Face:PropertyFaces::R"></span><span class="target" id="classSystemClass_1a4d4d0f207f0213f21be99a13bd149a07"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_faces</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_faces</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"></span><span id="_CPPv2N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"></span><span id="SystemClass::set_faces__pymemb::vector:HE_Face:PropertyFaces::R"></span><span class="target" id="classSystemClass_1abdede13d455a711552a95893c0ff6bfd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_faces</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_faces</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the faces loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -628,7 +615,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE">
-<span id="_CPPv3N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set__pymemb::vector:HE_Face:PropertyFaces::R.pymemb::vector:HE_Vertex:PropertyVertices::R.pymemb::vector:HE_Edge:PropertyEdges::R.pymemb::vector:HE_HalfEdge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1adce8018b7aa63d1cc452d112a9d2b7bb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_faces</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_vertices</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_edges</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_halfedges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="_CPPv2N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"></span><span id="SystemClass::set__pymemb::vector:HE_Face:PropertyFaces::R.pymemb::vector:HE_Vertex:PropertyVertices::R.pymemb::vector:HE_Edge:PropertyEdges::R.pymemb::vector:HE_HalfEdge:PropertyEdges::R"></span><span class="target" id="classSystemClass_1a50be3977030f307ad77e38cf80991693"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Face.html#_CPPv4I0E7HE_Face" title="HE_Face"><span class="n"><span class="pre">HE_Face</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyFaces.html#_CPPv413PropertyFaces" title="PropertyFaces"><span class="n"><span class="pre">PropertyFaces</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_faces</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Vertex.html#_CPPv4I0E9HE_Vertex" title="HE_Vertex"><span class="n"><span class="pre">HE_Vertex</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyVertices.html#_CPPv416PropertyVertices" title="PropertyVertices"><span class="n"><span class="pre">PropertyVertices</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_vertices</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__Edge.html#_CPPv4I0E7HE_Edge" title="HE_Edge"><span class="n"><span class="pre">HE_Edge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_edges</span></span>, <span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structHE__HalfEdge.html#_CPPv4I0E11HE_HalfEdge" title="HE_HalfEdge"><span class="n"><span class="pre">HE_HalfEdge</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structPropertyEdges.html#_CPPv413PropertyEdges" title="PropertyEdges"><span class="n"><span class="pre">PropertyEdges</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_halfedges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE" title="Link to this definition">#</a><br /></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -643,17 +630,17 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass24get_edge_neighbours_hostEi">
-<span id="_CPPv3N11SystemClass24get_edge_neighbours_hostEi"></span><span id="_CPPv2N11SystemClass24get_edge_neighbours_hostEi"></span><span id="SystemClass::get_edge_neighbours_host__i"></span><span class="target" id="classSystemClass_1a4ea429976f1c81b9edc08c54b7f9aba0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_edge_neighbours_host</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">edge_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass24get_edge_neighbours_hostEi" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass24get_edge_neighbours_hostEi"></span><span id="_CPPv2N11SystemClass24get_edge_neighbours_hostEi"></span><span id="SystemClass::get_edge_neighbours_host__i"></span><span class="target" id="classSystemClass_1a97182e17991c370f77c0f5c2f0209453"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_edge_neighbours_host</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">edge_index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass24get_edge_neighbours_hostEi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass16get_compute_meshEv">
-<span id="_CPPv3N11SystemClass16get_compute_meshEv"></span><span id="_CPPv2N11SystemClass16get_compute_meshEv"></span><span id="SystemClass::get_compute_mesh__void"></span><span class="target" id="classSystemClass_1ae194b62678f3fe827a95a0a8b21d9b00"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classComputeMesh.html#_CPPv411ComputeMesh" title="ComputeMesh"><span class="n"><span class="pre">ComputeMesh</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_compute_mesh</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_compute_meshEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass16get_compute_meshEv"></span><span id="_CPPv2N11SystemClass16get_compute_meshEv"></span><span id="SystemClass::get_compute_mesh__void"></span><span class="target" id="classSystemClass_1ad4691631188fa37bb9b03a95e40af235"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classComputeMesh.html#_CPPv411ComputeMesh" title="ComputeMesh"><span class="n"><span class="pre">ComputeMesh</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_compute_mesh</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_compute_meshEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass10get_dumperEv">
-<span id="_CPPv3N11SystemClass10get_dumperEv"></span><span id="_CPPv2N11SystemClass10get_dumperEv"></span><span id="SystemClass::get_dumper__void"></span><span class="target" id="classSystemClass_1af1279d9e08785fb882b216835dfc1996"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classDumperClass.html#_CPPv411DumperClass" title="DumperClass"><span class="n"><span class="pre">DumperClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_dumper</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass10get_dumperEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass10get_dumperEv"></span><span id="_CPPv2N11SystemClass10get_dumperEv"></span><span id="SystemClass::get_dumper__void"></span><span class="target" id="classSystemClass_1ac3594303b145f64e2eed1ded99329b84"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classDumperClass.html#_CPPv411DumperClass" title="DumperClass"><span class="n"><span class="pre">DumperClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_dumper</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass10get_dumperEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -663,7 +650,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass19get_stress_verticesEv">
-<span id="_CPPv3N11SystemClass19get_stress_verticesEv"></span><span id="_CPPv2N11SystemClass19get_stress_verticesEv"></span><span id="SystemClass::get_stress_vertices__void"></span><span class="target" id="classSystemClass_1a9587308299d75cae533a44d893d3e3a7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass19get_stress_verticesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass19get_stress_verticesEv"></span><span id="_CPPv2N11SystemClass19get_stress_verticesEv"></span><span id="SystemClass::get_stress_vertices__void"></span><span class="target" id="classSystemClass_1a8618528642290b846ec1de06b53f1484"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_vertices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass19get_stress_verticesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the STRESSES in the vertices loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -677,7 +664,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass16get_stress_edgesEv">
-<span id="_CPPv3N11SystemClass16get_stress_edgesEv"></span><span id="_CPPv2N11SystemClass16get_stress_edgesEv"></span><span id="SystemClass::get_stress_edges__void"></span><span class="target" id="classSystemClass_1a5ff611e8cfac117a5fa67c80bb2d01ff"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_stress_edgesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass16get_stress_edgesEv"></span><span id="_CPPv2N11SystemClass16get_stress_edgesEv"></span><span id="SystemClass::get_stress_edges__void"></span><span class="target" id="classSystemClass_1a8252fff3b742b7c32d584049ee84d509"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_edges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_stress_edgesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the STRESSES in the edges loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -691,7 +678,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass16get_stress_facesEv">
-<span id="_CPPv3N11SystemClass16get_stress_facesEv"></span><span id="_CPPv2N11SystemClass16get_stress_facesEv"></span><span id="SystemClass::get_stress_faces__void"></span><span class="target" id="classSystemClass_1ab2709cdf1c27bfd7d18ed2f61206a77e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_stress_facesEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass16get_stress_facesEv"></span><span id="_CPPv2N11SystemClass16get_stress_facesEv"></span><span id="SystemClass::get_stress_faces__void"></span><span class="target" id="classSystemClass_1a413e6466d0314f049cdd6dd0dc1b513c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass16get_stress_facesEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the faces loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -705,7 +692,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass17get_stress_virialEv">
-<span id="_CPPv3N11SystemClass17get_stress_virialEv"></span><span id="_CPPv2N11SystemClass17get_stress_virialEv"></span><span id="SystemClass::get_stress_virial__void"></span><span class="target" id="classSystemClass_1a20449145e57b9182ff44a3a830698c21"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_virial</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass17get_stress_virialEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass17get_stress_virialEv"></span><span id="_CPPv2N11SystemClass17get_stress_virialEv"></span><span id="SystemClass::get_stress_virial__void"></span><span class="target" id="classSystemClass_1ad61924c4d9085d350ce8eb193876958d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_virial</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass17get_stress_virialEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the faces loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -719,7 +706,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11SystemClass18get_stress_kineticEv">
-<span id="_CPPv3N11SystemClass18get_stress_kineticEv"></span><span id="_CPPv2N11SystemClass18get_stress_kineticEv"></span><span id="SystemClass::get_stress_kinetic__void"></span><span class="target" id="classSystemClass_1a4724148ba53e7f6f30d6f2d57f34ca43"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_kinetic</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass18get_stress_kineticEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N11SystemClass18get_stress_kineticEv"></span><span id="_CPPv2N11SystemClass18get_stress_kineticEv"></span><span id="SystemClass::get_stress_kinetic__void"></span><span class="target" id="classSystemClass_1a58de20ca307a29c2789976a4b5868f80"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">pymemb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE" title="pymemb::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_globaltypes_8hpp_1ad97911cff3e2ce01c7b8d4d3353155fb.html#_CPPv410realTensor" title="realTensor"><span class="n"><span class="pre">realTensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_stress_kinetic</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11SystemClass18get_stress_kineticEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>get the faces loaded in the system </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -841,8 +828,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="classRNG.html"
@@ -869,63 +856,67 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411SystemClass"><code class="docutils literal notranslate"><span class="pre">SystemClass</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11SystemClassEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::SystemClass()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11SystemClassERK7BoxType"><code class="docutils literal notranslate"><span class="pre">SystemClass::SystemClass()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClassD0Ev"><code class="docutils literal notranslate"><span class="pre">SystemClass::~SystemClass()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13get_mesh_infoEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_mesh_info()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass7get_boxEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_box()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass7set_boxERK7BoxType"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_box()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass14set_box_lengthERKdRKdRKd"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_box_length()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8minImageERK5real3RK5real3"><code class="docutils literal notranslate"><span class="pre">SystemClass::minImage()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13need_wrappingERK5real3RK5real3"><code class="docutils literal notranslate"><span class="pre">SystemClass::need_wrapping()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass36enforce_periodic_boundary_conditionsEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::enforce_periodic_boundary_conditions()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass20read_mesh_from_filesERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::read_mesh_from_files()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19read_mesh_from_jsonERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">SystemClass::read_mesh_from_json()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13get_halfedgesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_halfedges()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12get_verticesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_vertices()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9get_edgesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_edges()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9get_facesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_faces()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_halfedges()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_vertices()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_edges()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::set_faces()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">SystemClass::set()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass24get_edge_neighbours_hostEi"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_edge_neighbours_host()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_compute_meshEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_compute_mesh()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass10get_dumperEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_dumper()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13init_stressesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::init_stresses()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19get_stress_verticesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_stress_vertices()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_stress_edgesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_stress_edges()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_stress_facesEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_stress_faces()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass17get_stress_virialEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_stress_virial()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18get_stress_kineticEv"><code class="docutils literal notranslate"><span class="pre">SystemClass::get_stress_kinetic()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass5facesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::faces</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8verticesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::vertices</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9halfedgesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::halfedges</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass5edgesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::edges</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_group_facesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::stress_group_faces</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass21stress_group_verticesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::stress_group_vertices</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_group_edgesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::stress_group_edges</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_virial_atomE"><code class="docutils literal notranslate"><span class="pre">SystemClass::stress_virial_atom</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19stress_kinetic_atomE"><code class="docutils literal notranslate"><span class="pre">SystemClass::stress_kinetic_atom</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11NumverticesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::Numvertices</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8NumedgesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::Numedges</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8NumfacesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::Numfaces</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12NumhalfedgesE"><code class="docutils literal notranslate"><span class="pre">SystemClass::Numhalfedges</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13close_surfaceE"><code class="docutils literal notranslate"><span class="pre">SystemClass::close_surface</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12copy_in_hostE"><code class="docutils literal notranslate"><span class="pre">SystemClass::copy_in_host</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12compute_meshE"><code class="docutils literal notranslate"><span class="pre">SystemClass::compute_mesh</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass6dumperE"><code class="docutils literal notranslate"><span class="pre">SystemClass::dumper</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11SystemClassEv"><code class="docutils literal notranslate"><span class="pre">SystemClass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11SystemClassERK7BoxType"><code class="docutils literal notranslate"><span class="pre">SystemClass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClassD0Ev"><code class="docutils literal notranslate"><span class="pre">~SystemClass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13get_mesh_infoEv"><code class="docutils literal notranslate"><span class="pre">get_mesh_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass7get_boxEv"><code class="docutils literal notranslate"><span class="pre">get_box()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass7set_boxERK7BoxType"><code class="docutils literal notranslate"><span class="pre">set_box()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass14set_box_lengthERKdRKdRKd"><code class="docutils literal notranslate"><span class="pre">set_box_length()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8minImageERK5real3RK5real3"><code class="docutils literal notranslate"><span class="pre">minImage()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13need_wrappingERK5real3RK5real3"><code class="docutils literal notranslate"><span class="pre">need_wrapping()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass36enforce_periodic_boundary_conditionsEv"><code class="docutils literal notranslate"><span class="pre">enforce_periodic_boundary_conditions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass20read_mesh_from_filesERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">read_mesh_from_files()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19read_mesh_from_jsonERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">read_mesh_from_json()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13get_halfedgesEv"><code class="docutils literal notranslate"><span class="pre">get_halfedges()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12get_verticesEv"><code class="docutils literal notranslate"><span class="pre">get_vertices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9get_edgesEv"><code class="docutils literal notranslate"><span class="pre">get_edges()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9get_facesEv"><code class="docutils literal notranslate"><span class="pre">get_faces()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13set_halfedgesERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">set_halfedges()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12set_verticesERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEE"><code class="docutils literal notranslate"><span class="pre">set_vertices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9set_edgesERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">set_edges()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9set_facesERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEE"><code class="docutils literal notranslate"><span class="pre">set_faces()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass3setERN6pymemb6vectorI7HE_FaceI13PropertyFacesEEERN6pymemb6vectorI9HE_VertexI16PropertyVerticesEEERN6pymemb6vectorI7HE_EdgeI13PropertyEdgesEEERN6pymemb6vectorI11HE_HalfEdgeI13PropertyEdgesEEE"><code class="docutils literal notranslate"><span class="pre">set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass24get_edge_neighbours_hostEi"><code class="docutils literal notranslate"><span class="pre">get_edge_neighbours_host()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_compute_meshEv"><code class="docutils literal notranslate"><span class="pre">get_compute_mesh()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass10get_dumperEv"><code class="docutils literal notranslate"><span class="pre">get_dumper()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13init_stressesEv"><code class="docutils literal notranslate"><span class="pre">init_stresses()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19get_stress_verticesEv"><code class="docutils literal notranslate"><span class="pre">get_stress_vertices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_stress_edgesEv"><code class="docutils literal notranslate"><span class="pre">get_stress_edges()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass16get_stress_facesEv"><code class="docutils literal notranslate"><span class="pre">get_stress_faces()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass17get_stress_virialEv"><code class="docutils literal notranslate"><span class="pre">get_stress_virial()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18get_stress_kineticEv"><code class="docutils literal notranslate"><span class="pre">get_stress_kinetic()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass5facesE"><code class="docutils literal notranslate"><span class="pre">faces</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8verticesE"><code class="docutils literal notranslate"><span class="pre">vertices</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass9halfedgesE"><code class="docutils literal notranslate"><span class="pre">halfedges</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass5edgesE"><code class="docutils literal notranslate"><span class="pre">edges</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_group_facesE"><code class="docutils literal notranslate"><span class="pre">stress_group_faces</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass21stress_group_verticesE"><code class="docutils literal notranslate"><span class="pre">stress_group_vertices</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_group_edgesE"><code class="docutils literal notranslate"><span class="pre">stress_group_edges</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass18stress_virial_atomE"><code class="docutils literal notranslate"><span class="pre">stress_virial_atom</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass19stress_kinetic_atomE"><code class="docutils literal notranslate"><span class="pre">stress_kinetic_atom</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass11NumverticesE"><code class="docutils literal notranslate"><span class="pre">Numvertices</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8NumedgesE"><code class="docutils literal notranslate"><span class="pre">Numedges</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass8NumfacesE"><code class="docutils literal notranslate"><span class="pre">Numfaces</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12NumhalfedgesE"><code class="docutils literal notranslate"><span class="pre">Numhalfedges</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass13close_surfaceE"><code class="docutils literal notranslate"><span class="pre">close_surface</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12copy_in_hostE"><code class="docutils literal notranslate"><span class="pre">copy_in_host</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass12compute_meshE"><code class="docutils literal notranslate"><span class="pre">compute_mesh</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N11SystemClass6dumperE"><code class="docutils literal notranslate"><span class="pre">dumper</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -946,8 +937,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -955,17 +946,19 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
-      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
     <br/>
   </p>
 </div>
@@ -976,8 +969,10 @@ document.write(`
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-theme="light">
+<html lang="en" data-content_root="./" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -15,32 +15,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b7292ef9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=3b5cce75"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/documentation_options.js?v=7f41d439"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
@@ -49,6 +52,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0" />
   </head>
   
   
@@ -56,32 +60,16 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -89,7 +77,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -97,19 +84,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="index.html">
@@ -117,11 +112,12 @@
   
   
   
+  
     
     
     
-    <img src="_static/logo-dark.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo-light.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo-dark.svg" class="logo__image only-light" alt="PyMembrane  documentation - Home"/>
+    <img src="_static/logo-light.svg" class="logo__image only-dark pst-js-only" alt="PyMembrane  documentation - Home"/>
   
   
 </a></div>
@@ -132,68 +128,65 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi/cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributors.html">
+    Contributors
+  </a>
+</li>
+
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
+    References
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
                 </ul>
             </li>
             
@@ -207,28 +200,22 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
     </div>
     
@@ -236,27 +223,30 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -265,73 +255,63 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="pythonapi/pythonapi.html">
-                        Python API
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="cppapi/cppapi.html">
-                        C++ API
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contributors.html">
-                        Contributors
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-header-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
-                        References
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="examples/quickstart.html">
-                        Quick Start and Examples
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributors.html">
+    Contributors
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="pythonapi/references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -340,15 +320,12 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script></div>
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
       </div>
     
@@ -356,26 +333,31 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article"></div>
+              <div class="bd-header-article d-print-none"></div>
               
               
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
 
 <h1 id="index">Index</h1>
@@ -436,51 +418,11 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classComputeForceClass.html#_CPPv417ComputeForceClass">ComputeForceClass (C++ class)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv417ComputeForceClass">[1]</a>
 </li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass7_systemE">ComputeForceClass::_system (C++ member)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass7_systemE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass7computeEv">ComputeForceClass::compute (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass7computeEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass21compute_atomic_stressEv">ComputeForceClass::compute_atomic_stress (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass21compute_atomic_stressEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass19compute_edge_energyEi">ComputeForceClass::compute_edge_energy (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass19compute_edge_energyEi">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass14compute_energyEv">ComputeForceClass::compute_energy (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass14compute_energyEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass19compute_face_energyEi">ComputeForceClass::compute_face_energy (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass19compute_face_energyEi">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass14compute_stressEv">ComputeForceClass::compute_stress (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass14compute_stressEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass21compute_vertex_energyEi">ComputeForceClass::compute_vertex_energy (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass21compute_vertex_energyEi">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass17ComputeForceClassER11SystemClass">ComputeForceClass::ComputeForceClass (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass17ComputeForceClassER11SystemClass">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass8get_infoEv">ComputeForceClass::get_info (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass8get_infoEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass8get_nameEv">ComputeForceClass::get_name (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass8get_nameEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass8get_typeEv">ComputeForceClass::get_type (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass8get_typeEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass6m_nameE">ComputeForceClass::m_name (C++ member)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass6m_nameE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass6m_typeE">ComputeForceClass::m_type (C++ member)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass6m_typeE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass17NUM_TYPES_ALLOWEDE">ComputeForceClass::NUM_TYPES_ALLOWED (C++ member)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass17NUM_TYPES_ALLOWEDE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass14NUM_TYPES_PAIRE">ComputeForceClass::NUM_TYPES_PAIR (C++ member)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass14NUM_TYPES_PAIRE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass21print_warning_callingERKNSt6stringE">ComputeForceClass::print_warning_calling (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass21print_warning_callingERKNSt6stringE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass27print_warning_property_nameERKNSt6stringE">ComputeForceClass::print_warning_property_name (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass27print_warning_property_nameERKNSt6stringE">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass22set_default_propertiesEv">ComputeForceClass::set_default_properties (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass22set_default_propertiesEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeForceClass::set_property (C++ function)</a>, <a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClass12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
-</li>
-      <li><a href="cppapi/classComputeForceClass.html#_CPPv4N17ComputeForceClassD0Ev">ComputeForceClass::~ComputeForceClass (C++ function)</a>, <a href="cppapi/class_compute_force_class.html#_CPPv4N17ComputeForceClassD0Ev">[1]</a>
-</li>
       <li><a href="cppapi/typedef_group__computeenergy_1gae7a07881015eb0524c84a83d56a61dc7.html#_CPPv421ComputeForceClass_ptr">ComputeForceClass_ptr (C++ type)</a>
 </li>
       <li><a href="cppapi/classComputeMesh.html#_CPPv411ComputeMesh">ComputeMesh (C++ class)</a>, <a href="cppapi/class_compute_mesh.html#_CPPv411ComputeMesh">[1]</a>
+</li>
+      <li><a href="cppapi/classComputeMesh.html#_CPPv4N11ComputeMesh18compute_area_typedEi">ComputeMesh::compute_area_typed (C++ function)</a>, <a href="cppapi/class_compute_mesh.html#_CPPv4N11ComputeMesh18compute_area_typedEi">[1]</a>
 </li>
       <li><a href="cppapi/classComputeMesh.html#_CPPv4N11ComputeMesh20compute_edge_lengthsEv">ComputeMesh::compute_edge_lengths (C++ function)</a>, <a href="cppapi/class_compute_mesh.html#_CPPv4N11ComputeMesh20compute_edge_lengthsEv">[1]</a>
 </li>
@@ -532,27 +474,7 @@ document.write(`
 </li>
       <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv426ComputeVertexBendingEnergy">ComputeVertexBendingEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv426ComputeVertexBendingEnergy">[1]</a>
 </li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy7computeEv">ComputeVertexBendingEnergy::compute (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy7computeEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy21compute_atomic_stressEv">ComputeVertexBendingEnergy::compute_atomic_stress (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy21compute_atomic_stressEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy19compute_edge_energyEi">ComputeVertexBendingEnergy::compute_edge_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy19compute_edge_energyEi">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy14compute_energyEv">ComputeVertexBendingEnergy::compute_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy14compute_energyEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy14compute_stressEv">ComputeVertexBendingEnergy::compute_stress (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy14compute_stressEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy21compute_vertex_energyEi">ComputeVertexBendingEnergy::compute_vertex_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy21compute_vertex_energyEi">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy26ComputeVertexBendingEnergyER11SystemClass">ComputeVertexBendingEnergy::ComputeVertexBendingEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy26ComputeVertexBendingEnergyER11SystemClass">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy8get_infoEv">ComputeVertexBendingEnergy::get_info (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy8get_infoEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy22set_default_propertiesEv">ComputeVertexBendingEnergy::set_default_properties (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy22set_default_propertiesEv">[1]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexBendingEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[7]</a>
-</li>
-      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergyD0Ev">ComputeVertexBendingEnergy::~ComputeVertexBendingEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergyD0Ev">[1]</a>
+      <li><a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexBendingEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexBendingEnergy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_bending_energy.html#_CPPv4N26ComputeVertexBendingEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
 </li>
       <li><a href="cppapi/classComputeVertexBendingHelfrichEnergy.html#_CPPv434ComputeVertexBendingHelfrichEnergy">ComputeVertexBendingHelfrichEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_bending_helfrich_energy.html#_CPPv434ComputeVertexBendingHelfrichEnergy">[1]</a>
 </li>
@@ -624,8 +546,6 @@ document.write(`
 </li>
       <li><a href="cppapi/classComputeVertexConstantAreaTriangleEnergy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexConstantAreaTriangleEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexConstantAreaTriangleEnergy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexConstantAreaTriangleEnergy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexConstantAreaTriangleEnergy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/class_compute_vertex_constant_area_triangle_energy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_constant_area_triangle_energy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_compute_vertex_constant_area_triangle_energy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_compute_vertex_constant_area_triangle_energy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[7]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classComputeVertexConstantAreaTriangleEnergy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergyD0Ev">ComputeVertexConstantAreaTriangleEnergy::~ComputeVertexConstantAreaTriangleEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_constant_area_triangle_energy.html#_CPPv4N39ComputeVertexConstantAreaTriangleEnergyD0Ev">[1]</a>
 </li>
       <li><a href="cppapi/classComputeVertexDihedralEnergy.html#_CPPv427ComputeVertexDihedralEnergy">ComputeVertexDihedralEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_dihedral_energy.html#_CPPv427ComputeVertexDihedralEnergy">[1]</a>
@@ -652,6 +572,10 @@ document.write(`
 </li>
       <li><a href="cppapi/classComputeVertexDihedralEnergy.html#_CPPv4N27ComputeVertexDihedralEnergyD0Ev">ComputeVertexDihedralEnergy::~ComputeVertexDihedralEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_dihedral_energy.html#_CPPv4N27ComputeVertexDihedralEnergyD0Ev">[1]</a>
 </li>
+      <li><a href="cppapi/classComputeVertexFerromagneticEnergy.html#_CPPv432ComputeVertexFerromagneticEnergy">ComputeVertexFerromagneticEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_ferromagnetic_energy.html#_CPPv432ComputeVertexFerromagneticEnergy">[1]</a>
+</li>
+      <li><a href="cppapi/classComputeVertexFerromagneticEnergy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexFerromagneticEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexFerromagneticEnergy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexFerromagneticEnergy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_vertex_ferromagnetic_energy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_vertex_ferromagnetic_energy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_ferromagnetic_energy.html#_CPPv4N32ComputeVertexFerromagneticEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
+</li>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv427ComputeVertexHarmonicEnergy">ComputeVertexHarmonicEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv427ComputeVertexHarmonicEnergy">[1]</a>
 </li>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy7computeEv">ComputeVertexHarmonicEnergy::compute (C++ function)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy7computeEv">[1]</a>
@@ -660,6 +584,8 @@ document.write(`
 </li>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy19compute_edge_energyEi">ComputeVertexHarmonicEnergy::compute_edge_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy19compute_edge_energyEi">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy14compute_energyEv">ComputeVertexHarmonicEnergy::compute_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy14compute_energyEv">[1]</a>
 </li>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy14compute_stressEv">ComputeVertexHarmonicEnergy::compute_stress (C++ function)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy14compute_stressEv">[1]</a>
@@ -675,6 +601,10 @@ document.write(`
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexHarmonicEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[7]</a>
 </li>
       <li><a href="cppapi/classComputeVertexHarmonicEnergy.html#_CPPv4N27ComputeVertexHarmonicEnergyD0Ev">ComputeVertexHarmonicEnergy::~ComputeVertexHarmonicEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_harmonic_energy.html#_CPPv4N27ComputeVertexHarmonicEnergyD0Ev">[1]</a>
+</li>
+      <li><a href="cppapi/classComputeVertexHarmonicSpinEnergy.html#_CPPv431ComputeVertexHarmonicSpinEnergy">ComputeVertexHarmonicSpinEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_harmonic_spin_energy.html#_CPPv431ComputeVertexHarmonicSpinEnergy">[1]</a>
+</li>
+      <li><a href="cppapi/classComputeVertexHarmonicSpinEnergy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexHarmonicSpinEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexHarmonicSpinEnergy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexHarmonicSpinEnergy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_vertex_harmonic_spin_energy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_vertex_harmonic_spin_energy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_harmonic_spin_energy.html#_CPPv4N31ComputeVertexHarmonicSpinEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
 </li>
       <li><a href="cppapi/classComputeVertexLimitEnergy.html#_CPPv424ComputeVertexLimitEnergy">ComputeVertexLimitEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_limit_energy.html#_CPPv424ComputeVertexLimitEnergy">[1]</a>
 </li>
@@ -698,41 +628,49 @@ document.write(`
 </li>
       <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv424ComputeVertexLineTension">ComputeVertexLineTension (C++ class)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv424ComputeVertexLineTension">[1]</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension19compute_edge_energyEi">ComputeVertexLineTension::compute_edge_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension19compute_edge_energyEi">[1]</a>
+      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexLineTension::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension14compute_energyEv">ComputeVertexLineTension::compute_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension14compute_energyEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv436ComputeVertexSubstrateCylinderEnergy">ComputeVertexSubstrateCylinderEnergy (C++ class)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension21compute_vertex_energyEi">ComputeVertexLineTension::compute_vertex_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension21compute_vertex_energyEi">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy7computeEv">ComputeVertexSubstrateCylinderEnergy::compute (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension24ComputeVertexLineTensionER11SystemClass">ComputeVertexLineTension::ComputeVertexLineTension (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension24ComputeVertexLineTensionER11SystemClass">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy19compute_edge_energyEi">ComputeVertexSubstrateCylinderEnergy::compute_edge_energy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension8get_infoEv">ComputeVertexLineTension::get_info (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension8get_infoEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy14compute_energyEv">ComputeVertexSubstrateCylinderEnergy::compute_energy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension22set_default_propertiesEv">ComputeVertexLineTension::set_default_properties (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension22set_default_propertiesEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy21compute_vertex_energyEi">ComputeVertexSubstrateCylinderEnergy::compute_vertex_energy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexLineTension::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[4]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[7]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[8]</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[9]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy36ComputeVertexSubstrateCylinderEnergyER11SystemClass">ComputeVertexSubstrateCylinderEnergy::ComputeVertexSubstrateCylinderEnergy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexLineTension.html#_CPPv4N24ComputeVertexLineTensionD0Ev">ComputeVertexLineTension::~ComputeVertexLineTension (C++ function)</a>, <a href="cppapi/class_compute_vertex_line_tension.html#_CPPv4N24ComputeVertexLineTensionD0Ev">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy8get_infoEv">ComputeVertexSubstrateCylinderEnergy::get_info (C++ function)</a>
+</li>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy22set_default_propertiesEv">ComputeVertexSubstrateCylinderEnergy::set_default_properties (C++ function)</a>
+</li>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexSubstrateCylinderEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>
+</li>
+      <li><a href="cppapi/classComputeVertexSubstrateCylinderEnergy.html#_CPPv4N36ComputeVertexSubstrateCylinderEnergyD0Ev">ComputeVertexSubstrateCylinderEnergy::~ComputeVertexSubstrateCylinderEnergy (C++ function)</a>
 </li>
       <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv428ComputeVertexSubstrateEnergy">ComputeVertexSubstrateEnergy (C++ class)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv428ComputeVertexSubstrateEnergy">[1]</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy7computeEv">ComputeVertexSubstrateEnergy::compute (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy7computeEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexSubstrateEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[3]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[5]</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy19compute_edge_energyEi">ComputeVertexSubstrateEnergy::compute_edge_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy19compute_edge_energyEi">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv427ComputeVertexSurfaceTension">ComputeVertexSurfaceTension (C++ class)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy14compute_energyEv">ComputeVertexSubstrateEnergy::compute_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy14compute_energyEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension7computeEv">ComputeVertexSurfaceTension::compute (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy21compute_vertex_energyEi">ComputeVertexSubstrateEnergy::compute_vertex_energy (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy21compute_vertex_energyEi">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension14compute_energyEv">ComputeVertexSurfaceTension::compute_energy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy28ComputeVertexSubstrateEnergyER11SystemClass">ComputeVertexSubstrateEnergy::ComputeVertexSubstrateEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy28ComputeVertexSubstrateEnergyER11SystemClass">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension19compute_face_energyEi">ComputeVertexSurfaceTension::compute_face_energy (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy8get_infoEv">ComputeVertexSubstrateEnergy::get_info (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy8get_infoEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension27ComputeVertexSurfaceTensionER11SystemClass">ComputeVertexSurfaceTension::ComputeVertexSurfaceTension (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy22set_default_propertiesEv">ComputeVertexSubstrateEnergy::set_default_properties (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy22set_default_propertiesEv">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension8get_infoEv">ComputeVertexSurfaceTension::get_info (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexSubstrateEnergy::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[4]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[7]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension22set_default_propertiesEv">ComputeVertexSurfaceTension::set_default_properties (C++ function)</a>
 </li>
-      <li><a href="cppapi/classComputeVertexSubstrateEnergy.html#_CPPv4N28ComputeVertexSubstrateEnergyD0Ev">ComputeVertexSubstrateEnergy::~ComputeVertexSubstrateEnergy (C++ function)</a>, <a href="cppapi/class_compute_vertex_substrate_energy.html#_CPPv4N28ComputeVertexSubstrateEnergyD0Ev">[1]</a>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">ComputeVertexSurfaceTension::set_property (C++ function)</a>, <a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>
+</li>
+      <li><a href="cppapi/classComputeVertexSurfaceTension.html#_CPPv4N27ComputeVertexSurfaceTensionD0Ev">ComputeVertexSurfaceTension::~ComputeVertexSurfaceTension (C++ function)</a>
 </li>
       <li><a href="cppapi/classConstraintArea.html#_CPPv414ConstraintArea">ConstraintArea (C++ class)</a>, <a href="cppapi/class_constraint_area.html#_CPPv414ConstraintArea">[1]</a>
 </li>
@@ -831,6 +769,8 @@ document.write(`
       <li><a href="cppapi/classDumperClass.html#_CPPv4N11DumperClass11DumperClassER11SystemClass">DumperClass::DumperClass (C++ function)</a>, <a href="cppapi/class_dumper_class.html#_CPPv4N11DumperClass11DumperClassER11SystemClass">[1]</a>
 </li>
       <li><a href="cppapi/classDumperClass.html#_CPPv4N11DumperClass13mesh_edge_vtkERKNSt6stringE">DumperClass::mesh_edge_vtk (C++ function)</a>, <a href="cppapi/class_dumper_class.html#_CPPv4N11DumperClass13mesh_edge_vtkERKNSt6stringE">[1]</a>
+</li>
+      <li><a href="cppapi/classDumperClass.html#_CPPv4N11DumperClass8mesh_inpERKNSt6stringE">DumperClass::mesh_inp (C++ function)</a>, <a href="cppapi/class_dumper_class.html#_CPPv4N11DumperClass8mesh_inpERKNSt6stringE">[1]</a>
 </li>
       <li><a href="cppapi/classDumperClass.html#_CPPv4N11DumperClass9mesh_jsonERKNSt6stringERKbRKb">DumperClass::mesh_json (C++ function)</a>, <a href="cppapi/class_dumper_class.html#_CPPv4N11DumperClass9mesh_jsonERKNSt6stringERKbRKb">[1]</a>
 </li>
@@ -1150,6 +1090,8 @@ document.write(`
 </li>
       <li><a href="cppapi/structHE__Vertex.html#_CPPv4N9HE_Vertex1rE">HE_Vertex::r (C++ member)</a>, <a href="cppapi/struct_h_e___vertex.html#_CPPv4N9HE_Vertex1rE">[1]</a>
 </li>
+      <li><a href="cppapi/structHE__Vertex.html#_CPPv4N9HE_Vertex4spinE">HE_Vertex::spin (C++ member)</a>, <a href="cppapi/struct_h_e___vertex.html#_CPPv4N9HE_Vertex4spinE">[1]</a>
+</li>
       <li><a href="cppapi/structHE__Vertex.html#_CPPv4N9HE_Vertex4typeE">HE_Vertex::type (C++ member)</a>, <a href="cppapi/struct_h_e___vertex.html#_CPPv4N9HE_Vertex4typeE">[1]</a>
 </li>
       <li><a href="cppapi/structHE__Vertex.html#_CPPv4N9HE_Vertex1vE">HE_Vertex::v (C++ member)</a>, <a href="cppapi/struct_h_e___vertex.html#_CPPv4N9HE_Vertex1vE">[1]</a>
@@ -1163,6 +1105,8 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classIntegratorBrownianMeshVertex.html#_CPPv428IntegratorBrownianMeshVertex">IntegratorBrownianMeshVertex (C++ class)</a>, <a href="cppapi/class_integrator_brownian_mesh_vertex.html#_CPPv428IntegratorBrownianMeshVertex">[1]</a>
+</li>
+      <li><a href="cppapi/classIntegratorBrownianMeshVertex.html#_CPPv4N28IntegratorBrownianMeshVertex8get_infoEv">IntegratorBrownianMeshVertex::get_info (C++ function)</a>, <a href="cppapi/class_integrator_brownian_mesh_vertex.html#_CPPv4N28IntegratorBrownianMeshVertex8get_infoEv">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorBrownianMeshVertex.html#_CPPv4N28IntegratorBrownianMeshVertex28IntegratorBrownianMeshVertexER11SystemClass">IntegratorBrownianMeshVertex::IntegratorBrownianMeshVertex (C++ function)</a>, <a href="cppapi/class_integrator_brownian_mesh_vertex.html#_CPPv4N28IntegratorBrownianMeshVertex28IntegratorBrownianMeshVertexER11SystemClass">[1]</a>
 </li>
@@ -1186,6 +1130,8 @@ document.write(`
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass2dtE">IntegratorClass::dt (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass2dtE">[1]</a>
 </li>
+      <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass8get_infoEv">IntegratorClass::get_info (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass8get_infoEv">[1]</a>
+</li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass8get_nameEv">IntegratorClass::get_name (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass8get_nameEv">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4NK15IntegratorClass15get_temperatureEv">IntegratorClass::get_temperature (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4NK15IntegratorClass15get_temperatureEv">[1]</a>
@@ -1196,16 +1142,18 @@ document.write(`
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass15IntegratorClassER11SystemClass">IntegratorClass::IntegratorClass (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass15IntegratorClassER11SystemClass">[1]</a>
 </li>
-      <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass4nameE">IntegratorClass::name (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass4nameE">[1]</a>
+      <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass6m_nameE">IntegratorClass::m_name (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass6m_nameE">[1]</a>
+</li>
+      <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass6m_typeE">IntegratorClass::m_type (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass6m_typeE">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass8poststepEv">IntegratorClass::poststep (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass8poststepEv">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass7prestepEv">IntegratorClass::prestep (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass7prestepEv">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass21print_warning_callingERKNSt6stringE">IntegratorClass::print_warning_calling (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass21print_warning_callingERKNSt6stringE">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass27print_warning_property_nameERKNSt6stringE">IntegratorClass::print_warning_property_name (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass27print_warning_property_nameERKNSt6stringE">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass22set_default_propertiesEv">IntegratorClass::set_default_properties (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass22set_default_propertiesEv">[1]</a>
@@ -1218,8 +1166,6 @@ document.write(`
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass1TE">IntegratorClass::T (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass1TE">[1]</a>
 </li>
-      <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass4typeE">IntegratorClass::type (C++ member)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass4typeE">[1]</a>
-</li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass29update_temperature_parametersEv">IntegratorClass::update_temperature_parameters (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass29update_temperature_parametersEv">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorClass.html#_CPPv4N15IntegratorClass27update_time_step_parametersEv">IntegratorClass::update_time_step_parameters (C++ function)</a>, <a href="cppapi/class_integrator_class.html#_CPPv4N15IntegratorClass27update_time_step_parametersEv">[1]</a>
@@ -1229,6 +1175,8 @@ document.write(`
       <li><a href="cppapi/typedef_integratorclass_8hpp_1ad19ee330adba0de839fae1e8a99bd1b8.html#_CPPv419IntegratorClass_ptr">IntegratorClass_ptr (C++ type)</a>
 </li>
       <li><a href="cppapi/classIntegratorVelocityVerletMeshVertex.html#_CPPv434IntegratorVelocityVerletMeshVertex">IntegratorVelocityVerletMeshVertex (C++ class)</a>, <a href="cppapi/class_integrator_velocity_verlet_mesh_vertex.html#_CPPv434IntegratorVelocityVerletMeshVertex">[1]</a>
+</li>
+      <li><a href="cppapi/classIntegratorVelocityVerletMeshVertex.html#_CPPv4N34IntegratorVelocityVerletMeshVertex8get_infoEv">IntegratorVelocityVerletMeshVertex::get_info (C++ function)</a>, <a href="cppapi/class_integrator_velocity_verlet_mesh_vertex.html#_CPPv4N34IntegratorVelocityVerletMeshVertex8get_infoEv">[1]</a>
 </li>
       <li><a href="cppapi/classIntegratorVelocityVerletMeshVertex.html#_CPPv4N34IntegratorVelocityVerletMeshVertex34IntegratorVelocityVerletMeshVertexER11SystemClass">IntegratorVelocityVerletMeshVertex::IntegratorVelocityVerletMeshVertex (C++ function)</a>, <a href="cppapi/class_integrator_velocity_verlet_mesh_vertex.html#_CPPv4N34IntegratorVelocityVerletMeshVertex34IntegratorVelocityVerletMeshVertexER11SystemClass">[1]</a>
 </li>
@@ -1258,13 +1206,25 @@ document.write(`
 </li>
       <li><a href="cppapi/classMeshOperations.html#_CPPv414MeshOperations">MeshOperations (C++ class)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv414MeshOperations">[1]</a>
 </li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations10adapt_meshE4real">MeshOperations::adapt_mesh (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations10adapt_meshE4real">[1]</a>
+</li>
       <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations22check_if_edge_can_flipERKi">MeshOperations::check_if_edge_can_flip (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations22check_if_edge_can_flipERKi">[1]</a>
 </li>
-      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations9edge_flipERKiRKb">MeshOperations::edge_flip (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations9edge_flipERKiRKb">[1]</a>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations27compute_average_edge_lengthEv">MeshOperations::compute_average_edge_length (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations27compute_average_edge_lengthEv">[1]</a>
 </li>
-      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations14equiangulationEv">MeshOperations::equiangulation (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations14equiangulationEv">[1]</a>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations28compute_vertices_connexitiesEv">MeshOperations::compute_vertices_connexities (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations28compute_vertices_connexitiesEv">[1]</a>
+</li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations9edge_flipEi">MeshOperations::edge_flip (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations9edge_flipEi">[1]</a>
+</li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations14edge_need_flipEi">MeshOperations::edge_need_flip (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations14edge_need_flipEi">[1]</a>
 </li>
       <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations14MeshOperationsER11SystemClass">MeshOperations::MeshOperations (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations14MeshOperationsER11SystemClass">[1]</a>
+</li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations21refine_mesh_edge_flipEv">MeshOperations::refine_mesh_edge_flip (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations21refine_mesh_edge_flipEv">[1]</a>
+</li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations22refine_mesh_edge_splitE4real">MeshOperations::refine_mesh_edge_split (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations22refine_mesh_edge_splitE4real">[1]</a>
+</li>
+      <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperations13simplify_meshE4real">MeshOperations::simplify_mesh (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperations13simplify_meshE4real">[1]</a>
 </li>
       <li><a href="cppapi/classMeshOperations.html#_CPPv4N14MeshOperationsD0Ev">MeshOperations::~MeshOperations (C++ function)</a>, <a href="cppapi/class_mesh_operations.html#_CPPv4N14MeshOperationsD0Ev">[1]</a>
 </li>
@@ -1340,6 +1300,8 @@ document.write(`
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi">MonteCarloIntegrator::ComputeEnergyFromVertex (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator23ComputeEnergyFromVertexERKi">[1]</a>
 </li>
+      <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator8get_infoEv">MonteCarloIntegrator::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator8get_infoEv">[1]</a>
+</li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv">MonteCarloIntegrator::get_integrate_every (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4NK20MonteCarloIntegrator19get_integrate_everyEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv">MonteCarloIntegrator::get_minimum_energy (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4NK20MonteCarloIntegrator18get_minimum_energyEv">[1]</a>
@@ -1348,19 +1310,21 @@ document.write(`
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4NK20MonteCarloIntegrator15get_temperatureEv">MonteCarloIntegrator::get_temperature (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4NK20MonteCarloIntegrator15get_temperatureEv">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator8get_typeEv">MonteCarloIntegrator::get_type (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator8get_typeEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator9integrateEv">MonteCarloIntegrator::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator9integrateEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator15integrate_everyE">MonteCarloIntegrator::integrate_every (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator15integrate_everyE">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator6m_nameE">MonteCarloIntegrator::m_name (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator6m_nameE">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator6m_typeE">MonteCarloIntegrator::m_type (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator6m_typeE">[1]</a>
+</li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator14minimum_energyE">MonteCarloIntegrator::minimum_energy (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator14minimum_energyE">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute">MonteCarloIntegrator::MonteCarloIntegrator (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator20MonteCarloIntegratorER11SystemClassR13VertexCompute">[1]</a>
-</li>
-      <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator4nameE">MonteCarloIntegrator::name (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator4nameE">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE">MonteCarloIntegrator::NUM_TYPES_ALLOWED (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator17NUM_TYPES_ALLOWEDE">[1]</a>
 </li>
@@ -1380,8 +1344,6 @@ document.write(`
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator1TE">MonteCarloIntegrator::T (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator1TE">[1]</a>
 </li>
-      <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator4typeE">MonteCarloIntegrator::type (C++ member)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator4typeE">[1]</a>
-</li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv">MonteCarloIntegrator::update_temperature_parameters (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegrator29update_temperature_parametersEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegrator.html#_CPPv4N20MonteCarloIntegratorD0Ev">MonteCarloIntegrator::~MonteCarloIntegrator (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator.html#_CPPv4N20MonteCarloIntegratorD0Ev">[1]</a>
@@ -1391,6 +1353,8 @@ document.write(`
       <li><a href="cppapi/classMonteCarloIntegratorFlipEdge.html#_CPPv428MonteCarloIntegratorFlipEdge">MonteCarloIntegratorFlipEdge (C++ class)</a>, <a href="cppapi/class_monte_carlo_integrator_flip_edge.html#_CPPv428MonteCarloIntegratorFlipEdge">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorFlipEdge.html#_CPPv4N28MonteCarloIntegratorFlipEdge9edge_flipEib">MonteCarloIntegratorFlipEdge::edge_flip (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_flip_edge.html#_CPPv4N28MonteCarloIntegratorFlipEdge9edge_flipEib">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorFlipEdge.html#_CPPv4N28MonteCarloIntegratorFlipEdge8get_infoEv">MonteCarloIntegratorFlipEdge::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_flip_edge.html#_CPPv4N28MonteCarloIntegratorFlipEdge8get_infoEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorFlipEdge.html#_CPPv4N28MonteCarloIntegratorFlipEdge9integrateEv">MonteCarloIntegratorFlipEdge::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_flip_edge.html#_CPPv4N28MonteCarloIntegratorFlipEdge9integrateEv">[1]</a>
 </li>
@@ -1404,7 +1368,25 @@ document.write(`
 </li>
       <li><a href="cppapi/typedef_montercarlo__flip__edge_8hpp_1af8ca7fd184249199255de74f55e17ac1.html#_CPPv432MonteCarloIntegratorFlipEdge_ptr">MonteCarloIntegratorFlipEdge_ptr (C++ type)</a>
 </li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv430MonteCarloIntegratorSpinVertex">MonteCarloIntegratorSpinVertex (C++ class)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv430MonteCarloIntegratorSpinVertex">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex8get_infoEv">MonteCarloIntegratorSpinVertex::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex8get_infoEv">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex9integrateEv">MonteCarloIntegratorSpinVertex::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex9integrateEv">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex30MonteCarloIntegratorSpinVertexER11SystemClassR13VertexCompute">MonteCarloIntegratorSpinVertex::MonteCarloIntegratorSpinVertex (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex30MonteCarloIntegratorSpinVertexER11SystemClassR13VertexCompute">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex22set_default_propertiesEv">MonteCarloIntegratorSpinVertex::set_default_properties (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex22set_default_propertiesEv">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">MonteCarloIntegratorSpinVertex::set_property (C++ function)</a>, <a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[1]</a>, <a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[2]</a>, <a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[4]</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">[5]</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[6]</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">[7]</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[8]</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE">[9]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSpinVertex.html#_CPPv4N30MonteCarloIntegratorSpinVertexD0Ev">MonteCarloIntegratorSpinVertex::~MonteCarloIntegratorSpinVertex (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_spin_vertex.html#_CPPv4N30MonteCarloIntegratorSpinVertexD0Ev">[1]</a>
+</li>
+      <li><a href="cppapi/typedef_montercarlo__spin__vertex_8hpp_1a646fdd4e495a91fbd845fa066b6c5b97.html#_CPPv434MonteCarloIntegratorSpinVertex_ptr">MonteCarloIntegratorSpinVertex_ptr (C++ type)</a>
+</li>
       <li><a href="cppapi/classMonteCarloIntegratorSwapEdge.html#_CPPv428MonteCarloIntegratorSwapEdge">MonteCarloIntegratorSwapEdge (C++ class)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_edge.html#_CPPv428MonteCarloIntegratorSwapEdge">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorSwapEdge.html#_CPPv4N28MonteCarloIntegratorSwapEdge8get_infoEv">MonteCarloIntegratorSwapEdge::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_edge.html#_CPPv4N28MonteCarloIntegratorSwapEdge8get_infoEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorSwapEdge.html#_CPPv4N28MonteCarloIntegratorSwapEdge9integrateEv">MonteCarloIntegratorSwapEdge::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_edge.html#_CPPv4N28MonteCarloIntegratorSwapEdge9integrateEv">[1]</a>
 </li>
@@ -1420,6 +1402,8 @@ document.write(`
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorSwapVertex.html#_CPPv430MonteCarloIntegratorSwapVertex">MonteCarloIntegratorSwapVertex (C++ class)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_vertex.html#_CPPv430MonteCarloIntegratorSwapVertex">[1]</a>
 </li>
+      <li><a href="cppapi/classMonteCarloIntegratorSwapVertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex8get_infoEv">MonteCarloIntegratorSwapVertex::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_vertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex8get_infoEv">[1]</a>
+</li>
       <li><a href="cppapi/classMonteCarloIntegratorSwapVertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex9integrateEv">MonteCarloIntegratorSwapVertex::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_vertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex9integrateEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorSwapVertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex30MonteCarloIntegratorSwapVertexER11SystemClassR13VertexCompute">MonteCarloIntegratorSwapVertex::MonteCarloIntegratorSwapVertex (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_swap_vertex.html#_CPPv4N30MonteCarloIntegratorSwapVertex30MonteCarloIntegratorSwapVertexER11SystemClassR13VertexCompute">[1]</a>
@@ -1433,6 +1417,8 @@ document.write(`
       <li><a href="cppapi/typedef_montercarlo__swap__vertex_8hpp_1a30b1b0fa286371df74b61bdaf9559209.html#_CPPv434MonteCarloIntegratorSwapVertex_ptr">MonteCarloIntegratorSwapVertex_ptr (C++ type)</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorVertex.html#_CPPv426MonteCarloIntegratorVertex">MonteCarloIntegratorVertex (C++ class)</a>, <a href="cppapi/class_monte_carlo_integrator_vertex.html#_CPPv426MonteCarloIntegratorVertex">[1]</a>
+</li>
+      <li><a href="cppapi/classMonteCarloIntegratorVertex.html#_CPPv4N26MonteCarloIntegratorVertex8get_infoEv">MonteCarloIntegratorVertex::get_info (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_vertex.html#_CPPv4N26MonteCarloIntegratorVertex8get_infoEv">[1]</a>
 </li>
       <li><a href="cppapi/classMonteCarloIntegratorVertex.html#_CPPv4N26MonteCarloIntegratorVertex9integrateEv">MonteCarloIntegratorVertex::integrate (C++ function)</a>, <a href="cppapi/class_monte_carlo_integrator_vertex.html#_CPPv4N26MonteCarloIntegratorVertex9integrateEv">[1]</a>
 </li>
@@ -1504,12 +1490,14 @@ document.write(`
 </li>
       <li><a href="cppapi/function_computegeometry_8hpp_1a1ed85412113fda9c339e5180d2984783.html#_CPPv4N6pymemb28compute_normal_triangle_unitERK5real3RK5real3RK5real3RK7BoxType">pymemb::compute_normal_triangle_unit (C++ function)</a>, <a href="cppapi/function_computegeometry_8hpp_1a2a7e4b1cdb3e980f81f550b99f4bdb9d.html#_CPPv4N6pymemb28compute_normal_triangle_unitERK5real3RK5real3RK5real3">[1]</a>
 </li>
-      <li><a href="cppapi/function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE">pymemb::copy (C++ function)</a>, <a href="cppapi/function_pymembvector_8hpp_1afa841828bd8802c609249e5716c12228.html#_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE">[1]</a>
+      <li><a href="cppapi/function_pymembvector_8hpp_1accd2379946f7e5659d0a54b0768db0e9.html#_CPPv4I0EN6pymemb4copyEKNSt6vectorI1TEERNSt6vectorI1TEE">pymemb::copy (C++ function)</a>
+</li>
+      <li><a href="cppapi/function_edge__flip_8hpp_1a6c791baec3f4dd8df47c88b456c66639.html#_CPPv4N6pymemb14edge_need_flipEKiP13HE_VertexPropP11HE_EdgeProp">pymemb::edge_need_flip (C++ function)</a>
+</li>
+      <li><a href="cppapi/function_edge__flip_8hpp_1a9135550564a385d5b208eff841120104.html#_CPPv4N6pymemb15EdgeFlip_lambdaEKiKbP11HE_FacePropP13HE_VertexPropP11HE_EdgePropP15HE_HalfEdgePropK7BoxType">pymemb::EdgeFlip_lambda (C++ function)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="cppapi/function_edge__flip_8hpp_1a9135550564a385d5b208eff841120104.html#_CPPv4N6pymemb15EdgeFlip_lambdaEKiKbP11HE_FacePropP13HE_VertexPropP11HE_EdgePropP15HE_HalfEdgePropK7BoxType">pymemb::EdgeFlip_lambda (C++ function)</a>
-</li>
       <li><a href="cppapi/function_pbc_8hpp_1ad38535063c05017603e91eaee14c6f57.html#_CPPv4N6pymemb16enforce_periodicER5real3R5inth3RK7BoxType">pymemb::enforce_periodic (C++ function)</a>, <a href="cppapi/function_pbc_8hpp_1ade2dd4a2125a35817b77f7765f1d179b.html#_CPPv4N6pymemb16enforce_periodicERK5real3RK7BoxType">[1]</a>
 </li>
       <li><a href="cppapi/function_computegeometry_8hpp_1ae1cf95c8fbad1ebc411442516c137a64.html#_CPPv4N6pymemb14is_equiangularERK5real3RK5real3RK5real3RK5real3RK7BoxType">pymemb::is_equiangular (C++ function)</a>
@@ -1559,6 +1547,12 @@ document.write(`
       <li><a href="cppapi/typedef_pymembvector_8hpp_1a36ab625e2dcdbfdb850232a7ce9a2d67.html#_CPPv4I0EN6pymemb6vectorE">pymemb::vector (C++ type)</a>
 </li>
       <li><a href="cppapi/function_computegeometry_8hpp_1ab8b502b5fd2c97b54c1dda3594147362.html#_CPPv4N6pymemb12vector_crossERK5real3RK5real3">pymemb::vector_cross (C++ function)</a>
+</li>
+      <li><a href="cppapi/function_computegeometry_8hpp_1ae9c60ba2f38b504b17ef2248eb93bd1c.html#_CPPv4N6pymemb10vector_dotERK5real3RK5real3">pymemb::vector_dot (C++ function)</a>
+</li>
+      <li><a href="cppapi/function_computegeometry_8hpp_1a7349ccd0dcb8259d038c58792fb7eba1.html#_CPPv4N6pymemb13vector_lengthERK5real3">pymemb::vector_length (C++ function)</a>
+</li>
+      <li><a href="cppapi/function_computegeometry_8hpp_1a4a55a5953dad579e3f73374e452b3cc5.html#_CPPv4N6pymemb21vector_squared_lengthERK5real3">pymemb::vector_squared_length (C++ function)</a>
 </li>
       <li><a href="cppapi/function_computegeometry_8hpp_1a00eee6717b533db780f1d78cd29a1aeb.html#_CPPv4N6pymemb15vector_subtractERK5real3RK5real3RK7BoxType">pymemb::vector_subtract (C++ function)</a>, <a href="cppapi/function_computegeometry_8hpp_1ae323aff34acd8098c5d30f5bf5efb9fa.html#_CPPv4N6pymemb15vector_subtractERK5real3RK5real3">[1]</a>
 </li>
@@ -1806,9 +1800,9 @@ document.write(`
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="cppapi/function_fromdicttovec_8hpp_1a0b47ca04a505556314679b48a680052f.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapINSt6stringENSt6stringEEE">util::from_dict_to_vector_types (C++ function)</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapIiNSt6stringEEE">[1]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a11fe89370d465d46e37b452261a8c8b1.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapINSt6stringENSt6stringEEE">[2]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a21795891fbdf28479a16f92147a47839.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapIiNSt6stringEEE">[3]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapIiNSt6stringEEE">[4]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapIiNSt6stringEEE">[5]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a7a40afcfc92f21fbc7fa89dd793ba827.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapIiNSt6stringEEE">[6]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a860c37536878eac11eab910bc126210e.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapIiNSt6stringEEE">[7]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapINSt6stringENSt6stringEEE">[8]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1ab05b66696615b248a832329fa3431216.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapINSt6stringENSt6stringEEE">[9]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapINSt6stringENSt6stringEEE">[10]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapINSt6stringENSt6stringEEE">[11]</a>
+      <li><a href="cppapi/function_fromdicttovec_8hpp_1a1040e04629c8237445c383f3ec40b437.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapIiNSt6stringEEE">util::from_dict_to_vector_types (C++ function)</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a46cf0931aedbf8f5376279e482d5c04d.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapIiNSt6stringEEE">[1]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a663a5e7a82dad6995abf803165789490.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapIiNSt6stringEEE">[2]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a8fa8a96ee0cf05dbf0f7465e5ba4a1ab.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIbEENSt3mapINSt6stringENSt6stringEEE">[3]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1acca6e9d517481c11c8145aafca6341a9.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIiEENSt3mapINSt6stringENSt6stringEEE">[4]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1afc4a6f700ba2d2568addb614d2c774d3.html#_CPPv4N4util25from_dict_to_vector_typesENSt6vectorIdEENSt3mapINSt6stringENSt6stringEEE">[5]</a>
 </li>
-      <li><a href="cppapi/function_fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIiEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">util::from_dict_to_vector_types_pair (C++ function)</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a3cb4fe962a43bf3f261e34e97fa07fa8.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIiEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[1]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a40ba649db05316e24532bebeb5c8f666.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIdEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[2]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIdEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[3]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a6b665d09d645b822501abfc2c07b7fdc.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIbEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[4]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIbEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[5]</a>
+      <li><a href="cppapi/function_fromdicttovec_8hpp_1a2314087858e14f25e052be14314693e6.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIiEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">util::from_dict_to_vector_types_pair (C++ function)</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a6465c6e8e4703edca971b9fa79ac3472.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIdEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[1]</a>, <a href="cppapi/function_fromdicttovec_8hpp_1a70132945fd65fd51267f6ad091447da3.html#_CPPv4N4util30from_dict_to_vector_types_pairENSt6vectorIbEE4uintNSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEE">[2]</a>
 </li>
       <li><a href="cppapi/function_fromstring_8hpp_1ae14bf130ba37e8322c891026b87eec9b.html#_CPPv4N4util16from_string_boolERKNSt6stringE">util::from_string_bool (C++ function)</a>
 </li>
@@ -1911,8 +1905,8 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -1932,8 +1926,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1941,17 +1935,19 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
-      © Copyright 2023 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
     <br/>
   </p>
 </div>
@@ -1962,8 +1958,10 @@ document.write(`
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>
