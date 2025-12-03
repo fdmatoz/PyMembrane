@@ -12,12 +12,20 @@ void ComputeVertexLimitForce_fn(int Numvertices,
 
         auto fval = 0.0;
 
-        if (r.z >= 0.0)
-            fval = -_kz1[type] * r.z;
+        if (r.z >= 0.5)
+        {
+            //fval = -_kz1[type] * r.z;
+            vertices[vertex_index].r.z = 0.5;
+            vertices[vertex_index].type = 2;
+        }
         else
-            fval = -_kz2[type] * r.z;
+        {
+            //fval = -_kz2[type] * r.z;
+            if (r.z < 0.45)
+                vertices[vertex_index].type = 1;
 
-        vertices[vertex_index].forceC.z += fval;
+        }
+        //vertices[vertex_index].forceC.z += fval;
     }
 }
 void ComputeVertexSubstrateEnergy::compute(void)

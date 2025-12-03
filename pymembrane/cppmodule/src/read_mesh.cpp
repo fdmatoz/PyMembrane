@@ -25,6 +25,7 @@ void ReadMesh::__add_vertex(int id, real x, real y, real z, int type)
     vertex.normal.x = 0.;
     vertex.normal.y = 0.;
     vertex.normal.z = 0.;
+    vertex.spin = 1.0;
     vertices.push_back(vertex);
 }
 void ReadMesh::__add_face(int id, std::vector<int> verts, int orientation, int type)

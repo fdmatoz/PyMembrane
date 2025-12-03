@@ -28,8 +28,8 @@ public:
   /** @brief VertexIntegrator Constructor */
   MonteCarloIntegratorVertex(SystemClass &system, VertexCompute &potentials) : MonteCarloIntegrator(system, potentials)
   {
-    type = "monte carlo";
-    name = "vertex move";
+    m_type = "monte carlo";
+    m_name = "vertex move";
     this->set_default_properties();
   }
   /** @brief destructor */
@@ -90,7 +90,7 @@ public:
         m_spherical_move = util::from_string_bool(item.second);
       }
       else
-        this->print_warning_property_name(name);
+        this->print_warning_property_name(item.first);
     }
   }
 
@@ -106,6 +106,19 @@ public:
       else
         this->print_warning_property_name(item.first);
     }
+  }
+
+  std::map<std::string, std::string> get_info(void) override
+  {
+    std::map<std::string, std::string> value;
+    value["name"] = m_name;
+    value["type"] = m_type;
+    value["T"] = util::to_string(this->get_temperature());
+    value["spherical_move"] = util::to_string(m_spherical_move);
+    value["dx"] = util::to_string(m_dx);
+    value["dy"] = util::to_string(m_dy);
+    value["dz"] = util::to_string(m_dz);
+    return value;
   }
   int integrate(void) override;
 

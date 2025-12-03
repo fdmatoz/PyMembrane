@@ -29,8 +29,8 @@ class MonteCarloIntegratorSwapEdge : public MonteCarloIntegrator
 public:
   MonteCarloIntegratorSwapEdge(SystemClass &system, VertexCompute &potentials) : MonteCarloIntegrator(system, potentials)
   {
-    name = "edge swap";
-    type = "monte carlo";
+    m_name = "edge swap";
+    m_type = "monte carlo";
     this->set_default_properties();
   }
   ~MonteCarloIntegratorSwapEdge() {}
@@ -92,11 +92,19 @@ public:
         this->print_warning_property_name(item.first);
     }
   }
-
+  std::map<std::string, std::string> get_info(void) override
+  {
+    std::map<std::string, std::string> value;
+    value["name"] = m_name;
+    value["type"] = m_type;
+    value["T"] = util::to_string(this->get_temperature());
+    value["stochastic_tunnelling"] = util::to_string(stochastic_tunnelling);
+    value["stochastic_gamma"] = util::to_string(stochastic_gamma);
+    return value;
+  }
   int integrate(void) override;
 
 private:
-  double m_dx, m_dy, m_dz;
   unsigned int m_seed;
   RNG_ptr m_rng;
   bool stochastic_tunnelling;

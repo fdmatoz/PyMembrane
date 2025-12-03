@@ -68,6 +68,7 @@ void export_EvolverClass(py::module &m)
         .def("set", &EvolverClass::set_property<std::map<std::string, std::string>>, "set/modify properties for integrartors/forces/minimizers/contraints")
         //common
         .def("get_force_info", &EvolverClass::get_force_info, "get information about potentials and integrators")
+        .def("get_integrator_info", &EvolverClass::get_integrator_info, "get information about integrators and integrators")
         .def("get_minimizer_info", &EvolverClass::get_minimizer_info, "get information about minimizer")
         ;
 }

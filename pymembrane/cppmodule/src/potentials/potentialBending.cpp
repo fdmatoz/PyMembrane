@@ -158,7 +158,11 @@ real ComputeVertexBendingEnergy::compute_vertex_energy(int query_vertex_index)
                 real3 nk_ref, nl_ref;
                 nk_ref = _system.faces[_system.edges[edge_index].face_k].normal_reference;
                 nl_ref = _system.faces[_system.edges[edge_index].face_l].normal_reference;
-                energy += ComputeVertexBendingEnergy_lambda(nk, nl, nk_ref, nl_ref, kappa_tilde);
+					// Do not take into account the bending energy for vertices which are covered by a particle. 
+					// Therefore, an if statement was added. type==-1 is a free vertex.
+				if (_system.vertices[v0].type==-1) {
+					energy += ComputeVertexBendingEnergy_lambda(nk, nl, nk_ref, nl_ref, kappa_tilde);
+				}
             }
         }
         int he_prev = _system.halfedges[he].prev;

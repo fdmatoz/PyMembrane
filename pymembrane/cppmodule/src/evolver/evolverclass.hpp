@@ -32,6 +32,7 @@
 namespace py = pybind11;
 
 #include "../system/systemclass.hpp"
+#include "../mesh/meshoperations.hpp"
 #include "../potentials/computeforceclass.hpp"
 #include "../integrators/integratorclass.hpp"
 #include "../integrators/montecarlointegrator.hpp"
@@ -49,6 +50,10 @@ namespace py = pybind11;
 #include "../potentials/potentialLineTension.hpp"
 #include "../potentials/potentialConstantAreaTriangle.hpp"
 #include "../potentials/potentialSubstrate.hpp"
+#include "../potentials/potentialIsing.hpp"
+#include "../potentials/potentialHarmonicDye.hpp"
+#include "../potentials/potentialSurfaceTension.hpp"
+#include "../potentials/potentialSubstrateCylinder.hpp"
 
 
 class EvolverClass
@@ -105,6 +110,26 @@ public:
         else if (name.compare("Mesh>Substrate") == 0)
         {
             mesh_force_list[name] = std::make_unique<ComputeVertexSubstrateEnergy>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>Ising") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexFerromagneticEnergy>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>HarmonicDye") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexHarmonicSpinEnergy>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>SurfaceTension") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexSurfaceTension>(_system);
+            mesh_force_list[name]->set_property(parameters);
+        }
+        else if (name.compare("Mesh>SubstrateCylinder") == 0)
+        {
+            mesh_force_list[name] = std::make_unique<ComputeVertexSubstrateCylinderEnergy>(_system);
             mesh_force_list[name]->set_property(parameters);
         }
         else
@@ -206,8 +231,11 @@ public:
     std::map<std::string, std::map<std::string, std::string>> get_integrator_info(void)
     {
         std::map<std::string, std::map<std::string, std::string>> integrators_info;
-        //for (const auto &integrator : mesh_integrator_list)
-        //   integrators_info[integrator.first] = integrator.second->get_info();
+        for (const auto &integrator : mesh_integrator_list)
+           integrators_info[integrator.first] = integrator.second->get_info();
+
+        for (const auto &integrator : mesh_integrator_montecarlo_list)
+           integrators_info[integrator.first] = integrator.second->get_info();
 
         return integrators_info;
     }

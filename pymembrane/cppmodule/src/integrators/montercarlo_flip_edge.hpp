@@ -29,8 +29,8 @@ class MonteCarloIntegratorFlipEdge : public MonteCarloIntegrator
 public:
     MonteCarloIntegratorFlipEdge(SystemClass &system, VertexCompute &potentials) : MonteCarloIntegrator(system, potentials)
     {
-        name = "edge flip";
-        type = "monte carlo";
+        m_name = "edge flip";
+        m_type = "monte carlo";
         this->set_default_properties();
     }
     ~MonteCarloIntegratorFlipEdge() {}
@@ -80,12 +80,18 @@ public:
             this->print_warning_property_name(item.first);
         }
     }
-
+    std::map<std::string, std::string> get_info(void) override
+    {
+        std::map<std::string, std::string> value;
+        value["name"] = m_name;
+        value["type"] = m_type;
+        value["T"] = util::to_string(this->get_temperature());
+        return value;
+    }
     bool edge_flip(int, bool);
     int integrate(void) override;
 
 private:
-    double m_dx, m_dy, m_dz;
     unsigned int m_seed;
     RNG_ptr m_rng;
     pymemb::vector<bool> freezed_edge;

@@ -82,6 +82,7 @@ void DumperClass::mesh_vertices_faces(const std::string &file_name)
     vtkSmartPointer<vtkDoubleArray> vnormal = vtkSmartPointer<vtkDoubleArray>::New();
     vtkSmartPointer<vtkDoubleArray> guassian_curv = vtkSmartPointer<vtkDoubleArray>::New();
     vtkSmartPointer<vtkDoubleArray> mean_curv = vtkSmartPointer<vtkDoubleArray>::New();
+    vtkSmartPointer<vtkDoubleArray> spin = vtkSmartPointer<vtkDoubleArray>::New();
 
     vtkSmartPointer<vtkPolygon> triangle_vtk = vtkSmartPointer<vtkPolygon>::New();
     vtkSmartPointer<vtkIntArray> ids_vtk = vtkSmartPointer<vtkIntArray>::New();
@@ -152,6 +153,9 @@ void DumperClass::mesh_vertices_faces(const std::string &file_name)
     guassian_curv->SetNumberOfComponents(1);
     mean_curv->SetName("MeanCurvature");
     mean_curv->SetNumberOfComponents(1);
+    spin->SetName("spin");
+    spin->SetNumberOfComponents(1);
+    
     //Compute the mean and the gaussian curvature
     auto compute_mesh = _system.get_compute_mesh();
     auto curvatures = _system.compute_mesh.compute_mesh_curvature();
@@ -291,6 +295,7 @@ void DumperClass::mesh_vertices_faces(const std::string &file_name)
         }
         guassian_curv->InsertNextValue(curvatures["gaussian"][i]);
         mean_curv->InsertNextValue(curvatures["mean"][i]);
+        spin->InsertNextValue(vertices[i].spin);
     }
     polydata_vtk->SetPoints(vertices_vtk);
     polydata_vtk->GetPointData()->AddArray(ids_vtk);
@@ -302,6 +307,8 @@ void DumperClass::mesh_vertices_faces(const std::string &file_name)
     polydata_vtk->GetPointData()->AddArray(vnormal);
     polydata_vtk->GetPointData()->AddArray(guassian_curv);
     polydata_vtk->GetPointData()->AddArray(mean_curv);
+    polydata_vtk->GetPointData()->AddArray(spin);
+
     ///USER DATA
     for (auto vtk_user_data : vertex_data_vtk)
         polydata_vtk->GetPointData()->AddArray(vtk_user_data);
@@ -526,6 +533,7 @@ void DumperClass::mesh_vtk_periodic(const std::string &file_name)
     vtkSmartPointer<vtkDoubleArray> vnormal = vtkSmartPointer<vtkDoubleArray>::New();
     vtkSmartPointer<vtkDoubleArray> guassian_curv = vtkSmartPointer<vtkDoubleArray>::New();
     vtkSmartPointer<vtkDoubleArray> mean_curv = vtkSmartPointer<vtkDoubleArray>::New();
+    vtkSmartPointer<vtkDoubleArray> spin = vtkSmartPointer<vtkDoubleArray>::New();
 
     vtkSmartPointer<vtkPolygon> triangle_vtk = vtkSmartPointer<vtkPolygon>::New();
     vtkSmartPointer<vtkIntArray> ids_vtk = vtkSmartPointer<vtkIntArray>::New();
@@ -574,6 +582,8 @@ void DumperClass::mesh_vtk_periodic(const std::string &file_name)
     guassian_curv->SetNumberOfComponents(1);
     mean_curv->SetName("MeanCurvature");
     mean_curv->SetNumberOfComponents(1);
+    spin->SetName("spin");
+    spin->SetNumberOfComponents(1);
     //Compute the mean and the gaussian curvature
     auto compute_mesh = _system.get_compute_mesh();
     auto curvatures = _system.compute_mesh.compute_mesh_curvature();
@@ -681,6 +691,7 @@ void DumperClass::mesh_vtk_periodic(const std::string &file_name)
         vnormal->InsertNextTuple(norm);
         guassian_curv->InsertNextValue(curvatures["gaussian"][i]);
         mean_curv->InsertNextValue(curvatures["mean"][i]);
+        spin->InsertNextValue(vertices[i].spin);
     }
     polydata_vtk->SetPoints(vertices_vtk);
     polydata_vtk->GetPointData()->AddArray(ids_vtk);
@@ -692,6 +703,7 @@ void DumperClass::mesh_vtk_periodic(const std::string &file_name)
     polydata_vtk->GetPointData()->AddArray(vnormal);
     polydata_vtk->GetPointData()->AddArray(guassian_curv);
     polydata_vtk->GetPointData()->AddArray(mean_curv);
+    polydata_vtk->GetPointData()->AddArray(spin);
     // Write the file
     vtkSmartPointer<vtkXMLPolyDataWriter> writer = vtkSmartPointer<vtkXMLPolyDataWriter>::New();
     writer->SetFileName(file_name2.c_str());

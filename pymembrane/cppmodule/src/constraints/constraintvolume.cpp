@@ -59,9 +59,13 @@ void ConstraintVolume::compute_gradient(void)
                 r1 = _system.vertices[v1].r;
                 r2 = _system.vertices[v2].r;
 
+                real angle = pymemb::compute_angle_vertex(r, r1, r2);
+                angle = angle/(M_PI);
+
                 //compute the volume in an atomic operation
                 nt = pymemb::compute_normal_triangle(r, r1, r2);
-                m_value+= vdot(r, nt) / 6.0 / 3.0;
+                m_value+= (vdot(r, nt) / 6.0 )*angle;
+                //old version:  m_value+= vdot(r, nt) / 6.0 / 3.0;
 
                 //compute the volume gradient
                 Nx += (r1.y * r2.z - r2.y * r1.z);

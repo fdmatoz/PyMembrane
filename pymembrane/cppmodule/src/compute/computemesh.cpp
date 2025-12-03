@@ -290,6 +290,7 @@ real ComputeMesh::meancurvature_vertex(const int &vertex_index)
     int first = he;
     do
     {
+
         // DO SOMETHING WITH THAT EDGE
         int edge_index = _system.halfedges[he].edge;
         if (_system.edges[edge_index].boundary == false)
@@ -499,6 +500,24 @@ real ComputeMesh::compute_mesh_area(void)
     }
     return mesh_area;
 }
+
+real ComputeMesh::compute_area_typed(int type)
+{
+    real mesh_area = 0.0;
+    for (int face_index = 0; face_index < _system.Numfaces; face_index++)
+    {
+        int v1 = _system.faces[face_index].v1;
+        int v2 = _system.faces[face_index].v2;
+        int v3 = _system.faces[face_index].v3;
+        if (_system.vertices[v1].type != type || _system.vertices[v2].type != type || _system.vertices[v3].type != type)
+            continue;
+        
+        mesh_area += pymemb::compute_area_triangle_from_vertex(_system.vertices[v1].r, _system.vertices[v2].r, _system.vertices[v3].r, _system.get_box());
+    }
+
+    return mesh_area;
+}
+
 
 pymemb::vector<pymemb::vector<real>> ComputeMesh::compute_face_metric(void)
 {

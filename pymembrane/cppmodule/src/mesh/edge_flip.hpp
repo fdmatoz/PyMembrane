@@ -6,6 +6,22 @@
 
 namespace pymemb
 {
+    inline bool edge_need_flip(const int flip_edge_index,
+                                HE_VertexProp *vertices,
+                                HE_EdgeProp *edges)
+    {
+        int v0 = edges[flip_edge_index].v0;
+        int v1 = edges[flip_edge_index].v1;
+        int v2 = edges[flip_edge_index].v2;
+        int v3 = edges[flip_edge_index].v3;
+
+
+        double angle012 = pymemb::compute_angle_vertex(vertices[v1].r, vertices[v0].r, vertices[v2].r);
+        double angle210 =  pymemb::compute_angle_vertex(vertices[v3].r, vertices[v0].r, vertices[v2].r);
+
+        return angle012 + angle210 > M_PI;
+    }
+
     inline bool CheckEdgeFlip_lambda(const int flip_edge_index,
                                      HE_FaceProp *faces,
                                      HE_VertexProp *vertices,
@@ -93,6 +109,8 @@ namespace pymemb
         real r02_norm_sq = (vdot(r02, r02));
         real r03_norm_sq = (vdot(r03, r03));
         real r01_norm_sq = (vdot(r01, r01));
+        if (r02_norm_sq == 0 || r02_norm_sq == 0 || r03_norm_sq == 0)
+            std::cout << "division by 0" << std::endl;
         real angle_r01_r02 = acos(vdot(r01, r02) / sqrt(r01_norm_sq * r02_norm_sq));
         real angle_r03_r02 = acos(vdot(r03, r02) / sqrt(r03_norm_sq * r02_norm_sq));
         if ((angle_r01_r02 + angle_r03_r02) >= defPI)
@@ -107,6 +125,8 @@ namespace pymemb
         r21 = pymemb::minimum_image(vertices[v2].r, vertices[v1].r, _box);
         real r23_norm_sq = (vdot(r23, r23));
         real r21_norm_sq = (vdot(r21, r21));
+        if (r23_norm_sq == 0 || r21_norm_sq == 0)
+            std::cout << "division by 0" << std::endl;
         real angle_r21_r20 = acos(vdot(r21, r20) / sqrt(r21_norm_sq * r02_norm_sq));
         real angle_r23_r20 = acos(vdot(r23, r20) / sqrt(r23_norm_sq * r02_norm_sq));
         if ((angle_r21_r20 + angle_r23_r20) >= defPI)
@@ -154,7 +174,6 @@ namespace pymemb
         // check v0
         he = vertices[v0]._hedge;
         first = he;
-
         do
         {
             n_neighbors_v0++;
@@ -176,7 +195,7 @@ namespace pymemb
             he_pair_next = halfedges[he_pair].next;
             he = he_pair_next;
         } while ((he != first));
-
+        
         // if (n_neighbors_v0 <= 4 || n_neighbors_v2 <= 4)
         if (n_neighbors_v0 < 3 || n_neighbors_v2 < 3)
         {
@@ -205,6 +224,8 @@ namespace pymemb
         real r02_norm_sq = (vdot(r02, r02));
         real r03_norm_sq = (vdot(r03, r03));
         real r01_norm_sq = (vdot(r01, r01));
+        if (r02_norm_sq == 0 || r01_norm_sq == 0 || r03_norm_sq == 0)
+            std::cout << "division by 0" << std::endl;
         real angle_r01_r02 = acos(vdot(r01, r02) / sqrt(r01_norm_sq * r02_norm_sq));
         real angle_r03_r02 = acos(vdot(r03, r02) / sqrt(r03_norm_sq * r02_norm_sq));
         if ((angle_r01_r02 + angle_r03_r02) >= defPI)
@@ -219,6 +240,8 @@ namespace pymemb
         r21 = pymemb::minimum_image(vertices[v2].r, vertices[v1].r, _box);
         real r23_norm_sq = (vdot(r23, r23));
         real r21_norm_sq = (vdot(r21, r21));
+        if (r23_norm_sq == 0 || r21_norm_sq == 0)
+            std::cout << "division by 0" << std::endl;
         real angle_r21_r20 = acos(vdot(r21, r20) / sqrt(r21_norm_sq * r02_norm_sq));
         real angle_r23_r20 = acos(vdot(r23, r20) / sqrt(r23_norm_sq * r02_norm_sq));
         if ((angle_r21_r20 + angle_r23_r20) >= defPI)
