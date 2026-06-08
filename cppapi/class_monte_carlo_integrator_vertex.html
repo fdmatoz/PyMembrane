@@ -404,84 +404,10 @@
 </section>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv426MonteCarloIntegratorVertex">
-<span id="_CPPv326MonteCarloIntegratorVertex"></span><span id="_CPPv226MonteCarloIntegratorVertex"></span><span id="MonteCarloIntegratorVertex"></span><span class="target" id="classMonteCarloIntegratorVertex"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegratorVertex</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classMonteCarloIntegrator.html#_CPPv420MonteCarloIntegrator" title="MonteCarloIntegrator"><span class="n"><span class="pre">MonteCarloIntegrator</span></span></a><br /></dt>
-<dd><p>Handles Metropolis type Monte Carlo algorithm. </p>
-<p>In this algorithm, one Monte Carlo step is considered as attempting a swap two vertices at random. One sweep consists of attempting moves on each vertex in the membrane.</p>
-<p>In this algorithm, one Monte Carlo step is considered as attempting a move of a single vertex. One sweep consists of attempting moves on each vertex in the membrane. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex26MonteCarloIntegratorVertexER11SystemClassR13VertexCompute">
-<span id="_CPPv3N26MonteCarloIntegratorVertex26MonteCarloIntegratorVertexER11SystemClassR13VertexCompute"></span><span id="_CPPv2N26MonteCarloIntegratorVertex26MonteCarloIntegratorVertexER11SystemClassR13VertexCompute"></span><span id="MonteCarloIntegratorVertex::MonteCarloIntegratorVertex__SystemClassR.VertexComputeR"></span><span class="target" id="classMonteCarloIntegratorVertex_1a93a36ec65f2b30d9e492d4cd8cb7513c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MonteCarloIntegratorVertex</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span>, <a class="reference internal" href="typedef_group__computeenergy_1ga27e0d02f106f0a07de500aa80a3dfa41.html#_CPPv413VertexCompute" title="VertexCompute"><span class="n"><span class="pre">VertexCompute</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">potentials</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>VertexIntegrator Constructor. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertexD0Ev">
-<span id="_CPPv3N26MonteCarloIntegratorVertexD0Ev"></span><span id="_CPPv2N26MonteCarloIntegratorVertexD0Ev"></span><span id="MonteCarloIntegratorVertex::~MonteCarloIntegratorVertex"></span><span class="target" id="classMonteCarloIntegratorVertex_1afc654505bae297fc8ae2dfac669e00d4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~MonteCarloIntegratorVertex</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>destructor </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex22set_default_propertiesEv">
-<span id="_CPPv3N26MonteCarloIntegratorVertex22set_default_propertiesEv"></span><span id="_CPPv2N26MonteCarloIntegratorVertex22set_default_propertiesEv"></span><span id="MonteCarloIntegratorVertex::set_default_properties__void"></span><span class="target" id="classMonteCarloIntegratorVertex_1ad5abf7d9acab33fe2c11878f4802fc6d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>abstract set parameters </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="MonteCarloIntegratorVertex::set_property__std::map:ss.ss:R"></span><span class="target" id="classMonteCarloIntegratorVertex_1a5f29844c3a609637ba8a6d0e44ae0337"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="MonteCarloIntegratorVertex::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classMonteCarloIntegratorVertex_1a6a04bf9d1fe442db76bc5033bdb39a2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex8get_infoEv">
-<span id="_CPPv3N26MonteCarloIntegratorVertex8get_infoEv"></span><span id="_CPPv2N26MonteCarloIntegratorVertex8get_infoEv"></span><span id="MonteCarloIntegratorVertex::get_info__void"></span><span class="target" id="classMonteCarloIntegratorVertex_1ace8a2a917ad5595fe30f56d2c92da9c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex9integrateEv">
-<span id="_CPPv3N26MonteCarloIntegratorVertex9integrateEv"></span><span id="_CPPv2N26MonteCarloIntegratorVertex9integrateEv"></span><span id="MonteCarloIntegratorVertex::integrate__void"></span><span class="target" id="classMonteCarloIntegratorVertex_1a970d49031607da9c4a42e325750d60e7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integrate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>abstract integrator function </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>number of successful attempts </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="MonteCarloIntegratorVertex::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classMonteCarloIntegratorVertex_1a3deefe8007395a52014d1d35b6f03bb4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp">
-<span class="target" id="classMonteCarloIntegratorVertex_1af4e86d41bd9db68e3c52ee4e319fad20"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp">
-<span class="target" id="classMonteCarloIntegratorVertex_1a5c08c32cb317d6fd94b653b8608d0714"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “MonteCarloIntegratorVertex” in doxygen xml output for project “pymembrane” from directory: ./cppapi/xml</p>
 </div>
-</dd></dl>
-
 </section>
 </section>
 
@@ -518,20 +444,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv426MonteCarloIntegratorVertex"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegratorVertex</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex26MonteCarloIntegratorVertexER11SystemClassR13VertexCompute"><code class="docutils literal notranslate"><span class="pre">MonteCarloIntegratorVertex()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertexD0Ev"><code class="docutils literal notranslate"><span class="pre">~MonteCarloIntegratorVertex()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex22set_default_propertiesEv"><code class="docutils literal notranslate"><span class="pre">set_default_properties()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex8get_infoEv"><code class="docutils literal notranslate"><span class="pre">get_info()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex9integrateEv"><code class="docutils literal notranslate"><span class="pre">integrate()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N26MonteCarloIntegratorVertex12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
 </ul>
   </nav></div>
 
@@ -560,7 +473,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

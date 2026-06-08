@@ -450,13 +450,9 @@
 <span class="w">                </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v1</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
 <span class="w">                </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v2</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
 
-<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_angle_vertex</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">);</span>
-<span class="w">                </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle</span><span class="o">/</span><span class="p">(</span><span class="n">M_PI</span><span class="p">);</span>
-
 <span class="w">                </span><span class="c1">//compute the volume in an atomic operation</span>
 <span class="w">                </span><span class="n">nt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_normal_triangle</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">);</span>
-<span class="w">                </span><span class="n">m_value</span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">nt</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">6.0</span><span class="w"> </span><span class="p">)</span><span class="o">*</span><span class="n">angle</span><span class="p">;</span>
-<span class="w">                </span><span class="c1">//old version:  m_value+= vdot(r, nt) / 6.0 / 3.0;</span>
+<span class="w">                </span><span class="n">m_value</span><span class="o">+=</span><span class="w"> </span><span class="n">vdot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">nt</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">6.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span>
 
 <span class="w">                </span><span class="c1">//compute the volume gradient</span>
 <span class="w">                </span><span class="n">Nx</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r2</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r2</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r1</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
@@ -544,7 +540,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

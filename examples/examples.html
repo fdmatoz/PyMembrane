@@ -47,7 +47,6 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/examples';</script>
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -237,6 +236,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -409,7 +412,80 @@
                   
   <section id="pymembrane-examples">
 <h1>PyMembrane Examples<a class="headerlink" href="#pymembrane-examples" title="Link to this heading">#</a></h1>
-<p>Here we demonstrate various applications of PyMembrane to study common problems in the physics of membranes. The provided Python code is fully annotated and operational, and it comes with the necessary input files. The objective of these demonstrations is not only to showcase PyMembrane’s adaptability but also to outline a standard workflow for setting up a simulation.</p>
+<p>Here we demonstrate various applications of PyMembrane to study common
+problems in the physics of membranes. The examples below are kept in two
+forms:</p>
+<ul class="simple">
+<li><p>The source versions live under <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> and are useful for
+developers who want to inspect the documented scripts directly.</p></li>
+<li><p>The installed, reviewer-friendly versions live under
+<code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code> and can be run with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span></code> after
+installation.</p></li>
+</ul>
+<section id="primary-interface">
+<h2>Primary interface<a class="headerlink" href="#primary-interface" title="Link to this heading">#</a></h2>
+<p>Install PyMembrane from the repository root:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<p>Then run the packaged examples from any working directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_mc<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_verlet<span class="w"> </span>--quick
+</pre></div>
+</div>
+<p>Most examples also support <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> so that generated files are kept in
+one directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
+</pre></div>
+</div>
+</section>
+<section id="packaged-examples">
+<h2>Packaged examples<a class="headerlink" href="#packaged-examples" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.periodic</span></code></dt><dd><p>Demonstrates wrinkling of a periodic elastic sheet under uniaxial
+compression. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">periodic_t*.vtk</span></code>.
+Typical quick-mode runtime is a few seconds on a laptop.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.buckling</span></code></dt><dd><p>Demonstrates Caspar-Klug shell buckling of a closed triangulated shell using
+a Monte Carlo vertex move. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sphere_t*.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>. Typical quick-mode runtime is a
+few seconds.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.minimizer</span></code></dt><dd><p>Demonstrates constant-volume energy minimization of a strained vesicle using
+the FIRE minimizer. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and
+<code class="docutils literal notranslate"><span class="pre">minimization_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination</span></code></dt><dd><p>Demonstrates Brownian relaxation of an open <code class="docutils literal notranslate"><span class="pre">+1</span></code> disclination. Quick mode
+writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>. Typical quick-mode
+runtime is a few seconds.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination_mc</span></code></dt><dd><p>Demonstrates the same disclination problem using a Monte Carlo vertex-move
+integrator. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code> and
+<code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination_verlet</span></code></dt><dd><p>Demonstrates the same disclination problem using a velocity-Verlet
+integrator. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>.
+Typical quick-mode runtime is a few seconds.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.hybrid_mc_bd</span></code></dt><dd><p>Demonstrates a conservative hybrid workflow for the open <code class="docutils literal notranslate"><span class="pre">+1</span></code>
+disclination problem by alternating Brownian dynamics vertex relaxation with
+Monte Carlo vertex moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and
+<code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
+</dd>
+</dl>
+</section>
+<section id="dependency-note">
+<h2>Dependency note<a class="headerlink" href="#dependency-note" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The examples require PyMembrane and its runtime dependencies.</p></li>
+<li><p>No plotting packages are required to run the examples.</p></li>
+<li><p>Output geometry is written with dumper methods such as
+<code class="docutils literal notranslate"><span class="pre">system.dumper.vtk(...)</span></code>.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
@@ -418,6 +494,7 @@
 <li class="toctree-l1"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -455,6 +532,26 @@
             
             
               
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-interface">Primary interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaged-examples">Packaged examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-note">Dependency note</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -478,7 +575,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

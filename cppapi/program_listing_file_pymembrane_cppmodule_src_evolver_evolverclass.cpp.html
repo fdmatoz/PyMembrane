@@ -565,11 +565,8 @@
 <span class="p">}</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">EvolverClass::evolve_mesh_md</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mdsteps</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">MeshOperations</span><span class="w"> </span><span class="n">mesh_op</span><span class="p">(</span><span class="n">_system</span><span class="p">);</span>
-
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mdsteps</span><span class="p">;</span><span class="w"> </span><span class="n">step</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//std::cout &lt;&lt; step &lt;&lt; &quot;/&quot; &lt;&lt; mdsteps &lt;&lt; std::endl;</span>
 <span class="w">        </span><span class="c1">// Perform the preintegration step, i.e., step before forces and torques are computed</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_prestep</span><span class="p">();</span>
 
@@ -581,10 +578,6 @@
 
 <span class="w">        </span><span class="c1">// Perform the second step of integration</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evolve_mesh_poststep</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">enforce_mesh_constraints</span><span class="p">();</span>
-<span class="w">        </span><span class="n">mesh_op</span><span class="p">.</span><span class="n">adapt_mesh</span><span class="p">();</span>
-<span class="w">        </span><span class="n">mesh_op</span><span class="p">.</span><span class="n">refine_mesh_edge_flip</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -735,7 +728,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

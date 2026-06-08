@@ -47,7 +47,6 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/class_compute_vertex_line_tension';</script>
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -405,52 +404,10 @@
 </section>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv424ComputeVertexLineTension">
-<span id="_CPPv324ComputeVertexLineTension"></span><span id="_CPPv224ComputeVertexLineTension"></span><span id="ComputeVertexLineTension"></span><span class="target" id="classComputeVertexLineTension"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexLineTension</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classComputeForceClass.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><br /></dt>
-<dd><p>Implements the line tension contribution to the edge energy. </p>
-<p>This is the most basic form of the line tension energy. The line tension energy ( E ) associated with a vertex is given by:  <div class="math notranslate nohighlight">
-\[
-E = \sum_{\text{neighboring edges}} \gamma_{\text{type}} \times s
-\]</div>
-</p>
-<p>Where:<ul class="simple">
-<li><p>(\gamma_{\text{type}}) is determined by:<ul>
-<li><p>Averaging the (\gamma) values of the two vertices forming the edge if \texttt{flag_avg} is true: <div class="math notranslate nohighlight">
-\[ \gamma_{\text{type}} = 0.5 \times (\gamma[\text{type\_0}] + \gamma[\text{type\_1}]) \]</div>
-</p></li>
-<li><p>Taking the (\gamma) value of the query vertex if \texttt{flag_avg} is false: (\gamma_{\text{type}} = \gamma[\text{type_0}])</p></li>
-</ul>
-</p></li>
-<li><p>(s) is either:<ul>
-<li><p>The Euclidean distance between the two vertices if \texttt{flag_scale} is true: <div class="math notranslate nohighlight">
-\[ s = ||\textbf{r}_{\text{query\_vertex}} - \textbf{r}_{\text{neighboring\_vertex}}|| \]</div>
-</p></li>
-<li><p>1.0 if \texttt{flag_scale} is false. </p></li>
-</ul>
-</p></li>
-</ul>
-</p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexLineTension::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classComputeVertexLineTension_1a8f58a440a3eaf0ce86b9eb041f04e8b4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexLineTension::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classComputeVertexLineTension_1aed03d57ba661016fdb23695e588c96df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexLineTension::set_property__std::map:ss.ss:R"></span><span class="target" id="classComputeVertexLineTension_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “ComputeVertexLineTension” in doxygen xml output for project “pymembrane” from directory: ./cppapi/xml</p>
 </div>
-</dd></dl>
-
 </section>
 </section>
 
@@ -487,15 +444,7 @@ E = \sum_{\text{neighboring edges}} \gamma_{\text{type}} \times s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv424ComputeVertexLineTension"><code class="docutils literal notranslate"><span class="pre">ComputeVertexLineTension</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N24ComputeVertexLineTension12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
 </ul>
   </nav></div>
 
@@ -524,7 +473,7 @@ E = \sum_{\text{neighboring edges}} \gamma_{\text{type}} \times s
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

@@ -403,44 +403,63 @@
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Currently supported on Linux and Mac OSX.</p></li>
-<li><p>Required installations: Python, associated libraries, and suitable compilers.</p></li>
+<li><p>A C++14-capable compiler is required to build the extension module.</p></li>
 <li><p>Recommended to use <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>.</p></li>
 </ul>
-<section id="steps">
-<h3>Steps:<a class="headerlink" href="#steps" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p>Ensure a C++14 or later standard-supported C/C++ compiler is present.</p></li>
-<li><p>Clone the repository:</p></li>
-<li><p>Create a new conda environment:
-.. code-block:: bash</p>
-<blockquote>
-<div><p>conda create -n PYMEMB python=3.8 numpy</p>
-</div></blockquote>
-</li>
-<li><p>Install necessary packages in the conda environment:
-.. code-block:: bash</p>
-<blockquote>
-<div><p>conda install -c anaconda cmake</p>
-</div></blockquote>
-</li>
-<li><p>Issues with VTK libraries? PyMembrane utilizes [VTK](<a class="reference external" href="https://vtk.org/download/">https://vtk.org/download/</a>) for VTP files, viewable with [ParaView](<a class="reference external" href="https://www.paraview.org/">https://www.paraview.org/</a>). On Linux, use a package manager (e.g., apt) for VTK libraries. For Mac OSX, let PyMembrane fetch and compile VTK locally.</p></li>
-</ol>
 </section>
-</section>
-<section id="installing-the-pymembrane-python-module">
-<h2>Installing the PyMembrane Python Module<a class="headerlink" href="#installing-the-pymembrane-python-module" title="Link to this heading">#</a></h2>
-<p>From the <cite>pymembrane</cite> directory, execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>setup.py<span class="w"> </span>install
+<section id="editable-installation">
+<h2>Editable installation<a class="headerlink" href="#editable-installation" title="Link to this heading">#</a></h2>
+<p>The standard development workflow is an editable install from the repository
+root:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>pymemb<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8<span class="w"> </span>numpy<span class="w"> </span>cmake<span class="w"> </span>pybind11
+conda<span class="w"> </span>activate<span class="w"> </span>pymemb
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import pymembrane; print(pymembrane.__file__)&quot;</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pymembrane import *; print(&#39;import ok&#39;)&quot;</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Without Anaconda, you might need root access. The :code::<cite>python setup.py install –user</cite> option is currently unsupported.</p>
+<p>This keeps the Python package linked to the working tree, which is convenient
+when editing the code or rebuilding the C++ extension.</p>
+</section>
+<section id="non-editable-installation">
+<h2>Non-editable installation<a class="headerlink" href="#non-editable-installation" title="Link to this heading">#</a></h2>
+<p>If you only want a local install of the current checkout without development
+mode, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
 </div>
 </section>
-<section id="visualizing-results">
-<h2>Visualizing Results<a class="headerlink" href="#visualizing-results" title="Link to this heading">#</a></h2>
-<p>Results often use formats like .vtk or .json. Employ visualization tools or the provided scripts for analyzing simulation results. <a class="reference external" href="https://www.paraview.org/">Paraview</a> is recommended for visualizing mesh files and attributes.</p>
+<section id="rebuild-after-c-changes">
+<h2>Rebuild after C++ changes<a class="headerlink" href="#rebuild-after-c-changes" title="Link to this heading">#</a></h2>
+<p>If you modify the C++ extension sources, remove the local build directory and
+reinstall:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>build
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<p>The packaged examples are installed with PyMembrane and can be run as Python
+modules from any working directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">package.module</span></code> form is the standard Python interface for
+executing an installed module as top-level code.</p>
+</section>
+<section id="dependency-note">
+<h2>Dependency note<a class="headerlink" href="#dependency-note" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Normal installation does not require VTK.</p></li>
+<li><p>The examples do not require plotting packages to run.</p></li>
+<li><p>Mesh output is written with the built-in dumper methods such as
+<code class="docutils literal notranslate"><span class="pre">system.dumper.vtk(...)</span></code> and can be viewed in tools such as
+<a class="reference external" href="https://www.paraview.org/">ParaView</a>.</p></li>
+</ul>
 </section>
 <section id="documentation-community">
 <h2>Documentation &amp; Community<a class="headerlink" href="#documentation-community" title="Link to this heading">#</a></h2>
@@ -498,12 +517,12 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-pymembrane-python-module">Installing the PyMembrane Python Module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-results">Visualizing Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editable-installation">Editable installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-editable-installation">Non-editable installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuild-after-c-changes">Rebuild after C++ changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-note">Dependency note</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-community">Documentation &amp; Community</a></li>
 </ul>
   </nav></div>
@@ -533,7 +552,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

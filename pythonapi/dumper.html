@@ -455,7 +455,7 @@
 </nav>
 <section id="description">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
-<p><cite>Dumper</cite> is a Python class interfacing with the underlying C++ <cite>DumperClass</cite>. It enables exporting mesh data in various formats and handling custom user data.</p>
+<p><cite>Dumper</cite> is the default Python dumper attached to <cite>System.dumper</cite>. It preserves the public method names of the historical C++ <cite>DumperClass</cite>, but normal dumping no longer requires VTK. The default <cite>vtk()</cite> and <cite>edge_vtk()</cite> methods write legacy ASCII VTK files directly from Python, and <cite>obj()</cite> writes Wavefront OBJ geometry.</p>
 </section>
 <section id="constructor">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Constructor</a><a class="headerlink" href="#constructor" title="Link to this heading">#</a></h2>
@@ -570,7 +570,7 @@ Dump user data on edges. Overloaded to handle both a list of real values and rea
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

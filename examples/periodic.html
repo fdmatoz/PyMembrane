@@ -47,7 +47,6 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/periodic';</script>
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -416,94 +415,81 @@
                   
   <section id="periodic-boundary">
 <h1>Periodic Boundary<a class="headerlink" href="#periodic-boundary" title="Link to this heading">#</a></h1>
-<p>In many problems, probing finite-size effects is crucial, especially when modelling long-wavelength properties or when long-range interactions are present. Periodic boundary conditions are often used to replicate an infinite system by replicating the simulation box. This method ensures that particles exiting one side of the box re-enter from the opposite side.</p>
-<p>PyMembrane provides a simple way to implement periodic boundary conditions. This tutorial demonstrates how to set up and run a simulation that models wrinkling in a periodic thin sheet subject to uniaxial compression.</p>
-<section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This tutorial assumes that you have already installed PyMembrane. If not, please refer to the installation instructions in the <span class="xref std std-ref">installation</span> section.</p>
-</div>
-<ul class="simple">
-<li><p>Python</p></li>
-<li><p>NumPy</p></li>
-<li><p>Matplotlib</p></li>
-<li><p>SciencePlots</p></li>
-</ul>
+<p>In many problems, probing finite-size effects is crucial, especially when
+modelling long-wavelength properties or when long-range interactions are
+present. Periodic boundary conditions are often used to replicate an infinite
+system by replicating the simulation box. This example models wrinkling in a
+periodic thin sheet subject to uniaxial compression.</p>
+<section id="what-this-example-does">
+<h2>What this example does<a class="headerlink" href="#what-this-example-does" title="Link to this heading">#</a></h2>
+<p>This example loads the packaged mesh files <code class="docutils literal notranslate"><span class="pre">vertices.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">faces.dat</span></code>
+from the periodic example data set, constructs a periodic box, applies
+stretching, limiting, and dihedral bending forces, and evolves the mesh with a
+Brownian vertex-move integrator while the box is compressed along one
+direction. It writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and a sequence of
+<code class="docutils literal notranslate"><span class="pre">periodic_t*.vtk</span></code> files that can be inspected in ParaView or any other tool
+that reads legacy VTK polygon data. <code class="docutils literal notranslate"><span class="pre">--quick</span></code> keeps the same physical setup
+but reduces the number of snapshots and integration steps.</p>
 </section>
-<section id="running-the-code">
-<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>Save the provided code as <a class="reference download internal" download="" href="../_downloads/7370b18dc708bf65fa7c4cf3876a2e9e/periodic.py"><code class="xref download docutils literal notranslate"><span class="pre">periodic.py</span></code></a></p></li>
-<li><p>Download  <a class="reference download internal" download="" href="../_downloads/46a6766e6476bdaea670b676b8f39364/vertices.dat"><code class="xref download docutils literal notranslate"><span class="pre">vertices</span></code></a>, <a class="reference download internal" download="" href="../_downloads/2dad8da24f152ce504b3770003f68dd1/faces.dat"><code class="xref download docutils literal notranslate"><span class="pre">faces</span></code></a>.</p></li>
-<li><p>Run the script by executing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>periodic.py<span class="w"> </span>--snapshots<span class="w"> </span>N_SNAPSHOTS<span class="w"> </span>--run_steps<span class="w"> </span>N_RUN_STEPS<span class="w"> </span>--epsilon<span class="w"> </span>EPSILON
+<section id="primary-run-command">
+<h2>Primary run command<a class="headerlink" href="#primary-run-command" title="Link to this heading">#</a></h2>
+<p>After installing PyMembrane, run the packaged example from any working
+directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
 </pre></div>
 </div>
-</li>
-</ol>
-</section>
-<section id="setting-up-periodic-boundary-conditions">
-<h2>Setting Up Periodic Boundary Conditions<a class="headerlink" href="#setting-up-periodic-boundary-conditions" title="Link to this heading">#</a></h2>
-<p>To create a simulation box with periodic boundary conditions, you can use the <code class="docutils literal notranslate"><span class="pre">Box</span></code> class by setting the periodic flag to True.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pymembrane</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mb</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
-<span class="n">box</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span><span class="o">*</span><span class="mi">29</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<p>To keep output files in a separate directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
 </pre></div>
 </div>
-<p>Next, create a system and read the mesh from the vertex and face files. Then, enforce the boundaries to ensure that all vertices are inside the box for periodic boundary conditions.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
-<span class="n">system</span><span class="o">.</span><span class="n">read_mesh_from_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;vertices&#39;</span><span class="p">:</span> <span class="s1">&#39;vertices.dat&#39;</span><span class="p">,</span> <span class="s1">&#39;faces&#39;</span><span class="p">:</span> <span class="s1">&#39;faces.dat&#39;</span><span class="p">})</span>
-<span class="n">system</span><span class="o">.</span><span class="n">enforce_boundaries</span><span class="p">()</span>
-</pre></div>
-</div>
+<p>The source version of this example is kept under
+<code class="docutils literal notranslate"><span class="pre">docs/examples/02_periodic/periodic.py</span></code>. The installed version under
+<code class="docutils literal notranslate"><span class="pre">pymembrane.examples.periodic</span></code> is the reviewer-facing entry point and avoids
+manual path edits or data downloads.</p>
 </section>
-<section id="creating-forces-and-integrators">
-<h2>Creating Forces and Integrators<a class="headerlink" href="#creating-forces-and-integrators" title="Link to this heading">#</a></h2>
-<p>You can add forces for stretching, limiting, and bending by using the <code class="docutils literal notranslate"><span class="pre">Evolver</span></code> class.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... (code continuation)</span>
-<span class="n">evolver</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Evolver</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">100.0</span><span class="p">)</span>
-<span class="n">l0</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Harmonic&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;k&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">k</span><span class="p">},</span> <span class="s2">&quot;l0&quot;</span><span class="p">:{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span><span class="n">l0</span><span class="p">}})</span>
+<section id="minimal-workflow">
+<h2>Minimal workflow<a class="headerlink" href="#minimal-workflow" title="Link to this heading">#</a></h2>
+<p>The packaged script follows the standard PyMembrane workflow:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pymembrane</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mb</span>
 
-<span class="c1"># ... (add more forces)</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">29</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">read_mesh_from_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vertices&quot;</span><span class="p">:</span> <span class="s2">&quot;vertices.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;faces&quot;</span><span class="p">:</span> <span class="s2">&quot;faces.dat&quot;</span><span class="p">})</span>
+<span class="n">system</span><span class="o">.</span><span class="n">enforce_boundaries</span><span class="p">()</span>
+
+<span class="n">evolver</span> <span class="o">=</span> <span class="n">mb</span><span class="o">.</span><span class="n">Evolver</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Harmonic&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0&quot;</span><span class="p">},</span> <span class="s2">&quot;l0&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">}})</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Limit&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;lmin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;0.7&quot;</span><span class="p">},</span> <span class="s2">&quot;lmax&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3&quot;</span><span class="p">}})</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_force</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Bending&gt;Dihedral&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;kappa&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">}})</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">add_integrator</span><span class="p">(</span><span class="s2">&quot;Mesh&gt;Brownian&gt;vertex&gt;move&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="s2">&quot;202208&quot;</span><span class="p">})</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">set_time_step</span><span class="p">(</span><span class="s2">&quot;2e-3&quot;</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">set_global_temperature</span><span class="p">(</span><span class="s2">&quot;1e-4&quot;</span><span class="p">)</span>
+<span class="n">evolver</span><span class="o">.</span><span class="n">evolveMD</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="uniaxial-compression">
-<h2>Uniaxial compression<a class="headerlink" href="#uniaxial-compression" title="Link to this heading">#</a></h2>
-<p>To implement uniaxial compression we create an auxiliary function whose primary role is to refresh or update the box size:</p>
-<p>Where epsilon is the strain :<span class="math notranslate nohighlight">\(\epsilon = \frac{\vert L_0 - L \vert}{L_0}\)</span>.</p>
-</section>
-<section id="simulation-and-visualization">
-<h2>Simulation and Visualization<a class="headerlink" href="#simulation-and-visualization" title="Link to this heading">#</a></h2>
-<p>You can now run a Brownian dynamics simulation while compressing the box and visualize the results.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... (code continuation)</span>
-<span class="k">for</span> <span class="n">snapshot</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">snapshots</span><span class="p">):</span>
-    <span class="n">evolver</span><span class="o">.</span><span class="n">evolveMD</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">run_steps</span><span class="p">)</span>
-    <span class="c1">#compress the box every run_steps until reach 50</span>
-    <span class="k">if</span> <span class="n">snapshot</span><span class="o">&lt;</span><span class="mi">50</span><span class="p">:</span>
-      <span class="n">system</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="n">compress_box</span><span class="p">(</span><span class="n">epsilon</span><span class="p">)</span>
-      <span class="n">system</span><span class="o">.</span><span class="n">enforce_boundaries</span><span class="p">()</span>
-<span class="c1"># ... (final computation)</span>
-</pre></div>
-</div>
+<section id="expected-output">
+<h2>Expected output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodic_t0.vtk</span></code></p></li>
+<li><p>additional <code class="docutils literal notranslate"><span class="pre">periodic_t*.vtk</span></code> snapshots</p></li>
+</ul>
+<p>Quick mode usually completes in a few seconds on a laptop.</p>
 </section>
 <section id="results">
 <h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
-<p>The periodic structure shows clear wrinkles, indicative of the system’s response to compression. You can observe the visualized output in the generated VTK files.</p>
+<p>The periodic structure shows clear wrinkles, indicative of the system’s
+response to compression. You can observe the geometry in the generated VTK
+files.</p>
 <figure class="align-center" id="id1">
 <img alt="Periodic structure with wrinkles" src="../_images/periodic.png" />
 <figcaption>
 <p><span class="caption-text">Figure: The periodic structure shows clear wrinkles on the surface.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
-<p>This tutorial demonstrated how to use PyMembrane to simulate a system with periodic boundary conditions. This approach can be useful in various applications, especially when long-range interactions or long-wavelength properties are relevant.</p>
 </section>
 </section>
 
@@ -554,14 +540,11 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-periodic-boundary-conditions">Setting Up Periodic Boundary Conditions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-forces-and-integrators">Creating Forces and Integrators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniaxial-compression">Uniaxial compression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-and-visualization">Simulation and Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-does">What this example does</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-run-command">Primary run command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-workflow">Minimal workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected output</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
 
@@ -590,7 +573,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

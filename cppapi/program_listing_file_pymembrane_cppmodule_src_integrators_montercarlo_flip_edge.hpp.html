@@ -414,8 +414,8 @@
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">MonteCarloIntegratorFlipEdge</span><span class="p">(</span><span class="n">SystemClass</span><span class="w"> </span><span class="o">&amp;</span><span class="n">system</span><span class="p">,</span><span class="w"> </span><span class="n">VertexCompute</span><span class="w"> </span><span class="o">&amp;</span><span class="n">potentials</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">MonteCarloIntegrator</span><span class="p">(</span><span class="n">system</span><span class="p">,</span><span class="w"> </span><span class="n">potentials</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">m_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;edge flip&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">m_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;monte carlo&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;edge flip&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;monte carlo&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">set_default_properties</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="o">~</span><span class="n">MonteCarloIntegratorFlipEdge</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
@@ -465,18 +465,12 @@
 <span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">print_warning_property_name</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_info</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
-<span class="w">        </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_name</span><span class="p">;</span>
-<span class="w">        </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_type</span><span class="p">;</span>
-<span class="w">        </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">());</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">edge_flip</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">edge_flip</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">integrate</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">m_dx</span><span class="p">,</span><span class="w"> </span><span class="n">m_dy</span><span class="p">,</span><span class="w"> </span><span class="n">m_dz</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m_seed</span><span class="p">;</span>
 <span class="w">    </span><span class="n">RNG_ptr</span><span class="w"> </span><span class="n">m_rng</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pymemb</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">freezed_edge</span><span class="p">;</span>
@@ -529,7 +523,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

@@ -543,11 +543,7 @@
 <span class="w">                </span><span class="n">real3</span><span class="w"> </span><span class="n">nk_ref</span><span class="p">,</span><span class="w"> </span><span class="n">nl_ref</span><span class="p">;</span>
 <span class="w">                </span><span class="n">nk_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">faces</span><span class="p">[</span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">face_k</span><span class="p">].</span><span class="n">normal_reference</span><span class="p">;</span>
 <span class="w">                </span><span class="n">nl_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">faces</span><span class="p">[</span><span class="n">_system</span><span class="p">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge_index</span><span class="p">].</span><span class="n">face_l</span><span class="p">].</span><span class="n">normal_reference</span><span class="p">;</span>
-<span class="w">                    </span><span class="c1">// Do not take into account the bending energy for vertices which are covered by a particle.</span>
-<span class="w">                    </span><span class="c1">// Therefore, an if statement was added. type==-1 is a free vertex.</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">v0</span><span class="p">].</span><span class="n">type</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ComputeVertexBendingEnergy_lambda</span><span class="p">(</span><span class="n">nk</span><span class="p">,</span><span class="w"> </span><span class="n">nl</span><span class="p">,</span><span class="w"> </span><span class="n">nk_ref</span><span class="p">,</span><span class="w"> </span><span class="n">nl_ref</span><span class="p">,</span><span class="w"> </span><span class="n">kappa_tilde</span><span class="p">);</span>
-<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ComputeVertexBendingEnergy_lambda</span><span class="p">(</span><span class="n">nk</span><span class="p">,</span><span class="w"> </span><span class="n">nl</span><span class="p">,</span><span class="w"> </span><span class="n">nk_ref</span><span class="p">,</span><span class="w"> </span><span class="n">nl_ref</span><span class="p">,</span><span class="w"> </span><span class="n">kappa_tilde</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">he_prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">halfedges</span><span class="p">[</span><span class="n">he</span><span class="p">].</span><span class="n">prev</span><span class="p">;</span>
@@ -1021,7 +1017,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

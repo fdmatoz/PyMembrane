@@ -47,7 +47,6 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/class_compute_vertex_constant_area_triangle_energy';</script>
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -405,148 +404,10 @@
 </section>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv439ComputeVertexConstantAreaTriangleEnergy">
-<span id="_CPPv339ComputeVertexConstantAreaTriangleEnergy"></span><span id="_CPPv239ComputeVertexConstantAreaTriangleEnergy"></span><span id="ComputeVertexConstantAreaTriangleEnergy"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexConstantAreaTriangleEnergy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classComputeForceClass.html#_CPPv417ComputeForceClass" title="ComputeForceClass"><span class="n"><span class="pre">ComputeForceClass</span></span></a><br /></dt>
-<dd><p><a class="reference internal" href="#classComputeVertexConstantAreaTriangleEnergy"><span class="std std-ref">ComputeVertexConstantAreaTriangleEnergy</span></a> Compute Vertex Cauchy-Green Streaching Energy For a given triangle t compute contribution from the surface tension caused by change in the surface area. </p>
-<p><span class="math notranslate nohighlight">\( E = \frac{1}{2} \sigma \left(A - A_0\right)^2 \)</span></p>
-<p>where <span class="math notranslate nohighlight">\( A \)</span> is current area of the triangle, <span class="math notranslate nohighlight">\( A_0 \)</span> is the native (given) triangle area, and <span class="math notranslate nohighlight">\( \sigma \)</span> if the surface tension. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy39ComputeVertexConstantAreaTriangleEnergyER11SystemClass">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy39ComputeVertexConstantAreaTriangleEnergyER11SystemClass"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy39ComputeVertexConstantAreaTriangleEnergyER11SystemClass"></span><span id="ComputeVertexConstantAreaTriangleEnergy::ComputeVertexConstantAreaTriangleEnergy__SystemClassR"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1ac6bf4bf850bae808b3ed31c1f7672145"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeVertexConstantAreaTriangleEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classSystemClass.html#_CPPv411SystemClass" title="SystemClass"><span class="n"><span class="pre">SystemClass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergyD0Ev">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergyD0Ev"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergyD0Ev"></span><span id="ComputeVertexConstantAreaTriangleEnergy::~ComputeVertexConstantAreaTriangleEnergy"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a50fb67ab5ebd1c95fba286455eeb6b96"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ComputeVertexConstantAreaTriangleEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy22set_default_propertiesEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy22set_default_propertiesEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy22set_default_propertiesEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::set_default_properties__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1ac4a5271aefff11049c2af28604b7d1f6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_default_properties</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>Set property. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"></span><span id="ComputeVertexConstantAreaTriangleEnergy::set_property__std::map:ss.std::map:ss.ss::R"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a5ce7d3e92939c4aebc57f5bbfe2b84ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy8get_infoEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy8get_infoEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy8get_infoEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::get_info__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a8b822b956556a8335d0282e73d3ea21d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_info</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>Get the type object. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::string </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy14compute_energyEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy14compute_energyEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy14compute_energyEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute_energy__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a95c93fdaaac524a5f02c930c3e2f4e44"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute energy for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy7computeEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy7computeEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy7computeEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1ae1f4f866172267bd0fe2b972924a13cd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy19compute_edge_energyEi">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy19compute_edge_energyEi"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy19compute_edge_energyEi"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute_edge_energy__i"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a796fe539acac48fe718f73eaa4af223c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_edge_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute the energy in a given edge </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>edge</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>real </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy21compute_vertex_energyEi">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy21compute_vertex_energyEi"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy21compute_vertex_energyEi"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute_vertex_energy__i"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a88ba0b109e51f97c9242dad06d853b58"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_vertex_energy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute the energy in a vertex edge </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>face</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>real </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy14compute_stressEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy14compute_stressEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy14compute_stressEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute_stress__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a9470b36748408238e5eb2c2f79b90a74"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy21compute_atomic_stressEv">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy21compute_atomic_stressEv"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy21compute_atomic_stressEv"></span><span id="ComputeVertexConstantAreaTriangleEnergy::compute_atomic_stress__void"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a2d25f6f75a8977e4ad6174af82ae9058"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_atomic_stress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>compute force for the actual configuration </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>void</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>void </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"></span><span id="ComputeVertexConstantAreaTriangleEnergy::set_property__std::map:ss.std::map:std::pair:ss.ss:.ss::R"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a8f58a440a3eaf0ce86b9eb041f04e8b4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp">
-<span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1aed03d57ba661016fdb23695e588c96df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"></span><span id="ComputeVertexConstantAreaTriangleEnergy::set_property__std::map:ss.ss:R"></span><span class="target" id="classComputeVertexConstantAreaTriangleEnergy_1a2baad238a779102369f7813c101bfe8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_property</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">region_map</span></span><span class="sig-paren">)</span><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “ComputeVertexConstantAreaTriangleEnergy” in doxygen xml output for project “pymembrane” from directory: ./cppapi/xml</p>
 </div>
-</dd></dl>
-
 </section>
 </section>
 
@@ -583,25 +444,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv439ComputeVertexConstantAreaTriangleEnergy"><code class="docutils literal notranslate"><span class="pre">ComputeVertexConstantAreaTriangleEnergy</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy39ComputeVertexConstantAreaTriangleEnergyER11SystemClass"><code class="docutils literal notranslate"><span class="pre">ComputeVertexConstantAreaTriangleEnergy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergyD0Ev"><code class="docutils literal notranslate"><span class="pre">~ComputeVertexConstantAreaTriangleEnergy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy22set_default_propertiesEv"><code class="docutils literal notranslate"><span class="pre">set_default_properties()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt6stringENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy8get_infoEv"><code class="docutils literal notranslate"><span class="pre">get_info()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy14compute_energyEv"><code class="docutils literal notranslate"><span class="pre">compute_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy7computeEv"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy19compute_edge_energyEi"><code class="docutils literal notranslate"><span class="pre">compute_edge_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy21compute_vertex_energyEi"><code class="docutils literal notranslate"><span class="pre">compute_vertex_energy()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy14compute_stressEv"><code class="docutils literal notranslate"><span class="pre">compute_stress()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy21compute_atomic_stressEv"><code class="docutils literal notranslate"><span class="pre">compute_atomic_stress()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt3mapINSt4pairINSt6stringENSt6stringEEENSt6stringEEEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N39ComputeVertexConstantAreaTriangleEnergy12set_propertyERNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">set_property()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
 </ul>
   </nav></div>
 
@@ -630,7 +473,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

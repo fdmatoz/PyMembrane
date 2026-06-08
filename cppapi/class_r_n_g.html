@@ -395,63 +395,10 @@
 </ul>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv43RNG">
-<span id="_CPPv33RNG"></span><span id="_CPPv23RNG"></span><span id="RNG"></span><span class="target" id="classRNG"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RNG</span></span></span><br /></dt>
-<dd><p>Class handles random numbers in the system. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3RNG3RNGEj">
-<span id="_CPPv3N3RNG3RNGEj"></span><span id="_CPPv2N3RNG3RNGEj"></span><span id="RNG::RNG__unsigned-i"></span><span class="target" id="classRNG_1ad1a0404ddd79895cfc05432f06c9c385"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RNG</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seed</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Constructor (initialize random number generator) </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3RNGD0Ev">
-<span id="_CPPv3N3RNGD0Ev"></span><span id="_CPPv2N3RNGD0Ev"></span><span id="RNG::~RNG"></span><span class="target" id="classRNG_1abe0c541fcfa0b12ef7446eccb166d510"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~RNG</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Destructor. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3RNG4drndEv">
-<span id="_CPPv3N3RNG4drndEv"></span><span id="_CPPv2N3RNG4drndEv"></span><span id="RNG::drnd"></span><span class="target" id="classRNG_1a885efeb42c22a8984ef3db5e6652bc07"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get a random number between 0 and 1 drawn from an uniform distribution </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>random number between 0 and 1 </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3RNG9gauss_rngE4real4real">
-<span id="_CPPv3N3RNG9gauss_rngE4real4real"></span><span id="_CPPv2N3RNG9gauss_rngE4real4real"></span><span id="RNG::gauss_rng__real.real"></span><span class="target" id="classRNG_1a5bdd14bbfd6464446574ba90abd28367"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gauss_rng</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sigma</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span>, <a class="reference internal" href="typedef_globaltypes_8hpp_1aedc0ad84d1e764530814f57ad931d02a.html#_CPPv44real" title="real"><span class="n"><span class="pre">real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mu</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Return a random number from a Gaussian distribution with a given standard deviation </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>sigma</strong> – standard deviation </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3RNG4lrndEi">
-<span id="_CPPv3N3RNG4lrndEi"></span><span id="_CPPv2N3RNG4lrndEi"></span><span id="RNG::lrnd__i"></span><span class="target" id="classRNG_1aa16f8eef91acf82bb5fa1e0d8f23131b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lrnd</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">N</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get an integer random number between 0 and N drawn from an uniform distribution </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>N</strong> – upper bound for the interval </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>integer random number between 0 and N </p>
-</dd>
-</dl>
-</dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “RNG” in doxygen xml output for project “pymembrane” from directory: ./cppapi/xml</p>
 </div>
-</dd></dl>
-
 </section>
 </section>
 
@@ -484,17 +431,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv43RNG"><code class="docutils literal notranslate"><span class="pre">RNG</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3RNG3RNGEj"><code class="docutils literal notranslate"><span class="pre">RNG()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3RNGD0Ev"><code class="docutils literal notranslate"><span class="pre">~RNG()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3RNG4drndEv"><code class="docutils literal notranslate"><span class="pre">drnd()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3RNG9gauss_rngE4real4real"><code class="docutils literal notranslate"><span class="pre">gauss_rng()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3RNG4lrndEi"><code class="docutils literal notranslate"><span class="pre">lrnd()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
 </ul>
   </nav></div>
 
@@ -523,7 +460,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

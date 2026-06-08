@@ -403,31 +403,25 @@
 <span class="kt">int</span><span class="w"> </span><span class="nf">MonteCarloIntegratorSpinVertex::integrate</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accepted_moves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum_mag</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vertex_index</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vertex_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">vertex_step</span><span class="o">&lt;</span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="p">;</span><span class="w"> </span><span class="n">vertex_step</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vertex_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">vertex_index</span><span class="o">&lt;</span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="p">;</span><span class="w"> </span><span class="n">vertex_index</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">vertex_index</span><span class="o">=</span><span class="n">_system</span><span class="p">.</span><span class="n">Numvertices</span><span class="o">*</span><span class="p">(</span><span class="n">m_rng</span><span class="o">-&gt;</span><span class="n">drnd</span><span class="p">());</span>
-<span class="w">        </span><span class="c1">//  attempt to move the vertex</span>
+<span class="w">        </span><span class="c1">//attempt to move the vertex</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">energy_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ComputeEnergyFromVertex</span><span class="p">(</span><span class="n">vertex_index</span><span class="p">);</span>
 <span class="w">        </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">vertex_index</span><span class="p">].</span><span class="n">spin</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">energy_f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ComputeEnergyFromVertex</span><span class="p">(</span><span class="n">vertex_index</span><span class="p">);</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">delE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">energy_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">energy_i</span><span class="p">;</span>
 <span class="w">        </span><span class="n">accepted_moves</span><span class="o">++</span><span class="p">;</span>
-
+<span class="w">        </span><span class="c1">// std::cout &lt;&lt; &quot;vertexmove:&quot;&lt;&lt;vertex_index&lt;&lt;std::endl;</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">delE</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="p">))</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">rnd_numEli</span><span class="o">=</span><span class="n">m_rng</span><span class="o">-&gt;</span><span class="n">drnd</span><span class="p">();</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="w"> </span><span class="n">rnd_numEli</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">delE</span><span class="o">/</span><span class="n">get_temperature</span><span class="p">())))</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">m_rng</span><span class="o">-&gt;</span><span class="n">drnd</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">delE</span><span class="o">/</span><span class="n">get_temperature</span><span class="p">())))</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">vertex_index</span><span class="p">].</span><span class="n">spin</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="w">                </span><span class="n">accepted_moves</span><span class="o">--</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">// std::cout&lt;&lt; &quot;regret&quot;&lt;&lt;std::endl;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">sum_mag</span><span class="o">+=</span><span class="w"> </span><span class="n">_system</span><span class="p">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">vertex_index</span><span class="p">].</span><span class="n">spin</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-
-
 <span class="w">    </span><span class="k">return</span><span class="p">(</span><span class="n">accepted_moves</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -474,7 +468,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

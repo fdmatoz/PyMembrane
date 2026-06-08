@@ -411,20 +411,11 @@
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="nf">unit_vector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">v</span><span class="p">));</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">norm</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
-
 <span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">v_unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="w">        </span><span class="n">v_unit</span><span class="p">.</span><span class="n">x</span><span class="o">/=</span><span class="n">norm</span><span class="p">;</span>
 <span class="w">        </span><span class="n">v_unit</span><span class="p">.</span><span class="n">y</span><span class="o">/=</span><span class="n">norm</span><span class="p">;</span>
 <span class="w">        </span><span class="n">v_unit</span><span class="p">.</span><span class="n">z</span><span class="o">/=</span><span class="n">norm</span><span class="p">;</span>
 <span class="w">        </span><span class="k">return</span><span class="p">(</span><span class="n">v_unit</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kr">inline</span>
-<span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">vector_dot</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v2</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">vdot</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kr">inline</span>
@@ -459,18 +450,6 @@
 <span class="w">    </span><span class="n">real3</span><span class="w"> </span><span class="nf">vector_subtract</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">BoxType</span><span class="w"> </span><span class="o">&amp;</span><span class="n">box</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">pymemb</span><span class="o">::</span><span class="n">minimum_image</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">box</span><span class="p">));</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kr">inline</span>
-<span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">vector_squared_length</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="o">*</span><span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="o">*</span><span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">z</span><span class="o">*</span><span class="n">v</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kr">inline</span>
-<span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="nf">vector_length</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">real3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vector_squared_length</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kr">inline</span>
@@ -563,7 +542,7 @@
 <span class="w">        </span><span class="n">real3</span><span class="w"> </span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">;</span>
 <span class="w">        </span><span class="n">vsub</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">);</span>
 <span class="w">        </span><span class="n">vsub</span><span class="p">(</span><span class="n">v13</span><span class="p">,</span><span class="w"> </span><span class="n">r3</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">);</span>
-<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v12</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v13</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">))));</span>
+<span class="w">        </span><span class="n">real</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acos</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">vdot</span><span class="p">(</span><span class="n">v12</span><span class="p">,</span><span class="w"> </span><span class="n">v12</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vdot</span><span class="p">(</span><span class="n">v13</span><span class="p">,</span><span class="w"> </span><span class="n">v13</span><span class="p">)));</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">angle</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -700,10 +679,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_need_wrapping</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-
 <span class="p">}</span>
-
-
 <span class="cp">#endif</span>
 </pre></div>
 </div>
@@ -749,7 +725,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>

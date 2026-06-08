@@ -398,30 +398,31 @@
 <span id="program-listing-file-pymembrane-cppmodule-src-integrators-integrator-brownian-vertex-hpp"></span><h1>Program Listing for File integrator_brownian_vertex.hpp<a class="headerlink" href="#program-listing-for-file-integrator-brownian-vertex-hpp" title="Link to this heading">#</a></h1>
 <p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_src_integrators_integrator_brownian_vertex.hpp.html#file-pymembrane-cppmodule-src-integrators-integrator-brownian-vertex-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/src/integrators/integrator_brownian_vertex.hpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/************************************************************************************</span>
-<span class="cm"> * MIT License                                                                       *</span>
-<span class="cm"> *                                                                                   *</span>
-<span class="cm"> * Copyright (c) 2023 Dr. Daniel Alejandro Matoz Fernandez                           *</span>
-<span class="cm"> *               fdamatoz@gmail.com                                                  *</span>
-<span class="cm"> * Permission is hereby granted, free of charge, to any person obtaining a copy      *</span>
-<span class="cm"> * of this software and associated documentation files (the &quot;Software&quot;), to deal     *</span>
-<span class="cm"> * in the Software without restriction, including without limitation the rights      *</span>
-<span class="cm"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell         *</span>
-<span class="cm"> * copies of the Software, and to permit persons to whom the Software is             *</span>
-<span class="cm"> * furnished to do so, subject to the following conditions:                          *</span>
-<span class="cm"> *                                                                                   *</span>
-<span class="cm"> * The above copyright notice and this permission notice shall be included in all    *</span>
-<span class="cm"> * copies or substantial portions of the Software.                                   *</span>
-<span class="cm"> *                                                                                   *</span>
-<span class="cm"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR        *</span>
-<span class="cm"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,          *</span>
-<span class="cm"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE       *</span>
-<span class="cm"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER            *</span>
-<span class="cm"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,     *</span>
-<span class="cm"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE     *</span>
-<span class="cm"> * SOFTWARE.                                                                         *</span>
-<span class="cm"> *************************************************************************************/</span>
+<span class="cm">* MIT License                                                                       *</span>
+<span class="cm">*                                                                                   *</span>
+<span class="cm">* Copyright (c) 2023 Dr. Daniel Alejandro Matoz Fernandez                           *</span>
+<span class="cm">*               fdamatoz@gmail.com                                                  *</span>
+<span class="cm">* Permission is hereby granted, free of charge, to any person obtaining a copy      *</span>
+<span class="cm">* of this software and associated documentation files (the &quot;Software&quot;), to deal     *</span>
+<span class="cm">* in the Software without restriction, including without limitation the rights      *</span>
+<span class="cm">* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell         *</span>
+<span class="cm">* copies of the Software, and to permit persons to whom the Software is             *</span>
+<span class="cm">* furnished to do so, subject to the following conditions:                          *</span>
+<span class="cm">*                                                                                   *</span>
+<span class="cm">* The above copyright notice and this permission notice shall be included in all    *</span>
+<span class="cm">* copies or substantial portions of the Software.                                   *</span>
+<span class="cm">*                                                                                   *</span>
+<span class="cm">* THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR        *</span>
+<span class="cm">* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,          *</span>
+<span class="cm">* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE       *</span>
+<span class="cm">* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER            *</span>
+<span class="cm">* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,     *</span>
+<span class="cm">* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE     *</span>
+<span class="cm">* SOFTWARE.                                                                         *</span>
+<span class="cm">*************************************************************************************/</span>
 <span class="cp">#ifndef __integrator_brownian_vertex__hpp__</span>
 <span class="cp">#define __integrator_brownian_vertex__hpp__</span>
+
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
@@ -433,8 +434,8 @@
 <span class="k">public</span><span class="o">:</span>
 <span class="w">  </span><span class="n">IntegratorBrownianMeshVertex</span><span class="p">(</span><span class="n">SystemClass</span><span class="w"> </span><span class="o">&amp;</span><span class="n">system</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">IntegratorClass</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">m_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;brownian&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="n">m_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vertex&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;brownian&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vertex&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">set_default_properties</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="o">~</span><span class="n">IntegratorBrownianMeshVertex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
@@ -485,19 +486,10 @@
 <span class="w">        </span><span class="n">print_warning_property_name</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_info</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
-<span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_name</span><span class="p">;</span>
-<span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_type</span><span class="p">;</span>
-<span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">());</span>
-<span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;dt&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_time_step</span><span class="p">());</span>
-<span class="w">    </span><span class="n">value</span><span class="p">[</span><span class="s">&quot;m_gamma&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">m_gamma</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">prestep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">poststep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">prestep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">poststep</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">  </span><span class="n">real</span><span class="w"> </span><span class="n">m_gamma</span><span class="p">;</span>
@@ -552,7 +544,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025 Daniel A Matoz-Fernandez and Contributors.
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
       <br/>
     
   </p>
