@@ -69,8 +69,7 @@ steps.
 
 The source version of this example is kept under
 ``docs/examples/03_Caspar-Klug_sphere/buckling.py``. The installed version
-under ``pymembrane.examples.buckling`` is the primary runnable interface for
-reviewers and does not require manual path edits.
+under ``pymembrane.examples.buckling`` includes the packaged input data.
 
 How to visualize the result
 ---------------------------

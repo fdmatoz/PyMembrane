@@ -5,12 +5,13 @@ from __future__ import annotations
 
 import argparse
 import os
+from pathlib import Path
 from pprint import pprint
 
 import numpy as np
 
 import pymembrane as mb
-from ._resources import example_data_path
+from .._resources import example_data_dir
 
 
 def main() -> None:
@@ -24,13 +25,17 @@ def main() -> None:
     if user_args.quick:
         print("Running in quick smoke-test mode")
 
-    os.makedirs(user_args.output_dir, exist_ok=True)
-    os.chdir(user_args.output_dir)
+    output_dir = Path(user_args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    os.chdir(output_dir)
 
     snapshots = user_args.snapshots if user_args.snapshots is not None else (2 if user_args.quick else 50)
     max_iter = user_args.max_iter if user_args.max_iter is not None else (25 if user_args.quick else 2000)
 
-    with example_data_path("04_minimization/vertices_R1.0_l01.inp") as vertex_file, example_data_path("04_minimization/faces_R1.0_l01.inp") as face_file:
+    with example_data_dir(__package__) as data_dir:
+        vertex_file = data_dir / "vertices_R1.0_l01.inp"
+        face_file = data_dir / "faces_R1.0_l01.inp"
+
         box = mb.Box(40, 40, 40)
         system = mb.System(box)
         system.read_mesh_from_files(files={"vertices": str(vertex_file), "faces": str(face_file)})
@@ -82,7 +87,6 @@ def main() -> None:
             min_energy[snapshot] = 100.0 * compute.energy(evolver)["edges"] / system.Numedges
             print("[{}] energy:{} x 10^-2 volume:{}".format(snapshot, min_energy[snapshot], compute.volume()))
 
-        energy = compute.energy(evolver)
         print("[Final] energy:{} x 10^-2 volume:{}".format(min_energy[snapshots - 1], compute.volume()))
         final_volume = compute.volume()
         print("volume difference: {}".format(final_volume - initial_volume))

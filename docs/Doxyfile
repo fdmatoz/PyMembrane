@@ -44,9 +44,9 @@ DOXYFILE_ENCODING      = UTF-8
 
 PROJECT_NAME           = "PyMembrane"
 
-# The PROJECT_NUMBER tag can be used to enter a project or revision number. This
-# could be handy for archiving the generated documentation or if some version
-# control system is used.
+# The PROJECT_NUMBER tag can be used to enter a project number. This can be
+# handy for archiving the generated documentation or if some version control
+# system is used.
 
 PROJECT_NUMBER         =
 

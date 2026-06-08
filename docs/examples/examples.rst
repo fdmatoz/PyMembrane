@@ -9,7 +9,8 @@ forms:
   developers who want to inspect the documented scripts directly.
 - The installed, reviewer-friendly versions live under
   ``pymembrane.examples`` and can be run with ``python -m`` after
-  installation.
+  installation. Their runtime input files are bundled inside the installed
+  package, so they do not depend on ``docs/examples`` at runtime.
 
 Primary interface
 -----------------

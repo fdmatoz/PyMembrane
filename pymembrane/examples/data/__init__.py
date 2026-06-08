@@ -1,1 +1,0 @@
-"""Bundled example mesh data."""

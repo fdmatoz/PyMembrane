@@ -125,8 +125,8 @@ The source versions of these examples are kept under ``docs/examples``:
 - ``docs/examples/01_disclination/MC/disclination.py``
 - ``docs/examples/01_disclination/Verlet/disclination.py``
 
-The installed ``pymembrane.examples`` versions are the primary reviewer-facing
-entry points and avoid manual downloads or path edits.
+The installed ``pymembrane.examples`` versions include the input data required
+to run each example directly after installation.
 
 How to visualize the result
 ---------------------------

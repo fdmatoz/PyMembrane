@@ -1,12 +1,11 @@
 Installation
 ============
 
-Reviewer Quick Check
---------------------
+Quick Check
+-----------
 
-These commands are the shortest reviewer-facing path to verify that the package
-imports and that packaged examples run without changing Python import paths and
-without downloading input files manually:
+These commands provide a short way to verify that the package imports and that
+the packaged examples run with their bundled input data:
 
 .. code-block:: bash
 
@@ -73,8 +72,9 @@ reinstall:
 Examples
 --------
 
-The packaged examples are installed with PyMembrane and can be run as Python
-modules from any working directory:
+The packaged examples are installed with PyMembrane as self-contained Python
+modules. Their runtime input data is bundled inside ``pymembrane.examples``, so
+they can be run from any working directory:
 
 .. code-block:: bash
 
@@ -90,7 +90,6 @@ executing an installed module as top-level code.
 Dependency note
 ---------------
 
-- Normal installation does not require a GPU toolchain.
 - Normal installation and normal example output do not require VTK.
 - The examples do not require plotting packages to run.
 - Mesh output is written with the built-in dumper methods such as

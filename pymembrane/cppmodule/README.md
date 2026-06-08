@@ -88,7 +88,7 @@ tool compatibility.
 - Compiler errors: install the macOS command-line tools or a conda-forge
   compiler toolchain, then rerun `rm -rf build *.egg-info && pip install -e .`.
 - `ModuleNotFoundError: pymembrane`: run `pip install -e .` from the
-  repository root and avoid manual `PYTHONPATH` edits.
+  repository root so the package is installed in the active environment.
 - `ModuleNotFoundError: pymembrane.md._core`: check the CMake output for C++
   compiler errors or missing build dependencies.
 - Missing build dependencies: make sure `setuptools`, `wheel`, `cmake`,

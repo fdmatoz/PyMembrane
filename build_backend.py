@@ -14,7 +14,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parent
 NAME = "pymembrane"
-VERSION = "1.0"
+VERSION = "1.01"
 SUMMARY = "CPU C++ membrane simulation tools with Python bindings"
 PYTHON_REQUIRES = ">=3.8"
 EXTENSION_NAME = "pymembrane.cppmodule.md._core"
@@ -82,6 +82,22 @@ def _copy_data_tree(source_root: Path, destination_root: Path) -> None:
         _copy_file(source, destination)
 
 
+def _copy_package_tree(source_root: Path, destination_root: Path) -> None:
+    if not source_root.exists():
+        return
+    for source in source_root.rglob("*"):
+        if not source.is_file():
+            continue
+        if "__pycache__" in source.parts:
+            continue
+        if source.name == ".DS_Store":
+            continue
+        if source.suffix in {".pyc", ".pyo"}:
+            continue
+        destination = destination_root / source.relative_to(source_root)
+        _copy_file(source, destination)
+
+
 def _build_extension(output_dir: Path) -> Path:
     cmake = shutil.which("cmake")
     if cmake is None:
@@ -137,55 +153,32 @@ def _build_extension(output_dir: Path) -> Path:
 def _stage_package(root: Path, editable: bool) -> Path:
     package_root = root / NAME
     if editable:
+        _copy_package_tree(ROOT / "pymembrane" / "benchmarks", root / "pymembrane" / "benchmarks")
+        _copy_package_tree(ROOT / "pymembrane" / "examples", root / "pymembrane" / "examples")
         for source in [
             ROOT / "pymembrane" / "__init__.py",
-            ROOT / "pymembrane" / "benchmarks" / "__init__.py",
-            ROOT / "pymembrane" / "benchmarks" / "sphere.py",
             ROOT / "pymembrane" / "cppmodule" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",
             ROOT / "pymembrane" / "cppmodule" / "md" / "__init__.py",
-            ROOT / "pymembrane" / "examples" / "__init__.py",
-            ROOT / "pymembrane" / "examples" / "_resources.py",
-            ROOT / "pymembrane" / "examples" / "periodic.py",
-            ROOT / "pymembrane" / "examples" / "buckling.py",
-            ROOT / "pymembrane" / "examples" / "minimizer.py",
-            ROOT / "pymembrane" / "examples" / "disclination.py",
-            ROOT / "pymembrane" / "examples" / "disclination_mc.py",
-            ROOT / "pymembrane" / "examples" / "disclination_verlet.py",
-            ROOT / "pymembrane" / "examples" / "hybrid_mc_bd.py",
-            ROOT / "pymembrane" / "examples" / "data" / "__init__.py",
         ]:
             _copy_file(source, root / source.relative_to(ROOT))
 
-        _copy_data_tree(ROOT / "docs" / "examples", root / "pymembrane" / "examples" / "data")
         built_extension = _build_extension(ROOT / "pymembrane" / "cppmodule" / "md")
         _copy_file(built_extension, root / "pymembrane" / "cppmodule" / "md" / built_extension.name)
         (root / f"{_distribution_name()}-{VERSION}.pth").write_text(str(ROOT) + "\n", encoding="utf-8")
         return root
 
+    _copy_package_tree(ROOT / "pymembrane" / "benchmarks", root / "pymembrane" / "benchmarks")
+    _copy_package_tree(ROOT / "pymembrane" / "examples", root / "pymembrane" / "examples")
     for source in [
         ROOT / "pymembrane" / "__init__.py",
-        ROOT / "pymembrane" / "benchmarks" / "__init__.py",
-        ROOT / "pymembrane" / "benchmarks" / "sphere.py",
         ROOT / "pymembrane" / "cppmodule" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",
         ROOT / "pymembrane" / "cppmodule" / "md" / "__init__.py",
-        ROOT / "pymembrane" / "examples" / "__init__.py",
-        ROOT / "pymembrane" / "examples" / "_resources.py",
-        ROOT / "pymembrane" / "examples" / "periodic.py",
-        ROOT / "pymembrane" / "examples" / "buckling.py",
-        ROOT / "pymembrane" / "examples" / "minimizer.py",
-        ROOT / "pymembrane" / "examples" / "disclination.py",
-        ROOT / "pymembrane" / "examples" / "disclination_mc.py",
-        ROOT / "pymembrane" / "examples" / "disclination_verlet.py",
-        ROOT / "pymembrane" / "examples" / "hybrid_mc_bd.py",
-        ROOT / "pymembrane" / "examples" / "data" / "__init__.py",
     ]:
         _copy_file(source, root / source.relative_to(ROOT))
-
-    _copy_data_tree(ROOT / "docs" / "examples", root / "pymembrane" / "examples" / "data")
 
     ext_dir = root / "pymembrane" / "cppmodule" / "md"
     _build_extension(ext_dir)

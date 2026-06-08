@@ -16,7 +16,6 @@ add_subdirectory(external/pybind11)
 
 file(GLOB_RECURSE PYMEMBRANE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 list(FILTER PYMEMBRANE_SOURCES EXCLUDE REGEX ".*/dumper/.*\\.cpp$")
-list(FILTER PYMEMBRANE_SOURCES EXCLUDE REGEX ".*/meshoperations\\.cpp$")
 
 pybind11_add_module(_core ${PYMEMBRANE_SOURCES})
 target_compile_features(_core PRIVATE cxx_std_14)

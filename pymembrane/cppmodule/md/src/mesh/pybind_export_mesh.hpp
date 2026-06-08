@@ -3,8 +3,18 @@
 
 //#include "mesh.hpp"
 #include "meshproperties.hpp"
+#include "meshoperations.hpp"
 //#include "material.hpp"
 #include "computegeometry.hpp"
+
+void export_MeshOperations(py::module &m)
+{
+    py::class_<MeshOperations>(m, "MeshOperations")
+        .def(py::init<SystemClass &>())
+        .def("check_if_edge_can_flip", &MeshOperations::check_if_edge_can_flip, py::arg("flip_edge_index"))
+        .def("flip_edge", &MeshOperations::edge_flip, py::arg("flip_edge_index"), py::arg("flip_face_up"))
+        .def("equiangulation", &MeshOperations::equiangulation);
+}
 
 void export_PropertyFaces(py::module &m)
 {

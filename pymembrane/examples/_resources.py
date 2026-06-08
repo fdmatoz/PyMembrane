@@ -1,29 +1,30 @@
 from __future__ import annotations
 
 from contextlib import contextmanager
-import pkgutil
-import shutil
-import tempfile
+from importlib import import_module
+from importlib import resources
 from pathlib import Path
 
 
 @contextmanager
-def example_data_path(relative_path: str):
-    repo_root = Path(__file__).resolve().parents[2]
-    source_path = repo_root / "docs" / "examples" / relative_path
-    if source_path.exists():
-        yield source_path
+def example_data_dir(package_name: str):
+    if hasattr(resources, "files"):
+        root = resources.files(package_name) / "data"
+        with resources.as_file(root) as path:
+            yield Path(path)
         return
 
-    data = pkgutil.get_data("pymembrane.examples.data", relative_path)
-    if data is None:
-        raise FileNotFoundError(relative_path)
+    module = import_module(package_name)
+    data_dir = Path(module.__file__).resolve().parent / "data"
+    if not data_dir.exists():
+        raise FileNotFoundError(f"missing data directory for {package_name}")
+    yield data_dir
 
-    temp_root = Path(tempfile.mkdtemp(prefix="pymembrane-data-"))
-    try:
-        path = temp_root / relative_path
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(data)
+
+@contextmanager
+def example_data_path(package_name: str, relative_path: str):
+    with example_data_dir(package_name) as data_dir:
+        path = data_dir / relative_path
+        if not path.exists():
+            raise FileNotFoundError(f"{package_name}:{relative_path}")
         yield path
-    finally:
-        shutil.rmtree(temp_root, ignore_errors=True)

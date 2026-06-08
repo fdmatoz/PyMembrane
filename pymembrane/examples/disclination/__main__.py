@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-# Packaged runnable version of docs/examples/01_disclination/Verlet/disclination.py.
+# Packaged runnable version of docs/examples/01_disclination/Brownian/disclination.py.
 # Physics parameters are intentionally kept identical to the documentation example.
 
 import argparse
@@ -13,16 +13,16 @@ import numpy as np
 from pprint import pprint
 
 import pymembrane as mb
-from ._resources import example_data_path
+from .._resources import example_data_path
 
 
 def _mesh_files(n: int) -> tuple[Path, Path]:
     cache_dir = Path(tempfile.gettempdir()) / f"pymembrane_disclination_{n}"
-    vertex_file = cache_dir / f"InputFiles/vertices_N{n}.inp"
-    face_file = cache_dir / f"InputFiles/faces_N{n}.inp"
+    vertex_file = cache_dir / "InputFiles" / f"vertices_N{n}.inp"
+    face_file = cache_dir / "InputFiles" / f"faces_N{n}.inp"
     if not vertex_file.exists() or not face_file.exists():
         cache_dir.mkdir(parents=True, exist_ok=True)
-        with example_data_path("01_disclination/InputFiles.zip") as archive_path:
+        with example_data_path(__package__, "InputFiles.zip") as archive_path:
             with zipfile.ZipFile(archive_path) as archive:
                 archive.extract(f"InputFiles/vertices_N{n}.inp", path=cache_dir)
                 archive.extract(f"InputFiles/faces_N{n}.inp", path=cache_dir)
@@ -41,18 +41,19 @@ def main() -> None:
     if user_args.quick:
         print("Running in quick smoke-test mode")
 
-    os.makedirs(user_args.output_dir, exist_ok=True)
-    os.chdir(user_args.output_dir)
+    output_dir = Path(user_args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    os.chdir(output_dir)
 
     snapshots = user_args.snapshots if user_args.snapshots is not None else (3 if user_args.quick else 4)
     run_steps = user_args.run_steps if user_args.run_steps is not None else (10 if user_args.quick else 25)
-    N = user_args.N
+    mesh_size = user_args.N
 
     box = mb.Box(100.0, 100.0, 100.0)
     system = mb.System(box)
     print(system.box)
 
-    vertex_file, face_file = _mesh_files(N)
+    vertex_file, face_file = _mesh_files(mesh_size)
     system.read_mesh_from_files(files={"vertices": str(vertex_file), "faces": str(face_file)})
 
     dump = system.dumper
@@ -69,27 +70,18 @@ def main() -> None:
     avg_edge_length = np.mean(edge_lengths)
     print("[Initial] avg_edge_length = ", avg_edge_length)
 
-    evolver.add_integrator("Mesh>VelocityVerlet>vertex>move", {"limit": "True", "limit_val": "0.008"})
-
-    vertices = system.vertices
-    for vertex in vertices:
-        vertex.mass = 1.0
-    system.vertices = vertices
-
-    for i, vertex in enumerate(system.vertices):
-        print(f"vertex[{i}] = {vertex.mass}")
-        if i > 10:
-            break
-
-    evolver.set_time_step(str(1e-3))
-    evolver.set_global_temperature(str(1e-6))
+    evolver.add_integrator("Mesh>Brownian>vertex>move", {"seed": "202208"})
+    evolver.set_time_step(str(2e-3))
+    evolver.set_global_temperature(str(1e-4))
 
     energy = compute.energy(evolver)
     print("[Initial] energy = ", energy)
 
     dump.vtk("pentagon_t0")
     for snapshot in range(1, snapshots):
-        evolver.evolveMD(steps=run_steps)
+        for temperature in [1e-4, 1e-5, 1e-6, 0.0]:
+            evolver.set_global_temperature(str(temperature))
+            evolver.evolveMD(steps=run_steps)
         dump.vtk("pentagon_t" + str(snapshot * run_steps))
 
     edge_lengths = compute.edge_lengths()

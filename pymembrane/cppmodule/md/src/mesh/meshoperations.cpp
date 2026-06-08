@@ -4,7 +4,7 @@
 #include "../system/systemclass.hpp"
 #include "../box/pbc.hpp"
 
-bool MeshOperations::check_if_edge_can_flip(int flip_edge_index)
+bool MeshOperations::check_if_edge_can_flip(const int& flip_edge_index)
 {
     auto can_flip = pymemb::CheckEdgeFlip_lambda(flip_edge_index,
                                                (&_system.faces[0]),
@@ -30,15 +30,8 @@ void MeshOperations::edge_flip(const int& flip_edge_index, const bool& flip_face
 
 void MeshOperations::equiangulation(void)
 {
-    Equiangulation_kernel(_system.Numedges,
-                          (&_system.faces[0]),
-                          (&_system.vertices[0]),
-                          (&_system.edges[0]),
-                          (&_system.halfedges[0]),
-                          true,
-                          );
     for (int flip_edge_index = 0;
-         flip_edge_index < Numedges;
+         flip_edge_index < _system.Numedges;
          flip_edge_index += 1)
     {
         // retrieve the vertices around the edge

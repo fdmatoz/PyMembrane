@@ -23,7 +23,7 @@ copyright = f"{datetime.now().year} " + 'Daniel A Matoz-Fernandez and Contributo
 author = 'Daniel A Matoz-Fernandez'
 
 # The full version, including alpha/beta/rc tags
-version = '1.0'
+version = '1.01'
 
 
 # -- General configuration ---------------------------------------------------

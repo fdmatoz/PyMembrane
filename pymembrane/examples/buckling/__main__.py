@@ -1,18 +1,17 @@
 from __future__ import annotations
 
-# Packaged runnable version of docs/examples/02_periodic/periodic.py.
+# Packaged runnable version of docs/examples/03_Caspar-Klug_sphere/buckling.py.
 # Physics parameters are intentionally kept identical to the documentation example.
 
 import argparse
 import os
-from math import sqrt
 from pathlib import Path
 from pprint import pprint
 
 import numpy as np
 
 import pymembrane as mb
-from ._resources import example_data_path
+from .._resources import example_data_dir
 
 
 def main() -> None:
@@ -20,7 +19,6 @@ def main() -> None:
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
     parser.add_argument("--run_steps", type=int, default=None, help="Number of run steps")
-    parser.add_argument("--epsilon", type=float, default=0.01, help="strain in x direction")
     parser.add_argument("--output-dir", default=".", help="directory for output files")
     user_args = parser.parse_args()
 
@@ -33,22 +31,22 @@ def main() -> None:
 
     snapshots = user_args.snapshots if user_args.snapshots is not None else (3 if user_args.quick else 100)
     run_steps = user_args.run_steps if user_args.run_steps is not None else (10 if user_args.quick else 5000)
-    epsilon = user_args.epsilon
 
-    with example_data_path("02_periodic/vertices.dat") as vertex_file, example_data_path("02_periodic/faces.dat") as face_file:
-        box = mb.Box(sqrt(3.0) * 29, 50.0, 50.0, True, True, True)
+    with example_data_dir(__package__) as data_dir:
+        vertex_file = data_dir / "vertices.dat"
+        face_file = data_dir / "faces.dat"
 
-        print(box)
+        box = mb.Box(4, 4, 4)
 
         system = mb.System(box)
+        print(system.box)
         system.read_mesh_from_files(files={"vertices": str(vertex_file), "faces": str(face_file)})
-        system.enforce_boundaries()
 
         dump = system.dumper
-        dump.vtk(filename="initial_mesh", periodic=True)
+        dump.vtk("initial mesh", False)
 
         evolver = mb.Evolver(system)
-        evolver.add_force("Mesh>Harmonic", {"k": {"0": "100.0"}, "l0": {"0": "1.0"}})
+        evolver.add_force("Mesh>Harmonic", {"k": {"0": "350.0"}, "l0": {"0": "1.0"}})
         evolver.add_force("Mesh>Limit", {"lmin": {"0": "0.7"}, "lmax": {"0": "1.3"}})
         evolver.add_force("Mesh>Bending>Dihedral", {"kappa": {"0": "1.0"}})
         pprint(evolver.get_force_info())
@@ -58,32 +56,28 @@ def main() -> None:
         avg_edge_length = np.mean(edge_lengths)
         print("[Initial] avg_edge_length = ", avg_edge_length)
 
-        evolver.add_integrator("Mesh>Brownian>vertex>move", {"seed": "202208"})
-        evolver.set_time_step("2e-3")
-        evolver.set_global_temperature("1e-4")
+        evolver.add_integrator("Mesh>MonteCarlo>vertex>move", {"dr": "0.008"})
 
-        def compress_box(_epsilon):
-            old_box = system.box
-            new_box = mb.Box(old_box.L.x * (1 - _epsilon), old_box.L.y, old_box.L.z, True, True, True)
-            return new_box
+        mc_energy = snapshots * [None]
+        mc_energy[0] = 100.0 * compute.energy(evolver)["edges"] / system.Numedges
+        print("[Initial] energy = {} x 10^-2".format(mc_energy[0]))
 
-        energy = compute.energy(evolver)
-        print("[Initial] energy = ", energy)
-
-        dump.vtk("periodic_t0", periodic=True)
+        dump.vtk("sphere_t0")
         for snapshot in range(1, snapshots):
-            evolver.evolveMD(steps=run_steps)
-            dump.vtk("periodic_t" + str(snapshot * run_steps), periodic=True)
-            if snapshot < 50:
-                system.box = compress_box(epsilon)
-                system.enforce_boundaries()
+            for temperature in [1e-3, 1e-5, 1e-7, 0.0]:
+                evolver.set_global_temperature(str(temperature))
+                evolver.evolveMC(steps=run_steps)
+            dump.vtk("sphere_t" + str(snapshot * run_steps))
+            mc_energy[snapshot] = 100.0 * compute.energy(evolver)["edges"] / system.Numedges
+            print("[{}] energy = {} x 10^-2".format(snapshot, mc_energy[snapshot]))
+
+        dump.vtk("final_mesh")
 
         edge_lengths = compute.edge_lengths()
         avg_edge_length = np.mean(edge_lengths)
         print("[Final] avg_edge_length = ", avg_edge_length)
 
-        energy = compute.energy(evolver)
-        print("[Final] energy = ", energy)
+        print("[Final] energy = ", mc_energy[snapshots - 1])
 
 
 if __name__ == "__main__":

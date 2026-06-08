@@ -6,8 +6,8 @@ Sphere CPU Benchmark
 
 PyMembrane now includes a small, reproducible CPU benchmark based on generated
 triangulated spherical meshes. The goal is to provide a portable timing
-reference for the public release without requiring external mesh downloads,
-optional visualization libraries, or path edits.
+reference without requiring external mesh downloads or optional visualization
+libraries.
 
 Why this benchmark exists
 -------------------------
@@ -77,4 +77,3 @@ When quoting benchmark numbers, include:
 This benchmark is intended as a portable CPU reference for the public
 C++/pybind11 release. Dedicated GPU acceleration remains future work and is not
 required to install or run the current examples.
-

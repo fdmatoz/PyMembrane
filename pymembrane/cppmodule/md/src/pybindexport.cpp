@@ -105,7 +105,7 @@ PYBIND11_MODULE(_core, m)
     // Module version
     m.attr("__author__") = "Daniel Matoz-Fernandez";
     m.attr("__repository_url__") = "https://github.com/username/pymembrane";
-    m.attr("__version__") = "1.0";  // version
+    m.attr("__version__") = "1.01";  // version
     m.attr("__release_date__") = "August 2023";  // release date
     //Compilation date
     m.attr("__compiled_date__") = getCurrentDate();
@@ -142,6 +142,7 @@ PYBIND11_MODULE(_core, m)
     export_HE_Face(m);
     export_HE_HalfEdge_Vector(m);
     export_HE_HalfEdge(m);
+    export_MeshOperations(m);
 
     //compute 
     export_ComputeMesh(m);

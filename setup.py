@@ -72,7 +72,7 @@ with (ROOT / "README.md").open("r", encoding="utf-8") as fh:
 
 setup(
     name="pymembrane",
-    version="1.0",
+    version="1.01",
     description="CPU C++ membrane simulation tools with Python bindings",
     long_description=long_description,
     long_description_content_type="text/markdown",

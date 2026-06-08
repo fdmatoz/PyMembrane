@@ -15,16 +15,16 @@ from pprint import pprint
 import numpy as np
 
 import pymembrane as mb
-from ._resources import example_data_path
+from .._resources import example_data_path
 
 
 def _mesh_files(n: int) -> tuple[Path, Path]:
     cache_dir = Path(tempfile.gettempdir()) / f"pymembrane_disclination_{n}"
-    vertex_file = cache_dir / f"InputFiles/vertices_N{n}.inp"
-    face_file = cache_dir / f"InputFiles/faces_N{n}.inp"
+    vertex_file = cache_dir / "InputFiles" / f"vertices_N{n}.inp"
+    face_file = cache_dir / "InputFiles" / f"faces_N{n}.inp"
     if not vertex_file.exists() or not face_file.exists():
         cache_dir.mkdir(parents=True, exist_ok=True)
-        with example_data_path("01_disclination/InputFiles.zip") as archive_path:
+        with example_data_path(__package__, "InputFiles.zip") as archive_path:
             with zipfile.ZipFile(archive_path) as archive:
                 archive.extract(f"InputFiles/vertices_N{n}.inp", path=cache_dir)
                 archive.extract(f"InputFiles/faces_N{n}.inp", path=cache_dir)

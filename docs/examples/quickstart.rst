@@ -8,9 +8,8 @@ Quick Start and Examples
 Packaged Example Overview
 -------------------------
 
-All reviewer-facing examples run from the installed Python namespace with
-``python -m``. The input files are bundled with the package, so no manual
-downloads or path edits are required.
+The examples run from the installed Python namespace with ``python -m``. The
+input files are bundled with the package.
 
 .. list-table::
    :header-rows: 1

@@ -44,8 +44,8 @@ This short example follows the same setup used in the packaged periodic example.
 Installed examples
 ------------------
 
-After ``pip install -e .`` from the repository root, the reviewer-facing
-examples can be run directly as installed modules:
+After ``pip install -e .`` from the repository root, the examples can be run
+directly as installed modules:
 
 .. code-block:: bash
 
@@ -56,5 +56,4 @@ examples can be run directly as installed modules:
    python -m pymembrane.examples.hybrid_mc_bd --quick
 
 The source versions remain under ``docs/examples``. The installed copies under
-``pymembrane.examples`` package the required input data and avoid manual path
-edits.
+``pymembrane.examples`` package the required input data.

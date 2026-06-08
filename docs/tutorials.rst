@@ -3,8 +3,8 @@ Tutorial Notebook
 
 This page links to a beginner-friendly Jupyter notebook that walks through one
 complete PyMembrane simulation using the existing packaged periodic example
-physics. It does not require manual data downloads, path edits, or plotting
-packages.
+physics. The required input files are bundled with the installed package and
+the notebook does not require plotting packages.
 
 Beginner Notebook
 -----------------
@@ -37,7 +37,7 @@ available from the installed module namespace:
 
    python -m pymembrane.examples.periodic --quick
 
-The hybrid reviewer-facing example is also available as:
+The hybrid example is also available as:
 
 .. code-block:: bash
 

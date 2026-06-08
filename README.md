@@ -36,7 +36,7 @@ bash cd /tmp python -m pymembrane.examples.periodic --quick
 
 The --quick flag runs a short smoke-test version of each example. It reduces runtime while keeping the same physical setup, force models, and simulation workflow as the full example.
 
-The documentation source scripts are kept under docs/examples; the installed runnable versions live under pymembrane.examples.
+The documentation source scripts are kept under docs/examples; the installed runnable versions live under pymembrane.examples and carry their runtime input files with them.
 
 ### Visualizing Results
 
