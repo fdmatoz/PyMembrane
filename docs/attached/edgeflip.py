@@ -18,10 +18,14 @@
 # In[ ]:
 
 
-#First we need to import the module for the simulations
+from pathlib import Path
+
+# First we need to import the module for the simulations
 import pymembrane as mb
 #numpy
 import numpy as np
+
+HERE = Path(__file__).resolve().parent
 
 
 # #### Loading Mesh
@@ -30,13 +34,13 @@ import numpy as np
 # In[ ]:
 
 
-#create a system 
+# create a system
 system = mb.System()
-#read the mesh
+# read the mesh
 Nv = 72
-vertex_file = 'vertices_Nv_' + str(Nv) + '.inp'
-face_file = 'faces_Nv_' + str(Nv) + '.inp'
-system.read_mesh_from_files(files = {'vertices': vertex_file, 'faces': face_file})
+vertex_file = HERE / f'vertices_Nv_{Nv}.inp'
+face_file = HERE / f'faces_Nv_{Nv}.inp'
+system.read_mesh_from_files(files = {'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 # In[ ]:

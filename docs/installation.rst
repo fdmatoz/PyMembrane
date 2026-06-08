@@ -5,52 +5,74 @@ Prerequisites
 -------------
 
 - Currently supported on Linux and Mac OSX.
-- Required installations: Python, associated libraries, and suitable compilers.
+- A C++14-capable compiler is required to build the extension module.
 - Recommended to use `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_.
 
-Steps:
-^^^^^^
+Editable installation
+---------------------
 
-1. Ensure a C++14 or later standard-supported C/C++ compiler is present.
-
-2. Clone the repository:
-
-   .. code-block:: bash
-      git clone https://github.com/fdmatoz/PyMembrane.git
-
-3. Create a new conda environment:
-   .. code-block:: bash
-      conda create -n PYMEMB python=3.8 numpy
-
-4. Install necessary packages in the conda environment:
-   .. code-block:: bash
-      conda install -c anaconda cmake
-
-5. Issues with VTK libraries? PyMembrane utilizes [VTK](https://vtk.org/download/) for VTP files, viewable with [ParaView](https://www.paraview.org/). On Linux, use a package manager (e.g., apt) for VTK libraries. For Mac OSX, let PyMembrane fetch and compile VTK locally.
-
-Installing the PyMembrane Python Module
----------------------------------------
-
-From the `pymembrane` directory, execute:
+The standard development workflow is an editable install from the repository
+root:
 
 .. code-block:: bash
 
-   python setup.py install
+   conda create -n pymemb python=3.8 numpy cmake pybind11
+   conda activate pymemb
+   pip install -e .
+   python -c "import pymembrane; print(pymembrane.__file__)"
+   python -c "from pymembrane import *; print('import ok')"
 
-.. note::
-   Without Anaconda, you might need root access. The :code::`python setup.py install --user` option is currently unsupported.
+This keeps the Python package linked to the working tree, which is convenient
+when editing the code or rebuilding the C++ extension.
 
-Visualizing Results
--------------------
+Non-editable installation
+-------------------------
 
-Results often use formats like .vtk or .json. Employ visualization tools or the provided scripts for analyzing simulation results. `Paraview <https://www.paraview.org/>`_ is recommended for visualizing mesh files and attributes.
+If you only want a local install of the current checkout without development
+mode, use:
+
+.. code-block:: bash
+
+   pip install .
+
+Rebuild after C++ changes
+-------------------------
+
+If you modify the C++ extension sources, remove the local build directory and
+reinstall:
+
+.. code-block:: bash
+
+   rm -rf build
+   pip install -e .
+
+Examples
+--------
+
+The packaged examples are installed with PyMembrane and can be run as Python
+modules from any working directory:
+
+.. code-block:: bash
+
+   python -m pymembrane.examples.periodic --quick
+   python -m pymembrane.examples.buckling --quick
+   python -m pymembrane.examples.minimizer --quick
+   python -m pymembrane.examples.disclination --quick
+
+The ``python -m package.module`` form is the standard Python interface for
+executing an installed module as top-level code.
+
+Dependency note
+---------------
+
+- Normal installation does not require VTK.
+- The examples do not require plotting packages to run.
+- Mesh output is written with the built-in dumper methods such as
+  ``system.dumper.vtk(...)`` and can be viewed in tools such as
+  `ParaView <https://www.paraview.org/>`_.
 
 Documentation & Community
 -------------------------
 
 - **Detailed Documentation**: For an in-depth understanding, visit the `official documentation <https://fdmatoz.github.io/PyMembrane/>`_.
-  
 - **Community Interaction**: Engage with the PyMembrane community through forums, chats, or on GitHub.
-
-
-

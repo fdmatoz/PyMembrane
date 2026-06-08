@@ -1,33 +1,31 @@
-#import the code
+from pathlib import Path
+
 import pymembrane as mb
 import numpy as np
 from pprint import pprint
 import argparse
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import scienceplots
-plt.style.use(['science'])
+
+HERE = Path(__file__).resolve().parent
 
 
 ### Parse arguments
 ## Now we want to have X snapshots every X steps each
 parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
-## Add arguments for snapshots and run_steps
-parser.add_argument("--snapshots", type=int, required=True, help="Number of snapshots")
-parser.add_argument("--max_iter", type=int, required=True, help="Number of iteration steps")
+parser.add_argument("--quick", action="store_true")
+parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
+parser.add_argument("--max_iter", type=int, default=None, help="Number of iteration steps")
 
 user_args = parser.parse_args()
-# Access the parsed arguments
-snapshots = user_args.snapshots
-max_iter = user_args.max_iter
+snapshots = user_args.snapshots if user_args.snapshots is not None else (2 if user_args.quick else 50)
+max_iter = user_args.max_iter if user_args.max_iter is not None else (25 if user_args.quick else 2000)
 
-vertex_file = 'vertices_R1.0_l01.inp'
-face_file = 'faces_R1.0_l01.inp'
+vertex_file = HERE / 'vertices_R1.0_l01.inp'
+face_file = HERE / 'faces_R1.0_l01.inp'
 
 #create a system 
 box = mb.Box(40,40,40)
 system = mb.System(box)
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 #save the mesh to display
 #create dumper
@@ -104,17 +102,3 @@ energy = compute.energy(evolver)
 print("[Final] energy:{} x 10^-2 volume:{}".format(min_energy[snapshots-1], compute.volume()))
 final_volume = compute.volume()
 print("volume difference: {}".format(final_volume-initial_volume))
-
-dump.txt("minimized")
-
-fig, ax = plt.subplots(figsize=(3.3,3.3))
-ax.plot(min_energy, 'o-')
-ax.set_xlabel(r"$Steps$", fontsize=10, labelpad = 2.5)
-ax.set_ylabel(r"$Energy/NumEdges \times 10^{-2}$", fontsize=11, labelpad = 2.5)
-ax.tick_params(axis='x', labelsize=8, pad = 4)
-ax.tick_params(axis='y', labelsize=8, pad = 4)
-ax.ticklabel_format(useMathText=True)
-ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
-ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
-plt.tight_layout()
-plt.savefig("energy.svg", dpi=400)

@@ -1,14 +1,42 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+from pathlib import Path
+import tempfile
+import zipfile
 
-#import the code
 import pymembrane as mb
 import numpy as np
 from pprint import pprint
+import argparse
+
+HERE = Path(__file__).resolve().parent
 
 
-#create a system 
+def mesh_files(n: int) -> tuple[Path, Path]:
+    cache_dir = Path(tempfile.gettempdir()) / f"pymembrane_disclination_{n}"
+    vertex_file = cache_dir / f"InputFiles/vertices_N{n}.inp"
+    face_file = cache_dir / f"InputFiles/faces_N{n}.inp"
+    if not vertex_file.exists() or not face_file.exists():
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(HERE.parent / "InputFiles.zip") as archive:
+            archive.extract(f"InputFiles/vertices_N{n}.inp", path=cache_dir)
+            archive.extract(f"InputFiles/faces_N{n}.inp", path=cache_dir)
+    return vertex_file, face_file
+
+
+parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
+parser.add_argument("--quick", action="store_true")
+parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
+parser.add_argument("--run_steps", type=int, default=None, help="Number of run steps")
+parser.add_argument("--N", type=int, default=14, help="Pentagon Number size")
+user_args = parser.parse_args()
+snapshots = user_args.snapshots if user_args.snapshots is not None else (3 if user_args.quick else 200)
+run_steps = user_args.run_steps if user_args.run_steps is not None else (10 if user_args.quick else 5000)
+N = user_args.N
+
+
+# create a system
 box = mb.Box(100.0, 100.0, 100.0)
 
 system = mb.System(box)
@@ -16,11 +44,9 @@ system = mb.System(box)
 #check if the box is loaded correctly
 print(system.box)
 
-#read the mesh
-N = 14 #pentagon size
-vertex_file = '../vertices_N' + str(N) + '.inp'
-face_file = '../faces_N' + str(N) + '.inp'
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+# read the mesh
+vertex_file, face_file = mesh_files(N)
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 #save the mesh to display
@@ -78,10 +104,6 @@ for i, vertex in enumerate(system.vertices):
 
 dt = str(1e-3)
 evolver.set_time_step(dt)
-
-## Now we want to have 100 snapshots every 5000 steps each
-snapshots = 200
-run_steps = 5000
 
 ## then we want to run the simulation for a temperature 1e-4
 temperature = str(1e-6)

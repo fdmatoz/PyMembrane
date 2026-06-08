@@ -4,21 +4,23 @@
 # In[ ]:
 
 
-#import the code
+from pathlib import Path
+
 import pymembrane as mb
 import numpy as np
 
+HERE = Path(__file__).resolve().parent
 
 # In[ ]:
 
 
-#create a system 
+# create a system
 system = mb.System()
-#read the mesh
-N = 10 #pentagon size
-vertex_file = 'vertices_N' + str(N) + '.inp'
-face_file = 'faces_N' + str(N) + '.inp'
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+# read the mesh
+N = 10 # pentagon size
+vertex_file = HERE / f'vertices_N{N}.inp'
+face_file = HERE / f'faces_N{N}.inp'
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 # In[ ]:
@@ -89,4 +91,3 @@ for snapshot in range(1, snapshots):
     acceptance = evolver.evolveMC(MCS=run_steps)
     print(acceptance)
     dump.vtk("pentagon_t" + str(snapshot*run_steps))
-

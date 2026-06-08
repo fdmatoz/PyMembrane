@@ -14,20 +14,28 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 # DEALINGS IN THE SOFTWARE.
 
-# Init file
-# Init file
 from __future__ import absolute_import
 
-#import os
-#import sys
+import sys
 
-#from collections import defaultdict
-from .cppmodule import *
+from . import cppmodule as _cppmodule
+from .cppmodule import dump as dump
+from .cppmodule import md as md
+from .cppmodule import *  # noqa: F401,F403
 
-# Import all attributes from cppmodule into pymodule's namespace
-from .cppmodule import __dict__ as cpp_attrs
-globals().update(cpp_attrs)
+sys.modules[__name__ + ".dump"] = dump
+sys.modules[__name__ + ".md"] = md
 
-# Add some attributes to the package
-__info__ = "PyMembrane\nversion: {}\nrelease date: {}\ncompiled date:{}\ncompiled OS:{}\n".format(cppmodule.__version__, cppmodule.__release_date__, cppmodule.__compiled_date__, cppmodule.__OS__)
+__version__ = _cppmodule.__version__
+__release_date__ = _cppmodule.__release_date__
+__compiled_date__ = _cppmodule.__compiled_date__
+__OS__ = _cppmodule.__OS__
 
+__info__ = (
+    "PyMembrane\nversion: {}\nrelease date: {}\ncompiled date:{}\ncompiled OS:{}\n".format(
+        __version__, __release_date__, __compiled_date__, __OS__
+    )
+)
+
+__all__ = [name for name in dir(_cppmodule) if not name.startswith("_")]
+__all__.extend(["dump", "md", "__info__", "__version__", "__release_date__", "__compiled_date__", "__OS__"])

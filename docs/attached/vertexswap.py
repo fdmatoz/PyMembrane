@@ -22,21 +22,25 @@
 # In[ ]:
 
 
-#First we need to import the module for the simulations
+from pathlib import Path
+
+# First we need to import the module for the simulations
 import pymembrane as mb
 #numpy
 import numpy as np
+
+HERE = Path(__file__).resolve().parent
 
 
 # In[ ]:
 
 
-#create a system 
+# create a system
 system = mb.System()
-#read the mesh
-vertex_file = '03_vertexswap/vertices_T192.inp'
-face_file = '03_vertexswap/faces_T192.inp'
-system.read_mesh_from_files(files = {'vertices': vertex_file, 'faces': face_file})
+# read the mesh
+vertex_file = HERE / '03_vertexswap/vertices_T192.inp'
+face_file = HERE / '03_vertexswap/faces_T192.inp'
+system.read_mesh_from_files(files = {'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 # Then we assign different types to the vertices by using 'getVertices' and 'setVertices' functions:

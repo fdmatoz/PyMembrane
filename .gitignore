@@ -1,106 +1,89 @@
-#Edited 13-08-2023
+# macOS / editor metadata
+.DS_Store
+*~
+.*.swp
+.vscode/
+.history/
+
+# Python caches and virtual-tool state
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# Python packaging outputs
+MANIFEST
+dist/
+build/
+*.egg-info/
+
+# CMake / native build outputs
 CMakeCache.txt
-CMakeFiles
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
 Makefile
 cmake_install.cmake
-.DS_Store
+/.ninja_*
+/*.ninja
+.cache/
+autogen/
+cmake/
+example.dir/
+Release/
+Debug/
+Win32/
+x64/
+
+# Compiled binaries and objects
+*.d
+*.gch
+*.pch
+*.slo
+*.lo
+*.o
+*.obj
 *.so
 *.pyd
+*.dylib
 *.dll
+*.a
+*.la
+*.lai
+*.lib
+*.mod
+*.smod
+*.exe
+*.out
+*.app
+
+# Visual Studio / Windows project files
+.vs/
 *.sln
 *.sdf
 *.opensdf
 *.vcxproj
 *.filters
-example.dir
-Win32
-x64
-Release
-Debug
-.vs
-CTestTestfile.cmake
-Testing
-autogen
-MANIFEST
-/.ninja_*
-/*.ninja
-/docs/.build
-*.py[co]
-*.egg-info
-*~
-.*.swp
-.DS_Store
-/dist
-/build
-/cmake/
-.cache/
-sosize-*.txt
+
+# Generated CMake helper files
 pybind11Config*.cmake
 pybind11Targets.cmake
-#cuda
-*.i
-*.ii
-*.gpu
-*.ptx
-*.cubin
-*.fatbin
-# Prerequisites
-*.d
+sosize-*.txt
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Repo-specific native build trees
+pymembrane/cppmodule/build/*
+!pymembrane/cppmodule/build/.gitkeep
+pymembrane/cppmodule/md/build/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Documentation build output
+docs/.build/
+docs/_build/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# vscode
-.vscode/
-pymembrane/cppmodule/.vscode/
-pymembrane/cppmodule/src/.vscode/
-
-# vscode
-.history/
-
-# python
-__pycache__/
-*.pyc
-pymembrane/__pycache__/
-pymembrane/cppmodule/__pycache__/
-.ipynb_checkpoints/
-
-
-# vtk
+# Generated mesh / visualization outputs
 *.vtk
 *.vtp
 *.vtu
-
-# vscode
-pymembrane/cppmodule/build/* 
-
-# exception to the rule
-!pymembrane/cppmodule/build/.gitkeep 
-

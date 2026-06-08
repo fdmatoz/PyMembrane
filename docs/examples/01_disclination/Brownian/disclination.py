@@ -1,14 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+from pathlib import Path
 
-#import the code
 import pymembrane as mb
 import numpy as np
 from pprint import pprint
 
 
-#create a system 
+HERE = Path(__file__).resolve().parent
+N = 14
+
+
+# create a system
 box = mb.Box(100.0, 100.0, 100.0)
 
 system = mb.System(box)
@@ -16,12 +20,10 @@ system = mb.System(box)
 #check if the box is loaded correctly
 print(system.box)
 
-#read the mesh
-N = 14 #pentagon size
-vertex_file = '../vertices_N' + str(N) + '.inp'
-vertex_file = 'pentagon_vertices.dat'
-face_file = '../faces_N' + str(N) + '.inp'
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+# read the mesh
+vertex_file = HERE / "pentagon_vertices.dat"
+face_file = HERE / "pentagon_faces.dat"
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 #save the mesh to display
@@ -68,8 +70,8 @@ dt = str(2e-3)
 evolver.set_time_step(dt)
 
 ## Now we want to have 100 snapshots every 5000 steps each
-snapshots = 200
-run_steps = 10000
+snapshots = 4
+run_steps = 25
 
 ## then we want to run the simulation for a temperature 1e-4
 temperature = str(1e-4)

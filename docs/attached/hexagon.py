@@ -4,20 +4,23 @@
 # In[ ]:
 
 
-#import the code
+from pathlib import Path
+
 import pymembrane as mb
 import numpy as np
+
+HERE = Path(__file__).resolve().parent
 
 
 # In[ ]:
 
 
-#Create a system
+# Create a system
 system = mb.System()
-#read the mesh
-vertex_file = 'vertices.inp'
-face_file = 'faces.inp'
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+# read the mesh
+vertex_file = HERE / 'vertices.inp'
+face_file = HERE / 'faces.inp'
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 # In[ ]:
@@ -85,4 +88,3 @@ help(compute)
 edge_lengths = compute.compute_edge_lengths()
 avg_edge_length= np.mean(edge_lengths)
 print("avg_edge_length = ", avg_edge_length)
-

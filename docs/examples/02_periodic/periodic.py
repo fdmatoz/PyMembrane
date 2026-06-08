@@ -1,30 +1,29 @@
-#import the code
+from pathlib import Path
+
 import pymembrane as mb
 from math import sqrt
 import numpy as np
 from pprint import pprint
 import argparse
 
+HERE = Path(__file__).resolve().parent
+
 
 ### Parse arguments
 ## Now we want to have X snapshots every X steps each
 parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
-## Add arguments for snapshots and run_steps
-parser.add_argument("--snapshots", type=int, required=True, help="Number of snapshots")
-parser.add_argument("--run_steps", type=int, required=True, help="Number of run steps")
-parser.add_argument("--epsilon", type=float, required=True, help="strain in x direction")
-
-
+parser.add_argument("--quick", action="store_true")
+parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
+parser.add_argument("--run_steps", type=int, default=None, help="Number of run steps")
+parser.add_argument("--epsilon", type=float, default=0.01, help="strain in x direction")
 
 user_args = parser.parse_args()
-# Access the parsed arguments
-snapshots = user_args.snapshots
-run_steps = user_args.run_steps
+snapshots = user_args.snapshots if user_args.snapshots is not None else (3 if user_args.quick else 100)
+run_steps = user_args.run_steps if user_args.run_steps is not None else (10 if user_args.quick else 5000)
 epsilon = user_args.epsilon
 
-
-vertex_file = 'vertices.dat'
-face_file = 'faces.dat'
+vertex_file = HERE / 'vertices.dat'
+face_file = HERE / 'faces.dat'
 box = mb.Box(sqrt(3.0)*29, 50.0, 50.0, True, True, True)
 
 print(box)
@@ -33,7 +32,7 @@ print(box)
 system = mb.System(box)
 
 #read the mesh
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 #warpup all the vertices inside of the box for periodic boundary conditions 
 system.enforce_boundaries()
 

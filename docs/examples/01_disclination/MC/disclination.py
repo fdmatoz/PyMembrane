@@ -1,27 +1,39 @@
-#import the code
+from pathlib import Path
+import tempfile
+import zipfile
+
 import pymembrane as mb
 import numpy as np
 from pprint import pprint
 import argparse
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import scienceplots
-plt.style.use(['science'])
+
+HERE = Path(__file__).resolve().parent
+
+
+def mesh_files(n: int) -> tuple[Path, Path]:
+    cache_dir = Path(tempfile.gettempdir()) / f"pymembrane_disclination_{n}"
+    vertex_file = cache_dir / f"InputFiles/vertices_N{n}.inp"
+    face_file = cache_dir / f"InputFiles/faces_N{n}.inp"
+    if not vertex_file.exists() or not face_file.exists():
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(HERE.parent / "InputFiles.zip") as archive:
+            archive.extract(f"InputFiles/vertices_N{n}.inp", path=cache_dir)
+            archive.extract(f"InputFiles/faces_N{n}.inp", path=cache_dir)
+    return vertex_file, face_file
 
 
 ### Parse arguments
 ## Now we want to have X snapshots every X steps each
 parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
-## Add arguments for snapshots and run_steps
-parser.add_argument("--snapshots", type=int, required=True, help="Number of snapshots")
-parser.add_argument("--run_steps", type=int, required=True, help="Number of run steps")
-parser.add_argument("--N", type=int, required=True, help="Pentagon Number size")
+parser.add_argument("--quick", action="store_true")
+parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
+parser.add_argument("--run_steps", type=int, default=None, help="Number of run steps")
+parser.add_argument("--N", type=int, default=14, help="Pentagon Number size")
 
 user_args = parser.parse_args()
-# Access the parsed arguments
-snapshots = user_args.snapshots
-run_steps = user_args.run_steps
-N = user_args.N #pentagon size
+snapshots = user_args.snapshots if user_args.snapshots is not None else (3 if user_args.quick else 200)
+run_steps = user_args.run_steps if user_args.run_steps is not None else (10 if user_args.quick else 5000)
+N = user_args.N
 
 #create a system 
 box = mb.Box(40.0, 40.0, 40.0)
@@ -31,10 +43,9 @@ system = mb.System(box)
 #check if the box is loaded correctly
 print(system.box)
 
-#read the mesh
-vertex_file = '../vertices_N' + str(N) + '.inp'
-face_file = '../faces_N' + str(N) + '.inp'
-system.read_mesh_from_files(files={'vertices':vertex_file, 'faces':face_file})
+# read the mesh
+vertex_file, face_file = mesh_files(N)
+system.read_mesh_from_files(files={'vertices': str(vertex_file), 'faces': str(face_file)})
 
 
 #save the mesh to display
@@ -100,17 +111,3 @@ print("[Final] avg_edge_length = ", avg_edge_length)
 
 energy = compute.energy(evolver)
 print("[Final] energy = ", mc_energy[snapshots-1])
-
-dump.txt("pentagon")
-
-fig, ax = plt.subplots(figsize=(3.3,3.3))
-ax.plot(mc_energy, 'o-')
-ax.set_xlabel(r"$MC steps$", fontsize=10, labelpad = 2.5)
-ax.set_ylabel(r"$Energy/NumEdges \times 10^{-2}$", fontsize=11, labelpad = 2.5)
-ax.tick_params(axis='x', labelsize=8, pad = 4)
-ax.tick_params(axis='y', labelsize=8, pad = 4)
-ax.ticklabel_format(useMathText=True)
-ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
-ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
-plt.tight_layout()
-plt.savefig("energy.svg", dpi=400)

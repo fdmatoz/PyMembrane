@@ -8,7 +8,7 @@ Dumper
 Description
 -----------
 
-`Dumper` is a Python class interfacing with the underlying C++ `DumperClass`. It enables exporting mesh data in various formats and handling custom user data.
+`Dumper` is the default Python dumper attached to `System.dumper`. It preserves the public method names of the historical C++ `DumperClass`, but normal dumping no longer requires VTK. The default `vtk()` and `edge_vtk()` methods write legacy ASCII VTK files directly from Python, and `obj()` writes Wavefront OBJ geometry.
 
 Constructor
 -----------
@@ -45,4 +45,3 @@ Methods
 
 - **user_data_edge(data_name: str, data: List[real])**:
   Dump user data on edges. Overloaded to handle both a list of real values and real tensors.
-

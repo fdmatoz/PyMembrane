@@ -1,0 +1,9 @@
+include README.md
+include pyproject.toml
+include setup.py
+recursive-include md/src *.cpp *.hpp
+include md/CMakeLists.txt
+include md/README.md
+recursive-include md/external/pybind11 *
+recursive-include examples *
+recursive-include tests *.py

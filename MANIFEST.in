@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+recursive-include pymembrane *.py *.hpp *.cpp *.h
+recursive-include pymembrane/cppmodule/md/external/pybind11 *
+recursive-include pymembrane/cppmodule/examples *.py
+recursive-include docs/attached *.py *.inp *.dat
+recursive-include docs/examples *.py *.inp *.dat *.zip *.png

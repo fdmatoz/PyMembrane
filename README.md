@@ -30,50 +30,49 @@ PyMembrane is not just about powerful computations; it's also about simplicity. 
 
 ### Installation
 
-#### Prerequisites
+PyMembrane builds a CPU C++ extension through CMake and pybind11.
 
-- Currently supported on Linux and Mac OSX.
-- Required installations: Python, associated libraries, and suitable compilers.
-- Recommended to use [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+Create an environment with the build dependencies:
 
-##### Steps:
-
-1. Ensure a C++14 or later standard-supported C/C++ compiler is present.
-
-2. Clone the repository:
 ```bash
-git clone https://github.com/fdmatoz/pymembrane.git
+conda create -n pymemb python=3.8 numpy cmake pybind11
+conda activate pymemb
 ```
 
-3. Create a new conda environment:
+Install from the repository root:
+
 ```bash
-conda create -n PYMEMB python=3.8 numpy
+pip install -e .
+python -c "import pymembrane; print(pymembrane.__file__)"
+python -c "from pymembrane import *; print('import ok')"
 ```
 
-3. Activate the environment:
+For a clean rebuild after native C++ changes:
+
 ```bash
-conda activate PYMEMB
+rm -rf build *.egg-info
+pip install -e .
 ```
 
-5. Install necessary packages in the conda environment:
+Non-editable installs use the same package metadata:
+
 ```bash
-conda install -c anaconda cmake
+pip uninstall -y pymembrane
+rm -rf build *.egg-info
+pip install .
+python -c "import pymembrane; print(pymembrane.__file__)"
+python -c "from pymembrane import *; print('import ok')"
 ```
 
-6. Issues with VTK libraries? PyMembrane utilizes [VTK](https://vtk.org/download/) for VTP files, viewable with [ParaView](https://www.paraview.org/). On Linux, use a package manager (e.g., apt) for VTK libraries. For Mac OSX, let PyMembrane fetch and compile VTK locally.
-
-### Installing the PyMembrane Python Module
-
-From the `pymembrane` directory, execute:
-```bash
-python setup.py install
-```
-
-**Note**: Without Anaconda, you might need root access. The `python setup.py install --user` option is currently unsupported.
+If the compiler, CMake, pybind11, or NumPy headers are missing, install them
+in the active environment and rerun the commands above. A C++14-capable
+compiler is required.
 
 ### Visualizing Results
 
 Results often use formats like .vtk or .json. Employ visualization tools or the provided scripts for analyzing simulation results. [Paraview](https://www.paraview.org/) is recommended for visualizing mesh files and attributes.
+
+Normal dumping no longer requires VTK to be installed. The default Python dumper preserves the historic method names such as `s.dumper.vtk(...)` and `s.dumper.edge_vtk(...)`, but now writes legacy ASCII VTK directly from Python. `s.dumper.obj(...)` also writes a lightweight Wavefront OBJ mesh.
 
 # Documentation & Community
 
@@ -81,9 +80,36 @@ Results often use formats like .vtk or .json. Employ visualization tools or the 
   
 - **Community Interaction**: Engage with the PyMembrane community through forums, chats, or on GitHub.
 
-## Quick Start: The Disclination Problem
+## Quick Start
 
-View the [basic example](./docs/Examples/desclination.md) for a hands-on introduction.
+The standard reviewer-facing workflow is:
+
+```bash
+pip install -e .
+python -m pymembrane.examples.periodic --quick
+```
+
+The documentation source scripts remain under `docs/examples`, and the
+installed runnable copies live under `pymembrane.examples`.
+
+### Smoke Test
+
+From any working directory, run one of the packaged examples:
+
+```bash
+cd /tmp
+python -m pymembrane.examples.periodic --quick
+```
+
+After `pip install .`, the examples are also available from the installed
+package namespace, so they work even if you delete the repository:
+
+```bash
+python -m pymembrane.examples.periodic --quick
+python -m pymembrane.examples.minimizer --quick
+python -m pymembrane.examples.buckling --quick
+python -m pymembrane.examples.disclination --quick
+```
 
 # Cite Us
 
@@ -96,4 +122,3 @@ PyMembrane 2023 by [Daniel Matoz Fernandez](http://www.danielmatoz.com).
 # License
 
 Distributed under the [MIT license](LICENSE.txt).
-

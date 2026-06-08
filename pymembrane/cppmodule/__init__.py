@@ -1,4 +1,4 @@
-# Copyright 2023 Daniel Matoz Fernandez, fdamatoz@gmail.com
+# Copyright 2020 Daniel Matoz Fernandez, Northwestern University fdamatoz@gmail.com
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 # documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
@@ -14,9 +14,26 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 # DEALINGS IN THE SOFTWARE.
 
-# Init file
-from .cppmodule import *
+from __future__ import absolute_import
 
-# Import all attributes from cppmodule into pymodule's namespace
-from .cppmodule import __dict__ as cpp_attrs
-globals().update(cpp_attrs)
+from . import md as _md
+from .md import *  # noqa: F401,F403
+from .dump import *  # noqa: F401,F403
+
+__version__ = _md.__version__
+__release_date__ = _md.__release_date__
+__compiled_date__ = _md.__compiled_date__
+__OS__ = _md.__OS__
+
+_SystemBase = System
+
+
+class System(_SystemBase):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.dumper = Dumper(self)
+
+
+box = Box
+
+__all__ = [name for name in globals() if not name.startswith("_")]
