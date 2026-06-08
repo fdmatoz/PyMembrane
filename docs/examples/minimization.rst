@@ -14,8 +14,8 @@ This example performs constant-volume energy minimization of a closed elastic
 vesicle. The example is useful when you want a deterministic relaxation step
 instead of a dynamics or Monte Carlo trajectory.
 
-What this example does
-----------------------
+What This Example Demonstrates
+------------------------------
 
 The example loads the packaged vesicle mesh files
 ``vertices_R1.0_l01.inp`` and ``faces_R1.0_l01.inp``, computes the average edge
@@ -26,8 +26,8 @@ force, adds dihedral bending, and then minimizes the energy with the
 the same physical scenario and parameters but reduces the number of snapshots
 and FIRE iterations.
 
-Primary run command
--------------------
+How to Run
+----------
 
 .. code-block:: bash
 
@@ -39,11 +39,40 @@ To write outputs to a separate directory:
 
    python -m pymembrane.examples.minimizer --quick --output-dir results
 
+Inputs
+------
+
+- packaged mesh files: ``vertices_R1.0_l01.inp`` and ``faces_R1.0_l01.inp``
+- output directory: current working directory unless ``--output-dir`` is used
+
+Model Ingredients
+-----------------
+
+- mesh: closed vesicle from ``docs/examples/04_minimization``
+- forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
+- minimizer: ``Mesh>Fire``
+- constraint: ``Mesh>Volume``
+- boundary condition: non-periodic
+
+Expected Output
+---------------
+
+- ``initial mesh.vtk``
+- ``minimization_t0.vtk``
+- additional ``minimization_t*.vtk`` snapshots
+- output format: legacy ASCII ``.vtk``
+
+Quick Mode
+----------
+
+Quick mode keeps the same model and constraint, but reduces snapshots and FIRE
+iterations.
+
 The source version of this example is kept under
 ``docs/examples/04_minimization/minimizer.py``. The installed version under
 ``pymembrane.examples.minimizer`` is the primary runnable interface.
 
-Minimal workflow
+Minimal Workflow
 ----------------
 
 .. code-block:: python
@@ -66,15 +95,6 @@ Minimal workflow
    evolver.add_constraint("Mesh>Volume", {"V": str(compute.volume()), "max_iter": "10000", "tol": "1e-5"})
    evolver.minimize()
    system.dumper.vtk("output")
-
-Expected output
----------------
-
-- ``initial mesh.vtk``
-- ``minimization_t0.vtk``
-- additional ``minimization_t*.vtk`` snapshots
-
-Quick mode usually completes in a few seconds on a laptop.
 
 How to visualize the result
 ---------------------------

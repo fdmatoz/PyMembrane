@@ -90,6 +90,7 @@ Dependency note
    :maxdepth: 1
    
    disclination
+   hybrid_mc_bd
    shell_buckling
    minimization
    periodic

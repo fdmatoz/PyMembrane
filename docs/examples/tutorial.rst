@@ -3,6 +3,25 @@ PyMembrane Tutorial
 
 This tutorial provides an introduction to the PyMembrane package, focusing on its applications in the physics of liquid and solid membranes. The package includes fully commented Python codes along with input files to facilitate understanding and usage (refer to Matoz, 2023).
 
+Beginner Notebook
+-----------------
+
+For a step-by-step beginner walkthrough in notebook form, use:
+
+- :download:`pymembrane_first_simulation.ipynb <../tutorials/pymembrane_first_simulation.ipynb>`
+
+Open it with:
+
+.. code-block:: bash
+
+   jupyter notebook docs/tutorials/pymembrane_first_simulation.ipynb
+
+If you prefer the packaged command-line smoke test instead of a notebook, run:
+
+.. code-block:: bash
+
+   python -m pymembrane.examples.periodic --quick
+
 Objective
 ---------
 The demonstrations herein not only highlight PyMembrane's capabilities but also guide users through a standard workflow for setting up a simulation. The examples follow a consistent layout, with code comments providing details on each step.

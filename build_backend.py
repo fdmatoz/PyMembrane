@@ -139,6 +139,8 @@ def _stage_package(root: Path, editable: bool) -> Path:
     if editable:
         for source in [
             ROOT / "pymembrane" / "__init__.py",
+            ROOT / "pymembrane" / "benchmarks" / "__init__.py",
+            ROOT / "pymembrane" / "benchmarks" / "sphere.py",
             ROOT / "pymembrane" / "cppmodule" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",
@@ -164,6 +166,8 @@ def _stage_package(root: Path, editable: bool) -> Path:
 
     for source in [
         ROOT / "pymembrane" / "__init__.py",
+        ROOT / "pymembrane" / "benchmarks" / "__init__.py",
+        ROOT / "pymembrane" / "benchmarks" / "sphere.py",
         ROOT / "pymembrane" / "cppmodule" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",

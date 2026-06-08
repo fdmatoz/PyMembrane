@@ -22,7 +22,7 @@ For a non-editable install:
 
 bash pip uninstall -y pymembrane rm -rf build *.egg-info pip install . python -c "import pymembrane; print(pymembrane.__file__)" python -c "from pymembrane import *; print('import ok')" 
 
-If installation fails, first check that the active environment contains a C++ compiler, CMake, pybind11, and NumPy. PyMembrane does not require CUDA or VTK for the default installation.
+If installation fails, first check that the active environment contains a C++ compiler, CMake, pybind11, and NumPy. PyMembrane does not require a GPU toolchain or VTK for the default installation.
 
 ### Running Examples
 

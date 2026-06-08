@@ -7,8 +7,8 @@ present. Periodic boundary conditions are often used to replicate an infinite
 system by replicating the simulation box. This example models wrinkling in a
 periodic thin sheet subject to uniaxial compression.
 
-What this example does
-----------------------
+What This Example Demonstrates
+------------------------------
 
 This example loads the packaged mesh files ``vertices.dat`` and ``faces.dat``
 from the periodic example data set, constructs a periodic box, applies
@@ -19,8 +19,8 @@ direction. It writes ``initial_mesh.vtk`` and a sequence of
 that reads legacy VTK polygon data. ``--quick`` keeps the same physical setup
 but reduces the number of snapshots and integration steps.
 
-Primary run command
--------------------
+How to Run
+----------
 
 After installing PyMembrane, run the packaged example from any working
 directory:
@@ -35,12 +35,35 @@ To keep output files in a separate directory:
 
    python -m pymembrane.examples.periodic --quick --output-dir results
 
-The source version of this example is kept under
-``docs/examples/02_periodic/periodic.py``. The installed version under
-``pymembrane.examples.periodic`` is the reviewer-facing entry point and avoids
-manual path edits or data downloads.
+Inputs
+------
 
-Minimal workflow
+- packaged mesh files: ``vertices.dat`` and ``faces.dat``
+- output directory: current working directory unless ``--output-dir`` is used
+
+Model Ingredients
+-----------------
+
+- mesh: periodic triangulated sheet from ``docs/examples/02_periodic``
+- forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
+- integrator: ``Mesh>Brownian>vertex>move``
+- boundary condition: periodic box in all three directions
+
+Expected Output
+---------------
+
+- ``initial_mesh.vtk``
+- ``periodic_t0.vtk``
+- additional ``periodic_t*.vtk`` snapshots
+- output format: legacy ASCII ``.vtk``
+
+Quick Mode
+----------
+
+Quick mode keeps the same model and mesh, but reduces the number of snapshots
+and Brownian dynamics steps.
+
+Minimal Workflow
 ----------------
 
 The packaged script follows the standard PyMembrane workflow:
@@ -64,15 +87,6 @@ The packaged script follows the standard PyMembrane workflow:
    evolver.set_global_temperature("1e-4")
    evolver.evolveMD(steps=10)
    system.dumper.vtk("output", periodic=True)
-
-Expected output
----------------
-
-- ``initial_mesh.vtk``
-- ``periodic_t0.vtk``
-- additional ``periodic_t*.vtk`` snapshots
-
-Quick mode usually completes in a few seconds on a laptop.
 
 Results
 -------

@@ -91,6 +91,8 @@ PyMembrane's documentation!
    :caption: Contents:
 
    installation
+   tutorials
+   benchmarks
    ./examples/quickstart
    ./pythonapi/pythonapi
    ./cppapi/cppapi

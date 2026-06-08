@@ -15,8 +15,8 @@ standard thin-sheet mechanics problem. In the triangulated mesh, the central
 vertex has five neighbours instead of six, which introduces the elastic
 frustration that drives buckling into a cone-like shape.
 
-What this example does
-----------------------
+What This Example Demonstrates
+------------------------------
 
 All three packaged disclination examples use the same packaged input meshes
 from ``InputFiles.zip`` and the same elastic forces: harmonic stretching, limit
@@ -42,8 +42,8 @@ first performs Brownian dynamics relaxation with
 reduces the number of hybrid cycles and the MD/MC step counts, but does not
 change the mesh, forces, or integrator names.
 
-Primary run commands
---------------------
+How to Run
+----------
 
 Brownian version:
 
@@ -81,6 +81,44 @@ The hybrid example supports the same output-directory option:
 
    python -m pymembrane.examples.hybrid_mc_bd --quick --output-dir results
 
+Inputs
+------
+
+- packaged disclination meshes from ``InputFiles.zip``
+- default mesh size parameter: ``N=14``
+- output directory: current working directory unless ``--output-dir`` is used
+
+Model Ingredients
+-----------------
+
+- mesh: open ``+1`` disclination from ``docs/examples/01_disclination``
+- forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
+- integrators:
+
+  Brownian: ``Mesh>Brownian>vertex>move``
+
+  Monte Carlo: ``Mesh>MonteCarlo>vertex>move``
+
+  Velocity-Verlet: ``Mesh>VelocityVerlet>vertex>move``
+
+  Hybrid: alternating ``Mesh>Brownian>vertex>move`` and ``Mesh>MonteCarlo>vertex>move``
+
+Expected Output
+---------------
+
+- ``initial mesh.vtk``
+- ``pentagon_t0.vtk``
+- additional ``pentagon_t*.vtk`` snapshots
+- ``final_mesh.vtk`` for the Monte Carlo version
+- ``initial_mesh.vtk`` and ``hybrid_t*.vtk`` for the hybrid example
+- output format: legacy ASCII ``.vtk``
+
+Quick Mode
+----------
+
+Quick mode keeps the same physical setup but reduces snapshot counts and the
+number of MD or MC steps.
+
 The source versions of these examples are kept under ``docs/examples``:
 
 - ``docs/examples/01_disclination/Brownian/disclination.py``
@@ -89,17 +127,6 @@ The source versions of these examples are kept under ``docs/examples``:
 
 The installed ``pymembrane.examples`` versions are the primary reviewer-facing
 entry points and avoid manual downloads or path edits.
-
-Expected output
----------------
-
-- ``initial mesh.vtk``
-- ``pentagon_t0.vtk``
-- additional ``pentagon_t*.vtk`` snapshots
-- ``final_mesh.vtk`` for the Monte Carlo version
-- ``initial_mesh.vtk`` and ``hybrid_t*.vtk`` for the hybrid example
-
-Quick mode usually completes in a few seconds on a laptop.
 
 How to visualize the result
 ---------------------------

@@ -15,8 +15,8 @@ icosahedral thin shells. The mesh represents a Caspar-Klug shell with 12
 five-fold disclinations, and the elastic parameters are chosen so that the
 shell buckles from a nearly spherical shape into a faceted one.
 
-What this example does
-----------------------
+What This Example Demonstrates
+------------------------------
 
 The example loads the packaged ``vertices.dat`` and ``faces.dat`` files for the
 closed shell, adds harmonic stretching, limit, and dihedral bending forces, and
@@ -25,8 +25,8 @@ temperature cycle as the documented source script. It writes ``initial
 mesh.vtk``, ``sphere_t*.vtk`` and ``final_mesh.vtk``. ``--quick`` keeps the
 same physical model but reduces the number of snapshots and Monte Carlo steps.
 
-Primary run command
--------------------
+How to Run
+----------
 
 .. code-block:: bash
 
@@ -38,20 +38,39 @@ To place the outputs in a separate directory:
 
    python -m pymembrane.examples.buckling --quick --output-dir results
 
-The source version of this example is kept under
-``docs/examples/03_Caspar-Klug_sphere/buckling.py``. The installed version
-under ``pymembrane.examples.buckling`` is the primary runnable interface for
-reviewers and does not require manual path edits.
+Inputs
+------
 
-Expected output
+- packaged mesh files: ``vertices.dat`` and ``faces.dat``
+- output directory: current working directory unless ``--output-dir`` is used
+
+Model Ingredients
+-----------------
+
+- mesh: closed Caspar-Klug shell from ``docs/examples/03_Caspar-Klug_sphere``
+- forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
+- integrator: ``Mesh>MonteCarlo>vertex>move``
+- boundary condition: non-periodic
+
+Expected Output
 ---------------
 
 - ``initial mesh.vtk``
 - ``sphere_t0.vtk``
 - additional ``sphere_t*.vtk`` snapshots
 - ``final_mesh.vtk``
+- output format: legacy ASCII ``.vtk``
 
-Quick mode usually completes in a few seconds on a laptop.
+Quick Mode
+----------
+
+Quick mode keeps the same shell model but reduces snapshots and Monte Carlo
+steps.
+
+The source version of this example is kept under
+``docs/examples/03_Caspar-Klug_sphere/buckling.py``. The installed version
+under ``pymembrane.examples.buckling`` is the primary runnable interface for
+reviewers and does not require manual path edits.
 
 How to visualize the result
 ---------------------------
