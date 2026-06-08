@@ -55,7 +55,7 @@
     <link rel="prev" title="PyMembrane’s documentation!" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.0" />
+  <meta name="docsearch:version" content="1.01" />
   </head>
   
   
@@ -427,11 +427,10 @@
                   
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
-<section id="reviewer-quick-check">
-<h2>Reviewer Quick Check<a class="headerlink" href="#reviewer-quick-check" title="Link to this heading">#</a></h2>
-<p>These commands are the shortest reviewer-facing path to verify that the package
-imports and that packaged examples run without changing Python import paths and
-without downloading input files manually:</p>
+<section id="quick-check">
+<h2>Quick Check<a class="headerlink" href="#quick-check" title="Link to this heading">#</a></h2>
+<p>These commands provide a short way to verify that the package imports and that
+the packaged examples run with their bundled input data:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>pymemb<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8<span class="w"> </span>numpy<span class="w"> </span>cmake<span class="w"> </span>pybind11
 conda<span class="w"> </span>activate<span class="w"> </span>pymemb
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
@@ -490,8 +489,9 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
-<p>The packaged examples are installed with PyMembrane and can be run as Python
-modules from any working directory:</p>
+<p>The packaged examples are installed with PyMembrane as self-contained Python
+modules. Their runtime input data is bundled inside <code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code>, so
+they can be run from any working directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
@@ -505,7 +505,6 @@ executing an installed module as top-level code.</p>
 <section id="dependency-note">
 <h2>Dependency note<a class="headerlink" href="#dependency-note" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Normal installation does not require a GPU toolchain.</p></li>
 <li><p>Normal installation and normal example output do not require VTK.</p></li>
 <li><p>The examples do not require plotting packages to run.</p></li>
 <li><p>Mesh output is written with the built-in dumper methods such as
@@ -612,7 +611,7 @@ python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.peri
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewer-quick-check">Reviewer Quick Check</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-check">Quick Check</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editable-installation">Editable installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-editable-installation">Non-editable installation</a></li>
