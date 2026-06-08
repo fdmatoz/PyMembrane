@@ -141,6 +141,20 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="examples/quickstart.html">
     Quick Start and Examples
   </a>
@@ -153,20 +167,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -175,6 +175,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
     References
@@ -269,6 +283,20 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="installation.html">
     Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="benchmarks.html">
+    Benchmarks
   </a>
 </li>
 
@@ -390,6 +418,17 @@
                   
   <section id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h1>
+<section id="reviewer-smoke-test">
+<h2>Reviewer Smoke Test<a class="headerlink" href="#reviewer-smoke-test" title="Link to this heading">#</a></h2>
+<p>If you only want to verify that the documented workflow works end to end, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import pymembrane; print(pymembrane.__file__)&quot;</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pymembrane import *; print(&#39;import ok&#39;)&quot;</span>
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.hybrid_mc_bd<span class="w"> </span>--quick
+</pre></div>
+</div>
+</section>
 <section id="minimal-workflow">
 <h2>Minimal workflow<a class="headerlink" href="#minimal-workflow" title="Link to this heading">#</a></h2>
 <p>The standard PyMembrane workflow is:</p>
@@ -422,6 +461,7 @@ examples can be run directly as installed modules:</p>
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.hybrid_mc_bd<span class="w"> </span>--quick
 </pre></div>
 </div>
 <p>The source versions remain under <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code>. The installed copies under
@@ -459,6 +499,7 @@ edits.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewer-smoke-test">Reviewer Smoke Test</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-workflow">Minimal workflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installed-examples">Installed examples</a></li>
 </ul>

@@ -142,6 +142,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -155,20 +169,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,6 +177,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
     References
@@ -273,6 +287,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -345,6 +373,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMembrane Tutorial</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
@@ -413,6 +442,21 @@
   <section id="pymembrane-tutorial">
 <h1>PyMembrane Tutorial<a class="headerlink" href="#pymembrane-tutorial" title="Link to this heading">#</a></h1>
 <p>This tutorial provides an introduction to the PyMembrane package, focusing on its applications in the physics of liquid and solid membranes. The package includes fully commented Python codes along with input files to facilitate understanding and usage (refer to Matoz, 2023).</p>
+<section id="beginner-notebook">
+<h2>Beginner Notebook<a class="headerlink" href="#beginner-notebook" title="Link to this heading">#</a></h2>
+<p>For a step-by-step beginner walkthrough in notebook form, use:</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/164ee3573dfb26bf22b05f3514b878eb/pymembrane_first_simulation.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">pymembrane_first_simulation.ipynb</span></code></a></p></li>
+</ul>
+<p>Open it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>docs/tutorials/pymembrane_first_simulation.ipynb
+</pre></div>
+</div>
+<p>If you prefer the packaged command-line smoke test instead of a notebook, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
+</pre></div>
+</div>
+</section>
 <section id="objective">
 <h2>Objective<a class="headerlink" href="#objective" title="Link to this heading">#</a></h2>
 <p>The demonstrations herein not only highlight PyMembrane’s capabilities but also guide users through a standard workflow for setting up a simulation. The examples follow a consistent layout, with code comments providing details on each step.</p>
@@ -508,6 +552,7 @@ In PyMembrane, this is implemented with the setting ‘Mesh&gt;Harmonic’, usin
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beginner-notebook">Beginner Notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-steps">Key Steps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-use-case-for-system-and-evolver-classes">Typical Use Case for System and Evolver Classes</a></li>

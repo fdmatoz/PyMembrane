@@ -142,6 +142,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -155,20 +169,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,6 +177,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
     References
@@ -273,6 +287,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -345,6 +373,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
@@ -427,8 +456,8 @@
 vesicle. The example is useful when you want a deterministic relaxation step
 instead of a dynamics or Monte Carlo trajectory.</p>
 </section>
-<section id="what-this-example-does">
-<h2>What this example does<a class="headerlink" href="#what-this-example-does" title="Link to this heading">#</a></h2>
+<section id="what-this-example-demonstrates">
+<h2>What This Example Demonstrates<a class="headerlink" href="#what-this-example-demonstrates" title="Link to this heading">#</a></h2>
 <p>The example loads the packaged vesicle mesh files
 <code class="docutils literal notranslate"><span class="pre">vertices_R1.0_l01.inp</span></code> and <code class="docutils literal notranslate"><span class="pre">faces_R1.0_l01.inp</span></code>, computes the average edge
 length, increases the harmonic rest length to impose strain, adds a limit
@@ -438,8 +467,8 @@ force, adds dihedral bending, and then minimizes the energy with the
 the same physical scenario and parameters but reduces the number of snapshots
 and FIRE iterations.</p>
 </section>
-<section id="primary-run-command">
-<h2>Primary run command<a class="headerlink" href="#primary-run-command" title="Link to this heading">#</a></h2>
+<section id="how-to-run">
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
 </pre></div>
 </div>
@@ -447,12 +476,43 @@ and FIRE iterations.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
 </pre></div>
 </div>
+</section>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>packaged mesh files: <code class="docutils literal notranslate"><span class="pre">vertices_R1.0_l01.inp</span></code> and <code class="docutils literal notranslate"><span class="pre">faces_R1.0_l01.inp</span></code></p></li>
+<li><p>output directory: current working directory unless <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> is used</p></li>
+</ul>
+</section>
+<section id="model-ingredients">
+<h2>Model Ingredients<a class="headerlink" href="#model-ingredients" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>mesh: closed vesicle from <code class="docutils literal notranslate"><span class="pre">docs/examples/04_minimization</span></code></p></li>
+<li><p>forces: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Harmonic</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Limit</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Bending&gt;Dihedral</span></code></p></li>
+<li><p>minimizer: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Fire</span></code></p></li>
+<li><p>constraint: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Volume</span></code></p></li>
+<li><p>boundary condition: non-periodic</p></li>
+</ul>
+</section>
+<section id="expected-output">
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimization_t0.vtk</span></code></p></li>
+<li><p>additional <code class="docutils literal notranslate"><span class="pre">minimization_t*.vtk</span></code> snapshots</p></li>
+<li><p>output format: legacy ASCII <code class="docutils literal notranslate"><span class="pre">.vtk</span></code></p></li>
+</ul>
+</section>
+<section id="quick-mode">
+<h2>Quick Mode<a class="headerlink" href="#quick-mode" title="Link to this heading">#</a></h2>
+<p>Quick mode keeps the same model and constraint, but reduces snapshots and FIRE
+iterations.</p>
 <p>The source version of this example is kept under
 <code class="docutils literal notranslate"><span class="pre">docs/examples/04_minimization/minimizer.py</span></code>. The installed version under
 <code class="docutils literal notranslate"><span class="pre">pymembrane.examples.minimizer</span></code> is the primary runnable interface.</p>
 </section>
 <section id="minimal-workflow">
-<h2>Minimal workflow<a class="headerlink" href="#minimal-workflow" title="Link to this heading">#</a></h2>
+<h2>Minimal Workflow<a class="headerlink" href="#minimal-workflow" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pymembrane</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mb</span>
 
@@ -473,15 +533,6 @@ and FIRE iterations.</p>
 <span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="expected-output">
-<h2>Expected output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimization_t0.vtk</span></code></p></li>
-<li><p>additional <code class="docutils literal notranslate"><span class="pre">minimization_t*.vtk</span></code> snapshots</p></li>
-</ul>
-<p>Quick mode usually completes in a few seconds on a laptop.</p>
 </section>
 <section id="how-to-visualize-the-result">
 <h2>How to visualize the result<a class="headerlink" href="#how-to-visualize-the-result" title="Link to this heading">#</a></h2>
@@ -538,10 +589,13 @@ shapes and inspect the wrinkled morphology.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-does">What this example does</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-run-command">Primary run command</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-workflow">Minimal workflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-demonstrates">What This Example Demonstrates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run">How to Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs">Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-ingredients">Model Ingredients</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-mode">Quick Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-workflow">Minimal Workflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-visualize-the-result">How to visualize the result</a></li>
 </ul>
   </nav></div>

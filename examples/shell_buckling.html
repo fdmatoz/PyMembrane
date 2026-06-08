@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Constant Volume Energy Minimization Tutorial" href="minimization.html" />
-    <link rel="prev" title="+1 Disclination Buckling: A PyMembrane Tutorial" href="disclination.html" />
+    <link rel="prev" title="Hybrid Brownian + Monte Carlo Example" href="hybrid_mc_bd.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -142,6 +142,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -155,20 +169,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,6 +177,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
     References
@@ -273,6 +287,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -345,6 +373,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
@@ -428,8 +457,8 @@ icosahedral thin shells. The mesh represents a Caspar-Klug shell with 12
 five-fold disclinations, and the elastic parameters are chosen so that the
 shell buckles from a nearly spherical shape into a faceted one.</p>
 </section>
-<section id="what-this-example-does">
-<h2>What this example does<a class="headerlink" href="#what-this-example-does" title="Link to this heading">#</a></h2>
+<section id="what-this-example-demonstrates">
+<h2>What This Example Demonstrates<a class="headerlink" href="#what-this-example-demonstrates" title="Link to this heading">#</a></h2>
 <p>The example loads the packaged <code class="docutils literal notranslate"><span class="pre">vertices.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">faces.dat</span></code> files for the
 closed shell, adds harmonic stretching, limit, and dihedral bending forces, and
 relaxes the shell with a Monte Carlo vertex-move integrator using the same
@@ -437,8 +466,8 @@ temperature cycle as the documented source script. It writes <code class="docuti
 <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">sphere_t*.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>. <code class="docutils literal notranslate"><span class="pre">--quick</span></code> keeps the
 same physical model but reduces the number of snapshots and Monte Carlo steps.</p>
 </section>
-<section id="primary-run-command">
-<h2>Primary run command<a class="headerlink" href="#primary-run-command" title="Link to this heading">#</a></h2>
+<section id="how-to-run">
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
 </pre></div>
 </div>
@@ -446,20 +475,41 @@ same physical model but reduces the number of snapshots and Monte Carlo steps.</
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
 </pre></div>
 </div>
-<p>The source version of this example is kept under
-<code class="docutils literal notranslate"><span class="pre">docs/examples/03_Caspar-Klug_sphere/buckling.py</span></code>. The installed version
-under <code class="docutils literal notranslate"><span class="pre">pymembrane.examples.buckling</span></code> is the primary runnable interface for
-reviewers and does not require manual path edits.</p>
+</section>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>packaged mesh files: <code class="docutils literal notranslate"><span class="pre">vertices.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">faces.dat</span></code></p></li>
+<li><p>output directory: current working directory unless <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> is used</p></li>
+</ul>
+</section>
+<section id="model-ingredients">
+<h2>Model Ingredients<a class="headerlink" href="#model-ingredients" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>mesh: closed Caspar-Klug shell from <code class="docutils literal notranslate"><span class="pre">docs/examples/03_Caspar-Klug_sphere</span></code></p></li>
+<li><p>forces: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Harmonic</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Limit</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Bending&gt;Dihedral</span></code></p></li>
+<li><p>integrator: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;MonteCarlo&gt;vertex&gt;move</span></code></p></li>
+<li><p>boundary condition: non-periodic</p></li>
+</ul>
 </section>
 <section id="expected-output">
-<h2>Expected output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphere_t0.vtk</span></code></p></li>
 <li><p>additional <code class="docutils literal notranslate"><span class="pre">sphere_t*.vtk</span></code> snapshots</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code></p></li>
+<li><p>output format: legacy ASCII <code class="docutils literal notranslate"><span class="pre">.vtk</span></code></p></li>
 </ul>
-<p>Quick mode usually completes in a few seconds on a laptop.</p>
+</section>
+<section id="quick-mode">
+<h2>Quick Mode<a class="headerlink" href="#quick-mode" title="Link to this heading">#</a></h2>
+<p>Quick mode keeps the same shell model but reduces snapshots and Monte Carlo
+steps.</p>
+<p>The source version of this example is kept under
+<code class="docutils literal notranslate"><span class="pre">docs/examples/03_Caspar-Klug_sphere/buckling.py</span></code>. The installed version
+under <code class="docutils literal notranslate"><span class="pre">pymembrane.examples.buckling</span></code> is the primary runnable interface for
+reviewers and does not require manual path edits.</p>
 </section>
 <section id="how-to-visualize-the-result">
 <h2>How to visualize the result<a class="headerlink" href="#how-to-visualize-the-result" title="Link to this heading">#</a></h2>
@@ -489,12 +539,12 @@ the early and late snapshots.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="disclination.html"
+       href="hybrid_mc_bd.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">+1 Disclination Buckling: A PyMembrane Tutorial</p>
+        <p class="prev-next-title">Hybrid Brownian + Monte Carlo Example</p>
       </div>
     </a>
     <a class="right-next"
@@ -526,9 +576,12 @@ the early and late snapshots.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-does">What this example does</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-run-command">Primary run command</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-demonstrates">What This Example Demonstrates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run">How to Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs">Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-ingredients">Model Ingredients</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-mode">Quick Mode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-visualize-the-result">How to visualize the result</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>

@@ -51,7 +51,7 @@
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Caspar-Klug Thin Shells Buckling" href="shell_buckling.html" />
+    <link rel="next" title="Hybrid Brownian + Monte Carlo Example" href="hybrid_mc_bd.html" />
     <link rel="prev" title="PyMembrane Examples" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -142,6 +142,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -155,20 +169,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,6 +177,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
     References
@@ -273,6 +287,20 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="quickstart.html">
     Quick Start and Examples
@@ -345,6 +373,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
@@ -428,8 +457,8 @@ standard thin-sheet mechanics problem. In the triangulated mesh, the central
 vertex has five neighbours instead of six, which introduces the elastic
 frustration that drives buckling into a cone-like shape.</p>
 </section>
-<section id="what-this-example-does">
-<h2>What this example does<a class="headerlink" href="#what-this-example-does" title="Link to this heading">#</a></h2>
+<section id="what-this-example-demonstrates">
+<h2>What This Example Demonstrates<a class="headerlink" href="#what-this-example-demonstrates" title="Link to this heading">#</a></h2>
 <p>All three packaged disclination examples use the same packaged input meshes
 from <code class="docutils literal notranslate"><span class="pre">InputFiles.zip</span></code> and the same elastic forces: harmonic stretching, limit
 protection, and dihedral bending. They differ only in the time-stepping or
@@ -453,8 +482,8 @@ first performs Brownian dynamics relaxation with
 reduces the number of hybrid cycles and the MD/MC step counts, but does not
 change the mesh, forces, or integrator names.</p>
 </section>
-<section id="primary-run-commands">
-<h2>Primary run commands<a class="headerlink" href="#primary-run-commands" title="Link to this heading">#</a></h2>
+<section id="how-to-run">
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
 <p>Brownian version:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
 </pre></div>
@@ -479,6 +508,43 @@ change the mesh, forces, or integrator names.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.hybrid_mc_bd<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
 </pre></div>
 </div>
+</section>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>packaged disclination meshes from <code class="docutils literal notranslate"><span class="pre">InputFiles.zip</span></code></p></li>
+<li><p>default mesh size parameter: <code class="docutils literal notranslate"><span class="pre">N=14</span></code></p></li>
+<li><p>output directory: current working directory unless <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> is used</p></li>
+</ul>
+</section>
+<section id="model-ingredients">
+<h2>Model Ingredients<a class="headerlink" href="#model-ingredients" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>mesh: open <code class="docutils literal notranslate"><span class="pre">+1</span></code> disclination from <code class="docutils literal notranslate"><span class="pre">docs/examples/01_disclination</span></code></p></li>
+<li><p>forces: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Harmonic</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Limit</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Bending&gt;Dihedral</span></code></p></li>
+<li><p>integrators:</p>
+<p>Brownian: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Brownian&gt;vertex&gt;move</span></code></p>
+<p>Monte Carlo: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;MonteCarlo&gt;vertex&gt;move</span></code></p>
+<p>Velocity-Verlet: <code class="docutils literal notranslate"><span class="pre">Mesh&gt;VelocityVerlet&gt;vertex&gt;move</span></code></p>
+<p>Hybrid: alternating <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Brownian&gt;vertex&gt;move</span></code> and <code class="docutils literal notranslate"><span class="pre">Mesh&gt;MonteCarlo&gt;vertex&gt;move</span></code></p>
+</li>
+</ul>
+</section>
+<section id="expected-output">
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pentagon_t0.vtk</span></code></p></li>
+<li><p>additional <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code> snapshots</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code> for the Monte Carlo version</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code> for the hybrid example</p></li>
+<li><p>output format: legacy ASCII <code class="docutils literal notranslate"><span class="pre">.vtk</span></code></p></li>
+</ul>
+</section>
+<section id="quick-mode">
+<h2>Quick Mode<a class="headerlink" href="#quick-mode" title="Link to this heading">#</a></h2>
+<p>Quick mode keeps the same physical setup but reduces snapshot counts and the
+number of MD or MC steps.</p>
 <p>The source versions of these examples are kept under <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">docs/examples/01_disclination/Brownian/disclination.py</span></code></p></li>
@@ -487,17 +553,6 @@ change the mesh, forces, or integrator names.</p>
 </ul>
 <p>The installed <code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code> versions are the primary reviewer-facing
 entry points and avoid manual downloads or path edits.</p>
-</section>
-<section id="expected-output">
-<h2>Expected output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pentagon_t0.vtk</span></code></p></li>
-<li><p>additional <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code> snapshots</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code> for the Monte Carlo version</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code> for the hybrid example</p></li>
-</ul>
-<p>Quick mode usually completes in a few seconds on a laptop.</p>
 </section>
 <section id="how-to-visualize-the-result">
 <h2>How to visualize the result<a class="headerlink" href="#how-to-visualize-the-result" title="Link to this heading">#</a></h2>
@@ -540,11 +595,11 @@ same physical setup relaxes under different update rules.</p>
       </div>
     </a>
     <a class="right-next"
-       href="shell_buckling.html"
+       href="hybrid_mc_bd.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Caspar-Klug Thin Shells Buckling</p>
+        <p class="prev-next-title">Hybrid Brownian + Monte Carlo Example</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -568,9 +623,12 @@ same physical setup relaxes under different update rules.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-does">What this example does</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-run-commands">Primary run commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-demonstrates">What This Example Demonstrates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run">How to Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs">Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-ingredients">Model Ingredients</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-mode">Quick Mode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-visualize-the-result">How to visualize the result</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>

@@ -143,6 +143,20 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../examples/quickstart.html">
     Quick Start and Examples
   </a>
@@ -155,20 +169,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../cppapi/cppapi.html">
-    C++ API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../contributors.html">
-    Contributors
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,6 +177,20 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../cppapi/cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="references.html">
     References
@@ -269,6 +283,20 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../installation.html">
     Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
   </a>
 </li>
 
@@ -455,7 +483,27 @@
 </nav>
 <section id="description">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
-<p><cite>Dumper</cite> is the default Python dumper attached to <cite>System.dumper</cite>. It preserves the public method names of the historical C++ <cite>DumperClass</cite>, but normal dumping no longer requires VTK. The default <cite>vtk()</cite> and <cite>edge_vtk()</cite> methods write legacy ASCII VTK files directly from Python, and <cite>obj()</cite> writes Wavefront OBJ geometry.</p>
+<p><cite>Dumper</cite> is the default Python dumper attached to <cite>System.dumper</cite>. It preserves
+the public method names of the historical C++ <cite>DumperClass</cite>, but normal
+dumping no longer requires VTK. The default <cite>vtk()</cite> and <cite>edge_vtk()</cite> methods
+write legacy ASCII VTK files directly from Python, and <cite>obj()</cite> writes
+Wavefront OBJ geometry.</p>
+<p>The standard user-facing methods are:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">vtk</span><span class="p">(</span><span class="s2">&quot;mesh&quot;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">edge_vtk</span><span class="p">(</span><span class="s2">&quot;edges&quot;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="s2">&quot;mesh&quot;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">ply</span><span class="p">(</span><span class="s2">&quot;mesh&quot;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">txt</span><span class="p">(</span><span class="s2">&quot;mesh&quot;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dumper</span><span class="o">.</span><span class="n">obj</span><span class="p">(</span><span class="s2">&quot;mesh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For normal dumping:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vtk(...)</span></code> writes legacy ASCII VTK directly from Python.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">edge_vtk(...)</span></code> writes edge geometry as legacy ASCII VTK lines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obj(...)</span></code> writes Wavefront OBJ geometry.</p></li>
+<li><p>the VTK Python bindings are not required.</p></li>
+</ul>
 </section>
 <section id="constructor">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Constructor</a><a class="headerlink" href="#constructor" title="Link to this heading">#</a></h2>
@@ -480,6 +528,10 @@ Dump the mesh (edges) in vtk format.</p></li>
 Dump the mesh (vertices and faces) in JSON format.</p></li>
 <li><p><strong>ply()</strong>:
 Dump the mesh (vertices and faces) in PLY format.</p></li>
+<li><p><strong>txt()</strong>:
+Dump the mesh (vertices and faces) in plain-text format.</p></li>
+<li><p><strong>obj()</strong>:
+Dump the mesh (vertices and faces) in Wavefront OBJ format.</p></li>
 <li><p><strong>setvtkLegacyFormat()</strong>:
 Set the vtk legacy format flag.</p></li>
 <li><p><strong>user_data_vertex(data_name: str, data: List[real])</strong>:
