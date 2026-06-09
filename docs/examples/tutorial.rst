@@ -10,10 +10,17 @@ For a step-by-step beginner walkthrough in notebook form, use:
 
 - :download:`pymembrane_first_simulation.ipynb <../tutorials/pymembrane_first_simulation.ipynb>`
 
-Open it with:
+Open it with JupyterLab:
 
 .. code-block:: bash
 
+   jupyter lab docs/tutorials/pymembrane_first_simulation.ipynb
+
+If you prefer the classic Notebook interface, install it separately and run:
+
+.. code-block:: bash
+
+   pip install notebook
    jupyter notebook docs/tutorials/pymembrane_first_simulation.ipynb
 
 If you prefer the packaged command-line quick check instead of a notebook, run:

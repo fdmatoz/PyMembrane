@@ -51,7 +51,7 @@ exhale_args = {
     "doxygenStripFromPath": "..",
     "createTreeView": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin": "INPUT = ../pymembrane/cppmodule/src"
+    "exhaleDoxygenStdin": "INPUT = ../pymembrane/cppmodule/md/src"
 }
 
 # Setup breathe

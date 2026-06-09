@@ -1,89 +1,113 @@
+PyMembrane
+==========
 
-***************************
-PyMembrane's documentation!
-***************************
+A modular C++/Python framework for simulations of elastic and liquid membranes
+on triangulated surfaces.
 
-.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
-   :target: _static/LICENSE
+PyMembrane combines a C++ backend with a Python interface for setting up,
+running, and extending membrane simulations. It supports triangulated elastic
+shells, dynamically triangulated liquid membranes, Brownian dynamics,
+Monte Carlo workflows, minimization, constraints, and lightweight mesh
+output.
 
-**Date**: |today| **Version**: |version|
+.. grid:: 2 2 4 4
+   :gutter: 3
 
-.. grid:: 2
+   .. grid-item-card:: Installation
+      :link: installation
+      :link-type: doc
 
-    .. grid-item-card::
-        :img-top: _static/index-images/install.svg
+      Create a conda environment, build the extension, and verify that the
+      package imports correctly.
 
-        Getting Started
-        ^^^^^^^^^^^^^^^
+   .. grid-item-card:: Examples
+      :link: examples/quickstart
+      :link-type: doc
 
-        Check our installation guide to get started with PyMembrane. 
-        This guide will help you install the software and its dependencies 
+      Run packaged examples for periodic sheets, shell buckling, liquid
+      membranes, hybrid MC-BD workflows, and size scaling.
 
-        +++
+   .. grid-item-card:: Tutorial notebook
+      :link: tutorials
+      :link-type: doc
 
-        .. button-ref:: installation
-            :expand:
-            :color: primary
-            :click-parent:
+      Follow a beginner-friendly Jupyter notebook that walks through a first
+      PyMembrane simulation.
 
-            Installation guide
+   .. grid-item-card:: Command-line arguments
+      :link: examples/command_line_arguments
+      :link-type: doc
 
-    .. grid-item-card::
-        :img-top: _static/index-images/tutorial.svg
+      See the available command-line options for each packaged example.
 
-        User Guide and use Examples
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   .. grid-item-card:: Python API
+      :link: pythonapi/pythonapi
+      :link-type: doc
 
-        Jumpstart your experience with PyMembrane using this quickstart guide. 
-        In just a few steps, you'll be able to achieve some basic simulations. 
+      Browse the Python interface for boxes, systems, evolvers, forces,
+      integrators, minimizers, and output.
 
-        +++
+   .. grid-item-card:: C++ API and extension points
+      :link: cppapi/cppapi
+      :link-type: doc
 
-        .. button-ref:: examples/quickstart
-            :expand:
-            :color: primary
-            :click-parent:
+      Inspect the underlying C++ classes and the implementation details used
+      by the Python bindings.
 
-            To the quickstart guide
+   .. grid-item-card:: Benchmarks
+      :link: benchmarks
+      :link-type: doc
 
-    .. grid-item-card::
-        :img-top: _static/index-images/pythonapi.svg
-        
-        Python API Reference
-        ^^^^^^^^^^^^^^^^^^^^^
+      Run the size-scaling benchmark that reports mesh generation and
+      simulation timings on spherical meshes.
 
-        This reference guide offers a detailed overview of PyMembrane's functions, modules, and objects. 
-        It clarifies each method's operations and available parameters, ensuring users can fully harness its capabilities.
+   .. grid-item-card:: Related examples
+      :link: examples/liquid_membrane
+      :link-type: doc
 
-        +++
+      Explore the liquid-membrane and hybrid MC-BD examples built on the
+      packaged workflow.
 
-        .. button-ref:: pythonapi/pythonapi
-            :expand:
-            :color: primary
-            :click-parent:
+.. rst-class:: spaced-section
 
-            To the reference guide
+Install and check
+-----------------
 
-    .. grid-item-card::
-        :img-top: _static/index-images/cppapi.svg
+.. code-block:: bash
 
-        C++ API Reference
-        ^^^^^^^^^^^^^^^^^^
+   conda create -n pymemb python=3.8 numpy cmake pybind11
+   conda activate pymemb
+   pip install -e .
+   python -c "from pymembrane import *; print('import ok')"
 
-        Do want to add new funcionalities? The reference guide is designed for experienced users and modders 
-        and includes an in-depth look into C++ functions, modules, and objects. 
-        It unravels the complexities and available settings of each method, 
-        allowing experts to take advantage of PyMembrane sophisticated features.
+Run an example
+--------------
 
-        +++
+.. code-block:: bash
 
-        .. button-ref:: cppapi/cppapi
-            :expand:
-            :color: primary
-            :click-parent:
+   python -m pymembrane.examples.periodic --quick
 
-            To the C++ API Reference
+Packaged examples include their input data and can be run from the installed
+Python namespace.
 
+What can I simulate?
+--------------------
+
+- Elastic membranes and shells
+- Closed and open triangulated surfaces
+- Periodic sheets
+- Bending-dominated liquid membranes with edge flips
+- Hybrid Monte Carlo and Brownian dynamics workflows
+- Energy minimization with constraints
+
+Why PyMembrane?
+---------------
+
+PyMembrane is designed for modularity and extensibility. Users can combine
+forces, integrators, minimizers, constraints, and output routines through a
+Python interface, while performance-critical components are implemented in C++.
+The framework is intended for reproducible membrane-modeling workflows and for
+developing new membrane models.
 
 .. toctree::
    :hidden:
@@ -91,19 +115,15 @@ PyMembrane's documentation!
    :caption: Contents:
 
    installation
+   examples/quickstart
    tutorials
+   examples/command_line_arguments
+   pythonapi/pythonapi
+   cppapi/cppapi
    benchmarks
-   ./examples/quickstart
-   ./pythonapi/pythonapi
-   ./cppapi/cppapi
+   examples/liquid_membrane
+   examples/hybrid_mc_bd
+   examples/size_scaling
    contributors
-   ./pythonapi/references
-   ./examples/quickstart
+   pythonapi/references
 
-   
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`

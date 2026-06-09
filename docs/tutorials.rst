@@ -13,17 +13,18 @@ Download the notebook:
 
 - :download:`pymembrane_first_simulation.ipynb <tutorials/pymembrane_first_simulation.ipynb>`
 
-Open it locally with Jupyter if you want the step-by-step tutorial format:
-
-.. code-block:: bash
-
-   jupyter notebook docs/tutorials/pymembrane_first_simulation.ipynb
-
-or:
+Open it locally with JupyterLab if you want the step-by-step tutorial format:
 
 .. code-block:: bash
 
    jupyter lab docs/tutorials/pymembrane_first_simulation.ipynb
+
+If you prefer the classic Notebook interface, install it separately and run:
+
+.. code-block:: bash
+
+   pip install notebook
+   jupyter notebook docs/tutorials/pymembrane_first_simulation.ipynb
 
 Jupyter is optional and is not required for normal PyMembrane installation.
 
