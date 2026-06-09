@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PyMembrane’s documentation! &#8212; PyMembrane  documentation</title>
+    <title>PyMembrane &#8212; PyMembrane  documentation</title>
   
   
   
@@ -143,6 +143,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="tutorials.html">
     Tutorial Notebook
   </a>
@@ -150,15 +157,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="benchmarks.html">
-    Benchmarks
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
+  <a class="nav-link nav-internal" href="examples/command_line_arguments.html">
+    Command-Line Arguments
   </a>
 </li>
 
@@ -185,6 +185,34 @@
 
 
 <li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="contributors.html">
     Contributors
   </a>
@@ -194,13 +222,6 @@
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
     References
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
   </a>
 </li>
 
@@ -250,6 +271,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -286,6 +311,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="tutorials.html">
     Tutorial Notebook
   </a>
@@ -293,15 +325,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="benchmarks.html">
-    Benchmarks
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
+  <a class="nav-link nav-internal" href="examples/command_line_arguments.html">
+    Command-Line Arguments
   </a>
 </li>
 
@@ -321,6 +346,34 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="contributors.html">
     Contributors
   </a>
@@ -330,13 +383,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="pythonapi/references.html">
     References
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
   </a>
 </li>
 
@@ -390,79 +436,136 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pymembrane-s-documentation">
-<h1>PyMembrane’s documentation!<a class="headerlink" href="#pymembrane-s-documentation" title="Link to this heading">#</a></h1>
-<a class="reference external image-reference" href="_static/LICENSE"><img alt="https://img.shields.io/badge/License-MIT-yellow.svg" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-</a>
-<p><strong>Date</strong>: Jun 09, 2026 <strong>Version</strong>: 1.01</p>
+  <section id="pymembrane">
+<h1>PyMembrane<a class="headerlink" href="#pymembrane" title="Link to this heading">#</a></h1>
+<p>A modular C++/Python framework for simulations of elastic and liquid membranes
+on triangulated surfaces.</p>
+<p>PyMembrane combines a C++ backend with a Python interface for setting up,
+running, and extending membrane simulations. It supports triangulated elastic
+shells, dynamically triangulated liquid membranes, Brownian dynamics,
+Monte Carlo workflows, minimization, constraints, and lightweight mesh
+output.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-4 sd-row-cols-lg-4 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
 <div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<img alt="" class="sd-card-img-top" src="_images/install.svg" />
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Getting Started</p>
-</div>
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Check our installation guide to get started with PyMembrane.
-This guide will help you install the software and its dependencies</p>
+<div class="sd-card-title sd-font-weight-bold docutils">
+Installation</div>
+<p class="sd-card-text">Create a conda environment, build the extension, and verify that the
+package imports correctly.</p>
 </div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-stretched-link reference internal" href="installation.html"><span class="doc">Installation guide</span></a></span></p>
-</div>
-</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="installation.html"><span class="doc">Installation</span></a></div>
 </div>
 <div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<img alt="" class="sd-card-img-top" src="_images/tutorial.svg" />
-<div class="sd-card-header docutils">
-<p class="sd-card-text">User Guide and use Examples</p>
-</div>
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Jumpstart your experience with PyMembrane using this quickstart guide.
-In just a few steps, you’ll be able to achieve some basic simulations.</p>
+<div class="sd-card-title sd-font-weight-bold docutils">
+Examples</div>
+<p class="sd-card-text">Run packaged examples for periodic sheets, shell buckling, liquid
+membranes, hybrid MC-BD workflows, and size scaling.</p>
 </div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-stretched-link reference internal" href="examples/quickstart.html"><span class="doc">To the quickstart guide</span></a></span></p>
-</div>
-</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="examples/quickstart.html"><span class="doc">Quick Start and Examples</span></a></div>
 </div>
 <div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<img alt="" class="sd-card-img-top" src="_images/pythonapi.svg" />
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Python API Reference</p>
-</div>
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text">This reference guide offers a detailed overview of PyMembrane’s functions, modules, and objects.
-It clarifies each method’s operations and available parameters, ensuring users can fully harness its capabilities.</p>
+<div class="sd-card-title sd-font-weight-bold docutils">
+Tutorial notebook</div>
+<p class="sd-card-text">Follow a beginner-friendly Jupyter notebook that walks through a first
+PyMembrane simulation.</p>
 </div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-stretched-link reference internal" href="pythonapi/pythonapi.html"><span class="doc">To the reference guide</span></a></span></p>
-</div>
-</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="tutorials.html"><span class="doc">Tutorial Notebook</span></a></div>
 </div>
 <div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<img alt="" class="sd-card-img-top" src="_images/cppapi.svg" />
-<div class="sd-card-header docutils">
-<p class="sd-card-text">C++ API Reference</p>
-</div>
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Do want to add new funcionalities? The reference guide is designed for experienced users and modders
-and includes an in-depth look into C++ functions, modules, and objects.
-It unravels the complexities and available settings of each method,
-allowing experts to take advantage of PyMembrane sophisticated features.</p>
+<div class="sd-card-title sd-font-weight-bold docutils">
+Command-line arguments</div>
+<p class="sd-card-text">See the available command-line options for each packaged example.</p>
 </div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-stretched-link reference internal" href="cppapi/cppapi.html"><span class="doc">To the C++ API Reference</span></a></span></p>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="examples/command_line_arguments.html"><span class="doc">Command-Line Arguments</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Python API</div>
+<p class="sd-card-text">Browse the Python interface for boxes, systems, evolvers, forces,
+integrators, minimizers, and output.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="pythonapi/pythonapi.html"><span class="doc">Python API</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+C++ API and extension points</div>
+<p class="sd-card-text">Inspect the underlying C++ classes and the implementation details used
+by the Python bindings.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="cppapi/cppapi.html"><span class="doc">C++ API</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Benchmarks</div>
+<p class="sd-card-text">Run the size-scaling benchmark that reports mesh generation and
+simulation timings on spherical meshes.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="benchmarks.html"><span class="doc">Benchmarks</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Related examples</div>
+<p class="sd-card-text">Explore the liquid-membrane and hybrid MC-BD examples built on the
+packaged workflow.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="examples/liquid_membrane.html"><span class="doc">Liquid membrane example</span></a></div>
 </div>
 </div>
 </div>
+<section class="spaced-section" id="install-and-check">
+<h2>Install and check<a class="headerlink" href="#install-and-check" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>pymemb<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8<span class="w"> </span>numpy<span class="w"> </span>cmake<span class="w"> </span>pybind11
+conda<span class="w"> </span>activate<span class="w"> </span>pymemb
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pymembrane import *; print(&#39;import ok&#39;)&quot;</span>
+</pre></div>
 </div>
+</section>
+<section id="run-an-example">
+<h2>Run an example<a class="headerlink" href="#run-an-example" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
+</pre></div>
 </div>
+<p>Packaged examples include their input data and can be run from the installed
+Python namespace.</p>
+</section>
+<section id="what-can-i-simulate">
+<h2>What can I simulate?<a class="headerlink" href="#what-can-i-simulate" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Elastic membranes and shells</p></li>
+<li><p>Closed and open triangulated surfaces</p></li>
+<li><p>Periodic sheets</p></li>
+<li><p>Bending-dominated liquid membranes with edge flips</p></li>
+<li><p>Hybrid Monte Carlo and Brownian dynamics workflows</p></li>
+<li><p>Energy minimization with constraints</p></li>
+</ul>
+</section>
+<section id="why-pymembrane">
+<h2>Why PyMembrane?<a class="headerlink" href="#why-pymembrane" title="Link to this heading">#</a></h2>
+<p>PyMembrane is designed for modularity and extensibility. Users can combine
+forces, integrators, minimizers, constraints, and output routines through a
+Python interface, while performance-critical components are implemented in C++.
+The framework is intended for reproducible membrane-modeling workflows and for
+developing new membrane models.</p>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -490,6 +593,27 @@ allowing experts to take advantage of PyMembrane sophisticated features.</p>
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-check">Install and check</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-an-example">Run an example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-i-simulate">What can I simulate?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-pymembrane">Why PyMembrane?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Program Listing for File pybind_export_mesh.hpp &#8212; PyMembrane  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b7292ef9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cppapi/program_listing_file_pymembrane_cppmodule_md_src_mesh_pybind_export_mesh.hpp';</script>
+    <link rel="icon" href="../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.01" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo-dark.svg" class="logo__image only-light" alt="PyMembrane  documentation - Home"/>
+    <img src="../_static/logo-light.svg" class="logo__image only-dark pst-js-only" alt="PyMembrane  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/command_line_arguments.html">
+    Command-Line Arguments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorial Notebook
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/command_line_arguments.html">
+    Command-Line Arguments
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/pythonapi.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cppapi.html">
+    C++ API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contributors.html">
+    Contributors
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../pythonapi/references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File pybind_export_mesh.hpp</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Program Listing for File pybind_export_mesh.hpp</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="program-listing-for-file-pybind-export-mesh-hpp">
+<span id="program-listing-file-pymembrane-cppmodule-md-src-mesh-pybind-export-mesh-hpp"></span><h1>Program Listing for File pybind_export_mesh.hpp<a class="headerlink" href="#program-listing-for-file-pybind-export-mesh-hpp" title="Link to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_pymembrane_cppmodule_md_src_mesh_pybind_export_mesh.hpp.html#file-pymembrane-cppmodule-md-src-mesh-pybind-export-mesh-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">pymembrane/cppmodule/md/src/mesh/pybind_export_mesh.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __pybind_export_mesh_hpp__</span>
+<span class="cp">#define __pybind_export_mesh_hpp__</span>
+
+<span class="c1">//#include &quot;mesh.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;meshproperties.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;meshoperations.hpp&quot;</span>
+<span class="c1">//#include &quot;material.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;computegeometry.hpp&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_MeshOperations</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">MeshOperations</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MeshOperations&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="n">SystemClass</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;check_if_edge_can_flip&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MeshOperations</span><span class="o">::</span><span class="n">check_if_edge_can_flip</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;flip_edge_index&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;flip_edge&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MeshOperations</span><span class="o">::</span><span class="n">edge_flip</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;flip_edge_index&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;flip_face_up&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;equiangulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MeshOperations</span><span class="o">::</span><span class="n">equiangulation</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyFaces</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyFaces&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyFaces</span><span class="o">::</span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material age&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;k11&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyFaces</span><span class="o">::</span><span class="n">k11</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material growth in the 11 &lt;&lt;metric&gt;&gt; direction&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;k12&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyFaces</span><span class="o">::</span><span class="n">k12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material growth in the 12 &lt;&lt;metric&gt;&gt; direction&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;k22&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyFaces</span><span class="o">::</span><span class="n">k22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material growth in the 22 &lt;&lt;metric&gt;&gt; direction&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyFaces_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyFacesVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">PropertyFaces</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyFaces</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">PropertyFaces</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyVertices</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyVertices&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v&quot;</span><span class="p">,</span><span class="w">      </span><span class="o">&amp;</span><span class="n">PropertyVertices</span><span class="o">::</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex velocity&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w">   </span><span class="o">&amp;</span><span class="n">PropertyVertices</span><span class="o">::</span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material age&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;radius&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyVertices</span><span class="o">::</span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex radius&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyVertices_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyVerticesVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">PropertyVertices</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyVertices</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">PropertyVertices</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyEdges</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyEdges&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w">      </span><span class="o">&amp;</span><span class="n">PropertyEdges</span><span class="o">::</span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Material age&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;cot_alpha&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PropertyEdges</span><span class="o">::</span><span class="n">cot_alpha</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;opposite cotangent angle of </span><span class="se">\v</span><span class="s">ec{r0}-</span><span class="se">\v</span><span class="s">ec{r1} and </span><span class="se">\v</span><span class="s">ec{r2}-</span><span class="se">\v</span><span class="s">ec{r1}&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;cot_beta&quot;</span><span class="p">,</span><span class="w">  </span><span class="o">&amp;</span><span class="n">PropertyEdges</span><span class="o">::</span><span class="n">cot_beta</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;opposite cotangent angle of </span><span class="se">\v</span><span class="s">ec{r0}-</span><span class="se">\v</span><span class="s">ec{r3} and </span><span class="se">\v</span><span class="s">ec{r2}-</span><span class="se">\v</span><span class="s">ec{r3}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_PropertyEdges_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PropertyEdgesVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">PropertyEdges</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PropertyEdges</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">PropertyEdges</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Vertex</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex id&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;r&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex position&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex velocity&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;boundary&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">boundary</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex True if it is at the boundary&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;coordination&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">coordination</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vertex Coordination&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normal&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;_hedge&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">_hedge</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;halfedge index&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;forceC&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">forceC</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conservative Force&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;forceD&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">forceD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Dissipative Force&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">energy</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conservative Energy&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mass&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;type&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">energy</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conservative Energy&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;property&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_VertexProp</span><span class="o">::</span><span class="n">_property</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Properties&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Vertex_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;VertexVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_VertexProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">HE_VertexProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Edge</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of the conected vertices&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;j&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of the conected vertices&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;boundary&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">boundary</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;True if it is at the boundary&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;face_k&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">face_k</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;index to one of the faces shared by this edge -1 if is outer face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;face_l&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">face_l</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;index to one of the faces shared by this edge -1 if is outer face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v0&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex around the edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v1&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex around the edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex around the edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;v3&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">v3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex around the edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;_hedge&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">_hedge</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;halfedge index&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;type&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">energy</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conservative Energy&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;property&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_EdgeProp</span><span class="o">::</span><span class="n">_property</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Properties&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Edge_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EdgeVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_EdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">HE_EdgeProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Face</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;face id&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;outer&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">outer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;if True, face is a ghost outer face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;nsides&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">nsides</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;number of sides face has&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normal to that face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;reference_normal&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">normal_reference</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;reference normal to that face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;area&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;area of the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;boundary&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">boundary</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;True if it is at the boundary&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;refmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">face</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">metric</span><span class="p">;</span>
+<span class="w">            </span><span class="n">metric</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">metric</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">metric</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">metric</span><span class="p">;</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;get the reference metric&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set_refmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">metric</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">metric</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;error metric must be [g11, g12, g22]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">det</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;set the reference metric to [g11, g12, g22]&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set_refmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vertices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="w">  </span><span class="s">&quot;error vertices must be [v1, v2, v3]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_form_factor_triangle</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">det</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;set the reference metric to [v1, v2, v3] vertices with v1 being real3&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;set_refmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vertices</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">BoxType</span><span class="w"> </span><span class="n">_box</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;error vertices must be [v1, v2, v3]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_form_factor_triangle</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">_box</span><span class="p">);</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="n">det</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">                </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference_inv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">g_reference</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">det</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;set the reference metric to [v1, v2, v3] vertices with v1 being real3 and a Box considering periodic boundary conditions&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;metric&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real3</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vertices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="w"> </span><span class="n">metric</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                </span><span class="n">py</span><span class="o">::</span><span class="n">print</span><span class="p">(</span><span class="w">  </span><span class="s">&quot;error vertices must be [v1, v2, v3]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">pymemb</span><span class="o">::</span><span class="n">compute_form_factor_triangle</span><span class="p">(</span><span class="o">&amp;</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">metric</span><span class="p">;</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;get the metric&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;v1&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of vertices that define the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;v2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of vertices that define the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;v3&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">v3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of vertices that define the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;_hedge&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">_hedge</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;one of the half-edges bordering the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;types&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">energy</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conservative Energy&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;property&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_FaceProp</span><span class="o">::</span><span class="n">_property</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;properties&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_Face_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;FaceVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_FaceProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">HE_FaceProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_HalfEdge</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HalfEdge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readonly</span><span class="p">(</span><span class="s">&quot;index&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex at the beginning of the half-edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;vert_from&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">vert_from</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex at the beginning of the half-edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;vert_to&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">vert_to</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vertex at the end of the half-edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;edge&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">edge</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;edge this he is part of&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;face&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;face the half-edge borders&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;pair&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">pair</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;oppositely oriented adjacent half-edge&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;next&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">next</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;next half-edge around the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;prev&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">prev</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;previous half-edge around the face&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def_readwrite</span><span class="p">(</span><span class="s">&quot;boundary&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HE_HalfEdgeProp</span><span class="o">::</span><span class="n">boundary</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; if true, the halfedge is a boundary&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//.def_readwrite(&quot;property&quot;, &amp;HE_HalfEdgeProp::_property);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_HE_HalfEdge_Vector</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HalfEdgeVector&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;::</span><span class="n">clear</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;pop_back&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;::</span><span class="n">pop_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;::*</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="o">&amp;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;::</span><span class="n">push_back</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__len__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__iter__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">make_iterator</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="n">py</span><span class="o">::</span><span class="n">keep_alive</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__getitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;__setitem__&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HE_HalfEdgeProp</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">HE_HalfEdgeProp</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">index_error</span><span class="p">();</span>
+<span class="w">            </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">export_ReadMesh</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="k">module</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">py</span><span class="o">::</span><span class="n">class_</span><span class="o">&lt;</span><span class="n">ReadMesh</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ReadMesh&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">(),</span>
+<span class="w">             </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">().</span><span class="n">noconvert</span><span class="p">(),</span><span class="w"> </span><span class="c1">// no convert the arguments and</span>
+<span class="w">             </span><span class="n">py</span><span class="o">::</span><span class="n">arg</span><span class="p">().</span><span class="n">noconvert</span><span class="p">(),</span>
+<span class="w">             </span><span class="s">&quot;Mesh reader, param1=faces file path, param2= vertices file path&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">init</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&gt;</span><span class="p">(),</span>
+<span class="w">             </span><span class="s">&quot;Mesh reader, faces: faces file path, vertices: vertices file path&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">clear</span><span class="p">,</span>
+<span class="w">             </span><span class="s">&quot;Clear whole vectors in reading. Caution this clear the vectors in the readmesh&lt;class&gt; but not the mesh itself&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getVertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">get_vertices</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the vertices&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getEdges&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">get_edges</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the edges&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getFaces&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">get_faces</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the faces&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getHalfedges&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">get_halfedges</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="o">::</span><span class="n">return_value_policy</span><span class="o">::</span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the halfedges&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getNumVertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">getNumvertices</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the number of vertices&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getNumEdges&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">getNumedges</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the number of edges&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getNumFaces&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">getNumfaces</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the number of faces&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">def</span><span class="p">(</span><span class="s">&quot;getNumHalfedges&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ReadMesh</span><span class="o">::</span><span class="n">getNumhalfedges</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;get the number of halfedges&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026 Daniel A Matoz-Fernandez and Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

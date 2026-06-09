@@ -51,8 +51,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Benchmarks" href="benchmarks.html" />
-    <link rel="prev" title="Installation" href="installation.html" />
+    <link rel="next" title="Python API" href="pythonapi/pythonapi.html" />
+    <link rel="prev" title="Periodic Boundary" href="examples/periodic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.01" />
@@ -142,6 +142,13 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
     Tutorial Notebook
@@ -150,15 +157,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="benchmarks.html">
-    Benchmarks
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
+  <a class="nav-link nav-internal" href="examples/command_line_arguments.html">
+    Command-Line Arguments
   </a>
 </li>
 
@@ -185,6 +185,34 @@
 
 
 <li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="contributors.html">
     Contributors
   </a>
@@ -194,13 +222,6 @@
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="pythonapi/references.html">
     References
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
   </a>
 </li>
 
@@ -287,6 +308,13 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/quickstart.html">
+    Quick Start and Examples
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
     Tutorial Notebook
@@ -295,15 +323,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="benchmarks.html">
-    Benchmarks
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
+  <a class="nav-link nav-internal" href="examples/command_line_arguments.html">
+    Command-Line Arguments
   </a>
 </li>
 
@@ -323,6 +344,34 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="benchmarks.html">
+    Benchmarks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/liquid_membrane.html">
+    Liquid membrane example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/hybrid_mc_bd.html">
+    Hybrid Brownian + Monte Carlo Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="examples/size_scaling.html">
+    Size Scaling Example
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="contributors.html">
     Contributors
   </a>
@@ -332,13 +381,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="pythonapi/references.html">
     References
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="examples/quickstart.html">
-    Quick Start and Examples
   </a>
 </li>
 
@@ -437,12 +479,13 @@ the notebook does not require plotting packages.</p>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="_downloads/164ee3573dfb26bf22b05f3514b878eb/pymembrane_first_simulation.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">pymembrane_first_simulation.ipynb</span></code></a></p></li>
 </ul>
-<p>Open it locally with Jupyter if you want the step-by-step tutorial format:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>docs/tutorials/pymembrane_first_simulation.ipynb
+<p>Open it locally with JupyterLab if you want the step-by-step tutorial format:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab<span class="w"> </span>docs/tutorials/pymembrane_first_simulation.ipynb
 </pre></div>
 </div>
-<p>or:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab<span class="w"> </span>docs/tutorials/pymembrane_first_simulation.ipynb
+<p>If you prefer the classic Notebook interface, install it separately and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>notebook
+jupyter<span class="w"> </span>notebook<span class="w"> </span>docs/tutorials/pymembrane_first_simulation.ipynb
 </pre></div>
 </div>
 <p>Jupyter is optional and is not required for normal PyMembrane installation.</p>
@@ -480,20 +523,20 @@ available from the installed module namespace:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="installation.html"
+       href="examples/periodic.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Periodic Boundary</p>
       </div>
     </a>
     <a class="right-next"
-       href="benchmarks.html"
+       href="pythonapi/pythonapi.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Benchmarks</p>
+        <p class="prev-next-title">Python API</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
