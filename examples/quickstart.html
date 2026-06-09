@@ -465,55 +465,55 @@ input files are bundled with the package.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">periodic</span></code></p></td>
+<tr class="row-even"><td><p><span class="xref std std-doc">periodic</span></p></td>
 <td><p>Periodic sheet wrinkling under uniaxial compression</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.periodic</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">periodic_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and MD steps</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">buckling</span></code></p></td>
+<tr class="row-odd"><td><p><span class="xref std std-doc">buckling</span></p></td>
 <td><p>Caspar-Klug shell buckling with Monte Carlo vertex moves</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.buckling</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">sphere_t*.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and MC steps</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">minimizer</span></code></p></td>
+<tr class="row-even"><td><p><span class="xref std std-doc">minimizer</span></p></td>
 <td><p>Constant-volume vesicle minimization with FIRE</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.minimizer</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">minimization_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and minimizer iterations</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">disclination</span></code></p></td>
+<tr class="row-odd"><td><p><span class="xref std std-doc">disclination</span></p></td>
 <td><p>Brownian relaxation of an open <code class="docutils literal notranslate"><span class="pre">+1</span></code> disclination</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.disclination</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and BD steps</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">disclination_mc</span></code></p></td>
+<tr class="row-even"><td><p><span class="xref std std-doc">disclination_mc</span></p></td>
 <td><p>Monte Carlo relaxation of the same disclination</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.disclination_mc</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and MC steps</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">disclination_verlet</span></code></p></td>
+<tr class="row-odd"><td><p><span class="xref std std-doc">disclination_verlet</span></p></td>
 <td><p>Velocity-Verlet relaxation of the same disclination</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.disclination_verlet</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces snapshots and MD steps</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hybrid_mc_bd</span></code></p></td>
+<tr class="row-even"><td><p><span class="xref std std-doc">hybrid_mc_bd</span></p></td>
 <td><p>Alternating Brownian dynamics and Monte Carlo vertex moves</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.hybrid_mc_bd</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces cycles and MD/MC step counts</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">liquid_membrane</span></code></p></td>
+<tr class="row-odd"><td><p><span class="xref std std-doc">liquid_membrane</span></p></td>
 <td><p>Bending-dominated dynamic triangulation with edge flips and vertex moves</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.liquid_membrane</span> <span class="pre">--quick</span></code></p></td>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.obj</span></code>, <code class="docutils literal notranslate"><span class="pre">summary.json</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces Monte Carlo steps</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">size_scaling</span></code></p></td>
+<tr class="row-even"><td><p><span class="xref std std-doc">size_scaling</span></p></td>
 <td><p>Spherical size scaling with mesh generation, Monte Carlo vertex moves,
 and Brownian dynamics</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.size_scaling</span> <span class="pre">--quick</span></code></p></td>
