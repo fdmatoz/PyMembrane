@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PyMembrane Examples &#8212; PyMembrane  documentation</title>
+    <title>Liquid membrane example &#8212; PyMembrane  documentation</title>
   
   
   
@@ -47,12 +47,12 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/examples';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/liquid_membrane';</script>
     <link rel="icon" href="../_static/logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="+1 Disclination Buckling: A PyMembrane Tutorial" href="disclination.html" />
-    <link rel="prev" title="PyMembrane Tutorial" href="tutorial.html" />
+    <link rel="next" title="Command-Line Arguments" href="command_line_arguments.html" />
+    <link rel="prev" title="Hybrid Brownian + Monte Carlo Example" href="hybrid_mc_bd.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.01" />
@@ -371,10 +371,10 @@
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Liquid membrane example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command_line_arguments.html">Command-Line Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
@@ -383,7 +383,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Liquid membrane example</a></li>
 </ul>
 </div>
 </nav></div>
@@ -427,7 +427,10 @@
     
     <li class="breadcrumb-item"><a href="quickstart.html" class="nav-link">Quick Start and Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">PyMembrane Examples</span></li>
+    
+    <li class="breadcrumb-item"><a href="examples.html" class="nav-link">PyMembrane Examples</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Liquid membrane example</span></li>
   </ul>
 </nav>
 </div>
@@ -444,108 +447,119 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pymembrane-examples">
-<h1>PyMembrane Examples<a class="headerlink" href="#pymembrane-examples" title="Link to this heading">#</a></h1>
-<p>Here we demonstrate various applications of PyMembrane to study common
-problems in the physics of membranes. The examples below are kept in two
-forms:</p>
+  <section id="liquid-membrane-example">
+<h1>Liquid membrane example<a class="headerlink" href="#liquid-membrane-example" title="Link to this heading">#</a></h1>
+<p>This example demonstrates a bending-dominated dynamically triangulated
+membrane. Vertex moves update the membrane shape, while edge flips update mesh
+connectivity.</p>
+<section id="what-this-example-demonstrates">
+<h2>What This Example Demonstrates<a class="headerlink" href="#what-this-example-demonstrates" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>The source versions live under <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> and are useful for
-developers who want to inspect the documented scripts directly.</p></li>
-<li><p>The installed versions live under <code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code> and can be run
-with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span></code> after installation. Their runtime input files are
-bundled inside the installed package, so they do not depend on
-<code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> at runtime.</p></li>
-<li><p>Command-line arguments for the packaged examples are documented on the
-<code class="docutils literal notranslate"><span class="pre">command_line_arguments</span></code> page.</p></li>
+<li><p>a simple liquid-membrane workflow built from the standard PyMembrane API</p></li>
+<li><p>Monte Carlo vertex moves combined with Monte Carlo edge flips</p></li>
+<li><p>bending energy as the main physical contribution</p></li>
+<li><p>a weak harmonic regularizer used only to keep the mesh well conditioned in
+this minimal example</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">Box</span></code> / <code class="docutils literal notranslate"><span class="pre">System</span></code> / <code class="docutils literal notranslate"><span class="pre">Evolver</span></code> / dumper workflow used throughout the
+packaged examples</p></li>
 </ul>
-<section id="primary-interface">
-<h2>Primary interface<a class="headerlink" href="#primary-interface" title="Link to this heading">#</a></h2>
-<p>Install PyMembrane from the repository root:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<p>The example uses <code class="docutils literal notranslate"><span class="pre">Mesh&gt;Bending&gt;Dihedral</span></code> as the main energy term and
+<code class="docutils literal notranslate"><span class="pre">Mesh&gt;Limit</span></code> to keep the mesh in a stable range during the short run. A weak
+<code class="docutils literal notranslate"><span class="pre">Mesh&gt;Harmonic</span></code> term is included only as a regularizer for this minimal
+example.</p>
+</section>
+<section id="how-to-run">
+<h2>How to Run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.liquid_membrane<span class="w"> </span>--quick
 </pre></div>
 </div>
-<p>Then run the packaged examples from any working directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.buckling<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.minimizer<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_mc<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_verlet<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.liquid_membrane<span class="w"> </span>--quick
-</pre></div>
-</div>
-<p>Most examples also support <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> so that generated files are kept in
-one directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.periodic<span class="w"> </span>--quick<span class="w"> </span>--output-dir<span class="w"> </span>results
+<p>For a longer run with files written into a separate directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.liquid_membrane<span class="w"> </span>--steps<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--output-dir<span class="w"> </span>liquid_output
 </pre></div>
 </div>
 </section>
-<section id="packaged-examples">
-<h2>Packaged examples<a class="headerlink" href="#packaged-examples" title="Link to this heading">#</a></h2>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.periodic</span></code></dt><dd><p>Demonstrates wrinkling of a periodic elastic sheet under uniaxial
-compression. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">periodic_t*.vtk</span></code>.
-Typical quick-mode runtime is a few seconds on a laptop.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.buckling</span></code></dt><dd><p>Demonstrates Caspar-Klug shell buckling of a closed triangulated shell using
-a Monte Carlo vertex move. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>,
-<code class="docutils literal notranslate"><span class="pre">sphere_t*.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>. Typical quick-mode runtime is a
-few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.minimizer</span></code></dt><dd><p>Demonstrates constant-volume energy minimization of a strained vesicle using
-the FIRE minimizer. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and
-<code class="docutils literal notranslate"><span class="pre">minimization_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination</span></code></dt><dd><p>Demonstrates Brownian relaxation of an open <code class="docutils literal notranslate"><span class="pre">+1</span></code> disclination. Quick mode
-writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>. Typical quick-mode
-runtime is a few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination_mc</span></code></dt><dd><p>Demonstrates the same disclination problem using a Monte Carlo vertex-move
-integrator. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code> and
-<code class="docutils literal notranslate"><span class="pre">final_mesh.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.disclination_verlet</span></code></dt><dd><p>Demonstrates the same disclination problem using a velocity-Verlet
-integrator. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">mesh.vtk</span></code> and <code class="docutils literal notranslate"><span class="pre">pentagon_t*.vtk</span></code>.
-Typical quick-mode runtime is a few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.hybrid_mc_bd</span></code></dt><dd><p>Demonstrates a conservative hybrid workflow for the open <code class="docutils literal notranslate"><span class="pre">+1</span></code>
-disclination problem by alternating Brownian dynamics vertex relaxation with
-Monte Carlo vertex moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and
-<code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.size_scaling</span></code></dt><dd><p>Generates spherical meshes of increasing resolution and times three
-workflows for each size: mesh generation, Monte Carlo vertex moves, and
-Brownian dynamics. Quick mode runs subdivisions <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">1</span> <span class="pre">2</span></code> with a short
-smoke-test length and repeated timings.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.liquid_membrane</span></code></dt><dd><p>Demonstrates dynamic triangulation with Monte Carlo edge flips and vertex
-moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.obj</span></code> and
-<code class="docutils literal notranslate"><span class="pre">summary.json</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="dependency-note">
-<h2>Dependency note<a class="headerlink" href="#dependency-note" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>The examples require PyMembrane and its runtime dependencies.</p></li>
-<li><p>No plotting packages are required to run the examples.</p></li>
-<li><p>Output geometry is written with dumper methods such as
-<code class="docutils literal notranslate"><span class="pre">system.dumper.vtk(...)</span></code>.</p></li>
-</ul>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command_line_arguments.html">Command-Line Arguments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
-</ul>
+<section id="command-line-arguments">
+<h2>Command-Line Arguments<a class="headerlink" href="#command-line-arguments" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 18.0%" />
+<col style="width: 16.0%" />
+<col style="width: 66.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--quick</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+<td><p>Run a short version of the example for testing the installation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--steps</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p>Number of Monte Carlo steps used in the main simulation run. Runtime
+default: <code class="docutils literal notranslate"><span class="pre">100</span></code> with <code class="docutils literal notranslate"><span class="pre">--quick</span></code> or <code class="docutils literal notranslate"><span class="pre">1000</span></code> otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--subdivision</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p>Icosphere subdivision level used to build the initial spherical mesh.
+Runtime default: <code class="docutils literal notranslate"><span class="pre">1</span></code> with <code class="docutils literal notranslate"><span class="pre">--quick</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code> otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--temperature</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1e-1</span></code></p></td>
+<td><p>Monte Carlo temperature used for the liquid-membrane workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--output-dir</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
+<td><p>Directory where the VTK, OBJ, and summary files are written.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--json</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">summary.json</span></code></p></td>
+<td><p>Path to the summary JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--seed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">202208</span></code></p></td>
+<td><p>Base random seed used for the Monte Carlo integrators.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--keep-meshes</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+<td><p>Keep the generated temporary mesh input files on disk.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</section>
+<section id="expected-output">
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<p>The example writes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial.vtk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">final.vtk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">final.obj</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">summary.json</span></code></p></li>
+<li><p>optionally <code class="docutils literal notranslate"><span class="pre">mesh_inputs/*.inp</span></code> when generated mesh inputs are retained</p></li>
+</ul>
+</section>
+<section id="quick-mode">
+<h2>Quick Mode<a class="headerlink" href="#quick-mode" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--quick</span></code> runs a short smoke-test version of the same model. It keeps the
+same mesh generation, force model, and integrator names while reducing the
+number of Monte Carlo steps.</p>
+</section>
+<section id="scope-note">
+<h2>Scope Note<a class="headerlink" href="#scope-note" title="Link to this heading">#</a></h2>
+<p>This example demonstrates a bending-dominated dynamically triangulated
+membrane. Vertex moves update the membrane shape, while edge flips update mesh
+connectivity. A weak harmonic term is used only as a regularizer in this
+minimal example; the liquid-membrane behavior comes from bending energy,
+limit protection, and Monte Carlo edge flips. For large-scale simulations
+where maximum performance for fluid membranes is the primary objective,
+specialized dynamically triangulated membrane packages may be preferable.
+PyMembrane’s focus is on providing a modular and extensible C++/Python
+framework in which forces, integrators, minimizers, constraints, and output
+routines can be combined and extended for new membrane models.</p>
 </section>
 </section>
 
@@ -560,20 +574,20 @@ moves. Quick mode writes <code class="docutils literal notranslate"><span class=
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tutorial.html"
+       href="hybrid_mc_bd.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">PyMembrane Tutorial</p>
+        <p class="prev-next-title">Hybrid Brownian + Monte Carlo Example</p>
       </div>
     </a>
     <a class="right-next"
-       href="disclination.html"
+       href="command_line_arguments.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">+1 Disclination Buckling: A PyMembrane Tutorial</p>
+        <p class="prev-next-title">Command-Line Arguments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -596,9 +610,12 @@ moves. Quick mode writes <code class="docutils literal notranslate"><span class=
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-interface">Primary interface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaged-examples">Packaged examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-note">Dependency note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-example-demonstrates">What This Example Demonstrates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run">How to Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-arguments">Command-Line Arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-mode">Quick Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-note">Scope Note</a></li>
 </ul>
   </nav></div>
 

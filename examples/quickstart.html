@@ -374,6 +374,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_arguments.html">Command-Line Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
@@ -381,6 +383,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
 </ul>
 </div>
 </nav></div>
@@ -504,7 +507,13 @@ input files are bundled with the package.</p>
 <td><p>few seconds</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces cycles and MD/MC step counts</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">size_scaling</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">liquid_membrane</span></code></p></td>
+<td><p>Bending-dominated dynamic triangulation with edge flips and vertex moves</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.liquid_membrane</span> <span class="pre">--quick</span></code></p></td>
+<td><p>few seconds</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">initial.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.obj</span></code>, <code class="docutils literal notranslate"><span class="pre">summary.json</span></code>; <code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces Monte Carlo steps</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">size_scaling</span></code></p></td>
 <td><p>Spherical size scaling with mesh generation, Monte Carlo vertex moves,
 and Brownian dynamics</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.size_scaling</span> <span class="pre">--quick</span></code></p></td>
@@ -533,6 +542,7 @@ run.</p>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">PyMembrane Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">PyMembrane Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
 </ul>
 </div>
 </section>

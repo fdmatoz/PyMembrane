@@ -374,6 +374,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="examples.html">PyMembrane Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="disclination.html">+1 Disclination Buckling: A PyMembrane Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_arguments.html">Command-Line Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Size Scaling Example</a></li>
@@ -381,6 +383,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Size Scaling Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid_membrane.html">Liquid membrane example</a></li>
 </ul>
 </div>
 </nav></div>
@@ -456,7 +459,7 @@ three workflows for each size:</p>
 <section id="how-to-run">
 <h2>How to run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--subdivisions<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>--steps<span class="w"> </span><span class="m">100</span><span class="w"> </span>--json<span class="w"> </span>size_scaling.json
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--subdivisions<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>--steps<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--repeat<span class="w"> </span><span class="m">3</span><span class="w"> </span>--json<span class="w"> </span>size_scaling.json
 </pre></div>
 </div>
 <p>If you want to keep the generated mesh files, add <code class="docutils literal notranslate"><span class="pre">--keep-meshes</span></code> and
@@ -483,8 +486,9 @@ results are written to a JSON file.</p>
 <section id="quick-mode">
 <h2>Quick mode<a class="headerlink" href="#quick-mode" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">--quick</span></code> reduces the default subdivision list to <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">1</span> <span class="pre">2</span></code> and runs a short
-smoke-test length of 10 steps for the Monte Carlo and Brownian dynamics
-workflows.</p>
+smoke-test length of 100 steps for the Monte Carlo and Brownian dynamics
+workflows with <code class="docutils literal notranslate"><span class="pre">--repeat</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">--warmup</span> <span class="pre">1</span></code>. For more stable timings,
+increase <code class="docutils literal notranslate"><span class="pre">--steps</span></code> and keep <code class="docutils literal notranslate"><span class="pre">--repeat</span> <span class="pre">3</span></code> or larger.</p>
 </section>
 </section>
 
