@@ -55,6 +55,12 @@ input files are bundled with the package.
      - ``python -m pymembrane.examples.hybrid_mc_bd --quick``
      - few seconds
      - ``initial_mesh.vtk``, ``hybrid_t*.vtk``; ``--quick`` reduces cycles and MD/MC step counts
+   * - ``size_scaling``
+     - Spherical size scaling with mesh generation, Monte Carlo vertex moves,
+       and Brownian dynamics
+     - ``python -m pymembrane.examples.size_scaling --quick``
+     - few seconds
+     - ``--json`` writes a timing summary; ``--keep-meshes`` preserves the generated ``.inp`` files
 
 All of the examples above write legacy ASCII ``.vtk`` output through the
 default dumper. None requires plotting packages or the VTK Python bindings to
@@ -75,3 +81,4 @@ Reproducibility Checklist
    
    tutorial
    examples
+   size_scaling

@@ -7,6 +7,7 @@ import platform
 import sys
 import tempfile
 import time
+from contextlib import nullcontext
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -29,7 +30,7 @@ class BenchmarkRow:
     vertices: int
     faces: int
     edges: int
-    case: str
+    workflow: str
     operations: int
     wall_s: float
     rate: float
@@ -60,7 +61,10 @@ def _midpoint(
     return cache[key]
 
 
-def make_icosphere(subdivision: int, radius: float = 1.0) -> tuple[list[tuple[float, float, float]], list[tuple[int, int, int]]]:
+def make_icosphere(
+    subdivision: int,
+    radius: float = 1.0,
+) -> tuple[list[tuple[float, float, float]], list[tuple[int, int, int]]]:
     phi = (1.0 + math.sqrt(5.0)) / 2.0
     vertices = [
         _normalize((-1.0, phi, 0.0), radius),
@@ -120,6 +124,15 @@ def make_icosphere(subdivision: int, radius: float = 1.0) -> tuple[list[tuple[fl
     return vertices, faces
 
 
+def edge_count_from_faces(faces: list[tuple[int, int, int]]) -> int:
+    edges: set[tuple[int, int]] = set()
+    for a, b, c in faces:
+        for i, j in ((a, b), (b, c), (c, a)):
+            edge = (i, j) if i < j else (j, i)
+            edges.add(edge)
+    return len(edges)
+
+
 def write_mesh_files(
     directory: Path,
     subdivision: int,
@@ -137,62 +150,56 @@ def write_mesh_files(
     return vertex_file, face_file
 
 
-def edge_count_from_faces(faces: list[tuple[int, int, int]]) -> int:
-    edges: set[tuple[int, int]] = set()
-    for a, b, c in faces:
-        for i, j in ((a, b), (b, c), (c, a)):
-            edge = (i, j) if i < j else (j, i)
-            edges.add(edge)
-    return len(edges)
+def _build_system(vertex_file: Path, face_file: Path) -> tuple[mb.System, float]:
+    box = mb.Box(4.0, 4.0, 4.0)
+    system = mb.System(box)
+    system.read_mesh_from_files(files={"vertices": str(vertex_file), "faces": str(face_file)})
+    edge_lengths = system.compute.edge_lengths()
+    avg_edge_length = sum(edge_lengths) / len(edge_lengths)
+    return system, avg_edge_length
 
 
-def benchmark_case(
-    rows: list[BenchmarkRow],
+def _build_common_evolver(system: mb.System, avg_edge_length: float) -> mb.Evolver:
+    evolver = mb.Evolver(system)
+    evolver.add_force("Mesh>Harmonic", {"k": {"0": "350.0"}, "l0": {"0": str(avg_edge_length)}})
+    evolver.add_force(
+        "Mesh>Limit",
+        {"lmin": {"0": str(0.7 * avg_edge_length)}, "lmax": {"0": str(1.3 * avg_edge_length)}},
+    )
+    evolver.add_force("Mesh>Bending>Dihedral", {"kappa": {"0": "1.0"}})
+    return evolver
+
+
+def _benchmark_workflow(
     subdivision: int,
     vertices: int,
     faces: int,
     edges: int,
-    case: str,
+    workflow: str,
     operations: int,
     units: str,
     func,
-):
+) -> BenchmarkRow:
     start = time.perf_counter()
-    value = func()
+    func()
     wall = time.perf_counter() - start
     rate = float(operations) / wall if wall > 0.0 else float("inf")
-    rows.append(
-        BenchmarkRow(
-            subdivision=subdivision,
-            vertices=vertices,
-            faces=faces,
-            edges=edges,
-            case=case,
-            operations=operations,
-            wall_s=wall,
-            rate=rate,
-            rate_units=units,
-        )
+    return BenchmarkRow(
+        subdivision=subdivision,
+        vertices=vertices,
+        faces=faces,
+        edges=edges,
+        workflow=workflow,
+        operations=operations,
+        wall_s=wall,
+        rate=rate,
+        rate_units=units,
     )
-    return value
-
-
-def build_evolver(system: mb.System):
-    compute = system.compute
-    edge_lengths = list(compute.edge_lengths())
-    avg_edge_length = sum(edge_lengths) / len(edge_lengths)
-
-    evolver = mb.Evolver(system)
-    evolver.add_force("Mesh>Harmonic", {"k": {"0": "350.0"}, "l0": {"0": str(avg_edge_length)}})
-    evolver.add_force("Mesh>Limit", {"lmin": {"0": str(0.7 * avg_edge_length)}, "lmax": {"0": str(1.3 * avg_edge_length)}})
-    evolver.add_force("Mesh>Bending>Dihedral", {"kappa": {"0": "1.0"}})
-    return evolver
 
 
 def run_one_subdivision(
     subdivision: int,
     steps: int,
-    energy_evals: int,
     keep_meshes: bool,
     mesh_root: Path | None,
 ) -> list[BenchmarkRow]:
@@ -204,27 +211,36 @@ def run_one_subdivision(
         mesh_dir.mkdir(parents=True, exist_ok=True)
         tempdir_cm = None
     else:
-        tempdir_cm = tempfile.TemporaryDirectory(prefix=f"pymembrane-sphere-s{subdivision}-")
+        tempdir_cm = tempfile.TemporaryDirectory(prefix=f"pymembrane-size-s{subdivision}-")
         mesh_dir = Path(tempdir_cm.name)
 
     try:
+        expected = EXPECTED_COUNTS.get(subdivision)
+        if expected is None:
+            raise ValueError(f"unsupported subdivision level {subdivision}")
+
+        def mesh_generation() -> tuple[list[tuple[float, float, float]], list[tuple[int, int, int]], Path, Path]:
+            vertices, faces = make_icosphere(subdivision)
+            vertex_file, face_file = write_mesh_files(mesh_dir, subdivision, vertices, faces)
+            return vertices, faces, vertex_file, face_file
+
         start = time.perf_counter()
-        vertices, faces = make_icosphere(subdivision)
+        vertices, faces, vertex_file, face_file = mesh_generation()
         wall = time.perf_counter() - start
         edge_count = edge_count_from_faces(faces)
-        expected = EXPECTED_COUNTS.get(subdivision)
-        if expected is not None and (len(vertices), len(faces), edge_count) != expected:
+        if (len(vertices), len(faces), edge_count) != expected:
             raise ValueError(
                 f"unexpected counts for subdivision {subdivision}: "
                 f"got {(len(vertices), len(faces), edge_count)}, expected {expected}"
             )
+
         rows.append(
             BenchmarkRow(
                 subdivision=subdivision,
                 vertices=len(vertices),
                 faces=len(faces),
                 edges=edge_count,
-                case="generate_mesh",
+                workflow="mesh_generation",
                 operations=1,
                 wall_s=wall,
                 rate=(1.0 / wall) if wall > 0.0 else float("inf"),
@@ -232,89 +248,45 @@ def run_one_subdivision(
             )
         )
 
-        vertex_file, face_file = benchmark_case(
-            rows,
-            subdivision,
-            len(vertices),
-            len(faces),
-            edge_count,
-            "write_mesh",
-            1,
-            "meshes/s",
-            lambda: write_mesh_files(mesh_dir, subdivision, vertices, faces),
+        def mc_workflow() -> None:
+            system, avg_edge_length = _build_system(vertex_file, face_file)
+            evolver = _build_common_evolver(system, avg_edge_length)
+            evolver.add_integrator("Mesh>MonteCarlo>vertex>move", {"dr": "0.008"})
+            evolver.set_global_temperature("1e-3")
+            evolver.evolveMC(steps=steps)
+
+        rows.append(
+            _benchmark_workflow(
+                subdivision,
+                len(vertices),
+                len(faces),
+                edge_count,
+                "mc_vertex_move",
+                steps,
+                "steps/s",
+                mc_workflow,
+            )
         )
 
-        def load_system():
-            box = mb.Box(4.0, 4.0, 4.0)
-            system = mb.System(box)
-            system.read_mesh_from_files(files={"vertices": str(vertex_file), "faces": str(face_file)})
-            return system
+        def bd_workflow() -> None:
+            system, avg_edge_length = _build_system(vertex_file, face_file)
+            evolver = _build_common_evolver(system, avg_edge_length)
+            evolver.add_integrator("Mesh>Brownian>vertex>move", {"seed": "202208"})
+            evolver.set_time_step("2e-3")
+            evolver.set_global_temperature("1e-4")
+            evolver.evolveMD(steps=steps)
 
-        system = benchmark_case(
-            rows,
-            subdivision,
-            len(vertices),
-            len(faces),
-            edge_count,
-            "load",
-            1,
-            "meshes/s",
-            load_system,
-        )
-
-        compute = system.compute
-        system_vertices = int(system.Numvertices)
-        system_faces = int(system.Numfaces)
-        system_edges = int(system.Numedges)
-
-        benchmark_case(
-            rows,
-            subdivision,
-            system_vertices,
-            system_faces,
-            system_edges,
-            "edge_lengths",
-            energy_evals,
-            "calls/s",
-            lambda: [compute.edge_lengths() for _ in range(energy_evals)],
-        )
-        benchmark_case(
-            rows,
-            subdivision,
-            system_vertices,
-            system_faces,
-            system_edges,
-            "volume",
-            energy_evals,
-            "calls/s",
-            lambda: [compute.volume() for _ in range(energy_evals)],
-        )
-
-        evolver = build_evolver(system)
-        benchmark_case(
-            rows,
-            subdivision,
-            system_vertices,
-            system_faces,
-            system_edges,
-            "energy",
-            energy_evals,
-            "evals/s",
-            lambda: [compute.energy(evolver) for _ in range(energy_evals)],
-        )
-
-        evolver.add_integrator("Mesh>MonteCarlo>vertex>move", {"dr": "0.008"})
-        evolver.set_global_temperature("1e-3")
-        benchmark_case(
-            rows,
-            subdivision,
-            system_vertices,
-            system_faces,
-            system_edges,
-            "mc_vertex_move",
-            steps,
-            "steps/s",
-            lambda: evolver.evolveMC(steps=steps),
+        rows.append(
+            _benchmark_workflow(
+                subdivision,
+                len(vertices),
+                len(faces),
+                edge_count,
+                "brownian_dynamics",
+                steps,
+                "steps/s",
+                bd_workflow,
+            )
         )
         return rows
     finally:
@@ -323,24 +295,26 @@ def run_one_subdivision(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="CPU sphere benchmark for PyMembrane.")
-    parser.add_argument("--quick", action="store_true", help="run a small smoke benchmark")
+    parser = argparse.ArgumentParser(description="Size-scaling example for PyMembrane.")
+    parser.add_argument("--quick", action="store_true", help="run a small smoke example")
     parser.add_argument("--subdivisions", nargs="+", type=int, default=None, help="icosphere subdivision levels")
-    parser.add_argument("--steps", type=int, default=None, help="short MC benchmark step count")
-    parser.add_argument("--energy-evals", type=int, default=None, help="repeated energy/compute evaluations")
-    parser.add_argument("--json", default=None, help="write benchmark results to JSON")
+    parser.add_argument("--steps", type=int, default=None, help="workflow step count")
+    parser.add_argument("--json", default=None, help="write results to JSON")
     parser.add_argument("--keep-meshes", action="store_true", help="keep generated mesh files on disk")
-    parser.add_argument("--output-dir", default="sphere_benchmark_output", help="directory for kept mesh files")
+    parser.add_argument("--output-dir", default="size_scaling_meshes", help="directory for kept mesh files")
     return parser.parse_args()
 
 
 def format_table(rows: list[BenchmarkRow]) -> str:
-    header = f"{'subdiv':>6} {'vertices':>8} {'faces':>8} {'edges':>8} {'case':<16} {'operations':>10} {'wall_s':>12} {'rate':>12} {'rate_units':<10}"
+    header = (
+        f"{'subdiv':>6} {'vertices':>8} {'faces':>8} {'edges':>8} "
+        f"{'workflow':<18} {'operations':>10} {'wall_s':>12} {'rate':>12} {'rate_units':<10}"
+    )
     lines = [header]
     for row in rows:
         lines.append(
             f"{row.subdivision:>6} {row.vertices:>8} {row.faces:>8} {row.edges:>8} "
-            f"{row.case:<16} {row.operations:>10} {row.wall_s:>12.6f} {row.rate:>12.3f} {row.rate_units:<10}"
+            f"{row.workflow:<18} {row.operations:>10} {row.wall_s:>12.6f} {row.rate:>12.3f} {row.rate_units:<10}"
         )
     return "\n".join(lines)
 
@@ -356,8 +330,6 @@ def json_payload(args: argparse.Namespace, rows: list[BenchmarkRow]) -> dict[str
         "parameters": {
             "subdivisions": args.subdivisions,
             "steps": args.steps,
-            "energy_evals": args.energy_evals,
-            "keep_meshes": args.keep_meshes,
         },
         "results": [asdict(row) for row in rows],
     }
@@ -370,7 +342,6 @@ def main() -> int:
 
     args.subdivisions = args.subdivisions if args.subdivisions is not None else ([0, 1, 2] if args.quick else [0, 1, 2, 3])
     args.steps = args.steps if args.steps is not None else (10 if args.quick else 100)
-    args.energy_evals = args.energy_evals if args.energy_evals is not None else (5 if args.quick else 20)
 
     mesh_root = None
     if args.keep_meshes:
@@ -379,7 +350,7 @@ def main() -> int:
 
     rows: list[BenchmarkRow] = []
     for subdivision in args.subdivisions:
-        rows.extend(run_one_subdivision(subdivision, args.steps, args.energy_evals, args.keep_meshes, mesh_root))
+        rows.extend(run_one_subdivision(subdivision, args.steps, args.keep_meshes, mesh_root))
 
     print(format_table(rows))
 
@@ -390,7 +361,3 @@ def main() -> int:
         print(f"\nJSON written to {json_path}")
 
     return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

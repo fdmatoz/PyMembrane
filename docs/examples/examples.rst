@@ -7,10 +7,10 @@ forms:
 
 - The source versions live under ``docs/examples`` and are useful for
   developers who want to inspect the documented scripts directly.
-- The installed, reviewer-friendly versions live under
-  ``pymembrane.examples`` and can be run with ``python -m`` after
-  installation. Their runtime input files are bundled inside the installed
-  package, so they do not depend on ``docs/examples`` at runtime.
+- The installed versions live under ``pymembrane.examples`` and can be run
+  with ``python -m`` after installation. Their runtime input files are
+  bundled inside the installed package, so they do not depend on
+  ``docs/examples`` at runtime.
 
 Primary interface
 -----------------
@@ -31,6 +31,7 @@ Then run the packaged examples from any working directory:
    python -m pymembrane.examples.disclination --quick
    python -m pymembrane.examples.disclination_mc --quick
    python -m pymembrane.examples.disclination_verlet --quick
+   python -m pymembrane.examples.size_scaling --quick
 
 Most examples also support ``--output-dir`` so that generated files are kept in
 one directory:
@@ -79,6 +80,12 @@ Packaged examples
    Monte Carlo vertex moves. Quick mode writes ``initial_mesh.vtk`` and
    ``hybrid_t*.vtk``. Typical quick-mode runtime is a few seconds.
 
+``pymembrane.examples.size_scaling``
+   Generates spherical meshes of increasing resolution and times three
+   workflows for each size: mesh generation, Monte Carlo vertex moves, and
+   Brownian dynamics. Quick mode runs subdivisions ``0 1 2`` with short Monte
+   Carlo and Brownian workflows.
+
 Dependency note
 ---------------
 
@@ -94,4 +101,5 @@ Dependency note
    hybrid_mc_bd
    shell_buckling
    minimization
+   size_scaling
    periodic
