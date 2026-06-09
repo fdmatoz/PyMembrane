@@ -19,7 +19,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Periodic wrinkling example for a triangulated sheet.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-        epilog="Use --quick for a short smoke-test run.",
+        epilog="Use --quick for a short version.",
     )
     parser.add_argument(
         "--quick",
@@ -52,7 +52,7 @@ def main() -> None:
     user_args = parser.parse_args()
 
     if user_args.quick:
-        print("Running in quick smoke-test mode")
+        print("Running in quick-check mode")
 
     output_dir = Path(user_args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

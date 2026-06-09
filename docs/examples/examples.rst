@@ -87,7 +87,7 @@ Packaged examples
    Generates spherical meshes of increasing resolution and times three
    workflows for each size: mesh generation, Monte Carlo vertex moves, and
    Brownian dynamics. Quick mode runs subdivisions ``0 1 2`` with a short
-   smoke-test length and repeated timings.
+   quick-check length and repeated timings.
 
 ``pymembrane.examples.liquid_membrane``
    Demonstrates dynamic triangulation with Monte Carlo edge flips and vertex

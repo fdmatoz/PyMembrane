@@ -22,7 +22,7 @@ three timings for each size:
 The legacy command ``python -m pymembrane.benchmarks.sphere`` remains as a
 compatibility wrapper and prints a message pointing to the installed example.
 
-The ``--quick`` option is intended as a smoke test. For more stable timings,
+The ``--quick`` option is intended as a quick check. For more stable timings,
 increase ``--steps`` and keep ``--repeat 3`` or larger.
 
 When quoting timings, include the CPU model, operating system, Python version,

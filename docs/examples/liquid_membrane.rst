@@ -85,7 +85,7 @@ The example writes:
 Quick Mode
 ----------
 
-``--quick`` runs a short smoke-test version of the same model. It keeps the
+``--quick`` runs a short version of the same model. It keeps the
 same mesh generation, force model, and integrator names while reducing the
 number of Monte Carlo steps.
 

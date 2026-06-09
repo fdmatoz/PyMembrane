@@ -16,7 +16,7 @@ Open it with:
 
    jupyter notebook docs/tutorials/pymembrane_first_simulation.ipynb
 
-If you prefer the packaged command-line smoke test instead of a notebook, run:
+If you prefer the packaged command-line quick check instead of a notebook, run:
 
 .. code-block:: bash
 

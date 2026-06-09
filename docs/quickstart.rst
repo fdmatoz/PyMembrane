@@ -1,7 +1,7 @@
 Quick Start
 ===========
 
-Reviewer Smoke Test
+Quick check
 -------------------
 
 If you only want to verify that the documented workflow works end to end, run:

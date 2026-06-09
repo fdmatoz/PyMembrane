@@ -184,7 +184,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Simple liquid-membrane example with Monte Carlo edge flips.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-        epilog="Use --quick for a short smoke-test run.",
+        epilog="Use --quick for a short version.",
     )
     parser.add_argument(
         "--quick",
@@ -243,7 +243,7 @@ def _resolve_path(base: Path, path: str) -> Path:
 def main() -> int:
     args = parse_args()
     if args.quick:
-        print("Running in quick smoke-test mode")
+        print("Running in quick-check mode")
 
     subdivision = args.subdivision if args.subdivision is not None else (1 if args.quick else 2)
     steps = args.steps if args.steps is not None else (100 if args.quick else 1000)

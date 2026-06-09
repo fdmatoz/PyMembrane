@@ -337,7 +337,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Size-scaling example for PyMembrane.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-        epilog="Use --quick for a short smoke-test run.",
+        epilog="Use --quick for a short version.",
     )
     parser.add_argument(
         "--quick",
@@ -425,7 +425,7 @@ def json_payload(args: argparse.Namespace, rows: list[BenchmarkRow]) -> dict[str
 def main() -> int:
     args = parse_args()
     if args.quick:
-        print("Running in quick smoke-test mode")
+        print("Running in quick-check mode")
 
     args.subdivisions = args.subdivisions if args.subdivisions is not None else ([0, 1, 2] if args.quick else [0, 1, 2, 3])
     args.steps = args.steps if args.steps is not None else (100 if args.quick else 1000)

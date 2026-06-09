@@ -37,9 +37,9 @@ For example, from outside the repository:
 
 bash cd /tmp python -m pymembrane.examples.periodic --quick 
 
-The --quick flag runs a short smoke-test version of each example. It reduces runtime while keeping the same physical setup, force models, and simulation workflow as the full example.
+The --quick flag runs a short version of each example suitable for checking the installation and example workflow. It reduces runtime while keeping the same physical setup, force models, and simulation workflow as the full example.
 
-The size-scaling example generates spherical meshes of increasing resolution and times mesh generation, Monte Carlo vertex moves, and Brownian dynamics. The ``--quick`` option is intended as a smoke test; for more stable timings, increase ``--steps`` and keep ``--repeat 3`` or larger.
+The size-scaling example generates spherical meshes of increasing resolution and times mesh generation, Monte Carlo vertex moves, and Brownian dynamics. The ``--quick`` option is intended as a quick check; for more stable timings, increase ``--steps`` and keep ``--repeat 3`` or larger.
 
 The documentation source scripts are kept under docs/examples; the installed runnable versions live under pymembrane.examples and carry their runtime input files with them.
 

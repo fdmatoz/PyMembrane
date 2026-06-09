@@ -60,7 +60,7 @@ directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer Brownian-dynamics steps.
 
 Buckling
@@ -115,7 +115,7 @@ the chosen output directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer Monte Carlo steps.
 
 Minimizer
@@ -170,7 +170,7 @@ output directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer minimizer iterations.
 
 Disclination
@@ -228,7 +228,7 @@ directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer Brownian-dynamics steps.
 
 Monte Carlo disclination
@@ -286,7 +286,7 @@ to the chosen output directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer Monte Carlo steps.
 
 Velocity-Verlet disclination
@@ -344,7 +344,7 @@ directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer snapshots and
+``--quick`` reduces the run to a short quick check with fewer snapshots and
 fewer velocity-Verlet steps.
 
 Hybrid MC + BD
@@ -406,7 +406,7 @@ directory.
 Quick mode
 ~~~~~~~~~~
 
-``--quick`` reduces the run to a short smoke test with fewer cycles and fewer
+``--quick`` reduces the run to a short quick check with fewer cycles and fewer
 Brownian-dynamics and Monte Carlo steps.
 
 Size Scaling
@@ -479,7 +479,7 @@ Quick mode
 ~~~~~~~~~~
 
 ``--quick`` reduces the default subdivision list to ``0 1 2`` and runs a short
-smoke-test length of 100 steps for the Monte Carlo and Brownian dynamics
+quick-check length of 100 steps for the Monte Carlo and Brownian dynamics
 workflows. For more stable timings, increase ``--steps`` and keep
 ``--repeat 3`` or larger.
 
@@ -548,6 +548,6 @@ the ``mesh_inputs/*.inp`` files are also available.
 Quick mode
 ^^^^^^^^^^
 
-``--quick`` reduces the run to a short smoke test with fewer Monte Carlo
+``--quick`` reduces the run to a short quick check with fewer Monte Carlo
 steps, while keeping the same mesh generation, force model, and integrator
 names.

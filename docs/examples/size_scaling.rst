@@ -42,6 +42,6 @@ Quick mode
 ----------
 
 ``--quick`` reduces the default subdivision list to ``0 1 2`` and runs a short
-smoke-test length of 100 steps for the Monte Carlo and Brownian dynamics
+quick-check length of 100 steps for the Monte Carlo and Brownian dynamics
 workflows with ``--repeat 3`` and ``--warmup 1``. For more stable timings,
 increase ``--steps`` and keep ``--repeat 3`` or larger.
