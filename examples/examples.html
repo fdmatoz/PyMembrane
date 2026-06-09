@@ -376,9 +376,11 @@
 <li class="toctree-l2"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
 </ul>
 </div>
 </nav></div>
@@ -447,10 +449,10 @@ forms:</p>
 <ul class="simple">
 <li><p>The source versions live under <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> and are useful for
 developers who want to inspect the documented scripts directly.</p></li>
-<li><p>The installed, reviewer-friendly versions live under
-<code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code> and can be run with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span></code> after
-installation. Their runtime input files are bundled inside the installed
-package, so they do not depend on <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> at runtime.</p></li>
+<li><p>The installed versions live under <code class="docutils literal notranslate"><span class="pre">pymembrane.examples</span></code> and can be run
+with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span></code> after installation. Their runtime input files are
+bundled inside the installed package, so they do not depend on
+<code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> at runtime.</p></li>
 </ul>
 <section id="primary-interface">
 <h2>Primary interface<a class="headerlink" href="#primary-interface" title="Link to this heading">#</a></h2>
@@ -465,6 +467,7 @@ python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.mini
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_mc<span class="w"> </span>--quick
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.disclination_verlet<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--quick
 </pre></div>
 </div>
 <p>Most examples also support <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code> so that generated files are kept in
@@ -506,6 +509,11 @@ disclination problem by alternating Brownian dynamics vertex relaxation with
 Monte Carlo vertex moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and
 <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
 </dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.size_scaling</span></code></dt><dd><p>Generates spherical meshes of increasing resolution and times three
+workflows for each size: mesh generation, Monte Carlo vertex moves, and
+Brownian dynamics. Quick mode runs subdivisions <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">1</span> <span class="pre">2</span></code> with short Monte
+Carlo and Brownian workflows.</p>
+</dd>
 </dl>
 </section>
 <section id="dependency-note">
@@ -522,6 +530,7 @@ Monte Carlo vertex moves. Quick mode writes <code class="docutils literal notran
 <li class="toctree-l1"><a class="reference internal" href="hybrid_mc_bd.html">Hybrid Brownian + Monte Carlo Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_buckling.html">Caspar-Klug Thin Shells Buckling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="minimization.html">Constant Volume Energy Minimization Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="size_scaling.html">Size Scaling Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="periodic.html">Periodic Boundary</a></li>
 </ul>
 </div>

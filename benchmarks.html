@@ -427,76 +427,25 @@
                   
   <section id="benchmarks">
 <h1>Benchmarks<a class="headerlink" href="#benchmarks" title="Link to this heading">#</a></h1>
-<section id="sphere-cpu-benchmark">
-<h2>Sphere CPU Benchmark<a class="headerlink" href="#sphere-cpu-benchmark" title="Link to this heading">#</a></h2>
-<p>PyMembrane now includes a small, reproducible CPU benchmark based on generated
-triangulated spherical meshes. The goal is to provide a portable timing
-reference without requiring external mesh downloads or optional visualization
-libraries.</p>
-</section>
-<section id="why-this-benchmark-exists">
-<h2>Why this benchmark exists<a class="headerlink" href="#why-this-benchmark-exists" title="Link to this heading">#</a></h2>
-<p>The paper uses closed triangulated shells in several places, including the
-virus, minimization, and Brownian/Monte Carlo examples. A generated icosphere
-benchmark stays close to those use cases while remaining simple enough for a
-reviewer to run directly from the installed package.</p>
-</section>
-<section id="how-meshes-are-generated">
-<h2>How meshes are generated<a class="headerlink" href="#how-meshes-are-generated" title="Link to this heading">#</a></h2>
-<p>The benchmark starts from a regular icosahedron and recursively subdivides each
-triangle into four smaller triangles. After each split, the new vertices are
-projected back to a sphere of fixed radius. The generated meshes are written to
-temporary PyMembrane input files using the same vertex and face format used by
-the documented examples.</p>
-</section>
-<section id="how-to-run">
-<h2>How to run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
-<p>From the repository root:</p>
+<section id="size-scaling-example">
+<h2>Size-Scaling Example<a class="headerlink" href="#size-scaling-example" title="Link to this heading">#</a></h2>
+<p>The sphere size-scaling workflow is now available as an installed example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.benchmarks.sphere<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.benchmarks.sphere<span class="w"> </span>--subdivisions<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>--json<span class="w"> </span>sphere_benchmark.json
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--quick
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--subdivisions<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>--steps<span class="w"> </span><span class="m">100</span><span class="w"> </span>--json<span class="w"> </span>size_scaling.json
 </pre></div>
 </div>
-<p>If you want to keep the generated <code class="docutils literal notranslate"><span class="pre">.inp</span></code> files instead of using temporary
-directories:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.benchmarks.sphere<span class="w"> </span>--keep-meshes<span class="w"> </span>--output-dir<span class="w"> </span>sphere_benchmark_output
-</pre></div>
-</div>
-</section>
-<section id="what-is-measured">
-<h2>What is measured<a class="headerlink" href="#what-is-measured" title="Link to this heading">#</a></h2>
+<p>This example generates spherical meshes of increasing resolution and reports
+three timings for each size:</p>
 <ul class="simple">
-<li><p>Python icosphere mesh generation</p></li>
-<li><p>Writing PyMembrane-compatible vertex/face input files</p></li>
-<li><p>Mesh loading through <code class="docutils literal notranslate"><span class="pre">System.read_mesh_from_files(...)</span></code></p></li>
-<li><p>Lightweight geometry/compute calls such as <code class="docutils literal notranslate"><span class="pre">edge_lengths()</span></code> and <code class="docutils literal notranslate"><span class="pre">volume()</span></code></p></li>
-<li><p>Repeated energy evaluation with the same closed-shell force family used in
-the documentation examples</p></li>
-<li><p>A short Monte Carlo vertex-move workflow using the existing public integrator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_generation</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mc_vertex_move</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brownian_dynamics</span></code></p></li>
 </ul>
-</section>
-<section id="what-is-not-measured">
-<h2>What is not measured<a class="headerlink" href="#what-is-not-measured" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>GPU acceleration</p></li>
-<li><p>External package comparisons</p></li>
-<li><p>Large-scale parallel scaling</p></li>
-<li><p>Edge flipping</p></li>
-</ul>
-</section>
-<section id="how-to-report-results">
-<h2>How to report results<a class="headerlink" href="#how-to-report-results" title="Link to this heading">#</a></h2>
-<p>When quoting benchmark numbers, include:</p>
-<ul class="simple">
-<li><p>CPU model</p></li>
-<li><p>operating system</p></li>
-<li><p>Python version</p></li>
-<li><p>compiler/build mode if known</p></li>
-<li><p>the exact benchmark command used</p></li>
-</ul>
-<p>This benchmark is intended as a portable CPU reference for the public
-C++/pybind11 release. Dedicated GPU acceleration remains future work and is not
-required to install or run the current examples.</p>
+<p>The legacy command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.benchmarks.sphere</span></code> remains as a
+compatibility wrapper and prints a message pointing to the installed example.</p>
+<p>When quoting timings, include the CPU model, operating system, Python version,
+compiler/build mode if known, and the exact command used.</p>
 </section>
 </section>
 
@@ -547,13 +496,7 @@ required to install or run the current examples.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphere-cpu-benchmark">Sphere CPU Benchmark</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-benchmark-exists">Why this benchmark exists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-meshes-are-generated">How meshes are generated</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run">How to run</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-measured">What is measured</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-not-measured">What is not measured</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-report-results">How to report results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-scaling-example">Size-Scaling Example</a></li>
 </ul>
   </nav></div>
 
