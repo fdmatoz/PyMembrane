@@ -55,6 +55,11 @@ input files are bundled with the package.
      - ``python -m pymembrane.examples.hybrid_mc_bd --quick``
      - few seconds
      - ``initial_mesh.vtk``, ``hybrid_t*.vtk``; ``--quick`` reduces cycles and MD/MC step counts
+   * - ``liquid_membrane``
+     - Bending-dominated dynamic triangulation with edge flips and vertex moves
+     - ``python -m pymembrane.examples.liquid_membrane --quick``
+     - few seconds
+     - ``initial.vtk``, ``final.vtk``, ``final.obj``, ``summary.json``; ``--quick`` reduces Monte Carlo steps
    * - ``size_scaling``
      - Spherical size scaling with mesh generation, Monte Carlo vertex moves,
        and Brownian dynamics
@@ -82,3 +87,4 @@ Reproducibility Checklist
    tutorial
    examples
    size_scaling
+   liquid_membrane

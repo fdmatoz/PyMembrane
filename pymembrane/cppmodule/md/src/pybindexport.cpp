@@ -143,8 +143,8 @@ PYBIND11_MODULE(_core, m)
     export_HE_HalfEdge_Vector(m);
     export_HE_HalfEdge(m);
     export_MeshOperations(m);
-
     //compute 
     export_ComputeMesh(m);
+
 
 }

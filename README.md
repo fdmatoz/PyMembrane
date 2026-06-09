@@ -29,7 +29,9 @@ If installation fails, first check that the active environment contains a C++ co
 Packaged examples are available under pymembrane.examples and can be run from any working directory after installation:
 
 bash python -m pymembrane.examples.periodic --quick python -m pymembrane.examples.minimizer --quick python -m pymembrane.examples.buckling --quick python -m pymembrane.examples.disclination --quick 
-bash python -m pymembrane.examples.size_scaling --quick
+bash python -m pymembrane.examples.size_scaling --quick python -m pymembrane.examples.liquid_membrane --quick
+
+Liquid membrane: demonstrates dynamic triangulation with Monte Carlo edge flips.
 
 For example, from outside the repository:
 
@@ -37,7 +39,7 @@ bash cd /tmp python -m pymembrane.examples.periodic --quick
 
 The --quick flag runs a short smoke-test version of each example. It reduces runtime while keeping the same physical setup, force models, and simulation workflow as the full example.
 
-The size-scaling example generates spherical meshes of increasing resolution and times mesh generation, Monte Carlo vertex moves, and Brownian dynamics.
+The size-scaling example generates spherical meshes of increasing resolution and times mesh generation, Monte Carlo vertex moves, and Brownian dynamics. The ``--quick`` option is intended as a smoke test; for more stable timings, increase ``--steps`` and keep ``--repeat 3`` or larger.
 
 The documentation source scripts are kept under docs/examples; the installed runnable versions live under pymembrane.examples and carry their runtime input files with them.
 

@@ -15,11 +15,33 @@ from .._resources import example_data_dir
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
-    parser.add_argument("--quick", action="store_true")
-    parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
-    parser.add_argument("--max_iter", type=int, default=None, help="Number of iteration steps")
-    parser.add_argument("--output-dir", default=".", help="directory for output files")
+    parser = argparse.ArgumentParser(
+        description="Constant-volume minimization example for a strained vesicle.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        epilog="Use --quick for a short smoke-test run.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Run a short version of the example for testing the installation.",
+    )
+    parser.add_argument(
+        "--snapshots",
+        type=int,
+        default=None,
+        help="Number of output snapshots written during the run.",
+    )
+    parser.add_argument(
+        "--max_iter",
+        type=int,
+        default=None,
+        help="Maximum number of FIRE iterations used for each minimization call.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory where output mesh files are written.",
+    )
     user_args = parser.parse_args()
 
     if user_args.quick:

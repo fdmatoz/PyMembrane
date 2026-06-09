@@ -15,11 +15,33 @@ from .._resources import example_data_dir
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Please provide: snapshots and run_steps")
-    parser.add_argument("--quick", action="store_true")
-    parser.add_argument("--snapshots", type=int, default=None, help="Number of snapshots")
-    parser.add_argument("--run_steps", type=int, default=None, help="Number of run steps")
-    parser.add_argument("--output-dir", default=".", help="directory for output files")
+    parser = argparse.ArgumentParser(
+        description="Caspar-Klug shell buckling example using Monte Carlo vertex moves.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        epilog="Use --quick for a short smoke-test run.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Run a short version of the example for testing the installation.",
+    )
+    parser.add_argument(
+        "--snapshots",
+        type=int,
+        default=None,
+        help="Number of output snapshots written during the run.",
+    )
+    parser.add_argument(
+        "--run_steps",
+        type=int,
+        default=None,
+        help="Number of Monte Carlo steps between output snapshots.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory where output mesh files are written.",
+    )
     user_args = parser.parse_args()
 
     if user_args.quick:

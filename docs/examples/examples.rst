@@ -11,6 +11,8 @@ forms:
   with ``python -m`` after installation. Their runtime input files are
   bundled inside the installed package, so they do not depend on
   ``docs/examples`` at runtime.
+- Command-line arguments for the packaged examples are documented on the
+  ``command_line_arguments`` page.
 
 Primary interface
 -----------------
@@ -32,6 +34,7 @@ Then run the packaged examples from any working directory:
    python -m pymembrane.examples.disclination_mc --quick
    python -m pymembrane.examples.disclination_verlet --quick
    python -m pymembrane.examples.size_scaling --quick
+   python -m pymembrane.examples.liquid_membrane --quick
 
 Most examples also support ``--output-dir`` so that generated files are kept in
 one directory:
@@ -83,8 +86,13 @@ Packaged examples
 ``pymembrane.examples.size_scaling``
    Generates spherical meshes of increasing resolution and times three
    workflows for each size: mesh generation, Monte Carlo vertex moves, and
-   Brownian dynamics. Quick mode runs subdivisions ``0 1 2`` with short Monte
-   Carlo and Brownian workflows.
+   Brownian dynamics. Quick mode runs subdivisions ``0 1 2`` with a short
+   smoke-test length and repeated timings.
+
+``pymembrane.examples.liquid_membrane``
+   Demonstrates dynamic triangulation with Monte Carlo edge flips and vertex
+   moves. Quick mode writes ``initial.vtk``, ``final.vtk``, ``final.obj`` and
+   ``summary.json``.
 
 Dependency note
 ---------------
@@ -99,6 +107,8 @@ Dependency note
    
    disclination
    hybrid_mc_bd
+   liquid_membrane
+   command_line_arguments
    shell_buckling
    minimization
    size_scaling

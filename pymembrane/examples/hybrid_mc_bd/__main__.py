@@ -32,13 +32,45 @@ def _mesh_files(n: int) -> tuple[Path, Path]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Hybrid Brownian dynamics plus Monte Carlo disclination example")
-    parser.add_argument("--quick", action="store_true")
-    parser.add_argument("--cycles", type=int, default=None, help="Number of hybrid cycles")
-    parser.add_argument("--md-steps", type=int, default=None, help="Brownian dynamics steps per cycle")
-    parser.add_argument("--mc-steps", type=int, default=None, help="Monte Carlo steps per temperature per cycle")
-    parser.add_argument("--N", type=int, default=14, help="Pentagon number size")
-    parser.add_argument("--output-dir", default=".", help="directory for output files")
+    parser = argparse.ArgumentParser(
+        description="Hybrid Brownian dynamics plus Monte Carlo disclination example.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        epilog="Use --quick for a short smoke-test run.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Run a short version of the example for testing the installation.",
+    )
+    parser.add_argument(
+        "--cycles",
+        type=int,
+        default=None,
+        help="Number of alternating Brownian/Monte Carlo cycles to run.",
+    )
+    parser.add_argument(
+        "--md-steps",
+        type=int,
+        default=None,
+        help="Brownian-dynamics steps per hybrid cycle.",
+    )
+    parser.add_argument(
+        "--mc-steps",
+        type=int,
+        default=None,
+        help="Monte Carlo steps per temperature value in each hybrid cycle.",
+    )
+    parser.add_argument(
+        "--N",
+        type=int,
+        default=14,
+        help="Pentagon mesh size used to select the bundled input mesh.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory where output mesh files are written.",
+    )
     user_args = parser.parse_args()
 
     if user_args.quick:

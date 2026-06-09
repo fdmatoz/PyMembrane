@@ -5,9 +5,9 @@ import json
 import math
 import platform
 import sys
+import statistics
 import tempfile
 import time
-from contextlib import nullcontext
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,9 +32,12 @@ class BenchmarkRow:
     edges: int
     workflow: str
     operations: int
+    repeat: int
+    warmup: int
     wall_s: float
     rate: float
     rate_units: str
+    all_wall_s: list[float]
 
 
 def _normalize(point: tuple[float, float, float], radius: float) -> tuple[float, float, float]:
@@ -170,6 +173,18 @@ def _build_common_evolver(system: mb.System, avg_edge_length: float) -> mb.Evolv
     return evolver
 
 
+def _timed_repeats(repeat: int, warmup: int, func) -> list[float]:
+    for _ in range(warmup):
+        func()
+
+    wall_s_values: list[float] = []
+    for _ in range(repeat):
+        start = time.perf_counter()
+        func()
+        wall_s_values.append(time.perf_counter() - start)
+    return wall_s_values
+
+
 def _benchmark_workflow(
     subdivision: int,
     vertices: int,
@@ -178,11 +193,13 @@ def _benchmark_workflow(
     workflow: str,
     operations: int,
     units: str,
-    func,
+    repeat: int,
+    warmup: int,
+    wall_s_values: list[float],
 ) -> BenchmarkRow:
-    start = time.perf_counter()
-    func()
-    wall = time.perf_counter() - start
+    if not wall_s_values:
+        raise ValueError("at least one timed repeat is required")
+    wall = statistics.median(wall_s_values)
     rate = float(operations) / wall if wall > 0.0 else float("inf")
     return BenchmarkRow(
         subdivision=subdivision,
@@ -191,15 +208,20 @@ def _benchmark_workflow(
         edges=edges,
         workflow=workflow,
         operations=operations,
+        repeat=repeat,
+        warmup=warmup,
         wall_s=wall,
         rate=rate,
         rate_units=units,
+        all_wall_s=wall_s_values,
     )
 
 
 def run_one_subdivision(
     subdivision: int,
     steps: int,
+    repeat: int,
+    warmup: int,
     keep_meshes: bool,
     mesh_root: Path | None,
 ) -> list[BenchmarkRow]:
@@ -219,14 +241,26 @@ def run_one_subdivision(
         if expected is None:
             raise ValueError(f"unsupported subdivision level {subdivision}")
 
-        def mesh_generation() -> tuple[list[tuple[float, float, float]], list[tuple[int, int, int]], Path, Path]:
+        mesh_state: dict[str, object] = {}
+
+        def mesh_generation() -> None:
             vertices, faces = make_icosphere(subdivision)
             vertex_file, face_file = write_mesh_files(mesh_dir, subdivision, vertices, faces)
-            return vertices, faces, vertex_file, face_file
+            mesh_state["vertices"] = vertices
+            mesh_state["faces"] = faces
+            mesh_state["vertex_file"] = vertex_file
+            mesh_state["face_file"] = face_file
 
-        start = time.perf_counter()
-        vertices, faces, vertex_file, face_file = mesh_generation()
-        wall = time.perf_counter() - start
+        mesh_walls = _timed_repeats(repeat, warmup, mesh_generation)
+        vertices = mesh_state.get("vertices")
+        faces = mesh_state.get("faces")
+        vertex_file = mesh_state.get("vertex_file")
+        face_file = mesh_state.get("face_file")
+        if not isinstance(vertices, list) or not isinstance(faces, list):
+            raise RuntimeError("mesh generation did not produce vertex and face data")
+        if not isinstance(vertex_file, Path) or not isinstance(face_file, Path):
+            raise RuntimeError("mesh generation did not produce mesh files")
+
         edge_count = edge_count_from_faces(faces)
         if (len(vertices), len(faces), edge_count) != expected:
             raise ValueError(
@@ -235,16 +269,17 @@ def run_one_subdivision(
             )
 
         rows.append(
-            BenchmarkRow(
-                subdivision=subdivision,
-                vertices=len(vertices),
-                faces=len(faces),
-                edges=edge_count,
-                workflow="mesh_generation",
-                operations=1,
-                wall_s=wall,
-                rate=(1.0 / wall) if wall > 0.0 else float("inf"),
-                rate_units="meshes/s",
+            _benchmark_workflow(
+                subdivision,
+                len(vertices),
+                len(faces),
+                edge_count,
+                "mesh_generation",
+                1,
+                "meshes/s",
+                repeat,
+                warmup,
+                mesh_walls,
             )
         )
 
@@ -264,7 +299,9 @@ def run_one_subdivision(
                 "mc_vertex_move",
                 steps,
                 "steps/s",
-                mc_workflow,
+                repeat,
+                warmup,
+                _timed_repeats(repeat, warmup, mc_workflow),
             )
         )
 
@@ -285,7 +322,9 @@ def run_one_subdivision(
                 "brownian_dynamics",
                 steps,
                 "steps/s",
-                bd_workflow,
+                repeat,
+                warmup,
+                _timed_repeats(repeat, warmup, bd_workflow),
             )
         )
         return rows
@@ -295,26 +334,71 @@ def run_one_subdivision(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Size-scaling example for PyMembrane.")
-    parser.add_argument("--quick", action="store_true", help="run a small smoke example")
-    parser.add_argument("--subdivisions", nargs="+", type=int, default=None, help="icosphere subdivision levels")
-    parser.add_argument("--steps", type=int, default=None, help="workflow step count")
-    parser.add_argument("--json", default=None, help="write results to JSON")
-    parser.add_argument("--keep-meshes", action="store_true", help="keep generated mesh files on disk")
-    parser.add_argument("--output-dir", default="size_scaling_meshes", help="directory for kept mesh files")
+    parser = argparse.ArgumentParser(
+        description="Size-scaling example for PyMembrane.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        epilog="Use --quick for a short smoke-test run.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Run a short version of the example for testing the installation.",
+    )
+    parser.add_argument(
+        "--subdivisions",
+        nargs="+",
+        type=int,
+        default=None,
+        help="Icosphere subdivision levels used to generate the spherical meshes.",
+    )
+    parser.add_argument(
+        "--steps",
+        type=int,
+        default=None,
+        help="Number of evolution steps used for the Monte Carlo and Brownian workflows.",
+    )
+    parser.add_argument(
+        "--repeat",
+        type=int,
+        default=None,
+        help="Number of timed repeats collected for each workflow.",
+    )
+    parser.add_argument(
+        "--warmup",
+        type=int,
+        default=None,
+        help="Number of untimed warmup runs collected before timing each workflow.",
+    )
+    parser.add_argument(
+        "--json",
+        default=None,
+        help="Write the timing summary to a JSON file.",
+    )
+    parser.add_argument(
+        "--keep-meshes",
+        action="store_true",
+        help="Keep the generated temporary mesh files on disk.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="size_scaling_meshes",
+        help="Directory used when keeping generated mesh files.",
+    )
     return parser.parse_args()
 
 
 def format_table(rows: list[BenchmarkRow]) -> str:
     header = (
         f"{'subdiv':>6} {'vertices':>8} {'faces':>8} {'edges':>8} "
-        f"{'workflow':<18} {'operations':>10} {'wall_s':>12} {'rate':>12} {'rate_units':<10}"
+        f"{'workflow':<18} {'operations':>10} {'repeats':>8} {'warmups':>8} "
+        f"{'wall_s':>12} {'steps_per_s':>12} {'rate_units':<10}"
     )
     lines = [header]
     for row in rows:
         lines.append(
             f"{row.subdivision:>6} {row.vertices:>8} {row.faces:>8} {row.edges:>8} "
-            f"{row.workflow:<18} {row.operations:>10} {row.wall_s:>12.6f} {row.rate:>12.3f} {row.rate_units:<10}"
+            f"{row.workflow:<18} {row.operations:>10} {row.repeat:>8} {row.warmup:>8} "
+            f"{row.wall_s:>12.6f} {row.rate:>12.3f} {row.rate_units:<10}"
         )
     return "\n".join(lines)
 
@@ -330,6 +414,9 @@ def json_payload(args: argparse.Namespace, rows: list[BenchmarkRow]) -> dict[str
         "parameters": {
             "subdivisions": args.subdivisions,
             "steps": args.steps,
+            "repeat": args.repeat,
+            "warmup": args.warmup,
+            "statistic": "median",
         },
         "results": [asdict(row) for row in rows],
     }
@@ -341,7 +428,14 @@ def main() -> int:
         print("Running in quick smoke-test mode")
 
     args.subdivisions = args.subdivisions if args.subdivisions is not None else ([0, 1, 2] if args.quick else [0, 1, 2, 3])
-    args.steps = args.steps if args.steps is not None else (10 if args.quick else 100)
+    args.steps = args.steps if args.steps is not None else (100 if args.quick else 1000)
+    args.repeat = args.repeat if args.repeat is not None else 3
+    args.warmup = args.warmup if args.warmup is not None else 1
+
+    if args.repeat < 1:
+        raise ValueError("--repeat must be at least 1")
+    if args.warmup < 0:
+        raise ValueError("--warmup must be at least 0")
 
     mesh_root = None
     if args.keep_meshes:
@@ -350,7 +444,7 @@ def main() -> int:
 
     rows: list[BenchmarkRow] = []
     for subdivision in args.subdivisions:
-        rows.extend(run_one_subdivision(subdivision, args.steps, args.keep_meshes, mesh_root))
+        rows.extend(run_one_subdivision(subdivision, args.steps, args.repeat, args.warmup, args.keep_meshes, mesh_root))
 
     print(format_table(rows))
 

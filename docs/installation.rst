@@ -83,6 +83,7 @@ they can be run from any working directory:
    python -m pymembrane.examples.minimizer --quick
    python -m pymembrane.examples.disclination --quick
    python -m pymembrane.examples.hybrid_mc_bd --quick
+   python -m pymembrane.examples.liquid_membrane --quick
 
 The ``python -m package.module`` form is the standard Python interface for
 executing an installed module as top-level code.

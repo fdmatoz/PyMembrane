@@ -13,6 +13,7 @@ If you only want to verify that the documented workflow works end to end, run:
    python -c "from pymembrane import *; print('import ok')"
    python -m pymembrane.examples.periodic --quick
    python -m pymembrane.examples.hybrid_mc_bd --quick
+   python -m pymembrane.examples.liquid_membrane --quick
 
 Minimal workflow
 ----------------
@@ -54,6 +55,7 @@ directly as installed modules:
    python -m pymembrane.examples.minimizer --quick
    python -m pymembrane.examples.disclination --quick
    python -m pymembrane.examples.hybrid_mc_bd --quick
+   python -m pymembrane.examples.liquid_membrane --quick
 
 The source versions remain under ``docs/examples``. The installed copies under
 ``pymembrane.examples`` package the required input data.
