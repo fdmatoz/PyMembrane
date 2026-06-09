@@ -58,8 +58,8 @@ output.
       :link: benchmarks
       :link-type: doc
 
-      Run the size-scaling benchmark that reports mesh generation and
-      simulation timings on spherical meshes.
+      Explore the internal scaling benchmark and scope comparison for
+      spherical meshes and membrane-model workflows.
 
    .. grid-item-card:: Related examples
       :link: examples/liquid_membrane
@@ -126,4 +126,3 @@ developing new membrane models.
    examples/size_scaling
    contributors
    pythonapi/references
-

@@ -84,15 +84,22 @@ Packaged examples
    ``hybrid_t*.vtk``. Typical quick-mode runtime is a few seconds.
 
 ``pymembrane.examples.size_scaling``
-   Generates spherical meshes of increasing resolution and times three
-   workflows for each size: mesh generation, Monte Carlo vertex moves, and
-   Brownian dynamics. Quick mode runs subdivisions ``0 1 2`` with a short
-   quick-check length and repeated timings.
+   Generates spherical meshes of increasing resolution and reports the cost of
+   core operations on each size, including energy evaluation, Monte Carlo
+   vertex moves, Monte Carlo edge flips, and Brownian dynamics. Quick mode
+   runs subdivisions ``0 1 2`` with a short benchmark length and repeated
+   timings.
 
 ``pymembrane.examples.liquid_membrane``
    Demonstrates dynamic triangulation with Monte Carlo edge flips and vertex
    moves. Quick mode writes ``initial.vtk``, ``final.vtk``, ``final.obj`` and
    ``summary.json``.
+
+Benchmarking
+------------
+
+The size-scaling benchmark and scope comparison page is available here:
+:doc:`Performance benchmark and scope comparison <benchmarks>`.
 
 Dependency note
 ---------------

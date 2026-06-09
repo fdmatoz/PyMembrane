@@ -431,12 +431,18 @@ Arguments
      - Description
    * - ``--quick``
      - ``False``
-     - Run a short version of the example for testing the installation.
+     - Run a short version suitable for checking the installation and the
+       benchmark workflow.
    * - ``--subdivisions``
      - ``None``
      - Icosphere subdivision levels used to generate the spherical meshes.
        Runtime default: ``[0, 1, 2]`` with ``--quick`` or ``[0, 1, 2, 3]``
-       otherwise.
+       otherwise. This option is mutually exclusive with ``--vertices``.
+   * - ``--vertices``
+     - ``None``
+     - Target vertex counts. Each requested size is mapped to the nearest
+       available icosphere subdivision level. This option is mutually
+       exclusive with ``--subdivisions``.
    * - ``--steps``
      - ``None``
      - Number of evolution steps used for the Monte Carlo and Brownian
@@ -453,6 +459,13 @@ Arguments
    * - ``--json``
      - ``None``
      - Write the timing summary to a JSON file.
+   * - ``--csv``
+     - ``None``
+     - Write the timing summary to a CSV file.
+   * - ``--dump-output``
+     - ``False``
+     - Time a representative VTK output write in addition to the compute
+       benchmarks.
    * - ``--keep-meshes``
      - ``False``
      - Keep the generated temporary mesh files on disk.
@@ -466,21 +479,22 @@ Recommended commands
 .. code-block:: bash
 
    python -m pymembrane.examples.size_scaling --quick
-   python -m pymembrane.examples.size_scaling --subdivisions 1 2 3 4 --steps 1000 --repeat 3 --json size_scaling.json
+   python -m pymembrane.examples.size_scaling --vertices 1000 5000 10000 50000 --steps 10000 --repeat 3 --json size_scaling.json
 
 Expected output
 ~~~~~~~~~~~~~~~
 
-The example prints a table with ``mesh_generation``, ``mc_vertex_move``, and
-``brownian_dynamics`` rows. If ``--json`` is supplied, the timings are written
-to a JSON file.
+The example prints a table with ``energy_eval_only``, ``mc_vertex_move``,
+``mc_edge_flip``, and ``brownian_dynamics`` rows. If ``--dump-output`` is
+used, a ``dump_vtk`` row is added. If ``--json`` or ``--csv`` is supplied, the
+timings are written to the chosen file.
 
 Quick mode
 ~~~~~~~~~~
 
 ``--quick`` reduces the default subdivision list to ``0 1 2`` and runs a short
-quick-check length of 100 steps for the Monte Carlo and Brownian dynamics
-workflows. For more stable timings, increase ``--steps`` and keep
+version of the benchmark with ``100`` steps, ``--repeat 3``, and
+``--warmup 1``. For more stable timings, increase ``--steps`` and keep
 ``--repeat 3`` or larger.
 
 Liquid Membrane Example
