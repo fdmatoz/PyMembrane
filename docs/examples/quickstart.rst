@@ -20,47 +20,47 @@ input files are bundled with the package.
      - Command
      - Quick-mode runtime
      - Output files
-   * - ``periodic``
+   * - :doc:`periodic <examples/periodic>`
      - Periodic sheet wrinkling under uniaxial compression
      - ``python -m pymembrane.examples.periodic --quick``
      - few seconds
      - ``initial_mesh.vtk``, ``periodic_t*.vtk``; ``--quick`` reduces snapshots and MD steps
-   * - ``buckling``
+   * - :doc:`buckling <examples/shell_buckling>`
      - Caspar-Klug shell buckling with Monte Carlo vertex moves
      - ``python -m pymembrane.examples.buckling --quick``
      - few seconds
      - ``initial mesh.vtk``, ``sphere_t*.vtk``, ``final_mesh.vtk``; ``--quick`` reduces snapshots and MC steps
-   * - ``minimizer``
+   * - :doc:`minimizer <examples/minimization>`
      - Constant-volume vesicle minimization with FIRE
      - ``python -m pymembrane.examples.minimizer --quick``
      - few seconds
      - ``initial mesh.vtk``, ``minimization_t*.vtk``; ``--quick`` reduces snapshots and minimizer iterations
-   * - ``disclination``
+   * - :doc:`disclination <examples/disclination>`
      - Brownian relaxation of an open ``+1`` disclination
      - ``python -m pymembrane.examples.disclination --quick``
      - few seconds
      - ``initial mesh.vtk``, ``pentagon_t*.vtk``; ``--quick`` reduces snapshots and BD steps
-   * - ``disclination_mc``
+   * - :doc:`disclination_mc <examples/disclination>`
      - Monte Carlo relaxation of the same disclination
      - ``python -m pymembrane.examples.disclination_mc --quick``
      - few seconds
      - ``initial mesh.vtk``, ``pentagon_t*.vtk``, ``final_mesh.vtk``; ``--quick`` reduces snapshots and MC steps
-   * - ``disclination_verlet``
+   * - :doc:`disclination_verlet <examples/disclination>`
      - Velocity-Verlet relaxation of the same disclination
      - ``python -m pymembrane.examples.disclination_verlet --quick``
      - few seconds
      - ``initial mesh.vtk``, ``pentagon_t*.vtk``; ``--quick`` reduces snapshots and MD steps
-   * - ``hybrid_mc_bd``
+   * - :doc:`hybrid_mc_bd <examples/hybrid_mc_bd>`
      - Alternating Brownian dynamics and Monte Carlo vertex moves
      - ``python -m pymembrane.examples.hybrid_mc_bd --quick``
      - few seconds
      - ``initial_mesh.vtk``, ``hybrid_t*.vtk``; ``--quick`` reduces cycles and MD/MC step counts
-   * - ``liquid_membrane``
+   * - :doc:`liquid_membrane <examples/liquid_membrane>`
      - Bending-dominated dynamic triangulation with edge flips and vertex moves
      - ``python -m pymembrane.examples.liquid_membrane --quick``
      - few seconds
      - ``initial.vtk``, ``final.vtk``, ``final.obj``, ``summary.json``; ``--quick`` reduces Monte Carlo steps
-   * - ``size_scaling``
+   * - :doc:`size_scaling <examples/size_scaling>`
      - Spherical size scaling with mesh generation, Monte Carlo vertex moves,
        and Brownian dynamics
      - ``python -m pymembrane.examples.size_scaling --quick``

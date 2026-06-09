@@ -46,6 +46,6 @@ The hybrid example is also available as:
 Notes
 -----
 
-- The notebook is a lightweight tutorial and smoke run, not a production simulation.
+- The notebook is a lightweight tutorial run, not a production simulation.
 - Output files are written with the default dumper as ``.vtk`` and ``.obj``.
 - The input mesh files come from the bundled example data shipped with PyMembrane.
