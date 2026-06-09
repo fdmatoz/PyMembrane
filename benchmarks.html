@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Benchmarks &#8212; PyMembrane  documentation</title>
+    <title>Performance benchmark and scope comparison &#8212; PyMembrane  documentation</title>
   
   
   
@@ -186,7 +186,7 @@
 
 <li class=" current active">
   <a class="nav-link dropdown-item nav-internal" href="#">
-    Benchmarks
+    Performance benchmark and scope comparison
   </a>
 </li>
 
@@ -345,7 +345,7 @@
 
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
-    Benchmarks
+    Performance benchmark and scope comparison
   </a>
 </li>
 
@@ -450,7 +450,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Benchmarks</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Performance benchmark and scope comparison</span></li>
   </ul>
 </nav>
 </div>
@@ -467,29 +467,200 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="benchmarks">
-<h1>Benchmarks<a class="headerlink" href="#benchmarks" title="Link to this heading">#</a></h1>
-<section id="size-scaling-example">
-<h2>Size-Scaling Example<a class="headerlink" href="#size-scaling-example" title="Link to this heading">#</a></h2>
-<p>The sphere size-scaling workflow is now available as an installed example:</p>
+  <section id="performance-benchmark-and-scope-comparison">
+<h1>Performance benchmark and scope comparison<a class="headerlink" href="#performance-benchmark-and-scope-comparison" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This benchmark is not intended as a ranking of membrane-simulation
+packages.</p>
+<p>Different tools implement different discretizations, update schemes,
+neighbor data structures, parallelization strategies, compiler settings, and
+I/O conventions. Direct wall-clock comparison between packages is meaningful
+only when the physical model, mesh, update schedule, acceptance criterion,
+hardware, compiler flags, and thread count are matched.</p>
+<p>The purpose of this benchmark is to document PyMembrane’s internal scaling
+and to provide a reproducible protocol that users can adapt when comparing
+PyMembrane with other tools.</p>
+</div>
+<section id="internal-pymembrane-scaling-benchmark">
+<h2>Internal PyMembrane scaling benchmark<a class="headerlink" href="#internal-pymembrane-scaling-benchmark" title="Link to this heading">#</a></h2>
+<p>The installed example
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.examples.size_scaling</span></code> generates spherical meshes of
+increasing size and reports the cost of core operations on each mesh.</p>
+<p>The benchmark supports both subdivision-based and target-size-based runs:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--quick
-python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--subdivisions<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>--steps<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--repeat<span class="w"> </span><span class="m">3</span><span class="w"> </span>--json<span class="w"> </span>size_scaling.json
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.size_scaling<span class="w"> </span>--vertices<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="m">5000</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="m">50000</span><span class="w"> </span>--steps<span class="w"> </span><span class="m">10000</span><span class="w"> </span>--repeat<span class="w"> </span><span class="m">3</span><span class="w"> </span>--json<span class="w"> </span>size_scaling.json
 </pre></div>
 </div>
-<p>This example generates spherical meshes of increasing resolution and reports
-three timings for each size:</p>
+<p>The reported rows are:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mesh_generation</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mc_vertex_move</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">brownian_dynamics</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">energy_eval_only</span></code>: repeated <code class="docutils literal notranslate"><span class="pre">system.compute.energy(evolver)</span></code> calls</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mc_vertex_move</span></code>: Monte Carlo vertex displacement attempts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mc_edge_flip</span></code>: Monte Carlo edge-flip attempts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brownian_dynamics</span></code>: Brownian-dynamics vertex updates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dump_vtk</span></code>: optional output timing, separated from compute timing when
+<code class="docutils literal notranslate"><span class="pre">--dump-output</span></code> is used</p></li>
 </ul>
+<p>For each row, the example reports:</p>
+<ul class="simple">
+<li><p>number of vertices, edges, and faces</p></li>
+<li><p>number of attempted operations</p></li>
+<li><p>wall time</p></li>
+<li><p>rate in attempted operations per second</p></li>
+<li><p>seconds per <code class="docutils literal notranslate"><span class="pre">10^6</span></code> attempted operations</p></li>
+<li><p>acceptance ratio, when available from the API</p></li>
+<li><p>peak memory, when available</p></li>
+<li><p>CPU model</p></li>
+<li><p>operating system</p></li>
+<li><p>Python version</p></li>
+<li><p>compiler and compiler flags, when available</p></li>
+<li><p>number of threads</p></li>
+<li><p>PyMembrane version or git commit</p></li>
+</ul>
+<p>For the Monte Carlo rows, the <code class="docutils literal notranslate"><span class="pre">seconds</span> <span class="pre">per</span> <span class="pre">10^6</span> <span class="pre">attempted</span> <span class="pre">operations</span></code>
+normalization is read as seconds per <code class="docutils literal notranslate"><span class="pre">10^6</span></code> attempted vertex moves or edge
+flips, depending on the row.</p>
+<p>When quoting timings, include the exact command used and the relevant
+environment metadata. These benchmarks are intended to document PyMembrane’s
+serial scaling and practical cost of core operations, particularly
+dynamic-connectivity liquid-membrane moves, rather than to establish a
+universal ranking among membrane-simulation tools.</p>
 <p>The legacy command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pymembrane.benchmarks.sphere</span></code> remains as a
-compatibility wrapper and prints a message pointing to the installed example.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">--quick</span></code> option is intended as a quick check. For more stable timings,
-increase <code class="docutils literal notranslate"><span class="pre">--steps</span></code> and keep <code class="docutils literal notranslate"><span class="pre">--repeat</span> <span class="pre">3</span></code> or larger.</p>
-<p>When quoting timings, include the CPU model, operating system, Python version,
-compiler/build mode if known, and the exact command used.</p>
+compatibility wrapper and points to the installed example.</p>
+</section>
+<section id="feature-and-scope-comparison">
+<h2>Feature and scope comparison<a class="headerlink" href="#feature-and-scope-comparison" title="Link to this heading">#</a></h2>
+<p>The table below summarizes the public scope of several membrane-simulation
+tools as described in their documentation or primary publications. The
+comparison is intentionally qualitative and focuses on use case, model scope,
+and workflow style rather than on speed ranking.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 9.5%" />
+<col style="width: 12.2%" />
+<col style="width: 10.8%" />
+<col style="width: 9.5%" />
+<col style="width: 9.5%" />
+<col style="width: 9.5%" />
+<col style="width: 9.5%" />
+<col style="width: 9.5%" />
+<col style="width: 8.1%" />
+<col style="width: 12.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Package</p></th>
+<th class="head"><p>Primary purpose</p></th>
+<th class="head"><p>Membrane representation</p></th>
+<th class="head"><p>Liquid membrane / dynamic triangulation</p></th>
+<th class="head"><p>Elastic membrane support</p></th>
+<th class="head"><p>Monte Carlo support</p></th>
+<th class="head"><p>Brownian or molecular dynamics support</p></th>
+<th class="head"><p>Energy minimization support</p></th>
+<th class="head"><p>Python / parallel support</p></th>
+<th class="head"><p>Best comparison role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PyMembrane</p></td>
+<td><p>Flexible C++/Python framework for membrane simulations</p></td>
+<td><p>Triangulated surfaces</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Python API; serial C++ core</p></td>
+<td><p>Flexible framework and internal scaling reference</p></td>
+</tr>
+<tr class="row-odd"><td><p>TriMem</p></td>
+<td><p>Specialized hybrid Monte Carlo code for lipid membranes</p></td>
+<td><p>Triangulated lipid membranes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Limited / not the main focus</p></td>
+<td><p>Yes</p></td>
+<td><p>Python-wrapped C++ with OpenMP</p></td>
+<td><p>Closest performance comparator for fluid membranes with edge flips</p></td>
+</tr>
+<tr class="row-even"><td><p>flippy</p></td>
+<td><p>User-friendly lipid membrane simulation framework</p></td>
+<td><p>Dynamically triangulated membranes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes, including mixed fluid / elastic regions</p></td>
+<td><p>Yes</p></td>
+<td><p>Not the main focus</p></td>
+<td><p>Yes</p></td>
+<td><p>Python package</p></td>
+<td><p>Related fluid-membrane workflow with mixed fluid/elastic regions</p></td>
+</tr>
+<tr class="row-odd"><td><p>FreeDTS</p></td>
+<td><p>Mesoscale biomembrane simulation</p></td>
+<td><p>Dynamically triangulated surfaces with inclusions</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Not the main focus</p></td>
+<td><p>Yes</p></td>
+<td><p>Project-specific interface</p></td>
+<td><p>Biomembrane reference with vertex-based inclusions</p></td>
+</tr>
+<tr class="row-even"><td><p>Surface Evolver</p></td>
+<td><p>Surface-energy minimization with constraints</p></td>
+<td><p>Triangulated / simplex surfaces</p></td>
+<td><p>Not a native fluid-dynamics code</p></td>
+<td><p>Yes</p></td>
+<td><p>No native Monte Carlo membrane workflow</p></td>
+<td><p>No native Brownian / molecular dynamics workflow</p></td>
+<td><p>Yes</p></td>
+<td><p>Command-line / scriptable interface</p></td>
+<td><p>Historical minimization and constrained-surface reference</p></td>
+</tr>
+<tr class="row-odd"><td><p>Morpho</p></td>
+<td><p>Programmable shape optimization and soft-matter modeling</p></td>
+<td><p>Mesh-based optimization problems</p></td>
+<td><p>Not a native dynamically triangulated membrane code</p></td>
+<td><p>Yes</p></td>
+<td><p>Not a native Monte Carlo membrane workflow</p></td>
+<td><p>Not a native Brownian / molecular dynamics workflow</p></td>
+<td><p>Yes</p></td>
+<td><p>Programmable environment</p></td>
+<td><p>Optimization and scripting reference</p></td>
+</tr>
+<tr class="row-even"><td><p>LAMMPS</p></td>
+<td><p>General particle and coarse-grained molecular dynamics</p></td>
+<td><p>Particles and coarse-grained models</p></td>
+<td><p>Not a native triangulated membrane code</p></td>
+<td><p>Possible through model setup</p></td>
+<td><p>Yes, through Monte Carlo-related functionality and packages</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Python library with MPI parallelism</p></td>
+<td><p>Particle / coarse-grained reference, not a direct triangulated-membrane comparator</p></td>
+</tr>
+<tr class="row-odd"><td><p>HOOMD-blue</p></td>
+<td><p>Particle molecular dynamics and hard-particle Monte Carlo</p></td>
+<td><p>Particles and coarse-grained models</p></td>
+<td><p>Not a native triangulated membrane code</p></td>
+<td><p>Possible through model setup</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Python API; CPU/GPU support</p></td>
+<td><p>Particle / coarse-grained reference, not a direct triangulated-membrane comparator</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="scope-note">
+<h2>Scope note<a class="headerlink" href="#scope-note" title="Link to this heading">#</a></h2>
+<p>For large-scale simulations where the primary objective is maximum performance
+for fluid membranes, specialized dynamically triangulated membrane packages may
+be preferable. PyMembrane’s focus is on providing a modular and extensible
+C++/Python framework in which forces, integrators, minimizers, constraints, and
+output routines can be combined and extended for new membrane models.</p>
 </section>
 </section>
 
@@ -540,7 +711,9 @@ compiler/build mode if known, and the exact command used.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-scaling-example">Size-Scaling Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-pymembrane-scaling-benchmark">Internal PyMembrane scaling benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-and-scope-comparison">Feature and scope comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-note">Scope note</a></li>
 </ul>
   </nav></div>
 

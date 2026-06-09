@@ -186,7 +186,7 @@
 
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../benchmarks.html">
-    Benchmarks
+    Performance benchmark and scope comparison
   </a>
 </li>
 
@@ -345,7 +345,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../benchmarks.html">
-    Benchmarks
+    Performance benchmark and scope comparison
   </a>
 </li>
 
@@ -557,16 +557,22 @@ disclination problem by alternating Brownian dynamics vertex relaxation with
 Monte Carlo vertex moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial_mesh.vtk</span></code> and
 <code class="docutils literal notranslate"><span class="pre">hybrid_t*.vtk</span></code>. Typical quick-mode runtime is a few seconds.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.size_scaling</span></code></dt><dd><p>Generates spherical meshes of increasing resolution and times three
-workflows for each size: mesh generation, Monte Carlo vertex moves, and
-Brownian dynamics. Quick mode runs subdivisions <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">1</span> <span class="pre">2</span></code> with a short
-quick-check length and repeated timings.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.size_scaling</span></code></dt><dd><p>Generates spherical meshes of increasing resolution and reports the cost of
+core operations on each size, including energy evaluation, Monte Carlo
+vertex moves, Monte Carlo edge flips, and Brownian dynamics. Quick mode
+runs subdivisions <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">1</span> <span class="pre">2</span></code> with a short benchmark length and repeated
+timings.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">pymembrane.examples.liquid_membrane</span></code></dt><dd><p>Demonstrates dynamic triangulation with Monte Carlo edge flips and vertex
 moves. Quick mode writes <code class="docutils literal notranslate"><span class="pre">initial.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">final.obj</span></code> and
 <code class="docutils literal notranslate"><span class="pre">summary.json</span></code>.</p>
 </dd>
 </dl>
+</section>
+<section id="benchmarking">
+<h2>Benchmarking<a class="headerlink" href="#benchmarking" title="Link to this heading">#</a></h2>
+<p>The size-scaling benchmark and scope comparison page is available here:
+<span class="xref std std-doc">Performance benchmark and scope comparison</span>.</p>
 </section>
 <section id="dependency-note">
 <h2>Dependency note<a class="headerlink" href="#dependency-note" title="Link to this heading">#</a></h2>
@@ -640,6 +646,7 @@ moves. Quick mode writes <code class="docutils literal notranslate"><span class=
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-interface">Primary interface</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaged-examples">Packaged examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmarking">Benchmarking</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-note">Dependency note</a></li>
 </ul>
   </nav></div>
