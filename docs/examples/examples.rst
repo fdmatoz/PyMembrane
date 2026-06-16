@@ -5,8 +5,9 @@ Here we demonstrate various applications of PyMembrane to study common
 problems in the physics of membranes. The examples below are kept in two
 forms:
 
-- The source versions live under ``docs/examples`` and are useful for
-  developers who want to inspect the documented scripts directly.
+- The source versions live under ``docs/examples`` in a directory structure
+  that mirrors ``pymembrane/examples`` and are useful for developers who want
+  to inspect the documented scripts directly.
 - The installed versions live under ``pymembrane.examples`` and can be run
   with ``python -m`` after installation. Their runtime input files are
   bundled inside the installed package, so they do not depend on

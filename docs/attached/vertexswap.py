@@ -69,7 +69,7 @@ system.setVertices(vertices)
 
 #save the mesh to display
 #create dumper
-dump = system.dump() 
+dump = system.dumper
 dump.vtk("initial mesh")
 
 

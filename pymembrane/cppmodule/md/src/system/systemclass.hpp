@@ -39,8 +39,6 @@
 //compute
 #include "../compute/computemesh.hpp"
 
-//dumper
-#include "../dumper/dumper.hpp"
 #include <pybind11/pybind11.h>
 namespace py = pybind11;
 
@@ -53,7 +51,7 @@ namespace py = pybind11;
 class SystemClass
 {
 public:
-    SystemClass() : compute_mesh(*this), dumper(*this)
+    SystemClass() : compute_mesh(*this)
     {
         Numhalfedges = 0; //!< Number of halfedges
         Numvertices = 0;  //!< Number of vertices
@@ -63,7 +61,7 @@ public:
     /**
      * Create a particles from given vectors
     */
-    SystemClass(const BoxType &box) : compute_mesh(*this), dumper(*this), _box(box)
+    SystemClass(const BoxType &box) : compute_mesh(*this), _box(box)
     {
         Numhalfedges = 0; //!< Number of halfedges
         Numvertices = 0;  //!< Number of vertices
@@ -237,7 +235,6 @@ public:
     }
     //return compute mesh
     const ComputeMesh &get_compute_mesh(void) { return compute_mesh; }
-    const DumperClass &get_dumper(void) { return dumper; }
 
     void init_stresses(void)
     {
@@ -304,9 +301,6 @@ public:
     bool copy_in_host;
     //compute
     ComputeMesh compute_mesh;
-    //dumper
-    DumperClass dumper;
-
 private:
     BoxType _box;
 };

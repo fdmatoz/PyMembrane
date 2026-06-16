@@ -77,6 +77,6 @@ relaxes under alternating Brownian dynamics and Monte Carlo updates.
 Source and packaged versions
 ----------------------------
 
-The source physics comes from the documented disclination examples under
-``docs/examples/01_disclination``. The installed runnable module is
+The mirrored documentation source for this workflow is
+``docs/examples/hybrid_mc_bd/__main__.py``. The installed runnable module is
 ``pymembrane.examples.hybrid_mc_bd``.

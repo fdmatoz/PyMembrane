@@ -58,14 +58,15 @@ for li in id0s: edges[li].type = 0
 system.setEdges(edges)
 
 
-# At this stage we could export the initial mesh to vtk format by 'dump' function,  one could then visualize the mesh by open 'mesh_edges.vtp' in **Paraview** and select the 'edge type'
+# At this stage we could export the initial mesh through system.dumper and
+# visualize 'mesh_edges.vtk' in **Paraview** while coloring by edge type.
 
 # In[ ]:
 
 
 #save the mesh to display
 #create dumper
-dump = system.dump() 
+dump = system.dumper
 dump.vtk("initial mesh")
 
 

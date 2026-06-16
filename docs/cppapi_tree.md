@@ -81,9 +81,5 @@
 | |____pybind_export_compute.hpp
 | |____computemesh.cpp
 |____pybindexport.cpp
-|____dumper
-| |____pybind_export_dumper.hpp
-| |____dumper.cpp
-| |____dumper.hpp
 |____rng
 | |____rng.hp

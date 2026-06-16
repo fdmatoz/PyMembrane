@@ -47,7 +47,7 @@ Inputs
 Model Ingredients
 -----------------
 
-- mesh: closed Caspar-Klug shell from ``docs/examples/03_Caspar-Klug_sphere``
+- mesh: closed Caspar-Klug shell mirrored under ``docs/examples/buckling``
 - forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
 - integrator: ``Mesh>MonteCarlo>vertex>move``
 - boundary condition: non-periodic
@@ -67,8 +67,8 @@ Quick Mode
 Quick mode keeps the same shell model but reduces snapshots and Monte Carlo
 steps.
 
-The source version of this example is kept under
-``docs/examples/03_Caspar-Klug_sphere/buckling.py``. The installed version
+The mirrored source version of this example is kept under
+``docs/examples/buckling/__main__.py``. The installed version
 under ``pymembrane.examples.buckling`` includes the packaged input data.
 
 How to visualize the result

@@ -48,7 +48,7 @@ Inputs
 Model Ingredients
 -----------------
 
-- mesh: closed vesicle from ``docs/examples/04_minimization``
+- mesh: closed vesicle mirrored under ``docs/examples/minimizer``
 - forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
 - minimizer: ``Mesh>Fire``
 - constraint: ``Mesh>Volume``
@@ -68,8 +68,8 @@ Quick Mode
 Quick mode keeps the same model and constraint, but reduces snapshots and FIRE
 iterations.
 
-The source version of this example is kept under
-``docs/examples/04_minimization/minimizer.py``. The installed version under
+The mirrored source version of this example is kept under
+``docs/examples/minimizer/__main__.py``. The installed version under
 ``pymembrane.examples.minimizer`` is the primary runnable interface.
 
 Minimal Workflow

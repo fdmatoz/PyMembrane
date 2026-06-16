@@ -1,1 +1,2 @@
 recursive-include pymembrane/examples *.dat *.inp *.zip
+recursive-include pymembrane/_offline_docs *

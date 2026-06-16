@@ -1,0 +1,1 @@
+"""Packaged periodic example."""

@@ -81,6 +81,7 @@ setup(
     python_requires=">=3.8",
     packages=find_packages(include=["pymembrane", "pymembrane.*"]),
     include_package_data=True,
+    package_data={"pymembrane": ["_offline_docs/*", "_offline_docs/**/*"]},
     install_requires=["numpy"],
     ext_modules=[CMakeExtension(EXTENSION_NAME, EXTENSION_SOURCE_DIR)],
     cmdclass={"build_ext": CMakeBuild},

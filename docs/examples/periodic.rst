@@ -44,7 +44,7 @@ Inputs
 Model Ingredients
 -----------------
 
-- mesh: periodic triangulated sheet from ``docs/examples/02_periodic``
+- mesh: periodic triangulated sheet mirrored under ``docs/examples/periodic``
 - forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
 - integrator: ``Mesh>Brownian>vertex>move``
 - boundary condition: periodic box in all three directions

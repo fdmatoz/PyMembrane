@@ -91,7 +91,7 @@ Inputs
 Model Ingredients
 -----------------
 
-- mesh: open ``+1`` disclination from ``docs/examples/01_disclination``
+- mesh: open ``+1`` disclination mirrored under ``docs/examples/disclination*``
 - forces: ``Mesh>Harmonic``, ``Mesh>Limit``, ``Mesh>Bending>Dihedral``
 - integrators:
 
@@ -119,11 +119,11 @@ Quick Mode
 Quick mode keeps the same physical setup but reduces snapshot counts and the
 number of MD or MC steps.
 
-The source versions of these examples are kept under ``docs/examples``:
+The mirrored source versions of these examples are kept under ``docs/examples``:
 
-- ``docs/examples/01_disclination/Brownian/disclination.py``
-- ``docs/examples/01_disclination/MC/disclination.py``
-- ``docs/examples/01_disclination/Verlet/disclination.py``
+- ``docs/examples/disclination/__main__.py``
+- ``docs/examples/disclination_mc/__main__.py``
+- ``docs/examples/disclination_verlet/__main__.py``
 
 The installed ``pymembrane.examples`` versions include the input data required
 to run each example directly after installation.

@@ -97,6 +97,26 @@ Dependency note
   ``system.dumper.vtk(...)`` and can be viewed in tools such as
   `ParaView <https://www.paraview.org/>`_.
 
+Offline HTML documentation
+--------------------------
+
+If you want the installed package to carry offline browsable HTML docs, build
+the Sphinx site first and copy it into the package bundle before installation:
+
+.. code-block:: bash
+
+   sphinx-build -b html ./docs ./docs/_build/html
+   python scripts/sync_offline_docs.py
+   pip install .
+   python -m pymembrane.docs --open
+
+The installed helper also supports printing the bundled documentation path
+without opening a browser:
+
+.. code-block:: bash
+
+   python -m pymembrane.docs
+
 Troubleshooting
 ---------------
 

@@ -24,6 +24,12 @@ bash pip uninstall -y pymembrane rm -rf build *.egg-info pip install . python -c
 
 If installation fails, first check that the active environment contains a C++ compiler, CMake, pybind11, and NumPy. PyMembrane does not require VTK for the default installation.
 
+Offline documentation can also be bundled into the installed package. Build the
+HTML docs first, then copy them into the package bundle before building or
+installing:
+
+bash sphinx-build -b html ./docs ./docs/_build/html python scripts/sync_offline_docs.py pip install . python -m pymembrane.docs --open 
+
 ### Running Examples
 
 Packaged examples are available under pymembrane.examples and can be run from any working directory after installation:

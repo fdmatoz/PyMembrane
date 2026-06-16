@@ -7,7 +7,7 @@ System Class
    :local:
    :depth: 2
 
-**PyMembrane**  uses a modular design where different components act as autonomously as possible. The System class encompasses five independent classes, which include three that form the :doc:`mesh<triangularmeshes>` (vertices, edges, and faces), two supplementary classes to :doc:`compute geometrical properties <compute>`  over the mesh, and functions for `data export for visualization and analysis<dumper>`.
+**PyMembrane** uses a modular design where different components act as autonomously as possible. The System class manages the :doc:`mesh<triangularmeshes>` (vertices, edges, and faces), exposes :doc:`compute geometrical properties <compute>`, and provides data export for visualization and analysis through `System.dumper <dumper>`_.
 
 
 Before you start
@@ -62,11 +62,11 @@ Now that we have the faces and vertices files we can create a mesh as follows:
 Visualization
 -------------
 
-**PyMembrane** can export meshes to `vtk <https://en.wikipedia.org/wiki/VTK>`_ and `ply <https://en.wikipedia.org/wiki/PLY_(file_format)>`_ files. To create a dumper for a given mesh, we need to do:
+**PyMembrane** can export meshes to `vtk <https://en.wikipedia.org/wiki/VTK>`_ and `ply <https://en.wikipedia.org/wiki/PLY_(file_format)>`_ files through the default Python dumper attached to each system:
 
 .. code-block:: python
 
-   dump = system.dump()
+   dump = system.dumper
    dump.ply("hexagon")      #for ply
    dump.vtk("hexagon")      #for vtk
 
@@ -74,7 +74,7 @@ Visualization
    :alt: hexagon
    :align: center
 
-In addition, the _vtk_ format can be set to legacy format by:
+For backward compatibility, older scripts may still call:
 
 .. code-block:: python
 
@@ -82,7 +82,7 @@ In addition, the _vtk_ format can be set to legacy format by:
 
 .. note::
 
-   _VTK_ and _json_ format is desirable since all the properties of the mesh are fully exported.
+   `setvtkLegacyFormat()` is retained for compatibility. The Python dumper already writes legacy ASCII VTK output by default.
 
 Visualization
 -------------

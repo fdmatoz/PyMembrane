@@ -44,7 +44,7 @@ system.read_mesh_from_files(files = {'vertices': str(vertex_file), 'faces': str(
 # In[3]:
 
 
-dump = system.dump() 
+dump = system.dumper
 dump.vtk("initial mesh")
 
 

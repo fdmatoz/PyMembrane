@@ -98,6 +98,15 @@ def _copy_package_tree(source_root: Path, destination_root: Path) -> None:
         _copy_file(source, destination)
 
 
+def _copy_offline_docs(destination_root: Path) -> None:
+    bundled_docs = ROOT / "pymembrane" / "_offline_docs"
+    built_docs = ROOT / "docs" / "_build" / "html"
+    source_root = bundled_docs if bundled_docs.joinpath("index.html").exists() else built_docs
+    if not source_root.exists():
+        return
+    _copy_data_tree(source_root, destination_root / "pymembrane" / "_offline_docs")
+
+
 def _build_extension(output_dir: Path) -> Path:
     cmake = shutil.which("cmake")
     if cmake is None:
@@ -155,8 +164,10 @@ def _stage_package(root: Path, editable: bool) -> Path:
     if editable:
         _copy_package_tree(ROOT / "pymembrane" / "benchmarks", root / "pymembrane" / "benchmarks")
         _copy_package_tree(ROOT / "pymembrane" / "examples", root / "pymembrane" / "examples")
+        _copy_offline_docs(root)
         for source in [
             ROOT / "pymembrane" / "__init__.py",
+            ROOT / "pymembrane" / "docs.py",
             ROOT / "pymembrane" / "cppmodule" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
             ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",
@@ -171,8 +182,10 @@ def _stage_package(root: Path, editable: bool) -> Path:
 
     _copy_package_tree(ROOT / "pymembrane" / "benchmarks", root / "pymembrane" / "benchmarks")
     _copy_package_tree(ROOT / "pymembrane" / "examples", root / "pymembrane" / "examples")
+    _copy_offline_docs(root)
     for source in [
         ROOT / "pymembrane" / "__init__.py",
+        ROOT / "pymembrane" / "docs.py",
         ROOT / "pymembrane" / "cppmodule" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "__init__.py",
         ROOT / "pymembrane" / "cppmodule" / "dump" / "dumper.py",

@@ -22,6 +22,7 @@ from . import cppmodule as _cppmodule
 from .cppmodule import dump as dump
 from .cppmodule import md as md
 from .cppmodule import *  # noqa: F401,F403
+from .docs import docs_path, offline_docs_available, offline_docs_root, open_docs
 
 sys.modules[__name__ + ".dump"] = dump
 sys.modules[__name__ + ".md"] = md
@@ -38,4 +39,18 @@ __info__ = (
 )
 
 __all__ = [name for name in dir(_cppmodule) if not name.startswith("_")]
-__all__.extend(["dump", "md", "__info__", "__version__", "__release_date__", "__compiled_date__", "__OS__"])
+__all__.extend(
+    [
+        "dump",
+        "md",
+        "docs_path",
+        "offline_docs_available",
+        "offline_docs_root",
+        "open_docs",
+        "__info__",
+        "__version__",
+        "__release_date__",
+        "__compiled_date__",
+        "__OS__",
+    ]
+)

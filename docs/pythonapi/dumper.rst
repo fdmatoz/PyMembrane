@@ -8,9 +8,8 @@ Dumper
 Description
 -----------
 
-`Dumper` is the default Python dumper attached to `System.dumper`. It preserves
-the public method names of the historical C++ `DumperClass`, but normal
-dumping no longer requires VTK. The default `vtk()` and `edge_vtk()` methods
+`Dumper` is the default Python dumper attached to `System.dumper`. Normal
+dumping does not require VTK. The default `vtk()` and `edge_vtk()` methods
 write legacy ASCII VTK files directly from Python, and `obj()` writes
 Wavefront OBJ geometry.
 
@@ -63,7 +62,7 @@ Methods
   Dump the mesh (vertices and faces) in Wavefront OBJ format.
 
 - **setvtkLegacyFormat()**:
-  Set the vtk legacy format flag.
+  Backward-compatible no-op retained for older user scripts.
 
 - **user_data_vertex(data_name: str, data: List[real])**:
   Dump user data on vertices. Overloaded to handle both a list of real values and real tensors.
