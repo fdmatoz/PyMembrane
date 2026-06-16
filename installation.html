@@ -555,6 +555,22 @@ executing an installed module as top-level code.</p>
 <a class="reference external" href="https://www.paraview.org/">ParaView</a>.</p></li>
 </ul>
 </section>
+<section id="offline-html-documentation">
+<h2>Offline HTML documentation<a class="headerlink" href="#offline-html-documentation" title="Link to this heading">#</a></h2>
+<p>If you want the installed package to carry offline browsable HTML docs, build
+the Sphinx site first and copy it into the package bundle before installation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>./docs<span class="w"> </span>./docs/_build/html
+python<span class="w"> </span>scripts/sync_offline_docs.py
+pip<span class="w"> </span>install<span class="w"> </span>.
+python<span class="w"> </span>-m<span class="w"> </span>pymembrane.docs<span class="w"> </span>--open
+</pre></div>
+</div>
+<p>The installed helper also supports printing the bundled documentation path
+without opening a browser:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pymembrane.docs
+</pre></div>
+</div>
+</section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
 <dl>
@@ -661,6 +677,7 @@ python<span class="w"> </span>-m<span class="w"> </span>pymembrane.examples.peri
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuild-after-c-changes">Rebuild after C++ changes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-note">Dependency note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#offline-html-documentation">Offline HTML documentation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-community">Documentation &amp; Community</a></li>
 </ul>

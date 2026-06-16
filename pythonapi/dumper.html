@@ -525,9 +525,8 @@
 </nav>
 <section id="description">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
-<p><cite>Dumper</cite> is the default Python dumper attached to <cite>System.dumper</cite>. It preserves
-the public method names of the historical C++ <cite>DumperClass</cite>, but normal
-dumping no longer requires VTK. The default <cite>vtk()</cite> and <cite>edge_vtk()</cite> methods
+<p><cite>Dumper</cite> is the default Python dumper attached to <cite>System.dumper</cite>. Normal
+dumping does not require VTK. The default <cite>vtk()</cite> and <cite>edge_vtk()</cite> methods
 write legacy ASCII VTK files directly from Python, and <cite>obj()</cite> writes
 Wavefront OBJ geometry.</p>
 <p>The standard user-facing methods are:</p>
@@ -575,7 +574,7 @@ Dump the mesh (vertices and faces) in plain-text format.</p></li>
 <li><p><strong>obj()</strong>:
 Dump the mesh (vertices and faces) in Wavefront OBJ format.</p></li>
 <li><p><strong>setvtkLegacyFormat()</strong>:
-Set the vtk legacy format flag.</p></li>
+Backward-compatible no-op retained for older user scripts.</p></li>
 <li><p><strong>user_data_vertex(data_name: str, data: List[real])</strong>:
 Dump user data on vertices. Overloaded to handle both a list of real values and real tensors.</p></li>
 <li><p><strong>user_data_face(data_name: str, data: List[real])</strong>:
