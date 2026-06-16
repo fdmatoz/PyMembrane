@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="docs/_static/logo-github.png" alt="PyMembrane" width="320">
+</p>
+
+# PyMembrane
+
 ## Getting Started
 
 PyMembrane combines a C++ backend with a Python interface. The recommended workflow is to install the package into a conda environment and run the packaged examples directly from the installed Python namespace.
