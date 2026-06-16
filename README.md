@@ -16,39 +16,51 @@ PyMembrane builds a CPU-based C++ extension using CMake and pybind11. A compiler
 
 Create a conda environment
 
+```bash
 conda create -n pymemb python=3.8 numpy cmake pybind11
 conda activate pymemb
+```
 
 Install PyMembrane
 
 From the repository root, install the package in editable mode:
 
+```bash
 pip install -e .
+```
 
 Verify the installation:
 
+```bash
 python -c "import pymembrane; print(pymembrane.__file__)"
 python -c "from pymembrane import *; print('import ok')"
+```
 
 Clean rebuild
 
 After modifying the native C++ code, remove previous build artifacts before reinstalling:
 
+```bash
 rm -rf build *.egg-info
 pip install -e .
+```
 
 Non-editable installation
 
 For a standard installation:
 
+```bash
 pip uninstall -y pymembrane
 rm -rf build *.egg-info
 pip install .
+```
 
 Verify the installed package:
 
+```bash
 python -c "import pymembrane; print(pymembrane.__file__)"
 python -c "from pymembrane import *; print('import ok')"
+```
 
 Troubleshooting
 
@@ -67,19 +79,27 @@ Prebuilt HTML documentation can optionally be included in the installed package.
 
 First build the documentation:
 
+```bash
 sphinx-build -b html ./docs ./docs/_build/html
+```
 
 Copy the generated documentation into the package:
 
+```bash
 python scripts/sync_offline_docs.py
+```
 
 Then install PyMembrane:
 
+```bash
 pip install .
+```
 
 Open the installed documentation with:
 
+```bash
 python -m pymembrane.docs --open
+```
 
 Sphinx is required only to build the documentation. It is not required to use an installation that already includes the prebuilt HTML files.
 
@@ -87,17 +107,21 @@ Running the Examples
 
 Runnable examples are distributed under pymembrane.examples and include their required input data. They can therefore be executed from any working directory after installation.
 
+```bash
 python -m pymembrane.examples.periodic --quick
 python -m pymembrane.examples.minimizer --quick
 python -m pymembrane.examples.buckling --quick
 python -m pymembrane.examples.disclination --quick
 python -m pymembrane.examples.size_scaling --quick
 python -m pymembrane.examples.liquid_membrane --quick
+```
 
 For example, an installed example can be run from outside the repository:
 
+```bash
 cd /tmp
 python -m pymembrane.examples.periodic --quick
+```
 
 The --quick option runs a shortened version of an example for checking the installation and packaged workflow. It reduces runtime while retaining the same physical setup, force models, and overall simulation procedure as the full example.
 
@@ -117,8 +141,10 @@ Visualizing Results
 
 Simulation output is written through the PyMembrane dumper interface:
 
+```python
 system.dumper.vtk("output")
 system.dumper.obj("output")
+```
 
 The default dumper writes legacy ASCII .vtk files directly from Python, so the VTK Python package is not required.
 
@@ -130,6 +156,7 @@ Minimal Example
 
 A typical PyMembrane simulation follows this structure:
 
+```python
 from pymembrane import Box, Evolver, System
 box = Box(50.0, 50.0, 50.0)
 system = System(box)
@@ -156,5 +183,6 @@ evolver.add_integrator(
 evolver.set_global_temperature("1e-6")
 evolver.evolveMC(steps=100)
 system.dumper.vtk("output")
+```
 
 See the packaged examples for complete, runnable implementations of the simulations presented in the documentation and accompanying manuscript.
