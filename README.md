@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/_static/logo-github.png" alt="PyMembrane" width="700">
+  <img src="docs/_static/logo-github.png" alt="PyMembrane" width="750">
 </p>
 
 # PyMembrane
