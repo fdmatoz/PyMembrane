@@ -1,72 +1,152 @@
 <p align="center">
-  <img src="docs/_static/logo-github.png" alt="PyMembrane" width="750">
+  <img src="docs/_static/logo-github.png" alt="PyMembrane logo" width="750">
 </p>
 
-# PyMembrane
+PyMembrane
 
-## Getting Started
+PyMembrane is a simulation framework for elastic and liquid membranes. It combines a high-performance C++ backend with a Python interface for defining systems, forces, integrators, and simulation workflows.
 
-PyMembrane combines a C++ backend with a Python interface. The recommended workflow is to install the package into a conda environment and run the packaged examples directly from the installed Python namespace.
+Getting Started
 
-### Installation
+The recommended workflow is to install PyMembrane in a dedicated conda environment and run the examples provided with the Python package.
 
-PyMembrane builds a CPU C++ extension through CMake and pybind11. A C++14-capable compiler is required.
+Installation
 
-Create an environment with the build dependencies:
+PyMembrane builds a CPU-based C++ extension using CMake and pybind11. A compiler with C++14 support is required.
 
-bash conda create -n pymemb python=3.8 numpy cmake pybind11 conda activate pymemb 
+1. Create a conda environment
 
-Install PyMembrane from the repository root:
+conda create -n pymemb python=3.8 numpy cmake pybind11
+conda activate pymemb
 
-bash pip install -e . python -c "import pymembrane; print(pymembrane.__file__)" python -c "from pymembrane import *; print('import ok')" 
+2. Install PyMembrane
 
-For a clean rebuild after native C++ changes:
+From the repository root, install the package in editable mode:
 
-bash rm -rf build *.egg-info pip install -e . 
+pip install -e .
 
-For a non-editable install:
+Verify the installation:
 
-bash pip uninstall -y pymembrane rm -rf build *.egg-info pip install . python -c "import pymembrane; print(pymembrane.__file__)" python -c "from pymembrane import *; print('import ok')" 
+python -c "import pymembrane; print(pymembrane.__file__)"
+python -c "from pymembrane import *; print('import ok')"
 
-If installation fails, first check that the active environment contains a C++ compiler, CMake, pybind11, and NumPy. PyMembrane does not require VTK for the default installation.
+Clean rebuild
 
-Offline documentation can also be bundled into the installed package. Build the
-HTML docs first, then copy them into the package bundle before building or
-installing:
+After modifying the native C++ code, remove previous build artifacts before reinstalling:
 
-bash sphinx-build -b html ./docs ./docs/_build/html python scripts/sync_offline_docs.py pip install . python -m pymembrane.docs --open 
+rm -rf build *.egg-info
+pip install -e .
 
-### Running Examples
+Non-editable installation
 
-Packaged examples are available under pymembrane.examples and can be run from any working directory after installation:
+For a standard installation:
 
-bash python -m pymembrane.examples.periodic --quick python -m pymembrane.examples.minimizer --quick python -m pymembrane.examples.buckling --quick python -m pymembrane.examples.disclination --quick 
-bash python -m pymembrane.examples.size_scaling --quick python -m pymembrane.examples.liquid_membrane --quick
+pip uninstall -y pymembrane
+rm -rf build *.egg-info
+pip install .
 
-Liquid membrane: demonstrates dynamic triangulation with Monte Carlo edge flips.
+Verify the installed package:
 
-For example, from outside the repository:
+python -c "import pymembrane; print(pymembrane.__file__)"
+python -c "from pymembrane import *; print('import ok')"
 
-bash cd /tmp python -m pymembrane.examples.periodic --quick 
+Troubleshooting
 
-The --quick flag runs a short version of each example suitable for checking the installation and example workflow. It reduces runtime while keeping the same physical setup, force models, and simulation workflow as the full example.
+When installation fails, confirm that the active environment contains:
 
-The size-scaling example generates spherical meshes of increasing resolution and times mesh generation, Monte Carlo vertex moves, and Brownian dynamics. The ``--quick`` option is intended as a quick check; for more stable timings, increase ``--steps`` and keep ``--repeat 3`` or larger.
+* a C++14-compatible compiler;
+* CMake;
+* pybind11; and
+* NumPy.
 
-The documentation source scripts are kept under docs/examples; the installed runnable versions live under pymembrane.examples and carry their runtime input files with them.
+VTK is not required for the default PyMembrane installation.
 
-### Visualizing Results
+Offline Documentation
 
-Examples write mesh output using PyMembrane’s dumper interface:
+Prebuilt HTML documentation can optionally be included in the installed package. First build the documentation, then copy it into the package before installing:
 
-python system.dumper.vtk("output") system.dumper.obj("output") 
+sphinx-build -b html ./docs ./docs/_build/html
+python scripts/sync_offline_docs.py
+pip install .
 
-The default dumper writes legacy ASCII VTK files directly from Python, so the VTK Python package is not required. The resulting .vtk files can be opened in ParaView or other tools that support legacy VTK POLYDATA files. OBJ output is also available for lightweight geometry inspection.
+Open the installed documentation with:
 
-### Minimal Workflow
+python -m pymembrane.docs --open
 
-A typical PyMembrane script follows this structure:
+Sphinx is required only to build the documentation. It is not required to use an installation that already contains the prebuilt HTML files.
 
-python from pymembrane import Box, System, Evolver  box = Box(50.0, 50.0, 50.0) system = System(box) system.read_mesh_from_files(     files={         "vertices": "vertices.dat",         "faces": "faces.dat",     } )  evolver = Evolver(system) evolver.add_force("Mesh>Harmonic", {"k": {"0": "100.0"}, "l0": {"0": "1.0"}}) evolver.add_integrator("Mesh>MonteCarlo>vertex>move", {"dr": "0.01"}) evolver.set_global_temperature("1e-6") evolver.evolveMC(steps=100)  system.dumper.vtk("output") 
+Running the Examples
 
-See the packaged examples for complete, runnable versions of the simulations discussed in the documentation and manuscript.
+Runnable examples are distributed under pymembrane.examples and include their required input data. They can therefore be executed from any working directory after installation.
+
+python -m pymembrane.examples.periodic --quick
+python -m pymembrane.examples.minimizer --quick
+python -m pymembrane.examples.buckling --quick
+python -m pymembrane.examples.disclination --quick
+python -m pymembrane.examples.size_scaling --quick
+python -m pymembrane.examples.liquid_membrane --quick
+
+For example, an installed example can be run from outside the repository:
+
+cd /tmp
+python -m pymembrane.examples.periodic --quick
+
+The --quick option runs a shortened version of an example for checking the installation and packaged workflow. It reduces the runtime while retaining the same physical setup, force models, and overall simulation procedure as the full example.
+
+The liquid-membrane example demonstrates dynamic triangulation using Monte Carlo edge flips.
+
+The size-scaling example generates spherical meshes at increasing resolutions and measures the time required for:
+
+* mesh generation;
+* Monte Carlo vertex moves; and
+* Brownian dynamics.
+
+The --quick option is intended only as a functional check. For more stable timing measurements, increase --steps and use --repeat 3 or higher.
+
+Documentation source examples are located under docs/examples. Their installed, runnable counterparts are located under pymembrane.examples and include the input files required at runtime.
+
+Visualizing Results
+
+Simulation output is written through the PyMembrane dumper interface:
+
+system.dumper.vtk("output")
+system.dumper.obj("output")
+
+The default dumper writes legacy ASCII .vtk files directly from Python. The VTK Python package is therefore not required.
+
+VTK output can be opened in ParaView or other applications that support legacy VTK POLYDATA files. OBJ output is also available for lightweight geometry inspection.
+
+Additional supported output formats include .ply, .json, and plain-text data.
+
+Minimal Example
+
+A typical PyMembrane simulation follows this structure:
+
+from pymembrane import Box, Evolver, System
+box = Box(50.0, 50.0, 50.0)
+system = System(box)
+system.read_mesh_from_files(
+    files={
+        "vertices": "vertices.dat",
+        "faces": "faces.dat",
+    }
+)
+evolver = Evolver(system)
+evolver.add_force(
+    "Mesh>Harmonic",
+    {
+        "k": {"0": "100.0"},
+        "l0": {"0": "1.0"},
+    },
+)
+evolver.add_integrator(
+    "Mesh>MonteCarlo>vertex>move",
+    {
+        "dr": "0.01",
+    },
+)
+evolver.set_global_temperature("1e-6")
+evolver.evolveMC(steps=100)
+system.dumper.vtk("output")
+
+See the packaged examples for complete, runnable implementations of the simulations presented in the documentation and accompanying manuscript.
