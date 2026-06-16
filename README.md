@@ -8,18 +8,18 @@ PyMembrane is a simulation framework for elastic and liquid membranes. It combin
 
 Getting Started
 
-The recommended workflow is to install PyMembrane in a dedicated conda environment and run the examples provided with the Python package.
+The recommended workflow is to install PyMembrane in a dedicated conda environment and run the examples included with the Python package.
 
 Installation
 
 PyMembrane builds a CPU-based C++ extension using CMake and pybind11. A compiler with C++14 support is required.
 
-1. Create a conda environment
+Create a conda environment
 
 conda create -n pymemb python=3.8 numpy cmake pybind11
 conda activate pymemb
 
-2. Install PyMembrane
+Install PyMembrane
 
 From the repository root, install the package in editable mode:
 
@@ -52,7 +52,7 @@ python -c "from pymembrane import *; print('import ok')"
 
 Troubleshooting
 
-When installation fails, confirm that the active environment contains:
+If installation fails, confirm that the active environment contains:
 
 * a C++14-compatible compiler;
 * CMake;
@@ -63,17 +63,25 @@ VTK is not required for the default PyMembrane installation.
 
 Offline Documentation
 
-Prebuilt HTML documentation can optionally be included in the installed package. First build the documentation, then copy it into the package before installing:
+Prebuilt HTML documentation can optionally be included in the installed package.
+
+First build the documentation:
 
 sphinx-build -b html ./docs ./docs/_build/html
+
+Copy the generated documentation into the package:
+
 python scripts/sync_offline_docs.py
+
+Then install PyMembrane:
+
 pip install .
 
 Open the installed documentation with:
 
 python -m pymembrane.docs --open
 
-Sphinx is required only to build the documentation. It is not required to use an installation that already contains the prebuilt HTML files.
+Sphinx is required only to build the documentation. It is not required to use an installation that already includes the prebuilt HTML files.
 
 Running the Examples
 
@@ -91,7 +99,7 @@ For example, an installed example can be run from outside the repository:
 cd /tmp
 python -m pymembrane.examples.periodic --quick
 
-The --quick option runs a shortened version of an example for checking the installation and packaged workflow. It reduces the runtime while retaining the same physical setup, force models, and overall simulation procedure as the full example.
+The --quick option runs a shortened version of an example for checking the installation and packaged workflow. It reduces runtime while retaining the same physical setup, force models, and overall simulation procedure as the full example.
 
 The liquid-membrane example demonstrates dynamic triangulation using Monte Carlo edge flips.
 
@@ -101,7 +109,7 @@ The size-scaling example generates spherical meshes at increasing resolutions an
 * Monte Carlo vertex moves; and
 * Brownian dynamics.
 
-The --quick option is intended only as a functional check. For more stable timing measurements, increase --steps and use --repeat 3 or higher.
+The --quick option is intended as a functional check rather than a benchmark. For more stable timing measurements, increase --steps and use --repeat 3 or higher.
 
 Documentation source examples are located under docs/examples. Their installed, runnable counterparts are located under pymembrane.examples and include the input files required at runtime.
 
@@ -112,7 +120,7 @@ Simulation output is written through the PyMembrane dumper interface:
 system.dumper.vtk("output")
 system.dumper.obj("output")
 
-The default dumper writes legacy ASCII .vtk files directly from Python. The VTK Python package is therefore not required.
+The default dumper writes legacy ASCII .vtk files directly from Python, so the VTK Python package is not required.
 
 VTK output can be opened in ParaView or other applications that support legacy VTK POLYDATA files. OBJ output is also available for lightweight geometry inspection.
 
